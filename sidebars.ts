@@ -24,6 +24,7 @@ const sidebars: SidebarsConfig = {
         '01-diakrisis-phenomenon/01-phenomenological-grounding',
         '01-diakrisis-phenomenon/02-philosophical-parallels',
         '01-diakrisis-phenomenon/03-impossibility-of-full-formalization',
+        '01-diakrisis-phenomenon/04-formal-correspondences',
       ],
     },
     {
@@ -102,6 +103,7 @@ const sidebars: SidebarsConfig = {
         '06-limits/03-no-go-series',
         '06-limits/04-path-of-limit-failure',
         '06-limits/05-what-remains-possible',
+        '06-limits/06-absoluteness',
       ],
     },
     {
