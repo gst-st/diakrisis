@@ -271,7 +271,7 @@ function HomepageHeader() {
             Формальная 2-категорная структура для классификации математических оснований
           </p>
           <p className={styles.heroDescription}>
-            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами. Каждое достаточно богатое основание <code>F</code> представлено единственной точкой <code>α<sub>F</sub></code> классифицирующего пространства <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Центральный результат — TH-Final: формальное основание уровня 6 не существует ни как объект, ни как предел последовательности аппроксимаций.
+            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами. Каждое достаточно богатое основание <code>F</code> представлено единственной точкой <code>α<sub>F</sub></code> классифицирующего пространства <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Центральный результат — TH-Final: формальное основание уровня 6 невозможно. Усиленная форма — теорема <strong>55.T об абсолютности</strong>: TH-Final выполнена для любой разумной Rich-метатеории (R-S), что делает её метатеоретическим инвариантом.
           </p>
           <div className={styles.heroButtons}>
             <Link className="button button--primary button--lg" to="/intro">
@@ -343,7 +343,7 @@ function EssenceSection() {
             <h3>Предел</h3>
             <p>
               <strong>TH-Final</strong>: не существует{' '}
-              <code>X</code>, одновременно удовлетворяющего (F) формальной определимости, (Π<sub>4</sub>) нередуцируемости к известным структурам и (Π<sub>3</sub>-max) максимальной генеративности. Формальное основание уровня 6 невозможно ни как объект (TH-Neg), ни как предел последовательности аппроксимаций (TH-Neg-extended).
+              <code>X</code>, одновременно удовлетворяющего (F_S) формальной определимости, (Π<sub>4,S</sub>) нередуцируемости к <code>𝒮<sub>S</sub></code> и (Π<sub>3</sub>-max_S) максимальной генеративности. Невозможно ни как объект (TH-Neg), ни как предел (TH-Neg-extended). По <strong>теореме 55.T</strong>: абсолютна — выполнена для всех разумных Rich-метатеорий R-S = (R1)-(R5).
             </p>
           </div>
         </div>
@@ -375,7 +375,7 @@ function MotivationSection() {
             <h3 className={styles.motivationSubheading}>Граница</h3>
             <p>
               Теорема <strong>TH-Final</strong> — шестой член структурной серии{' '}
-              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP</em> — формально закрывает возможность получить предельное основание уровня 6 средствами самой формальной математики. Diakrisis позиционируется на уровне 5+: мета-структура над пространством известных оснований, с явным признанием своих пределов.
+              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP</em> — формально закрывает возможность получить предельное основание уровня 6 средствами самой формальной математики. Теорема <strong>55.T</strong> усиливает результат: TH-Final <em>абсолютна</em> — выполнена для любой разумной Rich-метатеории R-S (условия R1–R5). Diakrisis позиционируется на уровне 5+: мета-структура над пространством известных оснований, с явным признанием своих пределов.
             </p>
           </div>
 
@@ -386,8 +386,12 @@ function MotivationSection() {
               <div><dt>Аксиомы</dt><dd>13 (Axi-0..Axi-9, T-α, T-2f*)</dd></div>
               <div><dt>Консистентность</dt><dd>ZFC + 2 inaccessibles</dd></div>
               <div><dt>Извлечения</dt><dd>ZFC, ETCS, CIC, MLTT, HoTT, ∞-Topos, NCG</dd></div>
+              <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_Д-hybrid</dd></div>
               <div><dt>Флагман-сборка</dt><dd>УГМ (α_uhm, ν = ω·4)</dd></div>
               <div><dt>No-go результат</dt><dd>TH-Final (уровень 6 невозможен)</dd></div>
+              <div><dt>Абсолютность</dt><dd>55.T: выполнена ∀ S ∈ R-S</dd></div>
+              <div><dt>R-S критерий</dt><dd>(R1)–(R5): Q, r.e., модель, ⌜·⌝, 2-cat</dd></div>
+              <div><dt>Гипотеза Пути Б</dt><dd>α_uhm ≅ α_Д-hybrid ⊗ 7D (Q-D.4)</dd></div>
               <div><dt>Уровень проекта</dt><dd>5+ (мета над уровнем 5)</dd></div>
             </dl>
           </div>
@@ -418,7 +422,7 @@ const docSections: DocSection[] = [
     title: 'Феномен различения',
     description: 'Διάκрисίс как акт',
     link: '/01-diakrisis-phenomenon/00-act-not-object',
-    items: ['Моменты акта: расщепление, направление, соотнесение', 'Феноменологическое обоснование', 'Параллели с Гегелем, Брауэром, Делёзом', 'Невозможность полной формализации'],
+    items: ['Моменты акта: расщепление, направление, соотнесение', 'Феноменологическое обоснование', 'Параллели с Гегелем, Брауэром, Делёзом', 'Формальные корреспонденции: α_Д-linear / AFA / hybrid'],
   },
   {
     id: 'primitive',
@@ -432,7 +436,7 @@ const docSections: DocSection[] = [
     title: 'Формальная архитектура',
     description: '2-категория, когезия, gauge, модальность',
     link: '/03-formal-architecture/00-metacategory-structure',
-    items: ['ι-вложение End(⟪⟫) ↪ ⟪⟫', 'Когезия Π ⊣ ♭ ⊣ ♯ ⊣ ι', 'Фибрация, gauge, S4-модальность', 'Вычислимость, информация, CHL, SDG'],
+    items: ['ι-вложение End(⟪⟫) ↪ ⟪⟫', 'Когезия Π ⊣ ♭ ⊣ ♯ ⊣ ι', 'Фибрация, gauge, S4-модальность', 'Вычислимость, информация, CHL, SDG', 'Non-classical: α_linear, α_AFA-coalg, α_Д-hybrid'],
   },
   {
     id: 'extractions',
@@ -451,9 +455,9 @@ const docSections: DocSection[] = [
   {
     id: 'limits',
     title: 'Пределы формализации',
-    description: 'TH-Neg, TH-Neg-extended, TH-Final',
+    description: 'TH-Neg, TH-Neg-extended, TH-Final, 55.T',
     link: '/06-limits/02-th-final',
-    items: ['Формальный объект уровня 6 невозможен', 'И как предел последовательности', 'Шестая в серии Cantor-Russell-Gödel-Tarski', 'Остающиеся направления: Путь Б'],
+    items: ['Формальный объект уровня 6 невозможен', 'И как предел последовательности', 'Шестая в серии Cantor-Russell-Gödel-Tarski', 'Абсолютность TH-Final (55.T) в любой R-S', 'Остающиеся направления: Путь Б'],
   },
   {
     id: 'methodology',
@@ -467,7 +471,7 @@ const docSections: DocSection[] = [
     title: 'Применения',
     description: 'Путь Б — формализация УГМ в Verum',
     link: '/09-applications/00-path-B-uhm-formalization',
-    items: ['223 теоремы УГМ → Verum', 'Критерии успеха К-Б-1..К-Б-5', 'Многосессионный план', 'Интеграция с Verum-системой'],
+    items: ['223 теоремы УГМ → Verum', 'Критерии успеха К-Б-1..К-Б-5', 'Многосессионный план', 'Гипотеза Q-D.4: α_uhm ≅ α_Д-hybrid ⊗ 7D', 'Интеграция с Verum-системой'],
   },
 ];
 
