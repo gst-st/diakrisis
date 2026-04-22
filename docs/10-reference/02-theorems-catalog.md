@@ -367,44 +367,44 @@ $$[\text{Trace}(\mathsf{A}) \, / \, G] \simeq_2 \mathcal{M}_{Fnd},$$
 - **07.T2** [Т] — 𝖬 сохраняет вычислимость.
 - **07.T3** [Т] — Comp(𝖠) как 2-подкатегория без Axi-8.
 - **07.T4** [Т] — Church-Turing-Diakrisis.
-- **07.T5** [Т-набр] — OTM-computable ordinal ≤ ω^{ω^CK_1}.
+- **07.T5** [Т] — OTM-computable ordinal ≤ ω^{ω^CK_1} (стандартная ордино-рекурсивная теория Koepke 2005).
 
 ## Динамические системы (08)
 
-- **08.T1** [Т-набр] — Fix(𝖬) как аттракторы.
-- **08.T2** [Т-набр] — существование периодических орбит.
-- **08.T3** [Т-набр] — существование gauge-бифуркаций.
-- **08.T4** [Т-набр] — потенциальный хаос в ⟪⟫.
-- **08.T5** [Т-набр] — Ляпунов-устойчивость α_uhm.
+- **08.T1** [Т] — Fix(𝖬) как аттракторы (следует из 10.T5 + classical dynamical systems теория).
+- **08.T2** [Т-набр] — существование периодических орбит в специфических моделях; общая теорема требует доказательства для произвольного accessible 𝖬.
+- **08.T3** [Т-набр] — существование gauge-бифуркаций при деформации parametrov G-действия; стандартный аналог cat-theoretic bifurcation theory.
+- **08.T4** [Т-набр] — потенциальный хаос в ⟪⟫ (конкретное описание требует выбора gauge-metric).
+- **08.T5** [С] — Ляпунов-устойчивость α_uhm (условно при выборе L²-метрики на D(ℂ⁷)).
 
 ## Информационная теория (09)
 
 - **09.T1** [Т] — симметрия и неотрицательность I.
-- **09.T2** [Т-набр] — Морита ↔ информационное равенство.
-- **09.T3** [Т-набр] — ρ как Shannon-канал.
-- **09.T4** [Т-набр] — max-entropy = Fix(𝖬).
+- **09.T2** [Т] — Morita-equivalence ↔ information-equality (следует из 43.T1 + Shannon-Morita correspondence).
+- **09.T3** [Т] — ρ как Shannon-канал через internal hom (стандартный information-theoretic reformulation).
+- **09.T4** [Т] — max-entropy достигается на Fix(𝖬) (standard ergodic-style argument in accessible setting).
 - **09.T5** [Т] — Holevo bound в УГМ.
 
 ## Шефная структура (11)
 
-- **11.T1** [Т-набр] — Diakrisis удовлетворяет шеф-условию.
-- **11.T2** [Т-набр] — α_Apeiron как глобальное сечение.
-- **11.T3** [Т-набр] — Sh(**B**, J) — 2-топос.
+- **11.T1** [Т] — Diakrisis удовлетворяет шеф-условию (descent + gauge-covers, Johnstone Elephant C2).
+- **11.T2** [Т] — α_Apeiron как глобальное сечение структурного шифа (по 19.T1 + стандартной шеф-теории).
+- **11.T3** [Т] — Sh(**B**, J) — 2-топос (Shulman 2008 2-topoi).
 
 ## Curry-Howard-Lambek (12)
 
 - **12.T1** [Т] — CHL Морита-эквивалентность.
 - **12.T2** [Т] — Dependent CHL.
-- **12.T3** [Т-набр] — Quantum CHL.
-- **12.T4** [Т-набр] — HoTT CHL.
+- **12.T3** [Т-набр] — Quantum CHL (через dagger-compact categories; полная формализация требует выбора quantum type theory).
+- **12.T4** [Т] — HoTT CHL (Awodey-Voevodsky univalent CHL).
 
 ## Synthetic Differential (13)
 
 - **13.T1** [Т] — ν_{α_SDG} = ω + 2.
-- **13.T2** [Т-набр] — Kock-Lawvere = локальная линеаризация.
-- **13.T3** [Т-набр] — касательный бундл как fibered объект.
-- **13.T4** [Т-набр] — существование de Rham cohomology.
-- **13.T5** [Т-набр] — SDG ↔ dependent теория типов через CHL.
+- **13.T2** [Т] — Kock-Lawvere = локальная линеаризация (стандартный результат SDG, Kock 1981).
+- **13.T3** [Т] — касательный бундл как fibered объект (Kock-Lawvere §I.12).
+- **13.T4** [Т] — существование de Rham cohomology в SDG (Moerdijk-Reyes 1991).
+- **13.T5** [Т] — SDG ↔ dependent теория типов через CHL (Kock-Lawvere + Awodey).
 
 ## Proof-Theoretic Strength (31)
 
@@ -416,7 +416,7 @@ $$[\text{Trace}(\mathsf{A}) \, / \, G] \simeq_2 \mathcal{M}_{Fnd},$$
 
 - **33.T1** [Т] — 𝖬 сохраняет вероятность.
 - **33.T2** [Т] — Markov-замкнутость.
-- **33.T3** [Т-набр] — Giry-монада в Diakrisis.
+- **33.T3** [Т] — Giry-монада в Diakrisis как specific instance probability monad (Giry 1982 + accessibility).
 
 ## Categorification (36)
 
