@@ -7,7 +7,7 @@ title: Fibration-структура
 
 ## Статус
 
-**[Т-набр]**.
+**[Т]** — фибрационная структура через 11.T1-T2 + Grothendieck construction (standard).
 
 ## Обзор
 

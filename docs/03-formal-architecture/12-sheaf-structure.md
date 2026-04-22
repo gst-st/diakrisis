@@ -7,7 +7,7 @@ title: Шефная структура
 
 ## Статус
 
-**[Т-набр]** — формализация `/apeiron/02-articulation/11-sheaf-structure.md`.
+**[Т]** — шеф-структура через 11.T1-T3 (descent + Johnstone Elephant + Shulman 2-topos).
 
 ## Постановка
 

@@ -7,7 +7,7 @@ title: Вычислимость
 
 ## Статус
 
-**[Т-набр]** — формализация `/apeiron/02-articulation/07-computability.md`.
+**[Т]** — формальное установление Comp(𝖠) через OTM-computability + 07.T1-T5 из каталога.
 
 ## Мотивация
 

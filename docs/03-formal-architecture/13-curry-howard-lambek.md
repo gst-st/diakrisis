@@ -7,7 +7,7 @@ title: Curry-Howard-Lambek
 
 ## Статус
 
-**[Т-набр]** — формализация `/apeiron/02-articulation/12-curry-howard-lambek.md`.
+**[Т]** — CHL-correspondence через 12.T1-T4 каталога (Lambek-Scott + Awodey-Voevodsky + Abramsky-Coecke).
 
 ## Обзор
 

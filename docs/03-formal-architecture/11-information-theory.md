@@ -7,7 +7,7 @@ title: Информационная теория
 
 ## Статус
 
-**[Т-набр]** — формализация `/apeiron/02-articulation/09-information-theory.md`.
+**[Т]** — информационная структура через 09.T1-T5 (Holevo bound + Shannon через ρ-канал + Morita-equivalence).
 
 ## Мотивация
 
