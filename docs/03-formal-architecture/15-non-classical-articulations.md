@@ -255,9 +255,87 @@ $$X \in \lim_\ell \mathrm{Fun}(\mathcal{U}_\ell, \mathcal{U}_\ell).$$
 
 ### Связь с α_Д-*
 
-- α_poly-HoTT + AFA → возможная общая структура для Διάκρисίс.
+- α_poly-HoTT + AFA → возможная общая структура для Διάκрисίс.
 - Гипотеза: α_Д-hybrid в Poly-HoTT ведёт к усиленной формализации Q-D.4.
 - Открытая программа.
+
+### Детальная семантика α_poly-HoTT
+
+**Семантическая модель** (Lurie HTT + cumulative extension):
+
+1. **Category of levels**: `Level` — natural numbers ℕ с фильтр-порядком.
+2. **Universe functor**: `𝒰 : Level → Cat`, `𝒰(ℓ) = 𝒰_ℓ` (небольшая (∞,1)-категория).
+3. **Cumulativity**: natural transformation `ι : 𝒰_ℓ → 𝒰_{ℓ+1}` для каждого ℓ.
+4. **Total space**: `∫ 𝒰` — Grothendieck construction over Level.
+5. **Polymorphic terms**: sections of projection `π : ∫ 𝒰 → Level`.
+
+### Сравнение с классическими foundations
+
+| Foundation | Polymorphism | Predicativity | Impredicativity |
+|---|---|---|---|
+| ZFC | implicit (через classes) | нет | да (powerset, replacement) |
+| ETCS | functorial | нет | да |
+| HoTT (basic) | стратификация | да | нет |
+| Poly-HoTT | explicit universe polymorphism | да | частично (через poly) |
+| System F | parametric polymorphism | impredicative (II) | да |
+| Girard's paradox | — | — | нарушена стратификация |
+
+### Технические аспекты
+
+**Правила Poly-HoTT** (упрощённо):
+
+```
+Level-form: ⊢ Level : Type
+Level-intro: ⊢ ℓ_i : Level для каждого i ∈ ℕ
+U-form: ⊢ ℓ : Level ⟹ ⊢ 𝒰_ℓ : 𝒰_{ℓ+1}
+Cumulativity: ⊢ A : 𝒰_ℓ ⟹ ⊢ A : 𝒰_{ℓ+1}
+Polymorphism-intro: (ℓ : Level) ⊢ t(ℓ) : 𝒰_ℓ ⟹ ⊢ λℓ.t(ℓ) : ∏_{ℓ:Level} 𝒰_ℓ
+```
+
+**Ключевое свойство**: polymorphism **не смешивает** уровни (no `Type : Type`). Это сохраняет консистентность (блокирует Girard).
+
+### Применения в современных системах
+
+**Coq**: `Polymorphic Definition` с universe variables.
+
+**Lean 4**: `universe` declarations, полностью integrated.
+
+**Agda**: `--universe-polymorphism` flag.
+
+**UniMath** (Voevodsky): Coq-library, всё в polymorphic framework.
+
+### Применения к Diakrisis
+
+α_poly-HoTT даёт:
+- **Более точную формализацию** 𝖬 как polymorphic endofunctor.
+- **Cleaner treatment** category-theoretic constructions.
+- **Возможность** формализовать некоторые Diakrisis-теоремы в Verum-подобных системах с universe polymorphism.
+
+### Ограничения
+
+Несмотря на expressivity:
+- **Predicativity**: не достигает classical impredicative strength (58.T).
+- **Consistency strength**: ≈ ZFC + inacc (как HoTT + univalence).
+- **Не уровень 6** (55.T + 56.T).
+
+### Связь с другими разделами
+
+- **Absoluteness (55.T, 56.T)**: polymorphic terms покрыты уточнённой 𝒮_S.
+- **04-extractions**: α_poly-HoTT — extension α_hott.
+- **04-formal-correspondences**: возможная связь с α_Д-* (Q-J).
+
+### Q-J: программа исследования
+
+**Q-J**: α_poly-HoTT + AFA → усиленная формализация Διάкрисіς?
+
+**Мотивация**: 
+- α_Д-hybrid требует linear + AFA + !.
+- Poly-HoTT добавляет universe hierarchy.
+- Комбинация может дать более точную формализацию Q-D.4.
+
+**Открытый вопрос**: существует ли `α_Д-poly := ν X. (X ⊗ X ⊸ ∏_ℓ X × X)`?
+
+Если да — это могло бы быть **базой** для Verum-формализации Пути Б.
 
 ## α_Д-linear, α_Д-AFA, α_Д-hybrid — артикуляции Διάκрисίς
 

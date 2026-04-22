@@ -332,6 +332,23 @@ $$\alpha_{Д\text{-}hybrid} := \nu X. \left(X \otimes X \multimap F_\Delta(X)\ri
 
 Полная проверка — работа Пути Б в Verum.
 
+### Расширение: α_Д-poly (Q-J программа)
+
+После audit2 возникла гипотеза Q-J: комбинация α_Д-hybrid с universe polymorphism α_poly-HoTT может дать более точную формализацию:
+
+$$\alpha_{Д\text{-}poly} := \nu X. \left(X \otimes X \multimap \prod_{\ell:\text{Level}} X \times X\right).$$
+
+**Интерпретация**:
+- Linear structure (⊗, ⊸) — ресурсная часть акта.
+- Product over levels — полиморфный self-reference.
+- ν-fixed point — coinductive fixed point.
+
+**Потенциал**: α_Д-poly может оказаться более подходящей формализацией для Verum (Lean 4, Coq), поскольку они уже используют universe polymorphism.
+
+**Статус**: открытая программа (Q-J).
+
+Детали: [/03-formal-architecture/15-non-classical-articulations](/03-formal-architecture/15-non-classical-articulations).
+
 ### Важно: не сводит УГМ к α_Д-hybrid
 
 Q-D.4 **не** утверждает, что УГМ — просто инстанция α_Д-hybrid. Утверждает, что:
