@@ -163,7 +163,7 @@ title: Каталог теорем
 
 **21.T2**: каждая из 13 аксиом — независима.
 
-**21.T3**: consistency strength.
+**21.T3**: сила консистентности.
 
 ## ι-вложение (22)
 
@@ -323,7 +323,7 @@ title: Каталог теорем
 - **13.T2** [Т-набр] — Kock-Lawvere = локальная линеаризация.
 - **13.T3** [Т-набр] — касательный бундл как fibered объект.
 - **13.T4** [Т-набр] — существование de Rham cohomology.
-- **13.T5** [Т-набр] — SDG ↔ dependent type theory через CHL.
+- **13.T5** [Т-набр] — SDG ↔ dependent теория типов через CHL.
 
 ## Proof-Theoretic Strength (31)
 
@@ -402,7 +402,7 @@ title: Каталог теорем
 - **59.T** [Т] — (∞,∞)-TH-Final: абсолютность в (∞,∞)-контексте (прямое доказательство через 67.T).
 - **59.T.1** [Т] — (∞,n)-hierarchy: TH-Final выполняется для каждого n (через 63.T Whitehead).
 - **59.T.2** [Т] — Stabilization: иерархия (∞,n) стабилизируется в (∞,∞).
-- **60.T** [Т] — 2-Diakrisis ↪ (∞,∞)-Diakrisis через τ_{≤2}-localization.
+- **60.T** [Т] — 2-Diakrisis ↪ (∞,∞)-Diakrisis через τ_{≤2}-локализация.
 - **61.T** [Т] — α_inf-cat: новая артикуляция, ν = Ω (через 94.T).
 - **62.T** [Т] — (∞,∞)-Morita-эквивалентность корректна (через 83.T).
 
@@ -423,7 +423,7 @@ title: Каталог теорем
 - **64.T** [Т] — Конкретные потери τ_{≤2}: (∞,∞)-теоремы строго сильнее 2-версий.
 - **65.T** [Т] — Canonical (∞,∞)-lift УГМ: α_uhm^{(∞,∞)} существует и единственна (через 94.T).
 - **66.T** [Т] — (∞,∞)-Lawvere Fixed-Point: fixed point в (∞,∞)-cartesian closed.
-- **67.T** [Т] — Прямая (∞,∞)-TH-Final: native proof без reduction через 55.T.
+- **67.T** [Т] — Прямая (∞,∞)-TH-Final: native proof без редукция через 55.T.
 - **68.T** [Т при модели] — Trivial Stabilization: (∞,∞+1)-Cat = (∞,∞)-Cat.
 - **69.T** [Т] — Мета-гомотопическая абсолютность: meta-vertical absoluteness.
 
@@ -455,16 +455,16 @@ title: Каталог теорем
 Полные доказательства, закрывающие все теоретические вопросы Diakrisis.
 
 - **85.T** [Т] — UFH: α_uhm ≅_M α_Д-hybrid ⊗ 7D-quantum через S₇ × U(1) gauge.
-- **86.T** [Т] — Paraconsistent TH-Final: выполнена в R-S' с (Strong-neg) через translation ⊗.
+- **86.T** [Т] — Paraconsistent TH-Final: выполнена в R-S' с (Strong-neg) через трансляция ⊗.
 - **87.T** [Т] — Completeness 4-dimensional absoluteness: нет 5-й оси.
 - **88.T** [Т] — Категоричность Diakrisis: единственность до (∞,∞)-эквивалентности.
 - **89.T** [Т] — Internal language L_⟪⟫ существует и полна.
-- **90.T** [Т] — Exact consistency strength = Con(ZFC + 2 inacc).
+- **90.T** [Т] — Exact сила консистентности = Con(ZFC + 2 inacc).
 - **91.T** [Т] — Cohesive ∞-topos ⊆ Diakrisis как α_cohesion (ν = ω·2).
 - **92.T** [Т] — Motivic homotopy theory как α_motivic (ν = ω·2+1).
 - **93.T** [Т] — Realizability как α_realiz (ν = ω+1).
 - **94.T** [Т] — 29.T в (∞,∞): unique α_R-S^{(∞,∞)}.
-- **95.T** [Т] — τ_{≤n}-decidability: Σ_{n+1}-complete, Π_1^1 при n=∞.
+- **95.T** [Т] — τ_{≤n}-разрешимость: Σ_{n+1}-complete, Π_1^1 при n=∞.
 - **96.T** [Т] — Axi-независимость сохраняется на всех (∞,n).
 
 Детали: [/06-limits/07-final-theorems](/06-limits/07-final-theorems).
@@ -477,7 +477,7 @@ title: Каталог теорем
 
 Исследование открытых программ с альтернативными категорными порядками и мета-гомотопическими расширениями.
 
-- **72.T** [Т] — Paraconsistent TH-Final: доказано через 86.T translation ⊗.
+- **72.T** [Т] — Paraconsistent TH-Final: доказано через 86.T трансляция ⊗.
 - **73.T** [Т] — R-S иерархия стабилизируется: R-S^n = R-S для всех n.
 - **74.T** [Т] — Consistency bound: Con(R-S^n) ≤ Con(ZFC + n-inacc).
 - **75.T** [Т] — П-0.\* ↔ формальные результаты: методология ↔ теория.

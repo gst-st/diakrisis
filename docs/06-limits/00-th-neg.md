@@ -167,7 +167,7 @@ TH-Neg — **структурный аналог**:
 
 - **Cantor's diagonal**: бесконечности не счётны.
 - **Russell's paradox**: нет set of all sets.
-- **Gödel II**: нет self-consistency proof.
+- **Gödel II**: нет self-консистентность proof.
 - **Tarski**: нет truth predicate.
 - **Lawvere FP**: нет certain fixed points.
 

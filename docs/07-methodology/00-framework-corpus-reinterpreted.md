@@ -85,7 +85,7 @@ Parallel с риторическим:
 | Escape Theorem | Gödel II | Gödel 1931 |
 | Trace(𝖠) | initial 𝖠-algebra | Adámek 1974 |
 | Universal Foundation | Stone-подобная дуальность | Stone 1936 |
-| 𝓜_Fnd | moduli stack | Lurie HTT |
+| 𝓜_Fnd | модули-стек | Lurie HTT |
 | Когезивная структура | Schreiber DCCT | Schreiber 2013 |
 
 ### Характер редукций
@@ -107,7 +107,7 @@ Parallel с риторическим:
 
 **Теоремы**: все 160+ теорем framework сохраняются. Их доказательства — корректны.
 
-**Структурные связи**: carefully documented связи с ZFC, HoTT, NCG, ∞-topoi, cohesion, modal logic, category theory.
+**Структурные связи**: carefully задокументировано связи с ZFC, HoTT, NCG, ∞-topoi, cohesion, modal logic, category theory.
 
 **УГМ-сборка**: 223 теоремы УГМ — разработаны во framework-фазе, сохраняются.
 

@@ -33,7 +33,7 @@ title: Рекурсивные аудиты
 ### Структура рекурсивного аудита
 
 1. **Уровень 0 — surface**: nomenclature, references, typos.
-2. **Уровень 1 — consistency**: interconnections, cross-references.
+2. **Уровень 1 — консистентность**: interconnections, cross-references.
 3. **Уровень 2 — conceptual**: соответствие понятий, скрытые смыслы.
 4. **Уровень 3 — meta**: сам метаязык, амбиции.
 
@@ -41,7 +41,7 @@ title: Рекурсивные аудиты
 
 ## Три аудита framework-фазы
 
-### Аудит 1 — согласованность (03-coherence-audit)
+### Аудит 1 — согласованность (03-когерентность-audit)
 
 Базовый аудит. Найдено 10 находок F-01..F-10 (нотация, лексика, архитектура). Применены F-01..F-07 к существующим файлам.
 
@@ -124,7 +124,7 @@ title: Рекурсивные аудиты
 |---|---|---|
 | Уровень | 0-2 | 3 (meta) |
 | Характер | editorial | fundamental |
-| Фокус | consistency | possibility |
+| Фокус | консистентность | possibility |
 | Результат | improved framework | TH-Final |
 | Отношение | internal | external perspective |
 
@@ -200,7 +200,7 @@ Seed — **meta-level** аудит. Его применение — **единс
 ### Инструменты
 
 - **Grep**: для запрещённой лексики.
-- **Cross-reference check**: для consistency.
+- **Cross-reference check**: для консистентность.
 - **Π-tests**: для claims.
 - **External review**: идеально.
 

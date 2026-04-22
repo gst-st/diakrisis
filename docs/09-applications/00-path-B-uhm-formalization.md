@@ -82,7 +82,7 @@ title: Путь Б — формализация УГМ
 
 **Verum**: специализация побеждает.
 
-### Verum как specialized prover
+### Verum как specialized прувер
 
 - Разрабатывается командой УГМ.
 - Поддержка quantum-specific constructions (D(ℂ⁷), CPTP).
@@ -113,7 +113,7 @@ title: Путь Б — формализация УГМ
 
 **К-Б-2 — Консистентность**:
 - Проверка, что аксиоматика не противоречива.
-- В Verum: consistency check.
+- В Verum: консистентность check.
 - Относительная консистентность (relative to ZFC + inaccessibles).
 
 **К-Б-3 — Признание редукций**:
@@ -123,7 +123,7 @@ title: Путь Б — формализация УГМ
 
 **К-Б-4 — Специфическая новизна**:
 - Хотя бы одна черта УГМ, не встречающаяся в NCG/SM.
-- Примеры: regeneration ℛ, 7 invariants, S₇ symmetry, SAD_MAX.
+- Примеры: regeneration ℛ, 7 инварианты, S₇ symmetry, SAD_MAX.
 
 **К-Б-5 — Конкретные предсказания**:
 - Проверяемые формулы: P_crit=2/7, Φ_th=1, R_th=1/3, D_min=2, SAD_MAX=3.
@@ -199,7 +199,7 @@ S'-5: приложения — критерий смысла.
 - Self-модель φ.
 - Ключевые теоремы T-62, T-39a, T-96.
 
-**Фаза 3 — Structural invariants (сессии 11-20)**:
+**Фаза 3 — Structural инварианты (сессии 11-20)**:
 - 7 инвариантов подробно.
 - S₇ симметрия.
 - Fano plane embedding.
@@ -217,8 +217,8 @@ S'-5: приложения — критерий смысла.
 - Lerchner (T-223).
 
 **Фаза 6 — Verification (сессии 61-70)**:
-- Full consistency check.
-- К-Б criteria verification.
+- Full консистентность check.
+- К-Б criteria верификация.
 - Documentation finalization.
 
 ### Реалистичная оценка времени
@@ -245,7 +245,7 @@ S'-5: приложения — критерий смысла.
 Если на каком-то этапе Путь Б неподъёмен:
 - **Лайт-Путь Б**: formalize subset (e.g., basic T-62, T-96).
 - **Путь Б' через Lean 4**: как fallback при Verum issues.
-- **Partial formalization**: acceptable outcome.
+- **Partial формализация**: acceptable outcome.
 
 ## Риски и митигация
 

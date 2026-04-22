@@ -15,11 +15,11 @@ title: Финальные теоремы — полное закрытие
 
 - **70.T–71.T**: ν-инварианты артикуляций Διάкрисиς.
 - **72.T, 86.T**: паранепротиворечивая TH-Final.
-- **73.T–77.T**: R-S hierarchy, consistency bounds, derived closure.
+- **73.T–77.T**: R-S hierarchy, консистентность bounds, derived closure.
 - **78.T–82.T**: программные теоремы (UFH programme, α_Д-poly, 𝓜_Fnd^{(∞,∞)}, (∞,∞)-Verum).
 - **85.T**: UFH — полное доказательство.
 - **88.T–93.T**: категоричность, внутренний язык, связующие (cohesive, motivic, realizability).
-- **95.T–96.T**: decidability, independence.
+- **95.T–96.T**: разрешимость, independence.
 
 Для теорем абсолютности (55.T–69.T, 83.T–84.T, 87.T, 94.T) см. 06-absoluteness.
 
@@ -50,9 +50,9 @@ title: Финальные теоремы — полное закрытие
 
 Тогда TH-Final выполнена в R-S'.
 
-### 86.T [Т]: Полное доказательство через translation
+### 86.T [Т]: Полное доказательство через трансляция
 
-**Translation** ⊗ : S' → S'* (classical fragment):
+**Translation** ⊗ : S' → S'* (классический фрагмент):
 
 $$\otimes(\varphi) = \begin{cases} \varphi & \text{если consistent} \\ \top & \text{если trivium} \\ \otimes(\psi) & \text{для } \psi \equiv \varphi \text{ через } \sim\text{-elimination} \end{cases}$$
 
@@ -60,7 +60,7 @@ $$\otimes(\varphi) = \begin{cases} \varphi & \text{если consistent} \\ \top 
 
 1. S'* ⊆ S' как classical подтеория, S'* ∈ R-S.
 2. Предположим TH-Final не выполнена в S' — есть witness X.
-3. ⊗(X) ∈ S'* — witness в classical fragment.
+3. ⊗(X) ∈ S'* — witness в классический фрагмент.
 4. Проверка: (F_{S'*}), (Π_4_{S'*}), (Π_3-max_{S'*}) сохраняются под ⊗.
 5. Противоречит 55.T.
 
@@ -97,7 +97,7 @@ Con(R-S^n) ≤ Con(ZFC + n-inacc).
 | П-0.3 (не-скаляр) | (∞,n)-стабилизация (59.T.2, 68.T) |
 | П-0.4 (категорность) | Internal language L_⟪⟫ (89.T) |
 | П-0.5 (не мистицизм) | Все теоремы формально доказаны |
-| П-0.6 (honest reduction) | Morita-редукции эксплицитны |
+| П-0.6 (honest редукция) | Morita-редукции эксплицитны |
 | П-0.7 (продолжается) | Практические программы П1–П6 |
 
 **Обоснование**: каждый П-принцип имеет прямой формальный аналог.
@@ -106,7 +106,7 @@ Con(R-S^n) ≤ Con(ZFC + n-inacc).
 
 ## 77.T: 𝒮_S syntactic-semantic closure
 
-**Формулировка**: 𝒮_S = closure_{derived-ops}(Ob(M_S)), где derived-ops = {colim, lim, Kan extensions, Grothendieck construction, Quillen adjunction, stable localization}.
+**Формулировка**: 𝒮_S = closure_{derived-ops}(Ob(M_S)), где derived-ops = {colim, lim, Kan extensions, Grothendieck construction, Quillen adjunction, stable локализация}.
 
 **Обоснование**:
 - Любая S-definable X выражается через term в T_S.
@@ -117,18 +117,18 @@ Con(R-S^n) ≤ Con(ZFC + n-inacc).
 
 ### 78.T [Программа]: UFH provability program
 
-UFH доказуема в Lean 4 + linear-HoTT-extension за ≈75 сессий.
+UFH доказуема в Lean 4 + linear-HoTT-расширение за ≈75 сессий.
 
 **Фазы**:
 1. α_Д-linear (10-20 сессий).
 2. α_Д-AFA через Aczel M-types (10-20 сессий).
 3. α_Д-hybrid (10-20 сессий).
 4. D(ℂ⁷) + 7D-quantum (15-25 сессий).
-5. Tensor factorization + UFH-verification (10-20 сессий).
+5. Tensor factorization + UFH-верификация (10-20 сессий).
 
 ### 79.T [Т]: UFH^{(∞,∞)} via τ_{≤2}
 
-UFH^{(∞,∞)} ⇒ UFH через τ_{≤2}-truncation (τ сохраняет Morita).
+UFH^{(∞,∞)} ⇒ UFH через τ_{≤2}-усечение (τ сохраняет Morita).
 
 ### 80.T [Т]: α_Д-poly характеризация
 
@@ -147,7 +147,7 @@ Trace^{(∞,∞)}(𝖠_∞)/gauge — (∞,∞)-stack.
 
 ### 82.T [Т]: (∞,∞)-Verum complexity
 
-Любой (∞,∞)-prover требует transfinite coherence-automation глубины ≥ ω для non-trivial verification.
+Любой (∞,∞)-прувер требует transfinite когерентность-automation глубины ≥ ω для non-trivial верификация.
 
 ## 85.T: UFH — полное доказательство
 
@@ -159,7 +159,7 @@ Trace^{(∞,∞)}(𝖠_∞)/gauge — (∞,∞)-stack.
 
 **Шаг 1 (Gauge-structure)**:
 
-Левая: G_L = S₇ × U(1) (permutation 7 invariants + phase).
+Левая: G_L = S₇ × U(1) (permutation 7 инварианты + phase).
 Правая: G_R = G_hybrid × G_7D, где G_7D = S₇ × U(7).
 
 **Шаг 2 (Gauge-изоморфизм)**:
@@ -182,7 +182,7 @@ $$G(\Gamma) := (\varphi(\Gamma) \otimes \Gamma),$$
 
 $$F(G(\Gamma)) = \rho(\varphi(\Gamma)) \cdot \Gamma = \varphi(\Gamma) \cdot \Gamma = \Gamma \quad (\text{T-96}).$$
 
-$$G(F(x \otimes \Gamma_0)) \simeq x \otimes \Gamma_0 \quad (\text{self-consistency hybrid}).$$
+$$G(F(x \otimes \Gamma_0)) \simeq x \otimes \Gamma_0 \quad (\text{self-консистентность hybrid}).$$
 
 **Обе проверки проходят** до 2-морфизма (gauge-фаза).
 
@@ -227,7 +227,7 @@ $$G(F(x \otimes \Gamma_0)) \simeq x \otimes \Gamma_0 \quad (\text{self-consisten
 
 **Следствие**: Diakrisis-теоремы формулируемы в L_⟪⟫ без внешней metatheory.
 
-## 90.T: Exact consistency strength
+## 90.T: Exact сила консистентности
 
 **90.T** [Т]: `Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles)`.
 
@@ -235,7 +235,7 @@ $$G(F(x \otimes \Gamma_0)) \simeq x \otimes \Gamma_0 \quad (\text{self-consisten
 
 **Lower bound**: Axi-1 (internal closure) требует 2-уровневой иерархии universes.
 
-**Follows**: Diakrisis — **moderate** consistency strength. Не требует Mahlo / Vopěnka.
+**Follows**: Diakrisis — **moderate** сила консистентности. Не требует Mahlo / Vopěnka.
 
 ## 91.T: Cohesive ∞-topos
 
@@ -256,7 +256,7 @@ $$G(F(x \otimes \Gamma_0)) \simeq x \otimes \Gamma_0 \quad (\text{self-consisten
 
 **Конструкция**:
 - ρ(α_motivic) := SH(k) — stable motivic homotopy.
-- 𝖬 := A¹-localization.
+- 𝖬 := A¹-локализация.
 - α_math := classifying motive.
 
 **ν-расчёт**: (∞,1) + A¹ + six-functor formalism = ω·2+1.
@@ -272,11 +272,11 @@ $$G(F(x \otimes \Gamma_0)) \simeq x \otimes \Gamma_0 \quad (\text{self-consisten
 - ρ(α_realiz) := Eff (effective topos).
 - 𝖬 := realizability reflection.
 
-**ν-расчёт**: PCA-consistency + realizability layer = ω+1.
+**ν-расчёт**: PCA-консистентность + realizability layer = ω+1.
 
 **Следствие**: Computational interpretation Diakrisis — через α_realiz.
 
-## 95.T: τ_{≤n}-decidability
+## 95.T: τ_{≤n}-разрешимость
 
 **95.T** [Т]: Decidability τ_{≤n}-equivalence:
 
@@ -308,7 +308,7 @@ $$G(F(x \otimes \Gamma_0)) \simeq x \otimes \Gamma_0 \quad (\text{self-consisten
 
 | # | Результат | Статус |
 |---|---|---|
-| 70.T–71.T | ν-invariants α_Д-\* | [Т] |
+| 70.T–71.T | ν-инварианты α_Д-\* | [Т] |
 | 72.T, 86.T | Paraconsistent TH-Final | [Т] |
 | 73.T | R-S стабилизируется | [Т] |
 | 74.T | Consistency bound | [Т] |
@@ -319,11 +319,11 @@ $$G(F(x \otimes \Gamma_0)) \simeq x \otimes \Gamma_0 \quad (\text{self-consisten
 | 85.T | UFH proof | [Т] |
 | 88.T | Категоричность | [Т] |
 | 89.T | Internal language | [Т] |
-| 90.T | Exact consistency strength | [Т] |
+| 90.T | Exact сила консистентности | [Т] |
 | 91.T | Cohesive ∞-topos | [Т] |
 | 92.T | Motivic homotopy theory | [Т] |
 | 93.T | Realizability topos | [Т] |
-| 95.T | τ_{≤n}-decidability | [Т] |
+| 95.T | τ_{≤n}-разрешимость | [Т] |
 | 96.T | Axi-independence | [Т] |
 
 ### Финальное состояние Diakrisis

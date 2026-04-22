@@ -150,7 +150,7 @@ title: Теории сознания как сборки
 
 **УГМ включает HOT**:
 - Self-модель φ — higher-order representation.
-- T-96 (ρ* = φ(Γ)) — self-consistency с HOT.
+- T-96 (ρ* = φ(Γ)) — self-консистентность с HOT.
 
 ### Дополнительные элементы УГМ
 

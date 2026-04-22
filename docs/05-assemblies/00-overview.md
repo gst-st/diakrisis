@@ -69,7 +69,7 @@ title: Обзор сборок
 | IIT | сознание | Φ-integration | количественная мера сознания |
 | GWT | когнитивная наука | global workspace | рабочая память, внимание |
 | HOT | сознание | higher-order thoughts | мета-когнитивные состояния |
-| Orch-OR | квантовое сознание | OR-reduction | Penrose-Hameroff |
+| Orch-OR | квантовое сознание | OR-редукция | Penrose-Hameroff |
 | Wheeler-DeWitt | квантовая гравитация | WdW equation | космология |
 | Sanathana Dharma | культурная | TBD | экспериментальная |
 

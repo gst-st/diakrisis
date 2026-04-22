@@ -33,7 +33,7 @@ title: Абсолютность TH-Final — полная формулировк
 - **(R4)** Gödel-кодирование: S позволяет self-reference через Gödel-encoding.
 - **(R5)** Категорная интерпретация: S имеет categorical semantics через Lawvere theories / topoi.
 
-**Класс-примеры**: ZFC, NBG, HoTT, CIC, MLTT, Poly-HoTT, NBG+AFA, LP (через classical fragment), Cₙ, CZF+Mahlo, IZF.
+**Класс-примеры**: ZFC, NBG, HoTT, CIC, MLTT, Poly-HoTT, NBG+AFA, LP (через классический фрагмент), Cₙ, CZF+Mahlo, IZF.
 
 ### Структура 𝒮_S
 
@@ -76,7 +76,7 @@ title: Абсолютность TH-Final — полная формулировк
 
 - **2-Diakrisis** (n=2): базовая рабочая версия.
 - **(∞,1)-Diakrisis** (n=1): Lurie HTT-aligned.
-- **(∞,∞)-Diakrisis** (n=∞): полная higher-coherent структура.
+- **(∞,∞)-Diakrisis** (n=∞): полная higher-когерентный структура.
 
 ### Центральные теоремы
 
@@ -86,7 +86,7 @@ title: Абсолютность TH-Final — полная формулировк
 
 **59.T.2** [Т при модели] — Stabilization: (∞,n)-Cat стабилизируется на (∞,∞).
 
-**60.T** [Т] — 2-Diakrisis = τ_{≤2}((∞,∞)-Diakrisis) через τ-localization.
+**60.T** [Т] — 2-Diakrisis = τ_{≤2}((∞,∞)-Diakrisis) через τ-локализация.
 
 **61.T** [Т] — α_inf-cat ∈ ⟪⟫_∞: ν = Ω (class-ordinal), не уровень 6.
 
@@ -102,9 +102,9 @@ title: Абсолютность TH-Final — полная формулировк
 
 ### Прямое доказательство (∞,∞)-TH-Final
 
-**66.T** [Т] — (∞,∞)-Lawvere Fixed-Point: в (∞,∞)-cartesian closed 𝒞 с (∞,∞)-coherently surjective y: A×A → Y^A, любой f: Y→Y имеет (∞,∞)-coherent fixed point.
+**66.T** [Т] — (∞,∞)-Lawvere Fixed-Point: в (∞,∞)-cartesian closed 𝒞 с (∞,∞)-coherently surjective y: A×A → Y^A, любой f: Y→Y имеет (∞,∞)-когерентный fixed point.
 
-**67.T** [Т] — Прямая (∞,∞)-TH-Final: через 66.T без reduction к 55.T.
+**67.T** [Т] — Прямая (∞,∞)-TH-Final: через 66.T без редукция к 55.T.
 
 **Контур**:
 1. (F_∞)(X) ⇒ X^{M_F^∞} — (∞,∞)-интерпретация.
@@ -161,7 +161,7 @@ title: Абсолютность TH-Final — полная формулировк
 
 **83.T** [Т] — Все альтернативные категорные порядки:
 - **Либо** Morita-редуцируются к (∞,∞)-Cat через appropriate articulations.
-- **Либо** выходят в non-standard direction → reducible через AFA.
+- **Либо** выходят в non-standard направление → редуцируемый через AFA.
 
 **Конкретные редукции**:
 - Operads → monoidal (∞,1)-Cat (Lurie HA §5).
@@ -176,17 +176,17 @@ title: Абсолютность TH-Final — полная формулировк
 
 **87.T** [Т] — Completeness of 4-dimensional absoluteness:
 
-**Формулировка**: Четырёхмерная абсолютность полна — любое структурное расширение foundational математики редуцируется к одной из осей (S, n, μ, ξ).
+**Формулировка**: Четырёхмерная абсолютность полна — любое структурное расширение фундаментальное математики редуцируется к одной из осей (S, n, μ, ξ).
 
 **Обоснование (meta-теорема)**:
 
 Foundational структура описуется через:
-- **(А)** Metatheory (S) — язык + логика + аксиомы.
+- **(А)** Метатеория (S) — язык + логика + аксиомы.
 - **(Б)** Категорный уровень (n).
 - **(В)** Мета-рефлексия (μ).
 - **(Г)** Категорный порядок (ξ).
 
-Нет других structural parameters в foundational math (по Lair, Lawvere, Lurie).
+Нет других структурных параметров в фундаментальное math (по Lair, Lawvere, Lurie).
 
 Любая предполагаемая 5-я ось η → сводится к одной из (А)-(Г).
 
@@ -215,7 +215,7 @@ TH-Final ABSOLUTA_TOTALIS — **окончательная форма** абсо
 
 **5-уровневая абсолютность** — формальный перевод принципа П-0.0.
 
-## Consistency strength
+## Сила консистентности
 
 **90.T** [Т]: Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
 
@@ -238,7 +238,7 @@ Universe hierarchy — **внутри** R-S, не расширение.
 - **Пять уровней** реализуют принцип П-0.0 формально.
 - **Consistency** ≤ ZFC + 2 inacc — moderate.
 
-TH-Final — **абсолютный структурный инвариант** foundational математики.
+TH-Final — **абсолютный структурный инвариант** фундаментальное математики.
 
 ## Следующий документ
 

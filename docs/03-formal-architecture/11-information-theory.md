@@ -134,7 +134,7 @@ $$R(D) := \min_{d(\alpha, \hat\alpha) \leq D} I(\alpha; \hat\alpha).$$
 
 В физике: термальное равновесие (Gibbs).
 
-**В Diakrisis**: max-entropy артикуляции — те, которые не имеют «preferred direction», равновесие под 𝖬.
+**В Diakrisis**: max-entropy артикуляции — те, которые не имеют «preferred направление», равновесие под 𝖬.
 
 ### Связь с Fix(𝖬)
 

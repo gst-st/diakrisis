@@ -81,7 +81,7 @@ title: Кардинальный анализ
 | **Diakrisis (полная)** | 2 inaccessibles |
 | Higher topos theory | Много inaccessibles |
 
-Diakrisis — **сравнимо** с ∞-topos theory по consistency strength.
+Diakrisis — **сравнимо** с ∞-topos theory по сила консистентности.
 
 ### Стратификация глубины
 
@@ -234,7 +234,7 @@ Verum в стадии активной разработки.
 
 ## Вопросы открытой работы
 
-- **Q**: существует ли «минимальная» модель Diakrisis (в смысле consistency strength)?
+- **Q**: существует ли «минимальная» модель Diakrisis (в смысле сила консистентности)?
 - **Q**: можно ли обойтись **одним** inaccessible для полной теории (при определённых упрощениях)?
 - **Q**: что даёт переход к (∞,1)-категорной формулировке?
 - **Q**: связь с large cardinal hierarchy выше inaccessibles?

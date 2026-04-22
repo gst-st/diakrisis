@@ -26,7 +26,7 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 ### Архитектура Verum
 
-- **Ядро**: type theory + quantum-specific constructions.
+- **Ядро**: теория типов + quantum-specific constructions.
 - **Библиотеки**: linear algebra, spectral theory, category theory.
 - **Тактики**: proof automation для УГМ-specific tasks.
 - **Интерфейс**: command-line + potentially IDE.
@@ -116,7 +116,7 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 **Diagram chases**:
 - Для category-theoretic аргументов.
-- 2-categorical coherence.
+- 2-categorical когерентность.
 - Chasing commutative diagrams.
 
 **CAS integration**:
@@ -156,7 +156,7 @@ Proof-assistant, разрабатываемый командой УГМ.
 - **Session 2-3**: базовые объекты УГМ.
 - **Session 4-6**: operations.
 - **Session 7-10**: first theorems.
-- **Session 11+**: advanced theorems, invariants.
+- **Session 11+**: advanced theorems, инварианты.
 
 ### Интеграция с Diakrisis-корпусом
 
@@ -167,8 +167,8 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 1. **Теорема в Diakrisis**: статус [Т-набр] или [Т].
 2. **Formalization в Verum**: создаётся .verum file.
-3. **Успех formalization**: добавляется отметка «Verum ✓».
-4. **Provali формализация**: documented в gap-статусе.
+3. **Успех формализация**: добавляется отметка «Verum ✓».
+4. **Provali формализация**: задокументировано в gap-статусе.
 
 ## Открытые вопросы
 
@@ -208,7 +208,7 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 - Verum inventory.
 - Install & verify.
-- Basic types formalization.
+- Basic types формализация.
 
 ### Short-term (Сессии 4-10)
 
@@ -218,7 +218,7 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 ### Medium-term (Сессии 11-30)
 
-- Structural invariants.
+- Structural инварианты.
 - Most of 223 theorems.
 - Documentation.
 
@@ -226,13 +226,13 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 - Advanced theorems.
 - Extensions (AGI/ASI, Lerchner).
-- Full integration + documentation.
+- Full integration + документация.
 
 ## Связь с внешним миром
 
 ### Publications
 
-- Papers о Verum formalization of УГМ.
+- Papers о Verum формализация of УГМ.
 - Demonstrating methodology.
 - Contributing to formal methods community.
 
@@ -244,7 +244,7 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 ### Legacy
 
-- Complete Verum formalization — долгосрочный результат.
+- Complete Verum формализация — долгосрочный результат.
 - Proof objects — reusable.
 - Methodology — applicable to other assemblies.
 

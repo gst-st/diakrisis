@@ -142,9 +142,9 @@ Schreiber DCCT: differential geometry в cohesive setting — естествен
 
 ### С curry-howard-lambek
 
-**Теорема 13.T5**: SDG в α_SDG ↔ dependent type theory через CHL.
+**Теорема 13.T5**: SDG в α_SDG ↔ dependent теория типов через CHL.
 
-Это даёт **dependent differential type theory** (DDTT) — активная программа исследования.
+Это даёт **dependent differential теория типов** (DDTT) — активная программа исследования.
 
 ## Признанные редукции
 
@@ -161,7 +161,7 @@ Schreiber DCCT: differential geometry в cohesive setting — естествен
 - **TX = X^D** — касательный бундл.
 - **D ≠ {0}** — нильпотенты как инфинитезимали.
 - **Связь с УГМ**: динамика на D(ℂ⁷) — SDG.
-- **Связь с HoTT**: dependent differential type theory — программа.
+- **Связь с HoTT**: dependent differential теория типов — программа.
 
 ## Следующий документ
 

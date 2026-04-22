@@ -159,8 +159,8 @@ $$\rho^*(\alpha)[\beta] := \rho(\beta)[\alpha].$$
 ### Теорема Noether в физике
 
 - Continuous symmetry ⟹ conservation law.
-- Energy ← time translation.
-- Momentum ← space translation.
+- Energy ← time трансляция.
+- Momentum ← space трансляция.
 - Angular momentum ← rotation.
 
 ### Аналог в Diakrisis

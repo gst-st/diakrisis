@@ -373,7 +373,7 @@ Z (нулевая граница)~~~~~~ Z_1, Z_2, Z_3
 
 - **§01.01 (phenomenological grounding)** — более детальный анализ трёх моментов.
 - **§01.02 (philosophical parallels)** — углублённое сравнение с Hegel, Brouwer, Simondon, Deleuze.
-- **§01.03 (impossibility of full formalization)** — формальная версия этого раздела.
+- **§01.03 (impossibility of full формализация)** — формальная версия этого раздела.
 - **§00.03 (zero boundary)** — где Z — «локус» акта Διάκρισης.
 - **§06.02 (TH-Final)** — как no-go теорема, соответствующая невозможности формализации акта.
 

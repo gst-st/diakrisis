@@ -26,7 +26,7 @@ title: Статус программ
 - **UFH** (85.T): α_uhm ≅_M α_Д-hybrid ⊗ 7D-quantum.
 - **Категоричность** (88.T): единственность до (∞,∞)-эквивалентности.
 - **Internal language** (89.T): L_⟪⟫ — внутренний формальный язык.
-- **Consistency strength** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inacc).
+- **Сила консистентности** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inacc).
 - **Связующие** (91.T–94.T): cohesive ∞-topos, motivic, realizability, Universal Foundation в (∞,∞).
 
 ## Закрытые исторические gap'ы
@@ -50,7 +50,7 @@ title: Статус программ
 2. α_Д-AFA через Aczel M-types (10-20 сессий).
 3. α_Д-hybrid гибрид (10-20 сессий).
 4. D(ℂ⁷) + 7D-quantum (15-25 сессий).
-5. Tensor factorization + UFH-verification (10-20 сессий).
+5. Tensor factorization + UFH-верификация (10-20 сессий).
 
 ### П2. Экспериментальная верификация УГМ
 
@@ -60,7 +60,7 @@ title: Статус программ
 - TMS-EEG studies (Pred 22 — neural oscillations).
 - SAD measurements (Pred 12 — SAD ceiling = 3).
 - Neural correlates of consciousness (Pred 10 — N=7).
-- Learning bounds verification (Pred 9 — quantum Chernoff).
+- Learning bounds верификация (Pred 9 — quantum Chernoff).
 
 ### П3. SM-детализация (Gap N-04)
 
@@ -70,7 +70,7 @@ title: Статус программ
 
 ### П4. Computational Diakrisis
 
-**Цель**: (∞,∞)-prover implementation.
+**Цель**: (∞,∞)-прувер реализация.
 
 По **82.T**: требует transfinite automation — долгосрочная программа.
 
@@ -107,7 +107,7 @@ title: Статус программ
 - Expansion Cohesive/Motivic/Realizability в сборках.
 
 ### Long-term (100+ сессий)
-- (∞,∞)-prover implementation.
+- (∞,∞)-прувер реализация.
 - Empirical верификация crusader-scale.
 - AGI/ASI extensions в интеграции с SYNARC.
 

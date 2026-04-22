@@ -61,7 +61,7 @@ $$\alpha_{prop} \;\sim_M\; \alpha_{lambda} \;\sim_M\; \alpha_{CCC}.$$
 
 В Diakrisis:
 - α_dep-prop (зависимая логика).
-- α_MLTT (Martin-Löf type theory).
+- α_MLTT (Martin-Löf теория типов).
 - α_fib-cat (fibered category).
 
 Все Морита-эквивалентны (аналогично 12.T1).
@@ -147,7 +147,7 @@ Rich-основания (из 29.T) имеют CHL-структуру:
 
 - R1 (самоссылка) ↔ Curry-Howard fixed-point (Y-combinator).
 - R2 (мета-теория) ↔ Higher-order types.
-- R3 (рефлексия) ↔ internal type theory.
+- R3 (рефлексия) ↔ internal теория типов.
 - R4 (трансфинитная глубина) ↔ ∞-CHL.
 
 ## Признанные редукции

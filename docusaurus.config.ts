@@ -129,7 +129,7 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'Diakrisis',
+      title: '',
       logo: {
         alt: 'Diakrisis',
         src: 'img/logo.svg',
@@ -138,7 +138,7 @@ const config: Config = {
         {
           type: 'html',
           position: 'left',
-          value: `<span class="navbar-version">v${theoryVersion}</span>`,
+          value: `<span class="navbar-version navbar-version--attached">v${theoryVersion}</span>`,
         },
         {
           type: 'docSidebar',

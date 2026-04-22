@@ -89,7 +89,7 @@ R = {x : x ∉ x}. Тогда R ∈ R ⇔ R ∉ R. Противоречие.
 
 **Значение**:
 - No sufficient formal system is complete.
-- Hilbert's program (complete + consistent formalization) — невозможно.
+- Hilbert's program (complete + consistent формализация) — невозможно.
 
 ### Gödel II (1931) — невозможность само-подтверждения
 
@@ -103,7 +103,7 @@ Con(T) — утверждение о консистентности T — **не
 
 **Доказательство**:
 - Применение Gödel I к специальному sentence Con(T).
-- Формальная reflection: T cannot prove its own consistency.
+- Формальная reflection: T cannot prove its own консистентность.
 
 **Значение**:
 - No system justifies itself.
@@ -159,7 +159,7 @@ Let L be a formal language, 𝕯 — term denotation. Truth-predicate Tr(𝕯(φ
 - **Cantor**: cannot contain all of itself as element.
 - **Russell**: cannot have unrestricted self-description.
 - **Gödel I**: cannot prove all true self-statements.
-- **Gödel II**: cannot prove own consistency.
+- **Gödel II**: cannot prove own консистентность.
 - **Tarski**: cannot define own truth.
 - **Lawvere FP**: various categorical incarnations.
 
@@ -188,7 +188,7 @@ Let L be a formal language, 𝕯 — term denotation. Truth-predicate Tr(𝕯(φ
 TH-Final **не** касается одного специфического свойства. Она касается **всей** претензии на foundation.
 
 - Cantor: о max element.
-- Gödel: о specific property (completeness, consistency).
+- Gödel: о specific property (completeness, консистентность).
 - **TH-Final**: о возможности быть **foundation** вообще.
 
 Более **обобщающая**.

@@ -11,7 +11,7 @@ title: CIC как извлечение
 
 ## Обзор
 
-CIC (Calculus of Inductive Constructions) — мощное зависимое type theory, основа Coq. Разработана Coquand-Huet (1988+), расширяется для Lean 4. В Diakrisis: α_CIC.
+CIC (Calculus of Inductive Constructions) — мощное зависимое теория типов, основа Coq. Разработана Coquand-Huet (1988+), расширяется для Lean 4. В Diakrisis: α_CIC.
 
 ### Значение CIC
 
@@ -54,7 +54,7 @@ CIC (Calculus of Inductive Constructions) — мощное зависимое ty
 - **W(x:A). B(x)** — W-типы (inductive well-founded).
 
 **Вычислительные правила**:
-- **β**: (λx.t) u ↝ t[x := u] (beta-reduction).
+- **β**: (λx.t) u ↝ t[x := u] (beta-редукция).
 - **ι**: case analysis for inductive types.
 - **δ**: definitional expansion.
 - Все редукции — **strongly normalizing**.
@@ -68,7 +68,7 @@ CIC (Calculus of Inductive Constructions) — мощное зависимое ty
 **Импредикативный Prop**:
 - Propositions как тип (пропозициональная irrelevance).
 - ∀ X : Prop, ... — квантификация по всем Prop.
-- Отличие от HoTT, где Prop — n=-1 truncation.
+- Отличие от HoTT, где Prop — n=-1 усечение.
 
 **Иерархия универсумов**:
 - Prop : Type_0.
@@ -148,7 +148,7 @@ CIC (Calculus of Inductive Constructions) — мощное зависимое ty
 
 ### Роль Verum
 
-- **Verum** — специализированный prover для УГМ.
+- **Verum** — специализированный прувер для УГМ.
 - На основе CIC-подобной теории типов.
 - С дополнениями для quantum-specific конструкций.
 
@@ -192,7 +192,7 @@ Cubical HoTT — гибрид.
 - **Werner (1994)**: SN proof.
 - **Martin-Löf (1984)**: ITT (предок CIC).
 - **Coq development team (1984+)**: Coq system.
-- **Lean 4 (2021+)**: Modern CIC implementation.
+- **Lean 4 (2021+)**: Modern CIC реализация.
 
 ## Специфика α_CIC в Diakrisis
 

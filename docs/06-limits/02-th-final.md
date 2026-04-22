@@ -57,7 +57,7 @@ $$\mathcal{S}_S = \mathcal{S}_S^{local} \cup \mathcal{S}_S^{global}.$$
 - **n = 1**: (∞,1)-categorical (Lurie HTT).
 - **n = ∞**: полное higher-categorical расширение.
 
-Все версии связаны через n-truncation: ⟪⟫_n = τ_{≤n}(⟪⟫_∞).
+Все версии связаны через n-усечение: ⟪⟫_n = τ_{≤n}(⟪⟫_∞).
 
 ## Три условия уровня 6
 
@@ -144,7 +144,7 @@ TH-Final параметризована **двумя** измерениями:
 
 Доказательство выше использует diagonal argument (Lawvere 1969). В (∞,n)-контексте для n ≥ 2:
 
-**(∞,n)-версия Lawvere**: в (∞,n)-cartesian closed category с coherently surjective y, любой f: Y → Y имеет ∞-coherent fixed point. Контрапозиция: ¬: Prop → Prop без fixed point ⇒ Tr_S не определим в S.
+**(∞,n)-версия Lawvere**: в (∞,n)-cartesian closed category с coherently surjective y, любой f: Y → Y имеет ∞-когерентный fixed point. Контрапозиция: ¬: Prop → Prop без fixed point ⇒ Tr_S не определим в S.
 
 Все ключевые no-go-результаты (Gödel I, II, Tarski, Lawvere FP) обобщаются на каждый (∞,n)-уровень. Следовательно, TH-Final применима иерархически.
 

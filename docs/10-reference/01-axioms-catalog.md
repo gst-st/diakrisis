@@ -47,7 +47,7 @@ $$\mathrm{Ob}(\llbracket\cdot\rrbracket) \neq \emptyset.$$
 α_math ∈ Ob(⟪⟫).
 
 **Статус**: [П].
-**Verum**: требует instantiation.
+**Verum**: требует инстанциация.
 **Следствия**: основа для ρ.
 
 ### Axi-4 — ρ через хом

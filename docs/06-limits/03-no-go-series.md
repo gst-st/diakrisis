@@ -26,7 +26,7 @@ TH-Final помещается в эту серию как шестой член.
 | Cantor | 1899 | Множество всех множеств |
 | Russell paradox | 1901 | {x : x ∉ x} как множество |
 | Gödel I (incompleteness) | 1931 | Полнота достаточно сильной системы |
-| Gödel II (consistency) | 1931 | Самоподтверждение консистентности |
+| Gödel II (консистентность) | 1931 | Самоподтверждение консистентности |
 | Tarski (undefinability) | 1936 | Truth-предикат внутри |
 | **TH-Final** | **2026** | **Предельное основание уровня 6** |
 
@@ -41,7 +41,7 @@ TH-Final помещается в эту серию как шестой член.
 **Russell paradox (1901) — {x : x ∉ x}**:
 - **Формулировка**: R = {x : x ∉ x}. R ∈ R ⟺ R ∉ R.
 - **Следствие**: naive set theory (Frege Grundgesetze) — inconsistent.
-- **Решение**: type theory (Russell), ZFC (Zermelo).
+- **Решение**: теория типов (Russell), ZFC (Zermelo).
 - **Обобщение**: self-referential definitions problematic.
 
 **Gödel I (1931) — неполнота**:
@@ -180,12 +180,12 @@ TH-Final помещается в эту серию как шестой член.
 
 - **Lawvere (1969)**: Lawvere's fixed point theorem — categorical generalization.
 - **Solovay (1970s)**: обобщения Gödel.
-- **Martin-Löf (1984)**: type-theoretic consistency.
+- **Martin-Löf (1984)**: type-theoretic консистентность.
 
 ### Связь с computer science
 
 - **Church-Turing thesis**: вычислимость — ограничена.
-- **Halting problem**: decidability — ограничена.
+- **Halting problem**: разрешимость — ограничена.
 - **Rice's theorem**: nontrivial semantic properties — undecidable.
 
 Все — часть той же структурной семьи.

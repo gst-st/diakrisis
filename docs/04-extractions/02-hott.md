@@ -199,11 +199,11 @@ Univalence отражает интуицию:
 
 ### Источники
 
-- **Awodey-Warren (2009)**: Homotopy type theory.
+- **Awodey-Warren (2009)**: Homotopy теория типов.
 - **Voevodsky (2010+)**: Univalent Foundations program.
 - **HoTT Book (2013)**: каноническая формализация.
 - **Shulman (2015+)**: теоретические results.
-- **Coquand et al. (2015)**: Cubical type theory.
+- **Coquand et al. (2015)**: Cubical теория типов.
 - **Lurie (2009)**: HTT — ∞-topos context.
 
 ## Специфика извлечения HoTT
