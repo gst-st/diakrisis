@@ -203,8 +203,10 @@ Diakrisis — уровень **5+**:
 | Уровень | Примеры |
 |---|---|
 | 5 | ZFC, HoTT, CIC, NCG |
-| 5+ | Diakrisis, Lurie HTT как мета |
+| 5+ | Diakrisis, ∞-cosmoi (Riehl-Verity) |
 | 6 | **Невозможно** (TH-Final) |
+
+**Полное описание иерархии уровней**: [/00-foundations/05-level-hierarchy](/00-foundations/05-level-hierarchy) — детальное соответствие между уровнями, мат-аппаратом, критериями и примерами; обоснование статуса 5+ Diakrisis.
 
 ## 9. Состояние проекта
 

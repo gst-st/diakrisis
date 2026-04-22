@@ -13,6 +13,7 @@ const sidebars: SidebarsConfig = {
         '00-foundations/02-zero-principles',
         '00-foundations/03-zero-boundary',
         '00-foundations/04-rules-of-engagement',
+        '00-foundations/05-level-hierarchy',
       ],
     },
     {
