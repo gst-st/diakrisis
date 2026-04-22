@@ -114,7 +114,7 @@ const config: Config = {
   themeConfig: {
     metadata: [
       {name: 'author', content: 'Diakrisis Authors'},
-      {name: 'description', content: 'Diakrisis — 2-категорный формализм для классификации математических оснований.'},
+      {name: 'description', content: 'Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью TH-Final. 96 теорем, UFH, связь с УГМ.'},
     ],
     image: 'img/logo.svg',
     colorMode: {

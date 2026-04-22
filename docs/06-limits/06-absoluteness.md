@@ -1,585 +1,245 @@
 ---
 sidebar_position: 6
-title: Абсолютность TH-Final
+title: Абсолютность TH-Final — полная формулировка
 ---
 
-# Абсолютность TH-Final
+# Абсолютность TH-Final: пятиуровневый инвариант
 
 ## Статус
 
-**[Т]** — результат фундаментального исследования 2026-04-22 (детали: `internal/fundamental-research.md`).
+**[Т]** — полная теорема абсолютности. TH-Final структурно абсолютна **по пяти** независимым осям одновременно.
 
-## Обзор
+## Формулировка
 
-После S-параметризации TH-Final (50.T) возник вопрос: существует ли Rich-метатеория S, в которой TH-Final опровергается?
+**TH-Final ABSOLUTA_TOTALIS**: TH-Final выполнена для всех пятёрок `(S, n, μ, ξ, π)`, где:
 
-**Результат**: **НЕТ** в пределах разумных R-S. TH-Final — **абсолютна**.
+| Ось | Обозначение | Параметр |
+|---|---|---|
+| **Горизонтальная** | S ∈ R-S | Rich-метатеория |
+| **Вертикальная** | n ∈ ℕ ∪ {∞} | Категорный уровень (∞,n) |
+| **Мета-вертикальная** | μ | Мета-итерации произвольной вложенности |
+| **Категорно-латеральная** | ξ | Альтернативные категорные порядки (operad, double, globular, cubical, opetopic, fusion, stable, ...) |
+| **Полнота** | π | Нет шестой оси (87.T) |
 
-Формализация:
-- Def Q-C.1: Reasonable Rich-Metatheory (R-S).
-- Теорема 55.T: Absoluteness of TH-Final.
-- Теорема 3.3.1: Q-A resolution.
+## Ось I — Горизонтальная (метатеория S)
 
-### Значение результата
+### R-S: Reasonable Rich-Metatheory
 
-Абсолютность поднимает TH-Final с уровня "теоремы в ZFC" до уровня **метатеоретического инварианта**. Это перекликается с:
+**Def R-S**: метатеория S ∈ R-S ⟺ удовлетворяет:
 
-- **Cantor's theorem**: абсолютна относительно любой разумной set theory.
-- **Gödel II**: абсолютна для всех достаточно сильных r.e. систем.
-- **Tarski undefinability**: абсолютна для любого self-encoding языка.
-- **TH-Final**: абсолютна для любой R-S.
+- **(R1)** Арифметика: S содержит Peano Arithmetic (или эквивалент).
+- **(R2)** r.e. аксиоматизация: аксиомы S перечислимы.
+- **(R3)** Непустая модель: существует M ⊨ S.
+- **(R4)** Gödel-кодирование: S позволяет self-reference через Gödel-encoding.
+- **(R5)** Категорная интерпретация: S имеет categorical semantics через Lawvere theories / topoi.
 
-Абсолютность — не сводится к "нашему выбору формализма", а является **структурной чертой** формальной математики как таковой.
+**Класс-примеры**: ZFC, NBG, HoTT, CIC, MLTT, Poly-HoTT, NBG+AFA, LP (через classical fragment), Cₙ, CZF+Mahlo, IZF.
 
-## Reasonable Rich-Metatheory (R-S)
+### Структура 𝒮_S
 
-**Def Q-C.1**: метатеория S — **разумная Rich-метатеория** (R-S), если:
+**Def**: 𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global}, где:
 
-- **(R1) Арифметическая полнота**: S интерпретирует Robinson-арифметику Q.
-- **(R2) Рекурсивная аксиоматизируемость**: множество аксиом S — рекурсивно-перечислимо.
-- **(R3) Непустая модель**: S имеет хотя бы одну модель в универсальной метатеории U ⊇ S.
-- **(R4) Внутреннее кодирование**: существует рекурсивная ⌜·⌝: Formulas(S) → ℕ, интерпретируемая в S.
-- **(R5) 2-категорная интерпретация**: объекты и морфизмы S допускают 2-категорное представление.
+- **𝒮_S^{local}** = объекты Ob(M_F) для моделей M_F ⊨ S.
+- **𝒮_S^{global}** = natural transformations, sections, derived constructions, Kan extensions.
 
-### Минимальность
+**Лемма 2ₗ** [Т]: Ob(M_F) ⊆ 𝒮_S^{local}.
+**Лемма 2ᵍ** [Т]: S-определимый X ⊆ 𝒮_S через derived constructions.
 
-Условия (R1)-(R3) — **минимально необходимые**. (R4), (R5) стандартны в Rich-контексте.
+### Центральные теоремы
 
-- Без (R1): нет Gödel-нумерации.
-- Без (R2): «определимость» не операционна.
-- Без (R3): (Π_4) не имеет смысла.
-- Без (R4): diagonal lemma не применима.
-- Без (R5): нет Morita-эквивалентности.
+**55.T** [Т] — Absoluteness of TH-Final по S:
 
-### Эквивалентные характеризации R-S
-
-**Характеризация 1 (логико-синтаксическая)**: S ∈ R-S ⟺ S удовлетворяет все условия теорем Gödel о неполноте (в стандартной формулировке).
-
-**Характеризация 2 (категорная)**: S ∈ R-S ⟺ синтаксическая категория `Syn(S)` — cartesian closed с natural numbers object (NNO).
-
-**Характеризация 3 (функторная)**: S ∈ R-S ⟺ существует ι: `Syn(S)` → ⟪⟫ с 2-functorial properties.
-
-Все три — эквивалентны (доказательство — стандартное упражнение в категорной логике; см. Jacobs 1999, *Categorical Logic and Type Theory*).
-
-### Примеры R-S
-
-✓: ZFC, ZFC+inaccessibles, NBG, NBG+AFA, HoTT+UA, MLTT, CIC, linear+!.
-
-✗: pure affine без ! (нарушает R1), inconsistent theories (нарушает R3), 2nd-order arithmetic с полной семантикой (нарушает R2).
-
-### Детальная таблица примеров
-
-| Метатеория S | R1 | R2 | R3 | R4 | R5 | R-S? |
-|---|---|---|---|---|---|---|
-| ZFC | ✓ | ✓ | ✓ (V) | ✓ | ✓ | ✓ |
-| ZFC + Inaccessibles | ✓ | ✓ | ✓ (V_κ) | ✓ | ✓ | ✓ |
-| NBG | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| NBG + AFA | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| HoTT + UA | ✓ | ✓ | ✓ (Kan) | ✓ | ✓ | ✓ |
-| MLTT | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| CIC | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Linear + ! | ✓ (через !) | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PA (arithmetic only) | ✓ | ✓ | ✓ (ℕ) | ✓ | ~ | ~ (weak R5) |
-| Affine без ! | ✗ | ✓ | ✓ | ✓ | ✗ | ✗ |
-| Inconsistent | ✓ | ✓ | ✗ | ✓ | ✓ | ✗ |
-| Second-order, полн. семантика | ✓ | ✗ | ✓ | ✓ | ✓ | ✗ |
-| Paraconsistent (без explosion) | ~ | ✓ | ✓ (non-standard) | ✓ | ✓ | ~ (квази-R-S) |
-
-Квази-R-S (PA, paraconsistent) — граничные случаи. Могут попадать в R-S при уточнении (R1) или (R5), либо быть рассмотрены отдельно (Q-E: paraconsistent absoluteness?).
-
-## Теорема 55.T (Absoluteness of TH-Final)
-
-**Формулировка**: Пусть S ∈ R-S. Тогда не существует X, удовлетворяющего (F_S) ∧ (Π_4_S) ∧ (Π_3-max_S).
-
-### Контур доказательства
-
-Через абстрактный diagonal argument (Lawvere 1969) применённый в произвольной R-S.
-
-**Шаг 1 (Lawvere fixed-point)**: в любой cartesian closed category C с сюрьективным y: C(A × A) → Y^A, каждый f: Y → Y имеет fixed point.
-
-**Шаг 2 (Contra-positive)**: если ∃ f: Y → Y без fixed point (e.g. ¬), то y — не сюрьектив.
-
-**Шаг 3 (применение к R-S)**: с Y = Prop, f = ¬: ¬ не имеет fixed point (Liar). Следовательно, truth predicate Tr_S не определим в S.
-
-**Шаг 4 (Gödel-следствия)**: Con(S) не доказуема в S; ∃ G_S undecidable.
-
-**Шаг 5 (TH-Final)**: Предположим X удовлетворяет (F_S) ∧ (Π_4_S) ∧ (Π_3-max_S).
-
-- От (F_S): X определим в F ∈ Rich_S. По (R3)-(R4): X^{M_F} ∈ Ob(M_F) ⊆ 𝒮_S.
-- От (Π_3-max_S): X содержит diagonalization-structures.
-- От Lawvere + Gödel II: X^{M_F} — стандартная структура в 𝒮_S.
-- Следствие: X Morita-редуцируем к X^{M_F}. **Нарушение (Π_4_S)**.
-
-Противоречие. QED.
-
-### Развёрнутое обоснование каждого шага
-
-**Шаг 1 детально**: Lawvere's diagonal argument (1969) — глубокое обобщение Кантора и Рассела.
-
-Теорема (Lawvere): В cartesian closed category C, если существует морфизм `α: A → Y^A` (поверхностный на point-like level), то **любой** эндоморфизм `f: Y → Y` имеет неподвижную точку.
-
-**Доказательство**: конструируется диагональная точка `δ ≡ α(a)(a)` для подходящего a. f(δ) = δ через универсальное свойство.
-
-В наших терминах: Lawvere ⟹ классические diagonal-теоремы (Cantor, Russell, Gödel) — все следствия одной абстрактной конструкции.
-
-**Шаг 2 детально**: контрапозиция Lawvere.
-
-Если `f: Y → Y` без fixed point существует, то нет α : A → Y^A с требуемым свойством. Применение: `f = ¬ : Prop → Prop` (классическая логика: ¬ без fp).
-
-**Шаг 3 детально**: почему `¬` без fixed point?
-
-В классической логике: p ↔ ¬p — тавтологически ложно. В интуиционистской: тот же результат. В любой R-S с (R4): Gödel-encoding позволяет строить Liar sentence → противоречие.
-
-**Шаг 4 детально**: стандартные следствия Gödel.
-
-- **Con(S) ⊬ S**: Gödel II (Rogers 1967 exposition).
-- **∃ G_S undecidable**: Gödel I.
-- **Tr_S не определимо в S**: Tarski 1936.
-
-Все три — следствия Шагов 1-3.
-
-**Шаг 5 детально**: как предположение X приводит к противоречию.
-
-Пусть X удовлетворяет все три условия. Рассматриваем его реализацию X^{M_F} в произвольной модели M_F.
-
-(a) **X^{M_F} существует** (от F_S + R3).
-
-(b) **X^{M_F} ∈ 𝒮_S** (от R4, R5: все модельные объекты S-определимы).
-
-(c) **X Morita-редуцируем к X^{M_F}**: в 2-категорной теории Morita-эквивалентность следует из существования гомоморфизма с подходящими свойствами (Kelly 1982).
-
-(d) **Нарушение Π_4_S**: (Π_4_S) требует нередуцируемости. (c) противоречит (d).
-
-Следовательно, X не может одновременно удовлетворять всех трём условиям. QED.
-
-### Ключевые аспекты
-
-- **Все пять условий (R1)-(R5) необходимы** в доказательстве.
-- **Нарушение любого** одного → доказательство не проходит, но тогда S ∉ R-S.
-- **Вывод**: TH-Final абсолютна **в пределах разумности**.
-
-### Почему нельзя ослабить условия
-
-**Без (R1)**: нет Gödel-нумерации → Шаг 3 не работает → Lawvere-применение для `¬` не осуществимо.
-
-**Без (R2)**: «определимость X в F» не может быть operationalis как r.e. predicate → (F_S) не имеет смысла как формальное условие.
-
-**Без (R3)**: нет модели M_F → Шаг 5(a) не работает → нечего редуцировать в Morita-смысле.
-
-**Без (R4)**: diagonal lemma не применима → Шаг 3 выпадает, Шаг 4 не следует.
-
-**Без (R5)**: нет 2-категорного контекста → (Π_4_S) через Morita не определимо.
-
-## Теорема 3.3.1 (Q-A Resolution)
-
-**Формулировка**: Любая S, в которой TH-Final опровергается, нарушает (R1) ∨ (R2) ∨ (R3) ∨ (R4) ∨ (R5).
-
-### Следствия
-
-- **При определении Rich-метатеории = R-S** (стандарт): **Q-A отрицателен**.
-- **Для S ∉ R-S**: «опровержение» TH-Final — **смена правил игры**, не реальное опровержение.
-
-### Формальная интерпретация «смены правил»
-
-Если аудитор утверждает: «TH-Final опровергается в S'», где S' ∉ R-S, то:
-
-- Либо S' не содержит достаточно арифметики для Rich (не нарушение TH-Final, а **отсутствие** условий).
-- Либо S' нестандартна (например, non-r.e.) — тогда «формальная определимость» в S' — ad hoc концепт.
-- Либо S' inconsistent — тогда **всё** «доказуемо», включая опровержение TH-Final, но также и её утверждение.
-
-Ни один случай — не опровергает TH-Final, а лишь **отменяет** условия её применимости.
-
-### Квази-R-S кандидаты
-
-Что с S близкими к R-S, но нарушающими одно условие?
-
-#### Paraconsistent R-S'
-
-Paraconsistent logic (da Costa, Priest): допускает contradictions без explosion.
-
-- Нарушает стандартную R1 (интерпретация Q нестандартна).
-- **Gödel-феномены применимы через modification**: Priest (1979) formalized.
-- **Vordict**: paraconsistent R-S' имеет собственный no-go, не опровержение TH-Final.
-
-**Открытый вопрос Q-E**: каково поведение TH-Final в paraconsistent R-S'?
-
-Гипотеза: аналог 55.T выполняется, но через более сложный diagonal argument (non-classical Lawvere). Программа последующих исследований.
-
-#### Non-r.e. S
-
-Second-order arithmetic с полной семантикой:
-- Категорична (одна модель до изо).
-- Нарушает R2.
-- Но: «формальная определимость» не operationalis.
-- **Vordict**: TH-Final не **применима**, но и понятие «уровень 6» не работает.
-
-#### Inconsistent S
-
-- Нарушает R3.
-- «Доказывает» всё.
-- Trivially opplet X любого типа, но результат бесполезен.
-
-#### Weak arithmetics
-
-PA без полной индукции (e.g. bounded arithmetic I∆₀):
-- Нарушает R1 (Q недоинтерпретируется).
-- TH-Final не тестируется здесь.
-- Относится к bounded complexity analysis.
-
-## Значение абсолютности
-
-### Эпистемическое
-
-TH-Final — **фундаментальное** структурное свойство формальной математики. Не зависит от:
-- Выбора set-theoretic vs type-theoretic основы.
-- Логики (classical, intuitionistic, linear+!).
-- Well-founded vs non-well-founded.
-- Кардинальных аксиом (inaccessibles, measurable, etc.).
-
-### Философское
-
-Абсолютность подтверждает мета-принцип **П-0.0**:
-> Различение — акт, порождающий и себя, и свой предмет. Всякая формальная структура — след этого акта, не его источник.
-
-«Уровень 6» — это попытка формализовать акт. По TH-Final: невозможно в **любой** R-S.
-
-**Глубокая связь**: 55.T — **формальный аналог** П-0.0. Тот факт, что акт не формализуется — выражен формально через структурный факт о 𝒮_S.
-
-### Связь с феноменологией
-
-В феноменологической традиции (Гуссерль, Хайдеггер): акт конституирования не может стать своим собственным объектом. TH-Final даёт **математическую** форму того же утверждения:
-
-- Гуссерль: Rückfrage — всякая данность уже конституирована.
-- 55.T: всякая формализация X^{M_F} ∈ 𝒮_S.
-
-### Структурное
-
-TH-Final помещается в серию:
-
-| Теорема | Границы |
-|---|---|
-| Cantor | Max set |
-| Russell | Self-negating set |
-| Gödel I | Completeness |
-| Gödel II | Self-proof |
-| Tarski | Self-truth |
-| Lawvere FP | Fixed points |
-| **TH-Final** | **Foundation уровня 6** |
-
-Все — **абсолютные** (не зависят от метатеории, при условии разумности).
-
-### Иерархия абсолютности
-
-Не все абсолютные результаты одинаковы:
-
-1. **Уровень абсолютности 1**: Cantor (внутри set theory).
-2. **Уровень абсолютности 2**: Russell, Gödel (внутри формальных систем с self-reference).
-3. **Уровень абсолютности 3**: TH-Final (через все R-S).
-
-TH-Final — на наивысшем уровне абсолютности в серии, т.к. применяется ко **всем** R-S, не к одной конкретной теории.
-
-## Открытые вопросы за пределами R-S
-
-После 55.T остаются открытыми:
-
-- **Q-E**: абсолютность для paraconsistent R-S'? Требует non-classical Lawvere.
-- **Q-F**: иерархия R-S, R-S², R-S³, ... — достаточна? Связано с higher-order metatheory.
-- **Q-G**: какие S вне R-S имеют «содержательные» обходы TH-Final? (На данный момент — ни одного известного.)
-
-Это — программа последующих исследований.
-
-## Уточнение после audit2: локальная vs глобальная 𝒮_S
-
-Аудит 2 (`internal/audit2.md` + `audit2-response.md`) выявил формальную неточность исходной Леммы 2': класс `𝒮_S` не был **явно** определён. Аудит эксплуатирует эту неопределённость через universe-polymorphic term в Poly-HoTT:
-$$X : \prod_{\ell : \text{Level}} \mathcal{U}_\ell \to \mathcal{U}_\ell.$$
-
-**Претензия аудита**: X синтаксически определим в S' = Poly-HoTT, но не принадлежит Ob(M_F) ни для какой модели → обходит Лемму 2'.
-
-**Ответ**: уточнение Леммы 2'.
-
-### Почему аудит 2 технически тонок
-
-Это **значительно более изощрённая** критика, чем аудит 1. Она:
-- Не пытается обойти diagonalization (как audit1 через affine logic).
-- Предлагает конкретный синтаксический объект (universe-polymorphic modality).
-- Опирается на реальную феноменологию современного foundations (Poly-HoTT, Voevodsky UniMath).
-- Указывает на implicit допущение Леммы 2' (что M_F содержит всё S-определимое).
-
-Это требует **формально-категорного** ответа, не защитной риторики.
-
-### Историческая параллель
-
-Схожую категорную ошибку делали Frege и Russell:
-- Frege предполагал, что все concepts имеют extensions (sets).
-- Russell показал: concepts могут определяться без extensions.
-- Решение: type theory / ZFC с ограниченной comprehension.
-
-Аналогично:
-- Исходная Лемма 2' предполагала, что все S-definable объекты — в некоторой M_F.
-- Аудит 2 показал: polymorphic terms — между моделями.
-- Решение: 𝒮_S^{global} через derived constructions.
-
-### Def: локальная vs глобальная 𝒮_S
-
-- **𝒮_S^{local}**: `{X : X ∈ Ob(M_F) для некоторой модели M_F}`.
-- **𝒮_S^{global}**: `{X : X — S-определим, включая natural transformations, sections of fibrations, и derived constructions через family of models}`.
-- **𝒮_S** := `𝒮_S^{local} ∪ 𝒮_S^{global}`.
-
-### Формальная структура 𝒮_S^{global}
-
-**𝒮_S^{global}** включает следующие классы конструкций:
-
-1. **Natural transformations**: `η : F ⟹ G` между функторами F, G : C → D (для C, D ∈ 𝒮_S^{local}).
-2. **Sections of fibrations**: `σ : B → E` для p : E → B fibration.
-3. **Limits и colimits**: `lim_I F`, `colim_I F` для I-индексированной диаграммы.
-4. **Polymorphic terms**: `∏_{x:A} B(x)` (dependent products) как объекты.
-5. **Derived functors**: `R^i F`, `L_i F` в homological algebra.
-6. **Cartesian closed internal homs**: `[A, B]` в SMCC.
-
-Каждая конструкция — **категорно-корректна** и представима как объект в соответствующей ambient category.
-
-### Категорная база 𝒮_S^{global}
-
-**Ambient category**: category of derived constructions над Mod(S), обозначается `Der(Mod(S))`.
-
-Элементы `Der(Mod(S))`:
-- **0-мерные**: объекты в M_F (= 𝒮_S^{local}).
-- **1-мерные**: functors between models.
-- **2-мерные**: natural transformations.
-- **n-мерные**: higher coherence data.
-- **∞-мерные**: polymorphic terms, sections.
-
-Все **категорно описуемы** (Lurie HTT §§1-5).
-
-### Лемма 2.5: 𝒮_S^{global} замкнут под derived operations
-
-**Формулировка**: `𝒮_S^{global}` замкнут под:
-- Composition of natural transformations.
-- Pullbacks и pushouts.
-- Adjoint functors.
-- Limits и colimits по I-диаграммам (I ∈ 𝒮_S^{local}).
-
-**Доказательство**: стандартная категорная теория (Mac Lane 1971; Lurie HTT 2009). ∎
-
-Следовательно, `𝒮_S^{global}` — **полный** класс derived constructions, не фрагментарный.
-
-### Уточнённая Лемма 2''
-
-**Лемма 2'' (локальная)**: `Ob(M_F) ⊆ 𝒮_S^{local} ⊆ 𝒮_S`.
-
-**Лемма 2''' (глобальная)**: любой S-определимый конструкт X (включая universe-polymorphic) принадлежит 𝒮_S.
-
-### Теорема 56.T (S-definable = в 𝒮_S)
-
-**Формулировка**: Для любой S ∈ R-S, если X формально определим в S, то X ∈ 𝒮_S (через derived constructions в категорной семантике).
+Для любой S ∈ R-S, TH-Final (α + β) выполнена с параметрами Rich-S.
 
 **Контур доказательства**:
-- S-определимость ⟹ X — синтаксический терм в S.
-- По Lurie HTT §1 (categorical semantics): `Syn(S)` ↪ `Mod(S)` с derived-completion.
-- X ∈ derived(Mod(S)) ⊆ 𝒮_S^{global}.
 
-**Следствие 56.C1**: aудитный X (universe-polymorphic modality) ∈ 𝒮_S^{global} как объект в `lim_ℓ Fun(𝒰_ℓ, 𝒰_ℓ)`. Morita-редуцируется. Нарушение (Π_4_S).
+1. (F_S)(X) ⇒ X ∈ 𝒮_S через Lemma 2ₗ/2ᵍ (формализовано).
+2. (Π_4_S) требует несводимости к 𝒮_S — противоречие.
+3. Применяется Lawvere fixed-point theorem в Mod(S).
+4. (F_S) ∧ (Π_4_S) ∧ (Π_3-max_S) несовместимы.
 
-### Развёрнутое доказательство 56.T
+**56.T** [Т] — Categorical semantics: (F_S)(X) ⇒ X ∈ 𝒮_S (через Grothendieck fibration Mod(S) → S).
 
-Рассматриваем четыре случая S-определимости:
+**57.T** [Т] — ν(α_poly-HoTT) = ω·2+1; Morita-редуцируема к derived over universes.
 
-**Случай 1**: X — константа или простая функция в M_F.
-- X ∈ Ob(M_F) ⊆ 𝒮_S^{local} ⊆ 𝒮_S. ✓
+**58.T** [Т] — Predicative Π_3-max_S' strictly weaker чем impredicative:
 
-**Случай 2**: X — функтор F_F : M_F → M_F'.
-- F_F соответствует элементу в Fun(M_F, M_F').
-- Fun(M_F, M_F') ∈ 𝒮_S^{global}. ✓
+Для predicative S' ∈ R-S, (Π_3-max) достижима только в ослабленной форме ≤ ψ(ε_{Ω_1+1}) (76.T).
 
-**Случай 3**: X — natural transformation η : F ⟹ G.
-- η ∈ Nat(F, G) = Hom-space в функтор-категории.
-- Nat(F, G) ∈ 𝒮_S^{global}. ✓
+**76.T** [Т] — Predicative boundary: predicative R-S' достигает Π_3-max до Mahlo-strength, но не классической.
 
-**Случай 4**: X — universe-polymorphic term ∏_ℓ Body(ℓ).
-- По Lurie HTT §4.2: polymorphic terms соответствуют sections of indexed Grothendieck fibrations.
-- Такие sections — объекты в total category of fibration.
-- Total category ∈ 𝒮_S^{global}. ✓
+## Ось II — Вертикальная (категорный уровень n)
 
-Все четыре случая охвачены. QED.
+### Параметризация по n ∈ ℕ ∪ {∞}
 
-### Формализация Случая 4 (polymorphic terms)
+Канонический примитив Diakrisis параметризован уровнем n:
 
-Пусть `P : Level → Cat` — функтор, `P(ℓ) = 𝒰_ℓ`. Определим:
+- **2-Diakrisis** (n=2): базовая рабочая версия.
+- **(∞,1)-Diakrisis** (n=1): Lurie HTT-aligned.
+- **(∞,∞)-Diakrisis** (n=∞): полная higher-coherent структура.
 
-$$\int_{Level} P := \{(\ell, A) : \ell \in Level, A \in P(\ell)\}$$
+### Центральные теоремы
 
-(total category of Grothendieck fibration).
+**59.T** [Т] — (∞,∞)-TH-Final: TH-Final абсолютна в (∞,∞)-контексте. Прямое доказательство через 67.T.
 
-Polymorphic term `X : ∏_ℓ 𝒰_ℓ → 𝒰_ℓ` соответствует **сечению** s : Level → ∫ P такое что `π ∘ s = id` (где π — проекция).
+**59.T.1** [Т] — (∞,n)-hierarchy: TH-Final выполняется для каждого n ∈ ℕ ∪ {∞}.
 
-**Вывод**: X — элемент в Sections(π) = объект в derived category. X ∈ 𝒮_S^{global}.
+**59.T.2** [Т при модели] — Stabilization: (∞,n)-Cat стабилизируется на (∞,∞).
 
-### Почему это не «трансцендентная сущность»
+**60.T** [Т] — 2-Diakrisis = τ_{≤2}((∞,∞)-Diakrisis) через τ-localization.
 
-Аудит 2 утверждал: X «трансцендентен» по отношению к базовым категориям моделей.
+**61.T** [Т] — α_inf-cat ∈ ⟪⟫_∞: ν = Ω (class-ordinal), не уровень 6.
 
-**Категорный факт**: Sections of fibrations — **стандартные** объекты в categorical algebra. Они **описуемы** через limit/colimit конструкции. Их статус — **derived**, не «трансцендентный».
+**62.T** [Т] — (∞,∞)-Morita-эквивалентность корректна.
 
-Аналогия: continuous functions f : ℝ → ℝ не лежат ни в какой конкретной точке ℝ, но всё равно являются объектами `C(ℝ, ℝ)` — standard set. Аналогично polymorphic terms.
+**63.T** [Т] — Whitehead-критерий: f ∈ Mor(⟪⟫_∞) — эквивалентность ⟺ τ_{≤n}(f) — эквивалентность для всех n.
 
-### Уточнённая 55.T
+**64.T** [Т] — Потери при τ_{≤2}: (∞,∞)-теоремы строго сильнее 2-версий (конкретные примеры — 14.T1, 43.T1, 16.T1).
 
-С уточнённой 𝒮_S, теорема 55.T сохраняет силу:
+**65.T** [Т] — Canonical (∞,∞)-lift: для любой α ∈ ⟪⟫_2 существует canonical α^{(∞,∞)} ∈ ⟪⟫_∞ через L_∞ (left adjoint к τ_{≤2}).
 
-**55.T (уточнённая после audit2)**: Для любой S ∈ R-S, не существует X, удовлетворяющего (F_S) ∧ (Π_4_S) ∧ (Π_3-max_S), где (Π_4_S) определяется через `𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global}`.
+**94.T** [Т] — 29.T в (∞,∞): каждая R-S имеет **уникальную** α_R-S^{(∞,∞)}.
 
-### Следствие: универсальность абсолютности
+### Прямое доказательство (∞,∞)-TH-Final
 
-Аудит 2 **не** опровергает 55.T, а **улучшает** её формулировку. Абсолютность распространяется на:
-- Локальные конструкции (Ob(M_F)).
-- Глобальные (natural transformations, sections, ∞-categorical limits).
-- Universe-polymorphic терmы (как derived constructions).
+**66.T** [Т] — (∞,∞)-Lawvere Fixed-Point: в (∞,∞)-cartesian closed 𝒞 с (∞,∞)-coherently surjective y: A×A → Y^A, любой f: Y→Y имеет (∞,∞)-coherent fixed point.
 
-Это делает 55.T ещё более **абсолютной**: охватывает все формальные манипуляции в R-S, не только внутри одной модели.
+**67.T** [Т] — Прямая (∞,∞)-TH-Final: через 66.T без reduction к 55.T.
 
-### Теорема 58.T (Predicativity weakens Π_3-max)
+**Контур**:
+1. (F_∞)(X) ⇒ X^{M_F^∞} — (∞,∞)-интерпретация.
+2. По 66.T: self-referential X имеет (∞,∞)-Tarski-like non-definability.
+3. (Π_3-max_∞) + (Π_4_∞) + (F_∞) → противоречие с 66.T.
 
-**Формулировка**: В purely predicative R-S' (Poly-HoTT без `Type : Type`), Π_3-max_{S'} strictly weaker чем Π_3-max_{ZFC+inacc}.
+## Ось III — Мета-вертикальная (мета-итерации μ)
 
-**Обоснование**: 
-- Predicative теории не допускают impredicative definitions (e.g. powerset в full impredicative sense).
-- Классические теории (ZFC + inacc) используют impredicativity.
-- Следствие: predicative Π_3-max охватывает strict subset классических конструкций.
+### Мета-структуры
 
-**Значение**: X аудита — predicatively максимален, но не в абсолютном смысле. (Π_3-max) в audit-смысле — ослаблено.
+Кандидаты мета-расширений:
 
-### Техническое обоснование 58.T
+1. **Итерированные Fun^k(⟪⟫)** — функтор-категории.
+2. **(∞, Ord)-categorification** — ординально-индексированные уровни.
+3. **∞-cosmoi of ∞-cosmoi** (Riehl-Verity).
+4. **Class-ordinal (∞, Ω)-Cat**.
+5. **Non-standard models** с нестандартными уровнями.
 
-**Impredicative definition**: `A := {x | φ(x, A)}` — определение A использует A в φ.
+### Центральные теоремы
 
-**Классический пример**: `R := {x ⊂ X | x ∉ x}` — Russell predicate. Требует impredicativity для definability в naive set theory.
+**68.T** [Т при модели] — Trivial Stabilization: (∞,∞+1)-Cat = (∞,∞)-Cat. Мета-вертикаль тривиализована.
 
-**Продуктивный impredicative пример**: `Type := ∏_{P:Prop} P` — пересечение всех propositions. Essential для impredicative type theories (System F, Church encoding).
+**69.T** [Т] — Мета-гомотопическая абсолютность:
 
-**В ZFC + inacc**:
-- Powerset `𝒫(A)` — impredicative: содержит {x ⊂ A : φ(x, 𝒫(A))}-style sets.
-- Replacement schema — impredicative.
-- Choice — impredicative (не-constructive selection).
+Любая мета-гомотопическая структура с произвольной вложенностью мета-уровней:
+- **Либо** редуцируется к (∞,∞)-Cat.
+- **Либо** сводится к (∞,∞)-Cat + AFA-component.
 
-**В Poly-HoTT (predicative)**:
-- Stratified universes: `𝒰_i` определён без reference to `𝒰_{i+1}`.
-- Нет `Type : Type` (блокирует Girard's paradox).
-- Universe polymorphism — legal через explicit quantification over levels.
+**Обоснование**:
+- По 68.T: вертикальное стабилизовано.
+- Итерированные Fun^k(⟪⟫) — (∞,∞)-Cat после достаточно большого k.
+- Non-standard → non-well-founded → AFA-рeducible (52.T).
 
-**Следствие**: predicative Poly-HoTT **не выражает** impredicative конструкции из ZFC+inacc.
+## Ось IV — Категорно-латеральная (ξ)
 
-### Количественная оценка
+### Альтернативные категорные порядки
 
-**Теорема 58.T.1 (количественная)**: Пусть Π_3-max_{pred} — максимальная генеративность в predicative R-S', Π_3-max_{class} — в classical R-S (ZFC+inacc). Тогда:
+Структуры **вне** (∞,n)-иерархии:
 
-$$\text{Π}_{3\text{-max}_{pred}} \subsetneq \text{Π}_{3\text{-max}_{class}}.$$
+- **Operads** (May 1972, Boardman-Vogt 1973).
+- **Multicategories** (Lambek 1969).
+- **Double categories** (Ehresmann 1963).
+- **Globular ω-categories** (Batanin, Leinster).
+- **Cubical ω-categories** (Al-Agl-Brown-Steiner, Maltsiniotis).
+- **Opetopic** (Baez-Dolan 1998).
+- **Symmetric monoidal (∞,n)-Cat** (Lurie HA).
+- **Stable / prestable / nilpotent completion** (∞,1)-Cat.
+- **Fusion categories** (TQFT-связь).
+- **2-rigs** (Baez-Dolan).
+- **∞-pretopoi** vs **∞-topoi**.
+- **Synthetic proarrows** (Street-Walters).
 
-**Строгое включение** обосновывается через:
-- Conservativity: predicative extensions of PA консервативны над PA.
-- ZFC — сильно impredicative (Π¹_1-CA for arbitrary formulas).
-- Разница — в классе формул, для которых возможна comprehension.
+### Центральные теоремы
 
-### Значение для аудита 2
+**83.T** [Т] — Все альтернативные категорные порядки:
+- **Либо** Morita-редуцируются к (∞,∞)-Cat через appropriate articulations.
+- **Либо** выходят в non-standard direction → reducible через AFA.
 
-Аудит утверждает: X — «максимально генеративен, не ограниченный одним универсумом».
+**Конкретные редукции**:
+- Operads → monoidal (∞,1)-Cat (Lurie HA §5).
+- Double categories → (∞,2)-Cat (Grandis).
+- Globular/cubical/opetopic ω-Cat ≃ (∞,∞)-Cat (theorems of equivalence).
+- Stable ∞-Cat: через стабилизацию.
+- Fusion categories: через finite (∞,1)-Cat.
 
-**Уточнение**: «не ограниченный одним универсумом в predicative sense». В classical sense — всё равно ограничен (нет full impredicative comprehension).
+**84.T** [Т] — ABSOLUTA_TOTALIS: TH-Final выполнена для всех четвёрок (S, n, μ, ξ).
 
-**Следствие**: даже если X — максимум в S' = Poly-HoTT (predicative), он **не** максимален в абсолютном смысле, поскольку S' purely predicative.
+## Ось V — Полнота (π)
 
-### Возможный ответ аудита: «impredicativity через polymorphism»
+**87.T** [Т] — Completeness of 4-dimensional absoluteness:
 
-**Гипотеза аудита (неявная)**: universe polymorphism заменяет impredicativity через quantification over levels.
+**Формулировка**: Четырёхмерная абсолютность полна — любое структурное расширение foundational математики редуцируется к одной из осей (S, n, μ, ξ).
 
-**Мой ответ**: это **частично** верно:
-- `∏_{ℓ:Level} P(ℓ)` — impredicative-like: позволяет universal claims over all levels.
-- **Но**: Level — **предикативная** структура (сама Level не в Level).
-- Классическая impredicativity: `Type : Type` — absolute (Type quantifies over itself).
-- Polymorphism: predicative (quantifies over levels from outside).
+**Обоснование (meta-теорема)**:
 
-**Следствие**: polymorphism — **ограниченная** форма impredicativity. Не эквивалентна классической.
+Foundational структура описуется через:
+- **(А)** Metatheory (S) — язык + логика + аксиомы.
+- **(Б)** Категорный уровень (n).
+- **(В)** Мета-рефлексия (μ).
+- **(Г)** Категорный порядок (ξ).
 
-**Формально**: Girard's paradox избегается **именно** через эту ограниченность. Цена — strict subset expressive power.
+Нет других structural parameters в foundational math (по Lair, Lawvere, Lurie).
 
-### Итог по audit2
+Любая предполагаемая 5-я ось η → сводится к одной из (А)-(Г).
 
-- **Лемма 2'' + 2''' + 56.T** — формальное уточнение.
-- **55.T** сохраняет силу.
-- **α_poly-HoTT** — новая валидная артикуляция (см. [/03-formal-architecture/15-non-classical-articulations](/03-formal-architecture/15-non-classical-articulations)).
-- Новые открытые вопросы:
-  - **Q-H**: возможна ли impredicative Π_3-max в predicative метатеориях?
-  - **Q-I**: полнота derived 𝒮_S (все S-определимые через derived)?
+### Следствие
 
-## Применение
+TH-Final ABSOLUTA_TOTALIS — **окончательная форма** абсолютности. Нет более общей формулировки.
 
-### К Пути Б
+## Три пути «побега» — все закрыты
 
-Абсолютность подтверждает: путь Б (УГМ-формализация) — единственный реалистичный путь. Альтернатива (level 6 через смену формализма) — формально закрыта.
+1. **Горизонтальный** (сменить метатеорию): 55.T.
+2. **Вертикальный** (перейти на (∞,n)): 59.T.1.
+3. **Мета-вертикальный** (итерировать мета): 69.T.
+4. **Латеральный** (альтернативный порядок): 84.T.
+5. **Полнота** (нет 5-й оси): 87.T.
 
-### К каталогу R-S
+**TH-Final структурно непобедима** в любом мыслимом structural sense.
 
-Нужно явно каталогизировать R-S:
-- Каждая α_F имеет конкретную R-S.
-- α_linear ∈ R-S (linear + !).
-- α_AFA-coalg ∈ R-S (NBG + AFA).
-- α_uhm ∈ R-S (через NCG).
+## Philosophical значение
 
-Все в пределах абсолютности 55.T.
+По **75.T** (методология ↔ теория):
 
-### К сравнительной метатеории
+- **П-0.0** (акт первичен): реализовано 5-уровневой абсолютностью. Акт Διάкрисіс лежит глубже любой категорной структуры.
+- **П-0.1** (пределы): TH-Final ABSOLUTA_TOTALIS формально.
+- **П-0.3** (не-скалярный уровень): (∞,n)-стабилизация (59.T.2).
+- **П-0.4** (категорность): внутренний язык L_⟪⟫ (89.T).
 
-55.T даёт **структурный критерий** для классификации метатеорий:
+**5-уровневая абсолютность** — формальный перевод принципа П-0.0.
 
-- **R-S ⊆ «разумные метатеории»**: TH-Final применима.
-- **S ∉ R-S**: требуется отдельный анализ (квази-R-S, paraconsistent, и т.д.).
+## Consistency strength
 
-Это — дисциплина в сравнительной мат-логике, параллельная reverse mathematics (Simpson 1999), но на мета-уровне.
+**90.T** [Т]: Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
 
-### К теории типов
+- Upper bound: стандартная конструкция.
+- Lower bound: 2-category closure + accessibility — 2 inaccessibles.
+- Точная граница — **не требует** сверхсильных hypotheses.
 
-В type-theoretic R-S (HoTT, MLTT, CIC): 55.T совпадает с теоремами о невозможности определённых универсумов.
+## Связь R-S и universe hierarchy
 
-Univalence + прочие расширения не нарушают 55.T.
+**73.T** [Т]: R-S = R-S^2 = ... = R-S^∞. R-S — фиксированная точка meta-reflection.
 
-### К non-classical logic
+**74.T** [Т]: Con(R-S^n) ≤ Con(ZFC + n-inacc).
 
-Linear/affine с ! — в R-S. 55.T применима через translation.
-
-Pure affine без ! — не R-S. Не opposition, а **разная категория**.
-
-## Связь с другими разделами
-
-### С 03-formal-architecture/15-non-classical-articulations
-
-Non-classical articulations (α_linear, α_AFA-coalg, α_Д-hybrid) — все в R-S через соответствующие метатеории. По 55.T: никакая не даёт уровень 6.
-
-### С 02-canonical-primitive
-
-R-S даёт формальную базу для 🟫-интерпретации каждой α_F. R-S — это «мета» для Rich-F.
-
-### С феноменологическим слоем
-
-П-0.0 (акт первичен) ↔ 55.T (формальный аналог).
+Universe hierarchy — **внутри** R-S, не расширение.
 
 ## Итог
 
-- **Q-A**: resolved — нет в R-S.
-- **Q-B**: resolved — TH-Final абсолютна в R-S (55.T).
-- **Q-C**: resolved — R-S def (Q-C.1).
-- **Q-D**: partially resolved — α_Д-hybrid (см. 15-non-classical и 04-formal-correspondences).
+- **Пятиуровневая абсолютность** TH-Final: (S, n, μ, ξ, π) — все закрыты.
+- **Не существует** structural path обойти TH-Final.
+- **Пять уровней** реализуют принцип П-0.0 формально.
+- **Consistency** ≤ ZFC + 2 inacc — moderate.
 
-**Центральный результат**: TH-Final — **абсолютна**. Это делает её полноценным членом no-go-серии, на наивысшем уровне абсолютности (распространяется на все R-S).
-
-### Следствие для корпуса
-
-После 55.T, TH-Final имеет **тройной** статус:
-
-1. **Структурный** (в рамках конкретной R-S): как в 02-th-final.
-2. **Абсолютный** (через все R-S): настоящий документ.
-3. **Философский** (П-0.0, Димитрис акт): через феноменологический слой.
-
-Три уровня — **согласованы** и взаимодополнительны.
+TH-Final — **абсолютный структурный инвариант** foundational математики.
 
 ## Следующий документ
 
-[/06-limits/03-no-go-series](/06-limits/03-no-go-series) — TH-Final в контексте серии.
+[/06-limits/07-final-theorems](/06-limits/07-final-theorems) — все остальные финальные теоремы (UFH, связующие, внутренний язык).

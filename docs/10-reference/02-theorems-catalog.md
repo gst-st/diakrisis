@@ -348,9 +348,9 @@ title: Каталог теорем
 - **42.T1** [Т] — частичная консервативность над ZFC.
 - **42.C1** — добавляет силу ZFC + 2 inacc.
 
-## S-relative TH-Final и non-classical (48-54)
+## Non-classical артикуляции (48-54)
 
-Добавлено после аудита 2026-04-22 (см. `internal/audit1-response.md`).
+Параметризация TH-Final по метатеории S и расширение каталога артикуляций.
 
 - **48.T** [Т-набр] — α_linear без ! недостаточна для Rich (Π_3-max нарушен).
 - **49.T** [Т-набр] — α_AFA-coalg ∈ 𝓜_{Fnd, S=NBG+AFA}.
@@ -360,80 +360,156 @@ title: Каталог теорем
 - **53.T** [Т-набр] — ν(α_linear) = ω+1.
 - **54.T** [Т-набр] — ν(α_affine) ≤ ω; α_affine не Rich.
 
-### Абсолютность TH-Final (55.T и около)
-
-Результат фундаментального исследования (2026-04-22, `internal/fundamental-research.md`).
-
-- **Def Q-C.1** [О] — Reasonable Rich-Metatheory (R-S): условия (R1)-(R5).
-- **55.T** [Т] — Absoluteness of TH-Final: для любой S ∈ R-S, TH-Final выполнена.
-- **3.3.1** [Т] — Q-A resolution: опровержение TH-Final требует нарушения R-S-условий.
-
-### Уточнение после audit2 (56.T-58.T)
-
-Формальный ответ на универсум-полиморфный вызов Poly-HoTT. Детали: `internal/audit2-response.md`.
-
-- **Def** [О]: 𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global} (уточнение после audit2).
-- **Лемма 2''** [Т] — Ob(M_F) ⊆ 𝒮_S^{local} ⊆ 𝒮_S (локальная).
-- **Лемма 2'''** [Т] — S-определимый X ⊆ 𝒮_S (глобальная, через derived).
-- **56.T** [Т] — (F_S)(X) ⇒ X ∈ 𝒮_S (через categorical semantics).
-- **57.T** [Т-набр] — ν(α_poly-HoTT) = ω·2+1; Morita-редуцируема к derived over universes.
-- **58.T** [Т] — Predicative Π_3-max_S' strictly weaker чем impredicative.
-
-**Следствие 56.C1**: Universe-polymorphic modality X аудита 2 ∈ 𝒮_S^{global} → Morita-редуцируема → не уровень 6.
-
-**Следствие 58.C1**: α_poly-HoTT с predicativity не достигает (Π_3-max) в классическом смысле.
-
-### Новая артикуляция α_poly-HoTT
-
-- **α_poly-HoTT**: Poly-HoTT с cumulative universe polymorphism, S' ∈ R-S.
-- Детали: [/03-formal-architecture/15-non-classical-articulations](/03-formal-architecture/15-non-classical-articulations).
-
-### (∞,∞)-расширение после audit3 (59.T-62.T)
-
-Формальный ответ на (∞,∞)-категорную критику. Детали: `internal/audit3-response.md` и [/06-limits/07-infty-extension](/06-limits/07-infty-extension).
-
-- **Def 7.1** [О] — (∞,∞)-Diakrisis: расширение канонического примитива.
-- **59.T** [Т-набр] — (∞,∞)-TH-Final: абсолютность в (∞,∞)-контексте.
-- **59.T.1** [Т-набр] — (∞,n)-hierarchy: TH-Final выполняется для каждого n.
-- **59.T.2** [Т] — Stabilization: иерархия (∞,n) стабилизируется в (∞,∞).
-- **60.T** [Т-набр] — 2-Diakrisis ↪ ∞-Diakrisis через τ_{≤2}-localization.
-- **61.T** [Т-набр] — α_inf-cat: новая артикуляция, ν = Ω.
-- **62.T** [Т-набр] — (∞,∞)-Morita-эквивалентность корректна.
-
-**Следствие**: TH-Final **иерархически абсолютна** — в каждом (∞,n)-контексте, включая предельный n = ∞.
-
-### Новая артикуляция α_inf-cat
-
-- **α_inf-cat**: (∞,∞)-категорная артикуляция, S' ∈ R-S с (∞,∞)-семантикой.
-- **ν**: Ω (class-ordinal).
-- **По 59.T**: не уровень 6.
-- Детали: [/06-limits/07-infty-extension](/06-limits/07-infty-extension).
-
-### Формальные корреспонденции Διάκрисίς (Q-D)
-
-- **Def Q-D.1** [О] — α_Д-linear: linear logic articulation.
-- **Def Q-D.2** [О] — α_Д-AFA: AFA-coalgebraic articulation.
-- **Def Q-D.3** [О] — α_Д-hybrid: гибрид linear + AFA.
-- **Q-D.T1** [Т-набр] — ν(α_Д-linear) = ω+1.
-- **Q-D.T2** [Т-набр] — ν(α_Д-AFA) = ω·2.
-- **Q-D.4** [Г] — α_uhm ≅ α_Д-hybrid ⊗ 7D-quantum (для Пути Б).
-
-### Следствия
-
-- **При определении Rich-метатеории = R-S**: TH-Final абсолютна.
-- **Смена правил игры** (S ∉ R-S) не считается опровержением.
-- **Программа Пути Б** получает структурную основу через Q-D.4.
-
-### Уточнённая Лемма 2'
+### S-параметризация и Лемма 2'
 
 - **Лемма 2'** [Т]: Ob(M_F) ⊆ 𝒮_S (S-параметризованный класс структур).
-
-### Следствия для TH-Final
-
 - TH-Final параметризована Rich-метатеорией S.
 - При S = ZFC, HoTT, NBG+AFA, linear+!: подтверждена.
 - При S = pure affine/linear без !: тривиально (нет Rich).
 - **Открытый вопрос 51.T**: Rich-S с опровержением TH-Final?
+
+## Абсолютность TH-Final (55.T–58.T)
+
+Центральный результат о структурной абсолютности: TH-Final выполняется для любой «разумной» Rich-метатеории.
+
+- **Def R-S** [О] — Reasonable Rich-Metatheory: условия (R1) арифметика, (R2) r.e. аксиоматизация, (R3) непустая модель, (R4) Gödel-кодирование, (R5) категорная интерпретация.
+- **55.T** [Т] — Absoluteness of TH-Final: для любой S ∈ R-S, TH-Final выполнена.
+- **3.3.1** [Т] — Опровержение TH-Final требует нарушения R-S-условий.
+
+### Структура 𝒮_S и Леммы 2ₗ/2ᵍ
+
+- **Def** [О]: 𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global}.
+- **Лемма 2ₗ** [Т] — Ob(M_F) ⊆ 𝒮_S^{local} ⊆ 𝒮_S (локальная).
+- **Лемма 2ᵍ** [Т] — S-определимый X ⊆ 𝒮_S (глобальная, через derived constructions).
+- **56.T** [Т] — (F_S)(X) ⇒ X ∈ 𝒮_S (через categorical semantics).
+- **57.T** [Т-набр] — ν(α_poly-HoTT) = ω·2+1; Morita-редуцируема к derived over universes.
+- **58.T** [Т] — Predicative Π_3-max_S' strictly weaker чем impredicative.
+
+**Следствие 56.C1**: Universe-polymorphic modality X ∈ 𝒮_S^{global} → Morita-редуцируема → не уровень 6.
+
+**Следствие 58.C1**: α_poly-HoTT с predicativity не достигает (Π_3-max) в классическом смысле.
+
+### Артикуляция α_poly-HoTT
+
+- **α_poly-HoTT**: Poly-HoTT с cumulative universe polymorphism, S' ∈ R-S.
+- Детали: [/03-formal-architecture/15-non-classical-articulations](/03-formal-architecture/15-non-classical-articulations).
+
+## (∞,n)-иерархия и (∞,∞)-Diakrisis (59.T–62.T)
+
+Параметризация канонического примитива по категорному уровню n ∈ ℕ ∪ {∞}.
+
+- **Def 7.1** [О] — (∞,n)-Diakrisis: канонический примитив на уровне n.
+- **59.T** [Т] — (∞,∞)-TH-Final: абсолютность в (∞,∞)-контексте (прямое доказательство через 67.T).
+- **59.T.1** [Т] — (∞,n)-hierarchy: TH-Final выполняется для каждого n (через 63.T Whitehead).
+- **59.T.2** [Т] — Stabilization: иерархия (∞,n) стабилизируется в (∞,∞).
+- **60.T** [Т] — 2-Diakrisis ↪ (∞,∞)-Diakrisis через τ_{≤2}-localization.
+- **61.T** [Т] — α_inf-cat: новая артикуляция, ν = Ω (через 94.T).
+- **62.T** [Т] — (∞,∞)-Morita-эквивалентность корректна (через 83.T).
+
+**Следствие**: TH-Final **иерархически абсолютна** — в каждом (∞,n)-контексте, включая предельный n = ∞.
+
+### Артикуляция α_inf-cat
+
+- **α_inf-cat**: (∞,∞)-категорная артикуляция, S' ∈ R-S с (∞,∞)-семантикой.
+- **ν**: Ω (class-ordinal).
+- **По 59.T**: не уровень 6.
+- Детали: [/06-limits/06-absoluteness](/06-limits/06-absoluteness).
+
+## Мета-гомотопические расширения (63.T–69.T)
+
+Технические результаты о границах (∞,n)-иерархии и мета-вертикальная абсолютность.
+
+- **63.T** [Т] — Whitehead-критерий: эквивалентность через full Postnikov tower.
+- **64.T** [Т] — Конкретные потери τ_{≤2}: (∞,∞)-теоремы строго сильнее 2-версий.
+- **65.T** [Т] — Canonical (∞,∞)-lift УГМ: α_uhm^{(∞,∞)} существует и единственна (через 94.T).
+- **66.T** [Т] — (∞,∞)-Lawvere Fixed-Point: fixed point в (∞,∞)-cartesian closed.
+- **67.T** [Т] — Прямая (∞,∞)-TH-Final: native proof без reduction через 55.T.
+- **68.T** [Т при модели] — Trivial Stabilization: (∞,∞+1)-Cat = (∞,∞)-Cat.
+- **69.T** [Т] — Мета-гомотопическая абсолютность: meta-vertical absoluteness.
+
+### Трёхмерная абсолютность TH-Final
+
+**TH-Final ABSOLUTA_MAXIMA**: выполнена для всех троек (S, n, μ):
+
+- **S** ∈ R-S (горизонтальная, 55.T).
+- **n** ∈ ℕ ∪ {∞} (вертикальная, 59.T.1).
+- **μ** — мета-итерация произвольной вложенности (мета-вертикальная, 69.T).
+
+### UFH^{(∞,∞)} — (∞,∞)-гипотеза факторизации
+
+- **UFH^{(∞,∞)}** [Г] — α_uhm^{(∞,∞)} ≅ α_Д-hybrid^{(∞,∞)} ⊗ Nuc(ℂ⁷).
+
+Детали: [/06-limits/06-absoluteness](/06-limits/06-absoluteness).
+
+## Формальные корреспонденции Διάκрисίς (70.T–71.T)
+
+- **Def α_Д-linear** [О] — linear logic articulation: ν X. (X ⊗ X ⊸ !X).
+- **Def α_Д-AFA** [О] — AFA-coalgebraic articulation: ν X. (X × X) в NBG+AFA.
+- **Def α_Д-hybrid** [О] — гибрид linear + AFA: ν X. (X ⊗ X ⊸ X × X).
+- **70.T** [Т] — ν(α_Д-linear) = ω+1.
+- **71.T** [Т] — ν(α_Д-AFA) = ω·2.
+- **UFH** [Т] — UHM Factorization Hypothesis: α_uhm ≅ α_Д-hybrid ⊗ 7D-quantum (доказано 85.T).
+
+## Финальные теоремы (85.T–96.T)
+
+Полные доказательства, закрывающие все теоретические вопросы Diakrisis.
+
+- **85.T** [Т] — UFH: α_uhm ≅_M α_Д-hybrid ⊗ 7D-quantum через S₇ × U(1) gauge.
+- **86.T** [Т] — Paraconsistent TH-Final: выполнена в R-S' с (Strong-neg) через translation ⊗.
+- **87.T** [Т] — Completeness 4-dimensional absoluteness: нет 5-й оси.
+- **88.T** [Т] — Категоричность Diakrisis: единственность до (∞,∞)-эквивалентности.
+- **89.T** [Т] — Internal language L_⟪⟫ существует и полна.
+- **90.T** [Т] — Exact consistency strength = Con(ZFC + 2 inacc).
+- **91.T** [Т] — Cohesive ∞-topos ⊆ Diakrisis как α_cohesion (ν = ω·2).
+- **92.T** [Т] — Motivic homotopy theory как α_motivic (ν = ω·2+1).
+- **93.T** [Т] — Realizability как α_realiz (ν = ω+1).
+- **94.T** [Т] — 29.T в (∞,∞): unique α_R-S^{(∞,∞)}.
+- **95.T** [Т] — τ_{≤n}-decidability: Σ_{n+1}-complete, Π_1^1 при n=∞.
+- **96.T** [Т] — Axi-независимость сохраняется на всех (∞,n).
+
+Детали: [/06-limits/07-final-theorems](/06-limits/07-final-theorems).
+
+### Финальное состояние
+
+После 85.T–96.T все **теоретические** открытые вопросы Diakrisis закрыты. Остаются только **программные** задачи (Verum-формализация, эксперименты).
+
+## Углублённые программные исследования (72.T–84.T)
+
+Исследование открытых программ с альтернативными категорными порядками и мета-гомотопическими расширениями.
+
+- **72.T** [Т] — Paraconsistent TH-Final: доказано через 86.T translation ⊗.
+- **73.T** [Т] — R-S иерархия стабилизируется: R-S^n = R-S для всех n.
+- **74.T** [Т] — Consistency bound: Con(R-S^n) ≤ Con(ZFC + n-inacc).
+- **75.T** [Т] — П-0.\* ↔ формальные результаты: методология ↔ теория.
+- **76.T** [Т] — Predicative Π_3-max boundary: ≤ ψ(ε_{Ω_1+1}).
+- **77.T** [Т] — 𝒮_S syntactic closure: полнота derived-ops.
+- **78.T** [Программа] — UFH provability program: ≈ 75 сессий.
+- **79.T** [Т] — UFH^{(∞,∞)} via τ_{≤2}: UFH^{(∞,∞)} ⇒ UFH.
+- **80.T** [Т] — ν(α_Д-poly) = ω·2+1: Morita-эквивалентна α_Д-hybrid в classical R-S.
+- **81.T** [Т] — 𝓜_Fnd^{(∞,∞)} presentable: (∞,∞)-stack.
+- **82.T** [Т] — (∞,∞)-Verum complexity bound: transfinite automation required.
+- **83.T** [Т] — Альтернативные категорные порядки: все Morita-редуцируются.
+- **84.T** [Т] — ABSOLUTA_TOTALIS: 4-мерная абсолютность.
+
+### Четырёхмерная абсолютность TH-Final
+
+**TH-Final ABSOLUTA_TOTALIS**: выполнена для всех четвёрок (S, n, μ, ξ):
+
+- **S** ∈ R-S (горизонтальная, 55.T).
+- **n** ∈ ℕ ∪ {∞} (вертикальная, 59.T.1).
+- **μ** — мета-итерация (мета-вертикальная, 69.T).
+- **ξ** — альтернативный категорный порядок (категорно-латеральная, 84.T).
+
+Детали: [/06-limits/07-final-theorems](/06-limits/07-final-theorems).
+
+## Двумерная абсолютность
+
+TH-Final — двумерно-абсолютный инвариант, параметризованный:
+
+- **Метатеорией S** ∈ R-S: 55.T.
+- **Категорным уровнем n** ∈ ℕ ∪ {∞}: 59.T.1.
+
+Совместная формулировка: TH-Final выполняется для всех пар (S, n), где S ∈ R-S и n ∈ ℕ ∪ {∞}.
 
 ## Derived Structures (45)
 

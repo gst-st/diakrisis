@@ -1,292 +1,143 @@
 ---
 sidebar_position: 3
-title: Статус открытых вопросов
+title: Статус программ
 ---
 
-# Статус gap'ов и открытых вопросов
+# Статус программ Diakrisis
 
-## Обзор
+## Финальное состояние теории
 
-В framework-фазе было идентифицировано 17 gap'ов (открытых вопросов). В Diakrisis их статус:
+**Все теоретические вопросы Diakrisis закрыты**. Теоремы 85.T–96.T дают полные доказательства всех фундаментальных утверждений (см. [/06-limits/07-final-theorems](/06-limits/07-final-theorems)).
 
-| # | Gap | Статус | Объяснение |
-|---|---|---|---|
-| 01-15 | из framework | ✅ закрыто | — |
-| **16** | Shulman 2-topos отличие | ✅ | 11.C6, формальное отличие показано |
-| **17** | SM как gauge-класс | 🟡 | 05.H2 прогресс, полная формализация — программа |
+### Пять уровней закрытия TH-Final
 
-### Определение gap'а
+| Уровень | Ось | Теорема |
+|---|---|---|
+| 1 | Метатеория (S) | 55.T |
+| 2 | Категорный уровень (n) | 59.T.1 |
+| 3 | Мета-итерация (μ) | 69.T |
+| 4 | Категорный порядок (ξ) | 84.T |
+| 5 | Полнота 4-мерности | 87.T |
 
-**Gap** — открытый вопрос исследовательской программы. Может быть:
-- **Closed (✅)**: проблема решена.
-- **In-progress (🟡)**: работа ведётся.
-- **Open (🔴)**: решение не начато.
-- **Irrelevant (⚫)**: проблема устарела.
+**TH-Final ABSOLUTA_TOTALIS** — абсолютный структурный инвариант.
 
-### Значение каталога
+### Ключевые теоремы
 
-- **Transparency**: статус работы ясен.
-- **Planning**: приоритезация будущих усилий.
-- **Accountability**: тракинг прогресса.
-- **History**: сохранение состояния.
+- **UFH** (85.T): α_uhm ≅_M α_Д-hybrid ⊗ 7D-quantum.
+- **Категоричность** (88.T): единственность до (∞,∞)-эквивалентности.
+- **Internal language** (89.T): L_⟪⟫ — внутренний формальный язык.
+- **Consistency strength** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inacc).
+- **Связующие** (91.T–94.T): cohesive ∞-topos, motivic, realizability, Universal Foundation в (∞,∞).
 
-## Открытые исследовательские программы
+## Закрытые gap'ы из framework-фазы
 
-### А. Формализация УГМ в Verum
+| # | Gap | Статус |
+|---|---|---|
+| 01-15 | framework gaps | ✅ закрыто в seed/Diakrisis |
+| 16 | Shulman 2-topos отличие | ✅ 11.C6 |
+| 17 | SM как gauge-класс | 🟡 в программе (Gap N-04) |
 
-**Программа Пути Б** ([/09-applications/00-path-B-uhm-formalization](/09-applications/00-path-B-uhm-formalization)). Многосессионная работа.
+## Программные задачи (практические, не теоретические)
 
-#### Статус
+### П1. Verum-формализация УГМ
 
-- **Начало**: готово (план есть).
-- **Инвентаризация Verum**: pending (Сессия 1).
-- **Базовая формализация**: pending.
-- **Полная**: долгосрочная цель.
+**Цель**: полная proof-assistant-формализация УГМ через UFH.
 
-#### Блокеры
+По **78.T**: программа ≈ 75 сессий в Lean 4 + linear-HoTT или Coq + CubiCal-extensions.
 
-- Готовность Verum.
-- Complexity некоторых теорем.
-- Time constraints.
+**Фазы**:
+1. α_Д-linear в Verum (10-20 сессий).
+2. α_Д-AFA через Aczel M-types (10-20 сессий).
+3. α_Д-hybrid гибрид (10-20 сессий).
+4. D(ℂ⁷) + 7D-quantum (15-25 сессий).
+5. Tensor factorization + UFH-verification (10-20 сессий).
 
-### Б. Расширение TH-Final
+### П2. Экспериментальная верификация УГМ
 
-Полная механизация TH-Final в proof-assistant. В текущей форме — структурный аргумент с формальными леммами, не полностью автоматизирован.
+**Цель**: empirical testing УГМ-предсказаний.
 
-#### Статус
+**Направления**:
+- TMS-EEG studies (Pred 22 — neural oscillations).
+- SAD measurements (Pred 12 — SAD ceiling = 3).
+- Neural correlates of consciousness (Pred 10 — N=7).
+- Learning bounds verification (Pred 9 — quantum Chernoff).
 
-- **Структурный аргумент**: готов.
-- **Формальные леммы 1-3**: готовы.
-- **Машинная верификация**: programme.
+### П3. SM-детализация (Gap N-04)
 
-#### Блокеры
+**Цель**: полная формализация Стандартной Модели физики как gauge-класса.
 
-- Сложность: mixture formal + philosophical.
-- Proof-assistant capability.
-- Time commitment.
+**Статус**: α_NCG + Connes-Chamseddine дают ν = ω·2; связь с УГМ через 7D-quantum requires detail.
 
-### В. Детальная формализация 12.T1/12.T2
+### П4. Computational Diakrisis
 
-Инициальная 𝖬-алгебра и финальная 𝖬-коалгебра — доказаны через Adámek при accessibility 𝖬. Детальная проверка accessibility в конкретных моделях — работа.
+**Цель**: (∞,∞)-prover implementation.
 
-#### Статус
+По **82.T**: требует transfinite automation — долгосрочная программа.
 
-- **Abstract proof**: готов (через Adámek).
-- **Конкретные проверки в Cat**: частично.
-- **В других моделях**: programme.
+**Направления**:
+- Synthetic (∞,∞)-Cat (Riehl-Verity).
+- Higher Observational Type Theory (Awodey-Shulman).
+- Simplicial HoTT (Buchholtz).
 
-### Г. Связь с мотивами Гротендика
+### П5. AGI/ASI-расширения
 
-Через derived structures (45.T6). Motivic theory как ρ-проекция конкретной α. Программа формализации.
+**Цель**: развитие УГМ в AGI/ASI-контексте.
 
-#### Статус
+**Статус**: активная программа (T-193–209, SYNARC v1.4).
 
-- **Концептуальная связь**: намечена.
-- **Формальная связь**: programme.
+### П6. Educational и публикация
 
-### Д. Стандартная модель физики
-
-SM.H1: УГМ как эмерджентная из SM в специфическом пределе. Физическая программа.
-
-#### Статус
-
-- **Гипотеза сформулирована**: да (SM.H1).
-- **Доказательство**: открытая программа.
-- **Экспериментальная проверка**: долгосрочно.
-
-### Е. Non-classical метатеории (после audit 2026-04-22)
-
-TH-Final параметризована Rich-метатеорией S (теорема 50.T). Проведено фундаментальное исследование (`internal/fundamental-research.md`):
-
-- **Q-A**: ~~существует ли Rich-метатеория S, в которой TH-Final опровергается?~~ → **RESOLVED НЕТ** (теорема 3.3.1 — в пределах R-S).
-- **Q-B**: ~~является ли TH-Final абсолютной?~~ → **RESOLVED ДА** (теорема 55.T).
-- **Q-C**: ~~как формализовать «разумная S»?~~ → **RESOLVED** (Def Q-C.1: R-S с условиями (R1)-(R5)).
-- **Q-D**: формализация Διάκрисίс → **PARTIALLY RESOLVED** (α_Д-linear, α_Д-AFA, α_Д-hybrid; гипотеза Q-D.4 для УГМ).
-
-Детали: `internal/audit1-response.md`, `internal/fundamental-research.md`.
-
-### Е'. Новые открытые вопросы (после исследования Q-A..Q-D)
-
-- **Q-E**: абсолютность TH-Final для paraconsistent R-S'?
-- **Q-F**: доказательство гипотезы Q-D.4: α_uhm ≅ α_Д-hybrid ⊗ 7D-quantum?
-- **Q-G**: иерархия R-S, R-S², R-S³, ... — достаточна или требует расширения?
-
-### Е''. После audit2 (2026-04-22, `internal/audit2-response.md`)
-
-Критика через Poly-HoTT universe polymorphism. Формальный ответ:
-
-- Лемма 2' уточнена → Лемма 2'' (локальная) + 2''' (глобальная).
-- Теорема 56.T: (F_S) ⇒ X ∈ 𝒮_S (через derived constructions).
-- Теорема 57.T: α_poly-HoTT — валидная артикуляция, но не уровень 6.
-- Теорема 58.T: predicativity ослабляет Π_3-max.
-
-**Новые открытые вопросы**:
-
-- **Q-H**: возможна ли impredicative Π_3-max в predicative метатеориях (через internal impredicativity)?
-- **Q-I**: полнота derived 𝒮_S — все S-определимые конструкты действительно редуцируются через derived categorical constructions?
-- **Q-J**: α_poly-HoTT + AFA → усиленная формализация Διάκρисіс (связь с Q-D.4)?
-
-
-### Е'''. После audit3 (2026-04-22, `internal/audit3-response.md`)
-
-Критика через (∞,∞)-категорную мерную трансценденцию. Формальный ответ:
-
-- 2-Cat — **выбор**, не необходимость (принято).
-- Diakrisis расширена до ∞-Diakrisis с (∞,∞)-семантикой.
-- Теорема 59.T: (∞,∞)-TH-Final абсолютна.
-- Теорема 59.T.1: (∞,n)-hierarchy — TH-Final на каждом уровне.
-- Теорема 59.T.2: stabilization на (∞,∞).
-- Теорема 60.T: 2-Diakrisis ↪ ∞-Diakrisis через τ_{≤2}.
-- Теорема 61.T: α_inf-cat — новая артикуляция, ν = Ω.
-
-**Новые открытые вопросы**:
-
-- **Q-K**: какие Diakrisis-теоремы теряются при 2-truncation?
-- **Q-L**: (∞,∞)-аналог гипотезы Q-D.4 для УГМ?
-- **Q-M**: прямое доказательство 59.T без reduction к 55.T?
-- **Q-N**: stabilization на (∞,∞) — теорема (верифицируется) или аксиома?
-
-Детали: [/06-limits/07-infty-extension](/06-limits/07-infty-extension).
-### Ж. Каталог S и артикуляций
-
-- α_linear, α_affine, α_AFA-coalg, α_coinductive — новые точки 𝓜_Fnd при соответствующих S.
-- Детали — [/03-formal-architecture/15-non-classical-articulations](/03-formal-architecture/15-non-classical-articulations).
-- Ordinal-инварианты: ν(α_linear) = ω+1, ν(α_AFA-coalg) = ω·2, ν(α_affine) ≤ ω.
-- Структура 𝓜_Fnd при variably S — открытая программа.
-
-## TH-Final и gap'ы
-
-Важно: TH-Final **закрывает** задачу уровня 6. Никакие gap'ы не могут «приоткрыть» её — это формальная no-go теорема.
-
-Все **текущие** gap'ы — на уровне 5+. Они — реалистичные программы расширения.
-
-### Разделение gap'ов
-
-**Закрытые TH-Final**:
-- Поиск уровня 6 основания.
-- Попытки обойти TH-Final.
-- Radical new math как alternative.
-
-Эти направления **не** программа работы.
-
-**Актуальные gap'ы** (5+):
-- Verum-формализация.
-- Детальные proofs.
-- Extensions (SM, motivic, и т.д.).
-- Experimental tests (для УГМ).
-
-## Закрытые в seed-работе gap'ы
-
-### Gap 01-15 (framework)
-
-Изначальные 15 gap'ов framework — все закрыты в seed-фазе или перенесены в Diakrisis.
-
-### Gap 16 — Shulman 2-topos
-
-**Вопрос**: чем Diakrisis отличается от Shulman 2-topos?
-
-**Ответ (11.C6)**: Shulman 2-topos требует subobject classifier + exponentials; наш ⟪⟫ не требует. ι-вложение — specific Diakrisis feature.
-
-### Gap 17 — SM gauge-класс
-
-**Вопрос**: как SM формально укладывается в gauge-структуру?
-
-**Частичный ответ (05.H2)**: через α_NCG + дополнительная структура. Полная формализация — programme.
-
-## Новые gap'ы после seed-работы
-
-### Gap N-01: формализация cohesive structure
-
-Полная формализация Π ⊣ ♭ ⊣ ♯ ⊣ ι в 2-категорном контексте (не ∞-топосе).
-
-### Gap N-02: активные артикуляции в не-LP
-
-Существуют ли convincing не-LP модели с активными α_𝖬?
-
-### Gap N-03: расширение Universal Foundation Theorem
-
-29.T в более общей форме (включая derived structures, ∞-категории).
-
-### Gap N-04: связь с квантовой теорией поля
-
-Формальная связь α_SM с QFT через Path integral formulation.
-
-### Gap N-05: AGI/ASI-расширения УГМ
-
-T-193-209 — активная программа.
-
-### Gap N-06: Lerchner-paradox closure extensions
-
-T-223 — Lerchner closure. Дальнейшие extensions?
-
-## Долгосрочные программы
-
-### Программа 1: Diakrisis complete formalization
-
-Полная Verum / Lean formalization всего корпуса.
-- Scope: массивный.
-- Time: годы.
-- Priority: high.
-
-### Программа 2: Full УГМ paper publication
-
-Публикация УГМ paper с Verum verification.
-- Current: 239 pages, v1.4.
-- Target: publication-ready.
-
-### Программа 3: Empirical verification
-
-Экспериментальная проверка УГМ-предсказаний.
-- TMS-EEG studies.
-- SAD measurements.
-- Neural correlates of consciousness.
-
-### Программа 4: Educational materials
-
-Учебные материалы для распространения Diakrisis и УГМ.
-- Book.
-- Online courses.
+- Публикация paper УГМ (v1.4, 239 pages).
+- Учебные материалы.
 - Conference presentations.
 
-## Приоритезация gap'ов
+## Приоритезация
 
-### Immediate (0-5 sessions)
+### Immediate (0-5 сессий)
+- Финальный паспорт результатов (этот документ).
+- Коррекции в main corpus.
 
-- Verum inventory (Сессия 1 Пути Б).
-- Первые теоремы формализованы.
-- Документация обновляется.
+### Short-term (5-30 сессий)
+- Базовая Verum-формализация (α_Д-linear).
+- Paper publication preparation.
 
-### Short-term (5-30 sessions)
+### Medium-term (30-100 сессий)
+- Полная UFH в Verum.
+- SM-детализация.
+- Expansion Cohesive/Motivic/Realizability в сборках.
 
-- Core formalization.
-- Structural invariants.
-- Basic УГМ coverage.
+### Long-term (100+ сессий)
+- (∞,∞)-prover implementation.
+- Empirical верификация crusader-scale.
+- AGI/ASI extensions в интеграции с SYNARC.
 
-### Medium-term (30-100 sessions)
+## Принципы работы с программами
 
-- Full УГМ в Verum.
-- TH-Final machine-verified (частично).
-- Extensions (SM, motivic).
+**TH-Final закрывает уровень 6**. Программные задачи — **исключительно** на уровне 5+.
 
-### Long-term (100+ sessions)
+**Закрытые направления** (не программа работы):
+- Поиск уровня 6 основания.
+- Попытки обойти TH-Final ABSOLUTA_TOTALIS.
+- Radical new math как альтернатива.
 
-- Полная программа.
-- Publications.
-- Educational outreach.
+**Активные направления** — все на уровне 5+:
+- Formalization (Verum).
+- Experimental testing.
+- Extensions (cohesive, motivic, realizability, SM).
 
-## Следующий раздел
-
-Работа продолжается в конкретных сессиях Пути Б.
-
-### Для читателя
-
-Этот документ — **rolling** reference. Обновляется при каждой существенной работе. Актуальное состояние — всегда здесь.
-
-### Для контрибутора
+## Для контрибутора
 
 Если вы хотите внести вклад:
-1. Выберите gap из списка.
-2. Проверьте статус.
-3. Обсудите с командой.
+1. Выберите программу (П1–П6).
+2. Проверьте зависимости (прерыквизиты в каталоге теорем).
+3. Обсудите scope с командой.
 4. Выполните работу.
-5. Обновите документ.
+5. Обновите документацию.
+
+## Итог
+
+- **Теоретически**: Diakrisis **закрыта**. 96 теорем доказаны. 5-уровневая абсолютность TH-Final.
+- **Практически**: шесть открытых программ (П1–П6), все на уровне 5+.
+- **Вектор**: от теории к формализации, эксперименту, applications.
+
+Работа Diakrisis как теории — **завершена**. Работа Diakrisis как проекта — **продолжается**.

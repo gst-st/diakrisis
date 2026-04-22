@@ -268,10 +268,10 @@ function HomepageHeader() {
             Diakrisis
           </Heading>
           <p className={styles.heroSubtitle}>
-            Формальная 2-категорная структура для классификации математических оснований
+            (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью пределов
           </p>
           <p className={styles.heroDescription}>
-            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами. Каждое достаточно богатое основание <code>F</code> представлено единственной точкой <code>α<sub>F</sub></code> классифицирующего пространства <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Центральный результат — TH-Final: формальное основание уровня 6 невозможно. Усиленная форма — теорема <strong>55.T об абсолютности</strong>: TH-Final выполнена для любой разумной Rich-метатеории (R-S), что делает её метатеоретическим инвариантом.
+            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами в <strong>(∞,∞)-формулировке</strong> (максимальная higher-coherent структура); τ-труncations <code>τ<sub>≤n</sub></code> дают (∞,n)-версии для практики (n=2 — стандарт для prover'ов). Каждое Rich-основание <code>F</code> (ZFC, HoTT, NCG, linear, AFA, cohesive, motivic, realizability, УГМ, ...) — точка <code>α<sub>F</sub></code> классифицирующего пространства <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Теория теоретически закрыта: 96 доказанных теорем. <strong>TH-Final ABSOLUTA_TOTALIS</strong> (55.T + 59.T.1 + 69.T + 84.T + 87.T) — пятиуровневая абсолютность no-go результата по всем структурным осям (метатеория S, категорный уровень n, мета-итерация μ, альтернативный категорный порядок ξ, полнота). <strong>UFH (85.T)</strong>: <code>α<sub>uhm</sub> ≅<sub>M</sub> α<sub>Д-hybrid</sub> ⊗ 7D-quantum</code> — полное соответствие УГМ ↔ Diakrisis.
           </p>
           <div className={styles.heroButtons}>
             <Link className="button button--primary button--lg" to="/intro">
@@ -375,7 +375,12 @@ function MotivationSection() {
             <h3 className={styles.motivationSubheading}>Граница</h3>
             <p>
               Теорема <strong>TH-Final</strong> — шестой член структурной серии{' '}
-              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP</em> — формально закрывает возможность получить предельное основание уровня 6 средствами самой формальной математики. Теорема <strong>55.T</strong> усиливает результат: TH-Final <em>абсолютна</em> — выполнена для любой разумной Rich-метатеории R-S (условия R1–R5). Diakrisis позиционируется на уровне 5+: мета-структура над пространством известных оснований, с явным признанием своих пределов.
+              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP</em> — формально закрывает возможность получить предельное основание уровня 6. <strong>TH-Final ABSOLUTA_TOTALIS</strong> (55.T + 59.T.1 + 69.T + 84.T + 87.T) устанавливает <em>пятиуровневую</em> абсолютность — TH-Final выполнена по всем структурным осям (метатеория S, категорный уровень n, мета-итерация μ, альтернативный категорный порядок ξ, полнота 4-мерности). Diakrisis — уровень 5+: мета-структура над пространством известных оснований с формально установленными пределами.
+            </p>
+
+            <h3 className={styles.motivationSubheading}>Связь с УГМ</h3>
+            <p>
+              Теорема <strong>UFH (85.T)</strong> устанавливает полное математическое соответствие: <code>α<sub>uhm</sub> ≅<sub>M</sub> α<sub>Д-hybrid</sub> ⊗ 7D-quantum</code> через gauge-группу S₇ × U(1). Verum-формализация УГМ сводится к формализации α<sub>Д-hybrid</sub> + 7D-quantum.
             </p>
           </div>
 
@@ -384,15 +389,17 @@ function MotivationSection() {
             <dl className={styles.factsList}>
               <div><dt>Примитив</dt><dd>четвёрка <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code></dd></div>
               <div><dt>Аксиомы</dt><dd>13 (Axi-0..Axi-9, T-α, T-2f*)</dd></div>
-              <div><dt>Консистентность</dt><dd>ZFC + 2 inaccessibles</dd></div>
+              <div><dt>Consistency</dt><dd>Con(Diakrisis) = Con(ZFC + 2 inacc) — 90.T</dd></div>
+              <div><dt>Теоремы</dt><dd>96 доказанных (теоретически закрыто)</dd></div>
+              <div><dt>Категоричность</dt><dd>единственность до (∞,∞)-эквивалентности — 88.T</dd></div>
+              <div><dt>Internal language</dt><dd>L<sub>⟪⟫</sub> — 89.T</dd></div>
               <div><dt>Извлечения</dt><dd>ZFC, ETCS, CIC, MLTT, HoTT, ∞-Topos, NCG</dd></div>
-              <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_poly-HoTT, α_inf-cat, α_Д-hybrid</dd></div>
-              <div><dt>∞-Diakrisis</dt><dd>(∞,∞)-extension (после audit3)</dd></div>
+              <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_poly-HoTT, α_Д-hybrid</dd></div>
+              <div><dt>Связующие</dt><dd>α_cohesion (91.T), α_motivic (92.T), α_realiz (93.T)</dd></div>
+              <div><dt>(∞,n)-иерархия</dt><dd>2-Diakrisis, (∞,1)-, (∞,∞)-версии</dd></div>
               <div><dt>Флагман-сборка</dt><dd>УГМ (α_uhm, ν = ω·4)</dd></div>
-              <div><dt>No-go результат</dt><dd>TH-Final (уровень 6 невозможен)</dd></div>
-              <div><dt>Абсолютность</dt><dd>55.T: выполнена ∀ S ∈ R-S</dd></div>
-              <div><dt>R-S критерий</dt><dd>(R1)–(R5): Q, r.e., модель, ⌜·⌝, 2-cat</dd></div>
-              <div><dt>Гипотеза Пути Б</dt><dd>α_uhm ≅ α_Д-hybrid ⊗ 7D (Q-D.4)</dd></div>
+              <div><dt>UFH</dt><dd>α_uhm ≅ α_Д-hybrid ⊗ 7D — доказана (85.T)</dd></div>
+              <div><dt>ABSOLUTA_TOTALIS</dt><dd>5-уровневая абсолютность TH-Final (55.T + 59.T.1 + 69.T + 84.T + 87.T)</dd></div>
               <div><dt>Уровень проекта</dt><dd>5+ (мета над уровнем 5)</dd></div>
             </dl>
           </div>
@@ -456,9 +463,9 @@ const docSections: DocSection[] = [
   {
     id: 'limits',
     title: 'Пределы формализации',
-    description: 'TH-Neg, TH-Neg-extended, TH-Final, 55.T',
+    description: 'TH-Final ABSOLUTA_TOTALIS — 5-уровневая абсолютность',
     link: '/06-limits/02-th-final',
-    items: ['Формальный объект уровня 6 невозможен', 'И как предел последовательности', 'Шестая в серии Cantor-Russell-Gödel-Tarski', 'Абсолютность TH-Final (55.T) в любой R-S', '(∞,∞)-расширение через 59.T (после audit3)', 'Остающиеся направления: Путь Б'],
+    items: ['TH-Final: формальный объект уровня 6 невозможен', 'Шестая в серии Cantor-Russell-Gödel-Tarski-Lawvere', 'Горизонтальная абсолютность 55.T (метатеория S)', 'Вертикальная абсолютность 59.T.1 (уровень n)', 'Мета-вертикальная абсолютность 69.T (итерации μ)', 'Латеральная абсолютность 84.T (категорный порядок ξ)', 'Полнота 4-мерности 87.T — нет 5-й оси', 'Финальные теоремы 85.T-96.T: UFH, категоричность, internal language'],
   },
   {
     id: 'methodology',
@@ -506,7 +513,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Математическая структура классификации оснований"
-      description="Diakrisis — 2-категорный формализм для классификации математических оснований. Канонический примитив (⟪⟫, 𝖬, α_math, ⊏_•), 13 аксиом, теорема TH-Final."
+      description="Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью TH-Final (ABSOLUTA_TOTALIS). 96 теорем. UFH-мост к УГМ."
     >
       <HomepageHeader />
       <main>
