@@ -144,7 +144,13 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'mainSidebar',
           position: 'left',
-          label: 'Документация',
+          label: 'Diakrisis',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'noesisSidebar',
+          position: 'left',
+          label: 'Noesis',
         },
         {
           to: '/06-limits/02-th-final',
