@@ -63,6 +63,7 @@ const sidebars: SidebarsConfig = {
         '03-formal-architecture/12-sheaf-structure',
         '03-formal-architecture/13-curry-howard-lambek',
         '03-formal-architecture/14-synthetic-differential',
+        '03-formal-architecture/15-non-classical-articulations',
       ],
     },
     {

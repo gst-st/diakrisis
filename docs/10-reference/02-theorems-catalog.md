@@ -348,6 +348,29 @@ title: Каталог теорем
 - **42.T1** [Т] — частичная консервативность над ZFC.
 - **42.C1** — добавляет силу ZFC + 2 inacc.
 
+## S-relative TH-Final и non-classical (48-54)
+
+Добавлено после аудита 2026-04-22 (см. `internal/audit1-response.md`).
+
+- **48.T** [Т-набр] — α_linear без ! недостаточна для Rich (Π_3-max нарушен).
+- **49.T** [Т-набр] — α_AFA-coalg ∈ 𝓜_{Fnd, S=NBG+AFA}.
+- **50.T** [Т-набр] — TH-Final S-relative formulation (всех Rich-S с contraction).
+- **51.T** [Г] — программа: существует ли Rich-S, в которой TH-Final опровергается?
+- **52.T** [Т-набр] — α_AFA-coalg Morita-редуцируема к Aczel's M-types.
+- **53.T** [Т-набр] — ν(α_linear) = ω+1.
+- **54.T** [Т-набр] — ν(α_affine) ≤ ω; α_affine не Rich.
+
+### Уточнённая Лемма 2'
+
+- **Лемма 2'** [Т]: Ob(M_F) ⊆ 𝒮_S (S-параметризованный класс структур).
+
+### Следствия для TH-Final
+
+- TH-Final параметризована Rich-метатеорией S.
+- При S = ZFC, HoTT, NBG+AFA, linear+!: подтверждена.
+- При S = pure affine/linear без !: тривиально (нет Rich).
+- **Открытый вопрос 51.T**: Rich-S с опровержением TH-Final?
+
 ## Derived Structures (45)
 
 - **45.T1** [Т] — ν_{α_derived} = ω·2+1.
