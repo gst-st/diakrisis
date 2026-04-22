@@ -1,0 +1,355 @@
+/**
+ * Diakrisis — custom CSS
+ * Типографика и визуальный язык согласованы с UHM Theory (holon.sh).
+ */
+
+/* Google Fonts - Exo 2 */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Diakrisis color palette — фиолетово-синий (мета-теоретический оттенок) */
+:root {
+  --ifm-color-primary: #6a5acd;
+  --ifm-color-primary-dark: #5a4ab8;
+  --ifm-color-primary-darker: #5144ad;
+  --ifm-color-primary-darkest: #42378f;
+  --ifm-color-primary-light: #7d6ed5;
+  --ifm-color-primary-lighter: #8b7ddb;
+  --ifm-color-primary-lightest: #aea4e5;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(106, 90, 205, 0.1);
+
+  /* Typography - Exo 2 */
+  --ifm-font-family-base: 'Exo 2', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Exo 2', system-ui, -apple-system, sans-serif;
+
+  /* Heading sizes - compact for better hierarchy */
+  --ifm-h1-font-size: 1.75rem;
+  --ifm-h2-font-size: 1.35rem;
+  --ifm-h3-font-size: 1.15rem;
+  --ifm-h4-font-size: 1.05rem;
+  --ifm-h5-font-size: 1rem;
+
+  /* Card styling */
+  --ifm-card-background-color: #ffffff;
+
+  /* Footer */
+  --ifm-footer-background-color: #1a1a2e;
+}
+
+/* Ensure font is applied everywhere */
+html,
+body {
+  font-family: 'Exo 2', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark mode palette */
+[data-theme='dark'] {
+  --ifm-color-primary: #aea4e5;
+  --ifm-color-primary-dark: #8b7ddb;
+  --ifm-color-primary-darker: #7d6ed5;
+  --ifm-color-primary-darkest: #6a5acd;
+  --ifm-color-primary-light: #c4bdec;
+  --ifm-color-primary-lighter: #d0c9f1;
+  --ifm-color-primary-lightest: #e4dff6;
+  --docusaurus-highlighted-code-line-bg: rgba(174, 164, 229, 0.2);
+  --ifm-card-background-color: #1e1e2f;
+}
+
+/* KaTeX formula sizing - proportional to text */
+.katex {
+  font-size: 1.05em;
+}
+
+/* Use Exo 2 for text inside formulas */
+.katex .mathrm,
+.katex .textrm,
+.katex .text,
+.katex .mathit,
+.katex .mathnormal {
+  font-family: 'Exo 2', system-ui, -apple-system, sans-serif;
+}
+
+.katex-display {
+  font-size: 1.05em;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.katex-display > .katex {
+  text-align: center;
+}
+
+/* Math blocks in markdown */
+.math-display,
+.markdown .math {
+  text-align: center;
+  margin: 1.5rem 0;
+  display: block;
+}
+
+/* Admonitions styling */
+.admonition {
+  border-radius: 8px;
+}
+
+/* Mermaid diagram styling - centered with zoom */
+.mermaid {
+  text-align: center;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+/* Docusaurus mermaid container */
+.docusaurus-mermaid-container {
+  text-align: center;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+}
+
+/* Fullscreen overlay for mermaid diagrams */
+.mermaid-fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  padding: 2rem;
+}
+
+.mermaid-fullscreen-overlay svg {
+  max-width: 95vw;
+  max-height: 90vh;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+}
+
+[data-theme='dark'] .mermaid-fullscreen-overlay {
+  background: rgba(0, 0, 0, 0.92);
+}
+
+/* Table improvements with rounded corners */
+table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 0.5px solid var(--ifm-color-emphasis-200);
+}
+
+table td,
+table th {
+  border-width: 0.5px;
+}
+
+th {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+th:first-child {
+  border-top-left-radius: 10px;
+}
+
+th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* Code block improvements */
+.prism-code {
+  border-radius: 8px;
+}
+
+/* Navbar styling - glassmorphism effect */
+.navbar {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .navbar {
+  background: rgba(30, 30, 47, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar__title {
+  font-weight: 700;
+}
+
+/* Version as subscript index next to logo */
+.navbar-version {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: var(--ifm-color-emphasis-600);
+  vertical-align: sub;
+  margin-left: -2rem;
+  position: relative;
+  top: 0.15rem;
+}
+
+[data-theme='dark'] .navbar-version {
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* Hero section gradient */
+.hero--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary-darkest) 0%, var(--ifm-color-primary) 50%, var(--ifm-color-primary-light) 100%);
+}
+
+/* Sidebar improvements */
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Footer improvements */
+.footer {
+  background: linear-gradient(180deg, var(--ifm-footer-background-color) 0%, #0f0f1a 100%);
+  font-size: 0.75rem;
+}
+
+.footer__title {
+  color: var(--ifm-color-primary-lighter);
+  font-size: 0.8rem;
+}
+
+.footer__link-item {
+  font-size: 0.84rem;
+}
+
+.footer__copyright {
+  font-size: 0.65rem;
+  opacity: 0.6;
+}
+
+/* Heading sizes - explicit overrides */
+h1 {
+  font-size: 1.75rem !important;
+}
+
+h2 {
+  font-size: 1.35rem !important;
+}
+
+h3 {
+  font-size: 1.15rem !important;
+}
+
+h4 {
+  font-size: 1.05rem !important;
+}
+
+h5, h6 {
+  font-size: 1rem !important;
+}
+
+/* Docs page improvements */
+.markdown > h1:first-child {
+  font-size: 1.85rem !important;
+}
+
+.markdown > h2 {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Definition list styling for glossary */
+.markdown dl {
+  margin: 1rem 0;
+}
+
+.markdown dt {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.markdown dd {
+  margin-left: 1.5rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+/* Equation styling */
+.markdown .math-display {
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+/* TOC improvements */
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Fix: Docusaurus 3.10 dropdown visibility with @layer CSS */
+.dropdown--hoverable:hover > .dropdown__menu,
+.dropdown--show > .dropdown__menu {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+
+/* Diakrisis-specific: custom theorem/limit-note/negative-result blocks */
+.theorem {
+  border-left: 3px solid var(--ifm-color-primary);
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 4px;
+}
+
+.theorem-label {
+  font-weight: 700;
+  font-variant: small-caps;
+  color: var(--ifm-color-primary-darker);
+}
+
+.limit-note {
+  background: #fef8e3;
+  border: 1px solid #e0c878;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] .limit-note {
+  background: #3a2f18;
+  border-color: #7d6940;
+}
+
+.negative-result {
+  background: #fdeeee;
+  border-left: 3px solid #c44;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+[data-theme='dark'] .negative-result {
+  background: #3a2020;
+}

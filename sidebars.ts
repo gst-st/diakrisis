@@ -1,0 +1,152 @@
+import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+
+const sidebars: SidebarsConfig = {
+  mainSidebar: [
+    'intro',
+    {
+      type: 'category',
+      label: '0. Основания проекта',
+      link: {type: 'generated-index', title: 'Основания проекта', slug: '/foundations'},
+      items: [
+        '00-foundations/00-what-is-diakrisis',
+        '00-foundations/01-method',
+        '00-foundations/02-zero-principles',
+        '00-foundations/03-zero-boundary',
+        '00-foundations/04-rules-of-engagement',
+      ],
+    },
+    {
+      type: 'category',
+      label: '1. Феномен различения',
+      link: {type: 'generated-index', title: 'Феномен различения', slug: '/diakrisis-phenomenon'},
+      items: [
+        '01-diakrisis-phenomenon/00-act-not-object',
+        '01-diakrisis-phenomenon/01-phenomenological-grounding',
+        '01-diakrisis-phenomenon/02-philosophical-parallels',
+        '01-diakrisis-phenomenon/03-impossibility-of-full-formalization',
+      ],
+    },
+    {
+      type: 'category',
+      label: '2. Канонический примитив',
+      link: {type: 'generated-index', title: 'Канонический примитив', slug: '/canonical-primitive'},
+      items: [
+        '02-canonical-primitive/00-overview',
+        '02-canonical-primitive/01-four-tuple',
+        '02-canonical-primitive/02-axiomatics',
+        '02-canonical-primitive/03-derived-notions',
+        '02-canonical-primitive/04-core-theorems',
+        '02-canonical-primitive/05-proof-theoretic-strength',
+        '02-canonical-primitive/06-probability-measure',
+        '02-canonical-primitive/07-categorification',
+        '02-canonical-primitive/08-derived-structures',
+        '02-canonical-primitive/09-conservation',
+      ],
+    },
+    {
+      type: 'category',
+      label: '3. Формальная архитектура',
+      link: {type: 'generated-index', title: 'Формальная архитектура', slug: '/formal-architecture'},
+      items: [
+        '03-formal-architecture/00-metacategory-structure',
+        '03-formal-architecture/01-iota-embedding',
+        '03-formal-architecture/02-cohesion',
+        '03-formal-architecture/03-fibration',
+        '03-formal-architecture/04-gauge',
+        '03-formal-architecture/05-modal-interpretation',
+        '03-formal-architecture/06-duality',
+        '03-formal-architecture/07-model-theory',
+        '03-formal-architecture/08-cardinal-analysis',
+        '03-formal-architecture/09-computability',
+        '03-formal-architecture/10-dynamical-systems',
+        '03-formal-architecture/11-information-theory',
+        '03-formal-architecture/12-sheaf-structure',
+        '03-formal-architecture/13-curry-howard-lambek',
+        '03-formal-architecture/14-synthetic-differential',
+      ],
+    },
+    {
+      type: 'category',
+      label: '4. Извлечения оснований',
+      link: {type: 'generated-index', title: 'Извлечения оснований', slug: '/extractions'},
+      items: [
+        '04-extractions/00-overview',
+        '04-extractions/01-zfc',
+        '04-extractions/02-hott',
+        '04-extractions/03-ncg',
+        '04-extractions/04-infty-topos',
+        '04-extractions/05-cic',
+        '04-extractions/06-logics-catalog',
+      ],
+    },
+    {
+      type: 'category',
+      label: '5. Сборки',
+      link: {type: 'generated-index', title: 'Сборки', slug: '/assemblies'},
+      items: [
+        '05-assemblies/00-overview',
+        '05-assemblies/01-uhm',
+        '05-assemblies/02-standard-model',
+        '05-assemblies/03-consciousness-theories',
+      ],
+    },
+    {
+      type: 'category',
+      label: '6. Пределы формализации',
+      link: {type: 'generated-index', title: 'Пределы формализации', slug: '/limits'},
+      items: [
+        '06-limits/00-th-neg',
+        '06-limits/01-th-neg-extended',
+        '06-limits/02-th-final',
+        '06-limits/03-no-go-series',
+        '06-limits/04-path-of-limit-failure',
+        '06-limits/05-what-remains-possible',
+      ],
+    },
+    {
+      type: 'category',
+      label: '7. Методологическая археология',
+      link: {type: 'generated-index', title: 'Методологическая археология', slug: '/methodology'},
+      items: [
+        '07-methodology/00-framework-corpus-reinterpreted',
+        '07-methodology/01-seed-work-summary',
+        '07-methodology/02-recursive-audits',
+        '07-methodology/03-negative-lessons',
+      ],
+    },
+    {
+      type: 'category',
+      label: '8. Исторический контекст',
+      link: {type: 'generated-index', title: 'Исторический контекст', slug: '/historical-context'},
+      items: [
+        '08-historical-context/00-anaximander',
+        '08-historical-context/01-hegel',
+        '08-historical-context/02-brouwer',
+        '08-historical-context/03-deleuze-simondon',
+        '08-historical-context/04-no-go-tradition',
+      ],
+    },
+    {
+      type: 'category',
+      label: '9. Применения и Путь Б',
+      link: {type: 'generated-index', title: 'Применения и Путь Б', slug: '/applications'},
+      items: [
+        '09-applications/00-path-B-uhm-formalization',
+        '09-applications/01-verum-integration',
+      ],
+    },
+    {
+      type: 'category',
+      label: '10. Справочник',
+      link: {type: 'generated-index', title: 'Справочник', slug: '/reference'},
+      items: [
+        '10-reference/00-glossary',
+        '10-reference/01-axioms-catalog',
+        '10-reference/02-theorems-catalog',
+        '10-reference/03-gap-status',
+      ],
+    },
+  ],
+};
+
+export default sidebars;

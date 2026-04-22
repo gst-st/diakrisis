@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>.logo-text { fill: #2e5a88; font-family: Georgia, serif; font-size: 28px; font-weight: bold; }</style>
+  </defs>
+  <circle cx="30" cy="30" r="28" fill="none" stroke="#2e5a88" stroke-width="2"/>
+  <text class="logo-text" x="30" y="40" text-anchor="middle">Δ</text>
+</svg>
