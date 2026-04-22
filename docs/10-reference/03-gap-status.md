@@ -29,11 +29,11 @@ title: Статус программ
 - **Consistency strength** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inacc).
 - **Связующие** (91.T–94.T): cohesive ∞-topos, motivic, realizability, Universal Foundation в (∞,∞).
 
-## Закрытые gap'ы из framework-фазы
+## Закрытые исторические gap'ы
 
 | # | Gap | Статус |
 |---|---|---|
-| 01-15 | framework gaps | ✅ закрыто в seed/Diakrisis |
+| 01-15 | исходные gap'ы | ✅ закрыто |
 | 16 | Shulman 2-topos отличие | ✅ 11.C6 |
 | 17 | SM как gauge-класс | 🟡 в программе (Gap N-04) |
 

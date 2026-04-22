@@ -411,7 +411,7 @@ UFH **не** утверждает, что УГМ — просто инстанц
 
 - Связь с IIT (Φ-integration) через α_uhm.
 - Связь с HOT (higher-order thought) через coinductive ν.
-- Integrated framework: phenomenological act + formal structure.
+- Интегрированная рамка: феноменологический акт + формальная структура.
 
 ## Связь с другими разделами
 
