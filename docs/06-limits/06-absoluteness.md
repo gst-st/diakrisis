@@ -174,57 +174,70 @@ title: Абсолютность TH-Final — полная формулировк
 
 ## Ось V — Полнота (π)
 
-**87.T** [Т] — Completeness of 4-dimensional absoluteness:
+**87.T** [Т при Lawvere-характеризации] — Completeness of 4-dimensional absoluteness:
 
-**Формулировка**: Четырёхмерная абсолютность (S, n, μ, ξ) **структурно полна** — любое формальное расширение foundational математики редуцируется к одной из четырёх осей.
+### Строгая формулировка с явным scope
 
-### Строгое доказательство (усиление 110.T)
+**87.T**: В пределах **Lawvere-characterizable foundational mathematics** (категорная формализация теорий через Lawvere theories + categorical semantics), 4-мерная абсолютность (S, n, μ, ξ) **структурно полна**: любое structural variation foundational theory редуцируется к одной из четырёх осей.
 
-**Лемма 87.L (характеризация foundational-структуры)**: всякая foundational-структура F в мат-традиции **однозначно** характеризуется четвёркой параметров:
+### Важное ограничение scope
 
-- **(А)** Синтаксис S_F: язык, логика, аксиомы, правила вывода — ось S.
-- **(Б)** Семантика M(S_F): категорная интерпретация моделей — ось n (уровень категорной сложности).
-- **(В)** Мета-рефлексия S_F → meta-S_F: самореференция через Gödel-encoding — ось μ.
-- **(Г)** Альтернативная семантика M'(S_F): варианты категорного порядка (operads, double, globular, cubical) — ось ξ.
+**87.T не претендует** на абсолютную универсальность. Она работает **внутри** парадигмы, заданной:
 
-**Доказательство леммы**:
+- **Lawvere's «Adjointness in Foundations» (1969)**: foundational theory = syntactic system + categorical semantics.
+- **Grothendieck-Lurie tradition**: categorical semantics = (∞,n)-topoi, stacks, derived categories.
 
-По Lawvere's characterization of foundational theories (Lawvere 1969 «Adjointness in Foundations», §4):
+Структуры **вне** этой парадигмы (например, non-categorical foundations, если такие существовали бы) — вне области применимости 87.T.
 
-- Foundational theory = (syntactic system) + (categorical semantics).
-- Syntactic ↔ ось S (language + logic + axioms).
-- Categorical semantics ↔ пара (n, ξ) = (categorical level, categorical order).
-- Meta-reflection ↔ ось μ (Gödel-encoding, R4-условие).
+### Полудоказательство в пределах Lawvere-scope
 
-Любой иной structural parameter — производный:
+**Лемма 87.L (Lawvere-characterization)**: всякая foundational theory F, формализуемая в Lawvere-Grothendieck-Lurie традиции, задана четвёркой:
 
-- Модальная логика (S4, S5, GL) — подкласс оси S (через выбор метатеории).
-- Type-theoretic strength — часть оси S (через R5 categorical interpretation).
-- Computational interpretation — подкласс оси ξ (realizability topos как категорный порядок).
-- Non-classical logics (paraconsistent, fuzzy) — ось S через classical fragment (86.T).
+- **(А) Syntax S_F**: сигнатура + аксиомы + правила вывода — **ось S**.
+- **(Б) Semantics M(S_F)**: 2-categorical или (∞,n)-categorical semantics — **ось n**.
+- **(В) Meta-reflection**: самореференция через Gödel-encoding (R4) — **ось μ**.
+- **(Г) Alternative semantics**: operads, double/globular/cubical, fusion — **ось ξ**.
 
-**Доказательство 87.T**:
+**Обоснование**: по Lawvere (1969), foundational theory полностью задана adjunction между syntactic category и semantic category. Все structural-параметры сводятся к:
+- Syntactic: ось S.
+- Semantic: пара (n, ξ).
+- Meta-reflection: ось μ.
 
-Предположим 5-я ось η — новое structural parameter.
+**Доказательство 87.T (в пределах scope)**:
 
-По Лемме 87.L: η характеризуется через (syntax, semantics, reflection, alternative). Возможны 4 случая:
+Предположим 5-я ось η ⊂ Lawvere-characterizable foundations.
 
-- η ⊆ S: η — подкласс метатеории. Редукция к 55.T.
-- η ⊆ n: η — refine категорного уровня. Редукция к 59.T.1.
-- η ⊆ μ: η — вариация meta-reflection. Редукция к 69.T.
-- η ⊆ ξ: η — вариация категорного порядка. Редукция к 84.T.
+По Лемме 87.L: η характеризуется через (syntax, semantics, meta, alternative).
 
-**Исчерпывающий список** осей совпадает с 4-мерной характеризацией (Lawvere). Пятая независимая ось **не существует** в пределах foundational-mathematics.
+Возможные случаи:
+- η ⊆ S: редукция к 55.T.
+- η ⊆ n: редукция к 59.T.1.
+- η ⊆ μ: редукция к 69.T.
+- η ⊆ ξ: редукция к 84.T.
 
-**QED**.
+Нет 5-й **независимой** оси в Lawvere-scope. **QED (в пределах scope)**.
+
+### Граница scope
+
+Потенциальные **вне-scope** кандидаты, которые НЕ редуцируются автоматически:
+
+- **Probabilistic foundations**: требуют Giry-монаду; редукция через α_probabilistic ∈ ⟪⟫ (не проверено в строгом смысле).
+- **Quantum logic foundations**: ортомодулярные решётки; редукция через α_quantum ∈ ⟪⟫ (не проверено).
+- **Fuzzy foundations**: continuous truth values; возможно, вне Lawvere-scope.
+
+Эти случаи **не опровергают** 87.T, но показывают её **scope**: 87.T работает для стандартных foundational-проектов, не для radically non-categorical.
 
 ### Следствия
 
-**87.C1 (окончательность)**: TH-Final ABSOLUTA_TOTALIS — **окончательная форма** абсолютности; нет более общей формулировки в пределах стандартной foundational math.
+**87.C1 (окончательность в scope)**: в пределах Lawvere-scope, TH-Final ABSOLUTA_TOTALIS — окончательная форма абсолютности.
 
-**87.C2 (Morita-инвариантность)**: TH-Final инвариантна под Morita-эквивалентностями — предложения α_1 ∼_M α_2 дают TH-Final(α_1) ⟺ TH-Final(α_2), поскольку Morita сохраняет все 4 оси.
+**87.C2 (Morita-инвариантность)**: TH-Final инвариантна под Morita-эквивалентностями (стандартными категорно-теоретическими).
 
-**87.C3 (tradeoff-структура)**: все 4 оси **ортогональны по содержанию**, но **совместимы в TH-Final** — TH-Final выполняется на всех парах (S, n), (S, μ), (S, ξ), (n, μ), (n, ξ), (μ, ξ) одновременно.
+**87.C3 (tradeoff-структура)**: 4 оси (S, n, μ, ξ) взаимно ортогональны в Lawvere-scope.
+
+### Honest acknowledgment
+
+87.T **не является** универсальной meta-theorem о всей мыслимой математике. Она — **условная теорема** в фиксированной (хотя и очень широкой) парадигме. Для extensions вне парадигмы — отдельная работа необходима.
 
 ## Три пути «побега» — все закрыты
 
