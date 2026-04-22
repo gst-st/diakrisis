@@ -271,7 +271,7 @@ function HomepageHeader() {
             (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью пределов
           </p>
           <p className={styles.heroDescription}>
-            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами в <strong>(∞,∞)-формулировке</strong> (максимальная higher-coherent структура); τ-труncations <code>τ<sub>≤n</sub></code> дают (∞,n)-версии для практики (n=2 — стандарт для prover'ов). Каждое Rich-основание <code>F</code> (ZFC, HoTT, NCG, linear, AFA, cohesive, motivic, realizability, УГМ, ...) — точка <code>α<sub>F</sub></code> классифицирующего пространства <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Теория теоретически закрыта: 96 доказанных теорем. <strong>TH-Final ABSOLUTA_TOTALIS</strong> (55.T + 59.T.1 + 69.T + 84.T + 87.T) — пятиуровневая абсолютность no-go результата по всем структурным осям (метатеория S, категорный уровень n, мета-итерация μ, альтернативный категорный порядок ξ, полнота). <strong>UFH (85.T)</strong>: <code>α<sub>uhm</sub> ≅<sub>M</sub> α<sub>Д-hybrid</sub> ⊗ 7D-quantum</code> — полное соответствие УГМ ↔ Diakrisis.
+            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами в <strong>(∞,∞)-формулировке</strong> (максимальная higher-coherent структура); τ-усечения <code>τ<sub>≤n</sub></code> дают (∞,n)-версии для практики (n=2 — стандарт для прувер-систем). Каждое Rich-основание <code>F</code> (ZFC, HoTT, NCG, linear, AFA, cohesive, motivic, realizability, УГМ, ...) — точка <code>α<sub>F</sub></code> классифицирующего пространства <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Корпус: <strong>~129 теорем</strong> с явной классификацией уровней строгости (L1 прямые / L2 редукции / L3 адаптации). <strong>TH-Final ABSOLUTA_TOTALIS</strong> (55.T + 59.T.1 + 69.T + 84.T + 87.T) — пятиуровневая абсолютность no-go-результата по структурным осям (метатеория S, категорный уровень n, мета-итерация μ, альтернативный категорный порядок ξ, полнота 4-мерности в Lawvere-scope). <strong>UFH (85.T)</strong>: <code>α<sub>uhm</sub> ≃<sub>gauge</sub> ∫<sub>Γ</sub> α<sub>Д-hybrid</sub><sup>!</sup>(Γ)</code> над <code>7D-quantum</code> — Grothendieck-конструкция с ν(α<sub>uhm</sub>) = ω·3+1.
           </p>
           <div className={styles.heroButtons}>
             <Link className="button button--primary button--lg" to="/intro">
@@ -343,7 +343,7 @@ function EssenceSection() {
             <h3>Предел</h3>
             <p>
               <strong>TH-Final</strong>: не существует{' '}
-              <code>X</code>, одновременно удовлетворяющего (F_S) формальной определимости, (Π<sub>4,S</sub>) нередуцируемости к <code>𝒮<sub>S</sub></code> и (Π<sub>3</sub>-max_S) максимальной генеративности. Невозможно ни как объект (TH-Neg), ни как предел (TH-Neg-extended). По <strong>теореме 55.T</strong>: абсолютна — выполнена для всех разумных Rich-метатеорий R-S = (R1)-(R5).
+              <code>X</code>, одновременно удовлетворяющего (F_S) формальной определимости, (Π<sub>4,S</sub>) нередуцируемости к <code>𝒮<sub>S</sub></code> и (Π<sub>3</sub>-max_S) максимальной генеративности. Невозможно ни как объект (TH-Neg), ни как предел (TH-Neg-extended). <strong>ABSOLUTA_TOTALIS</strong> (55.T + 59.T.1 + 69.T + 84.T + 87.T [П·L3]): абсолютна по 5 структурным осям (S, n, μ, ξ, π).
             </p>
           </div>
         </div>
@@ -375,31 +375,33 @@ function MotivationSection() {
             <h3 className={styles.motivationSubheading}>Граница</h3>
             <p>
               Теорема <strong>TH-Final</strong> — шестой член структурной серии{' '}
-              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP</em> — формально закрывает возможность получить предельное основание уровня 6. <strong>TH-Final ABSOLUTA_TOTALIS</strong> (55.T + 59.T.1 + 69.T + 84.T + 87.T) устанавливает <em>пятиуровневую</em> абсолютность — TH-Final выполнена по всем структурным осям (метатеория S, категорный уровень n, мета-итерация μ, альтернативный категорный порядок ξ, полнота 4-мерности). Diakrisis — уровень 5+: мета-структура над пространством известных оснований с формально установленными пределами.
+              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP</em> — формально закрывает возможность получить предельное основание уровня 6. <strong>TH-Final ABSOLUTA_TOTALIS</strong> устанавливает <em>пятиуровневую</em> абсолютность: горизонтальная по метатеории (55.T), вертикальная по категорному уровню (59.T.1), мета-вертикальная по итерациям (69.T), латеральная по категорному порядку (84.T), + полнота 4-мерности в Lawvere-scope (87.T как методологический постулат [П·L3]). Diakrisis — уровень 5+: мета-структура над пространством известных оснований с формально установленными пределами.
             </p>
 
             <h3 className={styles.motivationSubheading}>Связь с УГМ</h3>
             <p>
-              Теорема <strong>UFH (85.T)</strong> устанавливает полное математическое соответствие: <code>α<sub>uhm</sub> ≅<sub>M</sub> α<sub>Д-hybrid</sub> ⊗ 7D-quantum</code> через gauge-группу S₇ × U(1). Verum-формализация УГМ сводится к формализации α<sub>Д-hybrid</sub> + 7D-quantum.
+              Теорема <strong>UFH (85.T, [Т·L3])</strong> устанавливает структурную корреспонденцию:{' '}
+              <code>α<sub>uhm</sub> ≃<sub>gauge</sub> ∫<sub>Γ</sub> α<sub>Д-hybrid</sub><sup>!</sup>(Γ)</code> над <code>7D-quantum</code> — Grothendieck-конструкция с gauge-группой S₇ × U(1). Ординальная арифметика: ν(α<sub>uhm</sub>) = ν(7D) + ν(α<sub>Д-hybrid</sub>) = (ω+1) + (ω·2+1) = <strong>ω·3+1</strong>. Путь Б: Verum-формализация сводится к формализации α<sub>Д-hybrid</sub><sup>!</sup> + 7D-quantum + Grothendieck construction.
             </p>
           </div>
 
           <div className={styles.motivationFacts}>
             <Heading as="h3" className={styles.factsTitle}>Ключевые показатели</Heading>
             <dl className={styles.factsList}>
-              <div><dt>Примитив</dt><dd>четвёрка <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code></dd></div>
+              <div><dt>Примитив</dt><dd>четвёрка <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> в (∞,∞)-форме</dd></div>
               <div><dt>Аксиомы</dt><dd>13 (Axi-0..Axi-9, T-α, T-2f*)</dd></div>
-              <div><dt>Consistency</dt><dd>Con(Diakrisis) = Con(ZFC + 2 inacc) — 90.T</dd></div>
-              <div><dt>Теоремы</dt><dd>96 доказанных (теоретически закрыто)</dd></div>
+              <div><dt>Сила консистентности</dt><dd>Con(Diakrisis) = Con(ZFC + 2 inacc) — 90.T</dd></div>
+              <div><dt>Корпус теорем</dt><dd>~129 записей с L1/L2/L3 классификацией</dd></div>
               <div><dt>Категоричность</dt><dd>единственность до (∞,∞)-эквивалентности — 88.T</dd></div>
-              <div><dt>Internal language</dt><dd>L<sub>⟪⟫</sub> — 89.T</dd></div>
+              <div><dt>Внутренний язык</dt><dd>L<sub>⟪⟫</sub> — 2-HoTT через Yoneda (89.T)</dd></div>
               <div><dt>Извлечения</dt><dd>ZFC, ETCS, CIC, MLTT, HoTT, ∞-Topos, NCG</dd></div>
               <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_poly-HoTT, α_Д-hybrid</dd></div>
               <div><dt>Связующие</dt><dd>α_cohesion (91.T), α_motivic (92.T), α_realiz (93.T)</dd></div>
-              <div><dt>(∞,n)-иерархия</dt><dd>2-Diakrisis, (∞,1)-, (∞,∞)-версии</dd></div>
-              <div><dt>Флагман-сборка</dt><dd>УГМ (α_uhm, ν = ω·4)</dd></div>
-              <div><dt>UFH</dt><dd>α_uhm ≅ α_Д-hybrid ⊗ 7D — доказана (85.T)</dd></div>
-              <div><dt>ABSOLUTA_TOTALIS</dt><dd>5-уровневая абсолютность TH-Final (55.T + 59.T.1 + 69.T + 84.T + 87.T)</dd></div>
+              <div><dt>(∞,n)-иерархия</dt><dd>(∞,∞)-канон; (∞,1), 2-Diakrisis через τ-усечения</dd></div>
+              <div><dt>Флагман-сборка</dt><dd>УГМ (α_uhm, ν = ω·3+1)</dd></div>
+              <div><dt>UFH (85.T [Т·L3])</dt><dd>α_uhm ≃<sub>gauge</sub> ∫α_Д-hybrid<sup>!</sup>(Γ) над 7D (Grothendieck)</dd></div>
+              <div><dt>Tradeoff 97.T</dt><dd>! ⟺ PA ⟺ Π<sub>3</sub>-max ⟺ R-S (линейность↔генеративность)</dd></div>
+              <div><dt>ABSOLUTA_TOTALIS</dt><dd>5-уровневая абсолютность TH-Final (S, n, μ, ξ, π)</dd></div>
               <div><dt>Уровень проекта</dt><dd>5+ (мета над уровнем 5)</dd></div>
             </dl>
           </div>
@@ -421,9 +423,9 @@ const docSections: DocSection[] = [
   {
     id: 'foundations',
     title: 'Основания проекта',
-    description: 'Нулевые принципы и нулевая граница',
+    description: 'Нулевые принципы, нулевая граница, иерархия уровней',
     link: '/00-foundations/00-what-is-diakrisis',
-    items: ['Что такое Diakrisis', 'Метод работы', 'Нулевые принципы П-0.0..П-0.7', 'Концепт нулевой границы Z'],
+    items: ['Что такое Diakrisis', 'Метод работы', 'Нулевые принципы П-0.0..П-0.7', 'Концепт нулевой границы Z', 'Иерархия уровней (0..5+, 6)'],
   },
   {
     id: 'phenomenon',
@@ -458,28 +460,28 @@ const docSections: DocSection[] = [
     title: 'Сборки',
     description: 'УГМ, Стандартная модель, теории сознания',
     link: '/05-assemblies/01-uhm',
-    items: ['α_uhm — 7 инвариантов, ν = ω·4', 'T-96 (ρ* = φ(Γ)) ↔ Axi-7 (04.T2)', 'IIT, GWT, HOT, Orch-OR как точки в 𝓜_Fnd', 'SM через Connes-Chamseddine'],
+    items: ['α_uhm — 7 инвариантов, ν = ω·3+1', 'T-96 (ρ* = φ(Γ)) ↔ Axi-7 (04.T2)', 'UFH (85.T): α_uhm ≃ ∫α_Д-hybrid(Γ) над 7D', 'IIT, GWT, HOT, Orch-OR как точки в 𝓜_Fnd', 'SM через Connes-Chamseddine'],
   },
   {
     id: 'limits',
     title: 'Пределы формализации',
     description: 'TH-Final ABSOLUTA_TOTALIS — 5-уровневая абсолютность',
     link: '/06-limits/02-th-final',
-    items: ['TH-Final: формальный объект уровня 6 невозможен', 'Шестая в серии Cantor-Russell-Gödel-Tarski-Lawvere', 'Горизонтальная абсолютность 55.T (метатеория S)', 'Вертикальная абсолютность 59.T.1 (уровень n)', 'Мета-вертикальная абсолютность 69.T (итерации μ)', 'Латеральная абсолютность 84.T (категорный порядок ξ)', 'Полнота 4-мерности 87.T — нет 5-й оси', 'Финальные теоремы 85.T-96.T: UFH, категоричность, internal language'],
+    items: ['TH-Final: формальный объект уровня 6 невозможен', 'Шестая в серии Cantor-Russell-Gödel-Tarski-Lawvere', 'Горизонтальная абсолютность 55.T (метатеория S)', 'Вертикальная абсолютность 59.T.1 (уровень n)', 'Мета-вертикальная абсолютность 69.T (итерации μ)', 'Латеральная абсолютность 84.T (категорный порядок ξ)', 'Постулат полноты 87.T ([П·L3], Lawvere-scope)', '97.T: tradeoff линейности и генеративности', 'Финальные теоремы 85.T-96.T + L-классификация'],
   },
   {
     id: 'methodology',
     title: 'Методологическая археология',
-    description: 'Framework → Seed → Diakrisis',
+    description: 'Исторические фазы работы',
     link: '/07-methodology/00-framework-corpus-reinterpreted',
-    items: ['Переинтерпретация framework-корпуса', 'Сводка seed-работы (12 документов)', 'Рекурсивные аудиты', 'Негативные уроки NL-1..NL-14'],
+    items: ['Переинтерпретация раннего корпуса', 'Сводка seed-работы (12 документов)', 'Рекурсивные аудиты', 'Негативные уроки NL-1..NL-14'],
   },
   {
     id: 'applications',
     title: 'Применения',
     description: 'Путь Б — формализация УГМ в Verum',
     link: '/09-applications/00-path-B-uhm-formalization',
-    items: ['223 теоремы УГМ → Verum', 'Критерии успеха К-Б-1..К-Б-5', 'Многосессионный план', 'Гипотеза Q-D.4: α_uhm ≅ α_Д-hybrid ⊗ 7D', 'Интеграция с Verum-системой'],
+    items: ['223 теоремы УГМ → Verum', 'Критерии успеха К-Б-1..К-Б-5', 'Многосессионный план', 'UFH (85.T): α_uhm ≃ ∫α_Д-hybrid^!(Γ) над 7D', 'Интеграция с Verum-системой'],
   },
 ];
 
@@ -513,7 +515,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Математическая структура классификации оснований"
-      description="Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью TH-Final (ABSOLUTA_TOTALIS). 96 теорем. UFH-мост к УГМ."
+      description="Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью TH-Final (ABSOLUTA_TOTALIS). ~129 теорем с L1/L2/L3 классификацией строгости. UFH-мост к УГМ через Grothendieck-конструкцию."
     >
       <HomepageHeader />
       <main>

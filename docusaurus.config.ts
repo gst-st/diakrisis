@@ -114,7 +114,7 @@ const config: Config = {
   themeConfig: {
     metadata: [
       {name: 'author', content: 'Diakrisis Authors'},
-      {name: 'description', content: 'Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью TH-Final. 96 теорем, UFH, связь с УГМ.'},
+      {name: 'description', content: 'Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью TH-Final (ABSOLUTA_TOTALIS). ~129 теорем с L1/L2/L3 классификацией строгости. UFH-мост к УГМ через Grothendieck-конструкцию.'},
     ],
     image: 'img/logo.svg',
     colorMode: {
