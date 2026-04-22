@@ -104,6 +104,7 @@ const sidebars: SidebarsConfig = {
         '06-limits/04-path-of-limit-failure',
         '06-limits/05-what-remains-possible',
         '06-limits/06-absoluteness',
+        '06-limits/07-infty-extension',
       ],
     },
     {

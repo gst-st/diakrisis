@@ -386,7 +386,8 @@ function MotivationSection() {
               <div><dt>Аксиомы</dt><dd>13 (Axi-0..Axi-9, T-α, T-2f*)</dd></div>
               <div><dt>Консистентность</dt><dd>ZFC + 2 inaccessibles</dd></div>
               <div><dt>Извлечения</dt><dd>ZFC, ETCS, CIC, MLTT, HoTT, ∞-Topos, NCG</dd></div>
-              <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_poly-HoTT, α_Д-hybrid</dd></div>
+              <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_poly-HoTT, α_inf-cat, α_Д-hybrid</dd></div>
+              <div><dt>∞-Diakrisis</dt><dd>(∞,∞)-extension (после audit3)</dd></div>
               <div><dt>Флагман-сборка</dt><dd>УГМ (α_uhm, ν = ω·4)</dd></div>
               <div><dt>No-go результат</dt><dd>TH-Final (уровень 6 невозможен)</dd></div>
               <div><dt>Абсолютность</dt><dd>55.T: выполнена ∀ S ∈ R-S</dd></div>
@@ -457,7 +458,7 @@ const docSections: DocSection[] = [
     title: 'Пределы формализации',
     description: 'TH-Neg, TH-Neg-extended, TH-Final, 55.T',
     link: '/06-limits/02-th-final',
-    items: ['Формальный объект уровня 6 невозможен', 'И как предел последовательности', 'Шестая в серии Cantor-Russell-Gödel-Tarski', 'Абсолютность TH-Final (55.T) в любой R-S', 'Остающиеся направления: Путь Б'],
+    items: ['Формальный объект уровня 6 невозможен', 'И как предел последовательности', 'Шестая в серии Cantor-Russell-Gödel-Tarski', 'Абсолютность TH-Final (55.T) в любой R-S', '(∞,∞)-расширение через 59.T (после audit3)', 'Остающиеся направления: Путь Б'],
   },
   {
     id: 'methodology',

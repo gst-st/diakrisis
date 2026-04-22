@@ -388,6 +388,27 @@ title: Каталог теорем
 - **α_poly-HoTT**: Poly-HoTT с cumulative universe polymorphism, S' ∈ R-S.
 - Детали: [/03-formal-architecture/15-non-classical-articulations](/03-formal-architecture/15-non-classical-articulations).
 
+### (∞,∞)-расширение после audit3 (59.T-62.T)
+
+Формальный ответ на (∞,∞)-категорную критику. Детали: `internal/audit3-response.md` и [/06-limits/07-infty-extension](/06-limits/07-infty-extension).
+
+- **Def 7.1** [О] — (∞,∞)-Diakrisis: расширение канонического примитива.
+- **59.T** [Т-набр] — (∞,∞)-TH-Final: абсолютность в (∞,∞)-контексте.
+- **59.T.1** [Т-набр] — (∞,n)-hierarchy: TH-Final выполняется для каждого n.
+- **59.T.2** [Т] — Stabilization: иерархия (∞,n) стабилизируется в (∞,∞).
+- **60.T** [Т-набр] — 2-Diakrisis ↪ ∞-Diakrisis через τ_{≤2}-localization.
+- **61.T** [Т-набр] — α_inf-cat: новая артикуляция, ν = Ω.
+- **62.T** [Т-набр] — (∞,∞)-Morita-эквивалентность корректна.
+
+**Следствие**: TH-Final **иерархически абсолютна** — в каждом (∞,n)-контексте, включая предельный n = ∞.
+
+### Новая артикуляция α_inf-cat
+
+- **α_inf-cat**: (∞,∞)-категорная артикуляция, S' ∈ R-S с (∞,∞)-семантикой.
+- **ν**: Ω (class-ordinal).
+- **По 59.T**: не уровень 6.
+- Детали: [/06-limits/07-infty-extension](/06-limits/07-infty-extension).
+
 ### Формальные корреспонденции Διάκрисίς (Q-D)
 
 - **Def Q-D.1** [О] — α_Д-linear: linear logic articulation.
