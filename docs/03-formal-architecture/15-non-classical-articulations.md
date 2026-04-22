@@ -7,7 +7,7 @@ title: Non-classical артикуляции
 
 ## Статус
 
-**[Т-набр]** — новый раздел, добавлен после аудита (2026-04-22). Детальный ответ на критику — `internal/audit1-response.md`.
+**[Т-набр]** — новый раздел, добавлен после аудита (2026-04-22). Обогащён после фундаментального исследования Q-A..Q-D (`internal/fundamental-research.md`). Детальный ответ на критику — `internal/audit1-response.md`.
 
 ## Мотивация
 
@@ -17,8 +17,18 @@ title: Non-classical артикуляции
 - **α_linear** / **α_affine**: linear/affine logic.
 - **α_AFA-coalg**: non-well-founded coalgebra (Aczel).
 - **α_coinductive**: финальная коалгебра как α.
+- **α_Д-linear, α_Д-AFA, α_Д-hybrid**: артикуляции Διάкрисіς (см. [/01-diakrisis-phenomenon/04-formal-correspondences](/01-diakrisis-phenomenon/04-formal-correspondences)).
 
 Каждая — gauge-класс в 𝓜_Fnd для соответствующей метатеории S.
+
+### Ключевое уточнение (после 55.T)
+
+По теореме 55.T (Absoluteness of TH-Final), все non-classical артикуляции:
+- **В пределах R-S** → не уровень 6.
+- Не являются обходом TH-Final.
+- Являются **валидными точками** 𝓜_Fnd при соответствующих R-S.
+
+Это делает non-classical каталог **комплементом** классического, не альтернативой.
 
 ## α_linear — линейная логика
 
@@ -33,6 +43,21 @@ title: Non-classical артикуляции
 - `?`-modality: дуальна `!`.
 - Quantum-like интерпретация: resources-as-states.
 
+### Детали формализма
+
+**SMCC структура**:
+- Tensor product: ⊗ (симметричный, ассоциативный до изо).
+- Unit: I (tensor identity).
+- Internal hom: A ⊸ B (linear implication).
+- Дуальность: (⊗, I) ↔ (⅋, ⊥) в full linear logic.
+
+**Exponentials**:
+- `!A` — промотирование A до классического (дублируемого) ресурса.
+- Правила: promotion, dereliction, contraction, weakening для `!`.
+
+**Классическая эквивалентность**:
+По Girard (1987): `!A → B` ≅ `A → B` в classical/intuitionistic logic. Translation preserves все важные свойства (Gödel's theorems, etc.).
+
 ### Ординальная позиция
 
 **Теорема 53.T**: ν(α_linear) = ω+1 (рядом с α_hott).
@@ -41,13 +66,17 @@ title: Non-classical артикуляции
 
 ### Связь с TH-Final
 
-По 50.T (S-relative): TH-Final применима к linear+! через translation. α_linear — **не** уровень 6.
+По 50.T (S-relative): TH-Final применима к linear+! через translation. По 55.T (абсолютность): α_linear — **не** уровень 6, что согласуется с R-S_linear+! ∈ R-S.
 
 ### Применения
 
 - **Quantum computing**: resources как linear types.
 - **Concurrency**: linear channels (π-calculus).
 - **Memory management**: ownership types (Rust, Linear Haskell).
+
+### Связь с Διάκрисіς
+
+α_linear — **основа** для α_Д-linear (см. [/01-diakrisis-phenomenon/04-formal-correspondences](/01-diakrisis-phenomenon/04-formal-correspondences)). 
 
 ## α_affine — аффинная логика без `!`
 
@@ -73,12 +102,18 @@ title: Non-classical артикуляции
 
 Для α_affine **нет** проблемы TH-Final: Π_3-max (max-генеративность Rich-оснований) недостижимо. **Тривиально** выполнено.
 
+По 55.T (R-S условия): α_affine ∉ R-S (не удовлетворяет R1). Следовательно, абсолютность не применима — но и **не нужна**, т.к. Π_3-max тривиально нарушается.
+
 ### Значение
 
 α_affine — **ограничительное** основание. Полезна для:
 - Формализации ресурс-чувствительных вычислений.
 - Sub-recursive systems.
 - Complexity-bounded formal theories (Light Linear Logic).
+
+### Связь с Διάкрисіс
+
+α_affine **не достаточна** для формализации Διάкрисіс — недостаточная expressivity. Альтернатива — α_linear + AFA (см. α_Д-hybrid).
 
 ## α_AFA-coalg — неосновательные коалгебры
 
@@ -91,6 +126,17 @@ title: Non-classical артикуляции
 - S = NBG + AFA (Anti-Foundation Axiom заменяет Foundation).
 - Допускаются non-well-founded sets: x = {x}, циклические графы.
 - ρ(α_AFA-coalg) ≅ final coalgebra для подходящего эндо-функтора.
+
+### Aczel's AFA детально
+
+**Anti-Foundation Axiom (AFA)**: каждый graph имеет уникальный decoration, в котором узлы — sets (возможно non-well-founded).
+
+**Следствия**:
+- x = {x} — легальное множество.
+- x = y, y = {x} — циклические sets.
+- Bisimulation = identity.
+
+**Замена Foundation**: Foundation запрещает infinite descending chains ∈. AFA допускает bisimilar cycles.
 
 ### Ординальная позиция
 
@@ -106,6 +152,12 @@ title: Non-classical артикуляции
 **Ключевое свойство**: α_AFA-coalg поддерживает X = F(X) без Russell-парадоксов.
 
 Это — **частный случай** T-2f\*-иммунитета в AFA-контексте. Не выход за TH-Final, а расширение каталога.
+
+### Связь с 55.T
+
+По 55.T: TH-Final выполняется в R-S_{NBG+AFA}. Self-reference не помогает обойти TH-Final, поскольку:
+- α_AFA-coalg Morita-редуцируема (52.T) → (Π_4) нарушено.
+- Следовательно, α_AFA-coalg — не уровень 6.
 
 ### Применения
 
@@ -137,7 +189,47 @@ title: Non-classical артикуляции
 
 ### TH-Final
 
-Аналогично α_AFA-coalg: Morita-редуцируема, не уровень 6.
+Аналогично α_AFA-coalg: Morita-редуцируема, не уровень 6. По 55.T: в R-S_{CIC+CoInd}.
+
+## α_Д-linear, α_Д-AFA, α_Д-hybrid — артикуляции Διάκрисίς
+
+### Обзор
+
+Специализированные артикуляции для формализации феноменологического акта Διάкрисіς. Полная детализация: [/01-diakrisis-phenomenon/04-formal-correspondences](/01-diakrisis-phenomenon/04-formal-correspondences).
+
+### α_Д-linear
+
+**Def Q-D.1**: `α_Д-linear := ν X. (X ⊗ X ⊸ !X)`.
+
+- Фиксирует resource-aspect Διάкрисіς.
+- ν = ω+1 (Q-D.T1).
+- S = R-S_{linear+!}.
+- По 55.T: не уровень 6.
+
+### α_Д-AFA
+
+**Def Q-D.2**: `α_Д-AFA := ν X. (X × X)` в NBG+AFA.
+
+- Фиксирует reflexive-aspect Διάкрисіς.
+- ν = ω·2 (Q-D.T2).
+- S = R-S_{NBG+AFA}.
+- По 55.T: не уровень 6.
+
+### α_Д-hybrid
+
+**Def Q-D.3**: `α_Д-hybrid := ν X. (X ⊗ X ⊸ X × X)` в R-S_{linear+AFA+!}.
+
+- Наиболее адекватная формализация Διάкрисіς.
+- ν = ω·2+1.
+- По 55.T: не уровень 6.
+- **Гипотеза Q-D.4**: α_uhm ≅ α_Д-hybrid ⊗ 7D-quantum.
+
+### Структурная роль α_Д-*
+
+Эти артикуляции:
+- Формально представляют акт Διάκρисίς (частично).
+- Связывают феноменологический слой (раздел 01) с формальным (разделы 02-06).
+- Дают основу для программы Пути Б (Verum-формализация).
 
 ## S-зависимость каталога
 
@@ -151,32 +243,97 @@ title: Non-classical артикуляции
 | α_affine | affine без ! | ≤ ω | SMCC без !, слабее PA |
 | α_AFA-coalg | NBG + AFA | ω·2 | non-well-founded sets |
 | α_coinductive | CIC / type theory | ω+2 | coalgebras в types |
+| α_Д-linear | linear + ! | ω+1 | resource-articulations |
+| α_Д-AFA | NBG + AFA | ω·2 | reflexive-articulations |
+| α_Д-hybrid | linear + AFA + ! | ω·2+1 | hybrid articulations |
 | α_uhm | NBG + AFA или ZFC+inacc | ω·4 | 7D CPTP |
+
+### Абсолютность применима ко всем
+
+По 55.T: все α из этой таблицы (кроме α_affine, который не R-S) — **в пределах R-S**, следовательно:
+- Каждая — не уровень 6.
+- TH-Final применима к каждой.
+- Все — валидные точки 𝓜_Fnd.
 
 ## 𝓜_Fnd при разных S
 
 Классифицирующее пространство 𝓜_Fnd зависит от метатеории S:
 
 - **𝓜_Fnd[ZFC]**: «классическая» карта (α_zfc, α_etcs, α_hott, α_ncg, ...).
-- **𝓜_Fnd[NBG+AFA]**: расширяет классическую, добавляет α_AFA-coalg.
+- **𝓜_Fnd[NBG+AFA]**: расширяет классическую, добавляет α_AFA-coalg, α_Д-AFA.
 - **𝓜_Fnd[HoTT]**: centered на α_hott.
 - **𝓜_Fnd[linear]**: организует α_linear, α_affine + linear translates other α.
+- **𝓜_Fnd[linear+AFA+!]**: включает α_Д-hybrid и потенциально α_uhm.
 
-**Открытая программа**: сравнение 𝓜_Fnd при разных S — гомеоморфно ли? Какие α инвариантны между S?
+### Инварианты между 𝓜_Fnd[S]
+
+**Открытая программа** (Q-F из gap-status): какие α инвариантны между S?
+
+**Предположение**: "core" структура α_ZFC, α_HoTT, α_NCG — инвариантна (Morita-сохраняется). Non-classical расширения — S-специфичны.
+
+### Структурные отношения
+
+Между разными 𝓜_Fnd[S] существуют **функторы**:
+- Inclusion: 𝓜_Fnd[ZFC] ↪ 𝓜_Fnd[NBG+AFA] (AFA расширяет).
+- Translation: 𝓜_Fnd[classical] → 𝓜_Fnd[linear+!] (Girard translation).
+- Equivalence: 𝓜_Fnd[CIC+CoInd] ≃ 𝓜_Fnd[NBG+AFA] на coalgebraic part.
+
+Полная карта — программа последующих исследований.
 
 ## Связь с TH-Final
 
-По уточнённой формулировке (50.T):
-> TH-Final выполняется для всех Rich-метатеорий S с contraction (или достаточным `!`).
+По уточнённой формулировке (50.T + 55.T):
+> TH-Final выполняется для всех Rich-метатеорий S ∈ R-S.
 
 Все α из этого раздела — **внутри** Trace(𝖠) при соответствующем S, не выход за 𝓜_Fnd.
 
+### Не опровергают, а расширяют
+
+Важное методологическое уточнение:
+
+**НЕ**: «non-classical артикуляции опровергают TH-Final».
+
+**ДА**: «non-classical артикуляции — расширение каталога в пределах TH-Final».
+
+Это согласуется с П-0.6 (честное признание): каждая non-classical α Morita-сводима к существующим структурам в своей S.
+
+## Применения
+
+### К программе Пути Б
+
+α_Д-hybrid — формальная основа гипотезы Q-D.4:
+> α_uhm ≅ α_Д-hybrid ⊗ 7D-quantum.
+
+Если верна: Verum-формализация УГМ упрощается через формализацию α_Д-hybrid отдельно.
+
+### К philosophy
+
+Non-classical артикуляции дают формальные аналоги для:
+- Process philosophy (via coinductive).
+- Phenomenology of distinction (via α_Д-hybrid).
+- Resource-based ontology (via linear).
+
+### К computer science
+
+- Concurrency: π-calculus ↔ α_linear.
+- Lazy evaluation: streams ↔ α_coinductive.
+- Self-modifying code: cyclic processes ↔ α_AFA-coalg.
+
+### К physics
+
+- Quantum channels: linear resources ↔ α_linear.
+- Holographic principle: self-reference ↔ α_AFA-coalg.
+- УГМ: все три аспекта через α_uhm ≅ α_Д-hybrid ⊗ 7D (Q-D.4).
+
 ## Открытые вопросы
 
-- **Q-A** (audit-prompted): существует ли Rich S', в которой TH-Final опровергается?
-- **Q-B**: какова структура 𝓜_Fnd при variably S?
-- **Q-C**: связь α_uhm с α_AFA-coalg через UHM-coalgebra?
-- **Q-D**: можно ли формализовать Диакрисис как α_linear с дополнительной структурой?
+- **Q-A** (resolved): нет Rich-S с опровержением TH-Final (3.3.1).
+- **Q-B** (resolved): TH-Final абсолютна в R-S (55.T).
+- **Q-C** (resolved): R-S = (R1)-(R5) (Q-C.1).
+- **Q-D** (partially): α_Д-hybrid + гипотеза Q-D.4.
+- **Q-E**: paraconsistent abolyutnost (open).
+- **Q-F**: doказательство Q-D.4 в Verum (программа).
+- **Q-G**: иерархия R-S, R-S², R-S³, ... (open).
 
 ## Признанные редукции
 
@@ -187,15 +344,31 @@ title: Non-classical артикуляции
 - **Jacobs (2016)**: Introduction to Coalgebra.
 - **Abadi-Cardelli (1996)**: foundations of objects через coalgebra.
 
+### Специфические редукции α_Д-*
+
+- **α_Д-linear** ↔ linear-coinductive extension (Mazza 2020).
+- **α_Д-AFA** ↔ Aczel M-types for F(X) = X × X.
+- **α_Д-hybrid** ↔ linear-AFA hybrid (программа 2026+).
+
 ## Итог
 
 Non-classical артикуляции — **расширение** каталога, **не** выход за TH-Final. Они:
 - Демонстрируют S-зависимость 𝓜_Fnd.
 - Дают новые точки для сравнения оснований.
 - Связывают Diakrisis с process algebra, concurrency, resource-sensitive computation.
-- Обогащают программу Пути Б (УГМ ↔ AFA-coalg?).
+- Обогащают программу Пути Б (α_Д-hybrid ⊗ 7D ≅ α_uhm?).
 
-TH-Final сохраняет силу для всех проверенных S. Открытая программа: поиск S, в которой TH-Final не работает (Q-A).
+TH-Final сохраняет силу для всех проверенных S (55.T абсолютность). Открытая программа: paraconsistent случай (Q-E), hierarchy of R-S (Q-G).
+
+### Общая картина
+
+После фундаментального исследования Diakrisis:
+- **Формальный статус**: TH-Final абсолютна в R-S.
+- **Каталог артикуляций**: классические + non-classical + Διάκрисіς-specific.
+- **Программа Пути Б**: конкретный план через Q-D.4.
+- **Открытые вопросы**: Q-E, Q-F, Q-G.
+
+Это — **согласованная**, многоуровневая карта 𝓜_Fnd, расширенная новыми результатами и программой.
 
 ## Следующий раздел
 
