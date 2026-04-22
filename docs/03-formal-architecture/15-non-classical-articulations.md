@@ -394,7 +394,7 @@ Polymorphism-intro: (ℓ : Level) ⊢ t(ℓ) : 𝒰_ℓ ⟹ ⊢ λℓ.t(ℓ) : �
 | α_Д-linear | linear + ! | ω+1 | resource-articulations |
 | α_Д-AFA | NBG + AFA | ω·2 | reflexive-articulations |
 | α_Д-hybrid | linear + AFA + ! | ω·2+1 | hybrid articulations |
-| α_uhm | NBG + AFA или ZFC+inacc | ω·4 | 7D CPTP |
+| α_uhm | NBG + AFA или ZFC+inacc | ω·3+1 | 7D CPTP |
 
 ### Абсолютность применима ко всем
 

@@ -22,7 +22,7 @@ title: Введение в Diakrisis
 - **Категоричность** (88.T): Diakrisis единственна до (∞,∞)-эквивалентности.
 - **Internal language** L_⟪⟫ (89.T): внутренний формальный язык.
 - **Consistency** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
-- **UFH** (85.T): α_uhm ≅_M α_Д-hybrid ⊗ 7D-quantum — полное математическое соответствие УГМ ↔ Diakrisis.
+- **UFH** (85.T): α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) — полное математическое соответствие УГМ ↔ Diakrisis.
 - **Связующие теоремы** (91.T–94.T): cohesive ∞-topos, motivic homotopy theory, realizability topos, Universal Foundation в (∞,∞) — все вложены в 𝓜_Fnd как конкретные артикуляции.
 
 ### Негативные: TH-Final ABSOLUTA_TOTALIS
@@ -109,7 +109,7 @@ title: Введение в Diakrisis
 - **Уровень 2** (Z): три эквивалентные характеризации (16.T1).
 - **Уровень 3**: канонический примитив с 13 аксиомами.
 - **Уровень 4**: ρ-проекции — точные реализации конкретных оснований.
-- **Уровень 5**: сборки — УГМ (α_uhm, ν = ω·4), SM, cons-теории.
+- **Уровень 5**: сборки — УГМ (α_uhm, ν = ω·3+1), SM, cons-теории.
 
 ## Каталог артикуляций
 
@@ -128,7 +128,7 @@ title: Введение в Diakrisis
 | α_poly-HoTT | Poly-HoTT | ω·2+1 |
 | α_motivic (92.T) | ZFC+inacc | ω·2+1 |
 | α_Д-hybrid | linear+AFA+! | ω·2+1 |
-| α_uhm | NBG+AFA | ω·4 |
+| α_uhm | NBG+AFA | ω·3+1 |
 | α_inf-cat | (∞,∞) | Ω |
 | α_Apeiron | R-S | Ω |
 

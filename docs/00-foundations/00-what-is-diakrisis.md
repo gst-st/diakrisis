@@ -133,7 +133,7 @@ title: Что такое Diakrisis
 - **18.T**: T-2f\* иммунитет к 5 семействам парадоксов.
 - **29.T + 30.T**: Universal Foundation + Reconstruction.
 - **43.T1**: 𝓜_Fnd = Trace(𝖠)/gauge — классифицирующее пространство.
-- **85.T (UFH)**: α_uhm ≅_M α_Д-hybrid ⊗ 7D-quantum — полное соответствие УГМ ↔ Diakrisis.
+- **85.T (UFH)**: α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) — полное соответствие УГМ ↔ Diakrisis.
 - **88.T**: категоричность — единственность до (∞,∞)-эквивалентности.
 - **89.T**: internal language L_⟪⟫ — внутренний формальный язык.
 - **90.T**: Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
@@ -233,7 +233,7 @@ Diakrisis — уровень **5+**:
 | Сборки | [Т/Т-набр] | УГМ, SM, cons |
 | TH-Final | [Т] доказано | No-go уровня 6 |
 | ABSOLUTA_TOTALIS | [Т] | 5-уровневая абсолютность TH-Final |
-| UFH | [Т] | α_uhm ≅_M α_Д-hybrid ⊗ 7D-quantum |
+| UFH | [Т] | α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) |
 
 ## 11. Следующие шаги
 

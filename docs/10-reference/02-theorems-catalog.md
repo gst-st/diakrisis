@@ -448,13 +448,13 @@ title: Каталог теорем
 - **Def α_Д-hybrid** [О] — гибрид linear + AFA: ν X. (X ⊗ X ⊸ X × X).
 - **70.T** [Т] — ν(α_Д-linear) = ω+1.
 - **71.T** [Т] — ν(α_Д-AFA) = ω·2.
-- **UFH** [Т] — UHM Factorization Hypothesis: α_uhm ≅ α_Д-hybrid ⊗ 7D-quantum (доказано 85.T).
+- **UFH** [Т] — UHM Factorization Hypothesis: α_uhm ≃ ∫α_Д-hybrid(Γ) над 7D (fibration)-quantum (доказано 85.T).
 
 ## Финальные теоремы (85.T–96.T)
 
 Полные доказательства, закрывающие все теоретические вопросы Diakrisis.
 
-- **85.T** [Т] — UFH: α_uhm ≅_M α_Д-hybrid ⊗ 7D-quantum через S₇ × U(1) gauge.
+- **85.T** [Т] — UFH: α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) через S₇ × U(1) gauge.
 - **86.T** [Т] — Paraconsistent TH-Final: выполнена в R-S' с (Strong-neg) через трансляция ⊗.
 - **87.T** [Т] — Completeness 4-dimensional absoluteness: нет 5-й оси.
 - **88.T** [Т] — Категоричность Diakrisis: единственность до (∞,∞)-эквивалентности.
@@ -508,7 +508,7 @@ title: Каталог теорем
 
 **Следствие**: без `!` — ν(α_S') ≤ ω, Π_3-max принципиально недостижимо; substructural-без-`!` системы структурно вне Diakrisis.
 
-**Следствие 97.C2**: UFH уточняется до `α_uhm ≅_M α_Д-hybrid^{!} ⊗_{⟪⟫} 7D-quantum` — `!`-контекст необходим.
+**Следствие 97.C2**: UFH уточняется до `α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция)` — `!`-контекст необходим.
 
 Детали: [/06-limits/07-final-theorems](/06-limits/07-final-theorems#97t-tradeoff-линейности-и-генеративности).
 
