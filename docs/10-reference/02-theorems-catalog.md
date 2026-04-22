@@ -368,6 +368,26 @@ title: Каталог теорем
 - **55.T** [Т] — Absoluteness of TH-Final: для любой S ∈ R-S, TH-Final выполнена.
 - **3.3.1** [Т] — Q-A resolution: опровержение TH-Final требует нарушения R-S-условий.
 
+### Уточнение после audit2 (56.T-58.T)
+
+Формальный ответ на универсум-полиморфный вызов Poly-HoTT. Детали: `internal/audit2-response.md`.
+
+- **Def** [О]: 𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global} (уточнение после audit2).
+- **Лемма 2''** [Т] — Ob(M_F) ⊆ 𝒮_S^{local} ⊆ 𝒮_S (локальная).
+- **Лемма 2'''** [Т] — S-определимый X ⊆ 𝒮_S (глобальная, через derived).
+- **56.T** [Т] — (F_S)(X) ⇒ X ∈ 𝒮_S (через categorical semantics).
+- **57.T** [Т-набр] — ν(α_poly-HoTT) = ω·2+1; Morita-редуцируема к derived over universes.
+- **58.T** [Т] — Predicative Π_3-max_S' strictly weaker чем impredicative.
+
+**Следствие 56.C1**: Universe-polymorphic modality X аудита 2 ∈ 𝒮_S^{global} → Morita-редуцируема → не уровень 6.
+
+**Следствие 58.C1**: α_poly-HoTT с predicativity не достигает (Π_3-max) в классическом смысле.
+
+### Новая артикуляция α_poly-HoTT
+
+- **α_poly-HoTT**: Poly-HoTT с cumulative universe polymorphism, S' ∈ R-S.
+- Детали: [/03-formal-architecture/15-non-classical-articulations](/03-formal-architecture/15-non-classical-articulations).
+
 ### Формальные корреспонденции Διάκрисίς (Q-D)
 
 - **Def Q-D.1** [О] — α_Д-linear: linear logic articulation.

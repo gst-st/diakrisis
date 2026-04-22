@@ -386,7 +386,7 @@ function MotivationSection() {
               <div><dt>Аксиомы</dt><dd>13 (Axi-0..Axi-9, T-α, T-2f*)</dd></div>
               <div><dt>Консистентность</dt><dd>ZFC + 2 inaccessibles</dd></div>
               <div><dt>Извлечения</dt><dd>ZFC, ETCS, CIC, MLTT, HoTT, ∞-Topos, NCG</dd></div>
-              <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_Д-hybrid</dd></div>
+              <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_poly-HoTT, α_Д-hybrid</dd></div>
               <div><dt>Флагман-сборка</dt><dd>УГМ (α_uhm, ν = ω·4)</dd></div>
               <div><dt>No-go результат</dt><dd>TH-Final (уровень 6 невозможен)</dd></div>
               <div><dt>Абсолютность</dt><dd>55.T: выполнена ∀ S ∈ R-S</dd></div>

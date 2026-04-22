@@ -191,6 +191,24 @@ title: Глоссарий
 **ν**: ω+2.
 **Связь**: Morita-эквивалентна α_AFA-coalg.
 
+### 𝒮_S^{local} и 𝒮_S^{global}
+
+**Тип**: классы (уточнение после audit2 2026-04-22).
+**Определение**:
+- 𝒮_S^{local} — объекты, принадлежащие `Ob(M_F)` для некоторой модели M_F.
+- 𝒮_S^{global} — объекты через natural transformations / sections of fibrations / derived constructions через family of models.
+**Связь**: 𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global}.
+**Роль**: Лемма 2'' (локальная) + 2''' (глобальная).
+
+### α_poly-HoTT
+
+**Тип**: Ob(⟪⟫).
+**Определение**: артикуляция Homotopy Type Theory с cumulative universe polymorphism (Poly-HoTT).
+**ν**: ω·2+1.
+**Структура**: иерархия 𝒰_0 : 𝒰_1 : 𝒰_2 : ... + polymorphic terms ∏_ℓ Body(ℓ).
+**Связь**: реализована в Lean 4, Coq, Agda. Morita-редуцируема к derived category over universes.
+**По 55.T/56.T**: не уровень 6.
+
 ## Особые объекты УГМ
 
 ### Γ ∈ D(ℂ⁷)

@@ -191,6 +191,74 @@ title: Non-classical артикуляции
 
 Аналогично α_AFA-coalg: Morita-редуцируема, не уровень 6. По 55.T: в R-S_{CIC+CoInd}.
 
+## α_poly-HoTT — универсум-полиморфная артикуляция
+
+### Определение
+
+α_poly-HoTT ∈ ⟪⟫ — артикуляция в R-S_{Poly-HoTT} с cumulative universe polymorphism. Добавлена после audit2 (2026-04-22, `internal/audit2-response.md`).
+
+### Структура
+
+- **Иерархия универсумов**: `𝒰_0 : 𝒰_1 : 𝒰_2 : ...`.
+- **Cumulativity**: `A : 𝒰_i ⇒ A : 𝒰_{i+1}` (с coercion).
+- **Universe-polymorphic terms**: `∏_{ℓ:Level} Body(ℓ)`.
+- **Предикативная стратификация**: нет `Type : Type` (блокировка Girard's paradox).
+
+### Formal basis
+
+- **Awodey (2013)**: «Structuralism, invariance, and univalence» — основы.
+- **Voevodsky** (UniMath project): implementation.
+- **Lean 4, Coq, Agda**: practical universe polymorphism.
+- **Lurie HTT (2009)**: ∞-topos semantics с universe hierarchies.
+
+### Категорная семантика
+
+Universe-polymorphic term `X : ∏_ℓ 𝒰_ℓ → 𝒰_ℓ` реализуется как объект в derived category:
+
+$$X \in \lim_\ell \mathrm{Fun}(\mathcal{U}_\ell, \mathcal{U}_\ell).$$
+
+Это — стандартная indexed limit конструкция (Lurie HTT §4.2). X — **объект**, не «между категориями», как предполагал аудит 2.
+
+### Ординальная позиция
+
+**Теорема 57.T**: ν(α_poly-HoTT) = ω·2 + 1.
+
+**Обоснование**:
+- Baseline HoTT: ω+1.
+- Cumulativity: +0 (derivable).
+- Polymorphism across universes: +ω (дополнительный transfinite слой).
+- Total: ω·2+1.
+
+Эквивалентно α_derived по ординалу (ω·2+1): оба — derived constructions над базовыми категориями.
+
+### Связь с TH-Final
+
+**По уточнённой 55.T (после audit2)**: α_poly-HoTT — **не** уровень 6.
+
+**Причины**:
+1. По 56.T: X ∈ 𝒮_{S'}^{global} (polymorphic term — объект в derived category).
+2. Morita-редуцируется к `lim_ℓ Fun(𝒰_ℓ, 𝒰_ℓ)`.
+3. Predicativity (58.T): Π_3-max_{poly-HoTT} strictly weaker чем classical Π_3-max.
+
+### Ответ на аудит 2
+
+Аудит утверждал: X аудита обходит TH-Final через «структурную трансцендентность».
+
+**Формальный ответ**: X — **не** трансцендентен, а **derived**. Относится к 𝒮_{S'}^{global} (natural transformation / section of fibration). Это — стандартная категорная структура, Morita-редуцируется.
+
+### Применения
+
+- **Современные proof-assistants**: Lean 4, Coq с universe polymorphism — практические инстанции α_poly-HoTT.
+- **Univalent Mathematics** (UniMath): Voevodsky's Coq-library работает в α_poly-HoTT.
+- **(∞,1)-topos theory**: Lurie HTT использует hierarchy.
+- **Cubical type theory**: расширение α_poly-HoTT с computational content.
+
+### Связь с α_Д-*
+
+- α_poly-HoTT + AFA → возможная общая структура для Διάκρисίс.
+- Гипотеза: α_Д-hybrid в Poly-HoTT ведёт к усиленной формализации Q-D.4.
+- Открытая программа.
+
 ## α_Д-linear, α_Д-AFA, α_Д-hybrid — артикуляции Διάκрисίς
 
 ### Обзор

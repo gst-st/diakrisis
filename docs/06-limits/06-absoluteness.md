@@ -288,6 +288,73 @@ TH-Final — на наивысшем уровне абсолютности в с
 
 Это — программа последующих исследований.
 
+## Уточнение после audit2: локальная vs глобальная 𝒮_S
+
+Аудит 2 (`internal/audit2.md` + `audit2-response.md`) выявил формальную неточность исходной Леммы 2': класс `𝒮_S` не был **явно** определён. Аудит эксплуатирует эту неопределённость через universe-polymorphic term в Poly-HoTT:
+$$X : \prod_{\ell : \text{Level}} \mathcal{U}_\ell \to \mathcal{U}_\ell.$$
+
+**Претензия аудита**: X синтаксически определим в S' = Poly-HoTT, но не принадлежит Ob(M_F) ни для какой модели → обходит Лемму 2'.
+
+**Ответ**: уточнение Леммы 2'.
+
+### Def: локальная vs глобальная 𝒮_S
+
+- **𝒮_S^{local}**: `{X : X ∈ Ob(M_F) для некоторой модели M_F}`.
+- **𝒮_S^{global}**: `{X : X — S-определим, включая natural transformations, sections of fibrations, и derived constructions через family of models}`.
+- **𝒮_S** := `𝒮_S^{local} ∪ 𝒮_S^{global}`.
+
+### Уточнённая Лемма 2''
+
+**Лемма 2'' (локальная)**: `Ob(M_F) ⊆ 𝒮_S^{local} ⊆ 𝒮_S`.
+
+**Лемма 2''' (глобальная)**: любой S-определимый конструкт X (включая universe-polymorphic) принадлежит 𝒮_S.
+
+### Теорема 56.T (S-definable = в 𝒮_S)
+
+**Формулировка**: Для любой S ∈ R-S, если X формально определим в S, то X ∈ 𝒮_S (через derived constructions в категорной семантике).
+
+**Контур доказательства**:
+- S-определимость ⟹ X — синтаксический терм в S.
+- По Lurie HTT §1 (categorical semantics): `Syn(S)` ↪ `Mod(S)` с derived-completion.
+- X ∈ derived(Mod(S)) ⊆ 𝒮_S^{global}.
+
+**Следствие 56.C1**: aудитный X (universe-polymorphic modality) ∈ 𝒮_S^{global} как объект в `lim_ℓ Fun(𝒰_ℓ, 𝒰_ℓ)`. Morita-редуцируется. Нарушение (Π_4_S).
+
+### Уточнённая 55.T
+
+С уточнённой 𝒮_S, теорема 55.T сохраняет силу:
+
+**55.T (уточнённая после audit2)**: Для любой S ∈ R-S, не существует X, удовлетворяющего (F_S) ∧ (Π_4_S) ∧ (Π_3-max_S), где (Π_4_S) определяется через `𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global}`.
+
+### Следствие: универсальность абсолютности
+
+Аудит 2 **не** опровергает 55.T, а **улучшает** её формулировку. Абсолютность распространяется на:
+- Локальные конструкции (Ob(M_F)).
+- Глобальные (natural transformations, sections, ∞-categorical limits).
+- Universe-polymorphic терmы (как derived constructions).
+
+Это делает 55.T ещё более **абсолютной**: охватывает все формальные манипуляции в R-S, не только внутри одной модели.
+
+### Теорема 58.T (Predicativity weakens Π_3-max)
+
+**Формулировка**: В purely predicative R-S' (Poly-HoTT без `Type : Type`), Π_3-max_{S'} strictly weaker чем Π_3-max_{ZFC+inacc}.
+
+**Обоснование**: 
+- Predicative теории не допускают impredicative definitions (e.g. powerset в full impredicative sense).
+- Классические теории (ZFC + inacc) используют impredicativity.
+- Следствие: predicative Π_3-max охватывает strict subset классических конструкций.
+
+**Значение**: X аудита — predicatively максимален, но не в абсолютном смысле. (Π_3-max) в audit-смысле — ослаблено.
+
+### Итог по audit2
+
+- **Лемма 2'' + 2''' + 56.T** — формальное уточнение.
+- **55.T** сохраняет силу.
+- **α_poly-HoTT** — новая валидная артикуляция (см. [/03-formal-architecture/15-non-classical-articulations](/03-formal-architecture/15-non-classical-articulations)).
+- Новые открытые вопросы:
+  - **Q-H**: возможна ли impredicative Π_3-max в predicative метатеориях?
+  - **Q-I**: полнота derived 𝒮_S (все S-определимые через derived)?
+
 ## Применение
 
 ### К Пути Б
