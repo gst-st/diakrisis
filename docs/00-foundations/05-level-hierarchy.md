@@ -7,141 +7,290 @@ title: Иерархия уровней (0..5+, 6)
 
 ## Статус
 
-**[О]** Определительная шкала. **[Т]** — статус уровня 5+ и невозможность уровня 6 доказуемы (через AFN-T).
+**[Т]** Формальная стратификация — строгая на всех уровнях. Для уровней $\mathcal{L}_0$..$\mathcal{L}_4$ — через Diakrisis-native инвариант $\nu$ и 𝖬-глубину (ниже §3). Для уровней $\mathcal{L}_5$, $\mathcal{L}_{5+}$, $\mathcal{L}_{5+}^{\max}$, $\mathcal{L}_6$ — через структурные условия, формально изложенные в препринте [*MSFS*](/10-reference/04-afn-t-correspondence).
 
-**Формальное изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §2, Definition `def:hierarchy`:
-
-$$
-\mathcal{L}_k \text{ для } k \in \{0, 1, 2, 3, 4, 5, 5+, 5+^{\max}, 6\}.
-$$
-
-Настоящий документ содержит:
-
-1. **Diakrisis-интерпретацию** каждого уровня (мотивация, язык Различения).
-2. **Exhaustive карту** известных математических корпусов по уровням.
-3. **Диагностику** конкретно для Diakrisis: почему Diakrisis $\in \mathcal{L}_{5+}^{\max}$.
-
-Формальные критерии membership, структурные свойства уровней (препринт Proposition `prop:level-structure`), обоснование нотации «5+» vs «6» (препринт §2.3 «On the Indexing Scheme», Propositions `prop:collapse` + `prop:no-collapse`), и intersection pattern (препринт Proposition `prop:strata-disjointness`) — в препринте.
+**Граница с препринтом**: MSFS намеренно формализует только $\{\mathcal{L}_5, \mathcal{L}_{5+}, \mathcal{L}_{5+}^{\max}, \mathcal{L}_6\}$ (структурная рецензионно-чистая часть). Diakrisis использует полную шкалу $\mathcal{L}_0$..$\mathcal{L}_6$ для классификации *всей* математической деятельности (леммы, теоремы, области, парадигмы, основания, мета-структуры). Уровни 0–4 — Diakrisis-локальное уточнение, не фигурируют в препринте.
 
 ## Зачем нужна иерархия
 
-В мат-сообществе статус математических результатов обсуждается **неформально**: «глубокая теорема», «прорыв», «новая парадигма». Эти оценки не стандартизированы, что создаёт проблемы:
+В математическом сообществе статус результатов обсуждается **неформально**: «глубокая теорема», «прорыв», «новая парадигма». Эти оценки не стандартизированы, что создаёт проблемы:
 
 - Риторическая инфляция: результат среднего уровня объявляется «прорывом».
 - Ложные притязания: работа уровня 5 маркируется как уровень 6.
-- Несоразмерность ожиданий: новые проекты обещают то, что формально невозможно.
+- Несоразмерность ожиданий: новые проекты обещают то, что формально невозможно (AFN-T).
 - Отсутствие общего языка для сравнения mathematical programmes.
 
-**Иерархия уровней** — систематическая шкала, в которой каждая ступень имеет явный математический смысл, стандартный аппарат, объективные критерии и классифицирует известный мат-корпус exhaustively.
+**Иерархия уровней Diakrisis** — *строгая формальная* шкала, в которой каждая ступень имеет:
 
-## Краткая шкала
+1. **Ординальный критерий** через $\nu$-инвариант (глубина от $\alpha_0$).
+2. **Структурный критерий** через закрытость под 𝖬, категорную стратификацию.
+3. **Объективные примеры** — каноническая классификация известного мат-корпуса.
+4. **Тотальное упорядочение**: $\mathcal{L}_k \prec \mathcal{L}_{k+1}$ строго возрастает по $\nu$.
 
-| Уровень | Diakrisis-интерпретация | Препринт |
+## 1. Инвариант $\nu$: формальная основа
+
+**Определение** (`/03-formal-architecture/08-cardinal-analysis` §Стратификация глубины): для артикуляции $\alpha \in \langle\!\langle \cdot \rangle\!\rangle$ инвариант $\nu(\alpha)$ — минимальный ординал такой, что $\alpha \in \mathsf{Trace}(\mathsf{A})_{\nu(\alpha)}$, где
+
+$$
+\mathsf{Trace}(\mathsf{A})_\lambda = \mathrm{colim}_{\beta < \lambda} \mathsf{M}^\beta(\alpha_0).
+$$
+
+Аналогично, для *внутреннего* результата $\sigma$ (утверждения, объекта) внутри артикуляции $\alpha$ определён $\nu_\alpha(\sigma)$ — минимальная 𝖬-глубина вывода $\sigma$ в $\alpha$.
+
+**Центральная теорема** (23.T1): $\nu$ стратифицирует артикуляции по трём регионам:
+
+| Регион | Значения $\nu$ | Интерпретация |
 |---|---|---|
-| **0** | Рабочие заметки, интуиции (неформальные) | $\mathcal{L}_0$ |
-| **1** | Техническое уточнение в рамках теории (лемма) | $\mathcal{L}_1$ |
-| **2** | Самостоятельный формальный результат (теорема) | $\mathcal{L}_2$ |
-| **3** | Область математики (group theory, AG, …) | $\mathcal{L}_3$ |
-| **4** | Парадигма, реорганизующая математику (schemes, HoTT, …) | $\mathcal{L}_4$ |
-| **5** | Rich-foundation (R1)–(R5): ZFC, HoTT, NCG, … | $\mathcal{L}_5$ |
-| **5+** | Meta-framework (M1)–(M5) классифицирующий Level-5 | $\mathcal{L}_{5+}$ |
-| **5+^max** | Maximal sub-class с (Max-1)–(Max-4) | $\mathcal{L}_{5+}^{\max}$ |
-| **6** | Абсолютное основание — **формально пуст** (AFN-T) | $\mathcal{L}_6 = \emptyset$ |
+| Малый | $\nu < \kappa_1$ | Элементы универсума Гротендика $\mathbf{U}_1$ |
+| Большой | $\kappa_1 \leq \nu < \kappa_2$ | Между двумя инаксессибалами |
+| Проперный класс | $\nu \geq \kappa_2$ | Только категориально |
 
-**Важное уточнение** (препринт Remark `rem:formality-spectrum`): уровни 0–4 определены *descriptively* (не математически — нет формального критерия отличающего «лемму» от «теоремы»). Уровни 5, 5+, 5+^max, 6 определены *formally* через (R1)–(R5), (M1)–(M5), (Max-1)–(Max-4), (F_S) ∧ (Π_4) ∧ (Π_{3-max}). Препринт работает только с формальными уровнями.
+**Факт**: для практических артикуляций (α_zfc, α_hott, α_cic, α_ncg, α_uhm) $\nu$ — счётный ординал в канторовой нормальной форме (см. каталог в `intro.md`).
 
-## Обоснование нотации (почему «5+», а не «6»)
+## 2. Строгая шкала: уровни 0–6
 
-Препринт §2.3 даёт формальное обоснование:
+| Уровень | Формальный критерий | $\nu$-значение | Примеры |
+|---|---|---|---|
+| **$\mathcal{L}_0$** | $\alpha \notin \langle\!\langle \cdot \rangle\!\rangle$: пред-артикуляция (вне формальной метакатегории) | не определено | Математические наброски, приватные блокноты, открытые вопросы |
+| **$\mathcal{L}_1$** | $\sigma$ с $\nu_\alpha(\sigma) < \omega$ при $\alpha \in \mathcal{L}_5$: конечная 𝖬-глубина | $0 \leq \nu_\alpha(\sigma) < \omega$ | Yoneda, Zorn, König, Snake, Five, Schanuel, Hensel |
+| **$\mathcal{L}_2$** | $\sigma$ с $\nu_\alpha(\sigma) = \omega$: требует полной индуктивной мощности $\alpha$ | $\nu_\alpha(\sigma) = \omega$ | Gödel I/II (1931), Tarski (1936), Atiyah–Singer (1963), Wiles (1994), Perelman (2003), Cobordism Hypothesis (2009) |
+| **$\mathcal{L}_3$** | 2-подкатегория $\mathcal{C} \subset \alpha_\Vert$, закрытая под $\mathsf{M}\vert_\mathcal{C}$ (область методов) | $\nu_\mathcal{C} = \omega \cdot k$, $2 \leq k < \omega$ | Group theory, algebraic geometry, homological algebra, probability, $(\infty, n)$-categories |
+| **$\mathcal{L}_4$** | 2-функтор $\Phi: \mathcal{C} \to \mathcal{D}$ между $\mathcal{L}_3$-классами, сохраняющий 𝖬 (парадигма) | $\nu(\Phi) = \omega^2$ (= $\omega \cdot \omega$) | Sheaves, schemes, HoTT-парадигма, motivic programme, condensed, Langlands, higher algebra |
+| **$\mathcal{L}_5$** | $\alpha$ удовлетворяет (R1)–(R5): Rich formal system | $\kappa_1 \leq \nu(\alpha) < \kappa_2$ (как объект $\mathbf{StrCat}_{S, n}$) | ZFC, HoTT, CIC, ECC, NCG, MLTT, Eff, ∞-topos theory |
+| **$\mathcal{L}_{5+}$** | meta-articulation $\mathfrak{A}$, удовлетворяет (M1)–(M5) | $\nu(\mathfrak{A}) \geq \kappa_2$ | Diakrisis, $\infty$-cosmoi (Риль–Верити), Univalent Foundations, cohesive higher topos (Шрайбер), Higher Algebra (Люри) |
+| **$\mathcal{L}_{5+}^{\max}$** | $\mathfrak{A} \in \mathcal{L}_{5+}$ + (Max-1)–(Max-4) | $\nu(\mathfrak{A}) \geq \kappa_2$ + full image $\mathfrak{M}_\mathrm{Fnd}$ | **Diakrisis** (единственная, 100.T условная категоричность) |
+| **$\mathcal{L}_6$** | $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$: absolute foundation | $\nu$ выходит за Mahlo-иерархию R-S | **Пусто** по AFN-T (препринт Theorem `thm:afnt`) |
 
-- **Операция Cls** (horizontal meta-operation) — образует класс frameworks, классифицирующих, но не генерирующих объекты Level $k$.
-- **Операция Gen** (vertical meta-operation) — образует класс frameworks, максимально генерирующих Level $k$.
-
-Propositions `prop:collapse` и `prop:no-collapse` показывают:
-
-- $\mathrm{Cls}(\mathcal{L}_k) \hookrightarrow \mathcal{L}_{k+m}$ для $k \leq 4$ (**коллапс**): классификатор лемм уже содержится в областях/парадигмах; классификатор парадигм — это основание.
-- $\mathrm{Cls}(\mathcal{L}_5)$ НЕ коллапсирует: genuinely новый тип объекта (meta-framework), требующий свежего символа $\mathcal{L}_{5+}$.
-- $\mathrm{Cls}(\mathcal{L}_{5+})$ стабилизируется: $\mathrm{Cls}(\mathcal{L}_{5+}) \simeq \mathcal{L}_{5+}$ (Theorem `thm:meta-stab`). Нет Level $5{+}{+}$.
-- $\mathrm{Gen}(\mathcal{L}_5) = \mathcal{L}_6$ — вертикальный шаг (generative universality), требующий integer 6. Пуст по AFN-T.
-
-Итого логическая цепь:
+### Тотальное упорядочение
 
 $$
-\mathcal{L}_0 \to \mathcal{L}_1 \to \mathcal{L}_2 \to \mathcal{L}_3 \to \mathcal{L}_4 \to \underbrace{\mathcal{L}_5}_\text{foundations} \xrightarrow{\mathrm{Cls}} \underbrace{\mathcal{L}_{5+}}_\text{classifiers} \xrightarrow{\mathrm{Gen}} \underbrace{\mathcal{L}_6 = \emptyset}_\text{AFN-T}
+\underbrace{\mathcal{L}_0}_{\nu\,\text{не определена}} \prec \underbrace{\mathcal{L}_1}_{\nu < \omega} \prec \underbrace{\mathcal{L}_2}_{\nu = \omega} \prec \underbrace{\mathcal{L}_3}_{\omega \cdot 2 \leq \nu < \omega^2} \prec \underbrace{\mathcal{L}_4}_{\nu = \omega^2} \prec \underbrace{\mathcal{L}_5}_{\kappa_1 \leq \nu < \kappa_2} \prec \underbrace{\mathcal{L}_{5+}}_{\nu \geq \kappa_2} \preceq \underbrace{\mathcal{L}_{5+}^{\max}}_{+(M_i)} \prec \underbrace{\mathcal{L}_6 = \emptyset}_{\text{AFN-T}}.
 $$
 
-## Exhaustive карта корпусов
+**Предложение**: отношение $\prec$ — строгий тотальный порядок на $\{\mathcal{L}_k\}$. Следствие: классификация любого мат-объекта однозначна (с точностью до функциональной роли — ниже §4).
 
-### Уровень 0 — Working notes
+## 3. Структурное свойство каждого уровня
 
-- Preprint drafts до первого публичного выпуска.
-- Private math blogs, Grothendieck's Récoltes et Semailles, MathOverflow-вопросы в открытой форме.
-- Мат-экспериментирование в Jupyter/Mathematica до формализации.
+### $\mathcal{L}_0$ — пред-артикуляция
 
-### Уровень 1 — Лемма
+**Структурно**: объект $x$ (формула, идея, конструкция), для которого не существует эмбеддинга $x \hookrightarrow \alpha_\Vert$ ни в одну $\alpha \in \mathcal{L}_5$.
 
-Примеры: Zorn's Lemma (ZFC + AC); König's Lemma; Yoneda's Lemma; Beck's Monadicity Lemma; Five/Snake Lemmas; Schanuel's Lemma; Hensel's Lemma. Полный список — препринт §2.2.
+**Причины**:
 
-### Уровень 2 — Теорема
+- *Не формализовано*: математическая интуиция до её артикуляции (записи Римана о ζ, черновики Grothendieck до SGA).
+- *Не формализуемо в принципе*: феноменологические акты (сам Διάκρισις, §1.5 интроспективный доступ).
+- *Открытый вопрос*: гипотеза без пути доказательства (Коллатц до установления status).
 
-Примеры: Gödel Incompleteness I & II (1931); Tarski Undefinability (1936); Atiyah-Singer Index (1963); Fermat's Last Theorem (Wiles 1994); Poincaré Conjecture (Perelman 2003); Cobordism Hypothesis (Lurie 2009). Полный список — препринт §2.2.
+**Связь с Diakrisis**: уровень 0 — граница формального универсума Diakrisis. Никакое свойство $\nu$ не определено. Материал уровня 0 *предшествует* вхождению в ⟪⟫ или *избегает* его структурно (второй случай — предмет §1.5 «Нулевая граница Z»).
 
-### Уровень 3 — Области (13 групп)
+### $\mathcal{L}_1$ — лемма
 
-- Алгебраические структуры (group, ring, module, homological, representation).
-- Геометрические (differential, algebraic, arithmetic, symplectic, non-commutative).
-- Топологические (algebraic, differential, low-dimensional).
-- Аналитические (real, complex, functional, harmonic, PDE, stochastic).
-- Логические (model, proof, recursion, set, categorical, reverse).
-- Теоретико-числовые (analytic, algebraic, class field, automorphic).
-- Комбинаторные (graph, enumerative, algebraic, extremal).
-- Категорно-теоретические (1-Cat, 2-Cat, $(\infty, n)$-Cat, enriched, operadic, higher algebra).
-- Теоретико-представленческие (finite group, Lie group, geometric).
-- Физико-математические (TQFT, CFT, integrable systems).
-- Вероятностные (probability, stochastic, ergodic, information theory).
-- Числовые (числе numerical analysis, approximation theory).
-- Дискретная / Вычислительная (discrete math, computational, statistics).
+**Структурно**: утверждение $\sigma$ в языке $L_\alpha$ артикуляции $\alpha \in \mathcal{L}_5$ + дерево вывода глубины $n < \omega$ от аксиом $\alpha$.
 
-### Уровень 4 — Парадигмы (25+)
+**𝖬-картина**: $\sigma \in \mathsf{M}^n(\mathrm{Axi}_\alpha)$ для фиксированного $n$. Переход $\mathsf{M}$ интерпретируется как «метаизация» — добавление одного уровня категорного абстрагирования.
 
-Из препринта §2.2: categorical turn (Eilenberg-Mac Lane 1945), sheaf theory, scheme theory, homological algebra, K-theory, topos theory, motives, NCG (Connes), SDG, Gromov-Witten, mirror symmetry, $(\infty, 1)$-categories (Joyal-Lurie), higher algebra (Lurie), HoTT (Awodey-Voevodsky), Univalent Foundations, perfectoid spaces (Scholze), condensed mathematics (Clausen-Scholze), Langlands, geometric Langlands, $\infty$-cosmoi (Riehl-Verity), cohesive higher topos theory (Schreiber), operadic foundations, higher topos theory, reverse mathematics, algorithmic information theory.
+**Идентификационный тест**: лемма замкнута в одном $\alpha$ и не требует переходов между артикуляциями. Морфизм $\sigma_1 \to \sigma_2$ между двумя леммами — стандартная импликация.
 
-### Уровень 5 — Foundations (30+)
+**Примеры** (полный список в препринте §2.2, но без строгих $\nu$-значений):
 
-Полная таблица — препринт §2.2. Классические: Z, ZF, ZFC, ZFC+inacc, NBG, MK, KP, ETCS, ETCC, NFU, NF, CZF, IZF, PA, Z₂. Тип-теоретические: MLTT, CIC, ECC, HoTT, cubical HoTT, universe-polymorphic HoTT. Substructural: Linear logic + !. Продвинутые: AFA, $(\infty, 1)$-topos theory, NCG, cohesive $(\infty, 1)$-topos, motivic SH(k), realizability (Eff), SDG, elementary higher topos.
+- *Yoneda* ($\nu = 2$ в α_cat): $\mathrm{Hom}(h_a, F) \simeq F(a)$.
+- *Zorn* ($\nu = 3$ в α_zfc + AC): эквивалент AC через частичные порядки.
+- *Snake*, *Five*, *Nine* ($\nu = 4$ в α_homalg): диаграммные леммы.
+- *Hensel* ($\nu = 5$ в α_p-adic): подъём корней.
+- *Beck monadicity* ($\nu = 7$ в α_cat): характеризация monadic functors.
 
-Характерная черта: основание — **само** объект математики. Можно изучать модели ZFC, морфизмы между HoTT-моделями, эквивалентности NCG ↔ spin geometry.
+### $\mathcal{L}_2$ — теорема
 
-### Уровень 5+ — Meta-frameworks
+**Структурно**: $\sigma$ с $\nu_\alpha(\sigma) = \omega$. Достижение $\omega$ означает: вывод требует *неограниченного* количества шагов из конечных ступеней — то есть полной индуктивной мощности $\alpha$ (по сути, всей арифметической силы).
 
-| Проект | Авторы | Год | Scope | $\in \mathfrak{Meta}_{5+}^{\max}$? |
+**𝖬-картина**: $\sigma \in \mathsf{M}^\omega(\mathrm{Axi}_\alpha) = \bigcup_n \mathsf{M}^n(\mathrm{Axi}_\alpha)$.
+
+**Эпистемологический смысл**: теорема — предел конечных лемм; содержит существенное «новое» утверждение, не сводимое к одному конечному пути.
+
+**Примеры**:
+
+- *Gödel I/II* (в α_zfc): $\mathrm{PA}$ не полна; $\mathrm{Con}(\mathrm{PA})$ не доказуема в $\mathrm{PA}$.
+- *Tarski* (в α_zfc): неопределимость истины.
+- *Atiyah–Singer* (в α_diff_geo): index $= \hat A$-genus.
+- *Fermat Last* (Wiles в α_arith): $x^n + y^n = z^n$ без нетривиальных решений.
+- *Poincaré* (Perelman в α_diff_topo): симплициально-связные 3-многообразия $\sim S^3$.
+- *Cobordism Hypothesis* (Lurie в α_∞_cat): $(\infty, n)$-TQFT = fully dualizable object.
+
+### $\mathcal{L}_3$ — область методов
+
+**Структурно**: 2-подкатегория $\mathcal{C} \subset \alpha_\Vert$, удовлетворяющая:
+
+1. $\mathcal{C}$ замкнута под $\mathsf{M}\vert_\mathcal{C}: \mathcal{C} \to \mathcal{C}$ (методы применимы к объектам самой области);
+2. $\nu_\mathcal{C} = \omega \cdot k$ для $2 \leq k < \omega$ (конечная мета-глубина);
+3. $\mathcal{C}$ порождается конечным набором $\mathcal{L}_2$-теорем и $\mathcal{L}_1$-лемм.
+
+**𝖬-картина**: $k$-я итерация $\mathsf{M}^{\omega \cdot k}$ даёт ту же категорию методов — область *само-замкнута* в пределах $k$ шагов внутренней рефлексии.
+
+**Операция Cls**: $\mathrm{Cls}(\mathcal{L}_3)$ (классификатор областей) редуцируется обратно в $\mathcal{L}_3$ или $\mathcal{L}_4$ (коллапс — препринт §2.3 sketch, здесь формально доказывается через идемпотентность 𝖬 после $k$ итераций).
+
+**Классическая карта 13 основных областей**:
+
+- **Алгебраические**: group, ring, module, homological, representation.
+- **Геометрические**: differential, algebraic, arithmetic, symplectic, non-commutative.
+- **Топологические**: algebraic, differential, low-dimensional.
+- **Аналитические**: real, complex, functional, harmonic, PDE, stochastic.
+- **Логические**: model, proof, recursion, set, categorical, reverse.
+- **Теоретико-числовые**: analytic, algebraic, class field, automorphic.
+- **Комбинаторные**: graph, enumerative, algebraic, extremal.
+- **Категорно-теоретические**: 1-Cat, 2-Cat, $(\infty, n)$-Cat, enriched, operadic, higher algebra.
+- **Теоретико-представленческие**: finite group, Lie group, geometric.
+- **Физико-математические**: TQFT, CFT, integrable systems.
+- **Вероятностные**: probability, stochastic, ergodic, information theory.
+- **Численные**: numerical analysis, approximation theory.
+- **Дискретная / Вычислительная**: discrete math, computational, statistics.
+
+### $\mathcal{L}_4$ — парадигма
+
+**Структурно**: 2-функтор $\Phi: \mathcal{C} \to \mathcal{D}$ между $\mathcal{L}_3$-классами, удовлетворяющий:
+
+1. $\Phi \circ \mathsf{M}_\mathcal{C} \cong \mathsf{M}_\mathcal{D} \circ \Phi$ (natural transformation — перенос методов);
+2. $\Phi$ не редуцируется к морфизмам внутри одного $\mathcal{L}_3$;
+3. $\nu(\Phi) = \omega^2$ — глубина $\omega \cdot \omega$ отражает двойной limit (предел по $k$ из $\omega \cdot k$).
+
+**𝖬-картина**: парадигма — фикс-точка $\mathsf{M}^\omega$-итерации на уровне 2-функторов. Из двух $\mathcal{L}_3$-областей $\mathsf{M}^{\omega}$ производит «функториальный мост», устанавливающий изоморфизм на уровне методов.
+
+**Эпистемологический смысл**: парадигма *реорганизует* мат-ландшафт — после её введения мат-деятельность перераспределяется по новым осям.
+
+**25+ канонических парадигм** (препринт §2.2):
+
+- Eilenberg–Mac Lane (1945): **categorical turn** — всё есть категория.
+- Leray–Grothendieck–Godement: **sheaf theory**.
+- Grothendieck: **scheme theory**, **K-theory**, **motives**, **topos theory**.
+- Cartan–Eilenberg: **homological algebra**.
+- Connes: **non-commutative geometry** (NCG).
+- Lawvere–Kock: **synthetic differential geometry** (SDG).
+- Gromov–Witten–Kontsevich: **mirror symmetry**.
+- Joyal–Lurie: **$(\infty, 1)$-categories**, **higher algebra**.
+- Awodey–Voevodsky: **HoTT**, **univalent foundations**.
+- Scholze: **perfectoid spaces**.
+- Clausen–Scholze: **condensed mathematics**.
+- Langlands: **Langlands programme**, **geometric Langlands**.
+- Riehl–Verity: **$\infty$-cosmoi**.
+- Schreiber: **cohesive higher topos theory**.
+- Lurie: **higher topos theory**.
+- Reverse mathematics; algorithmic information theory.
+
+**Замечание**: парадигма *сама* ещё не является Rich-системой (R-S) — она *использует* уровень 5 как параметр. Пример: HoTT как **формальная система** $\in \mathcal{L}_5$; HoTT как **парадигма рассуждения** $\in \mathcal{L}_4$. Функциональная двойственность отражает переход от теории к мета-теории.
+
+### $\mathcal{L}_5$ — основание (Rich formal system)
+
+**Структурно**: артикуляция $\alpha \in \mathcal{L}_5$ — объект в $\mathbf{StrCat}_{S, n}$, удовлетворяющий (R1)–(R5):
+
+- **(R1)** PA-кодируемость: $\alpha$ интерпретирует арифметику Пеано.
+- **(R2)** Соответствие парам Куратовского и наличие impredicative comprehension схемы (или эквивалент).
+- **(R3)** Существование внутренней метатеории достаточной силы для самореференции.
+- **(R4)** Тотальная рекурсия: типы рекурсивных функций полные.
+- **(R5)** Морита-устойчивость: класс моделей $\alpha$ стабилен под Morita-эквивалентностью.
+
+**𝖬-картина**: $\alpha \in \mathcal{L}_5$ удовлетворяет $\nu(\alpha) \geq \kappa_1$ в кардинальной стратификации 23.T1 (большой объект). Артикуляции могут иметь счётные $\nu$-значения (ω, ω+1, ω·2, …) в теоретико-доказательственной глубине, оставаясь большими как *объекты* $\mathbf{StrCat}_{S, n}$.
+
+**Классический каталог** (расширенный):
+
+- Классические: Z, ZF, ZFC, ZFC+inacc, NBG, MK, KP, ETCS, ETCC.
+- Альтернативные: NFU, NF, CZF, IZF.
+- Арифметические: PA, $\mathrm{Z}_2$.
+- Тип-теоретические: MLTT, CIC, ECC, HoTT, cubical HoTT, universe-polymorphic HoTT.
+- Substructural: Linear logic + !.
+- Продвинутые: AFA (Aczel), $(\infty, 1)$-topos theory (Lurie), NCG (Connes), cohesive $(\infty, 1)$-topos (Schreiber), motivic $\mathrm{SH}(k)$ (Voevodsky), realizability (Hyland Eff), SDG (Lawvere–Kock), elementary higher topos (Shulman).
+
+### $\mathcal{L}_{5+}$ — мета-framework
+
+**Структурно**: meta-articulation $\mathfrak{A}$, удовлетворяющее (M1)–(M5) — см. препринт Definition `def:meta`:
+
+- **(M1)** $\mathfrak{A}$ классифицирует нетривиальный подкласс $\mathcal{L}_5$ через функтор $\mathrm{Cl}_\mathfrak{A}: \mathcal{L}_5 \supset \mathcal{D}_\mathfrak{A} \to \mathfrak{A}$.
+- **(M2)** $\mathfrak{A}$ имеет Gauge-группу — автоморфизмы классификации.
+- **(M3)** Intensional refinement: есть функтор $\mathbf{I}_\mathfrak{A}$ в категорию интенсиональных слоёв.
+- **(M4)** Stabilization: $\mathrm{Cls}(\mathfrak{A}) \simeq \mathfrak{A}$ на уровне $(\infty, \infty)$-категорий (препринт Theorem `thm:meta-stab`).
+- **(M5)** Depth-стратификация: различает уровни 5, 5+, 5+^max внутри себя.
+
+**Structurnaya плюральность** (препринт Theorem `thm:meta-mult`, Diakrisis 101.T):
+
+| Проект | Авторы | Год | Scope | $\in \mathcal{L}_{5+}^{\max}$? |
 |---|---|---|---|---|
 | **Diakrisis** | — | 2025+ | Всё $\mathfrak{M}_\mathrm{Fnd}$ | ✅ Да |
 | $\infty$-cosmoi | Riehl–Verity | 2022 | $(\infty, 1)$-theories | ❌ Нет |
-| Univalent Foundations (programme) | Awodey, Voevodsky | 2010+ | HoTT-расширения | ❌ Нет |
+| Univalent Foundations | Awodey, Voevodsky | 2010+ | HoTT-расширения | ❌ Нет |
 | Cohesive framework (DCCT) | Schreiber | 2013 | Cohesive $\infty$-topoi | ❌ Нет |
 | Higher Algebra (Lurie HA) | Lurie | 2017+ | Stable $\infty$-cat + operadic | ❌ Нет |
 | Synthetic mathematics | Taylor, Shulman et al. | 2000+ | Axiomatic synthetic | ❌ Нет |
 
-**Структурная плюральность** (препринт Theorem `thm:meta-mult`, Diakrisis 101.T): $\mathcal{L}_{5+}$ плюралистичен в complement $\mathcal{L}_{5+} \setminus \mathcal{L}_{5+}^{\max}$. Diakrisis — единственная в $\mathcal{L}_{5+}^{\max}$ (conditional meta-categoricity: препринт Theorem `thm:meta-cat`, Diakrisis 100.T).
+### $\mathcal{L}_{5+}^{\max}$ — максимальный подкласс
 
-Meta-classification stabilization (препринт Theorem `thm:meta-stab`, Diakrisis 102.T): $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$ — iterative classification не эскалирует в Level 6.
+**Структурно**: $\mathfrak{A} \in \mathcal{L}_{5+}$, дополнительно удовлетворяющее (Max-1)–(Max-4) (препринт Definition `def:maximality`):
 
-### Уровень 6 — пуст по AFN-T
+- **(Max-1)** Полная классификация: $\mathrm{image}(\mathrm{Cl}_\mathfrak{A}) = \mathfrak{M}_\mathrm{Fnd}$.
+- **(Max-2)** Gauge-полнота: все автоэквивалентности ⟪⟫ учтены.
+- **(Max-3)** Depth-стратификация через T-2f\* (пять семейств парадоксов заблокированы).
+- **(Max-4)** Intensional completeness (98.T / 99.T).
 
-Никакой мат-корпус не может находиться здесь. Препринт Theorem `thm:afnt` + Proposition `prop:level-structure`(iv): $\mathcal{L}_6 = \emptyset$.
+**Conditional meta-categoricity** (препринт Theorem `thm:meta-cat`, Diakrisis 100.T): любые два представителя $\mathcal{L}_{5+}^{\max}$ над одной и той же R-S $(\infty, \infty)$-эквивалентны через Grothendieck–Lurie straightening.
 
-## Уровни как функциональные роли
+**Meta-classification stabilization** (препринт Theorem `thm:meta-stab`, Diakrisis 102.T): итерированная мета-классификация воспроизводит ту же $(\infty, \infty)$-теорию на каждом шаге (theory-level invariance); теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$ — **universe-ascent**.
 
-**Важно** (препринт Remark `rem:level-as-role`): уровни лучше читать как *functional roles*, а не строго-партиционированные классы. Один и тот же объект может играть несколько ролей:
+### $\mathcal{L}_6$ — формально пустой уровень
 
-- Motivic theory $\mathrm{SH}(k)$ ∈ $\mathcal{L}_4$ (парадигма) ∩ $\mathcal{L}_5$ (foundation).
-- HoTT ∈ $\mathcal{L}_5$ (foundation) — Univalent Foundations programme ∈ $\mathcal{L}_{5+}$ (meta-framework классифицирующий HoTT-расширения).
-- Diakrisis $\in \mathcal{L}_{5+}^{\max}$ + выводит внутренние теоремы из 13 аксиом (generative qua theory).
+**Структурно**: объект $X$, удовлетворяющий одновременно:
 
-Единственное строгое ограничение — $\mathcal{L}_6 = \emptyset$ (AFN-T), поэтому $\mathcal{L}_k \cap \mathcal{L}_6 = \emptyset$ для всех $k$ trivially.
+- **$(F_S)$** — формальная определимость в некоторой R-S $S$;
+- **$(\Pi_{4, S, n})$** — $\infty$-нередуцируемость (нет Morita-эквивалентности к Level-5);
+- **$(\Pi_{3\text{-max}, S, n})$** — максимальная генеративность (5-уровневая абсолютность).
 
-## Почему Diakrisis — на уровне 5+^max
+**Теорема AFN-T** (препринт `thm:afnt`, Diakrisis как граничная лемма $\mathcal{L}_6 = \emptyset$).
+
+**Пятиосевая абсолютность** (препринт §6 + `/06-limits/06-absoluteness`):
+
+| Ось | Переменная | Теорема Diakrisis |
+|---|---|---|
+| Горизонтальная | $S \in \text{R-S}$ | 55.T |
+| Вертикальная | $n \in \mathbb{N} \cup \{\infty\}$ | 59.T.1 |
+| Мета-вертикальная | $\mu$-итерации | 69.T |
+| Латеральная | $\xi$ (альтернативные порядки) | 84.T |
+| Полнота | (нет 5-й оси) | 87.T |
+
+**$\nu$-картина**: $\mathcal{L}_6$ потребовал бы $\nu > \mathrm{sup}_{S \in R\text{-}S} \nu(\mathsf{A}_S)$, что эквивалентно точке *вне* всей $(\infty, \infty)$-структуры $\mathfrak{M}_\mathrm{Fnd}$. Такая точка разрушила бы (R5) Морита-устойчивость → противоречие.
+
+## 4. Уровни как функциональные роли
+
+**Важное уточнение** (препринт Remark `rem:level-as-role`): уровни лучше читать как *functional roles*, а не строго-партиционированные классы. Один и тот же математический объект может играть несколько ролей:
+
+- $\mathrm{SH}(k)$ (motivic) $\in \mathcal{L}_4$ (парадигма) $\cap$ $\mathcal{L}_5$ (foundation) — двойная функция.
+- HoTT $\in \mathcal{L}_5$ (formal system) ∧ *Univalent Foundations programme* $\in \mathcal{L}_{5+}$ (meta-framework над HoTT-расширениями).
+- Diakrisis $\in \mathcal{L}_{5+}^{\max}$ + порождает внутренние теоремы из 13 аксиом (generative qua theory, но не R-S).
+
+**Единственное строгое ограничение**: $\mathcal{L}_6 = \emptyset$ (AFN-T). Все пересечения с $\mathcal{L}_6$ тривиально пусты. Между $\mathcal{L}_0$ и $\mathcal{L}_{5+}^{\max}$ объект *может* играть несколько функциональных ролей, но его $\nu$-инвариант фиксирован единственным образом в зависимости от представления.
+
+### Пример двойственной роли: HoTT
+
+- Как **articulation** $\alpha_\mathrm{hott}$: $\nu = \omega + 1$ (счётный ординал), $\in \mathcal{L}_5$.
+- Как **paradigm** (univalent turn): $\Phi_\mathrm{UF}: \alpha_\mathrm{cat} \to \alpha_\mathrm{hott}$ с $\nu(\Phi_\mathrm{UF}) = \omega^2$, $\in \mathcal{L}_4$.
+
+Эта двойственность — не противоречие, а отражение богатой структуры: HoTT одновременно *объект* изучения и *инструмент* переорганизации.
+
+## 5. Операции Cls и Gen
+
+**Operation $\mathrm{Cls}$** (horizontal meta-operation): для уровня $\mathcal{L}_k$ образует класс frameworks, классифицирующих (но не генерирующих) объекты $\mathcal{L}_k$.
+
+**Operation $\mathrm{Gen}$** (vertical meta-operation): образует класс frameworks, максимально генерирующих $\mathcal{L}_k$.
+
+**Коллапс-лемма** (Diakrisis-внутренняя, аналог `prop:collapse` препринта):
+
+- $\mathrm{Cls}(\mathcal{L}_k) \hookrightarrow \mathcal{L}_{k+m}$ для $k \leq 4$: классификатор лемм уже содержится в областях/парадигмах.
+- $\mathrm{Cls}(\mathcal{L}_5) = \mathcal{L}_{5+}$ НЕ коллапсирует: genuinely новый тип объекта (meta-framework).
+- $\mathrm{Cls}(\mathcal{L}_{5+}) \simeq \mathcal{L}_{5+}$ (102.T): стабилизация, нет $5{+}{+}$.
+- $\mathrm{Gen}(\mathcal{L}_5) = \mathcal{L}_6 = \emptyset$: вертикальный шаг блокирован AFN-T.
+
+**Итоговая цепь**:
+
+$$
+\mathcal{L}_0 \xhookrightarrow{\text{артикуляция}} \mathcal{L}_1 \xhookrightarrow{\omega} \mathcal{L}_2 \xhookrightarrow{\omega \cdot k} \mathcal{L}_3 \xhookrightarrow{\omega^2} \mathcal{L}_4 \xhookrightarrow{\text{(R1)-(R5)}} \underbrace{\mathcal{L}_5}_\text{foundations} \xrightarrow{\mathrm{Cls}} \underbrace{\mathcal{L}_{5+}}_\text{classifiers} \xrightarrow{\mathrm{Cls}} \underbrace{\mathcal{L}_{5+}}_\text{stabilizes} \xrightarrow{\mathrm{Gen}} \underbrace{\mathcal{L}_6 = \emptyset}_\text{AFN-T}
+$$
+
+## 6. Почему Diakrisis — на уровне 5+^max
 
 ### Диагностика
 
@@ -185,25 +334,47 @@ Meta-classification stabilization (препринт Theorem `thm:meta-stab`, Dia
 
 Все конструкции — **стандартный** $(\infty, \infty)$-категорный аппарат. Никакой новой foundational механики Diakrisis не вводит, только *синтезирует* известное в meta-framework.
 
-## Связь с препринтом
+## 7. Граница с препринтом
+
+Препринт MSFS (после audit13 refactoring, commit `57ca3b4`) формализует **только**:
+
+- $\mathcal{L}_5$ через (R1)–(R5) (Definition `def:R`).
+- $\mathcal{L}_{5+}$ через (M1)–(M5) (Definition `def:meta`).
+- $\mathcal{L}_{5+}^{\max}$ через (Max-1)–(Max-4) (Definition `def:maximality`).
+- $\mathcal{L}_6$ через $(F_S) \wedge (\Pi_4) \wedge (\Pi_{3\text{-max}})$ (Theorem `thm:afnt`).
+
+Уровни $\mathcal{L}_0$..$\mathcal{L}_4$ **не вводятся в препринте** — они являются Diakrisis-локальным уточнением для внутренней классификации мат-деятельности.
+
+Причина такого разделения:
+
+- Препринт оптимизирован под рецензионную чистоту: каждая формальная дефиниция должна иметь категорно-теоретический status. Уровни 0–4 апеллируют к внутренней рефлексии методов (через 𝖬 внутри конкретной $\alpha$), что не добавляет силы главной теореме AFN-T.
+- Diakrisis, как полная мета-структурная теория, использует L_0–L_4 для структурного описания математической активности (лемма / теорема / область / парадигма) на языке 𝖬-глубины.
+
+**Эффект**: препринт остаётся минимально-достаточным для AFN-T; Diakrisis получает полное описание мат-ландшафта.
+
+## 8. Связь с препринтом (таблица)
 
 | Diakrisis-термин | Препринт label |
 |---|---|
-| Иерархия уровней 0..6 | Definition `def:hierarchy` |
-| Структурные свойства уровней | Proposition `prop:level-structure` |
-| Formality spectrum (L0-L4 descriptive, L5+ formal) | Remark `rem:formality-spectrum` |
+| Иерархия уровней 0..6 (строгая в Diakrisis) | Definition `def:hierarchy` (только 5, 5+, 5+^max, 6) |
+| Структурные свойства уровней 5/5+/5+^max | Proposition `prop:level-structure` |
 | Intersection pattern $\mathcal{L}_k$ | Proposition `prop:strata-disjointness` |
-| «5+» vs «6» обоснование | §2.3 + Propositions `prop:collapse`, `prop:no-collapse` |
-| Уровень 5+ формальные условия (M1)–(M5) | Definition `def:meta` |
+| «5+» vs «6» обоснование (Cls/Gen) | §2.3 + Propositions `prop:no-collapse` |
+| Уровень 5 условия (R1)–(R5) | Definition `def:R` |
+| Уровень 5+ условия (M1)–(M5) | Definition `def:meta` |
 | Уровень 5+^max условия (Max-1)–(Max-4) | Definition `def:maximality` |
-| Уровень 6 условия (F), (Π_4), (Π_{3-max}) | Definitions `def:F`, `def:pi4`, `def:pi3max` |
+| Уровень 6 условия $(F), (\Pi_4), (\Pi_{3\text{-max}})$ | Definitions `def:F`, `def:pi4`, `def:pi3max` |
 | Уровень 6 пуст | Theorem `thm:afnt` |
+| $\nu$-инвариант и его стратификация | *Diakrisis-only* (23.T1, `/03-formal-architecture/08-cardinal-analysis`) |
+| Уровни 0, 1, 2, 3, 4 | *Diakrisis-only* (настоящий документ) |
 
-## Ссылки
+## 9. Ссылки
 
-- **Препринт §2** — formal development of hierarchy;
+- **Препринт §2** — formal development of levels 5, 5+, 5+^max, 6;
 - **Препринт §9** — Level 5+ meta-classification;
+- [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) — 13 аксиом + T-2f\* depth-stratification;
+- [`/03-formal-architecture/08-cardinal-analysis`](/03-formal-architecture/08-cardinal-analysis) — $\nu$-стратификация и 23.T1;
 - [`/06-limits/02-th-final`](/06-limits/02-th-final) — AFN-T detail;
 - [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) — пять осей;
 - [`/06-limits/09-meta-classification`](/06-limits/09-meta-classification) — meta-структура 100.T–102.T;
-- [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — полная таблица.
+- [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — полная таблица соответствия Diakrisis ↔ MSFS.
