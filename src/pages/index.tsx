@@ -470,6 +470,13 @@ const docSections: DocSection[] = [
     items: ['TH-Final: формальный объект уровня 6 невозможен', 'Шестая в серии Cantor-Russell-Gödel-Tarski-Lawvere', 'Горизонтальная абсолютность 55.T (метатеория S)', 'Вертикальная абсолютность 59.T.1 (уровень n)', 'Мета-вертикальная абсолютность 69.T (итерации μ)', 'Латеральная абсолютность 84.T (категорный порядок ξ)', 'Постулат полноты 87.T ([П·L3], Lawvere-scope)', '97.T: tradeoff линейности и генеративности', 'Финальные теоремы 85.T-96.T + L-классификация'],
   },
   {
+    id: 'afn-t-preprint',
+    title: 'Препринт AFN-T',
+    description: 'Самодостаточная формальная версия структурного ядра Diakrisis',
+    link: '/10-reference/04-afn-t-correspondence',
+    items: ['A No-Go Theorem for Absolute Foundations of Mathematics', '52 страницы, 71 theorem-like environment, 48 bib-entries', 'TH-Final (α, β, combined), пять осей, три bypass-paths', 'Meta-classification Level 5+ (100.T–102.T)', 'Positioning против Ernst 2015, Hamkins multiverse, BSP 2021', 'Таблица соответствия N.T ↔ preprint labels', 'Сборка: bun scripts/build-paper.ts'],
+  },
+  {
     id: 'methodology',
     title: 'Методология',
     description: 'Рекурсивные аудиты и негативные уроки',

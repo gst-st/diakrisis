@@ -12,6 +12,12 @@ title: Введение в Diakrisis
 
 Теория теоретически **закрыта**: 102 теоремы в номерной системе устанавливают пять-уровневую абсолютность TH-Final (**ABSOLUTA_TOTALIS**) + полное соответствие УГМ ↔ α_Д-hybrid ⊗ 7D-quantum через теорему **UFH** (85.T) + intensional refinement closure (98.T–99.T) + meta-classification Level 5+ stability (100.T–102.T).
 
+:::tip Самодостаточный препринт AFN-T
+
+Структурное ядро Diakrisis (TH-Final, пять осей абсолютности, три bypass-paths, meta-классификация Level 5+) вынесено в самодостаточный препринт **[*AFN-T*](/10-reference/04-afn-t-correspondence)** (*A No-Go Theorem for Absolute Foundations of Mathematics*, 52 страницы, 71 theorem-like environment): `paper-en/paper.tex`. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$). Точная таблица соответствия теорем $N.T$ ↔ preprint labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+
+:::
+
 Остающиеся задачи — практические программы (Verum-формализация, экспериментальная верификация УГМ).
 
 ## Центральные результаты
