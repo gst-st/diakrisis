@@ -100,17 +100,17 @@ $$
 — classifying 2-stack Level 5+ meta-structures. Тогда:
 
 - **(a)** $\mathfrak{M}^{(5+)} \in \mathfrak{Meta}_{5+}$ (self-meta).
-- **(b) Idempotence**: $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$.
-- **(c) No Level-6 escalation**: mutual classification Level 5+ meta-structures не порождает Level-6 структуру.
+- **(b) Theory-level стабилизация**: $\mathfrak{M}^{(5+ \cdot 2)}$ реализует ту же $(\infty, \infty)$-теорию, что и $\mathfrak{M}^{(5+)}$, в смысле единственности Barwick–Schommer-Pries. Теоретико-множественная реализация, однако, **не идентична**: $\mathfrak{M}^{(5+ \cdot 2)}$ живёт на один уровень Grothendieck-универсума выше, и башня мета-итераций $\{\mathfrak{M}^{(5+ \cdot k)}\}_{k \geq 1}$ поднимается по иерархии недостижимых $\kappa_1 < \kappa_2 < \cdots$. Обозначение $\simeq_2$ фиксирует именно theory-level эквивалентность, а не set-level идентичность.
+- **(c) No Level-6 escalation**: ни одна мета-итерация $\mathfrak{M}^{(5+ \cdot k)}$ не удовлетворяет Level-6 условиям $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$ — Level 5+ meta-структура определима, но не генеративна над Rich-foundations (M4), что противоречит максимальной генеративности.
 
-**Метод доказательства** (препринт §9.4, переработано для строгости): формальное вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty,\infty)}$ (категория accessible $(\infty, \infty)$-presheaves над $\fM$) через (M3) + Lurie HTT §5.4.2; следующие итерации Grothendieck-construction дают объекты в $\Pi_{(\infty, \infty + k)}$; стабилизация $(\infty, \infty + 1) \simeq (\infty, \infty)$ (Theorem `thm:bergner-lurie-stab`) даёт idempotence.
+**Метод доказательства** (препринт §9.4): формальное вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty,\infty)}$ (категория accessible $(\infty, \infty)$-presheaves над $\fM$) через (M3) + Lurie HTT §5.4.2; следующие итерации Grothendieck-construction дают объекты в $\Pi_{(\infty, \infty + k)}$; Barwick–Schommer-Pries unicity (Theorem `thm:bergner-lurie-stab`) даёт theory-level эквивалентность — но не равенство универсумов.
 
 **Следствия** (Diakrisis-specific):
 
-- **102.C1**: Iteration closure — $\mathfrak{M}^{(5+ \cdot k)} \simeq_2 \mathfrak{M}^{(5+)}$ для всех $k \geq 1$.
-- **102.C2**: Аналог 68.T — стабилизация на meta-уровне (68.T стабилизирует higher-categorical structure; 102.T стабилизирует meta-классификацию).
-- **102.C3**: $\mathfrak{Meta}_{5+}$ замкнут относительно mutual classification.
-- **102.C4**: Совместимость с пятиосевая абсолютность AFN-T — meta-iteration частный случай $\mu$-оси (69.T).
+- **102.C1**: Iteration closure (theory-level) — $\mathfrak{M}^{(5+ \cdot k)}$ реализует ту же $(\infty,\infty)$-теорию для всех $k \geq 1$; set-theoretic реализация поднимается по $\kappa_k$.
+- **102.C2**: Аналог 68.T — стабилизация на meta-уровне (68.T стабилизирует higher-categorical structure; 102.T стабилизирует meta-классификацию как теорию).
+- **102.C3**: $\mathfrak{Meta}_{5+}$ замкнут относительно mutual classification на уровне теории.
+- **102.C4**: Совместимость с пятиосевой абсолютностью AFN-T — meta-iteration частный случай $\mu$-оси (69.T).
 
 ## Сравнительная таблица meta-structures
 
