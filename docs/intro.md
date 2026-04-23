@@ -209,7 +209,7 @@ AFN-T (α-часть), AFN-T (β-часть), AFN-T, no-go series, Path-of-limit
 
 ### А — быстрое понимание (час)
 1. Это введение.
-2. [/06-limits/02-th-final](/06-limits/02-th-final) — центральный негативный результат.
+2. [/06-limits/02-th-final](/06-limits/02-th-final) — граничная лемма.
 3. [/06-limits/06-absoluteness](/06-limits/06-absoluteness) — пятиуровневая абсолютность.
 4. [/02-canonical-primitive/00-overview](/02-canonical-primitive/00-overview) — формальное ядро.
 5. [/05-assemblies/01-uhm](/05-assemblies/01-uhm) — флагман-сборка.

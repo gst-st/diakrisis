@@ -11,7 +11,7 @@ title: Каталог теорем
 
 :::tip Соответствие препринт MSFSа
 
-Формальные доказательства центральных теорем AFN-T (α, β, combined), пяти осей абсолютности, bypass-paths и meta-классификации Level 5+ **вынесены в препринт [MSFS](/10-reference/04-afn-t-correspondence)** (`paper-en/paper.tex`). Diakrisis-каталог сохраняет внутреннюю нумерацию и контекст; полные формальные изложения — в препринте. Таблица соответствия `N.T` ↔ `thm:...`: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальные доказательства теорем граничной леммы AFN-T (α, β, combined), пяти осей абсолютности, bypass-paths и meta-классификации Level 5+ **вынесены в препринт [MSFS](/10-reference/04-afn-t-correspondence)** (`paper-en/paper.tex`). Diakrisis-каталог сохраняет внутреннюю нумерацию и контекст; полные формальные изложения — в препринте. Таблица соответствия `N.T` ↔ `thm:...`: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 
@@ -394,7 +394,7 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 **AFN-T (α-часть)-extended**: (β)-часть — limit-approach не работает (провал Пути Ε). Механизм: accessibility-argument (Adámek–Rosický Thm 2.11, 2.45); proper-class-башни исключены через (R2) r.e.-аксиоматизации (препринт Proposition `prop:proper-class` + Corollary `cor:no-proper-class`).
 
-**AFN-T**: унификация — центральный негативный результат. Пять осей абсолютности — пятиосевая абсолютность AFN-T (препринт Theorem `thm:five-axis`), с логической зависимостью осей через Remark `rem:axes-dependence`.
+**AFN-T**: унификация — граничная лемма. Пять осей абсолютности — пятиосевая абсолютность AFN-T (препринт Theorem `thm:five-axis`), с логической зависимостью осей через Remark `rem:axes-dependence`.
 
 ### Положение AFN-T в no-go серии
 
