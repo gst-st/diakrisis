@@ -13,7 +13,7 @@ title: Введение в Noesis
 
 | | Роль |
 |---|---|
-| **Diakrisis** (уровень 5+) | Теоретический корпус: 129 теорем, (∞,∞)-формулировка, ABSOLUTA_TOTALIS |
+| **Diakrisis** (уровень 5+) | Теоретический корпус: 102 теоремы в номерной системе, (∞,∞)-формулировка, ABSOLUTA_TOTALIS, intensional refinement + meta-classification closure |
 | **Noesis** (инженерный слой) | Вычислительная реализация: Verum-формализация + LLM + MCP + enterprise-инфраструктура |
 
 **Философская пара**:

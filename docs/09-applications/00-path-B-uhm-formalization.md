@@ -56,7 +56,7 @@ title: Путь Б — формализация УГМ
 - Cognitive science: AGI/ASI extensions (T-193-209).
 
 **Концептуальная проработка**:
-- Framework `/apeiron/04-assemblies/uhm.md`.
+
 - Paper (239 pages в текущей версии).
 - Connection with other foundations (NCG, SM).
 

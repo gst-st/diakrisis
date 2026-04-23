@@ -109,7 +109,7 @@ title: Стандартная модель физики
 
 ## Связь с УГМ
 
-**SM.T3** (из `/apeiron/04-assemblies/standard-model-progress.md`): α_SM и α_uhm связаны через общую подструктуру α_underlying.
+**SM.T3**: α_SM и α_uhm связаны через общую подструктуру α_underlying.
 
 **Гипотеза SM.H1**: УГМ эмерджентна из SM в специфическом пределе (decoherence + measurement + 7D-редукция).
 

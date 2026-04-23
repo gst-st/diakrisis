@@ -85,7 +85,7 @@ title: ∞-Topos Lurie
 
 ## Descent = ρ-функториальность
 
-**05.T2** (`/apeiron/03-extractions/05-infty-topos.md`): Lurie-descent ≡ ρ-функториальность при ω-колимитах.
+**05.T2**: Lurie-descent ≡ ρ-функториальность при ω-колимитах.
 
 ### Детализация
 

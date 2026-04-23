@@ -771,7 +771,10 @@ Completeness: **Π_1^1** by Feferman's classical result for infinitary equivalen
 
 ### Финальное состояние Diakrisis
 
-**Все теоретические вопросы закрыты**. 96 теорем доказаны (кроме [Программа] статусов).
+**Все теоретические вопросы закрыты**. 102 теоремы в номерной системе доказаны (кроме [Программа] статусов). Последние добавления (закрытые после основных финальных теорем):
+
+- **98.T + 99.T** — intensional refinement closure, [/06-limits/08-intensional-refinement](/06-limits/08-intensional-refinement).
+- **100.T + 101.T + 102.T** — meta-classification Level 5+, [/06-limits/09-meta-classification](/06-limits/09-meta-classification).
 
 **Остающиеся задачи** — practical programmes (Verum, эксперименты, SM, consciousness — см. [/10-reference/03-gap-status](/10-reference/03-gap-status)).
 
@@ -796,17 +799,19 @@ Completeness: **Π_1^1** by Feferman's classical result for infinitary equivalen
 
 ## Итог
 
-Diakrisis **теоретически закрыта** после 96 теорем:
+Diakrisis **теоретически закрыта** после 102 теорем в номерной системе:
 
 - **5-уровневая абсолютность** TH-Final — ABSOLUTA_TOTALIS.
 - **UFH доказана** — полное соответствие УГМ ↔ Diakrisis.
 - **Все связующие теоремы** (cohesive, motivic, realizability).
 - **Категоричность + Internal language + Consistency** установлены.
 - **Decidability + Independence** характеризованы.
+- **Intensional refinement** (98.T, 99.T) — slice-locality закрыта.
+- **Meta-classification Level 5+** (100.T, 101.T, 102.T) — stabilization $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$, samoclassification завершена.
 
-Работа Diakrisis как **теории** — завершена.
+Работа Diakrisis как **теории** — завершена на всех трёх уровнях (extensional, intensional, meta-classification).
 Работа Diakrisis как **проекта** — продолжается через programmes П1–П6.
 
 ## Следующий документ
 
-[/10-reference/02-theorems-catalog](/10-reference/02-theorems-catalog) — полный каталог всех 96 теорем.
+[/10-reference/02-theorems-catalog](/10-reference/02-theorems-catalog) — полный каталог всех 102 теорем в номерной системе (115+ с под-теоремами).

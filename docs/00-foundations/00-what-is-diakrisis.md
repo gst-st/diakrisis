@@ -124,20 +124,22 @@ title: Что такое Diakrisis
 
 ## 5. Центральные результаты
 
-Теоретически теория **закрыта**: 96 доказанных теорем.
+Теоретически теория **закрыта**: 102 теоремы в номерной системе (115+ с под-теоремами).
 
 ### 5.1 Позитивные
 
 - **10.T1–T5**: консистентность, Russell-иммунитет, самоартикуляция, неполнота α_math, Fix(𝖬).
-- **16.T1**: Z-эквивалентность (три характеризации).
+- **16.T1**: Z-эквивалентность (три характеризации) с явным cocycle-условием.
 - **18.T**: T-2f\* иммунитет к 5 семействам парадоксов.
 - **29.T + 30.T**: Universal Foundation + Reconstruction.
-- **43.T1**: 𝓜_Fnd = Trace(𝖠)/gauge — классифицирующее пространство.
+- **43.T1**: 𝓜_Fnd = Trace(𝖠)/gauge — классифицирующее пространство через bicategory-of-fractions (Pronk 1996).
 - **85.T (UFH)**: α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) — полное соответствие УГМ ↔ Diakrisis.
 - **88.T**: категоричность — единственность до (∞,∞)-эквивалентности.
 - **89.T**: internal language L_⟪⟫ — внутренний формальный язык.
 - **90.T**: Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
 - **91.T–93.T**: cohesive ∞-topos, motivic homotopy, realizability — все вложены в 𝓜_Fnd.
+- **98.T + 99.T**: intensional refinement — функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ + slice-locality над $\mathcal{M}_\mathrm{Fnd}$.
+- **100.T + 101.T + 102.T**: meta-classification Level 5+ — conditional categoricity + structural multiplicity + stabilization; самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$ завершена.
 
 ### 5.2 Негативные: TH-Final ABSOLUTA_TOTALIS
 
@@ -211,7 +213,7 @@ Diakrisis — уровень **5+**:
 ## 9. Состояние проекта
 
 ### Теоретически
-**Закрыто**. 96 теорем доказаны. 5-уровневая абсолютность TH-Final (ABSOLUTA_TOTALIS). UFH установлена.
+**Закрыто**. 102 теоремы в номерной системе доказаны (включая 98.T–99.T intensional refinement и 100.T–102.T meta-classification Level 5+). 5-уровневая абсолютность TH-Final (ABSOLUTA_TOTALIS). UFH установлена.
 
 ### Практически
 6 открытых программ:
@@ -254,6 +256,6 @@ Diakrisis — уровень **5+**:
 ### Формальная навигация
 
 - [Каталог аксиом](/10-reference/01-axioms-catalog).
-- [Каталог теорем](/10-reference/02-theorems-catalog) — 96 теорем.
+- [Каталог теорем](/10-reference/02-theorems-catalog) — 102 теоремы в номерной системе.
 - [Статус программ](/10-reference/03-gap-status).
 - [Глоссарий](/10-reference/00-glossary).

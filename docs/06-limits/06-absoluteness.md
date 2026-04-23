@@ -298,11 +298,12 @@ TH-Final — **абсолютный структурный инвариант** 
 
 ## Защиты против стандартных обходных путей
 
-Абсолютность по пяти осям — необходимое, но не достаточное условие устойчивости теоремы. В литературе оснований известны три классических обходных пути вокруг предельных no-go-результатов: универс-полиморфизм без супремума, трансметатеоретическая рефлексивная башня, интенсиональный refinement. Все три пути **формально закрыты** в корпусе:
+Абсолютность по пяти осям — необходимое, но не достаточное условие устойчивости теоремы. В литературе оснований известны три классических обходных пути вокруг предельных no-go-результатов плюс четвёртый вопрос — о самоклассификации Level 5+ теории в пространстве возможных Level 5+ meta-structures. Все четыре вопроса **формально закрыты** в корпусе:
 
 - **Универс-полиморфизм**: 57.T, 56.C1, 61.T, 94.T — universe-polymorphic structures Morita-редуцируемы к derived-constructions в 𝒮_S^{global}, не производят Уровня 6.
 - **Рефлексивная башня**: 19.T1, 31.T3, 68.T, 69.T — α_Apeiron-механизм измеряет стоимость рефлексивной итерации (exact: +1 inaccessible) и фиксирует её стабилизацию на (∞,∞).
-- **Интенсиональный refinement**: **98.T** (функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ построен через дисплейные 2-семейства) + **99.T** (slice-locality: образ **I** живёт в слоях $\widetilde{\pi}^{-1}([\alpha])$ над $\mathcal{M}_\mathrm{Fnd}$, не добавляет точек в базу). Единственный исторически-открытый зазор закрыт; детали в [/06-limits/08-intensional-refinement](/06-limits/08-intensional-refinement).
+- **Интенсиональный refinement**: **98.T** (функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ построен через дисплейные 2-семейства) + **99.T** (slice-locality: образ **I** живёт в слоях $\widetilde{\pi}^{-1}([\alpha])$ над $\mathcal{M}_\mathrm{Fnd}$, не добавляет точек в базу). Intensional-zazor закрыт; детали в [/06-limits/08-intensional-refinement](/06-limits/08-intensional-refinement).
+- **Meta-classification Level 5+**: **100.T** (conditional meta-categoricity при максимальности) + **101.T** (structural multiplicity без максимальности) + **102.T** (meta-classification stabilization $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$ — параллель к 68.T на уровне meta-structures). Вопрос о самоклассификации Diakrisis в $\mathfrak{Meta}_{5+}$ формально закрыт; детали в [/06-limits/09-meta-classification](/06-limits/09-meta-classification).
 
 Детальная карта обходных путей и защит: [/06-limits/02-th-final#стандартные-обходные-пути-и-их-закрытие](/06-limits/02-th-final#стандартные-обходные-пути-и-их-закрытие) и [/10-reference/02-theorems-catalog#карта-защит-th-final-навигационный-указатель](/10-reference/02-theorems-catalog#карта-защит-th-final-навигационный-указатель).
 
@@ -311,3 +312,5 @@ TH-Final — **абсолютный структурный инвариант** 
 [/06-limits/07-final-theorems](/06-limits/07-final-theorems) — все остальные финальные теоремы (UFH, связующие, внутренний язык).
 
 [/06-limits/08-intensional-refinement](/06-limits/08-intensional-refinement) — формальное закрытие intensional-слоя через 98.T + 99.T.
+
+[/06-limits/09-meta-classification](/06-limits/09-meta-classification) — формальное закрытие meta-classification слоя через 100.T + 101.T + 102.T.

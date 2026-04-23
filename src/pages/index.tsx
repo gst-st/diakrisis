@@ -471,10 +471,10 @@ const docSections: DocSection[] = [
   },
   {
     id: 'methodology',
-    title: 'Методологическая археология',
-    description: 'Исторические фазы работы',
-    link: '/07-methodology/00-framework-corpus-reinterpreted',
-    items: ['Переинтерпретация раннего корпуса', 'Сводка seed-работы (12 документов)', 'Рекурсивные аудиты', 'Негативные уроки NL-1..NL-14'],
+    title: 'Методология',
+    description: 'Рекурсивные аудиты и негативные уроки',
+    link: '/07-methodology/02-recursive-audits',
+    items: ['Рекурсивные аудиты (многоуровневые)', 'Негативные уроки NL-1..NL-15', 'Мета-аудит TH-Final', 'Навигационная целостность корпуса'],
   },
   {
     id: 'applications',

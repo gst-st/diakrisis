@@ -107,15 +107,14 @@ const sidebars: SidebarsConfig = {
         '06-limits/06-absoluteness',
         '06-limits/07-final-theorems',
         '06-limits/08-intensional-refinement',
+        '06-limits/09-meta-classification',
       ],
     },
     {
       type: 'category',
-      label: '7. Методологическая археология',
-      link: {type: 'generated-index', title: 'Методологическая археология', slug: '/methodology'},
+      label: '7. Методология',
+      link: {type: 'generated-index', title: 'Методология', slug: '/methodology'},
       items: [
-        '07-methodology/00-framework-corpus-reinterpreted',
-        '07-methodology/01-seed-work-summary',
         '07-methodology/02-recursive-audits',
         '07-methodology/03-negative-lessons',
       ],

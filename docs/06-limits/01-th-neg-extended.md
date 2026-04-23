@@ -7,7 +7,7 @@ title: TH-Neg-extended — (β)-часть
 
 ## Статус
 
-**[Т-набр]**. Отчёт в `/apeiron/seed/09-tower-construction.md`.
+**[Т-набр]**. Отчёт в .
 
 ## Расширение
 

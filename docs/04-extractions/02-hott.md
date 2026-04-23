@@ -7,7 +7,7 @@ title: HoTT как извлечение
 
 ## Статус
 
-**[Т-набр]** — детали `/apeiron/03-extractions/03-hott-extraction.md`.
+**[Т-набр]** — детали .
 
 ## Обзор
 
