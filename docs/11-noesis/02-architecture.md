@@ -7,7 +7,7 @@ title: Архитектура — три слоя
 
 ## Обзор
 
-Noesis построен как **трёхслойная** система с чётким разделением ответственности. Каждый слой имеет конкретную роль, стабильный интерфейс, и independent'но реализуется.
+Noesis построен как **трёхслойная** система с чётким разделением ответственности. Каждый слой имеет конкретную роль, стабильный интерфейс, и реализуется независимо.
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -16,7 +16,7 @@ Noesis построен как **трёхслойная** система с чё
 └────────────────────────────┬─────────────────────────────┘
                              │ NP (Noesis Protocol, JSON-RPC)
 ┌────────────────────────────┴─────────────────────────────┐
-│                      NOESIS.Core                         │
+│                      Noesis.Core                         │
 │  ┌──────────┬──────────┬──────────┬──────────────────┐   │
 │  │ Primitive│ Category │ Agent    │ Federation       │   │
 │  │ Engine   │ Engine   │ Engine   │ Engine (phase 4) │   │
@@ -31,62 +31,62 @@ Noesis построен как **трёхслойная** система с чё
 └──────────────────────────────────────────────────────────┘
 ```
 
-## Presentation Layer
+## Слой представления (Presentation Layer)
 
 ### Панели
 
 **5 канонических панелей** как проекции единого объекта Noesis.Core:
 
-#### 1. Editor Panel
-- Markdown editor с live-validation.
-- Auto-complete для claim references.
-- Syntax highlighting для YAML frontmatter.
-- Inline статус badges ([Т·L1], [П·L3], etc.).
-- Real-time dependency check.
+#### 1. Панель редактора
+- Markdown-редактор с валидацией в реальном времени.
+- Автодополнение для ссылок на утверждения.
+- Подсветка синтаксиса для YAML-фронтматтера.
+- Встроенные статус-метки ([Т·L1], [П·L3], и т.д.).
+- Проверка зависимостей в реальном времени.
 
-#### 2. Graph Panel
-- Hypergraph visualization.
-- Nodes colored по status.
-- Edge types distinguished (requires, entails, translates, contradicts).
-- Zoom: claim-level → theory-level → domain-level → federation-level.
-- Interactive navigation.
+#### 2. Панель графа
+- Визуализация гиперграфа.
+- Узлы окрашены по статусу.
+- Типы рёбер различимы (requires, entails, translates, contradicts).
+- Масштабирование: уровень утверждения → уровень теории → уровень домена → уровень федерации.
+- Интерактивная навигация.
 
-#### 3. Status Panel
-- Table view с filters.
-- Column per attribute (status, rigor level, type, dependencies count).
-- Sortable, searchable.
-- Direct-link to editor.
-- Audit history per claim.
+#### 3. Панель статусов
+- Табличное представление с фильтрами.
+- Столбец на каждый атрибут (статус, уровень строгости, тип, число зависимостей).
+- Сортируемые, с поиском.
+- Прямая ссылка в редактор.
+- Аудит-история на каждое утверждение.
 
-#### 4. Federation Panel
-- Map of knowledge-domains (theories as blocks).
-- Functors между ними (arrows, thickness = confidence).
-- Obstruction heatmap.
-- Morita-equivalence clustering.
-- Cross-domain search.
+#### 4. Панель федерации
+- Карта доменов знаний (теории как блоки).
+- Функторы между ними (стрелки, толщина = уверенность).
+- Тепловая карта препятствий.
+- Кластеризация по Морита-эквивалентности.
+- Кросс-доменный поиск.
 
-#### 5. Agent Panel
-- Chat interface с LLM agent.
-- Context window показывает текущий focus graph.
-- Agent suggestions с inline SMT-verification badges.
-- Proposal preview + accept/reject buttons.
-- History of accepted operations.
+#### 5. Панель агента
+- Чат-интерфейс с LLM-агентом.
+- Контекстное окно показывает текущий фокусный граф.
+- Предложения агента с встроенными метками SMT-верификации.
+- Предпросмотр предложений + кнопки принять/отклонить.
+- История принятых операций.
 
 ### Клиенты
 
-- **Web client** (SolidJS): основной, deployed as SPA.
-- **VSCode extension**: for developer workflows.
-- **Claude Code plugin**: for researchers using Claude's CLI.
-- **CLI tool** (`noesis` command): terminal-based operations.
-- **MCP client**: generic AI assistant integration.
+- **Web-клиент** (SolidJS): основной, развёртывается как SPA.
+- **Расширение VSCode**: для сценариев разработчика.
+- **Плагин Claude Code**: для исследователей, использующих CLI от Claude.
+- **CLI-инструмент** (команда `noesis`): операции в терминале.
+- **MCP-клиент**: интеграция с произвольным ИИ-ассистентом.
 
 Все клиенты говорят с Core через **NP** (Noesis Protocol).
 
-## NOESIS.Core
+## Noesis.Core
 
-### Primitive Engine
+### Primitive Engine (движок примитивов)
 
-**Назначение**: реализация Diakrisis canonical primitive (⟪⟫, 𝖬, α_math, ⊏_•).
+**Назначение**: реализация канонического примитива Diakrisis (⟪⟫, 𝖬, α_math, ⊏_•).
 
 **Структуры данных**:
 
@@ -123,17 +123,17 @@ type Dependency = {
 - `create_articulation(R-S, axioms) -> Articulation`
 - `add_claim(articulation, claim) -> Result<Articulation, AxiomViolation>`
 - `add_dependency(articulation, source, target, type) -> Result<Articulation, AcyclicityViolation>`
-- `iterate_metaization(α: Articulation, k: Ordinal) -> Articulation` — 𝖬^k-applications
-- `project_rho(α: Articulation) -> ConcreteCategory` — ρ-proекция.
+- `iterate_metaization(α: Articulation, k: Ordinal) -> Articulation` — применения 𝖬^k
+- `project_rho(α: Articulation) -> ConcreteCategory` — ρ-проекция.
 - `check_th_final(α: Articulation) -> TH_Final_Compliance`
 
-### Category Engine
+### Category Engine (движок категорий)
 
 **Назначение**: реализация категорных операций Diakrisis.
 
 **Модули**:
 
-#### Morita-equivalence checker
+#### Проверка Морита-эквивалентности
 
 ```verum
 fn morita_check(α: Articulation, β: Articulation) -> MoritaResult {
@@ -155,9 +155,9 @@ fn morita_check(α: Articulation, β: Articulation) -> MoritaResult {
 }
 ```
 
-#### Kan extension computation
+#### Вычисление расширения Кана
 
-По 85.T (UFH Grothendieck-конструкция) + pointwise formula (HTT 4.3.2.7):
+По 85.T (UFH Grothendieck-конструкция) + поточечная формула (HTT 4.3.2.7):
 
 ```verum
 fn compute_lan(f: Functor, X: Presheaf) -> Presheaf {
@@ -170,9 +170,9 @@ fn compute_lan(f: Functor, X: Presheaf) -> Presheaf {
 }
 ```
 
-#### Descent condition checker
+#### Проверка условия спуска
 
-Coherence как sheaf-condition (по 43.T1).
+Когерентность как условие пучка (по 43.T1).
 
 ```verum
 fn check_descent(covering: Covering, data: Data) -> DescentResult {
@@ -187,51 +187,51 @@ fn check_descent(covering: Covering, data: Data) -> DescentResult {
 }
 ```
 
-### Agent Engine
+### Agent Engine (движок агента)
 
-**Назначение**: LLM-based generative operations, formalized как Giry-monadic oracle (по NO-3).
+**Назначение**: порождающие операции на базе LLM, формализованные как Giry-монадный оракул (по NO-3).
 
 **Архитектура**:
 
 ```
-User Query
+Запрос пользователя
     ↓
-Context builder (graph subset)
+Сборщик контекста (подмножество графа)
     ↓
-Embedding (LLM internal)
+Эмбеддинг (внутренний LLM)
     ↓
-Candidate generation (LLM API)
+Порождение кандидатов (LLM API)
     ↓
-Softmax distribution p(op | context)
+Softmax-распределение p(op | context)
     ↓
-SMT gate (categorical laws)
+SMT-фильтр (категорные законы)
     ↓
-Diakrisis axiom check
+Проверка аксиом Diakrisis
     ↓
-TH-Final + 97.T bounds check
+Проверка границ TH-Final + 97.T
     ↓
-Accepted operations (with certificates)
+Принятые операции (с сертификатами)
 ```
 
-Подробно в [05 — Agent](./05-agent).
+Подробно в [05 — Агент](./05-agent).
 
-### Federation Engine (Phase 4)
+### Federation Engine (Фаза 4)
 
-**Назначение**: распределённый Noesis — federated noosphere.
+**Назначение**: распределённый Noesis — федеративная ноосфера.
 
 **Принципы**:
-- Каждый node — independent Noesis instance.
-- Sync через gauge-preserving protocol.
-- Consensus через descent-condition.
-- Privacy-preserving cross-domain queries.
+- Каждый узел — независимый экземпляр Noesis.
+- Синхронизация через gauge-сохраняющий протокол.
+- Консенсус через условие спуска.
+- Кросс-доменные запросы с сохранением конфиденциальности.
 
-Подробно в [15 — Federation](./15-federation).
+Подробно в [15 — Федерация](./15-federation).
 
-## Storage Layer
+## Слой хранения (Storage Layer)
 
 ### Markdown + YAML
 
-Primary storage — **human-readable markdown с YAML frontmatter**:
+Основное хранилище — **читаемый человеком markdown с YAML-фронтматтером**:
 
 ```yaml
 ---
@@ -258,15 +258,15 @@ gauge_class: "S_7 × U(1)"
 ```
 
 **Преимущества**:
-- Human-editable.
-- Git-trackable.
-- Docusaurus-compatible.
-- Backup trivial.
-- Migration simple.
+- Редактируется человеком.
+- Отслеживается в Git.
+- Совместим с Docusaurus.
+- Тривиальное резервное копирование.
+- Простая миграция.
 
-### SQLite index
+### SQLite-индекс
 
-Для быстрых queries — SQLite каталог:
+Для быстрых запросов — SQLite-каталог:
 
 ```sql
 CREATE TABLE claims (
@@ -301,25 +301,25 @@ CREATE INDEX idx_dependencies_source ON dependencies(source);
 CREATE INDEX idx_dependencies_target ON dependencies(target);
 ```
 
-Rebuilt from markdown on startup or on-demand.
+Перестраивается из markdown при запуске или по требованию.
 
-### Git versioning
+### Версионирование в Git
 
-Вся history в Git:
-- Per-claim history.
-- Per-theory history.
-- Branching для exploratory changes.
-- Merging с conflict detection.
-- Audit trail for enterprise compliance.
+Вся история в Git:
+- История на каждое утверждение.
+- История на каждую теорию.
+- Ветвление для исследовательских изменений.
+- Слияние с обнаружением конфликтов.
+- Аудит-след для корпоративного соответствия.
 
-### Distributed sheaf (Phase 4)
+### Распределённый пучок (Фаза 4)
 
-Federation storage:
-- Each node maintains local markdown+SQLite.
-- Cross-node sync через NP protocol.
-- Descent condition для consistency.
-- Encryption at rest + in transit.
-- Privacy zones (public / private / federation-shared).
+Хранилище федерации:
+- Каждый узел поддерживает локальный markdown + SQLite.
+- Межузловая синхронизация через NP-протокол.
+- Условие спуска для согласованности.
+- Шифрование при хранении и в транзите.
+- Зоны конфиденциальности (публичная / приватная / разделяемая в федерации).
 
 ## Язык реализации: Verum
 
@@ -327,158 +327,158 @@ Federation storage:
 
 | Требование | Rust | Lean4 | Agda | **Verum** |
 |---|---|---|---|---|
-| Dependent types | ✗ | ✓ | ✓ | ✓ |
-| SMT verification | FFI | FFI | ✗ | **native** |
-| Systems performance | ✓ | ✗ | ✗ | ✓ |
-| GPU compute | FFI | ✗ | ✗ | ✓ |
-| LLM inference | bindings | ✗ | ✗ | ✓ |
-| HoTT primitives | ✗ | ✗ | ✓ | ✓ |
-| Proof certificates | ✗ | Lean only | ✗ | 5 formats |
+| Зависимые типы | ✗ | ✓ | ✓ | ✓ |
+| SMT-верификация | FFI | FFI | ✗ | **нативно** |
+| Системная производительность | ✓ | ✗ | ✗ | ✓ |
+| Вычисления на GPU | FFI | ✗ | ✗ | ✓ |
+| LLM-инференс | привязки | ✗ | ✗ | ✓ |
+| HoTT-примитивы | ✗ | ✗ | ✓ | ✓ |
+| Сертификаты доказательств | ✗ | только Lean | ✗ | 5 форматов |
 
-**Verum — единственный** stack, покрывающий все требования simultaneous.
+**Verum — единственный** стек, одновременно покрывающий все требования.
 
-### Verum std components используемые в Noesis
+### Стандартные компоненты Verum, используемые в Noesis
 
-- `core/math/category.vr` — Functor, Monad, Adjunction, Yoneda, Kan extensions.
+- `core/math/category.vr` — Functor, Monad, Adjunction, Yoneda, расширения Кана.
 - `core/math/infinity_category.vr` — QuasiCategory, InfinityFunctor.
 - `core/math/infinity_topos.vr` — Site, GrothendieckTopology, InfinityTopos.
-- `core/math/hott.vr` — Equiv, Fiber, univalence.
+- `core/math/hott.vr` — Equiv, Fiber, унивалентность.
 - `core/math/fibration.vr` — GrothendieckFibration, Straightening.
 - `core/math/kan_extension.vr` — InfLeftKanExtension, InfRightKanExtension.
 
-### Noesis-specific modules (to be added to Verum)
+### Noesis-специфичные модули (будут добавлены в Verum)
 
-- `core/math/quantum_logic.vr` — OrthomodularLattice, EpistemicState (для Phase 6).
-- `core/math/giry.vr` — Giry monad, LlmOracle, functor_density.
-- `core/math/epistemic.vr` — Theory type, epistemic functor, propagation.
-- `core/math/day_convolution.vr` — для cognitive extension (Phase 6).
-- `core/math/morita.vr` — Morita-equivalence computations.
+- `core/math/quantum_logic.vr` — OrthomodularLattice, EpistemicState (для Фазы 6).
+- `core/math/giry.vr` — Giry-монада, LlmOracle, functor_density.
+- `core/math/epistemic.vr` — тип Theory, эпистемический функтор, распространение.
+- `core/math/day_convolution.vr` — для когнитивного расширения (Фаза 6).
+- `core/math/morita.vr` — вычисления Морита-эквивалентности.
 
-## Scalability
+## Масштабируемость
 
-### Complexity
+### Сложность
 
-Для N knowledge-objects, M claims per object, D max dependency depth, K functors:
+Для N объектов знания, M утверждений на объект, D максимальной глубины зависимостей, K функторов:
 
-| Operation | Complexity | Example (N=30, M=100, D=5, K=100) |
+| Операция | Сложность | Пример (N=30, M=100, D=5, K=100) |
 |---|---|---|
-| Status propagation (BFS) | O(N·M·D) | 15K ops, <1ms |
-| Single-theory audit | O(M²·D) | 50K ops, <10ms |
-| Full cross-coherence | O(K·M²) | 1M ops, <100ms |
-| Single Kan extension | O(M³·D) | 50M ops, ~5s |
-| All pairwise Kan | O(K·M³·D) | 5G ops, ~8min, parallel |
-| Descent check (covering) | O(K²·M) | 1M ops, <100ms |
+| Распространение статусов (BFS) | O(N·M·D) | 15K операций, <1 мс |
+| Аудит одной теории | O(M²·D) | 50K операций, <10 мс |
+| Полная кросс-когерентность | O(K·M²) | 1M операций, <100 мс |
+| Одно расширение Кана | O(M³·D) | 50M операций, ~5 с |
+| Все попарные Кан-расширения | O(K·M³·D) | 5G операций, ~8 мин, параллельно |
+| Проверка спуска (покрытие) | O(K²·M) | 1M операций, <100 мс |
 
-Всё polynomial; все parallelizable. Lazy evaluation: Kan extensions computed on-demand.
+Всё полиномиально; всё распараллеливается. Ленивое вычисление: расширения Кана вычисляются по требованию.
 
 ### Формальные границы сложности (доказательство NO-5)
 
-Обоснование polynomial bounds для каждой операции:
+Обоснование полиномиальных границ для каждой операции:
 
-**Status propagation** — BFS в DAG зависимостей:
+**Распространение статусов** — BFS в DAG зависимостей:
 $$T_\text{prop} = O(|V| + |E|) = O(N \cdot M + N \cdot M \cdot D) = O(N \cdot M \cdot D)$$
-(edges bounded by D·M per node, V = N·M.)
+(число рёбер ограничено D·M на узел, V = N·M.)
 
-**Single-theory audit** — pairwise consistency checks среди M claims + depth-D dependency traversal:
+**Аудит одной теории** — попарные проверки согласованности среди M утверждений + обход зависимостей глубины D:
 $$T_\text{audit} = O\left(\binom{M}{2} \cdot D\right) = O(M^2 D)$$
 
-**Kan extension (pointwise)** — для каждой точки target, compute comma category colimit:
+**Расширение Кана (поточечное)** — для каждой точки цели вычисляется копредел запятой-категории:
 $$T_\text{Kan} = O\left(|B| \cdot T_\text{comma} \cdot T_\text{colim}\right) = O(M \cdot M \cdot M \cdot D) = O(M^3 D)$$
 
-**Descent check** — Čech cosimplicial limit до triple overlaps:
+**Проверка спуска** — косимплициальный предел Чеха до тройных пересечений:
 $$T_\text{descent} = O\left(\sum_{k=1}^{3} \binom{|\text{cover}|}{k} \cdot M\right) = O(K^3 M) = O(K^2 M)$$
-при $K \ll$ size.
+при $K \ll$ размера.
 
-**Результат (NO-5 formal)**: все operations в Noesis.Core polynomial в (N, M, D, K), что критически отличает её от **exponential** alternatives:
+**Результат (NO-5 формально)**: все операции в Noesis.Core полиномиальны по (N, M, D, K), что критически отличает её от **экспоненциальных** альтернатив:
 
-- Full proof search (raw Lean/Coq): $O(2^\text{depth})$ в worst case.
-- SAT-based consistency: NP-complete в general.
-- Model checking: PSPACE.
+- Полный поиск доказательств (сырой Lean/Coq): $O(2^\text{depth})$ в худшем случае.
+- SAT-согласованность: NP-полная в общем случае.
+- Проверка моделей: PSPACE.
 
-Noesis keeps operations **tractable** за счёт Diakrisis 2-categorical structure — proof obligations локализованы в finite comma categories, not global search.
+Noesis сохраняет операции **вычислимыми** за счёт 2-категорной структуры Diakrisis — обязательства доказательств локализованы в конечных запятых-категориях, а не в глобальном поиске.
 
-### Memory
+### Память
 
-Для 1000 knowledge-objects × 100 claims × avg 5 dependencies:
-- Markdown storage: ~500 MB.
-- SQLite index: ~50 MB.
-- Memory working set: ~100 MB.
+Для 1000 объектов знания × 100 утверждений × в среднем 5 зависимостей:
+- Markdown-хранилище: ~500 МБ.
+- SQLite-индекс: ~50 МБ.
+- Рабочий набор в памяти: ~100 МБ.
 
-Scalability до 10⁶ claims за счёт:
-- Lazy loading.
-- Pagination в UI.
-- Sharded storage.
-- Federation для distributed load.
+Масштабируемость до 10⁶ утверждений за счёт:
+- Ленивой загрузки.
+- Пагинации в интерфейсе.
+- Шардированного хранилища.
+- Федерации для распределения нагрузки.
 
-### Performance engineering
+### Инженерия производительности
 
-**Hot paths**:
-- Status propagation: BFS с memoization.
-- Coherence audit: incremental, не full-rescan.
-- Kan extension: cached per functor.
-- Graph queries: SQLite с indices.
+**Горячие пути**:
+- Распространение статусов: BFS с мемоизацией.
+- Аудит когерентности: инкрементальный, не полный пересчёт.
+- Расширение Кана: кэшируется на каждый функтор.
+- Запросы к графу: SQLite с индексами.
 
-**GPU offload** (optional):
-- Embedding computation.
-- Similarity search.
-- Some Morita-equivalence detection.
+**Разгрузка на GPU** (опционально):
+- Вычисление эмбеддингов.
+- Поиск по сходству.
+- Часть детекции Морита-эквивалентности.
 
-## Security
+## Безопасность
 
-### Multi-tenancy
+### Мультиарендность
 
-- Organization-level isolation.
-- User-level permissions.
-- Claim-level access control (read/write/admin).
-- Audit trails per operation.
+- Изоляция на уровне организации.
+- Права доступа на уровне пользователя.
+- Контроль доступа на уровне утверждения (чтение/запись/админ).
+- Аудит-следы на каждую операцию.
 
-### Cryptographic guarantees
+### Криптографические гарантии
 
-- Signed commits (GPG).
-- SMT certificate signatures.
-- Federation protocol — mutual authentication.
-- At-rest encryption для sensitive domains.
+- Подписанные коммиты (GPG).
+- Подписи SMT-сертификатов.
+- Протокол федерации — взаимная аутентификация.
+- Шифрование при хранении для чувствительных доменов.
 
-### Compliance
+### Соответствие требованиям
 
-- GDPR, CCPA compliance для user data.
-- SOC2 Type II for enterprise deployments.
-- FedRAMP for government deployments.
-- HIPAA для healthcare applications.
+- Соответствие GDPR, CCPA для пользовательских данных.
+- SOC2 Type II для корпоративных развёртываний.
+- FedRAMP для государственных развёртываний.
+- HIPAA для приложений в здравоохранении.
 
-## Deployment topologies
+## Топологии развёртывания
 
-### Topology 1: Single-user local
+### Топология 1: Локальный одиночный пользователь
 
-- CLI + local storage.
-- Embedded LLM (Ollama, local Claude).
-- Single-machine SQLite.
-- Use case: individual researcher.
+- CLI + локальное хранилище.
+- Встроенный LLM (Ollama, локальный Claude).
+- SQLite на одной машине.
+- Случай применения: индивидуальный исследователь.
 
-### Topology 2: Team
+### Топология 2: Команда
 
-- Shared server.
-- Team-scoped workspaces.
-- Shared storage (Git + SQLite).
-- LLM: cloud API or self-hosted.
-- Use case: research group, small consulting firm.
+- Общий сервер.
+- Рабочие пространства уровня команды.
+- Общее хранилище (Git + SQLite).
+- LLM: облачный API или самостоятельное размещение.
+- Случай применения: исследовательская группа, небольшая консалтинговая фирма.
 
-### Topology 3: Enterprise
+### Топология 3: Корпоративное развёртывание
 
-- On-premises cluster.
-- Multi-tenant isolation.
-- Dedicated LLM (fine-tuned на domain corpus).
-- Storage: distributed filesystem.
-- Backup + disaster recovery.
-- Use case: Big Pharma, financial institution, aerospace.
+- Кластер на собственных серверах.
+- Мультиарендная изоляция.
+- Выделенный LLM (дообучен на доменном корпусе).
+- Хранилище: распределённая файловая система.
+- Резервное копирование + аварийное восстановление.
+- Случай применения: крупная фарма, финансовое учреждение, аэрокосмическая отрасль.
 
-### Topology 4: Federation
+### Топология 4: Федерация
 
-- Multiple organizations as nodes.
-- Cross-node sync.
-- Shared knowledge-graph с privacy zones.
-- Consensus on shared claims.
-- Use case: academic consortia, industry alliances.
+- Несколько организаций как узлы.
+- Межузловая синхронизация.
+- Разделяемый граф знаний с зонами конфиденциальности.
+- Консенсус по разделяемым утверждениям.
+- Случай применения: академические консорциумы, промышленные альянсы.
 
 ## Следующий шаг
 
@@ -486,4 +486,4 @@ Scalability до 10⁶ claims за счёт:
 
 Для детального NP: [04 — Операции](./04-operations).
 
-Для агент-layer: [05 — Агент](./05-agent).
+Для слоя агента: [05 — Агент](./05-agent).

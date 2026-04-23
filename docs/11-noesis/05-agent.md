@@ -3,7 +3,7 @@ sidebar_position: 5
 title: Агент — LLM как Giry-монадный оракул
 ---
 
-# Noesis Agent
+# Агент Noesis
 
 ## Роль LLM в Noesis
 
@@ -13,192 +13,192 @@ Noesis разделяет три ответственности:
 
 | Компонент | Что делает |
 |---|---|
-| **Diakrisis** | Устанавливает структурные пределы (axioms, TH-Final) |
-| **SMT gate** | Формальная проверка каждой операции |
-| **LLM agent** | Генерирует candidates + semantic understanding |
+| **Diakrisis** | Устанавливает структурные пределы (аксиомы, TH-Final) |
+| **SMT-фильтр** | Формальная проверка каждой операции |
+| **LLM-агент** | Порождает кандидатов + семантическое понимание |
 
-Agent **не** принимает решений — только **предлагает** structurally-valid candidates.
+Агент **не** принимает решений — только **предлагает** структурно-валидных кандидатов.
 
 ## Формализация: Giry-монадный оракул
 
 ### Теория
 
-LLM формализуется как **стохастический оракул** через Giry monad (Giry 1982):
+LLM формализуется как **стохастический оракул** через Giry-монаду (Giry 1982):
 
 $$\mathcal{A}: \text{Context} \to \mathcal{G}(\text{Operations})$$
 
-где 𝒢 — Giry monad (probability measures на measurable space operations).
+где 𝒢 — Giry-монада (вероятностные меры на измеримом пространстве операций).
 
-### Почему Giry monad
+### Почему Giry-монада
 
-- **Не deterministic**: LLM inherently non-deterministic.
-- **Probability-based**: выходы имеют confidence.
-- **Categorically natural**: monad laws satisfied.
-- **Composable**: can chain LLM calls formally.
-- **Measurable**: каждая операция — hedonic element of probability space.
+- **Не детерминирован**: LLM по своей природе недетерминирован.
+- **На основе вероятностей**: выходы имеют уверенность.
+- **Категорно естественна**: выполнены законы монады.
+- **Композируема**: можно формально сцеплять LLM-вызовы.
+- **Измерима**: каждая операция — элемент вероятностного пространства.
 
-### Giry monad laws
+### Законы Giry-монады
 
-Пусть $(X, \Sigma_X)$ — measurable space. Обозначим $\mathcal{G}(X)$ — пространство всех probability measures на $(X, \Sigma_X)$, снабжённое σ-алгеброй порождённой evaluation-maps $\mathrm{ev}_A: \mathcal{G}(X) \to [0,1]$, $\mu \mapsto \mu(A)$ для $A \in \Sigma_X$.
+Пусть $(X, \Sigma_X)$ — измеримое пространство. Обозначим $\mathcal{G}(X)$ — пространство всех вероятностных мер на $(X, \Sigma_X)$, снабжённое σ-алгеброй, порождённой отображениями оценивания $\mathrm{ev}_A: \mathcal{G}(X) \to [0,1]$, $\mu \mapsto \mu(A)$ для $A \in \Sigma_X$.
 
-**Unit** (Dirac embedding):
+**Единица** (вложение Дирака):
 $$\delta_X: X \to \mathcal{G}(X), \quad \delta_X(x)(A) = \mathbf{1}_A(x) = \begin{cases} 1 & x \in A \\ 0 & x \notin A \end{cases}$$
 
-**Multiplication** (Fubini integration):
+**Умножение** (интегрирование Фубини):
 $$\mu_X: \mathcal{G}(\mathcal{G}(X)) \to \mathcal{G}(X), \quad \mu_X(M)(A) = \int_{\mathcal{G}(X)} m(A) \, dM(m)$$
 
-**Monad laws** (проверяются через стандартные теоремы измеримости, Giry 1982):
+**Законы монады** (проверяются через стандартные теоремы измеримости, Giry 1982):
 
-$$\mu_X \circ \mathcal{G}(\delta_X) = \mathrm{id}_{\mathcal{G}(X)} \quad \text{(left unit)}$$
-$$\mu_X \circ \delta_{\mathcal{G}(X)} = \mathrm{id}_{\mathcal{G}(X)} \quad \text{(right unit)}$$
-$$\mu_X \circ \mathcal{G}(\mu_X) = \mu_X \circ \mu_{\mathcal{G}(X)} \quad \text{(associativity)}$$
+$$\mu_X \circ \mathcal{G}(\delta_X) = \mathrm{id}_{\mathcal{G}(X)} \quad \text{(левая единица)}$$
+$$\mu_X \circ \delta_{\mathcal{G}(X)} = \mathrm{id}_{\mathcal{G}(X)} \quad \text{(правая единица)}$$
+$$\mu_X \circ \mathcal{G}(\mu_X) = \mu_X \circ \mu_{\mathcal{G}(X)} \quad \text{(ассоциативность)}$$
 
-**Kleisli composition** (для composable stochastic agents): для $f: X \to \mathcal{G}(Y)$, $g: Y \to \mathcal{G}(Z)$:
+**Композиция Клейсли** (для композируемых стохастических агентов): для $f: X \to \mathcal{G}(Y)$, $g: Y \to \mathcal{G}(Z)$:
 
 $$(g \circ_\mathrm{Kl} f)(x)(C) = \int_Y g(y)(C) \, df(x)(y)$$
 
-Это — **композиция stochastic операций**, используемая для цепочки LLM-calls (retrieval → embedding → generation → SMT-filter).
+Это — **композиция стохастических операций**, используемая для цепочки LLM-вызовов (извлечение → эмбеддинг → порождение → SMT-фильтр).
 
-**Noesis-specific interpretation**:
+**Noesis-специфичная интерпретация**:
 
-- $X = \text{Context}$ — input contexts.
-- $Y = \text{Operations}$ — proposed operations.
-- $\mathcal{A}: \text{Context} \to \mathcal{G}(\text{Operations})$ — the agent as Kleisli morphism.
-- SMT-gate $\gamma: \text{Operations} \to \mathcal{G}(\text{Operations}_\text{valid})$ — deterministic filter lifted to Kleisli (через Dirac с noise для near-valid candidates).
-- Full pipeline: $\gamma \circ_\mathrm{Kl} \mathcal{A} \circ_\mathrm{Kl} \text{embed}$.
+- $X = \text{Context}$ — входные контексты.
+- $Y = \text{Operations}$ — предложенные операции.
+- $\mathcal{A}: \text{Context} \to \mathcal{G}(\text{Operations})$ — агент как морфизм Клейсли.
+- SMT-фильтр $\gamma: \text{Operations} \to \mathcal{G}(\text{Operations}_\text{valid})$ — детерминированный фильтр, поднятый в Клейсли (через Дирака с шумом для почти-валидных кандидатов).
+- Полный конвейер: $\gamma \circ_\mathrm{Kl} \mathcal{A} \circ_\mathrm{Kl} \text{embed}$.
 
 ## Архитектура агента
 
 ```
 ╔══════════════════════════════════════╗
-║       User query / system trigger    ║
+║   Запрос пользователя / триггер      ║
 ╚══════════════════╤═══════════════════╝
                    ↓
 ┌──────────────────────────────────────┐
-│      Context builder                  │
-│  - Load relevant graph subset         │
-│  - Add user history                   │
-│  - Include current state              │
+│      Сборщик контекста                │
+│  - Загрузка подмножества графа        │
+│  - Добавление истории пользователя    │
+│  - Включение текущего состояния       │
 └──────────────────┬───────────────────┘
                    ↓
 ┌──────────────────────────────────────┐
-│      LLM embedding                    │
-│  - Convert claims to vectors          │
-│  - Build candidate distribution       │
+│      LLM-эмбеддинг                    │
+│  - Утверждения в векторы              │
+│  - Распределение кандидатов           │
 └──────────────────┬───────────────────┘
                    ↓
 ┌──────────────────────────────────────┐
-│      Candidate generation             │
-│  - LLM inference                      │
-│  - Top-K candidates                   │
-│  - Softmax probability                │
+│      Порождение кандидатов            │
+│  - LLM-инференс                       │
+│  - Top-K кандидатов                   │
+│  - Softmax-вероятность                │
 └──────────────────┬───────────────────┘
                    ↓
 ┌──────────────────────────────────────┐
-│      SMT gate                         │
-│  - Category laws check                │
-│  - Functoriality                      │
-│  - Naturality                         │
+│      SMT-фильтр                       │
+│  - Категорные законы                  │
+│  - Функториальность                   │
+│  - Естественность                     │
 └──────────────────┬───────────────────┘
                    ↓
 ┌──────────────────────────────────────┐
-│      Diakrisis compliance             │
+│      Соответствие Diakrisis           │
 │  - Axi-0..9 + T-α + T-2f*             │
 │  - TH-Final ABSOLUTA_TOTALIS          │
-│  - 97.T tradeoff                      │
+│  - Компромисс 97.T                    │
 └──────────────────┬───────────────────┘
                    ↓
 ┌──────────────────────────────────────┐
-│      Accepted operations              │
-│  - Confidence-ranked                  │
-│  - SMT certificates                   │
-│  - Presentation to user               │
+│      Принятые операции                │
+│  - Ранжированы по уверенности         │
+│  - SMT-сертификаты                    │
+│  - Представление пользователю         │
 └──────────────────────────────────────┘
 ```
 
-## Five modes (Diakrisis-grounded extensions)
+## Пять режимов (расширения, заземлённые в Diakrisis)
 
-### Mode 1: Navigator
+### Режим 1: Навигатор
 
-**Назначение**: navigational queries.
-
-**Пример**:
-```
-User: "Где в UHM обсуждается связь φ и ρ*?"
-Agent: 
-  1. Search graph: find claims with tags [self-model, fixed-point].
-  2. Filter: in UHM knowledge.
-  3. Result: T-96, T-39, Axi-7 related.
-  4. Natural language summary с references.
-```
-
-### Mode 2: Auditor
-
-**Назначение**: coherence violation detection.
+**Назначение**: навигационные запросы.
 
 **Пример**:
 ```
-Agent autonomously scans:
-  - Status misalignment: claim X [T·L1] depends on Y [Г] → flag.
-  - Circular dependencies: A→B→C→A → flag.
-  - Contradictions: C1 contradicts C2, both [T] → flag.
-  - Functorial misalignment: F12 ∘ F23 ≠ F13 → flag.
-  - Empirical inconsistency: prediction vs experiment → flag.
+Пользователь: "Где в UHM обсуждается связь φ и ρ*?"
+Агент: 
+  1. Поиск в графе: утверждения с тегами [self-model, fixed-point].
+  2. Фильтр: в UHM.
+  3. Результат: T-96, T-39, Axi-7.
+  4. Резюме на естественном языке со ссылками.
 ```
 
-### Mode 3: Translator
+### Режим 2: Аудитор
 
-**Назначение**: cross-knowledge translation proposals.
+**Назначение**: обнаружение нарушений когерентности.
+
+**Пример**:
+```
+Агент автономно сканирует:
+  - Рассогласование статусов: утверждение X [T·L1] зависит от Y [Г] → сигнал.
+  - Циклические зависимости: A→B→C→A → сигнал.
+  - Противоречия: C1 противоречит C2, оба [Т] → сигнал.
+  - Функториальное рассогласование: F12 ∘ F23 ≠ F13 → сигнал.
+  - Эмпирическая несогласованность: предсказание vs эксперимент → сигнал.
+```
+
+### Режим 3: Переводчик
+
+**Назначение**: предложения кросс-доменных переводов.
 
 Главная функция, невозможная без LLM.
 
 **Пример**:
 ```
-User: "Как перевести IIT Φ в UHM terms?"
-Agent:
-  1. Compute Kan extension approximation.
-  2. Propose mapping: IIT:Φ → UHM:integration-measure (T-129).
-  3. Confidence: 0.72.
-  4. Obstruction: 0.28 (некоторые aspects lose).
-  5. Alternative: IIT:Φ → UHM:Φ_th-threshold, confidence 0.45.
-  6. Present both to user.
+Пользователь: "Как перевести IIT Φ в термины UHM?"
+Агент:
+  1. Вычислить аппроксимацию расширения Кана.
+  2. Предложить отображение: IIT:Φ → UHM:мера интеграции (T-129).
+  3. Уверенность: 0.72.
+  4. Препятствие: 0.28 (часть аспектов теряется).
+  5. Альтернатива: IIT:Φ → UHM:порог Φ_th, уверенность 0.45.
+  6. Представить оба пользователю.
 ```
 
-### Mode 4: Propagator
+### Режим 4: Распространитель
 
-**Назначение**: анализ ripple effects.
+**Назначение**: анализ волновых эффектов.
 
 **Пример**:
 ```
-User changes: T-96 status from [T·L1] to [С·L2].
-Agent:
-  1. BFS-traverse dependents.
-  2. Compute impact: 18 claims affected, 3 translations invalidated.
-  3. Analyze: are alternative chains exist? 
-     - For claim X: yes, via T-62 instead of T-96. No downgrade.
-     - For claim Y: no. Downgrade required.
-  4. Propose minimal set of changes.
-  5. Preview for user confirmation.
+Пользователь меняет: статус T-96 с [T·L1] на [С·L2].
+Агент:
+  1. BFS-обход зависимых.
+  2. Оценка воздействия: 18 утверждений затронуто, 3 перевода инвалидированы.
+  3. Анализ: существуют ли альтернативные цепочки? 
+     - Для утверждения X: да, через T-62 вместо T-96. Понижение не нужно.
+     - Для утверждения Y: нет. Требуется понижение.
+  4. Предложить минимальный набор изменений.
+  5. Предпросмотр для подтверждения пользователем.
 ```
 
-### Mode 5: Meta-auditor (double loop, L-II)
+### Режим 5: Мета-аудитор (двойная петля, L-II)
 
-**Назначение**: meta-level pattern detection.
+**Назначение**: обнаружение паттернов на мета-уровне.
 
 **Пример**:
 ```
-Agent observation over 6 months:
-  "В 4 из 5 consciousness theories систематически отсутствует мост к empirical data."
+Наблюдение агента за 6 месяцев:
+  "В 4 из 5 теорий сознания систематически отсутствует мост к эмпирическим данным."
   
-Proposal: new dependency type `empirical_test` + associated status `[empirically-testable]`.
+Предложение: новый тип зависимости `empirical_test` + сопутствующий статус `[empirically-testable]`.
 
-Recorded in T_meta with status [Г] (bounded by Lawvere, 87.T).
-User confirms → structural extension applied.
+Записано в T_meta со статусом [Г] (ограничено Ловиром, 87.T).
+Пользователь подтверждает → применяется структурное расширение.
 
-Noesis itself evolves based on its own observations (autopoiesis, L-III).
+Сам Noesis эволюционирует на основе собственных наблюдений (автопоэзис, L-III).
 ```
 
-## Конкретный алгоритм: functor_propose
+## Конкретный алгоритм: предложение функтора
 
 Формализация в Verum:
 
@@ -236,68 +236,68 @@ fn propose_functor(
 }
 ```
 
-## SMT gate: formal verification
+## SMT-фильтр: формальная верификация
 
-Каждое agent-предложение проходит SMT-проверку.
+Каждое предложение агента проходит SMT-проверку.
 
-**Verified properties**:
+**Верифицируемые свойства**:
 
-### Functoriality
+### Функториальность
 ```
 ∀F: A → B. F(id_A) = id_B
 ∀F: A → B, g, h: F(g ∘ h) = F(g) ∘ F(h)
 ```
 
-### Naturality
+### Естественность
 ```
-∀natural transformation η: F ⇒ G, ∀f: A → B:
+∀ естественное преобразование η: F ⇒ G, ∀f: A → B:
     η_B ∘ F(f) = G(f) ∘ η_A
 ```
 
-### Descent condition
+### Условие спуска
 ```
-∀covering {f_i: T_i → T}:
-    data on T ≅ limit of restricted data on T_i
+∀ покрытие {f_i: T_i → T}:
+    данные на T ≅ предел ограниченных данных на T_i
 ```
 
-### Epistemic monotonicity
+### Эпистемическая монотонность
 ```
-∀interpretation functor F: T_1 → T_2, ∀claim a:
+∀ функтор интерпретации F: T_1 → T_2, ∀ утверждение a:
     status(F(a)) ≥ status(a)
 ```
 
-### Diakrisis axioms
+### Аксиомы Diakrisis
 ```
 Axi-0..Axi-9 + T-α + T-2f*
 ```
 
-SMT backend: **Z3** + **CVC5** с Verum's native tactic DSL.
+SMT-бэкенд: **Z3** + **CVC5** с нативным DSL тактик Verum.
 
-Compilation time: ~100ms per candidate, ~5s для whole functor.
+Время компиляции: ~100 мс на кандидата, ~5 с для целого функтора.
 
-## Hallucination handling
+## Обработка галлюцинаций
 
-### Classical view
-LLM hallucinations — bug, требующий mitigation.
+### Классический взгляд
+Галлюцинации LLM — баг, требующий подавления.
 
-### Noesis view (по NO-9)
-Hallucinations — **fluctuations в path space ∞-groupoid**. Не bug, а feature — обеспечивает exploration.
+### Взгляд Noesis (по NO-9)
+Галлюцинации — **флуктуации в пространстве путей ∞-группоида**. Не баг, а функциональная возможность — обеспечивает исследование пространства.
 
-### Формальная модель hallucination
+### Формальная модель галлюцинации
 
-Определим **hallucination event** для output $o$ при context $c$:
+Определим **событие галлюцинации** для выхода $o$ при контексте $c$:
 
 $$H(o \mid c) := o \in \mathrm{supp}(\mathcal{A}(c)) \setminus \text{Operations}_\text{valid}(c)$$
 
-где Operations_valid(c) ⊂ Operations — the set of structurally-correct operations относительно Axi-0..9 + TH-Final + context constraints.
+где Operations_valid(c) ⊂ Operations — множество структурно-корректных операций относительно Axi-0..9 + TH-Final + ограничений контекста.
 
-**Naive LLM**: $\mathbb{P}(H \mid c) > 0$ для всех non-trivial $c$ (no filter).
+**Наивный LLM**: $\mathbb{P}(H \mid c) > 0$ для всех нетривиальных $c$ (без фильтра).
 
-**Noesis-gated LLM**: операция проходит pipeline $\gamma$ с SMT + Axi + TH-Final stages. Определим accepted output set:
+**LLM через фильтр Noesis**: операция проходит конвейер $\gamma$ со стадиями SMT + Axi + TH-Final. Определим множество принятых выходов:
 
 $$\text{Accepted}(c) = \gamma^{-1}([\text{pass}]) \subseteq \mathrm{supp}(\mathcal{A}(c))$$
 
-По конструкции γ (deterministic sound filter):
+По построению γ (детерминированный корректный фильтр):
 
 $$\text{Accepted}(c) \subseteq \text{Operations}_\text{valid}(c)$$
 
@@ -306,70 +306,70 @@ $$\text{Accepted}(c) \subseteq \text{Operations}_\text{valid}(c)$$
 $$\mathbb{P}(H(o) \mid o \in \text{Accepted}(c)) = 0 \quad (\text{NO-9})$$
 
 ### Контроль
-1. **SMT gate** отбрасывает structurally-invalid (soundness of Z3/CVC5).
-2. **Confidence threshold** фильтрует low-probability candidates (reduces false-negative на валидных).
-3. **Human-in-the-loop** для final acceptance (value judgments remain external).
+1. **SMT-фильтр** отбрасывает структурно-невалидные (корректность Z3/CVC5).
+2. **Порог уверенности** фильтрует кандидатов с низкой вероятностью (сокращает ложно-отрицательные на валидных).
+3. **Человек в цикле** для финального принятия (ценностные суждения остаются внешними).
 
-**Теорема NO-9**: Post-SMT, probability of accepting invalid operation = 0 (при корректном SMT backend).
+**Теорема NO-9**: после SMT вероятность принятия невалидной операции = 0 (при корректном SMT-бэкенде).
 
-**Важно**: NO-9 гарантирует **отсутствие false-positive** (invalid accepted). Не гарантирует **отсутствие false-negative** (valid rejected) — это допустимая цена soundness.
+**Важно**: NO-9 гарантирует **отсутствие ложно-положительных** (невалидное принято). Не гарантирует **отсутствие ложно-отрицательных** (валидное отклонено) — это допустимая цена корректности.
 
-## Context management
+## Управление контекстом
 
-### Context window
+### Контекстное окно
 
-Agent нуждается в relevant graph subset как context.
+Агенту нужно релевантное подмножество графа как контекст.
 
-**Strategy**:
-1. Query pre-analysis (semantic extraction).
-2. Initial graph pull (1-hop neighborhood).
-3. Iterative expansion (if agent needs more).
-4. Cap at configurable size (typical: 100 claims + dependencies).
+**Стратегия**:
+1. Предварительный анализ запроса (семантическое извлечение).
+2. Начальная выборка графа (окрестность 1 прыжка).
+3. Итеративное расширение (если агенту нужно больше).
+4. Ограничение по конфигурируемому размеру (обычно: 100 утверждений + зависимости).
 
-### Context compression
+### Сжатие контекста
 
-Для large knowledge-bases:
-- Summarize peripheral claims.
-- Keep core claims in full detail.
-- Include cross-theory translations.
-- LLM-assisted compression.
+Для крупных баз знаний:
+- Резюмирование периферийных утверждений.
+- Сохранение ключевых утверждений в полном виде.
+- Включение кросс-теоретических переводов.
+- Сжатие при помощи LLM.
 
-### Memory
+### Память
 
-Agent maintains:
-- Session-level: current dialogue state.
-- User-level: preferences, history.
-- Organization-level: shared context.
-- Never: private/restricted information в cross-organization federation.
+Агент поддерживает:
+- На уровне сессии: текущее состояние диалога.
+- На уровне пользователя: предпочтения, история.
+- На уровне организации: разделяемый контекст.
+- Никогда: приватная/ограниченная информация в кросс-организационной федерации.
 
-## LLM choice
+## Выбор LLM
 
-### Supported models
+### Поддерживаемые модели
 
-- **Claude Opus**: primary default (Anthropic).
-- **GPT-5**: alternative (OpenAI).
-- **Gemini Ultra**: alternative (Google).
-- **Mistral Large**: OSS alternative.
-- **Local fine-tuned**: domain-specific (e.g., bio-trained LLM для pharma domain).
+- **Claude Opus**: основной по умолчанию (Anthropic).
+- **GPT-5**: альтернатива (OpenAI).
+- **Gemini Ultra**: альтернатива (Google).
+- **Mistral Large**: альтернатива с открытым исходным кодом.
+- **Локальная дообученная**: доменно-специфичная (например, био-обученный LLM для фарма-домена).
 
-### Model selection strategy
+### Стратегия выбора модели
 
-- Default: Claude Opus for general queries.
-- Domain-specific: fine-tuned model для specialized domains.
-- Privacy-critical: local inference (Ollama, vLLM).
-- Cost-optimized: lighter models для simple navigation.
+- По умолчанию: Claude Opus для общих запросов.
+- Доменно-специфично: дообученная модель для специализированных доменов.
+- При требованиях к конфиденциальности: локальный инференс (Ollama, vLLM).
+- Оптимизация по стоимости: более лёгкие модели для простой навигации.
 
-### Multi-model ensemble
+### Ансамбль из нескольких моделей
 
-Для critical operations:
-- Query 3 models independently.
-- SMT-verify each.
-- Vote on final recommendation.
-- Increase confidence through concordance.
+Для критических операций:
+- Запрос к 3 моделям независимо.
+- SMT-верификация каждой.
+- Голосование по финальной рекомендации.
+- Повышение уверенности через совпадение.
 
-## Prompt engineering
+## Инженерия промптов
 
-### System prompt
+### Системный промпт
 
 ```
 You are Noesis Agent, a formal knowledge-management assistant operating within
@@ -385,75 +385,75 @@ Principles:
 When uncertain, propose multiple candidates with explicit obstructions.
 ```
 
-### Query templates
+### Шаблоны запросов
 
-Structured prompts для consistent behavior:
-- Navigation query template.
-- Translation proposal template.
-- Audit report template.
-- Meta-pattern detection template.
+Структурированные промпты для согласованного поведения:
+- Шаблон навигационного запроса.
+- Шаблон предложения перевода.
+- Шаблон отчёта аудита.
+- Шаблон обнаружения мета-паттерна.
 
-## Performance characteristics
+## Характеристики производительности
 
-### Latency
+### Задержка
 
-- Navigation query: <100ms.
-- Translation proposal (single claim): ~1s.
-- Full functor proposal (100 claims): ~30-60s.
-- Meta-audit scan: ~1-5 min на large knowledge-base.
+- Навигационный запрос: <100 мс.
+- Предложение перевода (одно утверждение): ~1 с.
+- Полное предложение функтора (100 утверждений): ~30–60 с.
+- Скан мета-аудита: ~1–5 мин на крупной базе знаний.
 
-### Throughput
+### Пропускная способность
 
-- Free tier: 100 req/min.
-- Pro: 1000 req/min.
-- Enterprise: configurable (scaled LLM inference).
+- Бесплатный тариф: 100 запросов/мин.
+- Pro: 1000 запросов/мин.
+- Корпоративный: конфигурируется (масштабируемый LLM-инференс).
 
-### Cost
+### Стоимость
 
-- LLM inference: dominated cost.
-- Fine-tuning: one-time for domain-specific.
-- SMT: amortized negligible.
+- LLM-инференс: доминирующая статья расходов.
+- Дообучение: разовое для доменно-специфичного.
+- SMT: амортизированно пренебрежимо мало.
 
-## Safety & alignment
+## Безопасность и согласование
 
-### Operational constraints
+### Операционные ограничения
 
-Agent **не** может:
-- Инициировать mutations без user confirmation (kроме trivial edits).
-- Share private data across organizations.
-- Propose operations нарушающие TH-Final.
-- Over-ride user explicit rejection.
+Агент **не** может:
+- Инициировать мутации без подтверждения пользователя (кроме тривиальных правок).
+- Делиться приватными данными между организациями.
+- Предлагать операции, нарушающие TH-Final.
+- Переопределять явное отклонение от пользователя.
 
-### Alignment techniques
+### Методы согласования
 
-- RLHF для domain-specific fine-tuning.
-- Constitutional AI approach (principles-based).
-- Red-teaming per domain.
-- Audit trails для every agent action.
+- RLHF для доменно-специфичного дообучения.
+- Подход Constitutional AI (на основе принципов).
+- Red-teaming по доменам.
+- Аудит-следы для каждого действия агента.
 
-### User override
+### Переопределение пользователем
 
-All agent proposals:
-- **Explainable** (agent/explain).
-- **Rejectable** (user final authority).
-- **Auditable** (history tracked).
-- **Reversible** (Git-backed).
+Все предложения агента:
+- **Объяснимы** (agent/explain).
+- **Отклонимы** (финальный авторитет у пользователя).
+- **Аудируемы** (история отслеживается).
+- **Обратимы** (с опорой на Git).
 
 ## Формальные теоремы
 
-### NO-3 [Т·L2]: Agent operations soundness
-Operations agent'а, прошедшие SMT gate + Axi-consistency check, не нарушают Diakrisis axiomatics.
+### NO-3 [Т·L2]: Корректность операций агента
+Операции агента, прошедшие SMT-фильтр + проверку согласованности с Axi, не нарушают аксиоматику Diakrisis.
 
-### NO-7 [Т·L2]: Monetization independence
-Agent capability (free vs pro vs enterprise) может различаться rate/latency, но не structural guarantees.
+### NO-7 [Т·L2]: Независимость от монетизации
+Возможности агента (бесплатный vs Pro vs корпоративный) могут различаться по скорости/задержке, но не по структурным гарантиям.
 
-### NO-9 [Т·L2]: Hallucination immunity
-P(invalid-operation-accepted | post-SMT) = 0.
+### NO-9 [Т·L2]: Иммунитет к галлюцинациям
+P(невалидная операция принята | после SMT) = 0.
 
 ## Следующий шаг
 
-Для meta-reflection layer: [06 — Meta-reflection](./06-meta-reflection).
+Для слоя мета-рефлексии: [06 — Мета-рефлексия](./06-meta-reflection).
 
-Для theorem catalog: [07 — Теоремы NO-\*](./07-theorems).
+Для каталога теорем: [07 — Теоремы NO-\*](./07-theorems).
 
-Для workflows: [08 — Workflow-паттерны](./08-workflows).
+Для сценариев: [08 — Сценарные паттерны](./08-workflows).

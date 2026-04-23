@@ -8,33 +8,33 @@ title: Verum-реализация
 ## Почему Verum
 
 Noesis требует **одновременно**:
-- Dependent types (для specification).
-- SMT verification (для structural correctness).
-- Systems performance (для scale).
-- GPU compute (для embeddings, similarity).
-- LLM inference (для agent).
-- HoTT primitives (для (∞,∞)-coherence).
-- Proof certificates (для export).
+- Зависимые типы (для спецификации).
+- SMT-верификацию (для структурной корректности).
+- Системную производительность (для масштаба).
+- GPU-вычисления (для эмбеддингов, сходства).
+- LLM-инференс (для агента).
+- HoTT-примитивы (для (∞,∞)-когерентности).
+- Сертификаты доказательств (для экспорта).
 
-**Verum — единственный stack, покрывающий все требования**.
+**Verum — единственный стек, покрывающий все требования**.
 
 ### Сравнение
 
 | Требование | Rust | Lean 4 | Agda | Verum |
 |---|---|---|---|---|
-| Dependent types | ✗ | ✓ | ✓ | ✓ |
-| SMT native | FFI | FFI | ✗ | ✓ |
-| Systems perf | ✓ | ✗ | ✗ | ✓ |
+| Зависимые типы | ✗ | ✓ | ✓ | ✓ |
+| Нативный SMT | FFI | FFI | ✗ | ✓ |
+| Системная произв-ть | ✓ | ✗ | ✗ | ✓ |
 | GPU | FFI | ✗ | ✗ | ✓ |
-| LLM integration | bindings | ✗ | ✗ | ✓ |
+| Интеграция LLM | bindings | ✗ | ✗ | ✓ |
 | HoTT | ✗ | ✗ | ✓ | ✓ |
-| Proof certificates | ✗ | Lean only | ✗ | 5 formats |
+| Сертификаты доказательств | ✗ | только Lean | ✗ | 5 форматов |
 
 ## Verum stdlib — базовая инфраструктура
 
-Существующие модули (3,781 lines):
+Существующие модули (3,781 строка):
 
-- `core/math/category.vr` — Functor, Monad, Adjunction, Yoneda, Kan extensions (1-cat).
+- `core/math/category.vr` — Functor, Monad, Adjunction, Yoneda, расширения Кана (1-категория).
 - `core/math/simplicial.vr` — SimplicialSet, KanComplex, InfinityGroupoid.
 - `core/math/infinity_category.vr` — QuasiCategory, InfinityFunctor.
 - `core/math/infinity_topos.vr` — Site, GrothendieckTopology, InfSheaf.
@@ -42,16 +42,16 @@ Noesis требует **одновременно**:
 - `core/math/fibration.vr` — GrothendieckFibration, Straightening.
 - `core/math/hott.vr` — Equiv, Fiber, univalence.
 - `core/math/operad.vr` — Multicategory, InfOperad.
-- `core/math/algebra.vr` — full algebraic hierarchy.
-- `core/math/logic.vr` — Curry-Howard (Prop, Proof, Decidable).
+- `core/math/algebra.vr` — полная алгебраическая иерархия.
+- `core/math/logic.vr` — Карри–Говард (Prop, Proof, Decidable).
 
-## Noesis-specific модули
+## Noesis-специфичные модули
 
 Новые модули для Verum stdlib:
 
 ### `core/math/noesis/primitive.vr`
 
-Реализация Diakrisis canonical primitive:
+Реализация канонического примитива Diakrisis:
 
 ```verum
 protocol Metacategory {
@@ -93,7 +93,7 @@ type Articulation = {
 
 ### `core/math/noesis/agent.vr`
 
-Giry-monadic LLM oracle:
+LLM-оракул в монаде Жири:
 
 ```verum
 protocol LlmOracle {
@@ -130,7 +130,7 @@ theorem no_9_hallucination_immunity:
 
 ### `core/math/noesis/storage.vr`
 
-Markdown + SQLite storage:
+Хранилище Markdown + SQLite:
 
 ```verum
 type KnowledgeObject = {
@@ -150,7 +150,7 @@ fn sync_from_git(repo: GitRepo) -> Result<WorkSpace, GitError>;
 
 ### `core/math/noesis/np_protocol.vr`
 
-Noesis Protocol (JSON-RPC):
+Протокол Noesis (JSON-RPC):
 
 ```verum
 type NpRequest = {
@@ -177,7 +177,7 @@ fn handle_request(req: NpRequest) -> NpResponse {
 
 ### `core/math/noesis/giry.vr`
 
-Formal Giry monad:
+Формальная монада Жири:
 
 ```verum
 type GiryMonad<A> = ProbabilityMeasure<A>;
@@ -196,112 +196,112 @@ theorem giry_monad_laws:
     associativity: forall (m, f, g), bind(bind(m, f), g) == bind(m, |x| bind(f(x), g));
 ```
 
-## SMT backend integration
+## Интеграция SMT-бэкенда
 
-### Backends
+### Бэкенды
 
-- **Z3**: default для category theory.
-- **CVC5**: alternative.
-- **Native Verum tactic DSL**: 30+ tactics.
+- **Z3**: по умолчанию для теории категорий.
+- **CVC5**: альтернатива.
+- **Нативный тактический DSL Verum**: 30+ тактик.
 
-### Tactics
+### Тактики
 
-- `auto` — general-purpose proof search.
-- `simp` — simplification.
-- `ring`, `field`, `omega` — algebra / arithmetic.
-- `category_simp` — categorical laws.
-- `descent_check` — descent condition.
-- `smt` — SMT-backed proof.
-- `blast` — heavy automation.
+- `auto` — общий поиск доказательств.
+- `simp` — упрощение.
+- `ring`, `field`, `omega` — алгебра / арифметика.
+- `category_simp` — категорные законы.
+- `descent_check` — условие спуска.
+- `smt` — доказательство с опорой на SMT.
+- `blast` — массивная автоматизация.
 
-### Proof certificates
+### Сертификаты доказательств
 
-Export formats:
-- Lean 4 certificate.
-- Coq certificate.
-- Agda certificate (limited).
-- Dedukti (universal).
+Форматы экспорта:
+- Сертификат Lean 4.
+- Сертификат Coq.
+- Сертификат Agda (ограниченный).
+- Dedukti (универсальный).
 - Metamath.
-- Verum native.
+- Нативный Verum.
 
-## GPU acceleration
+## GPU-ускорение
 
-### Embedded operations
+### Встроенные операции
 
-- Claim embedding (batch).
-- Cosine similarity computation.
-- Structural similarity matrices.
-- Morita-candidate search.
+- Эмбеддинг утверждений (пакетно).
+- Вычисление косинусной близости.
+- Матрицы структурного сходства.
+- Поиск кандидатов Мориты.
 
-### LLM inference
+### LLM-инференс
 
-- Local LLM serving (fine-tuned models).
-- Batched inference.
-- Multi-GPU scaling.
+- Локальное развёртывание LLM (дообученные модели).
+- Пакетный инференс.
+- Мультипроцессорное масштабирование GPU.
 
-### Structural operations
+### Структурные операции
 
-- Large matrix operations for category computations.
-- Graph algorithms on GPU.
+- Большие матричные операции для категорных вычислений.
+- Графовые алгоритмы на GPU.
 
-## Performance
+## Производительность
 
-### Targets
+### Целевые показатели
 
-- Navigation query: <100ms.
-- Single-claim coherence: <10ms.
-- Full-theory audit: <1s on 1000 claims.
-- Kan extension computation: <5s on medium theories.
-- Federation sync: <30s on 1M claims.
+- Навигационный запрос: <100 мс.
+- Когерентность одного утверждения: <10 мс.
+- Аудит всей теории: <1 с на 1000 утверждениях.
+- Вычисление расширения Кана: <5 с на средних теориях.
+- Синхронизация федерации: <30 с на 1M утверждений.
 
-### Optimization
+### Оптимизация
 
-- Lazy evaluation.
-- Incremental audits.
-- Cached computations.
-- Parallel processing.
-- Memory-mapped storage.
+- Ленивые вычисления.
+- Инкрементальные аудиты.
+- Кэшированные вычисления.
+- Параллельная обработка.
+- Хранилище с отображением в память.
 
-## Deployment
+## Развёртывание
 
-### Local
+### Локальное
 
-Single binary, embedded LLM (via Ollama), local SQLite.
-- Platforms: macOS, Linux, Windows.
-- Resource: 8GB RAM minimum.
+Один бинарный файл, встроенная LLM (через Ollama), локальный SQLite.
+- Платформы: macOS, Linux, Windows.
+- Ресурсы: 8GB RAM минимум.
 
-### Server
+### Серверное
 
-Multi-user server deployment.
-- Docker containers.
-- Kubernetes-ready.
-- Cloud providers: AWS, GCP, Azure.
-- Self-hosted options.
+Многопользовательское серверное развёртывание.
+- Контейнеры Docker.
+- Готовность к Kubernetes.
+- Облачные провайдеры: AWS, GCP, Azure.
+- Варианты самостоятельного размещения.
 
-### Enterprise
+### Корпоративное
 
 On-premises / air-gapped.
-- FedRAMP certified deployment option.
-- HIPAA-compliant configuration.
-- FIPS 140-2 crypto.
-- Audit logging.
+- Вариант развёртывания с сертификацией FedRAMP.
+- Конфигурация с соответствием HIPAA.
+- Криптография FIPS 140-2.
+- Журналирование аудита.
 
-## Development
+## Разработка
 
-### Open-source core
+### Открытое ядро
 
-Noesis.Core — open source (license TBD: Apache 2.0 / MPL).
-- Community contributions welcomed.
-- Extensibility API.
-- Plugin system.
+Noesis.Core — открытый исходный код (лицензия TBD: Apache 2.0 / MPL).
+- Вклад сообщества приветствуется.
+- API расширяемости.
+- Плагинная система.
 
-### Proprietary extensions
+### Проприетарные расширения
 
-- Advanced domain packs.
-- Enterprise integrations.
-- Custom LLMs fine-tuning.
+- Продвинутые доменные пакеты.
+- Корпоративные интеграции.
+- Дообучение собственных LLM.
 
-### Build from source
+### Сборка из исходников
 
 ```bash
 git clone https://github.com/noesis/noesis-core
@@ -310,10 +310,10 @@ verum build --release
 verum test
 ```
 
-Build time: ~10 minutes first, ~1 minute incremental.
+Время сборки: ~10 минут при первой, ~1 минута инкрементально.
 
 ## Следующий шаг
 
-Monetization: [17 — Монетизация](./17-monetization).
+Монетизация: [17 — Монетизация](./17-monetization).
 
-Roadmap: [18 — Roadmap](./18-roadmap).
+План развития: [18 — Roadmap](./18-roadmap).

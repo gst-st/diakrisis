@@ -3,69 +3,69 @@ sidebar_position: 23
 title: Усиление LLM через Diakrisis
 ---
 
-# LLM augmentation: структурное усиление языковых моделей
+# Усиление LLM: структурное расширение языковых моделей
 
-## Диагноз: ограничения current LLMs
+## Диагноз: ограничения современных LLM
 
-**Large Language Models** — мощные, но страдают от **фундаментальных ограничений**:
+**Большие языковые модели** — мощные, но страдают от **фундаментальных ограничений**:
 
-### Ограничение 1: hallucination
+### Ограничение 1: галлюцинации
 
-- LLM generates plausible-but-false content.
-- No internal distinction между fact и fabrication.
-- Confidence scores unreliable.
+- LLM порождает правдоподобное, но ложное содержание.
+- Нет внутреннего различия между фактом и фабрикацией.
+- Оценки уверенности ненадёжны.
 
-**Причина**: LLM trained на correlation, не structure.
+**Причина**: LLM обучается на корреляциях, а не на структуре.
 
-### Ограничение 2: context window limitations
+### Ограничение 2: ограничения контекстного окна
 
-- Fixed maximum context (100K-1M tokens).
-- Long documents truncated.
-- Cross-document reasoning limited.
+- Фиксированный максимум контекста (100K-1M токенов).
+- Длинные документы обрезаются.
+- Кросс-документные рассуждения ограничены.
 
-**Причина**: architectural.
+**Причина**: архитектурная.
 
-### Ограничение 3: reasoning fragility
+### Ограничение 3: хрупкость рассуждений
 
-- Long reasoning chains accumulate errors.
-- Multi-step inference degrades.
-- Formal verification absent.
+- Длинные цепочки рассуждений накапливают ошибки.
+- Многошаговый вывод деградирует.
+- Формальная верификация отсутствует.
 
-**Причина**: statistical next-token prediction, not deductive.
+**Причина**: статистическое предсказание следующего токена, а не дедукция.
 
-### Ограничение 4: knowledge cutoff
+### Ограничение 4: граница знаний
 
-- Static training data.
-- No access к latest research.
-- Cannot learn without retraining.
+- Статические обучающие данные.
+- Нет доступа к последним исследованиям.
+- Невозможно учиться без переобучения.
 
-### Ограничение 5: no self-reflection
+### Ограничение 5: нет саморефлексии
 
-- LLM cannot reliably evaluate own outputs.
-- Cannot distinguish own errors.
-- Confidence calibration poor.
+- LLM не может надёжно оценивать собственные выходы.
+- Не может различить собственные ошибки.
+- Калибровка уверенности плохая.
 
-### Ограничение 6: no formal guarantees
+### Ограничение 6: нет формальных гарантий
 
-- Black-box.
-- Opacity.
-- Trust requires external verification.
+- Чёрный ящик.
+- Непрозрачность.
+- Доверие требует внешней верификации.
 
-## Решение: Noesis как structural scaffolding для LLM
+## Решение: Noesis как структурный каркас для LLM
 
-По **NO-9** (Giry-monadic oracle):
+По **NO-9** (Giry-монадический оракул):
 
 $$
 \phi: \text{Claim}_\text{draft} \to \mathcal{G}(\text{Claim}_\text{valid})
 $$
 
-LLM становится **probability distribution over structured outputs**, not arbitrary text.
+LLM становится **вероятностным распределением над структурированными выходами**, а не произвольным текстом.
 
-## Архитектура augmentation
+## Архитектура усиления
 
-### Слой 1: structured prompting
+### Слой 1: структурированный промптинг
 
-Вместо free-text prompts:
+Вместо свободнотекстовых промптов:
 
 ```
 Traditional: "Prove the Riemann hypothesis."
@@ -82,47 +82,47 @@ Noesis-structured:
   quality_gate: "SMT + axiom-check + counter-example search"
 ```
 
-### Слой 2: retrieval from structured knowledge
+### Слой 2: извлечение из структурированного знания
 
-Вместо RAG through unstructured corpus:
+Вместо RAG через неструктурированный корпус:
 
-- Query Noesis knowledge graph.
-- Получить typed dependencies.
-- Claims с verified statuses.
-- Related lemmas sorted by relevance structurally.
+- Запрос к графу знаний Noesis.
+- Получение типизированных зависимостей.
+- Утверждения с верифицированными статусами.
+- Связанные леммы, отсортированные по релевантности структурно.
 
-**Result**: LLM reasoning grounded в verified facts, not plausibilities.
+**Результат**: рассуждения LLM основаны на верифицированных фактах, а не на правдоподобиях.
 
-### Слой 3: proof-level verification
+### Слой 3: верификация на уровне доказательства
 
-Every LLM output:
+Каждый выход LLM:
 
-- Parsed structurally.
-- Each claim SMT-checked.
-- Dependencies verified.
-- Hallucinations caught before output.
+- Разбирается структурно.
+- Каждое утверждение проверяется SMT.
+- Зависимости верифицируются.
+- Галлюцинации перехватываются до выдачи.
 
-### Слой 4: feedback loop
+### Слой 4: цикл обратной связи
 
-- LLM generates attempt.
-- Noesis verifies.
-- If failed: structural feedback ("Claim X violates constraint Y").
-- LLM retries с improved context.
-- Convergence faster than naive.
+- LLM порождает попытку.
+- Noesis верифицирует.
+- Если провалилась: структурная обратная связь («Утверждение X нарушает ограничение Y»).
+- LLM повторяет попытку с улучшенным контекстом.
+- Сходимость быстрее наивной.
 
-### Слой 5: meta-reasoning
+### Слой 5: мета-рассуждение
 
-LLM + Noesis может reason **about its own reasoning**:
+LLM + Noesis может рассуждать **о собственных рассуждениях**:
 
-- "My previous attempt used axiom Z — is this sufficient?"
-- "Counter-example at [context] — need to refine premise."
-- "Structural gap between claims A and B — need intermediate lemma."
+- «Моя предыдущая попытка использовала аксиому Z — достаточно ли этого?»
+- «Контрпример в [контексте] — нужно уточнить посылку.»
+- «Структурный пробел между утверждениями A и B — нужна промежуточная лемма.»
 
-**T_meta layer** enables this.
+Это обеспечивает **слой T_meta**.
 
-## Concrete LLM operations в Noesis
+## Конкретные операции LLM в Noesis
 
-### OP 1: claim verification
+### OP 1: верификация утверждения
 
 ```
 verify_claim(llm_output, context)
@@ -132,7 +132,7 @@ verify_claim(llm_output, context)
   → return verification_report
 ```
 
-### OP 2: structural generation
+### OP 2: структурированное порождение
 
 ```
 generate_structured(query, constraints)
@@ -141,7 +141,7 @@ generate_structured(query, constraints)
   → return valid_outputs[]
 ```
 
-### OP 3: guided reasoning
+### OP 3: управляемое рассуждение
 
 ```
 guided_reason(problem, goal)
@@ -152,7 +152,7 @@ guided_reason(problem, goal)
   → return proof или structural_gap_report
 ```
 
-### OP 4: meta-critique
+### OP 4: мета-критика
 
 ```
 meta_critique(llm_reasoning)
@@ -162,7 +162,7 @@ meta_critique(llm_reasoning)
   → return critique_report
 ```
 
-### OP 5: cross-foundation translation
+### OP 5: перевод между основаниями
 
 ```
 translate_output(claim, source_fdn, target_fdn)
@@ -172,7 +172,7 @@ translate_output(claim, source_fdn, target_fdn)
   → return verified_translation
 ```
 
-### OP 6: hypothesis generation
+### OP 6: порождение гипотез
 
 ```
 generate_hypotheses(domain, observations)
@@ -182,11 +182,11 @@ generate_hypotheses(domain, observations)
   → return ranked_hypotheses[]
 ```
 
-## Agent modes formalized
+## Формализованные режимы Агента
 
-### Mode 1: Navigator
+### Режим 1: Навигатор
 
-**Задача**: ответить на query through structured retrieval.
+**Задача**: ответить на запрос через структурированное извлечение.
 
 ```
 navigate(query)
@@ -197,11 +197,11 @@ navigate(query)
   → return verified_response
 ```
 
-**Improvement over RAG+LLM**: zero hallucinations (structural constraint).
+**Улучшение над RAG+LLM**: нулевые галлюцинации (структурное ограничение).
 
-### Mode 2: Auditor
+### Режим 2: Аудитор
 
-**Задача**: verify existing claims or theories.
+**Задача**: верифицировать существующие утверждения или теории.
 
 ```
 audit(theory)
@@ -212,11 +212,11 @@ audit(theory)
   → return audit_report
 ```
 
-**Improvement**: catches subtle errors humans miss.
+**Улучшение**: ловит тонкие ошибки, которые упускают люди.
 
-### Mode 3: Translator
+### Режим 3: Переводчик
 
-**Задача**: cross-foundation or cross-domain translation.
+**Задача**: перевод между основаниями или доменами.
 
 ```
 translate(content, source, target)
@@ -226,11 +226,11 @@ translate(content, source, target)
   → return verified_translation
 ```
 
-**Improvement**: exact correspondence, not approximate analogy.
+**Улучшение**: точное соответствие, а не приближённая аналогия.
 
-### Mode 4: Propagator
+### Режим 4: Распространитель
 
-**Задача**: infer consequences of new facts.
+**Задача**: выводить следствия новых фактов.
 
 ```
 propagate(new_claim)
@@ -240,11 +240,11 @@ propagate(new_claim)
   → return impact_report
 ```
 
-**Improvement**: complete coverage, no missed implications.
+**Улучшение**: полное покрытие, нет пропущенных импликаций.
 
-### Mode 5: Meta-Auditor
+### Режим 5: Мета-Аудитор
 
-**Задача**: reflect on own operations.
+**Задача**: рефлексировать о собственных операциях.
 
 ```
 meta_audit(agent_history)
@@ -254,191 +254,191 @@ meta_audit(agent_history)
   → return meta_report
 ```
 
-**Improvement**: self-improving system.
+**Улучшение**: самосовершенствующаяся система.
 
-## Specific scenarios
+## Конкретные сценарии
 
-### Scenario 1: Research assistant
+### Сценарий 1: ассистент исследователя
 
-**Traditional**: LLM chats about research, potentially hallucinates.
+**Традиционно**: LLM общается об исследованиях, потенциально галлюцинирует.
 
-**Noesis-augmented**:
-1. User asks about result in specific field.
-2. Noesis retrieves structurally relevant claims.
-3. LLM synthesizes explanation from verified facts.
-4. Output включает Т/С/Г statuses.
-5. User has **trusted** information.
+**С усилением Noesis**:
+1. Пользователь спрашивает о результате в конкретной области.
+2. Noesis извлекает структурно релевантные утверждения.
+3. LLM синтезирует объяснение из верифицированных фактов.
+4. Вывод включает статусы Т/С/Г.
+5. Пользователь получает **доверенную** информацию.
 
-### Scenario 2: Mathematical proof assistant
+### Сценарий 2: математический proof-ассистент
 
-**Traditional**: LLM proposes proofs that look plausible but fail verification.
+**Традиционно**: LLM предлагает доказательства, которые выглядят правдоподобно, но проваливают верификацию.
 
-**Noesis + Verum augmented**:
-1. User states theorem.
-2. LLM proposes proof sketch.
-3. Verum verifies each step.
-4. Failed steps → LLM iterates.
-5. Final proof **formally verified**.
+**С усилением Noesis + Verum**:
+1. Пользователь формулирует теорему.
+2. LLM предлагает эскиз доказательства.
+3. Verum верифицирует каждый шаг.
+4. Проваленные шаги → LLM итерирует.
+5. Финальное доказательство **формально верифицировано**.
 
-### Scenario 3: Policy analysis
+### Сценарий 3: анализ политик
 
-**Traditional**: LLM analyzes legislation, may miss structural issues.
+**Традиционно**: LLM анализирует законодательство, может упустить структурные проблемы.
 
-**Noesis-augmented**:
-1. Legislation structurally parsed.
-2. Cross-references verified.
-3. LLM explains structural analysis.
-4. Potential gaps flagged rigorously.
-5. Analysis **traceable**.
+**С усилением Noesis**:
+1. Законодательство структурно разобрано.
+2. Перекрёстные ссылки верифицированы.
+3. LLM объясняет структурный анализ.
+4. Потенциальные пробелы строго отмечены.
+5. Анализ **прослеживаем**.
 
-### Scenario 4: Engineering design
+### Сценарий 4: инженерный проект
 
-**Traditional**: LLM generates designs, may contain inconsistencies.
+**Традиционно**: LLM порождает проекты, могут содержать несогласованности.
 
-**Noesis-augmented**:
-1. Requirements formally captured.
-2. LLM proposes design.
-3. Structural consistency verified.
-4. Physical laws enforced как constraints.
-5. Design **verifiably correct**.
+**С усилением Noesis**:
+1. Требования формально зафиксированы.
+2. LLM предлагает проект.
+3. Структурная согласованность верифицирована.
+4. Физические законы применены как ограничения.
+5. Проект **верифицируемо корректен**.
 
-### Scenario 5: Medical consultation
+### Сценарий 5: медицинская консультация
 
-**Traditional**: LLM as medical advisor — dangerous, hallucinations.
+**Традиционно**: LLM как медицинский советник — опасно, галлюцинации.
 
-**Noesis-augmented**:
-1. Medical knowledge graph accessed.
-2. Patient symptoms structurally parsed.
-3. LLM suggests differentials based on **verified** medical literature.
-4. Confidence calibrated structurally.
-5. Physician remains decision-maker.
+**С усилением Noesis**:
+1. Доступ к медицинскому графу знаний.
+2. Симптомы пациента структурно разобраны.
+3. LLM предлагает дифференциалы на основе **верифицированной** медицинской литературы.
+4. Уверенность калибруется структурно.
+5. Врач остаётся лицом, принимающим решения.
 
-## Formal properties
+## Формальные свойства
 
-### NO-9 theorem (central)
+### Теорема NO-9 (центральная)
 
-SMT-gate guarantees output satisfies specified constraints.
+SMT-фильтр гарантирует, что вывод удовлетворяет заданным ограничениям.
 
 $$
 \text{Output}(\phi) \subseteq \text{Constraints}
 $$
 
-**Consequence**: zero hallucinations within constraint boundary.
+**Следствие**: нулевые галлюцинации внутри границы ограничения.
 
-### NO-13 theorem (coherence)
+### Теорема NO-13 (когерентность)
 
-LLM-generated content integrated into knowledge graph preserves coherence.
+Порождённое LLM содержание, интегрированное в граф знаний, сохраняет когерентность.
 
 $$
 \text{KG} \cup \{\text{LLM-output}\} \text{ coherent} \iff \text{SMT-gate passes}
 $$
 
-### Self-reference theorem (Lawvere-bounded)
+### Теорема самореференции (Lawvere-ограничение)
 
-LLM + Noesis self-reflection bounded:
+Саморефлексия LLM + Noesis ограничена:
 
-- Can reason about Level N (object-level).
-- Can reason about Level N+1 (meta-level).
-- **Cannot** capture all truths about Level N+1 within Level N+1.
+- Может рассуждать об уровне N (объектный уровень).
+- Может рассуждать об уровне N+1 (мета-уровень).
+- **Не может** захватить все истины об уровне N+1 внутри уровня N+1.
 
-Prevents infinite recursion, maintains soundness.
+Предотвращает бесконечную рекурсию, поддерживает корректность.
 
-## LLM evolution through Noesis
+## Эволюция LLM через Noesis
 
-### Training improvements
+### Улучшения обучения
 
-**Standard LLM training**: next-token prediction on unstructured text.
+**Стандартное обучение LLM**: предсказание следующего токена на неструктурированном тексте.
 
-**Noesis-informed training**:
-- Structured data: (claim, status, dependencies, verification).
-- Model learns structural correspondence.
-- Output distributions already filtered through SMT-gate.
+**Обучение, информированное Noesis**:
+- Структурированные данные: (утверждение, статус, зависимости, верификация).
+- Модель обучается структурному соответствию.
+- Распределения выходов уже отфильтрованы через SMT-фильтр.
 
-**Result**: base LLM capability improved — less hallucinations baseline.
+**Результат**: базовая способность LLM улучшена — меньше галлюцинаций по умолчанию.
 
-### Fine-tuning
+### Дообучение
 
-- LLMs fine-tuned на Noesis-verified corpus.
-- Less hallucinations baseline.
-- Better calibration.
-- Domain-specific improvements.
+- LLM дообучаются на Noesis-верифицированном корпусе.
+- Меньше галлюцинаций по умолчанию.
+- Лучшая калибровка.
+- Улучшения, специфичные для домена.
 
-### RLHF improvements
+### Улучшения RLHF
 
-- Reward signal **structural**: passes SMT-gate = positive reward.
-- Fails = negative.
-- Exact **objective**, not proxy.
+- Сигнал вознаграждения **структурный**: прошло SMT-фильтр = положительное вознаграждение.
+- Провалилось = отрицательное.
+- Точная **целевая функция**, а не прокси.
 
-**Expected outcome**: LLMs trained this way show measurably reduced hallucinations (hypothesis testable).
+**Ожидаемый результат**: LLM, обученные таким способом, показывают измеримо сниженные галлюцинации (гипотеза проверяема).
 
-### Multi-modal extension
+### Мульти-модальное расширение
 
-LLM handling:
-- Text.
-- Code.
-- Math formulas (parsed structurally).
-- Diagrams (as structured objects).
-- All unified through Noesis.
+LLM обрабатывает:
+- Текст.
+- Код.
+- Математические формулы (разобранные структурно).
+- Диаграммы (как структурированные объекты).
+- Всё унифицировано через Noesis.
 
-### Specialized LLMs
+### Специализированные LLM
 
-- **Math-LLM**: trained for structural proof generation.
-- **Science-LLM**: trained for hypothesis / experiment design.
-- **Legal-LLM**: trained for regulatory analysis.
-- **Engineering-LLM**: trained for system verification.
+- **Math-LLM**: обучена для структурного порождения доказательств.
+- **Science-LLM**: обучена для порождения гипотез / проектирования экспериментов.
+- **Legal-LLM**: обучена для регуляторного анализа.
+- **Engineering-LLM**: обучена для верификации систем.
 
-Each integrated through Noesis API.
+Каждая интегрирована через API Noesis.
 
-## Benchmark improvements (expected)
+## Улучшения в тестах (ожидаемые)
 
-### Hallucination rates
+### Показатели галлюцинаций
 
-**Traditional LLM**: 5-20% hallucination rate depending on task.
+**Традиционная LLM**: 5-20% показатель галлюцинаций в зависимости от задачи.
 
-**Noesis-gated LLM**: approaches 0% within verifiable boundary (unverifiable claims explicitly flagged).
+**LLM с фильтром Noesis**: приближается к 0% внутри верифицируемой границы (неверифицируемые утверждения явно отмечены).
 
-**Note**: this is an architectural expectation, not a measured result; empirical validation requires benchmark studies.
+**Примечание**: это архитектурное ожидание, а не измеренный результат; эмпирическая валидация требует тестовых исследований.
 
-### Reasoning accuracy
+### Точность рассуждений
 
-- Multi-step math: gated model expected to reach >95%.
-- Logical inference: comparable improvement.
-- Cross-domain: dramatic improvement где structural translation possible.
+- Многошаговая математика: ожидается, что фильтрованная модель достигнет >95%.
+- Логический вывод: сравнимое улучшение.
+- Кросс-доменные задачи: драматическое улучшение там, где возможен структурный перевод.
 
-### Calibration
+### Калибровка
 
-- Confidence scores structural (depth in SMT tree, dependency coverage).
-- Better than LLM-estimated probabilities.
+- Оценки уверенности структурные (глубина в SMT-дереве, покрытие зависимостей).
+- Лучше вероятностей, оценённых LLM.
 
-### Consistency
+### Согласованность
 
-- Zero contradictions within session.
-- Cross-session consistency verified через Noesis state.
+- Нулевые противоречия внутри сессии.
+- Межсессионная согласованность верифицирована через состояние Noesis.
 
-## Cost-benefit analysis
+## Анализ затрат и выгод
 
-### Computational cost
+### Вычислительные затраты
 
-- SMT verification: 0.1-10 seconds per claim.
-- Kan extension: 1-100 seconds for translation.
-- **Overhead**: 10-100% over raw LLM inference.
+- SMT-верификация: 0.1-10 секунд на утверждение.
+- Kan-расширение: 1-100 секунд на перевод.
+- **Накладные расходы**: 10-100% над сырым инференсом LLM.
 
-### Quality gain
+### Выигрыш в качестве
 
-- Hallucinations eliminated: substantial.
-- Trust increased: substantial.
-- Applicability expanded: substantial.
+- Галлюцинации устранены: существенно.
+- Доверие увеличено: существенно.
+- Применимость расширена: существенно.
 
-### Net value
+### Чистая ценность
 
-- For high-stakes applications (medical, legal, scientific): massive net positive.
-- For casual use: modest overhead, real value.
+- Для высокоставочных применений (медицинских, юридических, научных): массивный чистый положительный эффект.
+- Для повседневного использования: умеренные накладные расходы, реальная ценность.
 
-## Integration with existing LLMs
+## Интеграция с существующими LLM
 
 ### OpenAI / Anthropic / Google Deepmind
 
-Noesis API wraps external LLMs:
+API Noesis обёртывает внешние LLM:
 
 ```python
 noesis_response = noesis.query(
@@ -449,224 +449,224 @@ noesis_response = noesis.query(
 )
 ```
 
-LLM generates → Noesis gates → verified output.
+LLM порождает → Noesis фильтрует → верифицированный вывод.
 
-### Local models (Ollama, vLLM)
+### Локальные модели (Ollama, vLLM)
 
-- Noesis runs local.
-- LLM local or API.
-- Full privacy preservation.
+- Noesis работает локально.
+- LLM локально или через API.
+- Полное сохранение конфиденциальности.
 
-### Fine-tuned models
+### Дообученные модели
 
-- Noesis-trained models deliver gated outputs по default.
-- Less computational overhead.
-- Better base quality.
+- Noesis-обученные модели выдают отфильтрованные выходы по умолчанию.
+- Меньше вычислительных накладных расходов.
+- Лучшее базовое качество.
 
-## Applications in scientific research
+## Применения в научных исследованиях
 
-### Literature review
+### Обзор литературы
 
-**Traditional**: researcher reads 100+ papers, takes weeks.
-
-**Noesis + LLM**:
-1. Query: "All work on X in last 5 years."
-2. Noesis retrieves structurally.
-3. LLM summarizes patterns.
-4. Gaps identified automatically.
-5. **Hours**, not weeks.
-
-### Hypothesis generation
-
-**Traditional**: creative insight.
+**Традиционно**: исследователь читает 100+ статей, занимает недели.
 
 **Noesis + LLM**:
-1. Structural analysis of field.
-2. Gaps identified.
-3. LLM proposes hypotheses filling gaps.
-4. Testable, structurally sound.
-5. Researcher selects best.
+1. Запрос: «Все работы по X за последние 5 лет.»
+2. Noesis извлекает структурно.
+3. LLM обобщает закономерности.
+4. Пробелы выявляются автоматически.
+5. **Часы**, а не недели.
 
-### Experiment design
+### Порождение гипотез
 
-**Traditional**: expertise + intuition.
-
-**Noesis + LLM**:
-1. Research question formal.
-2. Methodology constraints from field.
-3. LLM proposes designs.
-4. Structural validity checked.
-5. Power analysis automated.
-
-### Peer review support
-
-(Combining с Chapter 22)
-- LLM reads manuscript.
-- Noesis checks structure.
-- Reviewer focuses на judgment.
-
-## Applications in engineering
-
-### Code generation
-
-**Traditional**: Copilot suggests code — may have bugs.
+**Традиционно**: творческий инсайт.
 
 **Noesis + LLM**:
-1. Specification formal.
-2. LLM generates code.
-3. Structural verification.
-4. Type-checking, contract-checking.
-5. Verified code.
+1. Структурный анализ области.
+2. Пробелы выявлены.
+3. LLM предлагает гипотезы, заполняющие пробелы.
+4. Тестируемые, структурно обоснованные.
+5. Исследователь выбирает лучшие.
 
-### System design
+### Проектирование эксперимента
 
-**Traditional**: architects design informally.
+**Традиционно**: экспертиза + интуиция.
 
 **Noesis + LLM**:
-1. Requirements formal.
-2. LLM proposes architecture.
-3. Structural analysis.
-4. Invariants verified.
-5. Formally-backed design.
+1. Исследовательский вопрос формализован.
+2. Методологические ограничения из области.
+3. LLM предлагает проекты.
+4. Структурная валидность проверена.
+5. Анализ мощности автоматизирован.
 
-### Testing
+### Поддержка peer review
 
-- Test cases generated from specification.
-- Coverage structural.
-- Edge cases identified.
+(В сочетании с Главой 22)
+- LLM читает рукопись.
+- Noesis проверяет структуру.
+- Рецензент фокусируется на суждении.
 
-## Applications in education
+## Применения в инженерии
 
-### Tutoring
+### Порождение кода
 
-**Traditional**: Chat-GPT как tutor — может confuse students with wrong answers.
+**Традиционно**: Copilot предлагает код — может иметь ошибки.
 
-**Noesis-augmented tutor**:
-1. Student asks question.
-2. Noesis grounds answer в verified knowledge.
-3. LLM explains naturally.
-4. **Correct** answer guaranteed.
-5. Learning progress tracked structurally.
+**Noesis + LLM**:
+1. Спецификация формальная.
+2. LLM порождает код.
+3. Структурная верификация.
+4. Проверка типов, проверка контрактов.
+5. Верифицированный код.
 
-### Adaptive learning
+### Проектирование систем
 
-- Student's current understanding structurally mapped.
-- Gaps identified.
-- Personalized curriculum.
-- Progress tracked.
+**Традиционно**: архитекторы проектируют неформально.
 
-### Creative writing
+**Noesis + LLM**:
+1. Требования формальные.
+2. LLM предлагает архитектуру.
+3. Структурный анализ.
+4. Инварианты верифицированы.
+5. Проект с формальной поддержкой.
 
-Even for humanities:
-- LLM proposes creative content.
-- Structural consistency (plot, argument) verified.
-- Author retains creative control.
+### Тестирование
 
-## Future directions
+- Тестовые случаи порождаются из спецификации.
+- Покрытие структурное.
+- Граничные случаи выявлены.
 
-### AGI development path
+## Применения в образовании
 
-Noesis provides **structural scaffolding** for advancing LLM capabilities:
+### Репетиторство
 
-1. **Current**: LLMs + retrieval + verification.
-2. **Next**: LLMs trained on structured data, native Noesis integration.
-3. **Later**: LLMs + real-time KG updates, autonomous learning bounded by structure.
-4. **Horizon**: structurally-grounded reasoning approaching AGI safely.
+**Традиционно**: ChatGPT как репетитор — может запутать студентов неправильными ответами.
 
-**Safety**: structural bounds prevent uncontrolled behavior.
+**Репетитор с усилением Noesis**:
+1. Студент задаёт вопрос.
+2. Noesis обосновывает ответ в верифицированном знании.
+3. LLM объясняет естественно.
+4. **Правильный** ответ гарантирован.
+5. Прогресс обучения отслеживается структурно.
 
-**Capability**: structural scaffolding amplifies intelligence.
+### Адаптивное обучение
 
-### Collective intelligence
+- Текущее понимание студента структурно отображено.
+- Пробелы выявлены.
+- Персонализированная программа.
+- Прогресс отслеживается.
 
-- Humans + LLMs + Noesis.
-- Distributed knowledge work.
-- Each contribution structurally tracked.
-- Collective improvement.
+### Творческое письмо
 
-### Multi-agent systems
+Даже для гуманитарных наук:
+- LLM предлагает творческое содержание.
+- Структурная согласованность (сюжет, аргумент) верифицирована.
+- Автор сохраняет творческий контроль.
 
-- Multiple LLMs collaborating.
-- Noesis as coordination infrastructure.
-- Agent outputs verified before use.
-- Emergent capabilities bounded by structure.
+## Будущие направления
 
-## Honest limitations
+### Путь развития AGI
 
-По **NO-10** (Lawvere-bounded):
+Noesis предоставляет **структурный каркас** для продвижения возможностей LLM:
 
-### Fundamental limits
+1. **Сейчас**: LLM + извлечение + верификация.
+2. **Далее**: LLM, обученные на структурированных данных, нативная интеграция с Noesis.
+3. **Позже**: LLM + обновления графа знаний в реальном времени, автономное обучение, ограниченное структурой.
+4. **Горизонт**: структурно обоснованные рассуждения, безопасно приближающиеся к AGI.
 
-- Cannot transcend self-reference bounds.
-- Cannot achieve full completeness.
-- Always new questions at higher level.
+**Безопасность**: структурные границы предотвращают неконтролируемое поведение.
 
-### Practical limits
+**Возможности**: структурный каркас усиливает интеллект.
 
-- LLM generates speed dependent on model.
-- SMT verification exponential worst case.
-- Human insight still required для genuinely novel work.
+### Коллективный интеллект
 
-### NOT AGI via Noesis alone
+- Люди + LLM + Noesis.
+- Распределённая работа со знаниями.
+- Каждый вклад отслеживается структурно.
+- Коллективное улучшение.
 
-- Noesis is infrastructure.
-- LLMs are tools.
-- Human creativity remains irreplaceable source.
+### Мультиагентные системы
 
-Но: **substantial augmentation** of human + machine capabilities.
+- Множество LLM сотрудничают.
+- Noesis как инфраструктура координации.
+- Выходы агентов верифицируются перед использованием.
+- Эмерджентные возможности ограничены структурой.
 
-## Implementation priorities
+## Честные ограничения
 
-### Phase 1 (Year 1)
+По **NO-10** (Lawvere-ограниченность):
 
-- Integrate Claude / GPT-4o / Gemini via Noesis API.
-- Basic modes (Navigator, Auditor) operational.
-- Open-source foundation.
+### Фундаментальные пределы
 
-### Phase 2 (Year 2)
+- Невозможно преодолеть границы самореференции.
+- Невозможно достичь полной полноты.
+- Всегда новые вопросы на более высоком уровне.
 
-- Fine-tuned models Noesis-aware.
-- All 5 modes mature.
-- 10,000+ users.
+### Практические пределы
 
-### Phase 3 (Year 3)
+- Скорость порождения LLM зависит от модели.
+- SMT-верификация в худшем случае экспоненциальна.
+- Человеческий инсайт всё ещё требуется для подлинно новой работы.
 
-- Native Noesis-trained LLMs.
-- Industry deployments.
-- Multi-modal extensions.
+### НЕ AGI через один только Noesis
 
-### Phase 4 (Year 5)
+- Noesis — инфраструктура.
+- LLM — инструменты.
+- Человеческая креативность остаётся незаменимым источником.
 
-- AGI-assistance tools approaching.
-- Scientific research transformed.
-- Safety demonstrated at scale.
+Но: **существенное усиление** человеческих и машинных возможностей.
+
+## Приоритеты реализации
+
+### Фаза 1 (Год 1)
+
+- Интеграция Claude / GPT-4o / Gemini через API Noesis.
+- Базовые режимы (Навигатор, Аудитор) работают.
+- Открытое основание.
+
+### Фаза 2 (Год 2)
+
+- Дообученные модели, осведомлённые о Noesis.
+- Все 5 режимов зрелые.
+- 10 000+ пользователей.
+
+### Фаза 3 (Год 3)
+
+- Нативные Noesis-обученные LLM.
+- Корпоративные развёртывания.
+- Мульти-модальные расширения.
+
+### Фаза 4 (Год 5)
+
+- Инструменты AGI-содействия приближаются.
+- Научные исследования трансформированы.
+- Безопасность продемонстрирована в масштабе.
 
 ## Заключение
 
-**LLM + Noesis + Diakrisis** = **structurally-grounded intelligence**.
+**LLM + Noesis + Diakrisis** = **структурно обоснованный интеллект**.
 
-- Hallucinations eliminated within boundary.
-- Reasoning formally verified.
-- Multi-step reliability.
-- Self-reflection bounded but effective.
-- Cross-domain operations principled.
+- Галлюцинации устранены внутри границы.
+- Рассуждения формально верифицированы.
+- Многошаговая надёжность.
+- Саморефлексия ограничена, но эффективна.
+- Кросс-доменные операции принципиальны.
 
-**Key insight**: LLMs alone are **plausible**, not **correct**. Noesis makes outputs **structurally correct**.
+**Ключевой инсайт**: LLM сами по себе **правдоподобны**, но не **корректны**. Noesis делает выходы **структурно корректными**.
 
-**For users**: LLMs become **trustworthy collaborators**, not unreliable chat partners.
+**Для пользователей**: LLM становятся **доверенными коллаборантами**, а не ненадёжными партнёрами по чату.
 
-**For researchers**: LLMs become **formal reasoning assistants**, not hallucination-prone guess generators.
+**Для исследователей**: LLM становятся **формальными ассистентами рассуждений**, а не генераторами догадок, склонных к галлюцинациям.
 
-**For society**: AI augmentation **bounded, transparent, verified** — safer integration.
+**Для общества**: усиление ИИ **ограниченное, прозрачное, верифицированное** — более безопасная интеграция.
 
-**Diakrisis foundation** provides **structural ground truth**. Noesis **engineering platform** delivers **verification infrastructure**. LLMs **language interface** to humans. Вместе: **new paradigm** of human-AI collaboration.
+**Основание Diakrisis** предоставляет **структурную опорную истину**. **Инженерная платформа Noesis** обеспечивает **инфраструктуру верификации**. LLM — **языковой интерфейс** к людям. Вместе: **новая парадигма** сотрудничества человека и ИИ.
 
 ---
 
 ## Следующий шаг
 
-Integration: [05 — Agent](./05-agent), [21 — Math frontier](./21-math-frontier).
+Интеграция: [05 — Agent](./05-agent), [21 — Math frontier](./21-math-frontier).
 
-Philosophy: [06 — Meta-reflection](./06-meta-reflection).
+Философия: [06 — Meta-reflection](./06-meta-reflection).
 
-Practical: [14 — Case studies](./14-case-studies).
+Практика: [14 — Case studies](./14-case-studies).

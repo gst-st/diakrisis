@@ -7,209 +7,209 @@ title: Теоремы NO-1..NO-18
 
 ## Обзор
 
-Noesis теоремы (NO-\*) — формальные утверждения, обосновывающие платформу. **Все** факторизуются через Diakrisis-теоремы (NO-2): ни одна не является самостоятельной relative to Diakrisis foundation.
+Теоремы Noesis (NO-\*) — формальные утверждения, обосновывающие платформу. **Все** факторизуются через теоремы Diakrisis (NO-2): ни одна не является самостоятельной относительно оснований Diakrisis.
 
-## NO-1 [Т·L1]: Existence of Noesis.Core
+## NO-1 [Т·L1]: Существование Noesis.Core
 
-**Формулировка**: Noesis.Core как computational реализация Diakrisis-full существует и единственна до Verum-equivalence, при условии R-S ⊇ ZFC + 2 inaccessibles.
+**Формулировка**: Noesis.Core как вычислительная реализация Diakrisis-full существует и единственна с точностью до Verum-эквивалентности, при условии R-S ⊇ ZFC + 2 inaccessibles.
 
 **Доказательство**: 
 1. По Diakrisis 88.T: Diakrisis категорически единственна до (∞,∞)-эквивалентности.
-2. По Diakrisis 90.T: Con(Diakrisis) = Con(ZFC + 2 inacc) — moderate strength.
-3. Verum-реализация добавляет computational slot, не влияющий на axioms (NO-14).
-4. Следовательно, Noesis.Core existent в любой R-S удовлетворяющей ZFC + 2 inacc.
+2. По Diakrisis 90.T: Con(Diakrisis) = Con(ZFC + 2 inacc) — умеренной силы.
+3. Реализация Verum добавляет вычислительный слот, не влияющий на аксиомы (NO-14).
+4. Следовательно, Noesis.Core существует в любой R-S, удовлетворяющей ZFC + 2 inacc.
 
 **QED**.
 
 ---
 
-## NO-2 [Т·L1]: Diakrisis conservation
+## NO-2 [Т·L1]: Сохранение Diakrisis
 
-**Формулировка**: Все 129 теорем Diakrisis 10.T1..97.T переносятся на Noesis.Core через canonical inclusion functor Noesis ↪ Diakrisis.
+**Формулировка**: Все 129 теорем Diakrisis 10.T1..97.T переносятся на Noesis.Core через канонический функтор включения Noesis ↪ Diakrisis.
 
-**Доказательство**: Noesis.Core = Diakrisis-full + engineering layer (по NO-14). Engineering layer ortogonal axioms. Все derived theorems сохраняют валидность.
+**Доказательство**: Noesis.Core = Diakrisis-full + инженерный слой (по NO-14). Инженерный слой ортогонален аксиомам. Все производные теоремы сохраняют валидность.
 
 **QED**.
 
 ---
 
-## NO-3 [Т·L2]: Agent operations soundness
+## NO-3 [Т·L2]: Корректность операций агента
 
-**Формулировка**: Операции Giry-monadic agent'а 𝒜, прошедшие SMT gate + Axi-consistency check + TH-Final bounds, не нарушают Diakrisis axiomatics.
+**Формулировка**: Операции Giry-монадического агента 𝒜, прошедшие SMT-фильтр + проверку Axi-согласованности + границы TH-Final, не нарушают аксиоматику Diakrisis.
 
 **Доказательство**:
-1. Giry monad operations corresponds to probability distributions (Giry 1982).
-2. SMT gate verifies category laws (functoriality, naturality, descent).
-3. Axi-check verifies Axi-0..9 + T-α + T-2f\* compliance.
-4. TH-Final bounds reject level-6 attempts.
-5. Accepted operations satisfy all Diakrisis constraints by construction.
+1. Операции монады Giry соответствуют вероятностным распределениям (Giry 1982).
+2. SMT-фильтр проверяет категорные законы (функториальность, естественность, спуск).
+3. Axi-проверка подтверждает соответствие Axi-0..9 + T-α + T-2f\*.
+4. Границы TH-Final отклоняют попытки уровня-6.
+5. Принятые операции удовлетворяют всем ограничениям Diakrisis по построению.
 
 **QED**.
 
 ---
 
-## NO-4 [Т·L1]: Computational subcategory closure
+## NO-4 [Т·L1]: Замкнутость вычислительной подкатегории
 
-**Формулировка**: ⟪⟫_comp ⊂ ⟪⟫ — 2-category closed под Noesis.Core operations (Morita, Kan extensions, 𝖬-iteration).
+**Формулировка**: ⟪⟫_comp ⊂ ⟪⟫ — 2-категория, замкнутая относительно операций Noesis.Core (Morita, расширения Кана, 𝖬-итерация).
 
 **Доказательство**:
-1. Morita-equivalence preserves gauge-class (within ⟪⟫_comp).
-2. Kan extensions с finite computation stay в ⟪⟫_comp (M-4 аналог).
-3. 𝖬-iteration preserves accessibility (Axi-4).
-4. Composition of accessible operations — accessible.
+1. Морита-эквивалентность сохраняет калибровочный класс (внутри ⟪⟫_comp).
+2. Расширения Кана с конечным вычислением остаются в ⟪⟫_comp (аналог M-4).
+3. 𝖬-итерация сохраняет доступность (Axi-4).
+4. Композиция доступных операций — доступна.
 
 **QED**.
 
 ---
 
-## NO-5 [Т·L2]: Polynomial scalability
+## NO-5 [Т·L2]: Полиномиальная масштабируемость
 
-**Формулировка**: Для N knowledge-objects, M claims per object, D max dependency depth, K functors, Noesis operations polynomial:
+**Формулировка**: Для N объектов знания, M утверждений на объект, D максимальной глубины зависимостей, K функторов, операции Noesis полиномиальны:
 
-- Navigation: O(N·M·D).
-- Single audit: O(M²·D).
-- Cross-knowledge audit: O(K·M²).
-- Single Kan extension: O(M³·D).
-- All pairwise Kan: O(K·M³·D).
-- Descent: O(K²·M).
+- Навигация: O(N·M·D).
+- Единичный аудит: O(M²·D).
+- Аудит между объектами знания: O(K·M²).
+- Единичное расширение Кана: O(M³·D).
+- Все попарные расширения Кана: O(K·M³·D).
+- Спуск: O(K²·M).
 
-**Доказательство**: Each operation reduces to standard algorithms (BFS, matrix computation, category theory primitives) с bounded complexity (см. architecture doc).
-
-**QED**.
-
----
-
-## NO-6 [Т·L3]: Federation coherence
-
-**Формулировка**: Distributed Noesis instances с gauge-preserving sync protocol форм joint ∞-sheaf structure согласованную через descent condition.
-
-**Доказательство**:
-1. Каждый instance — local section of global sheaf.
-2. Sync protocol preserves gauge (Diakrisis 43.T1 compatible).
-3. Descent condition обеспечивает consistency.
-4. По Jacobsen-Rosenberg (2005): local sheaves glue to global through descent.
-
-**QED (modulo implementation detail on protocol correctness)**.
-
----
-
-## NO-7 [Т·L2]: Monetization independence
-
-**Формулировка**: Монетизация Noesis (tier system) не влияет на формальные гарантии. Community vs Enterprise различаются infrastructure, не structural properties.
-
-**Доказательство**:
-1. Structural guarantees defined by Diakrisis axioms (invariant across tiers).
-2. Tiers различают: rate limits, LLM inference cost, storage, support.
-3. None of these affect axiom compliance.
-4. Accepted operations through pipeline — structurally correct regardless of tier.
+**Доказательство**: Каждая операция сводится к стандартным алгоритмам (BFS, матричные вычисления, примитивы теории категорий) с ограниченной сложностью (см. документ об архитектуре).
 
 **QED**.
 
 ---
 
-## NO-8 [Т·L1]: Domain agnosticism
+## NO-6 [Т·L3]: Когерентность федерации
 
-**Формулировка**: Noesis применима к любому Rich-knowledge-domain, удовлетворяющему R-S условиям (по 97.T).
+**Формулировка**: Распределённые экземпляры Noesis с протоколом синхронизации, сохраняющим калибровку, формируют совместную ∞-пучковую структуру, согласованную через условие спуска.
 
 **Доказательство**:
-1. Noesis.Core operates на ⟪⟫_comp ⊂ ⟪⟫.
+1. Каждый экземпляр — локальное сечение глобального пучка.
+2. Протокол синхронизации сохраняет калибровку (совместим с Diakrisis 43.T1).
+3. Условие спуска обеспечивает согласованность.
+4. По Jacobsen-Rosenberg (2005): локальные пучки склеиваются в глобальный через спуск.
+
+**QED (с точностью до деталей реализации корректности протокола)**.
+
+---
+
+## NO-7 [Т·L2]: Независимость монетизации
+
+**Формулировка**: Монетизация Noesis (система тарифов) не влияет на формальные гарантии. Community и Enterprise различаются инфраструктурой, а не структурными свойствами.
+
+**Доказательство**:
+1. Структурные гарантии определяются аксиомами Diakrisis (инвариантны по тарифам).
+2. Тарифы различают: ограничения частоты, стоимость инференса LLM, хранилище, поддержку.
+3. Ничто из этого не влияет на соответствие аксиомам.
+4. Операции, принятые через конвейер, структурно корректны независимо от тарифа.
+
+**QED**.
+
+---
+
+## NO-8 [Т·L1]: Доменная агностичность
+
+**Формулировка**: Noesis применима к любому богатому домену знания, удовлетворяющему условиям R-S (по 97.T).
+
+**Доказательство**:
+1. Noesis.Core работает на ⟪⟫_comp ⊂ ⟪⟫.
 2. По Diakrisis 29.T: каждая Rich-F имеет α_F ∈ Trace(𝖠).
-3. Rich-domain ≡ satisfies (R1)-(R5) + (97.T): `!`-accessible.
-4. Science, engineering, law, business, humanities — все могут быть Rich-domains при правильной формализации.
+3. Богатый домен ≡ удовлетворяет (R1)-(R5) + (97.T): `!`-доступен.
+4. Наука, инженерия, право, бизнес, гуманитарные — все могут быть богатыми доменами при правильной формализации.
 
 **QED**.
 
 ---
 
-## NO-9 [Т·L2]: Hallucination immunity
+## NO-9 [Т·L2]: Иммунитет к галлюцинациям
 
-**Формулировка**: P(invalid-operation-accepted | post-SMT + Axi-check + TH-Final-bounds) = 0 (при correct SMT backend).
+**Формулировка**: P(принята некорректная операция | после SMT + Axi-проверки + границ TH-Final) = 0 (при корректном SMT-бэкенде).
 
 **Доказательство**:
-1. SMT backend (Z3, CVC5) является sound wrt category axioms.
-2. Pipeline rejects operations failing any verification step.
-3. Ни одна invalid operation не проходит 3-stage check.
-4. Therefore: accepted operations — structurally correct.
+1. SMT-бэкенд (Z3, CVC5) корректен относительно категорных аксиом.
+2. Конвейер отклоняет операции, не прошедшие какой-либо этап верификации.
+3. Ни одна некорректная операция не проходит трёхэтапную проверку.
+4. Следовательно: принятые операции структурно корректны.
 
-**QED (modulo SMT soundness, treated as technology assumption)**.
+**QED (с точностью до корректности SMT, принимаемой как технологическое допущение)**.
 
 ---
 
-## NO-10 [Т·L3]: Self-reference bounded
+## NO-10 [Т·L3]: Ограниченность самореференции
 
-**Формулировка**: Claims Noesis о собственной completeness/consistency bounded at [Г].
+**Формулировка**: Утверждения Noesis о собственной полноте/непротиворечивости ограничены статусом [Г].
 
-**Доказательство**: direct application of Lawvere fixed-point theorem (Diakrisis 87.T).
+**Доказательство**: прямое применение теоремы Ловера о неподвижной точке (Diakrisis 87.T).
 
 **QED**.
 
 ---
 
-## NO-11 [Т·L3]: Cognitive extension (theoretically grounded)
+## NO-11 [Т·L3]: Когнитивное расширение (теоретически обосновано)
 
-**Формулировка**: При UHM-compatibility пользователя + non-zero researcher-Noesis coherence:
+**Формулировка**: При UHM-совместимости пользователя + ненулевой когерентности исследователь-Noesis:
 $$\Phi(\mathbb{H}_{\text{ext}}) > \max(\Phi(\mathbb{H}_{\text{bio}}), \Phi(\mathbb{H}_{\text{Noesis}}))$$
 
 **Доказательство**: 
-1. Day convolution (Day 1970) preserves non-trivial coherence structure.
-2. Cross-coherences γ^{bio,Noesis} positive при meaningful interaction.
-3. By Diakrisis UFH + UHM T-129 strict monotonicity: Φ increases.
+1. Свёртка Дэя (Day 1970) сохраняет нетривиальную структуру когерентности.
+2. Перекрёстные когерентности γ^{bio,Noesis} положительны при содержательном взаимодействии.
+3. По UFH Diakrisis + строгой монотонности UHM T-129: Φ возрастает.
 
-**Falsifiable via π_bio protocol** (UHM §9).
+**Фальсифицируемо через протокол π_bio** (UHM §9).
 
-**QED (conditional on empirical coherence assumption)**.
+**QED (при условии эмпирического допущения о когерентности)**.
 
 ---
 
-## NO-12 [Т·L2]: Competitive structural superiority
+## NO-12 [Т·L2]: Конкурентное структурное превосходство
 
-**Формулировка**: Любая knowledge-management система, не факторизующаяся через Diakrisis, структурно неполна на уровне ≥ 3 (meta-meta-theory level).
+**Формулировка**: Любая система управления знаниями, не факторизующаяся через Diakrisis, структурно неполна на уровне ≥ 3 (уровень мета-мета-теории).
 
 **Доказательство**:
-1. По Diakrisis 43.T1 (classifying space universal property): 𝓜_Fnd — уникальный способ organize all Rich-foundations.
-2. Meta-meta-theory level operations требуют структуры 𝓜_Fnd.
-3. Alternative system, не имеющий 𝓜_Fnd, не может полно реализовать meta-meta-operations.
-4. Such system структурно неполна relative to Noesis.
+1. По Diakrisis 43.T1 (универсальное свойство классифицирующего пространства): 𝓜_Fnd — единственный способ организовать все богатые основания.
+2. Операции уровня мета-мета-теории требуют структуры 𝓜_Fnd.
+3. Альтернативная система, не имеющая 𝓜_Fnd, не может полно реализовать мета-мета-операции.
+4. Такая система структурно неполна относительно Noesis.
 
 **QED**.
 
 ---
 
-## NO-13 [Т·L1]: Definitional structural correctness of generated theories
+## NO-13 [Т·L1]: Дефинициональная структурная корректность порождаемых теорий
 
-**Формулировка**: Любая theory T, сгенерированная через Noesis.Core + agent и прошедшая полный verification pipeline (SMT + Axi + TH-Final + 97.T), удовлетворяет:
+**Формулировка**: Любая теория T, сгенерированная через Noesis.Core + агент и прошедшая полный конвейер верификации (SMT + Axi + TH-Final + 97.T), удовлетворяет:
 
-1. T ∈ Trace(𝖠_NOESIS) — well-defined articulation.
-2. T internally consistent (no contradictions).
+1. T ∈ Trace(𝖠_Noesis) — корректно определённая артикуляция.
+2. T внутренне непротиворечива (нет противоречий).
 3. T не нарушает ABSOLUTA_TOTALIS.
 
-**Доказательство**: direct from NO-3 (agent soundness) + NO-9 (hallucination immunity) + Axi-check + TH-Final filter.
+**Доказательство**: прямо следует из NO-3 (корректность агента) + NO-9 (иммунитет к галлюцинациям) + Axi-проверка + фильтр TH-Final.
 
-**Важно**: гарантирует **структурную** correctness, не empirical truth.
+**Важно**: гарантирует **структурную** корректность, а не эмпирическую истинность.
 
 **QED**.
 
 ---
 
-## NO-14 [Т·L2]: Engineering layer conservation
+## NO-14 [Т·L2]: Сохранение инженерного слоя
 
-**Формулировка**: Добавление computational, agent-based, applied слоёв к Diakrisis-full не меняет структурные теоремы: `T valid in Diakrisis ⟺ T valid в Noesis.Core`.
+**Формулировка**: Добавление вычислительного, агентного, прикладного слоёв к Diakrisis-full не меняет структурные теоремы: `T валидна в Diakrisis ⟺ T валидна в Noesis.Core`.
 
 **Доказательство**:
-1. Noesis.Core = Diakrisis-full + orthogonal engineering components.
-2. Engineering layer (Verum, LLM, MCP) — effectively metadata/tools, не axioms.
-3. Axi-0..9 + T-α + T-2f\* unchanged.
-4. All derived theorems (10.T1..97.T) preserve validity.
+1. Noesis.Core = Diakrisis-full + ортогональные инженерные компоненты.
+2. Инженерный слой (Verum, LLM, MCP) — по существу метаданные/инструменты, а не аксиомы.
+3. Axi-0..9 + T-α + T-2f\* не изменяются.
+4. Все производные теоремы (10.T1..97.T) сохраняют валидность.
 
 **QED**.
 
 ---
 
-## NO-15 [Т·L2]: Verum proof-assistant universality
+## NO-15 [Т·L2]: Универсальность Verum как пруф-ассистента
 
-**Формулировка**: Verum, реализуя Diakrisis internal language L_⟪⟫ (89.T) + dependent types + HoTT + SMT backend, строго **превосходит** по выразительности любой single-foundation proof assistant (Lean4/Coq/Agda) в следующем смысле:
+**Формулировка**: Verum, реализуя внутренний язык Diakrisis L_⟪⟫ (89.T) + зависимые типы + HoTT + SMT-бэкенд, строго **превосходит** по выразительности любой пруф-ассистент с единственным основанием (Lean4/Coq/Agda) в следующем смысле:
 
-Пусть $\mathcal{P}$ — proof assistant с фиксированной foundation $F_\mathcal{P}$ (CIC для Lean/Coq, MLTT для Agda). Тогда:
+Пусть $\mathcal{P}$ — пруф-ассистент с фиксированным основанием $F_\mathcal{P}$ (CIC для Lean/Coq, MLTT для Agda). Тогда:
 
 $$\text{Articulations}(\mathcal{P}) \cong \{\alpha \in \text{Trace}(\mathsf{A}) : \alpha \sqsubset_\bullet F_\mathcal{P}\}$$
 
@@ -217,129 +217,129 @@ $$\text{Articulations}(\mathcal{P}) \cong \{\alpha \in \text{Trace}(\mathsf{A}) 
 
 $$\text{Articulations}(\text{Verum}) \cong \text{Trace}(\mathsf{A})_\text{comp}$$
 
-**Следствие**: существуют classes of theorems (cross-foundation, meta-level, TH-Final-probing), выразимые в Verum и **невыразимые** в $\mathcal{P}$.
+**Следствие**: существуют классы теорем (между основаниями, мета-уровня, зондирующие TH-Final), выразимые в Verum и **невыразимые** в $\mathcal{P}$.
 
 **Доказательство**:
-1. По 29.T: α_F = единственная articulation foundation F.
-2. Single-foundation proof assistants параметризуются через α_{F_\mathcal{P}} — fixed slice of Trace(𝖠).
+1. По 29.T: α_F = единственная артикуляция основания F.
+2. Пруф-ассистенты с единственным основанием параметризуются через α_{F_\mathcal{P}} — фиксированный срез Trace(𝖠).
 3. Verum параметризуется через полную ⟪⟫_comp.
-4. Включение ⟪⟫_comp ⊃ {α_F} строгое (foundations — единичные точки в классифицирующем пространстве).
-5. Meta-level articulations (α ∈ 𝓜_Fnd — не α_F для конкретного F) существуют по 43.T1.
+4. Включение ⟪⟫_comp ⊃ {α_F} строгое (основания — единичные точки в классифицирующем пространстве).
+5. Мета-уровневые артикуляции (α ∈ 𝓜_Fnd — не α_F для конкретного F) существуют по 43.T1.
 
 **QED**.
 
-**Практически**: Verum может доказывать **cross-foundation theorems** — утверждения, связывающие ZFC-артикуляции с HoTT, CIC и т.д. через Kan extensions. Lean4 / Coq / Agda — нет (within their own foundation).
+**Практически**: Verum может доказывать **теоремы между основаниями** — утверждения, связывающие ZFC-артикуляции с HoTT, CIC и т.д. через расширения Кана. Lean4 / Coq / Agda — нет (в рамках собственного основания).
 
 ---
 
-## NO-16 [Т·L2]: Peer-review completeness для structural issues
+## NO-16 [Т·L2]: Полнота рецензирования для структурных проблем
 
-**Формулировка**: Noesis automated peer review (PR-Op 1-4 из §22) детектирует **все** structural issues в manuscript, представленном как structured claims graph:
+**Формулировка**: Автоматизированное рецензирование Noesis (PR-Op 1-4 из §22) детектирует **все** структурные проблемы в рукописи, представленной как структурированный граф утверждений:
 
 $$\forall \text{issue} \in \text{StructuralIssues}(\text{manuscript}): \text{PR-pipeline}(\text{manuscript}) \ni \text{issue}$$
 
-где StructuralIssues = { undefined terms, broken citations, missing dependencies, logical inconsistencies, hidden axioms, methodological violations, empirical-theoretical mismatches }.
+где StructuralIssues = { неопределённые термины, сломанные цитаты, пропущенные зависимости, логические противоречия, скрытые аксиомы, методологические нарушения, эмпирико-теоретические несоответствия }.
 
 **Доказательство**:
-1. Каждое structural issue определяется как violation of Diakrisis-axiom или Noesis-invariant.
-2. SMT-gate (NO-9) отклоняет все violations constraints.
-3. Axi-check покрывает Axi-0..9.
-4. Kan-extension checks покрывают cross-reference integrity.
-5. Пропуск был бы violation of NO-9 (hallucination immunity contradicts detection).
+1. Каждая структурная проблема определяется как нарушение аксиомы Diakrisis или инварианта Noesis.
+2. SMT-фильтр (NO-9) отклоняет все нарушения ограничений.
+3. Axi-проверка покрывает Axi-0..9.
+4. Проверки расширений Кана покрывают целостность перекрёстных ссылок.
+5. Пропуск был бы нарушением NO-9 (иммунитет к галлюцинациям противоречит детекции).
 
-**Ограничение**: completeness **только** для structural issues. Value judgments (novelty significance, importance) — human domain.
+**Ограничение**: полнота **только** для структурных проблем. Ценностные суждения (значимость новизны, важность) — область человека.
 
 **QED**.
 
 ---
 
-## NO-17 [Т·L2]: LLM augmentation boundedness
+## NO-17 [Т·L2]: Ограниченность аугментации через LLM
 
-**Формулировка**: LLM-output $\phi(q)$ через Noesis oracle (§23) удовлетворяет:
+**Формулировка**: Вывод LLM $\phi(q)$ через оракул Noesis (§23) удовлетворяет:
 
 $$\text{supp}(\phi(q)) \subseteq \text{Claims}_\text{valid}(\text{Axi}, \text{TH-Final}, \text{constraints}(q))$$
 
-где supp — support of Giry-monadic distribution, Claims_valid — claims passing все 3-stage verification.
+где supp — носитель Giry-монадического распределения, Claims_valid — утверждения, прошедшие все три этапа верификации.
 
-**Следствие**: P(hallucination | accepted output) = 0 внутри verifiable boundary.
+**Следствие**: P(галлюцинация | принятый вывод) = 0 внутри верифицируемой границы.
 
 **Доказательство**:
-1. Giry monad preserves measure structure (Giry 1982).
-2. Post-SMT-gate filter: supp($\phi$) ∩ Invalid = ∅ (NO-9).
-3. Axi-check filter: supp($\phi$) ⊂ Axi-compliant.
-4. TH-Final filter: supp($\phi$) ∩ Level-6-claims = ∅.
-5. Intersection = supp($\phi$) внутри validated region.
+1. Монада Giry сохраняет структуру меры (Giry 1982).
+2. Фильтр после SMT-фильтра: supp($\phi$) ∩ Invalid = ∅ (NO-9).
+3. Фильтр Axi-проверки: supp($\phi$) ⊂ соответствующие Axi.
+4. Фильтр TH-Final: supp($\phi$) ∩ утверждения уровня-6 = ∅.
+5. Пересечение = supp($\phi$) внутри валидированной области.
 
-**Граница**: unverifiable claims (value judgments, empirical facts outside KG) flagged explicitly, не attempted.
+**Граница**: неверифицируемые утверждения (ценностные суждения, эмпирические факты вне графа знаний) помечаются явно, не предпринимаются попытки их вывести.
 
-**QED (modulo SMT soundness)**.
+**QED (с точностью до корректности SMT)**.
 
 ---
 
-## NO-18 [Т·L3]: Verum-Diakrisis foundation equivalence
+## NO-18 [Т·L3]: Эквивалентность оснований Verum и Diakrisis
 
-**Формулировка**: Verum proof terms + Noesis API операции эквивалентны Diakrisis articulations модулo computational realization:
+**Формулировка**: Proof-термы Verum + операции API Noesis эквивалентны артикуляциям Diakrisis с точностью до вычислительной реализации:
 
 $$\text{Verum-proofs} \xrightarrow{\text{denote}} \text{Articulations}_\text{comp} \xrightarrow{\cong} \text{Diakrisis-full}|_\text{comp}$$
 
-где denote — категорный semantic functor.
+где denote — категорный семантический функтор.
 
-**Импликация**: proving в Verum = constructing articulation в Diakrisis (через computational realization).
+**Импликация**: доказывать в Verum = конструировать артикуляцию в Diakrisis (через вычислительную реализацию).
 
 **Доказательство**:
-1. По 89.T: internal language L_⟪⟫ существует.
-2. Verum реализует L_⟪⟫ + computational extensions.
-3. Semantic functor denote существует по Lambek-Scott (syntax-semantics adjunction) + (∞,∞)-расширение.
+1. По 89.T: внутренний язык L_⟪⟫ существует.
+2. Verum реализует L_⟪⟫ + вычислительные расширения.
+3. Семантический функтор denote существует по Ламбеку-Скотту (сопряжение синтаксис-семантика) + (∞,∞)-расширение.
 4. Noesis.Core = Diakrisis-full|_comp (NO-1, NO-14).
-5. Цепочка эквивалентностей closed.
+5. Цепочка эквивалентностей замкнута.
 
-**QED (modulo completion of Verum implementation)**.
+**QED (с точностью до завершения реализации Verum)**.
 
-**Практически**: любой Verum-proof имеет **категорное значение** в Diakrisis — не просто syntactic derivation, а actual articulation structure.
+**Практически**: любой Verum-proof имеет **категорное значение** в Diakrisis — не просто синтаксический вывод, а реальную структуру артикуляции.
 
 ---
 
 ## Классификация NO-теорем
 
-| # | Title | Статус | L-level | Depends on Diakrisis |
+| # | Название | Статус | L-уровень | Зависит от Diakrisis |
 |---|---|---|---|---|
-| NO-1 | Existence | [Т] | L1 | 88.T, 90.T |
-| NO-2 | Conservation | [Т] | L1 | All Diakrisis theorems |
-| NO-3 | Agent soundness | [Т] | L2 | All axioms + TH-Final |
-| NO-4 | Subcategory closure | [Т] | L1 | Axi-4, 62.T |
-| NO-5 | Polynomial scalability | [Т] | L2 | Accessibility bounds |
-| NO-6 | Federation coherence | [Т] | L3 | 43.T1 + descent |
-| NO-7 | Monetization independence | [Т] | L2 | Invariance under infrastructure |
-| NO-8 | Domain agnosticism | [Т] | L1 | 29.T + 97.T |
-| NO-9 | Hallucination immunity | [Т] | L2 | SMT soundness + Axi |
-| NO-10 | Self-reference bounded | [Т] | L3 | 19.T + 87.T (Lawvere) |
-| NO-11 | Cognitive extension | [Т] | L3 | UHM T-129 + UFH |
-| NO-12 | Structural superiority | [Т] | L2 | 43.T1 universal property |
-| NO-13 | Definitional correctness | [Т] | L1 | NO-3 + NO-9 |
-| NO-14 | Engineering conservation | [Т] | L2 | Orthogonality argument |
-| NO-15 | Verum universality | [Т] | L2 | 29.T, 43.T1, 89.T |
-| NO-16 | Peer-review completeness | [Т] | L2 | NO-9, Axi-check |
-| NO-17 | LLM output boundedness | [Т] | L2 | NO-9, Giry monad |
-| NO-18 | Verum-Diakrisis equivalence | [Т] | L3 | 89.T, Lambek-Scott |
+| NO-1 | Существование | [Т] | L1 | 88.T, 90.T |
+| NO-2 | Сохранение | [Т] | L1 | Все теоремы Diakrisis |
+| NO-3 | Корректность агента | [Т] | L2 | Все аксиомы + TH-Final |
+| NO-4 | Замкнутость подкатегории | [Т] | L1 | Axi-4, 62.T |
+| NO-5 | Полиномиальная масштабируемость | [Т] | L2 | Границы доступности |
+| NO-6 | Когерентность федерации | [Т] | L3 | 43.T1 + спуск |
+| NO-7 | Независимость монетизации | [Т] | L2 | Инвариантность относительно инфраструктуры |
+| NO-8 | Доменная агностичность | [Т] | L1 | 29.T + 97.T |
+| NO-9 | Иммунитет к галлюцинациям | [Т] | L2 | Корректность SMT + Axi |
+| NO-10 | Ограниченность самореференции | [Т] | L3 | 19.T + 87.T (Ловер) |
+| NO-11 | Когнитивное расширение | [Т] | L3 | UHM T-129 + UFH |
+| NO-12 | Структурное превосходство | [Т] | L2 | Универсальное свойство 43.T1 |
+| NO-13 | Дефинициональная корректность | [Т] | L1 | NO-3 + NO-9 |
+| NO-14 | Сохранение инженерного слоя | [Т] | L2 | Аргумент ортогональности |
+| NO-15 | Универсальность Verum | [Т] | L2 | 29.T, 43.T1, 89.T |
+| NO-16 | Полнота рецензирования | [Т] | L2 | NO-9, Axi-проверка |
+| NO-17 | Ограниченность вывода LLM | [Т] | L2 | NO-9, монада Giry |
+| NO-18 | Эквивалентность Verum-Diakrisis | [Т] | L3 | 89.T, Ламбек-Скотт |
 
 ## Границы применимости
 
-По **NO-10**: сами claims этого документа о «полноте Noesis теории» ограничены status [Г]. Это — **честное** признание Lawvere-boundary.
+По **NO-10**: сами утверждения этого документа о «полноте теории Noesis» ограничены статусом [Г]. Это — **честное** признание границы Ловера.
 
-**Что NO-\* теоремы не утверждают**:
-- Empirical truth любой theory generated через Noesis.
-- Practical utility каждой operation.
-- Novelty всех proposed translations.
-- Completeness списка NO-теорем.
+**Что теоремы NO-\* не утверждают**:
+- Эмпирической истинности любой теории, порождённой через Noesis.
+- Практической полезности каждой операции.
+- Новизны всех предлагаемых переводов.
+- Полноты списка NO-теорем.
 
-**Что NO-\* теоремы утверждают**:
-- Structural correctness operations.
-- Diakrisis-axiom compliance.
-- Polynomial scalability.
-- Predictable behavior.
+**Что теоремы NO-\* утверждают**:
+- Структурную корректность операций.
+- Соответствие аксиомам Diakrisis.
+- Полиномиальную масштабируемость.
+- Предсказуемое поведение.
 
 ## Следующий шаг
 
-Для practical workflows: [08 — Workflow-паттерны](./08-workflows).
+Для практических сценариев: [08 — Рабочие сценарии](./08-workflows).
 
-Для applications: [09 — Наука](./09-science), [10 — Инженерия](./10-engineering).
+Для применений: [09 — Наука](./09-science), [10 — Инженерия](./10-engineering).

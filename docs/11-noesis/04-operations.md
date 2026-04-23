@@ -7,18 +7,18 @@ title: Операции и Noesis Protocol
 
 ## Обзор
 
-Все действия пользователей и agent'ов — через **NP** (Noesis Protocol), JSON-RPC-based протокол расширяющий MCP (Model Context Protocol).
+Все действия пользователей и агентов — через **NP** (Noesis Protocol), JSON-RPC-протокол, расширяющий MCP (Model Context Protocol).
 
-**46 endpoint'ов** в 7 группах.
+**46 конечных точек** в 7 группах.
 
 ---
 
-## 1. Navigation (10 endpoints)
+## 1. Навигация (10 конечных точек)
 
-Read-only операции для обзора и поиска.
+Операции только на чтение для обзора и поиска.
 
 ### `knowledge/list`
-**Описание**: Список всех knowledge-objects в workspace.
+**Описание**: Список всех объектов знания в рабочем пространстве.
 
 **Параметры**: `{ filter?: FilterSpec, domain?: DomainName }`
 
@@ -33,34 +33,34 @@ Read-only операции для обзора и поиска.
 ```
 
 ### `knowledge/claims`
-**Описание**: Все claims в заданном knowledge-object с фильтрами.
+**Описание**: Все утверждения в заданном объекте знания с фильтрами.
 
 **Параметры**: `{ knowledge: string, status?: Status, type?: ClaimType, rigor_level?: L1|L2|L3 }`
 
 ### `knowledge/functors`
-**Описание**: Функтор-граф — все functors между knowledge-objects.
+**Описание**: Граф функторов — все функторы между объектами знания.
 
-**Результат**: Graph с obstruction heatmap.
+**Результат**: Граф с тепловой картой препятствий.
 
 ### `claim/get`
-**Описание**: Полный контент claim по ID.
+**Описание**: Полное содержимое утверждения по ID.
 
 ### `claim/dependencies`
-**Описание**: Dependency graph N уровней вверх.
+**Описание**: Граф зависимостей на N уровней вверх.
 
 **Параметры**: `{ claim: string, depth?: number, direction?: "up"|"down"|"both" }`
 
 ### `claim/dependents`
-**Описание**: Что зависит от данного claim.
+**Описание**: Что зависит от данного утверждения.
 
 ### `claim/translations`
-**Описание**: Все translations claim в другие knowledge-objects.
+**Описание**: Все переводы утверждения в другие объекты знания.
 
 ### `claim/history`
-**Описание**: Temporal evolution — audit history + previous versions.
+**Описание**: Временная эволюция — аудит-история + предыдущие версии.
 
 ### `query_graph`
-**Описание**: Произвольный structural query на Cypher-like language.
+**Описание**: Произвольный структурный запрос на Cypher-подобном языке.
 
 **Пример**:
 ```
@@ -70,16 +70,16 @@ RETURN c, d
 ```
 
 ### `graph/search`
-**Описание**: Semantic + structural search (combines LLM embedding + graph structure).
+**Описание**: Семантический + структурный поиск (комбинирует LLM-эмбеддинг + структуру графа).
 
 ---
 
-## 2. Mutations (10 endpoints)
+## 2. Мутации (10 конечных точек)
 
-Операции изменения state.
+Операции изменения состояния.
 
 ### `claim/create`
-**Описание**: Создать claim с type, status, dependencies.
+**Описание**: Создать утверждение с типом, статусом, зависимостями.
 
 **Параметры**:
 ```json
@@ -94,210 +94,210 @@ RETURN c, d
 }
 ```
 
-**Verification**: SMT-check + Axi-compliance + TH-Final-bounds → accepted/rejected.
+**Верификация**: SMT-проверка + соответствие Axi + границы TH-Final → принято/отклонено.
 
 ### `claim/set_status`
-**Описание**: Изменить status. Автоматическая propagation preview.
+**Описание**: Изменить статус. Автоматический предпросмотр распространения.
 
 **Параметры**: `{ claim: string, new_status: Status, reason: string }`
 
-**Workflow**:
-1. Preview affected claims (via `propagation/preview`).
-2. User confirms.
-3. `propagation/apply` executes changes atomically.
+**Сценарий**:
+1. Предпросмотр затронутых утверждений (через `propagation/preview`).
+2. Пользователь подтверждает.
+3. `propagation/apply` выполняет изменения атомарно.
 
 ### `claim/add_dependency`
-**Описание**: Добавить dependency. SMT-check на acyclicity, consistency.
+**Описание**: Добавить зависимость. SMT-проверка на ацикличность и согласованность.
 
 ### `claim/remove`
-**Описание**: Удалить claim. Блокируется если есть dependent'ы (требуется `--cascade` flag).
+**Описание**: Удалить утверждение. Блокируется, если есть зависимые (требуется флаг `--cascade`).
 
 ### `knowledge/create`
-**Описание**: Создать новый knowledge-object.
+**Описание**: Создать новый объект знания.
 
 **Параметры**: `{ id, title, metatheory: R_S, initial_axioms?: Array<Claim> }`
 
 ### `knowledge/import`
-**Описание**: Импортировать knowledge-object из markdown+YAML.
+**Описание**: Импортировать объект знания из markdown+YAML.
 
-Workflow:
-1. Parse markdown files.
-2. Validate schema.
-3. Check axiom compliance per claim.
-4. Build dependency graph.
-5. SMT-verify structural consistency.
-6. Commit atomically.
+Сценарий:
+1. Разобрать markdown-файлы.
+2. Валидировать схему.
+3. Проверить соответствие аксиомам для каждого утверждения.
+4. Построить граф зависимостей.
+5. SMT-верифицировать структурную согласованность.
+6. Коммит атомарно.
 
 ### `knowledge/export`
 **Описание**: Экспорт в markdown+YAML (или другие форматы).
 
-**Supported formats**: MD+YAML, LaTeX, Lean4, Coq, Agda, Dedukti.
+**Поддерживаемые форматы**: MD+YAML, LaTeX, Lean4, Coq, Agda, Dedukti.
 
 ### `functor/create`
-**Описание**: Создать inter-knowledge functor.
+**Описание**: Создать функтор между объектами знания.
 
 ### `functor/verify`
-**Описание**: SMT-verify functoriality (F(id)=id, F(g∘h)=F(g)∘F(h)).
+**Описание**: SMT-верификация функториальности (F(id)=id, F(g∘h)=F(g)∘F(h)).
 
 ### `axiom/update`
-**Описание**: Обновить axiom в knowledge. Блокируется если влечёт inconsistency.
+**Описание**: Обновить аксиому в объекте знания. Блокируется, если влечёт несогласованность.
 
 ---
 
-## 3. Verification (6 endpoints)
+## 3. Верификация (6 конечных точек)
 
-Audit и coherence checking.
+Аудит и проверка когерентности.
 
 ### `knowledge/audit`
-**Описание**: Full coherence audit единичного knowledge-object.
+**Описание**: Полный аудит когерентности отдельного объекта знания.
 
 **Что проверяется**:
-- Status misalignment ([T]-claim depends on [H]).
-- Circular dependencies.
-- Dangling references.
-- Contradictions (via `contradicts` edges).
-- Functorial misalignment.
-- Axiom violations.
+- Рассогласование статусов ([Т]-утверждение зависит от [Г]).
+- Циклические зависимости.
+- Висячие ссылки.
+- Противоречия (через рёбра `contradicts`).
+- Функториальное рассогласование.
+- Нарушения аксиом.
 
 ### `coherence/check`
-**Описание**: Cross-knowledge coherence (descent condition).
+**Описание**: Кросс-доменная когерентность (условие спуска).
 
 ### `coherence/descent`
-**Описание**: Descent condition для specific covering.
+**Описание**: Условие спуска для конкретного покрытия.
 
 **Параметры**: `{ covering: Array<Functor>, target: string }`
 
 ### `propagation/preview`
-**Описание**: Preview effects of status change без применения.
+**Описание**: Предпросмотр эффектов смены статуса без применения.
 
 ### `propagation/apply`
-**Описание**: Применить propagation atomically.
+**Описание**: Применить распространение атомарно.
 
 ### `axiom/check`
-**Описание**: Axi-0..Axi-9 + T-α + T-2f\* compliance на специфическом claim.
+**Описание**: Соответствие Axi-0..Axi-9 + T-α + T-2f\* на конкретном утверждении.
 
 ---
 
-## 4. Translation (6 endpoints)
+## 4. Перевод (6 конечных точек)
 
-Cross-knowledge operations.
+Кросс-доменные операции.
 
 ### `translate/claim`
-**Описание**: Перевод single claim в target knowledge.
+**Описание**: Перевод одного утверждения в целевой объект знания.
 
 **Параметры**: `{ source_claim: string, target_knowledge: string, functor?: string }`
 
 **Результат**: `{ translated_claim?: Claim, obstruction: number, confidence: number }`
 
-Если obstruction > 0.8 — помечается как untranslatable.
+Если препятствие > 0.8 — помечается как непереводимое.
 
 ### `translate/knowledge`
-**Описание**: Перевод whole knowledge-object.
+**Описание**: Перевод целого объекта знания.
 
-Workflow:
-1. Compute Kan extension (by 85.T formula).
-2. Per-claim translate.
-3. Aggregate obstructions.
-4. SMT-verify functorial coherence.
+Сценарий:
+1. Вычислить расширение Кана (по формуле 85.T).
+2. Перевести каждое утверждение.
+3. Агрегировать препятствия.
+4. SMT-верифицировать функториальную когерентность.
 
 ### `translate/suggest`
-**Описание**: Agent proposes possible translations.
+**Описание**: Агент предлагает возможные переводы.
 
 ### `obstruction/compute`
-**Описание**: Compute Obs(f) — untranslatability measure.
+**Описание**: Вычислить Obs(f) — меру непереводимости.
 
 ### `morita/check`
-**Описание**: Test Morita-equivalence между two knowledge-objects.
+**Описание**: Проверить Морита-эквивалентность между двумя объектами знания.
 
 ### `morita/construct`
-**Описание**: Construct Morita-bridge (if exists).
+**Описание**: Построить Морита-мост (если существует).
 
 ---
 
-## 5. Meta-reflection (5 endpoints)
+## 5. Мета-рефлексия (5 конечных точек)
 
-Self-reference операции.
+Операции самореференции.
 
 ### `meta/audit`
-**Описание**: Self-audit of Noesis.Core — check data model adequacy.
+**Описание**: Самоаудит Noesis.Core — проверка адекватности модели данных.
 
 ### `meta/boundaries`
-**Описание**: Claims bounded by Lawvere (status ≤ [Г]).
+**Описание**: Утверждения, ограниченные Ловиром (статус ≤ [Г]).
 
 ### `meta/suggest_extension`
-**Описание**: Agent predлагает structural extension (new dependency type, new status).
+**Описание**: Агент предлагает структурное расширение (новый тип зависимости, новый статус).
 
 ### `meta/patterns`
-**Описание**: Pattern detection в recurring issues (L-II Double Loop).
+**Описание**: Обнаружение паттернов в повторяющихся проблемах (L-II Double Loop).
 
 ### `meta/history`
-**Описание**: Evolution log of Noesis.Core itself.
+**Описание**: Лог эволюции самого Noesis.Core.
 
 ---
 
-## 6. Computational (5 endpoints)
+## 6. Вычислительные (5 конечных точек)
 
-Heavy structural computations.
+Тяжёлые структурные вычисления.
 
 ### `verum/compile`
-**Описание**: Compile knowledge-object to Verum code (для SMT-verification).
+**Описание**: Компиляция объекта знания в код Verum (для SMT-верификации).
 
 ### `verum/verify`
-**Описание**: Full SMT proof-check on compiled artifact.
+**Описание**: Полная SMT-проверка доказательства на скомпилированном артефакте.
 
 ### `compute/kan`
-**Описание**: Compute Kan extension (левый или правый).
+**Описание**: Вычислить расширение Кана (левое или правое).
 
 **Параметры**: `{ functor: string, type: "left"|"right", target_claim: string }`
 
 ### `compute/descent`
-**Описание**: Compute descent obstruction для specific covering.
+**Описание**: Вычислить препятствие спуска для конкретного покрытия.
 
 ### `compute/obstruction`
-**Описание**: Quantify Obs(f) с per-claim deviation.
+**Описание**: Количественно оценить Obs(f) с отклонением по каждому утверждению.
 
 ---
 
-## 7. Agent (4 endpoints)
+## 7. Агент (4 конечные точки)
 
-LLM-driven operations.
+Операции, ведомые LLM.
 
 ### `agent/query`
-**Описание**: Natural language query → structural operations.
+**Описание**: Запрос на естественном языке → структурные операции.
 
 **Пример**:
 ```
-User: "Show me all theorems in UHM that depend on T-96 and were changed last week"
-→ Agent translates to:
+Пользователь: "Покажи все теоремы в UHM, зависящие от T-96, изменённые на прошлой неделе"
+→ Агент переводит в:
    claim/dependents uhm:T-96 --transitive | filter modified > 2026-04-16
 ```
 
 ### `agent/propose`
-**Описание**: Agent proposes operation with confidence.
+**Описание**: Агент предлагает операцию с уверенностью.
 
-**Возвращает**: Top-K candidates с SMT-certificates.
+**Возвращает**: Top-K кандидатов с SMT-сертификатами.
 
 ### `agent/explain`
-**Описание**: Natural language explanation of structural finding.
+**Описание**: Объяснение структурного вывода на естественном языке.
 
 **Пример**:
 ```
-Input: coherence violation detected on claims c1, c2
-Agent output: "C1 is marked [T·L1] but depends on c2 which is [Г]. 
-              This violates status propagation rule. 
-              Suggested fix: downgrade c1 to [С·L2] or strengthen c2."
+Вход: обнаружено нарушение когерентности на утверждениях c1, c2
+Выход агента: "C1 помечено как [T·L1], но зависит от c2 со статусом [Г]. 
+              Это нарушает правило распространения статусов. 
+              Предлагаемое исправление: понизить c1 до [С·L2] или усилить c2."
 ```
 
 ### `agent/dialogue`
-**Описание**: Multi-turn dialogue с context preservation.
+**Описание**: Многоходовой диалог с сохранением контекста.
 
 ---
 
-## Transport layer
+## Транспортный слой
 
-### JSON-RPC over stdio/TCP/WebSocket
+### JSON-RPC поверх stdio/TCP/WebSocket
 
-**Example request**:
+**Пример запроса**:
 ```json
 {
   "jsonrpc": "2.0",
@@ -307,7 +307,7 @@ Agent output: "C1 is marked [T·L1] but depends on c2 which is [Г].
 }
 ```
 
-**Example response**:
+**Пример ответа**:
 ```json
 {
   "jsonrpc": "2.0",
@@ -322,88 +322,88 @@ Agent output: "C1 is marked [T·L1] but depends on c2 which is [Г].
 }
 ```
 
-### MCP compatibility
+### Совместимость с MCP
 
-NP — superset of MCP (Model Context Protocol). Каждый MCP client автоматически compatible.
+NP — надмножество MCP (Model Context Protocol). Каждый MCP-клиент автоматически совместим.
 
-### Rate limits
+### Лимиты запросов
 
-- Free tier: 100 req/min, 10K req/day.
-- Pro: 1000 req/min, unlimited.
-- Enterprise: configurable.
+- Бесплатный тариф: 100 запросов/мин, 10 тыс. запросов/сутки.
+- Pro: 1000 запросов/мин, без ограничений.
+- Корпоративный: конфигурируется.
 
 ---
 
-## Batch operations
+## Пакетные операции
 
-Для bulk changes:
+Для массовых изменений:
 
 ### `batch/claim/create`
-**Описание**: Create multiple claims atomically.
+**Описание**: Создать несколько утверждений атомарно.
 
 ### `batch/propagation/apply`
-**Описание**: Apply multiple status changes atomically.
+**Описание**: Применить несколько изменений статусов атомарно.
 
 ### `batch/import`
-**Описание**: Import entire corpus (e.g., UHM documentation).
+**Описание**: Импортировать целый корпус (например, документацию UHM).
 
-**Пример**: Import 400-page UHM corpus → ~185 claims + dependencies в одной atomic операции.
+**Пример**: Импорт корпуса UHM в 400 страниц → ~185 утверждений + зависимости в одной атомарной операции.
 
 ---
 
-## Subscriptions & webhooks
+## Подписки и вебхуки
 
 ### `subscribe/knowledge_changes`
-**Описание**: Real-time уведомления об изменениях в knowledge-object.
+**Описание**: Уведомления об изменениях в объекте знания в реальном времени.
 
 ### `webhook/register`
-**Описание**: Register webhook для external systems.
+**Описание**: Зарегистрировать вебхук для внешних систем.
 
-Events:
-- Claim created/modified/removed.
-- Coherence violation detected.
-- Meta-audit pattern discovered.
-- Federation sync completed.
-
----
-
-## Authentication & authorization
-
-### Auth methods
-
-- API key (per user).
-- OAuth 2.0 (enterprise SSO).
-- mTLS (for federation).
-
-### Authorization
-
-- Claim-level (read/write/admin).
-- Knowledge-level (access control).
-- Operation-level (some ops admin-only).
+События:
+- Утверждение создано/изменено/удалено.
+- Обнаружено нарушение когерентности.
+- Обнаружен мета-аудит-паттерн.
+- Синхронизация федерации завершена.
 
 ---
 
-## Full endpoint summary
+## Аутентификация и авторизация
 
-| Группа | Endpoints | Назначение |
+### Методы аутентификации
+
+- API-ключ (на пользователя).
+- OAuth 2.0 (корпоративный SSO).
+- mTLS (для федерации).
+
+### Авторизация
+
+- Уровень утверждения (чтение/запись/админ).
+- Уровень объекта знания (контроль доступа).
+- Уровень операции (некоторые операции только для админа).
+
+---
+
+## Сводка по конечным точкам
+
+| Группа | Конечных точек | Назначение |
 |---|---|---|
-| **Navigation** | 10 | Read-only exploration |
-| **Mutations** | 10 | State changes |
-| **Verification** | 6 | Audit & coherence |
-| **Translation** | 6 | Cross-knowledge ops |
-| **Meta-reflection** | 5 | Self-reference |
-| **Computational** | 5 | Heavy computations |
-| **Agent** | 4 | LLM-driven |
-| **Total** | **46** | Complete API |
+| **Навигация** | 10 | Только чтение |
+| **Мутации** | 10 | Изменения состояния |
+| **Верификация** | 6 | Аудит и когерентность |
+| **Перевод** | 6 | Кросс-доменные операции |
+| **Мета-рефлексия** | 5 | Самореференция |
+| **Вычислительные** | 5 | Тяжёлые вычисления |
+| **Агент** | 4 | Ведомые LLM |
+| **Итого** | **46** | Полный API |
 
-Plus batch operations + subscriptions + webhooks.
+Плюс пакетные операции + подписки + вебхуки.
 
 ---
 
 ## Следующий шаг
 
-Для understanding LLM agent в деталях: [05 — Агент](./05-agent).
+Для детального понимания LLM-агента: [05 — Агент](./05-agent).
 
-Для self-reference layer: [06 — Meta-reflection](./06-meta-reflection).
+Для слоя самореференции: [06 — Мета-рефлексия](./06-meta-reflection).
 
-Для formal theorems: [07 — Теоремы NO-\*](./07-theorems).
+Для формальных теорем: [07 — Теоремы NO-\*](./07-theorems).

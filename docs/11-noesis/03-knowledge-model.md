@@ -7,16 +7,16 @@ title: Модель знаний
 
 ## Центральные понятия
 
-### Knowledge-object
+### Объект знания (knowledge-object)
 
-**Knowledge-object** K — структурная единица организации знаний.
+**Объект знания** K — структурная единица организации знаний.
 
-В терминах Diakrisis: каждое K соответствует **артикуляции** α_K ∈ ⟪⟫_NOESIS:
+В терминах Diakrisis: каждое K соответствует **артикуляции** α_K ∈ ⟪⟫_Noesis:
 
-- Rich-метатеория S (в которой K формализуется).
-- Набор claims (объектов α_K).
-- Dependency structure (1-морфизмы).
-- Translations (функторы в другие K).
+- Богатая метатеория S (в которой K формализуется).
+- Набор утверждений (объектов α_K).
+- Структура зависимостей (1-морфизмы).
+- Переводы (функторы в другие K).
 - Gauge-класс (эквивалентные формулировки).
 - ν-инвариант (ординальная глубина).
 
@@ -24,18 +24,18 @@ title: Модель знаний
 
 | K | Тип | α в ⟪⟫ |
 |---|---|---|
-| UHM | Physics theory | α_uhm |
-| IIT | Consciousness theory | α_IIT |
-| ZFC Mathematics | Math foundation | α_zfc |
-| EU GDPR | Legal framework | α_gdpr |
-| ISO 26262 | Safety standard | α_iso26262 |
-| Engineering Spec X | Design document | α_spec_X |
+| UHM | Физическая теория | α_uhm |
+| IIT | Теория сознания | α_IIT |
+| ZFC Mathematics | Математическое основание | α_zfc |
+| EU GDPR | Правовой каркас | α_gdpr |
+| ISO 26262 | Стандарт безопасности | α_iso26262 |
+| Engineering Spec X | Проектный документ | α_spec_X |
 
-### Claim
+### Утверждение (claim)
 
-**Claim** c — элементарная единица знания внутри K. Это — объект в ⟪⟫ на уровне α_K.
+**Утверждение** c — элементарная единица знания внутри K. Это — объект в ⟪⟫ на уровне α_K.
 
-Типы claims:
+Типы утверждений:
 
 - `axiom` — постулат.
 - `definition` — определение.
@@ -43,37 +43,37 @@ title: Модель знаний
 - `lemma` — вспомогательное утверждение.
 - `conjecture` — гипотеза.
 - `proposition` — менее значимое утверждение.
-- `prediction` — проверяемое предсказание (empirical).
-- `requirement` — требование (engineering).
+- `prediction` — проверяемое предсказание (эмпирическое).
+- `requirement` — требование (инженерное).
 - `regulation` — регуляторная норма.
 - `observation` — феноменологическое наблюдение.
 
-### Dependency
+### Зависимость (dependency)
 
-**Dependency** — отношение между claims (1-морфизм в ⟪⟫).
+**Зависимость** — отношение между утверждениями (1-морфизм в ⟪⟫).
 
 Типы:
 
-| Тип | Семантика | Category-theoretic |
+| Тип | Семантика | Категорно |
 |---|---|---|
-| `requires` | Необходимое условие | Epi-relation |
-| `entails` | Логическое следствие | Morphism (deduction) |
-| `generalizes` | Обобщает | Sub-articulation |
-| `instantiates` | Частный случай | Specialization |
-| `contradicts` | Противоречит | Negation-relation |
-| `defines` | Определяет через | Definition-edge |
-| `translates_to` | Перевод в другую K | Cross-K functor component |
-| `refines` | Уточняет | Refinement-relation |
-| `supersedes` | Заменяет | Replacement |
-| `depends_empirically` | Empirical support | External-grounding |
+| `requires` | Необходимое условие | Эпи-отношение |
+| `entails` | Логическое следствие | Морфизм (дедукция) |
+| `generalizes` | Обобщает | Суб-артикуляция |
+| `instantiates` | Частный случай | Специализация |
+| `contradicts` | Противоречит | Отношение отрицания |
+| `defines` | Определяет через | Ребро определения |
+| `translates_to` | Перевод в другой K | Компонента функтора между K |
+| `refines` | Уточняет | Отношение уточнения |
+| `supersedes` | Заменяет | Замещение |
+| `depends_empirically` | Эмпирическая опора | Внешнее заземление |
 
-### Status
+### Статус (status)
 
-**Status** — эпистемический статус claim.
+**Статус** — эпистемический статус утверждения.
 
 Базовые статусы (наследуются из Diakrisis):
 
-| Status | Meaning |
+| Статус | Значение |
 |---|---|
 | **[Т]** | Теорема (доказана) |
 | **[П]** | Постулат (принят без доказательства) |
@@ -84,71 +84,71 @@ title: Модель знаний
 | **[Ф]** | Феноменологическое |
 | **[✗]** | Ретрактировано |
 
-### Rigor Level
+### Уровень строгости (rigor level)
 
-**Rigor Level** — уровень proof strictness (L1/L2/L3, см. Diakrisis catalog):
+**Уровень строгости** — строгость доказательства (L1/L2/L3, см. каталог Diakrisis):
 
-| Level | Описание |
+| Уровень | Описание |
 |---|---|
 | **L1** | Прямое доказательство в корпусе |
-| **L2** | Verified standard reduction |
-| **L3** | Reduction + implicit adaptation |
+| **L2** | Верифицированная стандартная редукция |
+| **L3** | Редукция + неявная адаптация |
 
-Полный status — **`[Т·L1]`**, **`[П·L3]`**, etc.
+Полный статус — **`[Т·L1]`**, **`[П·L3]`**, и т.д.
 
-### Translation (функтор)
+### Перевод (функтор)
 
-**Translation** F: K_1 → K_2 — функтор между knowledge-objects.
+**Перевод** F: K_1 → K_2 — функтор между объектами знания.
 
 Содержимое:
 
-- Source K + target K.
-- Mapping: claim in K_1 → claim in K_2 (per component).
-- Confidence per mapping (0.0–1.0).
-- Obstruction Obs(F) — мера непереводимости.
-- Type (interpretation, embedding, retraction, equivalence).
-- Status (verified, proposed, refuted).
+- Исходный K + целевой K.
+- Отображение: утверждение в K_1 → утверждение в K_2 (покомпонентно).
+- Уверенность на каждое отображение (0.0–1.0).
+- Препятствие Obs(F) — мера непереводимости.
+- Тип (интерпретация, вложение, ретракция, эквивалентность).
+- Статус (верифицирован, предложен, опровергнут).
 
-### Формальная мера obstruction
+### Формальная мера препятствия
 
-Для функтора $F: \mathcal{K}_1 \to \mathcal{K}_2$ между knowledge-объектами определяем **obstruction metric**:
+Для функтора $F: \mathcal{K}_1 \to \mathcal{K}_2$ между объектами знания определяем **метрику препятствия**:
 
 $$\mathrm{Obs}(F) := \frac{1}{|\mathrm{Mor}(\mathcal{K}_1)|} \sum_{f \in \mathrm{Mor}(\mathcal{K}_1)} d_\mathcal{K}\bigl(F(f), \text{Ran}_F(f)\bigr)$$
 
 где:
 
-- $\mathrm{Ran}_F$ — right Kan extension of the local F-mapping вдоль $\mathcal{K}_1 \hookrightarrow \mathcal{K}_1^\vee$ (free cocompletion).
-- $d_\mathcal{K}$ — **Hausdorff distance** в category $\mathcal{K}_2$ на 2-морфизмах:
+- $\mathrm{Ran}_F$ — правое расширение Кана локального F-отображения вдоль $\mathcal{K}_1 \hookrightarrow \mathcal{K}_1^\vee$ (свободное пополнение копределов).
+- $d_\mathcal{K}$ — **хаусдорфово расстояние** в категории $\mathcal{K}_2$ на 2-морфизмах:
   $$d_\mathcal{K}(g, h) = \inf\{\mathrm{length}(\eta) : \eta: g \Rightarrow h \text{ 2-morphism}\}$$
 
 **Свойства**:
 
-1. $\mathrm{Obs}(F) = 0 \iff F$ — strict functor (no approximation).
-2. $\mathrm{Obs}(F) \leq \varepsilon \Rightarrow F$ — ε-homotopy-coherent approximation.
-3. $\mathrm{Obs}(F \circ G) \leq \mathrm{Obs}(F) + \mathrm{Obs}(G)$ (subadditivity — triangle inequality в соответствующем metric space).
-4. $\mathrm{Obs}$ gauge-invariant: $\mathrm{Obs}(\phi \cdot F \cdot \psi) = \mathrm{Obs}(F)$ для gauge transformations $\phi, \psi$.
+1. $\mathrm{Obs}(F) = 0 \iff F$ — строгий функтор (без аппроксимации).
+2. $\mathrm{Obs}(F) \leq \varepsilon \Rightarrow F$ — ε-гомотопически-когерентная аппроксимация.
+3. $\mathrm{Obs}(F \circ G) \leq \mathrm{Obs}(F) + \mathrm{Obs}(G)$ (субаддитивность — неравенство треугольника в соответствующем метрическом пространстве).
+4. $\mathrm{Obs}$ gauge-инвариантно: $\mathrm{Obs}(\phi \cdot F \cdot \psi) = \mathrm{Obs}(F)$ для gauge-преобразований $\phi, \psi$.
 
-**Worst-component decomposition**:
+**Разложение по наихудшей компоненте**:
 
 $$\mathrm{Obs}_\text{worst}(F) := \max_{f \in \mathrm{Mor}(\mathcal{K}_1)} d_\mathcal{K}\bigl(F(f), \text{Ran}_F(f)\bigr)$$
 
-Это измеряет **максимальное единичное отклонение**: $\mathrm{Obs}_\text{worst}(F) = 0$ **необходимо** для classification as "verified translation"; $\mathrm{Obs}_\text{worst}(F) \gg \mathrm{Obs}(F)$ сигнализирует о концентрированной неполноте (часто: отсутствующий concept в target).
+Это измеряет **максимальное единичное отклонение**: $\mathrm{Obs}_\text{worst}(F) = 0$ **необходимо** для классификации как «верифицированный перевод»; $\mathrm{Obs}_\text{worst}(F) \gg \mathrm{Obs}(F)$ сигнализирует о концентрированной неполноте (часто: отсутствующее понятие в цели).
 
-**Classification thresholds** (default, configurable per-organization):
+**Пороги классификации** (по умолчанию, конфигурируемые для организации):
 
-| $\mathrm{Obs}(F)$ range | Status | Interpretation |
+| диапазон $\mathrm{Obs}(F)$ | Статус | Интерпретация |
 |---|---|---|
-| $0$ | verified | strict functor |
-| $(0, 0.05]$ | strong | ε-coherent, minor adjustments |
-| $(0.05, 0.20]$ | moderate | structural approximation |
-| $(0.20, 0.50]$ | weak | major conceptual drift |
-| $(0.50, 1.00]$ | untranslatable | foundational incompatibility |
+| $0$ | верифицирован | строгий функтор |
+| $(0, 0.05]$ | сильный | ε-когерентный, незначительные правки |
+| $(0.05, 0.20]$ | умеренный | структурная аппроксимация |
+| $(0.20, 0.50]$ | слабый | существенный концептуальный сдвиг |
+| $(0.50, 1.00]$ | непереводим | фундаментальная несовместимость |
 
-## Storage format
+## Формат хранения
 
-### Claim file
+### Файл утверждения
 
-Каждый claim — markdown с YAML frontmatter:
+Каждое утверждение — markdown с YAML-фронтматтером:
 
 ```yaml
 ---
@@ -210,7 +210,7 @@ verification:
 - α_uhm ∈ Fix(𝖬) (04.T1).
 ```
 
-### Functor file
+### Файл функтора
 
 ```yaml
 ---
@@ -255,16 +255,16 @@ audit_history:
 
 # F_UHM_Diakrisis
 
-**Description**. Interpretation functor UHM → Diakrisis через α_uhm-embedding in ⟪⟫.
+**Описание**. Функтор интерпретации UHM → Diakrisis через α_uhm-вложение в ⟪⟫.
 
-**Structural mapping**: ...
+**Структурное отображение**: ...
 ```
 
-## Formal operations on model
+## Формальные операции над моделью
 
-### Axiom compliance
+### Соответствие аксиомам
 
-Каждый claim проверяется на соответствие Diakrisis axioms:
+Каждое утверждение проверяется на соответствие аксиомам Diakrisis:
 
 ```verum
 fn check_axiom_compliance(c: Claim, α: Articulation) -> ComplianceReport {
@@ -286,9 +286,9 @@ fn check_axiom_compliance(c: Claim, α: Articulation) -> ComplianceReport {
 }
 ```
 
-### Coherence check
+### Проверка когерентности
 
-По 43.T1 (classifying space) descent condition:
+По 43.T1 (классифицирующее пространство) — условие спуска:
 
 ```verum
 fn check_descent(covering: Covering, global_data: Data) -> DescentResult {
@@ -313,7 +313,7 @@ fn check_descent(covering: Covering, global_data: Data) -> DescentResult {
 }
 ```
 
-### Morita-equivalence
+### Морита-эквивалентность
 
 ```verum
 fn check_morita(α1: Articulation, α2: Articulation) -> MoritaResult {
@@ -334,25 +334,25 @@ fn check_morita(α1: Articulation, α2: Articulation) -> MoritaResult {
 }
 ```
 
-## Data versioning
+## Версионирование данных
 
-### Claim-level versioning
+### Версионирование на уровне утверждения
 
-Каждый claim имеет:
-- `created` timestamp.
-- `modified` timestamp.
-- `audit_history` — chronological log изменений.
-- `previous_versions` — accessible через Git.
+Каждое утверждение имеет:
+- Метку времени `created`.
+- Метку времени `modified`.
+- `audit_history` — хронологический лог изменений.
+- `previous_versions` — доступны через Git.
 
-### Major vs minor changes
+### Крупные и мелкие изменения
 
-- **Minor**: typo fix, formatting, non-substantive rephrasing → bumped patch version.
-- **Major**: status change, dependency change, content refactor → bumped minor version.
-- **Breaking**: incompatible restructuring → bumped major version.
+- **Мелкие**: исправление опечаток, форматирование, несущественные переформулировки → инкремент патч-версии.
+- **Крупные**: смена статуса, изменение зависимостей, переработка контента → инкремент минорной версии.
+- **Ломающие**: несовместимая реструктуризация → инкремент мажорной версии.
 
-### Superseding
+### Замещение (superseding)
 
-When claim c replaces claim c':
+Когда утверждение c заменяет утверждение c':
 
 ```yaml
 supersedes: T-96-v1
@@ -365,13 +365,13 @@ supersession:
   breaking: false
 ```
 
-Dependent claims auto-update references.
+Зависимые утверждения автоматически обновляют ссылки.
 
-## Schema extensibility
+## Расширяемость схемы
 
-### Custom fields
+### Пользовательские поля
 
-Organizations могут extend schema:
+Организации могут расширять схему:
 
 ```yaml
 ---
@@ -389,12 +389,12 @@ custom_fields:
 ---
 ```
 
-Custom fields: 
-- Не влияют на structural verification.
-- Доступны через NP queries.
-- Могут использоваться для filters, reports.
+Пользовательские поля: 
+- Не влияют на структурную верификацию.
+- Доступны через NP-запросы.
+- Могут использоваться для фильтров и отчётов.
 
-### Custom dependency types
+### Пользовательские типы зависимостей
 
 ```yaml
 dependencies:
@@ -402,73 +402,73 @@ dependencies:
   - { id: patent_WO123, type: "protected_by_IP" }
 ```
 
-Custom types регистрируются per-organization, применяются в custom workflows.
+Пользовательские типы регистрируются на уровне организации, применяются в пользовательских сценариях.
 
-## Normative schema
+## Нормативная схема
 
-### Canonical fields (обязательные)
+### Канонические поля (обязательные)
 
 - `id`, `knowledge`, `type`, `status`, `title`.
 
-### Recommended fields (крайне желательны)
+### Рекомендуемые поля (крайне желательны)
 
 - `rigor_level`, `dependencies`, `dependents`, `tags`.
 
-### Optional structural fields
+### Опциональные структурные поля
 
 - `translations`, `gauge_class`, `foundational_dependence`.
 
-### Optional metadata
+### Опциональные метаданные
 
 - `author`, `created`, `modified`, `audit_history`, `verification`, `empirical_predictions`.
 
-### Extended enterprise fields
+### Расширенные корпоративные поля
 
 - `custom_fields`, `compliance_mapping`, `regulatory_submission`.
 
-## Query examples
+## Примеры запросов
 
-### Structural queries
+### Структурные запросы
 
 ```
-# All [T·L1] claims in UHM theory
+# Все утверждения [T·L1] в теории UHM
 knowledge/claims uhm --status "T·L1"
 
-# All claims blocking release
+# Все утверждения, блокирующие релиз
 claim/dependents uhm:T-96 --transitive | filter type=requirement
 
-# Morita-relatives of α_uhm
+# Морита-родственники α_uhm
 morita/relatives uhm --max_depth 3
 
-# Contradictions across federation
+# Противоречия в федерации
 coherence/check --scope federation --type contradiction
 ```
 
-### Natural language queries (agent-driven)
+### Запросы на естественном языке (ведомые агентом)
 
 ```
-# User
-"What claims depend on T-96 and have status below [T·L2]?"
+# Пользователь
+"Какие утверждения зависят от T-96 и имеют статус ниже [T·L2]?"
 
-# Agent (translates to structural query)
+# Агент (переводит в структурный запрос)
 claim/dependents uhm:T-96 --transitive | filter status < "T·L2"
-# Returns structural result + natural language summary
+# Возвращает структурный результат + резюме на естественном языке
 ```
 
-### Cross-domain queries
+### Кросс-доменные запросы
 
 ```
-# Find all claims in regulatory domain that interpret pharma:T-clinical_efficacy
+# Найти все утверждения в регуляторном домене, интерпретирующие pharma:T-clinical_efficacy
 claim/translations pharma:T-clinical_efficacy --target_domain regulatory
 
-# Obstruction heatmap between 30 consciousness theories
+# Тепловая карта препятствий между 30 теориями сознания
 functor/obstruction_matrix --domains consciousness_theories
 ```
 
 ## Следующий шаг
 
-Для детального endpoint catalog: [04 — Операции](./04-operations).
+Для детального каталога конечных точек: [04 — Операции](./04-operations).
 
-Для agent layer: [05 — Агент](./05-agent).
+Для слоя агента: [05 — Агент](./05-agent).
 
-Для applications: [09 — Наука](./09-science).
+Для применений: [09 — Наука](./09-science).

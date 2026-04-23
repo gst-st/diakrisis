@@ -7,7 +7,7 @@ title: Математические фронтиры — доказывание 
 
 ## Обзор
 
-Одно из самых мощных применений Noesis — **автоматизация и усиление доказательства сложных математических теорем**, включая нерешённые проблемы (open problems, Millennium Problems), за счёт сочетания трёх технологий:
+Одно из самых мощных применений Noesis — **автоматизация и усиление доказательства сложных математических теорем**, включая нерешённые задачи (открытые задачи, Проблемы тысячелетия), за счёт сочетания трёх технологий:
 
 $$\text{LLM} \;+\; \text{Verum proofs} \;+\; \text{Diakrisis}$$
 
@@ -19,63 +19,63 @@ $$\text{LLM} \;+\; \text{Verum proofs} \;+\; \text{Diakrisis}$$
 
 Существующие proof-ассистенты имеют **структурные ограничения**:
 
-1. **Привязка к одной foundation**. Lean → mathlib (ZFC-style), Coq → CIC, Agda → MLTT/HoTT. Доказательство в одной системе не переводимо автоматически в другую.
+1. **Привязка к одному основанию**. Lean → mathlib (в стиле ZFC), Coq → CIC, Agda → MLTT/HoTT. Доказательство в одной системе не переводимо автоматически в другую.
 
-2. **Отсутствие meta-level reasoning**. Proof assistant рассуждает **внутри** одной метатеории. Мета-мат-утверждения («эта задача эквивалентна...») — не формализуются.
+2. **Отсутствие рассуждений на мета-уровне**. Proof-ассистент рассуждает **внутри** одной метатеории. Мета-математические утверждения («эта задача эквивалентна...») — не формализуются.
 
-3. **Нет cross-foundation ликвидации гипотез**. Hypothesis в теорию ZFC может быть **уже доказана** в HoTT или NCG — но proof assistant этого «не знает».
+3. **Нет ликвидации гипотез между основаниями**. Гипотеза в теории ZFC может быть **уже доказана** в HoTT или NCG — но proof-ассистент этого «не знает».
 
-4. **LLM hallucinations не отфильтрованы**. Lean + GPT-style автоматизация (MiniF2F, Lean GPT-f) страдает от hallucinated proofs, которые компилируются, но неверны (бывает редко, но случается).
+4. **Галлюцинации LLM не отфильтрованы**. Lean + автоматизация в стиле GPT (MiniF2F, Lean GPT-f) страдает от галлюцинированных доказательств, которые компилируются, но неверны (бывает редко, но случается).
 
-5. **Scalability**. Mathlib 4 содержит ~1M lines of proof; навигация и reuse плохо поддерживаются instruments.
+5. **Масштабируемость**. Mathlib 4 содержит ~1M строк доказательств; навигация и переиспользование плохо поддерживаются инструментами.
 
-6. **Нет координации между разными группами**. Multiple proof efforts в разных системах не связаны.
+6. **Нет координации между разными группами**. Множественные усилия по доказательству в разных системах не связаны.
 
 ### Что не хватает
 
-**Meta-level**: работа не на единичной теории, а на **пространстве теорий** 𝓜_Fnd (которое Diakrisis даёт формально).
+**Мета-уровень**: работа не на единичной теории, а на **пространстве теорий** 𝓜_Fnd (которое Diakrisis даёт формально).
 
-**Cross-foundation integration**: перевод proof из одной foundation в другую через Morita + Kan extensions (Noesis: translate/claim).
+**Интеграция между основаниями**: перевод доказательства из одного основания в другое через Morita + Kan extensions (Noesis: translate/claim).
 
-**Hallucination immunity**: SMT gate + Diakrisis axioms гарантируют отсутствие bogus proofs (NO-9).
+**Иммунитет к галлюцинациям**: SMT-фильтр + аксиомы Diakrisis гарантируют отсутствие ложных доказательств (NO-9).
 
-**Collaborative infrastructure**: federated Noesis позволяет multiple groups work on single problem.
+**Коллаборативная инфраструктура**: федеративный Noesis позволяет множеству групп работать над одной задачей.
 
 ## Структурное преимущество Noesis
 
-### Verum как proof assistant, превосходящий Lean/Coq
+### Verum как proof-ассистент, превосходящий Lean/Coq
 
-Verum — stack, разработанный **с учётом Diakrisis-foundation**, поэтому:
+Verum — стек, разработанный **с учётом Diakrisis-основания**, поэтому:
 
-**1. Dependent types + HoTT + ∞-topos native**
+**1. Зависимые типы + HoTT + ∞-топос нативно**
 
-Верум поддерживает (∞,∞)-coherent reasoning natively. Lean 4 work's в (∞,1) sketch (via liquid type theory initiatives), Agda — в cubical. Только Verum полно covers (∞,∞)-Diakrisis.
+Verum поддерживает (∞,∞)-когерентные рассуждения нативно. Lean 4 работает в (∞,1)-эскизе (через инициативы liquid type theory), Agda — в cubical. Только Verum полностью покрывает (∞,∞)-Diakrisis.
 
-**2. SMT + category-theoretic tactics simultaneously**
+**2. SMT + категорно-теоретические тактики одновременно**
 
-Существующие proof assistants используют SMT через FFI (inefficient). Verum has native SMT + 30+ category-theoretic tactics + proof certificate generation в 5 форматах.
+Существующие proof-ассистенты используют SMT через FFI (неэффективно). Verum имеет нативный SMT + 30+ категорно-теоретических тактик + генерацию сертификатов доказательств в 5 форматах.
 
-**3. Cross-foundation imports**
+**3. Импорты между основаниями**
 
 `import diakrisis::zfc_articulation`
 `import diakrisis::hott_articulation`
 `import diakrisis::ncg_articulation`
 
-Per-foundation работа унифицирована. Результат в одной может быть **lifted** в другую automatically.
+Работа по каждому основанию унифицирована. Результат в одном может быть **поднят** в другое автоматически.
 
-**4. TH-Final ABSOLUTA_TOTALIS как hard constraint**
+**4. TH-Final ABSOLUTA_TOTALIS как жёсткое ограничение**
 
-Verum знает **что невозможно** (level 6). Предложения, нарушающие это, rejected at compile time. Это защищает от целой категории bogus reasoning.
+Verum знает, **что невозможно** (уровень 6). Предложения, нарушающие это, отклоняются на этапе компиляции. Это защищает от целой категории ложных рассуждений.
 
-**5. 97.T tradeoff structural awareness**
+**5. Структурная осведомлённость о компромиссе 97.T**
 
-Verum автоматически знает, что substructural system без `!` не даёт Π_3-max. Autosuggests `!`-promotion когда нужно.
+Verum автоматически знает, что субструктурная система без `!` не даёт Π_3-max. Автоматически предлагает `!`-promotion когда нужно.
 
-## Workflow доказательства сложной задачи
+## Сценарий доказательства сложной задачи
 
-### Этап 1: Formalization
+### Этап 1: формализация
 
-User формализует задачу в Noesis:
+Пользователь формализует задачу в Noesis:
 
 ```verum
 theorem riemann_hypothesis [status: Г, rigor_level: N/A]: 
@@ -89,252 +89,252 @@ theorem riemann_hypothesis [status: Г, rigor_level: N/A]:
 @related_theorems: [riemann_siegel_formula, functional_equation, selberg_hypothesis]
 ```
 
-### Этап 2: Structural analysis
+### Этап 2: структурный анализ
 
-Noesis analyzes problem structurally:
+Noesis структурно анализирует задачу:
 
-- Какие articulations α ∈ 𝓜_Fnd relevant?
-- Есть ли Morita-equivalent formulations где доказательство проще?
-- Какие subproblems уже решены?
-- Какие constraints применимы (TH-Final bounds)?
+- Какие артикуляции α ∈ 𝓜_Fnd релевантны?
+- Есть ли Morita-эквивалентные формулировки, где доказательство проще?
+- Какие подзадачи уже решены?
+- Какие ограничения применимы (границы TH-Final)?
 
 **Пример для Riemann**:
-- Classical ZFC formulation: explicit analytic number theory.
-- Cohesive ∞-topos formulation (via α_cohesion): may give geometric interpretation.
-- NCG formulation (Connes): Hilbert-Polya-style approach через Bost-Connes system.
-- HoTT formulation: univalence может давать новые tools.
+- Классическая ZFC-формулировка: явная аналитическая теория чисел.
+- Когезивная ∞-топос-формулировка (через α_cohesion): может дать геометрическую интерпретацию.
+- NCG-формулировка (Connes): подход в стиле Hilbert-Polya через систему Bost-Connes.
+- HoTT-формулировка: унивалентность может давать новые инструменты.
 
-Noesis **выявляет** все эти alternatives с confidence ratings.
+Noesis **выявляет** все эти альтернативы с оценками достоверности.
 
-### Этап 3: LLM-driven exploration
+### Этап 3: исследование под управлением LLM
 
-**LLM agent** в пяти modes работает одновременно:
+**LLM-агент** в пяти режимах работает одновременно:
 
-**Mode 1 (Navigator)**: ищет related theorems, lemmas, proofs.
-- «T-96 (Selberg's trace formula) relevant to zeta zeros distribution.»
-- «Weil conjectures (solved) provide analogous approach for function fields.»
+**Режим 1 (Навигатор)**: ищет связанные теоремы, леммы, доказательства.
+- «T-96 (формула следа Сельберга) релевантна распределению нулей дзета-функции.»
+- «Гипотезы Вейля (решены) дают аналогичный подход для функциональных полей.»
 
-**Mode 2 (Auditor)**: checks current proof attempts for validity.
+**Режим 2 (Аудитор)**: проверяет текущие попытки доказательства на корректность.
 
-**Mode 3 (Translator)**: predлагает переводить promising fragments between foundations.
-- «Functional equation of ζ in ZFC ↔ cohesive structure в Schreiber's work.»
+**Режим 3 (Переводчик)**: предлагает переводить перспективные фрагменты между основаниями.
+- «Функциональное уравнение ζ в ZFC ↔ когезивная структура в работах Schreiber.»
 
-**Mode 4 (Propagator)**: analyzes how proof would ripple.
+**Режим 4 (Распространитель)**: анализирует, как доказательство будет распространяться.
 
-**Mode 5 (Meta-auditor)**: looks for patterns.
-- «All successful approaches use X but fail at Y. Y is the structural bottleneck.»
+**Режим 5 (Мета-аудитор)**: ищет закономерности.
+- «Все успешные подходы используют X, но терпят неудачу на Y. Y — структурное узкое место.»
 
-### Этап 4: SMT + Verum verification
+### Этап 4: верификация SMT + Verum
 
-Each proposed proof step passes through:
+Каждый предложенный шаг доказательства проходит через:
 
-1. **SMT gate** (Z3/CVC5): category law validity.
-2. **Axi-check**: Diakrisis axiomatic compliance.
-3. **TH-Final bounds**: no level-6 claims.
-4. **97.T tradeoff**: structural filter.
-5. **Verum type-check**: dependent type validity.
-6. **Cross-foundation lifting**: if proof in HoTT, can be translated к ZFC formulation?
+1. **SMT-фильтр** (Z3/CVC5): корректность категорных законов.
+2. **Axi-check**: соответствие аксиомам Diakrisis.
+3. **Границы TH-Final**: нет утверждений уровня 6.
+4. **Компромисс 97.T**: структурный фильтр.
+5. **Верификация типов Verum**: корректность зависимых типов.
+6. **Подъём между основаниями**: если доказательство в HoTT, может ли быть переведено в ZFC-формулировку?
 
-Результат: **verified proof**, certified in 5 export formats.
+Результат: **верифицированное доказательство**, сертифицированное в 5 экспортных форматах.
 
-### Этап 5: Federation amplification
+### Этап 5: усиление федерацией
 
-Federation позволяет multiple teams контributing:
+Федерация позволяет множеству команд вносить вклад:
 
-- Team A works on analytic approach (ZFC).
-- Team B works on geometric approach (cohesive).
-- Team C works on NCG approach.
-- **Noesis coordinates**: shared progress, cross-team insights, avoiding duplication.
+- Команда A работает над аналитическим подходом (ZFC).
+- Команда B работает над геометрическим подходом (когезивный).
+- Команда C работает над NCG-подходом.
+- **Noesis координирует**: общий прогресс, межкомандные инсайты, избегание дублирования.
 
-По NO-6 (Federation coherence): all partial results glue через descent condition.
+По NO-6 (когерентность федерации): все частичные результаты склеиваются через условие спуска.
 
 ## Концретные классы задач
 
-### 1. Millennium Problems
+### 1. Проблемы тысячелетия
 
-7 Millennium Problems имеют structural complexity:
+7 Проблем тысячелетия имеют структурную сложность:
 
-- **Riemann Hypothesis**: analytic number theory + potentially geometric/cohesive reformulation.
-- **P vs NP**: computational complexity; Diakrisis gives framework for meta-complexity reasoning.
-- **Hodge Conjecture**: motivic cohomology; α_motivic (92.T) directly relevant.
-- **Poincaré Conjecture**: geometric topology; solved by Perelman 2003 — может быть formalized в Noesis for verification + extension.
-- **Navier-Stokes**: PDE; cross-formulation in synthetic differential geometry (13.T-series).
-- **Yang-Mills Mass Gap**: QFT; UHM-connections через α_cohesion.
-- **Birch-Swinnerton-Dyer**: L-functions; structural similar to Riemann.
+- **Riemann Hypothesis**: аналитическая теория чисел + потенциально геометрическая/когезивная переформулировка.
+- **P vs NP**: вычислительная сложность; Diakrisis даёт каркас для рассуждений о мета-сложности.
+- **Hodge Conjecture**: мотивные когомологии; α_motivic (92.T) напрямую релевантна.
+- **Poincaré Conjecture**: геометрическая топология; решена Perelman в 2003 — может быть формализована в Noesis для верификации и расширения.
+- **Navier-Stokes**: УрЧП; кросс-формулировка в синтетической дифференциальной геометрии (серия 13.T).
+- **Yang-Mills Mass Gap**: КТП; UHM-связи через α_cohesion.
+- **Birch-Swinnerton-Dyer**: L-функции; структурно похоже на Riemann.
 
-**Важно**: Noesis не гарантирует solving. Она:
+**Важно**: Noesis не гарантирует решения. Она:
 - Формализует задачу структурно.
-- Усиливает exploration.
-- Верифицирует proposed proofs.
-- Координирует distributed efforts.
+- Усиливает исследование.
+- Верифицирует предложенные доказательства.
+- Координирует распределённые усилия.
 
-Ability to solve — remains dependent on creativity + insight. Noesis **accelerates и safeguards**.
+Способность к решению — остаётся зависимой от креативности и инсайта. Noesis **ускоряет и защищает**.
 
-### 2. Cross-foundation theorems
+### 2. Теоремы между основаниями
 
-Теоремы, затрагивающие multiple foundations:
+Теоремы, затрагивающие несколько оснований:
 
-- **Morita equivalences** between operator algebras and topoi.
-- **Mirror symmetry**: A-models vs B-models (physics ↔ math).
-- **Langlands program**: representation theory ↔ number theory ↔ geometry.
-- **Categorification projects**: classical objects → categorical analogs.
+- **Morita-эквивалентности** между операторными алгебрами и топосами.
+- **Зеркальная симметрия**: A-модели против B-моделей (физика ↔ математика).
+- **Программа Ленглендса**: теория представлений ↔ теория чисел ↔ геометрия.
+- **Проекты категорификации**: классические объекты → категорные аналоги.
 
-Noesis — **естественная среда** для cross-foundation work: translate/claim, Kan extensions, Morita-checks all supported.
+Noesis — **естественная среда** для работы между основаниями: translate/claim, Kan extensions, Morita-проверки — всё поддерживается.
 
-### 3. Verification of large proofs
+### 3. Верификация больших доказательств
 
-Proofs like:
+Доказательства вроде:
 
-- **Fermat's Last Theorem** (Wiles 1994-5): proved, but verification in Lean 4 is significant effort.
-- **Odd Perfect Numbers** (various): complex computational + structural components.
-- **Classification of finite simple groups**: 10,000+ pages, multiple authors.
-- **Four Color Theorem**: computer-verified (Coq), but cross-checking is hard.
+- **Великая теорема Ферма** (Wiles 1994-5): доказана, но верификация в Lean 4 — значительное усилие.
+- **Нечётные совершенные числа** (разное): сложные вычислительные и структурные компоненты.
+- **Классификация конечных простых групп**: 10 000+ страниц, множество авторов.
+- **Теорема о четырёх красках**: верифицирована компьютером (Coq), но перекрёстная проверка трудна.
 
-Noesis structural layer:
-- Dependency tracking.
-- Progress visualization.
-- Cross-author coordination.
-- Mechanization of routine reasoning.
+Структурный слой Noesis:
+- Отслеживание зависимостей.
+- Визуализация прогресса.
+- Координация между авторами.
+- Механизация рутинных рассуждений.
 
-### 4. Engineering of new mathematics
+### 4. Инженерия новой математики
 
-Not just proving existing conjectures, but **generating new theories**:
+Не просто доказательство существующих гипотез, но **порождение новых теорий**:
 
-- **Generative exploration**: LLM suggests potential theorems, Noesis verifies structural validity.
-- **Structural completeness**: «what theorems должны существовать here given axioms?» — Noesis generates.
-- **Morita bridges**: «these two areas structurally equivalent» — leading to new insights.
+- **Генеративное исследование**: LLM предлагает потенциальные теоремы, Noesis верифицирует структурную корректность.
+- **Структурная полнота**: «какие теоремы должны существовать здесь при данных аксиомах?» — Noesis порождает.
+- **Morita-мосты**: «эти две области структурно эквивалентны» — ведёт к новым инсайтам.
 
-**Limitations** (по NO-13): generated theorems structurally correct, но novelty + utility require human judgment.
+**Ограничения** (по NO-13): порождённые теоремы структурно корректны, но новизна и полезность требуют человеческого суждения.
 
-## Mathematical frontier case studies
+## Кейсы математической фронтирной работы
 
-### Case F-1: Verification project, mathlib4 scale
+### Кейс F-1: проект верификации, масштаб mathlib4
 
-**Problem**: verify 1000+ theorems of classical analysis в Lean 4.
+**Задача**: верифицировать 1000+ теорем классического анализа в Lean 4.
 
-**Traditional approach**: many man-years of expert Lean work.
+**Традиционный подход**: много человеко-лет экспертной работы в Lean.
 
-**Noesis-amplified approach**:
-1. Import existing mathlib4 → Noesis как knowledge-objects.
-2. Structural audit identifies gaps, redundancies.
-3. LLM agent proposes proof strategies.
-4. SMT gate + Verum verification.
-5. Cross-check translations к Coq / Agda.
-6. **Parallel verification** by distributed contributors.
+**Подход с усилением Noesis**:
+1. Импорт существующего mathlib4 → Noesis как объекты знания.
+2. Структурный аудит выявляет пробелы, избыточности.
+3. LLM-агент предлагает стратегии доказательств.
+4. SMT-фильтр + верификация Verum.
+5. Перекрёстная проверка переводов в Coq / Agda.
+6. **Параллельная верификация** распределёнными участниками.
 
-**Expected acceleration**: 3-5×.
+**Ожидаемое ускорение**: 3-5×.
 
-### Case F-2: Meta-research — «most promising approaches»
+### Кейс F-2: мета-исследования — «наиболее перспективные подходы»
 
-**Problem**: given open problem X, which of 10 known approaches most likely to succeed?
+**Задача**: дана открытая задача X, какой из 10 известных подходов вероятнее всего приведёт к успеху?
 
-**Noesis approach**:
-1. Structure each approach as partial proof path.
-2. Compute structural obstructions.
-3. Identify which obstruction is smallest (most tractable).
-4. Suggest focused effort на that approach.
-5. Cross-approach insights.
+**Подход Noesis**:
+1. Структурирование каждого подхода как частичного пути доказательства.
+2. Вычисление структурных препятствий.
+3. Выявление, какое препятствие наименьшее (наиболее решаемое).
+4. Предложение сфокусированных усилий на этом подходе.
+5. Инсайты между подходами.
 
-**Value**: direct mathematical strategy via structural analysis.
+**Ценность**: прямая математическая стратегия через структурный анализ.
 
-### Case F-3: Cross-field connection discovery
+### Кейс F-3: обнаружение связей между областями
 
-**Problem**: find unexpected connections between mathematical fields.
+**Задача**: найти неожиданные связи между математическими областями.
 
-**Noesis approach**:
-1. Automated Morita-equivalence search across 100+ fields.
-2. LLM-assisted semantic analysis.
-3. Obstruction heatmap.
-4. Structural analog discovery.
+**Подход Noesis**:
+1. Автоматизированный поиск Morita-эквивалентностей по 100+ областям.
+2. Семантический анализ с помощью LLM.
+3. Тепловая карта препятствий.
+4. Обнаружение структурных аналогов.
 
-**Example**: automated discovery of analog between field X в combinatorics and field Y в physics.
+**Пример**: автоматизированное обнаружение аналога между областью X в комбинаторике и областью Y в физике.
 
-### Case F-4: Proof reconstruction
+### Кейс F-4: реконструкция доказательств
 
-**Problem**: reconstruct lost proofs (historical) или formalize informal proofs.
+**Задача**: реконструировать утерянные доказательства (исторические) или формализовать неформальные доказательства.
 
-**Noesis approach**:
-1. Original argument imported as structured claim.
-2. LLM + Diakrisis reconstruct formal version.
-3. SMT verifies each step.
-4. Alternatively: verify informal argument's validity via structural analysis.
+**Подход Noesis**:
+1. Исходный аргумент импортируется как структурированное утверждение.
+2. LLM + Diakrisis реконструируют формальную версию.
+3. SMT верифицирует каждый шаг.
+4. Альтернативно: верификация корректности неформального аргумента через структурный анализ.
 
-**Value**: preserve + verify mathematical heritage.
+**Ценность**: сохранение и верификация математического наследия.
 
-## Формальные гарантии для math frontier
+## Формальные гарантии для математической фронтирной работы
 
-### By NO-9 (Hallucination immunity)
+### По NO-9 (иммунитет к галлюцинациям)
 
-**Critical for math**: accepted proofs **never** bogus. Every accepted step:
-- SMT-verified.
-- Axiom-compliant.
-- Structurally valid.
+**Критично для математики**: принятые доказательства **никогда** не ложны. Каждый принятый шаг:
+- Верифицирован SMT.
+- Соответствует аксиомам.
+- Структурно корректен.
 
-No false theorems slip through (impossible by NO-9).
+Ложные теоремы не проскакивают (невозможно по NO-9).
 
-### By NO-12 (Structural superiority)
+### По NO-12 (структурное превосходство)
 
-Meta-mathematical reasoning (about mathematical theories themselves) — **only possible** на Noesis / Diakrisis-factored systems.
+Мета-математические рассуждения (о самих математических теориях) — **возможны только** в Noesis / Diakrisis-факторизованных системах.
 
-Lean 4 / Coq / Agda — single-foundation; cannot reason about foundations themselves.
+Lean 4 / Coq / Agda — с одним основанием; не могут рассуждать о самих основаниях.
 
-### By NO-13 (Generated theory correctness)
+### По NO-13 (корректность порождённой теории)
 
-Generated mathematical content structurally correct by construction.
+Порождённое математическое содержание структурно корректно по построению.
 
 ## Критичные ограничения (честно)
 
-### Noesis НЕ может сама решить open problem
+### Noesis НЕ может сама решить открытую задачу
 
 **Проблема не в инструменте, а в фундаментальных ограничениях**:
-- По Gödel's incompleteness: некоторые true statements недоказуемы.
-- По 87.T: level 6 невозможен.
-- Creative insight — human contribution (agent augments, не replaces).
+- По теореме Гёделя о неполноте: некоторые истинные утверждения недоказуемы.
+- По 87.T: уровень 6 невозможен.
+- Творческий инсайт — человеческий вклад (агент усиливает, не заменяет).
 
 ### Что Noesis может
 
-- **Accelerate**: routine reasoning automated.
-- **Coordinate**: distributed efforts synthesized.
-- **Verify**: bogus proofs filtered.
-- **Translate**: cross-foundation work enabled.
-- **Explore**: structural search at scale.
+- **Ускорять**: рутинные рассуждения автоматизированы.
+- **Координировать**: распределённые усилия синтезируются.
+- **Верифицировать**: ложные доказательства отфильтровываются.
+- **Переводить**: работа между основаниями включена.
+- **Исследовать**: структурный поиск в масштабе.
 
-**Не может**: provide genius insight. That remains human.
+**Не может**: предоставить гениальный инсайт. Это остаётся человеческим.
 
-## Интеграция с existing math infrastructure
+## Интеграция с существующей математической инфраструктурой
 
-### With mathlib4 (Lean 4)
+### С mathlib4 (Lean 4)
 
-- Import/export pair.
-- Cross-reference.
-- Formalized theorems lift к Noesis [Т·L1].
+- Пара импорт/экспорт.
+- Перекрёстные ссылки.
+- Формализованные теоремы поднимаются в Noesis как [Т·L1].
 
-### With Coq / Rocq
+### С Coq / Rocq
 
-- Similar integration.
-- Proof certificate exchange.
+- Аналогичная интеграция.
+- Обмен сертификатами доказательств.
 
-### With Isabelle/HOL
+### С Isabelle/HOL
 
-- Structural import.
-- HOL-specific proofs as [Т·L2].
+- Структурный импорт.
+- HOL-специфичные доказательства как [Т·L2].
 
-### With math journals
+### С математическими журналами
 
-- Proofs published in journals imported as [Т·L3] (not fully formalized, но peer-reviewed).
-- Upgrade к [Т·L1] через Lean/Coq formalization.
+- Доказательства, опубликованные в журналах, импортируются как [Т·L3] (не полностью формализованы, но прошли рецензирование).
+- Повышение до [Т·L1] через формализацию в Lean/Coq.
 
-### With arXiv preprints
+### С препринтами arXiv
 
-- Semantic extraction.
-- Structural integration.
-- Community review.
+- Семантическое извлечение.
+- Структурная интеграция.
+- Обзор сообщества.
 
-## Verum-specific capabilities for math
+## Возможности Verum, специфичные для математики
 
-### 1. Hybrid foundation support
+### 1. Поддержка гибридных оснований
 
-Single Verum theorem может use multiple foundations:
+Одна теорема Verum может использовать несколько оснований:
 
 ```verum
 theorem bridge_zfc_hott [status: T·L1]:
@@ -347,7 +347,7 @@ theorem bridge_zfc_hott [status: T·L1]:
 
 Невозможно в Lean 4 / Coq / Agda.
 
-### 2. ∞-categorical tactics
+### 2. ∞-категорные тактики
 
 ```verum
 theorem higher_coherence:
@@ -362,18 +362,18 @@ proof {
 }
 ```
 
-Native (∞,n) reasoning.
+Нативные (∞,n)-рассуждения.
 
-### 3. Diakrisis axiom awareness
+### 3. Осведомлённость об аксиомах Diakrisis
 
-Compile-time verification:
+Верификация на этапе компиляции:
 ```
 Error: proposed proof uses implicit "level 6" construction.
 Rejected by TH-Final ABSOLUTA_TOTALIS (87.T).
 Suggested fix: reformulate within 5+ scope.
 ```
 
-### 4. LLM-native tactic
+### 4. LLM-нативная тактика
 
 ```verum
 proof {
@@ -383,11 +383,11 @@ proof {
 }
 ```
 
-**LLM integrated** at proof level, не external tool.
+**LLM интегрирован** на уровне доказательства, не внешний инструмент.
 
-### 5. Cross-proof references
+### 5. Перекрёстные ссылки между доказательствами
 
-Single proof may cite theorems across multiple knowledge-objects:
+Одно доказательство может цитировать теоремы из нескольких объектов знания:
 
 ```verum
 by_theorem uhm::T-96;
@@ -395,30 +395,30 @@ by_theorem iit::integration_lemma;
 by_theorem diakrisis::Axi-7;
 ```
 
-Automatic consistency verification.
+Автоматическая верификация согласованности.
 
-## Research programme: Noesis-driven mathematics
+## Исследовательская программа: математика под управлением Noesis
 
-### Short-term (2-3 years)
+### Краткосрочно (2-3 года)
 
-- Verify mathlib4 core theorems in Noesis.
-- Formalize 10-20 major textbook theorems.
-- Cross-foundation translations for classical results.
+- Верификация ключевых теорем mathlib4 в Noesis.
+- Формализация 10-20 крупных учебниковых теорем.
+- Переводы между основаниями для классических результатов.
 
-### Medium-term (3-7 years)
+### Среднесрочно (3-7 лет)
 
-- Millennium Problem attempts structured in Noesis.
-- Federated mathematical research (20+ institutions).
-- New theorems of [Т·L3] status generated via LLM + verified.
+- Попытки решения Проблем тысячелетия, структурированные в Noesis.
+- Федеративные математические исследования (20+ институтов).
+- Новые теоремы статуса [Т·L3] порождаются через LLM и верифицируются.
 
-### Long-term (7-15 years)
+### Долгосрочно (7-15 лет)
 
-- Significant results potentially proved through Noesis-amplified approaches.
-- Mathematical research transformed by structural infrastructure.
-- New sub-fields emerging из cross-foundation translations.
+- Значимые результаты, потенциально доказанные через подходы с усилением Noesis.
+- Математические исследования трансформированы структурной инфраструктурой.
+- Новые подобласти возникают из переводов между основаниями.
 
 ## Следующий шаг
 
-Для automated peer review: [22 — Peer review](./22-peer-review).
+Для автоматизированного peer review: [22 — Peer review](./22-peer-review).
 
-Для LLM augmentation: [23 — LLM augmentation](./23-llm-augmentation).
+Для усиления LLM: [23 — LLM augmentation](./23-llm-augmentation).

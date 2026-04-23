@@ -3,341 +3,341 @@ sidebar_position: 8
 title: Рабочие сценарии
 ---
 
-# Workflow-паттерны Noesis
+# Рабочие сценарии Noesis
 
 ## Обзор
 
-15 канонических workflow-паттернов — типичные сценарии использования Noesis. Каждый покрывает distinct user-journey с measurable outcomes.
+15 канонических рабочих сценариев — типичные случаи использования Noesis. Каждый покрывает отдельный пользовательский путь с измеримыми результатами.
 
 ---
 
-## WF-1: Ingest theory
+## WF-1: Загрузка теории
 
-**Use case**: researcher хочет загрузить новую theory в Noesis.
+**Случай использования**: исследователь хочет загрузить новую теорию в Noesis.
 
-**Steps**:
-1. `knowledge/create` — создать knowledge-object.
-2. Import markdown docs (per-paper, per-chapter).
-3. LLM-assist: automatic claim extraction from text (с user review).
-4. Agent proposes dependencies based on cross-references.
-5. User refines; `claim/add_dependency` для corrections.
-6. `knowledge/audit` — initial coherence check.
-7. `axiom/check` per-claim compliance.
+**Шаги**:
+1. `knowledge/create` — создать объект знания.
+2. Импорт markdown-документов (по статье, по главе).
+3. LLM-ассистент: автоматическое извлечение утверждений из текста (с проверкой пользователем).
+4. Агент предлагает зависимости на основе перекрёстных ссылок.
+5. Пользователь уточняет; `claim/add_dependency` для исправлений.
+6. `knowledge/audit` — начальная проверка когерентности.
+7. `axiom/check` — соответствие по каждому утверждению.
 
-**Outcome**: structured theory ready for querying.
+**Результат**: структурированная теория, готовая к запросам.
 
-**Time**: ~30 min для 100-page paper vs ~2-3 days manual.
-
----
-
-## WF-2: Paradox detection
-
-**Use case**: self-reference обнаружен в theory.
-
-**Steps**:
-1. User: `claim/set_status T-X C "paradox"`.
-2. Noesis: `propagation/preview` показывает 18 affected claims.
-3. Agent: analyzes alternative chains (мог бы X обойти без T-X?).
-4. User: reviews propagation, accepts or overrides.
-5. `propagation/apply` — atomic update.
-6. Git commit with audit trail.
-
-**Outcome**: consistent state восстановлен в <5 min (vs 2-4 hours manual).
+**Время**: ~30 мин для статьи в 100 страниц против ~2-3 дней вручную.
 
 ---
 
-## WF-3: Cross-theory translation
+## WF-2: Обнаружение парадоксов
 
-**Use case**: понять как concept в T_1 соотносится с T_2.
+**Случай использования**: в теории обнаружена самореференция.
 
-**Steps**:
+**Шаги**:
+1. Пользователь: `claim/set_status T-X C "paradox"`.
+2. Noesis: `propagation/preview` показывает 18 затронутых утверждений.
+3. Агент: анализирует альтернативные цепочки (можно ли обойтись без T-X?).
+4. Пользователь: просматривает распространение, принимает или переопределяет.
+5. `propagation/apply` — атомарное обновление.
+6. Git-коммит с аудит-следом.
+
+**Результат**: согласованное состояние восстановлено за <5 мин (против 2-4 часов вручную).
+
+---
+
+## WF-3: Перевод между теориями
+
+**Случай использования**: понять, как концепт в T_1 соотносится с T_2.
+
+**Шаги**:
 1. `translate/claim T_1:X --target T_2`.
-2. Noesis computes Kan extension approximation.
-3. Agent proposes top-3 candidates с confidence + obstruction.
-4. User reviews; selects best или refines.
-5. `functor/create` если новый bridge established.
-6. SMT-verification of functoriality.
+2. Noesis вычисляет аппроксимацию расширения Кана.
+3. Агент предлагает топ-3 кандидатов с уверенностью + препятствиями.
+4. Пользователь просматривает; выбирает лучший или уточняет.
+5. `functor/create` — если установлен новый мост.
+6. SMT-верификация функториальности.
 
-**Outcome**: formal translation с verifiable confidence.
-
----
-
-## WF-4: Coherence audit
-
-**Use case**: проверить целостность theory перед submission.
-
-**Steps**:
-1. `knowledge/audit T` — full audit (5 violation types).
-2. `coherence/check --cross T --target all` — cross-theory coherence.
-3. Agent: summarizes findings.
-4. User addresses each violation.
-5. Final audit → green.
-
-**Outcome**: publication-ready theory.
+**Результат**: формальный перевод с верифицируемой уверенностью.
 
 ---
 
-## WF-5: Literature integration
+## WF-4: Аудит когерентности
 
-**Use case**: включить findings новой paper в existing theory.
+**Случай использования**: проверить целостность теории перед подачей.
 
-**Steps**:
-1. `knowledge/import` — parse paper markdown/PDF.
-2. Agent: extract claims, propose dependencies.
-3. User reviews extractions.
-4. `claim/add_dependency` — connect to existing claims.
-5. `coherence/check` — detect conflicts с existing corpus.
-6. Resolve conflicts (update statuses, refine claims).
+**Шаги**:
+1. `knowledge/audit T` — полный аудит (5 типов нарушений).
+2. `coherence/check --cross T --target all` — когерентность между теориями.
+3. Агент: суммирует результаты.
+4. Пользователь устраняет каждое нарушение.
+5. Финальный аудит → зелёный.
 
-**Outcome**: new paper structurally integrated в days, не weeks.
+**Результат**: теория, готовая к публикации.
 
 ---
 
-## WF-6: Thesis / dissertation structuring
+## WF-5: Интеграция литературы
 
-**Use case**: PhD student structures thesis in Noesis.
+**Случай использования**: включить результаты новой статьи в существующую теорию.
 
-**Steps**:
+**Шаги**:
+1. `knowledge/import` — парсинг статьи markdown/PDF.
+2. Агент: извлекает утверждения, предлагает зависимости.
+3. Пользователь проверяет извлечения.
+4. `claim/add_dependency` — соединение с существующими утверждениями.
+5. `coherence/check` — обнаружение конфликтов с существующим корпусом.
+6. Разрешение конфликтов (обновление статусов, уточнение утверждений).
+
+**Результат**: новая статья структурно интегрирована за дни, а не недели.
+
+---
+
+## WF-6: Структурирование диссертации
+
+**Случай использования**: аспирант структурирует диссертацию в Noesis.
+
+**Шаги**:
 1. `knowledge/create thesis`.
-2. Initial axioms = background assumptions.
-3. Claims = chapters, sections, results.
-4. Dependencies between chapters.
-5. Translations to literature (IIT, GWT, UHM).
-6. Agent: detects unexplored gaps.
-7. `meta/patterns` identifies recurring themes.
+2. Начальные аксиомы = фоновые допущения.
+3. Утверждения = главы, разделы, результаты.
+4. Зависимости между главами.
+5. Переводы к литературе (IIT, GWT, UHM).
+6. Агент: обнаруживает неисследованные пробелы.
+7. `meta/patterns` выявляет повторяющиеся темы.
 
-**Outcome**: thesis с formal structural backbone + gap analysis.
-
----
-
-## WF-7: Regulatory compliance
-
-**Use case**: pharma company submits NDA в multiple jurisdictions.
-
-**Steps**:
-1. Load regulations: FDA, EMA, PMDA (each as knowledge-object).
-2. Load clinical trial data как claims.
-3. Agent: compute translations между regulatory frameworks.
-4. `coherence/check` — detect regulatory conflicts.
-5. Generate submission packages per jurisdiction с conflict resolutions.
-
-**Outcome**: multi-jurisdictional submission в days vs 18+ months.
+**Результат**: диссертация с формальным структурным каркасом + анализ пробелов.
 
 ---
 
-## WF-8: Patent analysis
+## WF-7: Регуляторное соответствие
 
-**Use case**: determine if invention has prior art.
+**Случай использования**: фармкомпания подаёт NDA в нескольких юрисдикциях.
 
-**Steps**:
-1. Describe invention as claim structure.
-2. `graph/search` — similarity search across patent database.
-3. Agent: ranks candidates by structural overlap.
-4. `morita/check` — check если invention Morita-equivalent existing patent.
-5. `obstruction/compute` — quantify novelty.
+**Шаги**:
+1. Загрузить регламенты: FDA, EMA, PMDA (каждый как объект знания).
+2. Загрузить данные клинических испытаний как утверждения.
+3. Агент: вычисляет переводы между регуляторными каркасами.
+4. `coherence/check` — обнаружение регуляторных конфликтов.
+5. Генерация пакетов подачи по юрисдикциям с разрешениями конфликтов.
 
-**Outcome**: structural prior-art report с obstruction metrics.
-
----
-
-## WF-9: Safety-critical specification
-
-**Use case**: aerospace engineer creates system spec.
-
-**Steps**:
-1. Load relevant standards (ISO 26262, DO-178C, ARP4754A).
-2. Create specification as knowledge-object.
-3. Dependencies from claims to standards.
-4. `axiom/check` — verify satisfaction of safety axioms.
-5. `coherence/check` — cross-standard consistency.
-6. SMT-verified compliance report.
-
-**Outcome**: formally-verified safety specification.
+**Результат**: мультиюрисдикционная подача за дни против 18+ месяцев.
 
 ---
 
-## WF-10: Research reproducibility
+## WF-8: Патентный анализ
 
-**Use case**: research team ensures results reproducible.
+**Случай использования**: определить, имеет ли изобретение предшественников.
 
-**Steps**:
-1. Each experiment → claim with dependencies.
-2. Data + analysis code linked as witness.
-3. Prediction claims with test protocols.
-4. `verum/verify` — run verification pipeline.
-5. Cross-experiment coherence checks.
+**Шаги**:
+1. Описать изобретение как структуру утверждений.
+2. `graph/search` — поиск по сходству в базе патентов.
+3. Агент: ранжирует кандидатов по структурному пересечению.
+4. `morita/check` — проверить, Morita-эквивалентно ли изобретение существующему патенту.
+5. `obstruction/compute` — количественная оценка новизны.
 
-**Outcome**: reproducible research с audit trail.
+**Результат**: структурный отчёт о предшественниках с метриками препятствий.
 
 ---
 
-## WF-11: Curriculum design
+## WF-9: Критичная по безопасности спецификация
 
-**Use case**: professor designs new course.
+**Случай использования**: инженер аэрокосмической отрасли создаёт системную спецификацию.
 
-**Steps**:
+**Шаги**:
+1. Загрузить соответствующие стандарты (ISO 26262, DO-178C, ARP4754A).
+2. Создать спецификацию как объект знания.
+3. Зависимости от утверждений к стандартам.
+4. `axiom/check` — верификация удовлетворения аксиом безопасности.
+5. `coherence/check` — согласованность между стандартами.
+6. SMT-верифицированный отчёт о соответствии.
+
+**Результат**: формально верифицированная спецификация безопасности.
+
+---
+
+## WF-10: Воспроизводимость исследований
+
+**Случай использования**: исследовательская команда обеспечивает воспроизводимость результатов.
+
+**Шаги**:
+1. Каждый эксперимент → утверждение с зависимостями.
+2. Данные + код анализа связаны как свидетельство.
+3. Утверждения-предсказания с протоколами тестирования.
+4. `verum/verify` — запуск конвейера верификации.
+5. Проверки когерентности между экспериментами.
+
+**Результат**: воспроизводимые исследования с аудит-следом.
+
+---
+
+## WF-11: Проектирование учебного курса
+
+**Случай использования**: профессор разрабатывает новый курс.
+
+**Шаги**:
 1. `knowledge/create course_X`.
-2. Claims = learning objectives, topics.
-3. Dependencies = prerequisite relationships.
-4. Translations to textbooks (Knuth, Cormen, etc.).
-5. Agent: suggests optimal ordering.
-6. `coherence/check` — ensure no circular prerequisites.
+2. Утверждения = цели обучения, темы.
+3. Зависимости = отношения предпосылок.
+4. Переводы к учебникам (Knuth, Cormen и т.д.).
+5. Агент: предлагает оптимальный порядок.
+6. `coherence/check` — убедиться, что нет циклических предпосылок.
 
-**Outcome**: structured curriculum с dependency analysis.
-
----
-
-## WF-12: M&A due diligence
-
-**Use case**: due diligence при корпоративном acquisition.
-
-**Steps**:
-1. Target company documents imported as knowledge-objects.
-2. Acquirer knowledge similarly structured.
-3. `morita/check` — detect duplicative IP.
-4. `coherence/check` — identify conflicts.
-5. `obstruction/compute` — quantify integration cost.
-6. Comprehensive due-diligence report.
-
-**Outcome**: structural M&A analysis в days vs months.
+**Результат**: структурированный учебный курс с анализом зависимостей.
 
 ---
 
-## WF-13: Collaborative research
+## WF-12: Due diligence в M&A
 
-**Use case**: international research consortium.
+**Случай использования**: due diligence при корпоративном приобретении.
 
-**Steps**:
-1. Each institution maintains local Noesis instance.
-2. Federation protocol connects nodes.
-3. Shared knowledge-objects (public claims).
-4. Private claims (institutional).
-5. Agent: discovers cross-institutional opportunities.
+**Шаги**:
+1. Документы целевой компании импортируются как объекты знания.
+2. Знания покупателя структурированы аналогично.
+3. `morita/check` — обнаружение дублирующей ИС.
+4. `coherence/check` — идентификация конфликтов.
+5. `obstruction/compute` — количественная оценка стоимости интеграции.
+6. Комплексный отчёт о due diligence.
+
+**Результат**: структурный M&A-анализ за дни против месяцев.
+
+---
+
+## WF-13: Совместные исследования
+
+**Случай использования**: международный исследовательский консорциум.
+
+**Шаги**:
+1. Каждое учреждение поддерживает локальный экземпляр Noesis.
+2. Протокол федерации соединяет узлы.
+3. Общие объекты знания (публичные утверждения).
+4. Приватные утверждения (институциональные).
+5. Агент: обнаруживает межинституциональные возможности.
 6. `coherence/check --scope federation`.
 
-**Outcome**: coordinated research с preserved privacy.
+**Результат**: скоординированные исследования с сохранением конфиденциальности.
 
 ---
 
-## WF-14: Evidence synthesis
+## WF-14: Синтез доказательств
 
-**Use case**: systematic review в medicine.
+**Случай использования**: систематический обзор в медицине.
 
-**Steps**:
-1. Import studies as knowledge-objects.
-2. Each study: claims = findings, dependencies = methodology.
-3. Agent: extract comparable claims across studies.
-4. `morita/check` — identify methodologically-equivalent studies.
-5. Meta-analysis enabled by structural alignment.
+**Шаги**:
+1. Импорт исследований как объектов знания.
+2. Каждое исследование: утверждения = результаты, зависимости = методология.
+3. Агент: извлекает сопоставимые утверждения между исследованиями.
+4. `morita/check` — идентификация методологически эквивалентных исследований.
+5. Мета-анализ обеспечивается структурным выравниванием.
 
-**Outcome**: formal systematic review.
-
----
-
-## WF-15: Meta-research (Noesis about Noesis)
-
-**Use case**: senior researcher studies own knowledge structure.
-
-**Steps**:
-1. `meta/audit` — check T_meta adequacy.
-2. `meta/patterns` — find recurring issues.
-3. Agent: proposes structural extensions.
-4. `meta/suggest_extension` — new dependency types.
-5. User confirms; structure evolves (L-II / L-III).
-
-**Outcome**: adapted knowledge infrastructure.
+**Результат**: формальный систематический обзор.
 
 ---
 
-## Integration с existing tools
+## WF-15: Мета-исследование (Noesis о Noesis)
 
-### From Obsidian / Roam
+**Случай использования**: старший исследователь изучает собственную структуру знаний.
 
-**Migration path**: existing vault → import → structural augmentation.
+**Шаги**:
+1. `meta/audit` — проверка адекватности T_meta.
+2. `meta/patterns` — поиск повторяющихся проблем.
+3. Агент: предлагает структурные расширения.
+4. `meta/suggest_extension` — новые типы зависимостей.
+5. Пользователь подтверждает; структура эволюционирует (L-II / L-III).
 
-Noesis reads plain markdown; adds YAML frontmatter; builds dependency graph.
+**Результат**: адаптированная инфраструктура знаний.
 
-Existing notes remain valid; enhanced with typed structure.
+---
 
-### From Lean4 / Coq / Agda
+## Интеграция с существующими инструментами
 
-**Bidirectional integration**:
-- Export Noesis claims to Lean4 for formal proof.
-- Import Lean4-verified theorems as [Т·L1] claims.
-- SMT gate uses same underlying technology.
+### Из Obsidian / Roam
 
-### From Git repositories
+**Путь миграции**: существующее хранилище → импорт → структурная аугментация.
 
-**Auto-import**: scan repository → extract documentation → structure as claims.
+Noesis читает обычный markdown; добавляет YAML-frontmatter; строит граф зависимостей.
 
-Useful for:
-- Specifications в software projects.
-- ADRs (Architecture Decision Records).
-- Regulatory documentation.
+Существующие заметки остаются валидными; обогащаются типизированной структурой.
 
-### From Notion / Confluence / SharePoint
+### Из Lean4 / Coq / Agda
 
-**Enterprise integration**:
-- Read-only import.
-- Augment with structural metadata.
-- Expose via NP endpoints.
+**Двунаправленная интеграция**:
+- Экспорт утверждений Noesis в Lean4 для формального доказательства.
+- Импорт Lean4-верифицированных теорем как утверждений [Т·L1].
+- SMT-фильтр использует ту же базовую технологию.
 
-### From academic paper databases
+### Из Git-репозиториев
 
-**Literature integration**:
+**Авто-импорт**: сканирование репозитория → извлечение документации → структурирование как утверждений.
+
+Полезно для:
+- Спецификаций в программных проектах.
+- ADR (Architecture Decision Records).
+- Регуляторной документации.
+
+### Из Notion / Confluence / SharePoint
+
+**Корпоративная интеграция**:
+- Импорт только для чтения.
+- Дополнение структурными метаданными.
+- Публикация через конечные точки NP.
+
+### Из академических баз статей
+
+**Интеграция литературы**:
 - PubMed, arXiv, Semantic Scholar.
-- OCR + NLP extraction.
-- Agent builds claim structure.
-- Review + refinement by researcher.
+- Извлечение через OCR + NLP.
+- Агент строит структуру утверждений.
+- Проверка + уточнение исследователем.
 
-## Onboarding workflow
+## Сценарий онбординга
 
-### Week 1: setup
+### Неделя 1: настройка
 
-- Install Noesis (local или cloud).
-- Connect к existing data source (git repo, Notion, etc.).
-- Import first knowledge-object.
-- Initial audit.
+- Установить Noesis (локально или в облаке).
+- Подключить к существующему источнику данных (git-репозиторий, Notion и т.д.).
+- Импортировать первый объект знания.
+- Начальный аудит.
 
-### Week 2: structure
+### Неделя 2: структура
 
-- Refine claim structure.
-- Add dependencies.
-- Create first functor к related knowledge.
+- Уточнить структуру утверждений.
+- Добавить зависимости.
+- Создать первый функтор к связанному знанию.
 
-### Week 3: automation
+### Неделя 3: автоматизация
 
-- Enable agent for routine tasks.
-- Set up coherence monitoring.
-- Configure notifications.
+- Включить агента для рутинных задач.
+- Настроить мониторинг когерентности.
+- Сконфигурировать уведомления.
 
-### Month 2-3: adoption
+### Месяц 2-3: принятие
 
-- Full workflow integration.
-- Team onboarding.
-- Domain-specific customization.
+- Полная интеграция процессов.
+- Онбординг команды.
+- Доменно-специфичная настройка.
 
-### Month 3+: federation
+### Месяц 3+: федерация
 
-- Connect к partners.
-- Cross-organizational knowledge sharing.
-- Mature collaborative workflows.
+- Подключение к партнёрам.
+- Межорганизационный обмен знаниями.
+- Зрелые совместные процессы.
 
-## Performance benchmarks
+## Тесты производительности
 
-| Task | Manual | Noesis | Speedup |
+| Задача | Вручную | Noesis | Ускорение |
 |---|---|---|---|
-| Coherence audit of 400-page corpus | 40 hours | 10 minutes | 240× |
-| Loading new theory | 3 days | 30 minutes | 144× |
-| Cross-theory translation | 1 week | 2 hours | 84× |
-| Multi-regulatory compliance check | 3 weeks | 4 hours | 126× |
-| Thesis coherence review | 20 hours | 2 hours | 10× |
-| Patent prior-art search | 2 weeks | 6 hours | 56× |
+| Аудит когерентности корпуса в 400 страниц | 40 часов | 10 минут | 240× |
+| Загрузка новой теории | 3 дня | 30 минут | 144× |
+| Перевод между теориями | 1 неделя | 2 часа | 84× |
+| Проверка мультирегуляторного соответствия | 3 недели | 4 часа | 126× |
+| Обзор когерентности диссертации | 20 часов | 2 часа | 10× |
+| Патентный поиск предшественников | 2 недели | 6 часов | 56× |
 
-(Benchmarks based on UHM case study + domain extrapolation.)
+(Тесты основаны на кейсе UHM + доменная экстраполяция.)
 
 ## Следующий шаг
 
-Для domain applications: [09 — Наука](./09-science), [10 — Инженерия](./10-engineering).
+Для доменных применений: [09 — Наука](./09-science), [10 — Инженерия](./10-engineering).
 
-Для case studies: [14 — Кейсы](./14-case-studies).
+Для кейсов: [14 — Кейсы](./14-case-studies).

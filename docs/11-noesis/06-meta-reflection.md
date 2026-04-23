@@ -9,193 +9,193 @@ title: Мета-рефлексия и Lawvere-граница
 
 Любой инструмент для работы со знаниями рискует **объективизировать** их — превращать живые мыслительные процессы в статические объекты. Если Noesis работает со знаниями «извне», он воспроизводит эту ошибку.
 
-**Решение**: Noesis **включает себя** в собственное object space через **T_meta** layer.
+**Решение**: Noesis **включает себя** в собственное объектное пространство через слой **T_meta**.
 
-## T_meta как theory о Noesis внутри Noesis
+## T_meta как теория о Noesis внутри Noesis
 
-В Noesis выделяется специальный knowledge-object **T_meta** — самоописание системы:
+В Noesis выделяется специальный объект знания **T_meta** — самоописание системы:
 
-**Примеры claims в T_meta**:
-- «Каждый knowledge-object имеет epistemic status functor» — утверждение *о* Noesis, *внутри* Noesis.
-- «Status propagation корректна» — утверждение о алгоритме.
-- «Dependency types достаточны» — утверждение о data model.
-- «Functorial composability F_12 ∘ F_23 ≃ F_13 verifiable» — утверждение о coherence.
+**Примеры утверждений в T_meta**:
+- «Каждый объект знания имеет функтор эпистемического статуса» — утверждение *о* Noesis, *внутри* Noesis.
+- «Распространение статусов корректно» — утверждение об алгоритме.
+- «Типов зависимостей достаточно» — утверждение о модели данных.
+- «Функториальная композиция F_12 ∘ F_23 ≃ F_13 верифицируема» — утверждение о когерентности.
 
-T_meta подчиняется **тем же правилам**: его claims имеют statuses, dependencies, проходят coherence checks. Это — **контролируемая strange loop** (Hofstadter 1979).
+T_meta подчиняется **тем же правилам**: его утверждения имеют статусы, зависимости, проходят проверки когерентности. Это — **контролируемая странная петля** (Hofstadter 1979).
 
-## Lawvere fixed-point bound
+## Граница Ловира (fixed-point bound)
 
-### Теорема Lawvere (1969)
+### Теорема Ловира (1969)
 
-Унифицированная категорная схема, из которой следуют Gödel's theorem, Tarski's undefinability, Russell's paradox, halting problem (Yanofsky 2003).
+Унифицированная категорная схема, из которой следуют теорема Гёделя, неопределимость Тарского, парадокс Рассела, проблема остановки (Yanofsky 2003).
 
-**Формулировка** (Lawvere fixed-point theorem): Пусть $\mathcal{C}$ — category с finite products, $Y \in \mathcal{C}$. Если существует **weakly point-surjective** морфизм $\phi: A \to Y^A$ (т.е. $\forall f: A \to Y \ \exists a_0: 1 \to A$ с $\mathrm{ev} \circ \langle a_0, \mathrm{id}_A\rangle \circ \phi = f$), то every $\alpha: Y \to Y$ имеет fixed point: $\exists y_0: 1 \to Y$ с $\alpha \circ y_0 = y_0$.
+**Формулировка** (теорема Ловира о неподвижной точке): Пусть $\mathcal{C}$ — категория с конечными произведениями, $Y \in \mathcal{C}$. Если существует **слабо точечно-сюръективный** морфизм $\phi: A \to Y^A$ (т.е. $\forall f: A \to Y \ \exists a_0: 1 \to A$ с $\mathrm{ev} \circ \langle a_0, \mathrm{id}_A\rangle \circ \phi = f$), то каждый $\alpha: Y \to Y$ имеет неподвижную точку: $\exists y_0: 1 \to Y$ с $\alpha \circ y_0 = y_0$.
 
-**Контрапозитив**: если $\alpha: Y \to Y$ **без** fixed point (например, negation $Y = \Omega$ subobject classifier с $\alpha = \neg$), то weakly point-surjective $\phi: A \to Y^A$ **не существует**.
+**Контрапозитив**: если $\alpha: Y \to Y$ **без** неподвижной точки (например, отрицание $Y = \Omega$ классификатор подобъектов с $\alpha = \neg$), то слабо точечно-сюръективный $\phi: A \to Y^A$ **не существует**.
 
 **Применение к Noesis**: 
 
-Пусть $\mathcal{C}$ = ⟪⟫_comp, $Y$ = space of propositions about T_meta, $A$ = T_meta itself. Объективизирующий функтор $\phi_\text{obj}: T_\text{meta} \to Y^{T_\text{meta}}$ — попытка внутри T_meta выразить *все* propositions о T_meta.
+Пусть $\mathcal{C}$ = ⟪⟫_comp, $Y$ = пространство пропозиций о T_meta, $A$ = сам T_meta. Объективизирующий функтор $\phi_\text{obj}: T_\text{meta} \to Y^{T_\text{meta}}$ — попытка внутри T_meta выразить *все* пропозиции о T_meta.
 
-Существование weakly point-surjective $\phi_\text{obj}$ → fixed point для negation → paradox (self-negating proposition).
+Существование слабо точечно-сюръективного $\phi_\text{obj}$ → неподвижная точка для отрицания → парадокс (самоотрицающая пропозиция).
 
-**Следовательно**: $\phi_\text{obj}$ **не может быть** weakly point-surjective — существуют propositions о T_meta, не-выразимые внутри T_meta. Прежде всего: «T_meta полна и консистентна» — такой proposition.
+**Следовательно**: $\phi_\text{obj}$ **не может быть** слабо точечно-сюръективным — существуют пропозиции о T_meta, невыразимые внутри T_meta. Прежде всего: «T_meta полна и консистентна» — такая пропозиция.
 
-**T_meta не может доказать собственную consistency** (corollary).
+**T_meta не может доказать собственную консистентность** (следствие).
 
-### NO-10 [Т·L3]: Self-reference bounded
+### NO-10 [Т·L3]: Ограниченность самореференции
 
-**Формулировка**: Любой claim в T_meta, утверждающий completeness/consistency/total coherence Noesis, имеет epistemic status bounded at [Г] (hypothesis).
+**Формулировка**: Любое утверждение в T_meta, утверждающее полноту/консистентность/тотальную когерентность Noesis, имеет эпистемический статус, ограниченный сверху [Г] (гипотеза).
 
-**Доказательство**: direct application Lawvere fixed-point theorem (Diakrisis 87.T).
+**Доказательство**: прямое применение теоремы Ловира о неподвижной точке (Diakrisis 87.T).
 
-**Consequence**: Noesis **честен** о своих пределах. Никакой claim формы «Noesis полон / консистентен / содержит всё coherent knowledge» не может иметь status выше [Г]. Система self-aware об этом через `meta/boundaries` endpoint.
+**Следствие**: Noesis **честен** о своих пределах. Никакое утверждение вида «Noesis полон / консистентен / содержит всё когерентное знание» не может иметь статус выше [Г]. Система самоосознаёт это через конечную точку `meta/boundaries`.
 
 ### Аналогия с Diakrisis
 
-В Diakrisis: α_Apeiron = 𝖠(𝖠) (19.T1) — self-applicative fixed point, приближение к Z (нулевая граница), но не совпадение.
+В Diakrisis: α_Apeiron = 𝖠(𝖠) (19.T1) — самоприменимая неподвижная точка, приближение к Z (нулевая граница), но не совпадение.
 
-В Noesis: T_meta аналогично — approximate self-model системы, stable через Lawvere-bounded iteration.
+В Noesis: T_meta аналогично — приближённая самомодель системы, стабильная через ограниченную Ловиром итерацию.
 
-## Workflow обновления T_meta
+## Сценарий обновления T_meta
 
-Claims в T_meta создаются и обновляются через тот же набор endpoints:
+Утверждения в T_meta создаются и обновляются через тот же набор конечных точек:
 
-1. **Agent Mode 5** обнаруживает pattern через `meta/patterns`:
+1. **Режим 5 агента** обнаруживает паттерн через `meta/patterns`:
    ```
-   "В 4 из 5 consciousness theories translates_to systematically 
-   loses dynamic aspect."
-   ```
-
-2. **Agent** вызывает `meta/suggest_extension`:
-   ```
-   Предложение: new dependency type `translates_dynamics_to` with status [Г].
+   "В 4 из 5 теорий сознания translates_to систематически 
+   теряет динамический аспект."
    ```
 
-3. Claim добавляется в T_meta:
+2. **Агент** вызывает `meta/suggest_extension`:
+   ```
+   Предложение: новый тип зависимости `translates_dynamics_to` со статусом [Г].
+   ```
+
+3. Утверждение добавляется в T_meta:
    ```
    claim/create { knowledge: "meta", type: "proposition", ... }
    ```
 
-4. **`meta/boundaries`** автоматически ограничивает: если claim утверждает completeness/consistency — status capped at [Г].
+4. **`meta/boundaries`** автоматически ограничивает: если утверждение говорит о полноте/консистентности — статус ограничен сверху [Г].
 
-5. Researcher confirms → `claim/set_status { ..., status: "П" }` (postulate promotion).
+5. Исследователь подтверждает → `claim/set_status { ..., status: "П" }` (повышение до постулата).
 
-6. Noesis.Core применяет изменение: new edge type добавляется в Primitive Engine.
+6. Noesis.Core применяет изменение: новый тип ребра добавляется в Primitive Engine.
 
 **Цикл замкнут**: T_meta наблюдает систему, система обновляется, обновлённая система проверяет T_meta.
 
-## Second-order observation (Luhmann 1995)
+## Наблюдение второго порядка (Luhmann 1995)
 
-Второпорядковое наблюдение = наблюдение как наблюдают другие.
+Наблюдение второго порядка = наблюдение того, как наблюдают другие.
 
-- Каждый layer knowledge-object T — «scheme of observation» theory T.
-- Functors — acts of second-order observation.
-- T_meta добавляет **третий order**: observation of how Noesis observes how theories observe the world.
+- Каждый слой объекта знания T — «схема наблюдения» теории T.
+- Функторы — акты наблюдения второго порядка.
+- T_meta добавляет **третий порядок**: наблюдение того, как Noesis наблюдает, как теории наблюдают мир.
 
-## Autopoiesis (Maturana-Varela 1980)
+## Автопоэзис (Maturana-Varela 1980)
 
 Система **производит компоненты**, из которых сама состоит.
 
 **В Noesis**:
-- T_meta modifies Noesis.
-- Noesis updates T_meta.
-- Circular dependency — **not** paradox, but **autopoietic loop**.
+- T_meta модифицирует Noesis.
+- Noesis обновляет T_meta.
+- Циклическая зависимость — **не** парадокс, а **автопоэтическая петля**.
 
-### L-III modification
+### Модификация L-III
 
 По Bateson (1972):
-- **L-I**: error correction within fixed rules.
-- **L-II**: learning to learn (change rules).
-- **L-III**: change formal apparatus itself.
+- **L-I**: коррекция ошибок в рамках фиксированных правил.
+- **L-II**: обучение обучению (смена правил).
+- **L-III**: смена самого формального аппарата.
 
-**L-III в Noesis**: modify Grothendieck topology on site of knowledge-objects.
+**L-III в Noesis**: модификация топологии Гротендика на сайте объектов знания.
 
-**Algorithm**:
-1. Agent detects systematic pattern.
-2. Propose J_ep → J'_ep.
-3. SMT verify Grothendieck axioms hold for J'_ep (Diakrisis M-8 analog).
-4. Impact analysis: which sheaves change under J'_ep?
-5. Human confirmation.
-6. Apply: J_ep ← J'_ep, Noesis.Core reinitialized.
+**Алгоритм**:
+1. Агент обнаруживает систематический паттерн.
+2. Предлагает J_ep → J'_ep.
+3. SMT-верификация аксиом Гротендика для J'_ep (аналог Diakrisis M-8).
+4. Анализ воздействия: какие пучки меняются при J'_ep?
+5. Подтверждение человеком.
+6. Применение: J_ep ← J'_ep, Noesis.Core переинициализируется.
 
-**Границы**: L-III change не может нарушить Diakrisis axioms Axi-0..9 + T-α + T-2f\*. Только structure выше этого может adapt.
+**Границы**: изменение на L-III не может нарушить аксиомы Diakrisis Axi-0..9 + T-α + T-2f\*. Только структура выше этого может адаптироваться.
 
-## Process ontology
+## Процессная онтология
 
-### Morphisms primary, objects secondary
+### Первичны морфизмы, вторичны объекты
 
-По Mac Lane (1998) §I.1: категория admits objectless formulation. Objects ≡ identity morphisms.
+По Mac Lane (1998) §I.1: категория допускает безобъектную формулировку. Объекты ≡ тождественные морфизмы.
 
-**В Noesis data model**:
-- Claim существует насколько связан.
-- Isolated claim = dead node.
-- Theory = pattern of connections, не list of claims.
-- Two isomorphic structures = same theory в different terms.
+**В модели данных Noesis**:
+- Утверждение существует настолько, насколько связано.
+- Изолированное утверждение = мёртвый узел.
+- Теория = паттерн связей, не список утверждений.
+- Две изоморфные структуры = одна и та же теория в разных терминах.
 
-### Stigmergy (Grassé 1959)
+### Стигмергия (Grassé 1959)
 
-Coordination through environment modification.
+Координация через модификацию среды.
 
-**Noesis — stigmergic environment**:
-- Каждое user action оставляет trace в fibration.
-- Status propagation — automatic stigmergy.
-- Team members coordinate через shared graph, не direct messaging.
+**Noesis — стигмергическая среда**:
+- Каждое действие пользователя оставляет след в расслоении.
+- Распространение статусов — автоматическая стигмергия.
+- Члены команды координируются через разделяемый граф, а не прямые сообщения.
 
-### Enactivism (Varela-Thompson-Rosch 1991)
+### Энактивизм (Varela-Thompson-Rosch 1991)
 
-Cognition не representation of pre-given world, а **joint enaction**.
+Когниция — не репрезентация предзаданного мира, а **совместное порождение**.
 
-**Noesis не хранит understanding** — он **генерирует его совместно** с пользователем:
+**Noesis не хранит понимание** — он **порождает его совместно** с пользователем:
 
-1. User asks question → agent navigates graph.
-2. Unexpected discovery (contradiction, hidden isomorphism).
-3. Agent proposes structural change.
-4. **Question space transforms.**
-5. New question arises at different level.
+1. Пользователь задаёт вопрос → агент ходит по графу.
+2. Неожиданное открытие (противоречие, скрытый изоморфизм).
+3. Агент предлагает структурное изменение.
+4. **Пространство вопроса трансформируется.**
+5. Новый вопрос возникает на ином уровне.
 
-Это **not** "question → answer". Это **joint transformation of question space** — structural coupling (Maturana-Varela 1980).
+Это **не** «вопрос → ответ». Это **совместная трансформация пространства вопроса** — структурное сопряжение (Maturana-Varela 1980).
 
-## Reflexive cycles detailed
+## Рефлексивные циклы детально
 
-### Single loop (L-I)
+### Одиночная петля (L-I)
 
 ```mermaid
 graph LR
-    A["Claim<br/>changed"] --> B["Status<br/>propagation"]
-    B --> C["Diagnostic"]
+    A["Утверждение<br/>изменено"] --> B["Распространение<br/>статуса"]
+    B --> C["Диагностика"]
     C --> A
 ```
 
-### Double loop (L-II)
+### Двойная петля (L-II)
 
 ```mermaid
 graph LR
-    D["Pattern of<br/>recurring<br/>diagnostics"] --> E["Meta-audit:<br/>model adequate?"]
-    E --> F["Proposal:<br/>new edge type /<br/>new status"]
-    F --> G["Structure<br/>reconfiguration"]
+    D["Паттерн<br/>повторяющихся<br/>диагностик"] --> E["Мета-аудит:<br/>модель адекватна?"]
+    E --> F["Предложение:<br/>новый тип ребра /<br/>новый статус"]
+    F --> G["Реконфигурация<br/>структуры"]
 ```
 
-### Triple loop (L-III)
+### Тройная петля (L-III)
 
 ```mermaid
 graph LR
-    H["L-II results<br/>recurring"] --> I["Meta-meta-audit:<br/>framework adequate?"]
-    I --> J["Proposal:<br/>new J_ep topology"]
-    J --> K["Site<br/>reconfiguration"]
+    H["Повторяющиеся<br/>результаты L-II"] --> I["Мета-мета-аудит:<br/>каркас адекватен?"]
+    I --> J["Предложение:<br/>новая топология J_ep"]
+    J --> K["Реконфигурация<br/>сайта"]
 ```
 
-All three loops operate simultaneously. L-I автоматическая, L-II semi-automatic, L-III human-in-the-loop.
+Все три петли работают одновременно. L-I автоматическая, L-II полуавтоматическая, L-III с человеком в цикле.
 
 ## Что Noesis знает о себе
 
-Через `meta/*` endpoints:
+Через конечные точки `meta/*`:
 
-- **`meta/audit`**: results текущего self-audit (coherence of T_meta).
-- **`meta/boundaries`**: claims bounded by Lawvere.
-- **`meta/patterns`**: detected recurring issues.
-- **`meta/history`**: evolution log of Noesis itself.
-- **`meta/suggest_extension`**: pending proposals for structural extension.
+- **`meta/audit`**: результаты текущего самоаудита (когерентность T_meta).
+- **`meta/boundaries`**: утверждения, ограниченные Ловиром.
+- **`meta/patterns`**: обнаруженные повторяющиеся проблемы.
+- **`meta/history`**: лог эволюции самого Noesis.
+- **`meta/suggest_extension`**: ожидающие предложения структурного расширения.
 
 ## Философская значимость
 
@@ -203,18 +203,18 @@ All three loops operate simultaneously. L-I автоматическая, L-II s
 
 > **Никакая формальная система не содержит полного самоописания.**
 
-Это — structural inevitability, not remediable weakness.
+Это — структурная неизбежность, а не устранимая слабость.
 
-**Noesis принимает** это ограничение как feature, не как bug. Система:
-- **Honest**: declares Lawvere boundary upfront.
-- **Self-aware**: monitors own limitations.
-- **Adaptive**: evolves через L-II / L-III.
-- **Bounded**: never claims completeness.
+**Noesis принимает** это ограничение как функциональную возможность, а не как дефект. Система:
+- **Честна**: заявляет границу Ловира заранее.
+- **Самоосознаёт**: следит за собственными ограничениями.
+- **Адаптивна**: эволюционирует через L-II / L-III.
+- **Ограничена**: никогда не претендует на полноту.
 
-Это противоположно «omniscient AI» гипотезе — которая структурно невозможна по Lawvere.
+Это противоположно гипотезе «всеведущего ИИ» — которая структурно невозможна по Ловиру.
 
 ## Следующий шаг
 
-Для theorem catalog: [07 — Теоремы NO-\*](./07-theorems).
+Для каталога теорем: [07 — Теоремы NO-\*](./07-theorems).
 
-Для workflows: [08 — Workflow-паттерны](./08-workflows).
+Для сценариев: [08 — Сценарные паттерны](./08-workflows).

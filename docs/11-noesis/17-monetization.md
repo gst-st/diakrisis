@@ -7,328 +7,328 @@ title: Монетизация
 
 ## Бизнес-модель — обзор
 
-Noesis монетизируется через **6-уровневую** модель, сочетающую SaaS, enterprise software, consulting, и platform services.
+Noesis монетизируется через **6-уровневую** модель, сочетающую SaaS, корпоративное ПО, консалтинг и платформенные сервисы.
 
-## Tier 1: Community Edition (free)
+## Уровень 1: Community Edition (бесплатно)
 
-**Цель**: adoption + ecosystem building.
+**Цель**: принятие + построение экосистемы.
 
 **Включено**:
-- Full Noesis.Core (open source).
+- Full Noesis.Core (открытый исходный код).
 - До 3 доменов.
-- До 50 knowledge-objects.
-- Community support (forum).
-- Standard SMT verification.
+- До 50 объектов знания.
+- Поддержка сообщества (форум).
+- Стандартная SMT-верификация.
 
 **Исключено**:
-- Enterprise SSO.
-- Priority LLM.
+- Корпоративный SSO.
+- Приоритетная LLM.
 - SLA.
-- Dedicated support.
+- Выделенная поддержка.
 
 **Стратегическая роль**:
-- Drive adoption.
-- Build ecosystem.
-- Collect feedback.
-- Recruit contributors.
+- Драйвер принятия.
+- Построение экосистемы.
+- Сбор обратной связи.
+- Привлечение контрибьюторов.
 
-## Tier 2: Professional Edition
+## Уровень 2: Professional Edition
 
-**Цена**: $500 — $2,000 / месяц per seat (в зависимости от tier: Basic / Standard / Premium).
+**Цена**: $500 — $2,000 / месяц за место (в зависимости от тарифа: Basic / Standard / Premium).
 
 **Целевая аудитория**:
 - Индивидуальные исследователи.
-- Небольшие команды (5-50 people).
+- Небольшие команды (5–50 человек).
 - Консультанты.
-- Academic professionals.
+- Академические профессионалы.
 
 **Включено (Premium)**:
-- Unlimited domains.
-- Unlimited knowledge-objects.
-- Priority LLM inference (Claude Opus, GPT-5, Gemini Ultra).
-- Custom LLM selection.
+- Неограниченные домены.
+- Неограниченные объекты знания.
+- Приоритетный LLM-инференс (Claude Opus, GPT-5, Gemini Ultra).
+- Выбор собственной LLM.
 - 99.5% SLA.
-- Email support (24-hour response).
-- Integrations с major tools (Git, JIRA, Slack, etc.).
-- Export to LaTeX, Lean4, Coq, Agda.
+- Email-поддержка (отклик в течение 24 часов).
+- Интеграции с основными инструментами (Git, JIRA, Slack и т.д.).
+- Экспорт в LaTeX, Lean4, Coq, Agda.
 
-**Pricing model**: per-seat monthly recurring.
+**Модель ценообразования**: ежемесячная подписка за место.
 
-**Expected ARPU** (Year 3+): $18K/seat/year.
+**Ожидаемый ARPU** (3-й год и далее): $18K/место/год.
 
-**Market size**:
-- ~1M researchers globally.
-- Target penetration: 5% = 50K seats.
-- Revenue potential: $900M/year at scale.
+**Размер рынка**:
+- ~1M исследователей в мире.
+- Целевое проникновение: 5% = 50K мест.
+- Потенциал выручки: $900M/год при масштабе.
 
-## Tier 3: Enterprise Edition
+## Уровень 3: Enterprise Edition
 
-**Цена**: $50K — $500K / год per institution (варьируется по размеру, требованиям).
+**Цена**: $50K — $500K / год за институцию (варьируется по размеру и требованиям).
 
 **Целевая аудитория**:
-- Большие R&D (Big Pharma, Big Tech research).
-- Government agencies.
-- Defense primes.
-- Major financial institutions.
-- Aerospace manufacturers.
-- Major research universities.
+- Крупные R&D (Big Pharma, исследования Big Tech).
+- Государственные ведомства.
+- Оборонные подрядчики.
+- Крупные финансовые институции.
+- Аэрокосмические производители.
+- Ведущие исследовательские университеты.
 
 **Включено**:
-- **On-premises / air-gapped** deployment.
-- **Custom LLM fine-tuning** на domain corpus.
-- Enterprise SSO (SAML, OAuth).
-- Dedicated support engineer.
-- Training & onboarding (2-4 weeks).
-- Custom integrations.
-- Compliance certifications:
+- Развёртывание **on-premises / air-gapped**.
+- **Дообучение собственной LLM** на доменном корпусе.
+- Корпоративный SSO (SAML, OAuth).
+- Выделенный инженер поддержки.
+- Обучение и онбординг (2–4 недели).
+- Кастомные интеграции.
+- Сертификации соответствия:
   - SOC 2 Type II.
   - FedRAMP (US federal).
-  - HIPAA (healthcare).
-  - FIPS 140-2 crypto.
-- Unlimited seats.
-- Custom domain packs.
+  - HIPAA (здравоохранение).
+  - Криптография FIPS 140-2.
+- Неограниченное число мест.
+- Кастомные доменные пакеты.
 
-**Sales cycle**: 12-18 months typical.
+**Цикл продаж**: типично 12–18 месяцев.
 
-**Expected average contract value** (ACV): $150-250K/year Year 1-2, growing to $500K+ at maturity.
+**Ожидаемая средняя стоимость контракта** (ACV): $150–250K/год в 1-й и 2-й год, растущая до $500K+ при зрелости.
 
-**Market sizing**:
-- 5000+ large enterprises globally in relevant verticals.
-- Target: 2-5% penetration = 100-250 clients.
-- Revenue potential: $15-125M/year at scale.
+**Размер рынка**:
+- 5000+ крупных предприятий в мире в релевантных вертикалях.
+- Цель: 2–5% проникновения = 100–250 клиентов.
+- Потенциал выручки: $15–125M/год при масштабе.
 
-## Tier 4: Strategic Consulting
+## Уровень 4: Стратегический консалтинг
 
-**Цена**: $500 — $2,000 / день per consultant.
+**Цена**: $500 — $2,000 / день за консультанта.
 
 **Услуги**:
-- **Knowledge architecture design**: design knowledge-model для client's domain.
-- **Cross-domain translation projects**: complex inter-domain translations.
-- **Custom ontology development**: domain-specific knowledge objects.
-- **Integration projects**: custom integrations с client systems.
-- **Training senior researchers/engineers**: deep training programs.
-- **Retainer agreements**: ongoing advisory.
+- **Проектирование архитектуры знаний**: проект модели знаний для домена клиента.
+- **Проекты кросс-доменного перевода**: сложные междоменные переводы.
+- **Разработка собственной онтологии**: доменно-специфичные объекты знания.
+- **Интеграционные проекты**: кастомные интеграции с системами клиента.
+- **Обучение старших исследователей/инженеров**: глубокие обучающие программы.
+- **Ретейнерные соглашения**: постоянное консультирование.
 
-**Delivery model**:
-- Project-based: $50K-500K per engagement.
-- Retainer: $10K-100K/month.
-- Daily: $500-2000.
+**Модель поставки**:
+- Проектная: $50K–500K за проект.
+- Ретейнерная: $10K–100K/месяц.
+- Дневная: $500–2000.
 
-**Typical project**:
-- Duration: 3-12 months.
-- Team: 2-5 consultants.
-- Deliverables: custom knowledge model, initial content, training, documentation.
+**Типичный проект**:
+- Длительность: 3–12 месяцев.
+- Команда: 2–5 консультантов.
+- Результаты: кастомная модель знаний, начальный контент, обучение, документация.
 
-**Revenue potential**: $5-20M/year at scale.
+**Потенциал выручки**: $5–20M/год при масштабе.
 
-## Tier 5: Federation Network (membership + transaction)
+## Уровень 5: Сеть Federation (членство + транзакции)
 
-**Цена**: 
-- Institutional membership: $100K — $1M / год.
-- Transaction fees: $0.10 per federated query.
-- Marketplace commissions: 20% on knowledge-object sales.
+**Цена**:
+- Институциональное членство: $100K — $1M / год.
+- Транзакционные сборы: $0.10 за федеративный запрос.
+- Комиссии маркетплейса: 20% с продаж объектов знания.
 
 **Целевая аудитория**:
-- Academic consortia (Ivy League, Oxbridge, Max Planck, etc.).
-- Industry alliances.
-- Government networks.
-- Research NGOs.
+- Академические консорциумы (Ivy League, Oxbridge, Max Planck и т.д.).
+- Отраслевые альянсы.
+- Государственные сети.
+- Исследовательские НКО.
 
 **Включено**:
-- Shared knowledge-graph across federation.
-- Cross-institutional translations.
-- Private-federated marketplaces.
-- Peer review через structural audit.
-- Cross-institutional collaboration tools.
+- Общий граф знаний в рамках федерации.
+- Межинституциональные переводы.
+- Приватно-федеративные маркетплейсы.
+- Рецензирование через структурный аудит.
+- Инструменты межинституциональной коллаборации.
 
-**Network effects**: каждый new member increases value for all existing.
+**Сетевые эффекты**: каждый новый участник увеличивает ценность для всех существующих.
 
-**Revenue potential**: $10-50M/year at maturity.
+**Потенциал выручки**: $10–50M/год при зрелости.
 
-## Tier 6: Infrastructure Services
+## Уровень 6: Инфраструктурные услуги
 
 **Цена**: pay-per-use.
 
 **Услуги**:
-- **Computational backend** (Verum cloud): $0.10-1.00 per verified operation.
-- **SMT verification as a service**: $0.01 per SMT check.
-- **LLM inference** (fine-tuned): $0.10-10 per 1M tokens.
-- **Knowledge-graph storage**: $0.05/GB/month.
-- **API access**: $0.001 per NP call.
+- **Вычислительный бэкенд** (Verum cloud): $0.10–1.00 за верифицированную операцию.
+- **SMT-верификация как услуга**: $0.01 за SMT-проверку.
+- **LLM-инференс** (дообученный): $0.10–10 за 1M токенов.
+- **Хранение графа знаний**: $0.05/ГБ/месяц.
+- **Доступ к API**: $0.001 за NP-вызов.
 
-**Target audience**: developers building on Noesis.
+**Целевая аудитория**: разработчики, строящие на Noesis.
 
-**Revenue model**: usage-based, pay-as-you-go.
+**Модель выручки**: на основе использования, pay-as-you-go.
 
-**Revenue potential**: $5-25M/year at scale.
-
----
-
-## Vertical-specific pricing
-
-### Pharmaceutical R&D
-
-**Pricing**: $2-10M/year per major pharma.
-
-**ROI for customer**:
-- Regulatory submission time: -40-60% = $50-200M savings per drug.
-- Reduced rework from coherence issues: $20-100M.
-- Faster time-to-market: $500M-2B value per drug.
-
-**Noesis pricing**: 1-5% of direct savings.
-
-### Financial services
-
-**Pricing**: $1-10M/year per institution.
-
-**ROI for customer**:
-- Regulatory compliance cost: -30-40%.
-- Violation risk: -60%.
-- Audit preparation: weeks → days.
-
-**Noesis pricing**: 5-10% of compliance cost savings.
-
-### Aerospace & defense
-
-**Pricing**: $5-50M/year per major program.
-
-**ROI for customer**:
-- Certification time: -40%.
-- Rework: -80%.
-- Reusable knowledge: enables 20% program cost reduction.
-
-**Noesis pricing**: 2-10% of program savings.
-
-### Big Tech research
-
-**Pricing**: $500K-5M/year per major lab.
-
-**ROI for customer**:
-- Cross-team coordination: 5× better.
-- Duplicative work: -80%.
-- Faster publication: significant strategic value.
-
-**Noesis pricing**: strategic platform fee.
-
-### Academic consortia
-
-**Pricing**: $100K-1M/year per consortium.
-
-**ROI for members**:
-- Shared research infrastructure.
-- Coordinated multi-year programs.
-- Publication impact.
-
-**Noesis pricing**: shared infrastructure investment.
-
-### Government
-
-**Pricing**: $500K-5M/year per agency.
-
-**ROI for agency**:
-- Policy coherence.
-- Faster regulatory analysis.
-- Better public outcomes.
-
-**Noesis pricing**: operational excellence premium.
-
-### Consulting firms (white-label)
-
-**Pricing**: $200K-2M/year per firm + per-engagement fees.
-
-**ROI for firm**:
-- Knowledge reuse across engagements.
-- Differentiation through structural analysis.
-- Higher-value deliverables.
+**Потенциал выручки**: $5–25M/год при масштабе.
 
 ---
 
-## Revenue projection (conservative)
+## Вертикально-специфичное ценообразование
 
-| Tier | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
+### Фармацевтический R&D
+
+**Цена**: $2–10M/год на крупную фармкомпанию.
+
+**ROI для клиента**:
+- Время регуляторной подачи: –40–60% = $50–200M экономии на препарат.
+- Сокращение переделок из-за проблем когерентности: $20–100M.
+- Быстрый вывод на рынок: ценность $500M–2B на препарат.
+
+**Ценообразование Noesis**: 1–5% прямой экономии.
+
+### Финансовые услуги
+
+**Цена**: $1–10M/год на институцию.
+
+**ROI для клиента**:
+- Стоимость регуляторного соответствия: –30–40%.
+- Риск нарушений: –60%.
+- Подготовка к аудиту: недели → дни.
+
+**Ценообразование Noesis**: 5–10% от экономии на соответствии.
+
+### Аэрокосмос и оборона
+
+**Цена**: $5–50M/год на крупную программу.
+
+**ROI для клиента**:
+- Время сертификации: –40%.
+- Переделки: –80%.
+- Переиспользуемые знания: дают 20% сокращение стоимости программы.
+
+**Ценообразование Noesis**: 2–10% от программной экономии.
+
+### Исследования Big Tech
+
+**Цена**: $500K–5M/год на крупную лабораторию.
+
+**ROI для клиента**:
+- Межкомандная координация: в 5 раз лучше.
+- Дублирующая работа: –80%.
+- Быстрая публикация: значительная стратегическая ценность.
+
+**Ценообразование Noesis**: стратегический платёж за платформу.
+
+### Академические консорциумы
+
+**Цена**: $100K–1M/год на консорциум.
+
+**ROI для участников**:
+- Общая исследовательская инфраструктура.
+- Координированные многолетние программы.
+- Публикационный импакт.
+
+**Ценообразование Noesis**: инвестиция в общую инфраструктуру.
+
+### Правительство
+
+**Цена**: $500K–5M/год на ведомство.
+
+**ROI для ведомства**:
+- Когерентность политик.
+- Быстрый регуляторный анализ.
+- Лучшие общественные результаты.
+
+**Ценообразование Noesis**: премия за операционное превосходство.
+
+### Консалтинговые фирмы (white-label)
+
+**Цена**: $200K–2M/год на фирму + сборы за проект.
+
+**ROI для фирмы**:
+- Переиспользование знаний между проектами.
+- Дифференциация через структурный анализ.
+- Результаты повышенной ценности.
+
+---
+
+## Прогноз выручки (консервативный)
+
+| Уровень | Год 1 | Год 2 | Год 3 | Год 4 | Год 5 |
 |---|---|---|---|---|---|
 | Community | $0 | $0 | $0 | $0 | $0 |
 | Professional | $2M | $12M | $54M | $120M | $250M |
 | Enterprise | $500K | $6M | $25M | $75M | $180M |
-| Consulting | $300K | $1M | $3M | $8M | $15M |
+| Консалтинг | $300K | $1M | $3M | $8M | $15M |
 | Federation | 0 | $500K | $2.5M | $10M | $30M |
-| Infrastructure | $100K | $500K | $2M | $8M | $25M |
-| **Total** | **$2.9M** | **$20M** | **$87M** | **$221M** | **$500M** |
+| Инфраструктура | $100K | $500K | $2M | $8M | $25M |
+| **Итого** | **$2.9M** | **$20M** | **$87M** | **$221M** | **$500M** |
 
-(These are bottom-up estimates based on vertical market sizing + adoption curves.)
+(Это bottom-up-оценки на основе размеров вертикальных рынков + кривых принятия.)
 
-## Cost structure
+## Структура затрат
 
-### Year 1 (inception): ~$3M burn
-- Engineering: 10 FTEs × $200K = $2M.
-- Sales: 2 FTEs × $250K = $500K.
-- Infrastructure: $200K.
-- Other: $300K.
+### Год 1 (зарождение): ~$3M сжигание
+- Инженерия: 10 FTE × $200K = $2M.
+- Продажи: 2 FTE × $250K = $500K.
+- Инфраструктура: $200K.
+- Прочее: $300K.
 
-### Year 5 (scale): ~$200M OpEx
-- Engineering: 100 FTEs × $250K = $25M.
-- Sales/GTM: 200 FTEs = $40M.
-- Infrastructure: $50M.
+### Год 5 (масштаб): ~$200M операционные расходы
+- Инженерия: 100 FTE × $250K = $25M.
+- Продажи/GTM: 200 FTE = $40M.
+- Инфраструктура: $50M.
 - R&D: $30M.
 - G&A: $55M.
 
-**Gross margin**: 80%+ (SaaS model).
+**Валовая маржа**: 80%+ (SaaS-модель).
 
-**Path to profitability**: Year 3 EBITDA-positive.
+**Путь к прибыльности**: Год 3 — положительная EBITDA.
 
-## Fundraising
+## Привлечение финансирования
 
 ### Seed ($5M)
-- Year 0-1 survival.
-- Team 10-15 people.
-- Initial product + 3 pilot customers.
+- Выживание в год 0–1.
+- Команда 10–15 человек.
+- Начальный продукт + 3 пилотных клиента.
 
 ### Series A ($25M)
-- Year 1-2 scaling.
-- Team 30-50.
-- Enterprise Edition GA.
+- Масштабирование в год 1–2.
+- Команда 30–50.
+- GA-релиз Enterprise Edition.
 
 ### Series B ($75M)
-- Year 2-3 enterprise expansion.
-- Team 100.
-- Vertical markets.
+- Корпоративное расширение в год 2–3.
+- Команда 100.
+- Вертикальные рынки.
 
 ### Series C ($200M)
-- Year 3-4 international + platform.
-- Team 300.
-- Federation launch.
+- Международное + платформа в год 3–4.
+- Команда 300.
+- Запуск Federation.
 
 ### Series D / IPO ($500M+)
-- Year 4-5 global scale.
-- Team 1000+.
-- Market leadership.
+- Глобальный масштаб в год 4–5.
+- Команда 1000+.
+- Лидерство на рынке.
 
-## Competitive moat
+## Конкурентный ров
 
-**Technical moat**:
-- Diakrisis foundation (10+ years of theory).
-- Verum-native implementation.
-- Formal verification guarantees.
-- Cannot be quickly replicated.
+**Технический ров**:
+- Основание Diakrisis (10+ лет теории).
+- Нативная реализация на Verum.
+- Гарантии формальной верификации.
+- Не воспроизводится быстро.
 
-**Data moat**:
-- Federation network effects.
-- Community knowledge-graph.
-- Verified translations.
+**Ров данных**:
+- Сетевые эффекты федерации.
+- Граф знаний сообщества.
+- Верифицированные переводы.
 
-**Ecosystem moat**:
-- Proof assistant integrations.
-- Partner network (consulting firms).
-- Academic partnerships.
-- Standards body engagement.
+**Экосистемный ров**:
+- Интеграции с proof-ассистентами.
+- Партнёрская сеть (консалтинговые фирмы).
+- Академические партнёрства.
+- Вовлечённость в органы стандартизации.
 
-**Switching cost**:
-- Migration in: structural import.
-- Migration out: loss of structural metadata.
-- High customer lock-in.
+**Стоимость переключения**:
+- Миграция внутрь: структурный импорт.
+- Миграция наружу: потеря структурных метаданных.
+- Высокая привязка клиента.
 
 ## Следующий шаг
 
-Roadmap: [18 — Roadmap](./18-roadmap).
+План развития: [18 — Roadmap](./18-roadmap).
 
-Comparison: [19 — Сравнение](./19-comparison).
+Сравнение: [19 — Сравнение](./19-comparison).

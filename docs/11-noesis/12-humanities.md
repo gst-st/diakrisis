@@ -7,454 +7,454 @@ title: Гуманитарные применения
 
 ## Обзор
 
-Гуманитарные знания часто считаются «слишком мягкими» для structural analysis. Но по **NO-8 (Domain agnosticism)** — любой Rich-knowledge-domain applicable. Humanities содержат огромное количество formal structure: argumentation, citation networks, conceptual dependencies, tradition lineages.
+Гуманитарные знания часто считаются «слишком мягкими» для структурного анализа. Но по **NO-8 (доменная агностичность)** — любой богатый домен знания применим. Гуманитарные науки содержат огромное количество формальной структуры: аргументация, сети цитирования, концептуальные зависимости, линии традиций.
 
 ---
 
 ## 1. Философия
 
-### 1.1 Comparative philosophy
+### 1.1 Сравнительная философия
 
-**Проблема**: Western / Eastern / continental / analytic traditions — separate vocabularies, parallel concepts trudно identify.
-
-**Применение**:
-- Каждая tradition → knowledge-object (α_plato, α_aristotle, α_kant, α_hegel, α_nagarjuna, α_dogen, ...).
-- Cross-tradition structural analogs detected.
-- Conceptual translations с obstruction metrics.
-
-**Example**: Aristotle's *energeia* ↔ Aquinas *actus* ↔ Hegel's Vermittlung. Structural mapping via Kan extension.
-
-### 1.2 History of ideas
+**Проблема**: западные / восточные / континентальные / аналитические традиции — отдельные словари, параллельные концепты трудно идентифицировать.
 
 **Применение**:
-- Temporal evolution of concepts.
-- Influence networks.
-- Concept transformation under translation.
-- «Dead ideas» vs active traditions.
+- Каждая традиция → объект знания (α_plato, α_aristotle, α_kant, α_hegel, α_nagarjuna, α_dogen, ...).
+- Структурные аналоги между традициями обнаруживаются.
+- Концептуальные переводы с метриками препятствий.
 
-**Dynamic epistemic logic extension** (roadmap phase): time-parametrized knowledge-graph.
+**Пример**: *энергия* Аристотеля ↔ *actus* Аквината ↔ Vermittlung Гегеля. Структурное отображение через расширение Кана.
 
-### 1.3 Formal philosophy
-
-**Применение**:
-- Logical systems (modal, temporal, deontic).
-- Formal ontology (DOLCE, BFO).
-- Formal epistemology (Bayesian, dynamic).
-- Theorem proving for philosophical arguments.
-
-### 1.4 Philosophy of science
+### 1.2 История идей
 
 **Применение**:
-- Philosophy of physics, biology, math.
-- Scientific methodology.
-- Science-philosophy dialogues.
+- Временнáя эволюция концептов.
+- Сети влияния.
+- Трансформация концепта при переводе.
+- «Мёртвые идеи» против активных традиций.
 
-### 1.5 Ethics
+**Расширение через динамическую эпистемическую логику** (фаза плана развития): граф знаний, параметризованный по времени.
 
-**Применение**:
-- Ethical frameworks (deontology, consequentialism, virtue ethics, care ethics).
-- Moral dilemmas structured.
-- Cross-framework analysis.
-- Applied ethics (bioethics, AI ethics, environmental ethics).
-
----
-
-## 2. Religious studies
-
-### 2.1 Comparative religion
+### 1.3 Формальная философия
 
 **Применение**:
-- World religions' doctrines structured.
-- Theological concepts compared.
-- Historical development tracked.
-- Scripture hermeneutics.
+- Логические системы (модальная, временнáя, деонтическая).
+- Формальная онтология (DOLCE, BFO).
+- Формальная эпистемология (байесовская, динамическая).
+- Доказательство теорем для философских аргументов.
 
-### 2.2 Theological systematics
-
-**Применение**:
-- Доктрины каждой traditions structured.
-- Cross-denominational comparisons.
-- Theological controversies tracked.
-
-### 2.3 Interfaith dialogue
-
-**Применение**: structural basis для inter-religious communication.
-
----
-
-## 4. Linguistics
-
-### 4.1 Computational linguistics
+### 1.4 Философия науки
 
 **Применение**:
-- Linguistic theories как knowledge-objects.
-- Cross-framework comparisons (generative, functional, cognitive).
-- Empirical corpora linked.
+- Философия физики, биологии, математики.
+- Научная методология.
+- Диалоги науки и философии.
 
-### 4.2 Historical linguistics
-
-**Применение**: language evolution, reconstruction (Proto-Indo-European, etc.), etymology networks.
-
-### 4.3 Typology
-
-**Применение**: cross-linguistic comparisons, language universals, WALS integration.
-
-### 4.4 Semantics
-
-**Применение**: formal semantics (Montague, DRT, distributional), cross-semantic mappings.
-
----
-
-## 5. Literary studies
-
-### 5.1 Literary theory
-
-**Применение**: structuralism, post-structuralism, reader-response, new historicism — как knowledge-objects.
-
-### 5.2 Close reading
-
-**Применение**: structured close-reading (textual features → interpretations), inter-textual references.
-
-### 5.3 Literary history
-
-**Применение**: genre evolution, period studies, canon formation.
-
-### 5.4 Digital humanities
-
-**Применение**: text corpora + structural analysis + machine learning integration.
-
----
-
-## 6. Historical studies
-
-### 6.1 Historiography
+### 1.5 Этика
 
 **Применение**:
-- Historical narratives as structured claims.
-- Evidence bases linked.
-- Competing interpretations explicit.
-- Revisionist positions tracked.
-
-### 6.2 Intellectual history
-
-**Применение**: idea propagation, influence networks, intellectual communities.
-
-### 6.3 Social / political history
-
-**Применение**: events, causes, consequences structurally tracked.
-
-### 6.4 Microhistory / local history
-
-**Применение**: detailed case studies with rich evidential links.
+- Этические каркасы (деонтология, консеквенциализм, этика добродетели, этика заботы).
+- Моральные дилеммы структурированы.
+- Анализ между каркасами.
+- Прикладная этика (биоэтика, этика ИИ, экологическая этика).
 
 ---
 
-## 7. Anthropology
+## 2. Религиоведение
 
-### 7.1 Cultural anthropology
-
-**Применение**: ethnographic data structured, cross-cultural comparisons, cultural evolution.
-
-### 7.2 Linguistic anthropology
-
-**Применение**: language-culture connections, ethnolinguistic vitality.
-
-### 7.3 Archaeological theory
-
-**Применение**: interpretive frameworks, site records, artifact networks.
-
----
-
-## 8. Art history
-
-### 8.1 Art historical methods
-
-**Применение**: iconography, formal analysis, social history of art, material culture.
-
-### 8.2 Artistic movements
-
-**Применение**: movement genealogies, influences, national schools.
-
-### 8.3 Provenance research
-
-**Применение**: artwork histories, ownership tracking, restitution claims.
-
----
-
-## 9. Music theory & musicology
-
-### 9.1 Music theory
-
-**Применение**: theoretical traditions (harmony, counterpoint, Schenkerian), cross-tradition analyses.
-
-### 9.2 Ethnomusicology
-
-**Применение**: musical traditions across cultures, comparative analysis.
-
-### 9.3 Performance practice
-
-**Применение**: historically-informed performance, editorial decisions.
-
----
-
-## 10. Classical studies
-
-### 10.1 Philology
-
-**Применение**: textual traditions, manuscript stemma, critical editions.
-
-### 10.2 Ancient history
-
-**Применение**: Greco-Roman historiography, archaeological integration.
-
-### 10.3 Reception studies
-
-**Применение**: how ancient texts received in subsequent traditions.
-
----
-
-## 11. Rhetoric & argumentation
-
-### 11.1 Argument analysis
-
-**Применение**: argument structures, fallacy detection, rhetorical moves.
-
-### 11.2 Debate tracking
-
-**Применение**: structured debate records, position evolution.
-
-### 11.3 Legal rhetoric
-
-**Применение**: judicial opinions, legal argumentation.
-
----
-
-## 12. Education studies
-
-### 12.1 Curriculum studies
-
-**Применение**: curriculum frameworks, learning taxonomies, prerequisite graphs.
-
-### 12.2 Learning theories
-
-**Применение**: behaviorism, cognitivism, constructivism — structural comparisons.
-
-### 12.3 Educational research
-
-**Применение**: empirical studies linked to theoretical claims.
-
----
-
-## 13. Cognitive science (humanities-side)
-
-### 13.1 Philosophy of mind
-
-**Применение**: consciousness theories (см. также 09-science), qualia debates, mental causation.
-
-### 13.2 Phenomenology
-
-**Применение**: Husserl / Heidegger / Merleau-Ponty traditions structurally analyzed.
-
-### 13.3 Cognitive linguistics
-
-**Применение**: metaphor theory, frame semantics, conceptual blending.
-
----
-
-## 14. Gender / cultural / postcolonial studies
+### 2.1 Сравнительное религиоведение
 
 **Применение**:
-- Theoretical frameworks as knowledge-objects.
-- Empirical research linked.
-- Intersectional analyses structural.
+- Доктрины мировых религий структурированы.
+- Теологические концепты сравниваются.
+- Историческое развитие отслеживается.
+- Герменевтика священных текстов.
 
----
-
-## 15. Psychoanalysis
-
-### 15.1 Theoretical schools
-
-**Применение**: Freud, Lacan, Jung, Klein, Winnicott, Kohut — schools structured, cross-school analyses.
-
-### 15.2 Case studies
-
-**Применение**: clinical cases linked to theoretical claims (с privacy protection).
-
----
-
-## Specific use cases
-
-### UC-1: Doctoral thesis
-
-PhD student in philosophy:
-1. Loads primary sources (Hegel, Heidegger, Deleuze).
-2. Structures interpretation as knowledge-object.
-3. Dependencies to secondary literature.
-4. Agent: suggests cross-references.
-5. Coherence check identifies weak arguments.
-6. Thesis backbone formally validated.
-
-### UC-2: Digital humanities project
-
-Humanities project building corpus:
-1. Import texts (OCR + NLP).
-2. Structural extraction (agent-assisted).
-3. Metadata enrichment.
-4. Cross-corpus analysis.
-5. Publication-ready dataset.
-
-### UC-3: Comparative religion study
-
-Scholar comparing doctrines:
-1. Each tradition → knowledge-object.
-2. Doctrines as claims.
-3. Cross-tradition functors.
-4. Obstruction analysis (where translations fail).
-5. Formal comparative framework.
-
-### UC-4: Historical reconstruction
-
-Historian reconstructing events:
-1. Primary sources as evidential claims.
-2. Interpretations as structured arguments.
-3. Competing interpretations with explicit conflicts.
-4. Evidence-interpretation mapping.
-
-### UC-5: Literary criticism
-
-Critic analyzing a work:
-1. Text-level observations as claims.
-2. Interpretive moves linked.
-3. Theoretical framework underlying.
-4. Cross-critic debate tracking.
-
----
-
-## Unique capabilities
-
-### For humanities specifically
-
-**Rich metadata tolerance**: humanities claims часто carry rich qualitative metadata (emotional valence, historical context, aesthetic judgments). Noesis supports custom fields.
-
-**Ambiguity handling**: interpretations не должны быть forced к binary true/false. Orthomodular lattice allows contextual truth, multiple valid interpretations.
-
-**Citation networks**: humanities rely heavily on citations. Auto-construction from imported texts.
-
-**Hermeneutic circles**: self-referential interpretations handled gracefully через controlled cycles (AFA + T-2f\*).
-
-### Tolerance for informality
-
-Not everything in humanities is formalizable. Noesis allows:
-- `type: observation` — non-formal observations.
-- `status: И` — interpretations (not proven, contextual).
-- `status: Ф` — phenomenological (experientially based).
-
-These are **first-class** statuses, not second-tier.
-
----
-
-## Academic publishing integration
-
-### Pre-publication
-
-- Structured manuscript preparation.
-- Peer review through structural analysis.
-- Editor coherence checks.
-
-### Publication
-
-- Export to journal formats.
-- Metadata для indexing services.
-- DOI integration.
-
-### Post-publication
-
-- Citation tracking.
-- Response papers linked.
-- Evolution of reception.
-
----
-
-## Cultural heritage preservation
-
-### Digital archives
+### 2.2 Теологическая систематика
 
 **Применение**:
-- Historical documents digitized + structured.
-- Provenance tracking.
-- Cross-archive federation.
+- Доктрины каждой традиции структурированы.
+- Межконфессиональные сравнения.
+- Теологические споры отслеживаются.
 
-### Traditional knowledge
+### 2.3 Межрелигиозный диалог
 
-**Применение**:
-- Indigenous knowledge systems (с consent-based access).
-- Oral traditions preserved structurally.
-- Intergenerational transmission support.
-
-### Museum collections
-
-**Применение**:
-- Object catalogs with rich metadata.
-- Cross-collection search.
-- Provenance research.
+**Применение**: структурная основа для межрелигиозной коммуникации.
 
 ---
 
-## Ethics of application
+## 4. Лингвистика
 
-Humanities applications require particular care:
+### 4.1 Компьютерная лингвистика
 
-### Respect for tradition integrity
+**Применение**:
+- Лингвистические теории как объекты знания.
+- Сравнения между каркасами (генеративная, функциональная, когнитивная).
+- Эмпирические корпусы связаны.
 
-Structural analysis должна **не разрушать** organic complexity of humanities knowledge. Noesis complements, не замещает hermeneutic work.
+### 4.2 Историческая лингвистика
 
-### Avoiding scientism
+**Применение**: языковая эволюция, реконструкция (праиндоевропейский и т.д.), этимологические сети.
 
-Noesis не делает humanities «научнее» — она даёт **инструмент** для structural work, который humanities scholars могут использовать или не использовать.
+### 4.3 Типология
 
-### Preservation of qualitative insight
+**Применение**: межъязыковые сравнения, языковые универсалии, интеграция WALS.
 
-Quantitative metrics (obstruction, confidence) не заменяют qualitative insight. Agent uses them as signals, не final truth.
+### 4.4 Семантика
 
-### Consent and access
-
-For sensitive materials (indigenous, clinical, personal):
-- Access control on knowledge-object level.
-- Consent tracking.
-- Ethical review integration.
+**Применение**: формальная семантика (Монтегю, DRT, дистрибутивная), отображения между семантиками.
 
 ---
 
-## Monetization для humanities
+## 5. Литературоведение
 
-### Academic tier
+### 5.1 Теория литературы
 
-- Heavily subsidized for humanities departments.
-- Research grants integration.
-- Publication support.
-- **Price**: $50K-500K/year per institution.
+**Применение**: структурализм, постструктурализм, рецептивная теория, новый историзм — как объекты знания.
 
-### Digital humanities tier
+### 5.2 Близкое чтение
 
-- For DH centers / labs.
-- Project-based pricing.
-- Integration с DH tools (Omeka, Voyant).
-- **Price**: $10K-100K/year.
+**Применение**: структурированное близкое чтение (текстовые особенности → интерпретации), интертекстуальные ссылки.
 
-### Individual researchers
+### 5.3 История литературы
 
-- Professional tier access.
-- Educational discounts.
-- **Price**: $50-200/month.
+**Применение**: эволюция жанров, периодизация, формирование канона.
 
-### Cultural heritage institutions
+### 5.4 Цифровые гуманитарные науки
 
-- Museums, libraries, archives.
-- Collection management integration.
-- **Price**: $50K-1M/year by institution size.
+**Применение**: текстовые корпусы + структурный анализ + интеграция машинного обучения.
+
+---
+
+## 6. Исторические исследования
+
+### 6.1 Историография
+
+**Применение**:
+- Исторические нарративы как структурированные утверждения.
+- Доказательные базы связаны.
+- Конкурирующие интерпретации явные.
+- Ревизионистские позиции отслеживаются.
+
+### 6.2 Интеллектуальная история
+
+**Применение**: распространение идей, сети влияния, интеллектуальные сообщества.
+
+### 6.3 Социальная / политическая история
+
+**Применение**: события, причины, последствия структурно отслеживаются.
+
+### 6.4 Микроистория / локальная история
+
+**Применение**: подробные кейсы с богатыми доказательными связями.
+
+---
+
+## 7. Антропология
+
+### 7.1 Культурная антропология
+
+**Применение**: этнографические данные структурированы, межкультурные сравнения, культурная эволюция.
+
+### 7.2 Лингвистическая антропология
+
+**Применение**: связи язык-культура, этнолингвистическая витальность.
+
+### 7.3 Археологическая теория
+
+**Применение**: интерпретативные каркасы, записи о раскопах, сети артефактов.
+
+---
+
+## 8. История искусств
+
+### 8.1 Методы истории искусств
+
+**Применение**: иконография, формальный анализ, социальная история искусства, материальная культура.
+
+### 8.2 Художественные движения
+
+**Применение**: генеалогии движений, влияния, национальные школы.
+
+### 8.3 Исследования провенанса
+
+**Применение**: истории произведений, отслеживание владельцев, реституционные претензии.
+
+---
+
+## 9. Теория музыки и музыковедение
+
+### 9.1 Теория музыки
+
+**Применение**: теоретические традиции (гармония, контрапункт, Шенкер), межтрадиционные анализы.
+
+### 9.2 Этномузыковедение
+
+**Применение**: музыкальные традиции разных культур, сравнительный анализ.
+
+### 9.3 Исполнительская практика
+
+**Применение**: исторически информированное исполнение, редакторские решения.
+
+---
+
+## 10. Классические исследования
+
+### 10.1 Филология
+
+**Применение**: текстуальные традиции, стемма рукописей, критические издания.
+
+### 10.2 Древняя история
+
+**Применение**: греко-римская историография, интеграция археологии.
+
+### 10.3 Рецептивные исследования
+
+**Применение**: как древние тексты воспринимались в последующих традициях.
+
+---
+
+## 11. Риторика и аргументация
+
+### 11.1 Анализ аргументов
+
+**Применение**: структуры аргументов, обнаружение ошибок, риторические ходы.
+
+### 11.2 Отслеживание дебатов
+
+**Применение**: структурированные записи дебатов, эволюция позиций.
+
+### 11.3 Юридическая риторика
+
+**Применение**: судебные мнения, юридическая аргументация.
+
+---
+
+## 12. Исследования в области образования
+
+### 12.1 Исследования учебных планов
+
+**Применение**: каркасы учебных планов, таксономии обучения, графы предпосылок.
+
+### 12.2 Теории обучения
+
+**Применение**: бихевиоризм, когнитивизм, конструктивизм — структурные сравнения.
+
+### 12.3 Образовательные исследования
+
+**Применение**: эмпирические исследования, связанные с теоретическими утверждениями.
+
+---
+
+## 13. Когнитивная наука (гуманитарная сторона)
+
+### 13.1 Философия сознания
+
+**Применение**: теории сознания (см. также 09-science), дебаты о квалиа, ментальная причинность.
+
+### 13.2 Феноменология
+
+**Применение**: традиции Гуссерля / Хайдеггера / Мерло-Понти структурно анализируются.
+
+### 13.3 Когнитивная лингвистика
+
+**Применение**: теория метафоры, фреймовая семантика, концептуальное смешение.
+
+---
+
+## 14. Гендерные / культурные / постколониальные исследования
+
+**Применение**:
+- Теоретические каркасы как объекты знания.
+- Эмпирические исследования связаны.
+- Интерсекциональные анализы структурны.
+
+---
+
+## 15. Психоанализ
+
+### 15.1 Теоретические школы
+
+**Применение**: Фрейд, Лакан, Юнг, Кляйн, Винникотт, Кохут — школы структурированы, межшкольные анализы.
+
+### 15.2 Кейсы
+
+**Применение**: клинические случаи, связанные с теоретическими утверждениями (с защитой конфиденциальности).
+
+---
+
+## Конкретные случаи использования
+
+### UC-1: Докторская диссертация
+
+Аспирант по философии:
+1. Загружает первичные источники (Гегель, Хайдеггер, Делёз).
+2. Структурирует интерпретацию как объект знания.
+3. Зависимости к вторичной литературе.
+4. Агент: предлагает перекрёстные ссылки.
+5. Проверка когерентности выявляет слабые аргументы.
+6. Каркас диссертации формально валидирован.
+
+### UC-2: Проект цифровых гуманитарных наук
+
+Гуманитарный проект, строящий корпус:
+1. Импорт текстов (OCR + NLP).
+2. Структурное извлечение (с помощью агента).
+3. Обогащение метаданных.
+4. Межкорпусный анализ.
+5. Набор данных, готовый к публикации.
+
+### UC-3: Сравнительное религиоведение
+
+Учёный, сравнивающий доктрины:
+1. Каждая традиция → объект знания.
+2. Доктрины как утверждения.
+3. Функторы между традициями.
+4. Анализ препятствий (где переводы не удаются).
+5. Формальный сравнительный каркас.
+
+### UC-4: Историческая реконструкция
+
+Историк, реконструирующий события:
+1. Первичные источники как доказательные утверждения.
+2. Интерпретации как структурированные аргументы.
+3. Конкурирующие интерпретации с явными конфликтами.
+4. Отображение доказательство-интерпретация.
+
+### UC-5: Литературная критика
+
+Критик, анализирующий произведение:
+1. Наблюдения на уровне текста как утверждения.
+2. Интерпретативные ходы связаны.
+3. Лежащий в основе теоретический каркас.
+4. Отслеживание межкритических дебатов.
+
+---
+
+## Уникальные возможности
+
+### Специально для гуманитарных наук
+
+**Толерантность к богатым метаданным**: утверждения в гуманитарных науках часто несут богатые качественные метаданные (эмоциональная валентность, исторический контекст, эстетические суждения). Noesis поддерживает пользовательские поля.
+
+**Обработка неоднозначности**: интерпретации не должны принудительно сводиться к бинарному истина/ложь. Ортомодулярная решётка допускает контекстную истину, множество валидных интерпретаций.
+
+**Сети цитирования**: гуманитарные науки сильно полагаются на цитаты. Авто-построение из импортированных текстов.
+
+**Герменевтические круги**: самореферентные интерпретации обрабатываются корректно через контролируемые циклы (AFA + T-2f\*).
+
+### Толерантность к неформальности
+
+Не всё в гуманитарных науках поддаётся формализации. Noesis допускает:
+- `type: observation` — неформальные наблюдения.
+- `status: И` — интерпретации (не доказано, контекстно).
+- `status: Ф` — феноменологические (на основе опыта).
+
+Это **первоклассные** статусы, а не второсортные.
+
+---
+
+## Интеграция с академическим издательством
+
+### До публикации
+
+- Структурированная подготовка рукописей.
+- Рецензирование через структурный анализ.
+- Редакторские проверки когерентности.
+
+### Публикация
+
+- Экспорт в форматы журналов.
+- Метаданные для служб индексации.
+- Интеграция DOI.
+
+### После публикации
+
+- Отслеживание цитирования.
+- Связанные отклики-статьи.
+- Эволюция восприятия.
+
+---
+
+## Сохранение культурного наследия
+
+### Цифровые архивы
+
+**Применение**:
+- Исторические документы оцифрованы + структурированы.
+- Отслеживание провенанса.
+- Межархивная федерация.
+
+### Традиционные знания
+
+**Применение**:
+- Системы знаний коренных народов (с доступом на основе согласия).
+- Устные традиции структурно сохранены.
+- Поддержка межпоколенческой передачи.
+
+### Музейные коллекции
+
+**Применение**:
+- Каталоги объектов с богатыми метаданными.
+- Поиск между коллекциями.
+- Исследования провенанса.
+
+---
+
+## Этика применения
+
+Гуманитарные применения требуют особой осторожности:
+
+### Уважение целостности традиции
+
+Структурный анализ должен **не разрушать** органическую сложность гуманитарного знания. Noesis дополняет, а не замещает герменевтическую работу.
+
+### Избегание сциентизма
+
+Noesis не делает гуманитарные науки «более научными» — она даёт **инструмент** для структурной работы, который гуманитарии могут использовать или не использовать.
+
+### Сохранение качественного прозрения
+
+Количественные метрики (препятствие, уверенность) не заменяют качественное прозрение. Агент использует их как сигналы, а не окончательную истину.
+
+### Согласие и доступ
+
+Для чувствительных материалов (коренные, клинические, личные):
+- Контроль доступа на уровне объекта знания.
+- Отслеживание согласия.
+- Интеграция этической проверки.
+
+---
+
+## Монетизация для гуманитарных наук
+
+### Академический тариф
+
+- Значительно субсидирован для гуманитарных департаментов.
+- Интеграция с исследовательскими грантами.
+- Поддержка публикаций.
+- **Цена**: $50K-500K/год на учреждение.
+
+### Тариф цифровых гуманитарных наук
+
+- Для DH-центров / лабораторий.
+- Проектное ценообразование.
+- Интеграция с DH-инструментами (Omeka, Voyant).
+- **Цена**: $10K-100K/год.
+
+### Индивидуальные исследователи
+
+- Доступ к профессиональному тарифу.
+- Образовательные скидки.
+- **Цена**: $50-200/месяц.
+
+### Учреждения культурного наследия
+
+- Музеи, библиотеки, архивы.
+- Интеграция с управлением коллекциями.
+- **Цена**: $50K-1M/год в зависимости от размера учреждения.
 
 ## Следующий шаг
 
-Business applications: [13 — Бизнес и стратегия](./13-business).
+Применения в бизнесе: [13 — Бизнес и стратегия](./13-business).
 
-Case studies: [14 — Кейсы](./14-case-studies).
+Кейсы: [14 — Кейсы](./14-case-studies).

@@ -5,52 +5,52 @@ title: Бизнес и стратегия
 
 # Noesis в бизнесе и стратегии
 
-## 1. Corporate knowledge management
+## 1. Корпоративное управление знаниями
 
-### 1.1 Organizational memory
+### 1.1 Организационная память
 
-**Проблема**: при смене сотрудников — systematic knowledge loss. Новые сотрудники тратят 6-12 months на onboarding.
+**Проблема**: при смене сотрудников — систематическая потеря знаний. Новые сотрудники тратят 6–12 месяцев на адаптацию.
 
 **Применение**:
-- Corporate knowledge как structured claims.
-- Processes, decisions, policies formal.
-- Dependency tracking.
-- Continuous updating.
+- Корпоративные знания как структурированные утверждения.
+- Процессы, решения, политики формально.
+- Отслеживание зависимостей.
+- Непрерывное обновление.
 
-### 1.2 Documentation quality
+### 1.2 Качество документации
 
-**Применение**: technical docs, SOPs, playbooks с coherence verification.
+**Применение**: техническая документация, SOP, плейбуки с верификацией когерентности.
 
-### 1.3 Internal wikis replacement
+### 1.3 Замена внутренних wiki
 
-**Применение**: current Confluence / SharePoint → structured knowledge-objects с verification.
+**Применение**: текущие Confluence / SharePoint → структурированные объекты знания с верификацией.
 
 ---
 
-## 2. Strategic planning
+## 2. Стратегическое планирование
 
-### 2.1 Strategic scenarios
-
-**Применение**:
-- Scenarios as knowledge-objects.
-- Dependencies on assumptions.
-- Cross-scenario analysis.
-- Update propagation when assumptions change.
-
-### 2.2 OKR management
-
-**Применение**: Objectives + Key Results structurally linked, cross-team dependencies.
-
-### 2.3 Competitive analysis
+### 2.1 Стратегические сценарии
 
 **Применение**:
-- Competitor profiles as knowledge-objects.
-- Market dynamics tracked.
-- Positioning analysis.
+- Сценарии как объекты знания.
+- Зависимости от предпосылок.
+- Анализ между сценариями.
+- Распространение обновлений при изменении предпосылок.
 
-### 2.4 Scenario planning
+### 2.2 Управление OKR
 
-**Применение**: Shell-style scenario planning with explicit dependency structures.
+**Применение**: Objectives + Key Results структурно связаны, межкомандные зависимости.
+
+### 2.3 Конкурентный анализ
+
+**Применение**:
+- Профили конкурентов как объекты знания.
+- Отслеживание рыночной динамики.
+- Анализ позиционирования.
+
+### 2.4 Сценарное планирование
+
+**Применение**: сценарное планирование в стиле Shell с явными структурами зависимостей.
 
 ---
 
@@ -58,444 +58,444 @@ title: Бизнес и стратегия
 
 ### 3.1 Due diligence
 
-**Применение**: comprehensive DD через structural analysis (см. WF-12).
+**Применение**: комплексный DD через структурный анализ (см. WF-12).
 
-### 3.2 Integration planning
+### 3.2 Планирование интеграции
 
-**Применение**: post-merger integration — dependency mapping, systems reconciliation.
+**Применение**: пост-M&A интеграция — построение карты зависимостей, согласование систем.
 
-### 3.3 Valuation models
+### 3.3 Модели оценки
 
-**Применение**: DCF, comparables, transaction multiples — model documentation.
+**Применение**: DCF, сопоставимые сделки, мультипликаторы — документирование моделей.
 
 ---
 
-## 4. Management consulting
+## 4. Управленческий консалтинг
 
-### 4.1 Client engagement knowledge
+### 4.1 Знание по клиентским проектам
 
 **Применение**:
-- Engagement deliverables structured.
-- Cross-engagement learnings.
-- Knowledge reuse acceleration.
-- Client-specific customizations.
+- Структурированные результаты проектов.
+- Обучение между проектами.
+- Ускорение повторного использования знаний.
+- Клиент-специфичные адаптации.
 
-### 4.2 Market research
+### 4.2 Маркетинговые исследования
 
-**Применение**: research findings, market models, trend analysis.
+**Применение**: результаты исследований, рыночные модели, анализ трендов.
 
-### 4.3 Industry expertise
+### 4.3 Отраслевая экспертиза
 
-**Применение**: industry-specific knowledge bases per practice area.
+**Применение**: отраслевые базы знаний для каждого направления практики.
 
-### 4.4 White-label deployments
+### 4.4 White-label развёртывания
 
-**Применение**: consultancies license Noesis для own clients (management consulting, strategy, law firms).
+**Применение**: консалтинговые компании лицензируют Noesis для своих клиентов (управленческий консалтинг, стратегия, юридические фирмы).
 
 ---
 
-## 5. Patent & IP management
+## 5. Управление патентами и ИС
 
-### 5.1 Patent portfolio
+### 5.1 Патентный портфель
 
 **Применение**:
-- Patent claims structured.
-- Family relationships.
-- Prior art tracking.
-- Licensing opportunities.
+- Патентные утверждения структурированы.
+- Семейственные связи.
+- Отслеживание предшествующего уровня техники.
+- Возможности лицензирования.
 
-### 5.2 IP strategy
+### 5.2 Стратегия ИС
 
-**Применение**: IP portfolio alignment to business strategy, freedom-to-operate analysis.
+**Применение**: согласование портфеля ИС с бизнес-стратегией, анализ свободы использования.
 
-### 5.3 Patent litigation
+### 5.3 Патентные споры
 
-**Применение**: case tracking, precedent analysis, expert opinions.
+**Применение**: отслеживание дел, анализ прецедентов, экспертные заключения.
 
-### 5.4 Trade secrets
+### 5.4 Коммерческие тайны
 
-**Применение**: trade secret documentation, access control, audit trails.
+**Применение**: документирование коммерческих тайн, контроль доступа, аудит-следы.
 
 ---
 
-## 6. Finance & analysis
+## 6. Финансы и анализ
 
-### 6.1 Investment analysis
+### 6.1 Инвестиционный анализ
 
 **Применение**:
-- Investment theses structured.
-- Thesis vs performance tracking.
-- Risk factors explicit.
-- Cross-portfolio consistency.
+- Инвестиционные тезисы структурированы.
+- Сопоставление тезиса и результатов.
+- Явные факторы риска.
+- Согласованность между портфелями.
 
-### 6.2 Risk management
+### 6.2 Риск-менеджмент
 
-**Применение**: risk frameworks (COSO, ISO 31000), risk registers, mitigation strategies.
+**Применение**: каркасы управления рисками (COSO, ISO 31000), реестры рисков, стратегии митигации.
 
-### 6.3 Financial reporting
+### 6.3 Финансовая отчётность
 
-**Применение**: IFRS / US GAAP compliance, disclosure requirements, reconciliation.
+**Применение**: соответствие IFRS / US GAAP, требования к раскрытию, сверка.
 
-### 6.4 Tax strategy
+### 6.4 Налоговая стратегия
 
-**Применение**: tax positions structured, transfer pricing, BEPS.
-
----
-
-## 7. Operations
-
-### 7.1 Process documentation
-
-**Применение**: SOPs, workflows, exception handling — formal structure.
-
-### 7.2 Quality management
-
-**Применение**: ISO 9001, Six Sigma, TQM — formal framework compliance.
-
-### 7.3 Supply chain
-
-**Применение**: supplier qualifications, contracts, risk assessments, compliance tracking.
-
-### 7.4 Lean / continuous improvement
-
-**Применение**: improvement initiatives tracked, dependencies to operational metrics.
+**Применение**: структурированные налоговые позиции, трансфертное ценообразование, BEPS.
 
 ---
 
-## 8. Product management
+## 7. Операции
 
-### 8.1 Product strategy
+### 7.1 Документирование процессов
 
-**Применение**: product roadmaps, feature dependencies, market positioning.
+**Применение**: SOP, процессы, обработка исключений — формальная структура.
 
-### 8.2 Requirements management
+### 7.2 Управление качеством
 
-**Применение**: PRD / user stories / technical requirements — structural dependency tracking.
+**Применение**: ISO 9001, Six Sigma, TQM — соответствие формальным каркасам.
 
-### 8.3 Customer research
+### 7.3 Цепочки поставок
 
-**Применение**: interviews, surveys, personas linked to product decisions.
+**Применение**: квалификация поставщиков, контракты, оценка рисков, отслеживание соответствия.
 
-### 8.4 Feature tradeoff analysis
+### 7.4 Lean / непрерывное улучшение
 
-**Применение**: formal analysis of feature tradeoffs.
-
----
-
-## 9. Marketing & branding
-
-### 9.1 Brand guidelines
-
-**Применение**: brand strategy, visual guidelines, voice & tone — structured.
-
-### 9.2 Content strategy
-
-**Применение**: content plans, editorial calendars, performance tracking.
-
-### 9.3 Market segmentation
-
-**Применение**: segment definitions, targeting strategies, messaging.
+**Применение**: отслеживание инициатив улучшения, зависимости от операционных метрик.
 
 ---
 
-## 10. Human resources
+## 8. Управление продуктом
 
-### 10.1 Competency frameworks
+### 8.1 Продуктовая стратегия
 
-**Применение**: competency models, career progression paths, skill assessments.
+**Применение**: планы развития продукта, зависимости функций, рыночное позиционирование.
 
-### 10.2 Training programs
+### 8.2 Управление требованиями
 
-**Применение**: curriculum design (см. 09-science, education) для corporate training.
+**Применение**: PRD / user stories / технические требования — отслеживание структурных зависимостей.
 
-### 10.3 Organizational design
+### 8.3 Клиентские исследования
 
-**Применение**: role definitions, reporting structures, delegation frameworks.
+**Применение**: интервью, опросы, персоны, связанные с продуктовыми решениями.
 
-### 10.4 Culture & values
+### 8.4 Анализ компромиссов функций
 
-**Применение**: values frameworks, cultural artifacts documentation.
-
----
-
-## 11. Customer success
-
-### 11.1 Customer journey mapping
-
-**Применение**: structured customer interactions, pain points, success metrics.
-
-### 11.2 Product adoption
-
-**Применение**: adoption patterns, best practices, customization profiles.
-
-### 11.3 Case studies
-
-**Применение**: customer case studies structured for reuse.
+**Применение**: формальный анализ компромиссов между функциями.
 
 ---
 
-## 12. Research & development
+## 9. Маркетинг и брендинг
 
-### 12.1 R&D portfolio
+### 9.1 Бренд-гайдлайны
 
-**Применение**: project portfolio, technology roadmaps, strategic alignment.
+**Применение**: бренд-стратегия, визуальные гайдлайны, голос и тон — структурировано.
 
-### 12.2 Innovation management
+### 9.2 Контент-стратегия
 
-**Применение**: idea pipelines, innovation stages, success metrics.
+**Применение**: контент-планы, редакционные календари, отслеживание производительности.
 
-### 12.3 Technology scouting
+### 9.3 Сегментация рынка
 
-**Применение**: external technology tracking, competitive intelligence.
-
----
-
-## 13. Education (corporate + academic)
-
-### 13.1 Corporate training
-
-**Применение**: training catalogs, learning paths, skill assessments.
-
-### 13.2 Certification programs
-
-**Применение**: certification requirements, exam blueprints, accreditation.
-
-### 13.3 MOOCs / online learning
-
-**Применение**: course catalogs, learner progress, recommendation engines.
-
-### 13.4 Higher education
-
-**Применение**: university programs, accreditation (AACSB, ABET), curriculum.
+**Применение**: определения сегментов, стратегии таргетинга, сообщения.
 
 ---
 
-## Vertical market analysis
+## 10. Человеческие ресурсы
 
-### Primary markets (largest potential)
+### 10.1 Каркасы компетенций
 
-#### Market 1: Big Pharma
-- **Problem**: 18-month regulatory submissions, $1B+ per drug.
-- **Value**: Noesis reduces submission time by 30-50%.
-- **Market size**: $100M+ annual (top 20 pharmas).
-- **Pricing**: $2-10M/year per company.
+**Применение**: модели компетенций, карьерные траектории, оценка навыков.
 
-#### Market 2: Investment banking
-- **Problem**: multi-jurisdictional compliance, pitch book generation, M&A diligence.
-- **Value**: 40-60% efficiency gains в structured work.
-- **Market size**: $50M+ annual.
-- **Pricing**: $1-5M/year per bank.
+### 10.2 Программы обучения
 
-#### Market 3: Defense primes
-- **Problem**: multi-billion dollar programs with specification complexity.
-- **Value**: 20-30% integration savings.
-- **Market size**: $100M+ annual.
-- **Pricing**: $5-50M/year per prime.
+**Применение**: проектирование учебных программ (см. 09-science, образование) для корпоративного обучения.
 
-#### Market 4: Big Tech research
-- **Problem**: multi-team research coordination.
-- **Value**: faster cross-team synthesis.
-- **Market size**: $30M+ annual (top 10 labs).
-- **Pricing**: $500K-5M/year.
+### 10.3 Организационный дизайн
 
-### Secondary markets
+**Применение**: определения ролей, структуры отчётности, каркасы делегирования.
 
-- Consulting firms (McKinsey, BCG, Bain, Deloitte).
-- Academic consortia.
-- Government agencies (US federal, EU Commission).
-- Standards bodies.
-- Industry associations.
-- Research universities.
+### 10.4 Культура и ценности
 
-### Tertiary markets
-
-- Individual researchers.
-- Graduate students.
-- Independent consultants.
-- Small R&D organizations.
-- NGOs.
+**Применение**: каркасы ценностей, документирование культурных артефактов.
 
 ---
 
-## Competitive positioning
+## 11. Успех клиентов
 
-### Against Notion / Confluence
+### 11.1 Картирование клиентского пути
 
-- Notion: unstructured notes с blocks.
-- Noesis: **typed structural knowledge**.
-- Noesis не заменяет note-taking — это **следующий уровень** organization.
+**Применение**: структурированные взаимодействия с клиентом, болевые точки, метрики успеха.
 
-### Against Roam / Obsidian
+### 11.2 Принятие продукта
 
-- Roam: linked notes с backlinks.
-- Noesis: **typed relationships** с verification.
-- Noesis appropriate when: structure matters, verification required, multiple collaborators.
+**Применение**: паттерны принятия, лучшие практики, профили кастомизации.
 
-### Against Lean / Coq / Isabelle
+### 11.3 Кейсы
 
-- Proof assistants: rigid formalization единичной theory.
-- Noesis: **flexible structural layer** над multiple theories.
-- Complementary: Noesis points to Lean for formal proof; Lean results imported back.
-
-### Against traditional knowledge bases
-
-- KBs: fixed schemas, tight coupling.
-- Noesis: **evolvable structure** через autopoiesis (L-III).
-- Noesis supports schema evolution without data migration.
-
-### Against enterprise search (Elasticsearch, Solr, Algolia)
-
-- Search: text-based retrieval.
-- Noesis: **structural navigation** с search layer on top.
-- Noesis includes search как sub-capability.
-
-### Against graph databases (Neo4j)
-
-- Graph DBs: generic graph storage.
-- Noesis: **typed category-theoretic** graph with verification.
-- Noesis builds on graph infrastructure, adds mathematical structure.
-
-### Against LLM + RAG
-
-- RAG: text search + generation.
-- Noesis: **structure-first**, LLM как оракул под verification.
-- Noesis immune to hallucinations (NO-9).
+**Применение**: клиентские кейсы, структурированные для повторного использования.
 
 ---
 
-## Pricing deep-dive
+## 12. Исследования и разработка
 
-### Community (free)
+### 12.1 Портфель R&D
 
-**Target**: individual researchers, students, small teams, OSS contributors.
+**Применение**: портфель проектов, планы развития технологий, стратегическое согласование.
 
-**Included**:
+### 12.2 Управление инновациями
+
+**Применение**: конвейеры идей, стадии инноваций, метрики успеха.
+
+### 12.3 Технологический скаутинг
+
+**Применение**: отслеживание внешних технологий, конкурентная разведка.
+
+---
+
+## 13. Образование (корпоративное + академическое)
+
+### 13.1 Корпоративное обучение
+
+**Применение**: каталоги обучения, пути обучения, оценка навыков.
+
+### 13.2 Программы сертификации
+
+**Применение**: требования сертификации, планы экзаменов, аккредитация.
+
+### 13.3 MOOC / онлайн-обучение
+
+**Применение**: каталоги курсов, прогресс обучающихся, движки рекомендаций.
+
+### 13.4 Высшее образование
+
+**Применение**: университетские программы, аккредитация (AACSB, ABET), учебные планы.
+
+---
+
+## Анализ вертикальных рынков
+
+### Первичные рынки (наибольший потенциал)
+
+#### Рынок 1: Big Pharma
+- **Проблема**: 18-месячные регуляторные подачи, $1B+ на препарат.
+- **Ценность**: Noesis сокращает время подачи на 30–50%.
+- **Размер рынка**: $100M+ в год (топ-20 фармкомпаний).
+- **Ценообразование**: $2–10M в год на компанию.
+
+#### Рынок 2: Инвестиционный банкинг
+- **Проблема**: мультиюрисдикционное соответствие, генерация питч-буков, M&A-диагностика.
+- **Ценность**: 40–60% прирост эффективности в структурной работе.
+- **Размер рынка**: $50M+ в год.
+- **Ценообразование**: $1–5M в год на банк.
+
+#### Рынок 3: Оборонные подрядчики
+- **Проблема**: многомиллиардные программы со сложностью спецификаций.
+- **Ценность**: 20–30% экономия на интеграции.
+- **Размер рынка**: $100M+ в год.
+- **Ценообразование**: $5–50M в год на подрядчика.
+
+#### Рынок 4: Исследования Big Tech
+- **Проблема**: координация мультикомандных исследований.
+- **Ценность**: быстрый межкомандный синтез.
+- **Размер рынка**: $30M+ в год (топ-10 лабораторий).
+- **Ценообразование**: $500K–5M в год.
+
+### Вторичные рынки
+
+- Консалтинговые фирмы (McKinsey, BCG, Bain, Deloitte).
+- Академические консорциумы.
+- Государственные ведомства (федеральные США, Еврокомиссия).
+- Органы стандартизации.
+- Отраслевые ассоциации.
+- Исследовательские университеты.
+
+### Третичные рынки
+
+- Индивидуальные исследователи.
+- Аспиранты.
+- Независимые консультанты.
+- Малые R&D-организации.
+- НКО.
+
+---
+
+## Конкурентное позиционирование
+
+### Против Notion / Confluence
+
+- Notion: неструктурированные заметки с блоками.
+- Noesis: **типизированное структурное знание**.
+- Noesis не заменяет ведение заметок — это **следующий уровень** организации.
+
+### Против Roam / Obsidian
+
+- Roam: связанные заметки с обратными ссылками.
+- Noesis: **типизированные отношения** с верификацией.
+- Noesis уместен когда: структура важна, требуется верификация, много соавторов.
+
+### Против Lean / Coq / Isabelle
+
+- Proof-ассистенты: жёсткая формализация единичной теории.
+- Noesis: **гибкий структурный слой** над множеством теорий.
+- Взаимодополняющие: Noesis указывает на Lean для формального доказательства; результаты Lean импортируются обратно.
+
+### Против традиционных баз знаний
+
+- БЗ: фиксированные схемы, плотная связанность.
+- Noesis: **эволюционирующая структура** через автопоэзис (L-III).
+- Noesis поддерживает эволюцию схемы без миграции данных.
+
+### Против корпоративного поиска (Elasticsearch, Solr, Algolia)
+
+- Поиск: текстовое извлечение.
+- Noesis: **структурная навигация** с поисковым слоем сверху.
+- Noesis включает поиск как подфункцию.
+
+### Против графовых БД (Neo4j)
+
+- Графовые БД: общее графовое хранилище.
+- Noesis: **типизированный категорно-теоретический** граф с верификацией.
+- Noesis строится поверх графовой инфраструктуры, добавляя математическую структуру.
+
+### Против LLM + RAG
+
+- RAG: текстовый поиск + генерация.
+- Noesis: **структура прежде всего**, LLM как оракул под верификацией.
+- Noesis устойчив к галлюцинациям (NO-9).
+
+---
+
+## Детали ценообразования
+
+### Community (бесплатно)
+
+**Целевая аудитория**: индивидуальные исследователи, студенты, малые команды, контрибьюторы открытых проектов.
+
+**Включено**:
 - Full Noesis.Core.
-- Up to 3 knowledge-domains.
-- Up to 50 knowledge-objects total.
-- Community support.
-- Standard SMT verification.
+- До 3 доменов знания.
+- До 50 объектов знания суммарно.
+- Поддержка сообщества.
+- Стандартная SMT-верификация.
 
-**Excluded**:
-- Enterprise SSO.
-- Priority LLM access.
+**Исключено**:
+- Корпоративный SSO.
+- Приоритетный доступ к LLM.
 - SLA.
-- Dedicated support.
+- Выделенная поддержка.
 
-### Professional ($500-2,000/month per seat)
+### Professional ($500–2,000/месяц за место)
 
-**Target**: professional researchers, consultants, small-to-medium teams.
+**Целевая аудитория**: профессиональные исследователи, консультанты, малые и средние команды.
 
-**Included**:
-- Unlimited domains.
-- Unlimited knowledge-objects.
-- Priority LLM inference.
-- Custom LLM selection.
+**Включено**:
+- Неограниченные домены.
+- Неограниченные объекты знания.
+- Приоритетный LLM-инференс.
+- Выбор собственной LLM.
 - 99.5% SLA.
-- Email support.
-- Integrations с major tools.
+- Email-поддержка.
+- Интеграции с основными инструментами.
 
-### Enterprise ($50K-500K/year per institution)
+### Enterprise ($50K–500K/год на институцию)
 
-**Target**: large R&D, Big Pharma, Big Tech, defense, finance.
+**Целевая аудитория**: крупные R&D, Big Pharma, Big Tech, оборона, финансы.
 
-**Included**:
-- On-premises / air-gapped deployment.
-- Custom LLM fine-tuning.
-- Enterprise SSO.
-- Dedicated support engineer.
-- Training included.
-- Custom integrations.
-- Compliance certifications (SOC2, FedRAMP, HIPAA).
-- Unlimited seats.
+**Включено**:
+- Развёртывание on-premises / air-gapped.
+- Дообучение собственной LLM.
+- Корпоративный SSO.
+- Выделенный инженер поддержки.
+- Обучение включено.
+- Кастомные интеграции.
+- Сертификации соответствия (SOC2, FedRAMP, HIPAA).
+- Неограниченное число мест.
 
-### Federation ($100K-1M/year per institution)
+### Federation ($100K–1M/год на институцию)
 
-**Target**: academic consortia, industry alliances, government networks.
+**Целевая аудитория**: академические консорциумы, отраслевые альянсы, государственные сети.
 
-**Included**:
-- Federation infrastructure.
-- Cross-institutional protocols.
-- Shared knowledge-graph.
-- Marketplace access.
-- Inter-institutional SLAs.
+**Включено**:
+- Федеративная инфраструктура.
+- Межинституциональные протоколы.
+- Общий граф знаний.
+- Доступ к маркетплейсу.
+- Межинституциональные SLA.
 
-### Consulting ($500-2,000/day)
+### Консалтинг ($500–2,000/день)
 
-**Target**: enterprises needing custom deployments.
+**Целевая аудитория**: предприятия, нуждающиеся в кастомных развёртываниях.
 
-**Services**:
-- Architecture design.
-- Domain ontology development.
-- Custom integration.
-- Training.
-- Retainer agreements.
+**Услуги**:
+- Проектирование архитектуры.
+- Разработка онтологии домена.
+- Кастомная интеграция.
+- Обучение.
+- Ретейнерные соглашения.
 
-### Infrastructure services (pay-per-use)
+### Инфраструктурные услуги (pay-per-use)
 
-**Target**: developers building on Noesis.
+**Целевая аудитория**: разработчики, строящие на Noesis.
 
-**Services**:
-- API access.
-- Compute.
-- Storage.
-- LLM inference.
+**Услуги**:
+- Доступ к API.
+- Вычисления.
+- Хранилище.
+- LLM-инференс.
 
-**Pricing**: $0.01-0.50 per verified claim operation.
+**Ценообразование**: $0.01–0.50 за верифицированную операцию над утверждением.
 
 ---
 
-## Revenue projection detail
+## Детальный прогноз выручки
 
-| Year | Community | Professional | Enterprise | Federation | Consulting | Infra | Total |
+| Год | Community | Professional | Enterprise | Federation | Консалтинг | Инфра | Итого |
 |---|---|---|---|---|---|---|---|
-| 1 | 0 | 500 seats × $1K/mo × 40% = $2.4M | 5 clients × $100K = $500K | 0 | $300K | $100K | $3.3M |
+| 1 | 0 | 500 мест × $1K/мес × 40% = $2.4M | 5 клиентов × $100K = $500K | 0 | $300K | $100K | $3.3M |
 | 2 | 0 | 2000 × $1K × 50% = $12M | 20 × $300K = $6M | 1 × $500K = $500K | $1M | $500K | $20M |
 | 3 | 0 | 5000 × $1.5K × 60% = $54M | 50 × $500K = $25M | 5 × $500K = $2.5M | $3M | $2M | $86.5M |
 | 4 | 0 | 10K × $1.5K × 65% = $117M | 100 × $750K = $75M | 15 × $800K = $12M | $8M | $8M | $220M |
 | 5 | 0 | 20K × $2K × 70% = $336M | 200 × $1M = $200M | 40 × $1M = $40M | $15M | $25M | $616M |
 
-(Note: simplified model; actual projections depend on market penetration, competition, execution.)
+(Примечание: упрощённая модель; фактические прогнозы зависят от проникновения на рынок, конкуренции, исполнения.)
 
 ---
 
-## Go-to-market strategy
+## Стратегия выхода на рынок
 
-### Phase 1 (Year 1): Inception
+### Фаза 1 (Год 1): Зарождение
 
 - Open-source Community Edition.
-- Direct selling to academic researchers.
-- Proof-of-concept deployments (3-5 enterprise pilots).
-- Conference presence (academic conferences).
-- Content marketing (technical blog, papers).
+- Прямые продажи академическим исследователям.
+- Proof-of-concept развёртывания (3–5 корпоративных пилотов).
+- Присутствие на конференциях (академические конференции).
+- Контент-маркетинг (технический блог, статьи).
 
-### Phase 2 (Year 2-3): Validation
+### Фаза 2 (Год 2–3): Валидация
 
-- Enterprise Edition GA.
-- First vertical-specific offerings (pharma, finance).
-- Partnership announcements (Anthropic, major universities).
-- Industry events (trade shows).
-- Sales team build-up.
+- GA-релиз Enterprise Edition.
+- Первые вертикально-специфические предложения (фарма, финансы).
+- Объявления о партнёрствах (Anthropic, ведущие университеты).
+- Отраслевые события (выставки).
+- Наращивание команды продаж.
 
-### Phase 3 (Year 3-5): Scaling
+### Фаза 3 (Год 3–5): Масштабирование
 
-- Multiple vertical markets.
-- International expansion.
-- Federation program.
-- White-label partnerships.
-- Ecosystem development (3rd-party integrations).
+- Множество вертикальных рынков.
+- Международное расширение.
+- Программа Federation.
+- White-label-партнёрства.
+- Развитие экосистемы (сторонние интеграции).
 
-### Phase 4 (Year 5+): Platform
+### Фаза 4 (Год 5+): Платформа
 
-- Global noosphere infrastructure.
-- Industry-standard positioning.
-- IPO readiness.
-- Strategic acquisitions (complementary tech).
+- Глобальная инфраструктура ноосферы.
+- Позиционирование как отраслевой стандарт.
+- Готовность к IPO.
+- Стратегические приобретения (дополняющие технологии).
 
 ## Следующий шаг
 
-Concrete case studies: [14 — Кейсы](./14-case-studies).
+Конкретные кейсы: [14 — Кейсы](./14-case-studies).
 
-Federation: [15 — Federation](./15-federation).
+Федерация: [15 — Federation](./15-federation).
 
-Monetization deep-dive: [17 — Монетизация](./17-monetization).
+Детали монетизации: [17 — Монетизация](./17-monetization).

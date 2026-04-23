@@ -1,108 +1,108 @@
 ---
 sidebar_position: 15
-title: Federation — распределённая ноосфера
+title: Федерация — распределённая ноосфера
 ---
 
-# Federation: распределённая ноосфера
+# Федерация: распределённая ноосфера
 
 ## Видение
 
-Финальная цель — **глобальная федеративная сеть** Noesis-узлов, образующая **компьютационную инфраструктуру науки**.
+Финальная цель — **глобальная федеративная сеть** Noesis-узлов, образующая **вычислительную инфраструктуру науки**.
 
 ## Принцип
 
-Каждая организация (университет, лаборатория, корпорация, ведомство) развёртывает собственный Noesis-узел. Узлы **федерируются** через gauge-preserving protocol (NP-Federation).
+Каждая организация (университет, лаборатория, корпорация, ведомство) развёртывает собственный Noesis-узел. Узлы **федерируются** через калибровочно-сохраняющий протокол (NP-Federation).
 
-Топологически: distributed ∞-sheaf над сетью институций.
+Топологически: распределённый ∞-пучок над сетью институций.
 
 $$\mathfrak{N}_{\text{global}} := \text{Sh}_\infty(\text{Institutions}, J_{\text{collab}})$$
 
-где J_collab — Grothendieck-топология collaboration data flows.
+где J_collab — топология Гротендика потоков коллаборационных данных.
 
 ## Архитектура
 
-### Node types
+### Типы узлов
 
-- **Leaf node**: single organization.
-- **Federation hub**: consortium coordinator.
-- **Public node**: open-access knowledge.
-- **Private node**: air-gapped, no federation.
+- **Листовой узел**: одна организация.
+- **Хаб федерации**: координатор консорциума.
+- **Публичный узел**: знание открытого доступа.
+- **Приватный узел**: air-gapped, без федерации.
 
-### Sync protocol
+### Протокол синхронизации
 
-По **NO-6 (Federation coherence)**:
-- Gauge-preserving sync.
-- Descent-condition ensures consistency.
-- Incremental synchronization.
-- Encryption at transit + rest.
+По **NO-6 (когерентность федерации)**:
+- Калибровочно-сохраняющая синхронизация.
+- Descent-условие обеспечивает согласованность.
+- Инкрементальная синхронизация.
+- Шифрование при передаче и хранении.
 
-### Access control
+### Контроль доступа
 
-- **Public**: shared across all federation.
-- **Consortium**: limited to federation members.
-- **Private**: within organization.
-- **Gated**: per-claim access rules.
+- **Публичный**: разделяется всей федерацией.
+- **Консорциумный**: ограничен членами федерации.
+- **Приватный**: внутри организации.
+- **С ограничениями**: правила доступа на уровне утверждения.
 
-## Use cases
+## Сценарии использования
 
-### Academic consortium
+### Академический консорциум
 
-10+ universities federated for joint research.
-- Shared foundational knowledge.
-- Private research data per institution.
-- Cross-institutional translations.
+10+ университетов федерированы для совместных исследований.
+- Общее основополагающее знание.
+- Приватные исследовательские данные на институцию.
+- Межинституциональные переводы.
 
-### Industry alliance
+### Отраслевой альянс
 
-Automotive alliance federating safety knowledge.
-- Shared hazard analyses.
-- Company-specific implementations private.
-- Cross-company functors for best practices.
+Автомобильный альянс, федерирующий знания по безопасности.
+- Общие анализы опасностей.
+- Реализации конкретных компаний приватны.
+- Межкорпоративные функторы для лучших практик.
 
-### Government network
+### Государственная сеть
 
-Multi-agency federation for policy.
-- Shared regulatory framework.
-- Agency-specific implementations.
-- Cross-agency coordination.
+Межведомственная федерация для политики.
+- Общий регуляторный каркас.
+- Специфичные для ведомства реализации.
+- Межведомственная координация.
 
-### International research
+### Международные исследования
 
-Global research networks (consciousness research, climate).
-- Massive knowledge-graph.
-- Multi-language support.
-- Cross-cultural mappings.
+Глобальные исследовательские сети (исследования сознания, климат).
+- Массивный граф знаний.
+- Поддержка многих языков.
+- Кросс-культурные отображения.
 
-## Benefits
+## Преимущества
 
-### Network effects
+### Сетевые эффекты
 
-- Each new node adds value to all existing.
-- Cross-node translations improve system-wide.
-- Breakthrough discoveries propagate faster.
+- Каждый новый узел добавляет ценность для всех существующих.
+- Межузловые переводы улучшают всю систему.
+- Прорывные открытия распространяются быстрее.
 
-### Sovereignty
+### Суверенитет
 
-- Each node maintains own data.
-- Own policies.
-- Own LLM choice.
-- Selective sharing.
+- Каждый узел поддерживает собственные данные.
+- Собственные политики.
+- Собственный выбор LLM.
+- Избирательное разделение.
 
-### Verifiability
+### Верифицируемость
 
-- Cryptographic audit trails.
-- Consensus on shared claims.
-- Resistance to tampering.
+- Криптографические аудит-следы.
+- Консенсус по общим утверждениям.
+- Устойчивость к подделке.
 
-## Long-term vision: computational noosphere
+## Долгосрочное видение: вычислительная ноосфера
 
-Leibniz's *Mathesis Universalis* realized:
-- Every scientific discovery propagates through federation.
-- Cross-field implications computed automatically.
-- Global knowledge-graph as infrastructure.
+Реализация *Mathesis Universalis* Лейбница:
+- Каждое научное открытие распространяется через федерацию.
+- Межполевые следствия вычисляются автоматически.
+- Глобальный граф знаний как инфраструктура.
 
-This is the operational form of the ∞-topos of human knowledge.
+Это операционная форма ∞-топоса человеческого знания.
 
 ## Следующий шаг
 
-Для technical stack: [16 — Verum](./16-verum-implementation).
+Технический стек: [16 — Verum](./16-verum-implementation).

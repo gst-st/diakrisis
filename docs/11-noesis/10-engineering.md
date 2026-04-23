@@ -7,372 +7,372 @@ title: Применения в инженерии
 
 ## Обзор
 
-Инженерия требует formal rigor + scale. Noesis применим везде, где есть structured specifications, multi-stakeholder requirements, safety-critical constraints.
+Инженерия требует формальной строгости + масштаба. Noesis применим везде, где есть структурированные спецификации, требования от многих заинтересованных сторон, критичные по безопасности ограничения.
 
 ---
 
 ## 1. Программная инженерия
 
-### 1.1 Software verification
+### 1.1 Верификация ПО
 
-**Проблема**: formally verify software properties at scale.
+**Проблема**: формально верифицировать свойства ПО в масштабе.
 
 **Применение**:
-- Specifications as claims.
-- Code artifacts as empirical witnesses.
-- Proof assistant integration (Lean4, Coq, Agda).
-- Cross-language specifications.
+- Спецификации как утверждения.
+- Артефакты кода как эмпирические свидетельства.
+- Интеграция с пруф-ассистентами (Lean4, Coq, Agda).
+- Межъязыковые спецификации.
 
-**Example workflow**:
+**Пример сценария**:
 ```
-1. Specify function contract as claim in Noesis.
-2. Write implementation (Rust, Verum, etc.).
-3. Generate Lean4 proof obligation.
-4. SMT-verify correctness.
-5. Import proof back as [Т·L1] claim.
+1. Специфицировать контракт функции как утверждение в Noesis.
+2. Написать реализацию (Rust, Verum и т.д.).
+3. Сгенерировать обязательство доказательства Lean4.
+4. SMT-верифицировать корректность.
+5. Импортировать доказательство обратно как утверждение [Т·L1].
 ```
 
-### 1.2 Distributed systems
+### 1.2 Распределённые системы
 
 **Применение**:
-- Protocol specifications.
-- Consistency models (linearizability, SC, eventual).
-- Failure modes as claims.
-- Byzantine fault analysis.
+- Спецификации протоколов.
+- Модели согласованности (линеаризуемость, SC, eventual).
+- Режимы отказов как утверждения.
+- Анализ византийских отказов.
 
-### 1.3 Security verification
-
-**Применение**:
-- Cryptographic protocols (TLS, Signal, etc.).
-- Attack models as knowledge-objects.
-- Security proofs imported from ProVerif / Tamarin.
-- Cross-protocol analysis.
-
-### 1.4 Programming language semantics
+### 1.3 Верификация безопасности
 
 **Применение**:
-- Operational / denotational semantics.
-- Type systems formalized.
-- Compiler correctness proofs.
+- Криптографические протоколы (TLS, Signal и т.д.).
+- Модели атак как объекты знания.
+- Доказательства безопасности, импортированные из ProVerif / Tamarin.
+- Анализ между протоколами.
+
+### 1.4 Семантика языков программирования
+
+**Применение**:
+- Операционная / денотационная семантика.
+- Формализованные системы типов.
+- Доказательства корректности компиляторов.
 
 ### 1.5 DevOps / SRE
 
 **Применение**:
-- Runbooks as structured knowledge.
-- Incident post-mortems linked to causal claims.
-- System architecture decisions (ADRs).
-- SLO / SLI formal specification.
+- Runbook'и как структурированное знание.
+- Пост-мортемы инцидентов, связанные с причинными утверждениями.
+- Архитектурные решения системы (ADR).
+- Формальная спецификация SLO / SLI.
 
 ---
 
-## 2. Hardware инженерия
+## 2. Инженерия оборудования
 
-### 2.1 Semiconductor design
+### 2.1 Проектирование полупроводников
 
 **Применение**:
-- RTL specifications.
-- Gate-level synthesis mappings.
-- Verification at each layer.
-- Cross-layer consistency.
+- RTL-спецификации.
+- Отображения синтеза на уровне вентилей.
+- Верификация на каждом слое.
+- Согласованность между слоями.
 
 ### 2.2 FPGA / ASIC
 
 **Применение**:
-- HDL specifications as knowledge.
-- Placement / routing constraints.
-- Timing analysis results.
-- Power budgets.
+- HDL-спецификации как знание.
+- Ограничения размещения / маршрутизации.
+- Результаты анализа таймингов.
+- Бюджеты мощности.
 
-### 2.3 Signal processing
+### 2.3 Обработка сигналов
 
 **Применение**:
-- Algorithm specifications.
-- Implementation mappings.
-- Performance claims with benchmarks.
+- Спецификации алгоритмов.
+- Отображения реализации.
+- Утверждения о производительности с тестами.
 
-### 2.4 Electronic design automation
+### 2.4 Автоматизация проектирования электроники
 
-**Применение**: integrate EDA tool outputs into unified structural model.
+**Применение**: интегрировать вывод инструментов EDA в единую структурную модель.
 
 ---
 
-## 3. Aerospace & defence
+## 3. Аэрокосмос и оборона
 
-### 3.1 Avionics
+### 3.1 Авионика
 
-**Safety standards**: DO-178C (software), DO-254 (hardware), ARP4754A (systems).
-
-**Применение**:
-- Requirements traceability (DOORS replacement).
-- Multi-level specifications.
-- Verification artifacts linked.
-- Certification submissions.
-
-**Expected ROI** for aerospace:
-- Certification time: **-40-60%**.
-- Rework from coherence issues: **-80%**.
-- Cross-program knowledge reuse: **explicit**.
-
-### 3.2 Space systems
+**Стандарты безопасности**: DO-178C (ПО), DO-254 (оборудование), ARP4754A (системы).
 
 **Применение**:
-- Mission specifications.
-- Subsystem interfaces (mechanical, electrical, thermal, data).
-- Fault trees as dependency structures.
-- Anomaly response protocols.
+- Трассируемость требований (замена DOORS).
+- Многоуровневые спецификации.
+- Артефакты верификации связаны.
+- Сертификационные подачи.
 
-### 3.3 Defense systems
+**Ожидаемая окупаемость** для аэрокосмоса:
+- Время сертификации: **-40-60%**.
+- Переделки из-за проблем когерентности: **-80%**.
+- Переиспользование знаний между программами: **явное**.
+
+### 3.2 Космические системы
 
 **Применение**:
-- Multi-domain operations specifications.
-- Classification levels respected (access control).
-- Cross-platform interoperability.
-- Mission assurance.
+- Спецификации миссий.
+- Интерфейсы подсистем (механические, электрические, термальные, данные).
+- Деревья отказов как структуры зависимостей.
+- Протоколы реагирования на аномалии.
+
+### 3.3 Оборонные системы
+
+**Применение**:
+- Спецификации операций в разных доменах.
+- Учёт уровней секретности (контроль доступа).
+- Интероперабельность между платформами.
+- Обеспечение миссии.
 
 ---
 
-## 4. Automotive
+## 4. Автомобильная промышленность
 
-### 4.1 Functional safety
+### 4.1 Функциональная безопасность
 
-**Standards**: ISO 26262 (safety), SAE J3061 (cybersecurity), ISO 21434.
-
-**Применение**:
-- ASIL determination linked to hazards.
-- Safety cases formalized.
-- HARA (Hazard Analysis Risk Assessment) structured.
-- Cross-supplier consistency.
-
-### 4.2 Autonomous vehicles
+**Стандарты**: ISO 26262 (безопасность), SAE J3061 (кибербезопасность), ISO 21434.
 
 **Применение**:
-- Operational Design Domain (ODD) formalized.
-- Behavioral specifications.
-- Sensor fusion algorithms.
-- AI safety arguments.
-- Simulation scenarios mapped to requirements.
+- Определение ASIL, связанное с опасностями.
+- Формализованные сейфти-кейсы.
+- HARA (Hazard Analysis Risk Assessment) структурирован.
+- Согласованность между поставщиками.
 
-### 4.3 ECU software
+### 4.2 Автономные транспортные средства
 
-**Применение**: AUTOSAR specifications, OTA update protocols, diagnostic procedures.
+**Применение**:
+- Формализованная область проектирования (ODD).
+- Поведенческие спецификации.
+- Алгоритмы слияния сенсоров.
+- Аргументы безопасности ИИ.
+- Симуляционные сценарии, отображённые на требования.
+
+### 4.3 ПО электронных блоков управления
+
+**Применение**: спецификации AUTOSAR, протоколы OTA-обновлений, диагностические процедуры.
 
 ---
 
-## 5. Medical devices
+## 5. Медицинские устройства
 
-### 5.1 FDA submissions
+### 5.1 Подачи в FDA
 
 **Стандарты**: 21 CFR Part 820, IEC 62304, ISO 14971.
 
 **Применение**:
-- Design controls (design inputs/outputs/verification/validation).
-- Risk management (ISO 14971).
-- Software lifecycle (IEC 62304).
-- 510(k) / PMA submissions структурированы.
+- Контроль проектирования (входы/выходы проектирования/верификации/валидации).
+- Управление рисками (ISO 14971).
+- Жизненный цикл ПО (IEC 62304).
+- Подачи 510(k) / PMA структурированы.
 
 ### 5.2 IVDR / MDR (EU)
 
-**Применение**: European medical device regulations — structural compliance.
+**Применение**: европейские регламенты медицинских устройств — структурное соответствие.
 
-### 5.3 Clinical evidence
+### 5.3 Клинические доказательства
 
-**Применение**: clinical trial data + statistical analysis + regulatory narrative.
+**Применение**: данные клинических испытаний + статистический анализ + регуляторный нарратив.
 
 ---
 
-## 6. Industrial automation
+## 6. Промышленная автоматизация
 
-### 6.1 Process control
+### 6.1 Управление процессами
 
-**Применение**: P&ID diagrams as structural knowledge, control loops verified, safety interlocks formal.
+**Применение**: диаграммы P&ID как структурное знание, контуры управления верифицированы, аварийные блокировки формализованы.
 
 ### 6.2 SCADA / HMI
 
-**Применение**: alarm hierarchies, operator procedures, incident response.
+**Применение**: иерархии тревог, процедуры оператора, реагирование на инциденты.
 
-### 6.3 OT cybersecurity
+### 6.3 Кибербезопасность OT
 
-**Применение**: IEC 62443, NERC CIP, OT-specific threat models.
-
----
-
-## 7. Nuclear engineering
-
-### 7.1 Reactor safety
-
-**Применение**: PRA (Probabilistic Risk Assessment), defense-in-depth analysis, SAR (Safety Analysis Report).
-
-### 7.2 Fuel cycle
-
-**Применение**: non-proliferation commitments, IAEA safeguards.
+**Применение**: IEC 62443, NERC CIP, OT-специфичные модели угроз.
 
 ---
 
-## 8. Telecommunications
+## 7. Ядерная инженерия
 
-### 8.1 Protocol stacks
+### 7.1 Безопасность реакторов
+
+**Применение**: PRA (Probabilistic Risk Assessment), анализ глубокоэшелонированной защиты, SAR (Safety Analysis Report).
+
+### 7.2 Топливный цикл
+
+**Применение**: обязательства по нераспространению, гарантии МАГАТЭ.
+
+---
+
+## 8. Телекоммуникации
+
+### 8.1 Стек протоколов
 
 **Применение**:
-- IETF RFCs as knowledge-objects.
-- Protocol stacks (TCP/IP, 5G, etc.).
-- Cross-version compatibility.
+- IETF RFC как объекты знания.
+- Стеки протоколов (TCP/IP, 5G и т.д.).
+- Совместимость между версиями.
 
-### 8.2 Network architecture
+### 8.2 Сетевая архитектура
 
-**Применение**: multi-domain network design, QoS, traffic engineering.
+**Применение**: проектирование сетей в разных доменах, QoS, инжиниринг трафика.
 
-### 8.3 Standards compliance
+### 8.3 Соответствие стандартам
 
-**Применение**: 3GPP, ITU-T, IEEE standards structural integration.
+**Применение**: структурная интеграция стандартов 3GPP, ITU-T, IEEE.
 
 ---
 
 ## 9. Энергетика
 
-### 9.1 Grid operations
+### 9.1 Операции энергосети
 
-**Применение**: grid codes, interconnection standards, reliability requirements (NERC).
+**Применение**: сетевые коды, стандарты межсистемных соединений, требования надёжности (NERC).
 
-### 9.2 Renewable integration
+### 9.2 Интеграция возобновляемых источников
 
-**Применение**: VRE forecasting, storage integration, dispatch optimization.
+**Применение**: прогнозирование ВИЭ, интеграция накопителей, оптимизация диспетчеризации.
 
-### 9.3 Power electronics
+### 9.3 Силовая электроника
 
-**Применение**: inverter specifications, grid-forming algorithms, protection coordination.
-
----
-
-## 10. Construction & infrastructure
-
-### 10.1 Building codes
-
-**Применение**: multi-jurisdictional building codes (IBC, Eurocode, Russian SP).
-
-### 10.2 Infrastructure specifications
-
-**Применение**: transportation networks, water systems, energy infrastructure — multi-stakeholder requirements.
-
-### 10.3 BIM integration
-
-**Применение**: building information models linked to specifications.
+**Применение**: спецификации инверторов, алгоритмы грид-формирования, координация защит.
 
 ---
 
-## 11. Biotech engineering
+## 10. Строительство и инфраструктура
 
-### 11.1 Synthetic biology
+### 10.1 Строительные нормы
+
+**Применение**: мультиюрисдикционные строительные нормы (IBC, Eurocode, российский СП).
+
+### 10.2 Спецификации инфраструктуры
+
+**Применение**: транспортные сети, системы водоснабжения, энергетическая инфраструктура — требования от многих заинтересованных сторон.
+
+### 10.3 Интеграция BIM
+
+**Применение**: информационные модели зданий, связанные со спецификациями.
+
+---
+
+## 11. Биотехнологическая инженерия
+
+### 11.1 Синтетическая биология
 
 **Применение**:
-- Genetic construct specifications.
-- Metabolic pathway designs.
-- Safety containment levels.
+- Спецификации генетических конструктов.
+- Проекты метаболических путей.
+- Уровни биозащиты.
 
-### 11.2 Bioprocess engineering
+### 11.2 Биопроцессная инженерия
 
-**Применение**: bioreactor specifications, scale-up analysis, regulatory submissions.
+**Применение**: спецификации биореакторов, анализ масштабирования, регуляторные подачи.
 
-### 11.3 Biomanufacturing
+### 11.3 Биопроизводство
 
-**Применение**: cGMP compliance, batch records, quality control.
-
----
-
-## 12. Robotics
-
-### 12.1 Autonomous systems
-
-**Применение**: behavior trees, task specifications, safety cases.
-
-### 12.2 Human-robot interaction
-
-**Применение**: interaction protocols, safety constraints, use cases.
-
-### 12.3 Multi-robot systems
-
-**Применение**: coordination protocols, communication requirements.
+**Применение**: соответствие cGMP, записи по партиям, контроль качества.
 
 ---
 
-## 13. Quantum engineering
+## 12. Робототехника
 
-### 13.1 Quantum hardware
+### 12.1 Автономные системы
+
+**Применение**: деревья поведения, спецификации задач, сейфти-кейсы.
+
+### 12.2 Взаимодействие человек-робот
+
+**Применение**: протоколы взаимодействия, ограничения безопасности, кейсы использования.
+
+### 12.3 Многороботные системы
+
+**Применение**: протоколы координации, требования к коммуникации.
+
+---
+
+## 13. Квантовая инженерия
+
+### 13.1 Квантовое оборудование
 
 **Применение**:
-- Qubit implementations (superconducting, trapped ion, photonic).
-- Error correction codes.
-- Control system specifications.
+- Реализации кубитов (сверхпроводящие, ионные ловушки, фотонные).
+- Коды коррекции ошибок.
+- Спецификации систем управления.
 
-### 13.2 Quantum algorithms
+### 13.2 Квантовые алгоритмы
 
-**Применение**: algorithm complexity analysis, hardware-specific optimizations.
+**Применение**: анализ сложности алгоритмов, оптимизации под конкретное оборудование.
 
-### 13.3 Quantum cryptography
+### 13.3 Квантовая криптография
 
-**Применение**: QKD protocols, post-quantum crypto.
-
----
-
-## 14. Systems engineering
-
-### 14.1 Model-based systems engineering (MBSE)
-
-**Применение**: SysML models imported as knowledge-objects. Multi-viewpoint consistency.
-
-### 14.2 Requirements engineering
-
-**Применение**: requirement traceability, derivation, verification status.
-
-### 14.3 Integration testing
-
-**Применение**: test cases linked to requirements, coverage analysis.
+**Применение**: протоколы QKD, постквантовая криптография.
 
 ---
 
-## Cross-engineering patterns
+## 14. Системная инженерия
 
-### Pattern 1: Multi-supplier integration
+### 14.1 Модельно-ориентированная системная инженерия (MBSE)
 
-Engineering programs involve many suppliers с различными spec formats. Noesis provides unified structural model.
+**Применение**: SysML-модели импортируются как объекты знания. Согласованность между видами.
 
-### Pattern 2: Standards compliance across jurisdictions
+### 14.2 Инженерия требований
 
-Aerospace, automotive, medical — multi-jurisdictional (US / EU / Asia).
+**Применение**: трассируемость требований, вывод, статус верификации.
 
-### Pattern 3: Safety case
+### 14.3 Интеграционное тестирование
 
-Safety-critical domains require structured safety arguments. Noesis formalizes their structure + links to evidence.
+**Применение**: тест-кейсы, связанные с требованиями, анализ покрытия.
 
-### Pattern 4: Design review
+---
 
-Structured reviews с automated coherence checking.
+## Межинженерные паттерны
 
-### Pattern 5: Certification submissions
+### Паттерн 1: Интеграция множества поставщиков
 
-Regulatory submissions в multiple jurisdictions. Noesis auto-generates per-jurisdiction packages.
+Инженерные программы вовлекают многих поставщиков с различными форматами спецификаций. Noesis предоставляет единую структурную модель.
 
-## Return on investment
+### Паттерн 2: Соответствие стандартам между юрисдикциями
 
-| Domain | Typical annual budget | Noesis impact | Noesis cost |
+Аэрокосмос, автомобили, медицина — мультиюрисдикционно (США / ЕС / Азия).
+
+### Паттерн 3: Сейфти-кейс
+
+Домены, критичные по безопасности, требуют структурированных аргументов безопасности. Noesis формализует их структуру + связь с доказательствами.
+
+### Паттерн 4: Проверка проекта
+
+Структурированные проверки с автоматизированным контролем когерентности.
+
+### Паттерн 5: Сертификационные подачи
+
+Регуляторные подачи в нескольких юрисдикциях. Noesis автоматически генерирует пакеты для каждой юрисдикции.
+
+## Возврат инвестиций
+
+| Домен | Типовой годовой бюджет | Эффект Noesis | Стоимость Noesis |
 |---|---|---|---|
-| Aerospace certification | $50-500M/program | -30-50% time/cost | $2-20M/yr |
-| Medical device submission | $20-200M/submission | -40% regulatory time | $1-10M/yr |
-| Automotive functional safety | $10-100M/program | -50% compliance work | $500K-5M/yr |
-| Defense systems | $100M-10B/program | -20% integration cost | $5-100M/yr |
-| Pharmaceutical trials | $100M-1B/trial | -30% protocol revision | $1-10M/trial |
+| Сертификация аэрокосмоса | $50-500M/программа | -30-50% времени/стоимости | $2-20M/год |
+| Подача медицинских устройств | $20-200M/подача | -40% регуляторного времени | $1-10M/год |
+| Функциональная безопасность авто | $10-100M/программа | -50% работы по соответствию | $500K-5M/год |
+| Оборонные системы | $100M-10B/программа | -20% стоимости интеграции | $5-100M/год |
+| Фармацевтические испытания | $100M-1B/испытание | -30% пересмотров протокола | $1-10M/испытание |
 
-Typical ROI: **5-20×** over 3 years for enterprise engineering programs.
+Типовая окупаемость: **5-20×** за 3 года для корпоративных инженерных программ.
 
 ## Интеграции
 
-### Engineering tools
+### Инженерные инструменты
 
-- **DOORS** / **Jama** (requirements) → import/export.
-- **MATLAB Simulink** → model extraction.
-- **LabVIEW** / **TestStand** → test results.
-- **JIRA** / **Azure DevOps** → issue tracking.
+- **DOORS** / **Jama** (требования) → импорт/экспорт.
+- **MATLAB Simulink** → извлечение моделей.
+- **LabVIEW** / **TestStand** → результаты тестирования.
+- **JIRA** / **Azure DevOps** → отслеживание задач.
 
-### Proof assistants
+### Пруф-ассистенты
 
 - Lean4 (mathlib4).
 - Coq / Rocq.
@@ -380,18 +380,18 @@ Typical ROI: **5-20×** over 3 years for enterprise engineering programs.
 - Isabelle/HOL.
 - Dafny.
 
-### Formal verification tools
+### Инструменты формальной верификации
 
-- TLA+ (distributed systems).
-- Cryptol (cryptography).
-- Why3 (program verification).
-- F* (security).
+- TLA+ (распределённые системы).
+- Cryptol (криптография).
+- Why3 (верификация программ).
+- F* (безопасность).
 
-### Simulation
+### Симуляция
 
 - MATLAB, Simulink, Dymola, Modelica.
-- SPICE (electrical).
-- COMSOL (multiphysics).
+- SPICE (электрика).
+- COMSOL (мультифизика).
 - OpenFOAM (CFD).
 
 ### PLM / PDM
@@ -400,8 +400,8 @@ Typical ROI: **5-20×** over 3 years for enterprise engineering programs.
 
 ## Следующий шаг
 
-Governance applications: [11 — Governance & compliance](./11-governance).
+Применения в управлении: [11 — Управление и соответствие](./11-governance).
 
-Humanities: [12 — Гуманитарные применения](./12-humanities).
+Гуманитарные науки: [12 — Гуманитарные применения](./12-humanities).
 
-Case studies: [14 — Кейсы](./14-case-studies).
+Кейсы: [14 — Кейсы](./14-case-studies).

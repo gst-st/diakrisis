@@ -7,319 +7,319 @@ title: Применения в науке
 
 ## Обзор
 
-Наука — прямая vertical market для Noesis. Научное знание структурированно по природе: теории → claims → dependencies → experiments. Noesis усиливает каждую стадию.
+Наука — прямая вертикаль рынка для Noesis. Научное знание структурировано по природе: теории → утверждения → зависимости → эксперименты. Noesis усиливает каждую стадию.
 
 ---
 
 ## 1. Физика
 
-### 1.1 Unified theories
+### 1.1 Объединённые теории
 
-**Проблема**: десятки кандидатов на объединение SM + GR + QM — loop quantum gravity, string theory, causal dynamical triangulation, NCG, UHM, emergent gravity, etc. Каждая — отдельный корпус; cross-theory сравнения делаются ad hoc.
+**Проблема**: десятки кандидатов на объединение SM + GR + QM — петлевая квантовая гравитация, теория струн, причинные динамические триангуляции, NCG, UHM, эмерджентная гравитация и т.д. Каждая — отдельный корпус; сравнения между теориями делаются ad hoc.
 
 **Решение Noesis**:
-- Каждая theory → α ∈ ⟪⟫_physics.
-- `morita/check` — detect structural equivalences.
-- `coherence/check` — conflicts across frameworks.
-- `obstruction/compute` — quantify untranslatability.
-- Empirical predictions linked to experimental claims.
+- Каждая теория → α ∈ ⟪⟫_physics.
+- `morita/check` — обнаружение структурных эквивалентностей.
+- `coherence/check` — конфликты между каркасами.
+- `obstruction/compute` — количественная оценка непереводимости.
+- Эмпирические предсказания связаны с экспериментальными утверждениями.
 
-**Value proposition**: community-wide formal comparison framework для unification efforts.
+**Ценностное предложение**: общесообщественный формальный каркас сравнения для усилий по объединению.
 
-### 1.2 Condensed matter
+### 1.2 Конденсированное состояние
 
-**Проблема**: many-body quantum systems have complex theoretical apparatus; cross-model validity hard to assess.
+**Проблема**: многотельные квантовые системы имеют сложный теоретический аппарат; валидность между моделями сложно оценить.
 
 **Применение**:
-- DMFT, DFT, QMC, tensor networks — each as knowledge-object.
-- Shared physical claims (thermodynamic quantities).
-- Theoretical predictions vs experimental data.
+- DMFT, DFT, QMC, тензорные сети — каждая как объект знания.
+- Общие физические утверждения (термодинамические величины).
+- Теоретические предсказания против экспериментальных данных.
 
-### 1.3 Cosmology
+### 1.3 Космология
 
-**Проблема**: ΛCDM + extensions + alternatives (MOND, conformal cyclic, etc.).
+**Проблема**: ΛCDM + расширения + альтернативы (MOND, конформная циклическая и т.д.).
 
-**Применение**: cosmological models as articulations с empirical tests (CMB, BAO, SNIa).
+**Применение**: космологические модели как артикуляции с эмпирическими тестами (CMB, BAO, SNIa).
 
-### 1.4 Quantum information
+### 1.4 Квантовая информация
 
-**Проблема**: interplay classical/quantum complexity, information theory, foundations.
+**Проблема**: взаимодействие классической/квантовой сложности, теории информации, оснований.
 
-**Применение**: Holevo bounds, entanglement measures, channel capacities — как structural claims. Noesis detects inconsistencies between frameworks.
+**Применение**: границы Холево, меры запутанности, пропускные способности каналов — как структурные утверждения. Noesis обнаруживает несогласованности между каркасами.
 
 ---
 
 ## 2. Биология и медицина
 
-### 2.1 Systems biology
+### 2.1 Системная биология
 
-**Проблема**: multi-scale models (molecular, cellular, tissue, organism) — different formalisms, hard to integrate.
+**Проблема**: многомасштабные модели (молекулярные, клеточные, тканевые, организменные) — разные формализмы, трудно интегрировать.
 
 **Решение**:
-- Каждая scale → отдельный knowledge-object.
-- Cross-scale functors (Kan extensions).
-- `obstruction/compute` quantifies integration losses.
-- Agent proposes scale-bridging hypotheses.
+- Каждый масштаб → отдельный объект знания.
+- Функторы между масштабами (расширения Кана).
+- `obstruction/compute` количественно оценивает потери при интеграции.
+- Агент предлагает гипотезы, связывающие масштабы.
 
-### 2.2 Pharmaceutical R&D
+### 2.2 Фармацевтические НИОКР
 
 **Применения**:
 
-**Drug discovery**:
-- Hypothesized mechanisms как claims.
-- Experimental evidence как empirical support.
-- Competing mechanisms detected via `contradicts` edges.
+**Поиск препаратов**:
+- Гипотетические механизмы как утверждения.
+- Экспериментальные данные как эмпирическая поддержка.
+- Конкурирующие механизмы обнаруживаются через рёбра `contradicts`.
 
-**Clinical trial design**:
-- Trial protocols structured.
-- Endpoints linked to mechanisms.
-- `coherence/check` validates protocol logic.
+**Проектирование клинических испытаний**:
+- Протоколы испытаний структурированы.
+- Конечные точки связаны с механизмами.
+- `coherence/check` валидирует логику протокола.
 
-**Regulatory submissions**:
-- Multi-jurisdictional (FDA, EMA, PMDA) requirements loaded.
-- Cross-regulatory translation via functors.
-- Automatic compliance reporting.
+**Регуляторные подачи**:
+- Мультиюрисдикционные (FDA, EMA, PMDA) требования загружены.
+- Перевод между регуляторами через функторы.
+- Автоматическая отчётность по соответствию.
 
-**Expected ROI** for large pharma:
-- Time savings: regulatory submissions 18 mo → 6 mo.
-- Cost savings: $10-100M per drug.
-- Risk reduction: earlier detection of regulatory issues.
+**Ожидаемая окупаемость** для крупного фармкорпа:
+- Экономия времени: регуляторные подачи 18 мес → 6 мес.
+- Экономия средств: $10-100M на препарат.
+- Снижение рисков: более раннее обнаружение регуляторных проблем.
 
-### 2.3 Neurobiology
+### 2.3 Нейробиология
 
-**Проблема**: 200+ theories of neural function, от single-neuron до global workspace.
+**Проблема**: 200+ теорий нейронных функций, от отдельного нейрона до глобального рабочего пространства.
 
 **Применение**:
-- Theories структурированы как knowledge-objects.
-- Experimental evidence linked.
-- Cross-theory contradictions explicit.
-- Evidence synthesis automated.
+- Теории структурированы как объекты знания.
+- Экспериментальные данные связаны.
+- Противоречия между теориями явные.
+- Синтез доказательств автоматизирован.
 
-### 2.4 Genomics
+### 2.4 Геномика
 
-**Применение**: GWAS results, variant databases, functional annotations — structured knowledge-graph с verification.
+**Применение**: результаты GWAS, базы вариантов, функциональные аннотации — структурированный граф знаний с верификацией.
 
-### 2.5 Epidemiology
+### 2.5 Эпидемиология
 
-**Применение**: disease models (SIR, SEIR, agent-based), intervention protocols, outbreak data — integrated structural analysis.
+**Применение**: модели заболеваний (SIR, SEIR, агентные), протоколы вмешательств, данные вспышек — интегрированный структурный анализ.
 
 ---
 
-## 3. Consciousness studies
+## 3. Исследования сознания
 
-### 3.1 Integration 325+ theories
+### 3.1 Интеграция 325+ теорий
 
-**Проблема**: Consciousness Atlas lists 325+ theories; no formal comparison framework exists.
+**Проблема**: Атлас сознания перечисляет 325+ теорий; формального каркаса сравнения не существует.
 
 **Решение Noesis**:
-- Import каждой theory.
-- Build functors pairwise (automated proposals).
-- `coherence/check` across all.
-- Community-contributed refinements.
+- Импорт каждой теории.
+- Построение функторов попарно (автоматизированные предложения).
+- `coherence/check` по всем.
+- Доработки от сообщества.
 
-**Expected outcome**: первый formal map of consciousness theory space.
+**Ожидаемый результат**: первая формальная карта пространства теорий сознания.
 
-### 3.2 UHM-specific
+### 3.2 UHM-специфично
 
 По Diakrisis UFH: α_uhm ≃_gauge ∫_Γ α_Д-hybrid^!(Γ) над 7D-quantum.
 
-**Noesis применение**:
-- UHM polled полностью структурирован.
-- 223 UHM theorems as claims.
-- Translations к IIT, GWT, HOT, Orch-OR.
-- Empirical predictions testable.
+**Применение в Noesis**:
+- UHM полностью структурирован.
+- 223 теоремы UHM как утверждения.
+- Переводы к IIT, GWT, HOT, Orch-OR.
+- Эмпирические предсказания тестируемы.
 
-### 3.3 IIT / GWT / FEP интеграция
+### 3.3 Интеграция IIT / GWT / FEP
 
-Theories как knowledge-objects в едином framework. Shared physical correlates. Contradictions explicit.
+Теории как объекты знания в едином каркасе. Общие физические корреляты. Противоречия явные.
 
 ---
 
 ## 4. Математика
 
-### 4.1 Cross-foundation research
+### 4.1 Исследования между основаниями
 
-**Проблема**: ZFC, HoTT, CIC, NBG+AFA, Linear+! — разные foundations; cross-foundation reasoning ad hoc.
+**Проблема**: ZFC, HoTT, CIC, NBG+AFA, Linear+! — разные основания; рассуждения между основаниями ведутся ad hoc.
 
-**Решение**: Noesis — natural environment для cross-foundation работы.
-- Каждая foundation → α ∈ ⟪⟫.
-- Morita-equivalences detected.
-- Translations between formalisms explicit.
+**Решение**: Noesis — естественная среда для работы между основаниями.
+- Каждое основание → α ∈ ⟪⟫.
+- Обнаружение Morita-эквивалентностей.
+- Переводы между формализмами явные.
 
-### 4.2 Automated theorem proving
+### 4.2 Автоматизированное доказательство теорем
 
 **Применение**:
-- Problem posed as claim.
-- Dependencies to existing theorems.
-- Agent explores proof space.
-- SMT / proof assistant integration для verification.
+- Задача формулируется как утверждение.
+- Зависимости к существующим теоремам.
+- Агент исследует пространство доказательств.
+- Интеграция SMT / пруф-ассистента для верификации.
 
-### 4.3 Literature navigation
+### 4.3 Навигация по литературе
 
-**Применение**: math journals — papers как knowledge-objects, citation graph → dependency graph, result applications mapped.
+**Применение**: математические журналы — статьи как объекты знания, граф цитирования → граф зависимостей, применения результатов отображены.
 
-### 4.4 Category theory research
+### 4.4 Исследования теории категорий
 
-**Meta-application**: categorical concepts сами как knowledge-objects. Cross-reference (monoidal, closed, cartesian, enriched) structurally.
+**Мета-применение**: категорные концепты сами как объекты знания. Перекрёстные ссылки (моноидальные, замкнутые, декартовы, обогащённые) структурно.
 
 ---
 
 ## 5. Химия
 
-### 5.1 Computational chemistry
+### 5.1 Вычислительная химия
 
-**Проблема**: QM methods (HF, DFT, coupled cluster, MP2), molecular mechanics, hybrid methods — разные regimes of validity.
+**Проблема**: QM-методы (HF, DFT, coupled cluster, MP2), молекулярная механика, гибридные методы — разные режимы применимости.
 
-**Применение**: method-applicability map через Noesis.
+**Применение**: карта применимости методов через Noesis.
 
-### 5.2 Reaction networks
+### 5.2 Реакционные сети
 
-**Применение**: reaction mechanisms as dependency graphs. Kinetic models coupled to structural claims.
+**Применение**: механизмы реакций как графы зависимостей. Кинетические модели соединены со структурными утверждениями.
 
-### 5.3 Materials science
+### 5.3 Материаловедение
 
-**Применение**: material properties → theoretical predictions → experimental validation, все structural.
-
----
-
-## 6. Environmental science
-
-### 6.1 Climate modeling
-
-**Применение**: climate models (CMIP), projections, policy scenarios — integrated structural framework.
-
-### 6.2 Ecosystem modeling
-
-**Применение**: trophic networks, biodiversity indices, conservation planning.
+**Применение**: свойства материалов → теоретические предсказания → экспериментальная валидация, всё структурное.
 
 ---
 
-## 7. Social sciences
+## 6. Науки об окружающей среде
 
-### 7.1 Economics
+### 6.1 Моделирование климата
 
-**Проблема**: neoclassical, behavioral, heterodox, MMT, etc. — competing frameworks.
+**Применение**: климатические модели (CMIP), проекции, политические сценарии — интегрированный структурный каркас.
 
-**Применение**: economic theories как knowledge-objects; predictions vs data; framework conflicts explicit.
+### 6.2 Моделирование экосистем
 
-### 7.2 Psychology
-
-**Применение**: cognitive theories, behavioral paradigms, neuro-correlates — integrated network.
-
-### 7.3 Political science
-
-**Применение**: theoretical frameworks + empirical datasets + policy outcomes.
-
-### 7.4 Sociology
-
-**Применение**: social theory frameworks, empirical studies, intervention research.
+**Применение**: трофические сети, индексы биоразнообразия, планирование охраны природы.
 
 ---
 
-## 8. Earth & space science
+## 7. Общественные науки
 
-### 8.1 Astrophysics
+### 7.1 Экономика
 
-**Применение**: stellar evolution models, cosmological theories, multi-messenger data integration.
+**Проблема**: неоклассическая, поведенческая, гетеродоксальная, MMT и т.д. — конкурирующие каркасы.
 
-### 8.2 Geology
+**Применение**: экономические теории как объекты знания; предсказания против данных; конфликты каркасов явные.
 
-**Применение**: tectonic models, paleogeographic reconstructions, seismic data.
+### 7.2 Психология
 
-### 8.3 Oceanography
+**Применение**: когнитивные теории, поведенческие парадигмы, нейро-корреляты — интегрированная сеть.
 
-**Применение**: circulation models, climate interactions, ecosystem data.
+### 7.3 Политология
 
----
+**Применение**: теоретические каркасы + эмпирические наборы данных + политические исходы.
 
-## 9. Cross-disciplinary integration
+### 7.4 Социология
 
-### 9.1 Consciousness ↔ Physics
-
-По UFH: α_uhm ↔ α_Д-hybrid ⊗ 7D-quantum. Noesis делает мост explicit.
-
-### 9.2 Biology ↔ Computation
-
-Bio-computing, synthetic biology — cross-domain translations.
-
-### 9.3 Physics ↔ Information
-
-Quantum information, black hole information paradox, holography.
-
-### 9.4 Neuroscience ↔ AI
-
-Learning theory, cognitive architectures, neural correlates of AI behaviors.
+**Применение**: каркасы социальной теории, эмпирические исследования, исследования вмешательств.
 
 ---
 
-## 10. Research infrastructure
+## 8. Науки о Земле и космосе
 
-### 10.1 Reproducibility
+### 8.1 Астрофизика
 
-**Problem**: reproducibility crisis в science.
+**Применение**: модели звёздной эволюции, космологические теории, интеграция мультивестниковых данных.
 
-**Solution**: Noesis-backed claims have:
-- Explicit dependencies (methodology).
-- Data witnesses (linked datasets).
-- Analysis code (linked repositories).
-- SMT-verified processing.
+### 8.2 Геология
 
-### 10.2 Pre-registration
+**Применение**: тектонические модели, палеогеографические реконструкции, сейсмические данные.
 
-**Application**: pre-register hypothesis + protocol in Noesis; data collection follows; analysis structurally validated.
+### 8.3 Океанография
 
-### 10.3 Peer review
-
-**Application**: structured peer review через Noesis — referee can check structural consistency automatically, focus on substantive issues.
-
-### 10.4 Priority disputes
-
-**Application**: Git-backed Noesis provides definitive priority timestamps.
+**Применение**: модели циркуляции, климатические взаимодействия, экосистемные данные.
 
 ---
 
-## Quantifiable value
+## 9. Междисциплинарная интеграция
 
-### Академическая проductivity
+### 9.1 Сознание ↔ Физика
 
-- Literature review time: **-70%** (automated structural analysis).
-- Paper writing coherence check: **10x faster**.
-- Cross-theory comparisons: **feasible** (currently often impossible at scale).
+По UFH: α_uhm ↔ α_Д-hybrid ⊗ 7D-quantum. Noesis делает мост явным.
 
-### Research quality
+### 9.2 Биология ↔ Вычисления
 
-- Contradiction detection: **probabilistically ~90%** faster.
-- Hidden assumption detection: **explicit через structural audit**.
-- Empirical prediction tracking: **automatic**.
+Биокомпьютинг, синтетическая биология — кросс-доменные переводы.
 
-### Funding efficiency
+### 9.3 Физика ↔ Информация
 
-- Grant-proposal coherence verification.
-- Cross-grant overlap detection.
-- Portfolio optimization для funders.
+Квантовая информация, парадокс информации чёрных дыр, голография.
 
-## Rich metadata
+### 9.4 Нейронауки ↔ ИИ
 
-Noesis tracks per-claim:
-- Experimental status (predicted / tested / confirmed / refuted).
-- Statistical power (if applicable).
-- Replication count.
-- Citation network.
-- Funder tracking.
+Теория обучения, когнитивные архитектуры, нейронные корреляты поведения ИИ.
 
-## Platform features для науки
+---
 
-- **Paper import**: OCR + NLP для PDFs.
-- **Citation graph**: auto-build from imported papers.
-- **Data integration**: link datasets (Zenodo, Figshare).
-- **Code integration**: link GitHub / GitLab repos.
-- **Experiment protocols**: structured protocol schemas.
-- **Lab notebook**: integrated scientific method workflow.
+## 10. Исследовательская инфраструктура
+
+### 10.1 Воспроизводимость
+
+**Проблема**: кризис воспроизводимости в науке.
+
+**Решение**: утверждения, подкреплённые Noesis, имеют:
+- Явные зависимости (методология).
+- Свидетельства-данные (связанные наборы данных).
+- Код анализа (связанные репозитории).
+- SMT-верифицированную обработку.
+
+### 10.2 Пре-регистрация
+
+**Применение**: пре-регистрация гипотезы + протокола в Noesis; сбор данных следует; анализ структурно валидирован.
+
+### 10.3 Рецензирование
+
+**Применение**: структурированное рецензирование через Noesis — рецензент может автоматически проверить структурную согласованность, сосредоточившись на содержательных вопросах.
+
+### 10.4 Споры о приоритете
+
+**Применение**: Noesis, подкреплённая Git, предоставляет окончательные временные метки приоритета.
+
+---
+
+## Количественная ценность
+
+### Академическая продуктивность
+
+- Время обзора литературы: **-70%** (автоматизированный структурный анализ).
+- Проверка когерентности при написании статей: **в 10 раз быстрее**.
+- Сравнения между теориями: **осуществимы** (сейчас часто невозможны в масштабе).
+
+### Качество исследований
+
+- Обнаружение противоречий: **вероятностно ~90%** быстрее.
+- Обнаружение скрытых допущений: **явно через структурный аудит**.
+- Отслеживание эмпирических предсказаний: **автоматическое**.
+
+### Эффективность финансирования
+
+- Верификация когерентности грантовых заявок.
+- Обнаружение пересечений между грантами.
+- Оптимизация портфеля для грантодателей.
+
+## Богатые метаданные
+
+Noesis отслеживает для каждого утверждения:
+- Экспериментальный статус (предсказано / протестировано / подтверждено / опровергнуто).
+- Статистическую мощность (если применимо).
+- Количество репликаций.
+- Сеть цитирования.
+- Отслеживание грантодателя.
+
+## Возможности платформы для науки
+
+- **Импорт статей**: OCR + NLP для PDF.
+- **Граф цитирования**: автоматическое построение из импортированных статей.
+- **Интеграция данных**: связь с наборами данных (Zenodo, Figshare).
+- **Интеграция кода**: связь с репозиториями GitHub / GitLab.
+- **Протоколы экспериментов**: структурированные схемы протоколов.
+- **Лабораторный журнал**: интегрированный процесс научного метода.
 
 ## Следующий шаг
 
-Для engineering applications: [10 — Инженерия](./10-engineering).
+Для инженерных применений: [10 — Инженерия](./10-engineering).
 
-Для governance: [11 — Governance & compliance](./11-governance).
+Для управления: [11 — Управление и соответствие](./11-governance).
 
-Для case studies: [14 — Кейсы](./14-case-studies).
+Для кейсов: [14 — Кейсы](./14-case-studies).

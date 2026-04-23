@@ -1,258 +1,258 @@
 ---
 sidebar_position: 18
-title: Roadmap
+title: План развития
 ---
 
-# Noesis Roadmap
+# План развития Noesis
 
-## Phase 0: Foundational design (Q1-Q2 2026, complete)
+## Фаза 0: Основополагающий проект (Q1–Q2 2026, завершено)
 
-- ✓ Diakrisis corpus (129 theorems).
-- ✓ UFH bridge к УГМ.
+- ✓ Корпус Diakrisis (129 теорем).
+- ✓ Мост UFH к УГМ.
 - ✓ TH-Final ABSOLUTA_TOTALIS.
-- ✓ L-levels classification.
-- ✓ Noesis design documents.
-- ✓ Core NO-1..NO-18 theorems.
+- ✓ Классификация L-уровней.
+- ✓ Проектные документы Noesis.
+- ✓ Ядровые теоремы NO-1..NO-18.
 
-## Phase 1: Core implementation (Q3-Q4 2026 → Q2 2027)
+## Фаза 1: Ядровая реализация (Q3–Q4 2026 → Q2 2027)
 
-**Deliverables**:
+**Результаты**:
 
-- Verum noesis/core/ modules.
-- NOESIS.Core MCP server.
-- Basic operations:
+- Модули Verum noesis/core/.
+- MCP-сервер Noesis.Core.
+- Базовые операции:
   - knowledge/load.
   - knowledge/audit.
   - claim/dependencies.
   - claim/propagate.
-- Initial LLM integration (Claude Opus).
-- CLI tool (`noesis` command).
-- **Self-application**: используется для работы с Diakrisis docs.
+- Начальная интеграция с LLM (Claude Opus).
+- CLI-инструмент (команда `noesis`).
+- **Самоприменение**: используется для работы с документами Diakrisis.
 
-**Milestones**:
-- M1.1: Prototype CLI (Q3 2026).
+**Вехи**:
+- M1.1: Прототип CLI (Q3 2026).
 - M1.2: NP Protocol v1 (Q4 2026).
-- M1.3: LLM integration (Q1 2027).
-- M1.4: Alpha release (Q2 2027).
+- M1.3: Интеграция с LLM (Q1 2027).
+- M1.4: Alpha-релиз (Q2 2027).
 
-**Resource requirements**:
-- 5-10 engineers.
-- Budget: $3-5M.
+**Требования к ресурсам**:
+- 5–10 инженеров.
+- Бюджет: $3–5M.
 
-## Phase 2: Applied translation (Q3 2027 → Q2 2028)
+## Фаза 2: Прикладной перевод (Q3 2027 → Q2 2028)
 
-**Deliverables**:
+**Результаты**:
 
-- Morita-equivalence checker.
-- Kan extension computation.
-- Obstruction measurement.
-- Cross-knowledge translation workflows.
-- 5 demo domains fully onboarded:
-  1. Mathematics foundations.
-  2. Physics (UHM + variants).
-  3. Consciousness theories (IIT, GWT, HOT, UHM).
-  4. Software verification (formal specs).
-  5. Legal (EU GDPR + US CCPA + China PIPL).
-- **Deliverable**: Professional Edition MVP.
+- Проверка эквивалентности по Морите.
+- Вычисление расширений Кана.
+- Измерение препятствий.
+- Процессы межзнаниевого перевода.
+- 5 демо-доменов полностью заведены:
+  1. Основания математики.
+  2. Физика (UHM + варианты).
+  3. Теории сознания (IIT, GWT, HOT, UHM).
+  4. Верификация ПО (формальные спецификации).
+  5. Юридический (EU GDPR + US CCPA + China PIPL).
+- **Результат**: MVP Professional Edition.
 
-**Milestones**:
-- M2.1: Morita checker (Q3 2027).
-- M2.2: 5 demo domains (Q4 2027).
-- M2.3: Web UI (Q1 2028).
-- M2.4: Professional Edition GA (Q2 2028).
+**Вехи**:
+- M2.1: Проверка Мориты (Q3 2027).
+- M2.2: 5 демо-доменов (Q4 2027).
+- M2.3: Веб-UI (Q1 2028).
+- M2.4: GA-релиз Professional Edition (Q2 2028).
 
-**Resource requirements**:
-- 15-20 engineers, 3 sales, 2 support.
-- Budget: $10-15M.
+**Требования к ресурсам**:
+- 15–20 инженеров, 3 продажи, 2 поддержки.
+- Бюджет: $10–15M.
 
-## Phase 3: Domain onboarding (Q3 2028 → Q4 2029)
+## Фаза 3: Ввод доменов (Q3 2028 → Q4 2029)
 
-**Deliverables**:
+**Результаты**:
 
-- Vertical market solutions:
-  - **Pharmaceutical R&D** solution.
-  - **Financial compliance** solution.
-  - **Aerospace safety** solution.
-- Custom LLM fine-tuning (domain-specific).
-- Enterprise Edition deployment tooling:
-  - On-premises installer.
-  - Air-gapped option.
-  - SSO integrations.
-  - Compliance certifications (SOC 2, HIPAA).
-- **Target**: 3-5 enterprise clients per major vertical.
+- Решения для вертикальных рынков:
+  - Решение для **фармацевтического R&D**.
+  - Решение для **финансового соответствия**.
+  - Решение для **аэрокосмической безопасности**.
+- Дообучение собственных LLM (доменно-специфичное).
+- Инструментарий развёртывания Enterprise Edition:
+  - Установщик on-premises.
+  - Опция air-gapped.
+  - Интеграции SSO.
+  - Сертификации соответствия (SOC 2, HIPAA).
+- **Цель**: 3–5 корпоративных клиентов на крупную вертикаль.
 
-**Milestones**:
-- M3.1: Pharma vertical (Q3 2028).
-- M3.2: Finance vertical (Q4 2028).
-- M3.3: Aerospace vertical (Q1 2029).
-- M3.4: Enterprise GA (Q2 2029).
-- M3.5: 15+ enterprise clients (Q4 2029).
+**Вехи**:
+- M3.1: Фарм-вертикаль (Q3 2028).
+- M3.2: Финансовая вертикаль (Q4 2028).
+- M3.3: Аэрокосмическая вертикаль (Q1 2029).
+- M3.4: GA-релиз Enterprise (Q2 2029).
+- M3.5: 15+ корпоративных клиентов (Q4 2029).
 
-**Resource requirements**:
-- 40-60 engineers, 20 sales, 10 support, 5 consultants.
-- Budget: $30-40M.
+**Требования к ресурсам**:
+- 40–60 инженеров, 20 продаж, 10 поддержки, 5 консультантов.
+- Бюджет: $30–40M.
 
-## Phase 4: Federation (2030)
+## Фаза 4: Federation (2030)
 
-**Deliverables**:
+**Результаты**:
 
-- Distributed sheaf infrastructure.
-- Cross-institutional protocol (NP-Federation).
-- Federated LLM inference.
-- Marketplace for knowledge-objects.
-- **Target**: 20+ federated institutions.
+- Распределённая инфраструктура пучков.
+- Межинституциональный протокол (NP-Federation).
+- Федеративный LLM-инференс.
+- Маркетплейс для объектов знания.
+- **Цель**: 20+ федерированных институций.
 
-**Milestones**:
+**Вехи**:
 - M4.1: Federation protocol v1 (Q1 2030).
-- M4.2: 5 pilot federations (Q2 2030).
-- M4.3: Marketplace launch (Q3 2030).
-- M4.4: 20+ institutions federated (Q4 2030).
+- M4.2: 5 пилотных федераций (Q2 2030).
+- M4.3: Запуск маркетплейса (Q3 2030).
+- M4.4: 20+ федерированных институций (Q4 2030).
 
-**Resource requirements**:
-- 80-100 engineers, 40 sales, 20 support, 15 consultants.
-- Budget: $60-80M.
+**Требования к ресурсам**:
+- 80–100 инженеров, 40 продаж, 20 поддержки, 15 консультантов.
+- Бюджет: $60–80M.
 
-## Phase 5: Global platform (2031+)
+## Фаза 5: Глобальная платформа (2031+)
 
-**Deliverables**:
+**Результаты**:
 
-- Multi-language support (20+ languages).
-- 50+ vertical markets.
-- Global sales + support organization.
-- Conferences, training programs, certifications.
-- **Target**: 1000+ organizations.
+- Поддержка многих языков (20+ языков).
+- 50+ вертикальных рынков.
+- Глобальная организация продаж и поддержки.
+- Конференции, программы обучения, сертификации.
+- **Цель**: 1000+ организаций.
 
-**Milestones**:
-- M5.1: Multi-language (2031).
-- M5.2: 100 enterprise clients (2031).
-- M5.3: Global noosphere infrastructure (2032).
-- M5.4: Industry standard positioning (2033).
+**Вехи**:
+- M5.1: Поддержка многих языков (2031).
+- M5.2: 100 корпоративных клиентов (2031).
+- M5.3: Глобальная инфраструктура ноосферы (2032).
+- M5.4: Позиционирование как отраслевой стандарт (2033).
 
-## Phase 6: Research extensions (parallel, 2027+)
+## Фаза 6: Исследовательские расширения (параллельно, 2027+)
 
-Extensions developed alongside main roadmap:
+Расширения, разрабатываемые параллельно основному плану:
 
-- **Quantum epistemic logic** (orthomodular lattice).
-- **Dynamic epistemic logic** (temporal evolution).
-- **Cognitive extension** (Day convolution) empirical validation.
-- **Gleason contextuality** (quantum-foundational rigor).
-- **Autopoietic topology modification** (L-III).
-- **UHM feedback loop** (bidirectional physics-epistemology).
-- **Proof assistant bridge** (Lean 4, Coq, Agda).
-- **DisCoCat NLP integration**.
+- **Квантовая эпистемическая логика** (ортомодулярная решётка).
+- **Динамическая эпистемическая логика** (временная эволюция).
+- **Когнитивное расширение** (свёртка Дэя) — эмпирическая валидация.
+- **Контекстуальность Глисона** (квантово-основополагающая строгость).
+- **Автопоэтическая модификация топологии** (L-III).
+- **Петля обратной связи UHM** (двусторонняя физика–эпистемология).
+- **Мост к proof-ассистентам** (Lean 4, Coq, Agda).
+- **Интеграция DisCoCat NLP**.
 
-**Delivery model**:
-- Research prototypes (2027-2028).
-- Production integration (2028-2030).
-- Continuous refinement (2030+).
+**Модель поставки**:
+- Исследовательские прототипы (2027–2028).
+- Производственная интеграция (2028–2030).
+- Непрерывное уточнение (2030+).
 
-## Funding timeline
+## График финансирования
 
-| Round | Year | Size | Use |
+| Раунд | Год | Размер | Использование |
 |---|---|---|---|
-| Seed | 2026 | $5M | Phase 1 start |
-| Series A | 2027 | $25M | Phase 1 completion, Phase 2 start |
-| Series B | 2028 | $75M | Phase 2 completion, Phase 3 start |
-| Series C | 2029 | $200M | Phase 3 completion, Phase 4 start |
-| Series D | 2031 | $500M | Phase 5 scaling |
-| IPO | 2033+ | $2B+ | Global platform |
+| Seed | 2026 | $5M | Начало фазы 1 |
+| Series A | 2027 | $25M | Завершение фазы 1, начало фазы 2 |
+| Series B | 2028 | $75M | Завершение фазы 2, начало фазы 3 |
+| Series C | 2029 | $200M | Завершение фазы 3, начало фазы 4 |
+| Series D | 2031 | $500M | Масштабирование фазы 5 |
+| IPO | 2033+ | $2B+ | Глобальная платформа |
 
-## Team scaling
+## Масштабирование команды
 
-| Phase | Year | Engineers | Sales | Support | Consultants | Total |
+| Фаза | Год | Инженеры | Продажи | Поддержка | Консультанты | Итого |
 |---|---|---|---|---|---|---|
 | 0 | 2026 | 3 | 0 | 0 | 0 | 3 |
-| 1 | 2026-27 | 10 | 2 | 1 | 0 | 13 |
-| 2 | 2027-28 | 20 | 5 | 3 | 2 | 30 |
-| 3 | 2028-29 | 50 | 20 | 10 | 5 | 85 |
+| 1 | 2026–27 | 10 | 2 | 1 | 0 | 13 |
+| 2 | 2027–28 | 20 | 5 | 3 | 2 | 30 |
+| 3 | 2028–29 | 50 | 20 | 10 | 5 | 85 |
 | 4 | 2030 | 100 | 40 | 20 | 15 | 175 |
 | 5 | 2031+ | 300+ | 200+ | 100+ | 50+ | 650+ |
 
-## Key partnerships
+## Ключевые партнёрства
 
-### Research partnerships
+### Исследовательские партнёрства
 
-- Anthropic (Claude integration).
-- OpenAI (GPT integration).
-- Lean FRO (Lean 4 integration).
-- Agda / Coq communities.
-- Major research universities (Stanford, MIT, Oxford, Cambridge, Max Planck).
+- Anthropic (интеграция Claude).
+- OpenAI (интеграция GPT).
+- Lean FRO (интеграция Lean 4).
+- Сообщества Agda / Coq.
+- Ведущие исследовательские университеты (Stanford, MIT, Oxford, Cambridge, Max Planck).
 
-### Industry partnerships
+### Отраслевые партнёрства
 
-- Big 4 consulting (white-label offerings).
-- Big Pharma (domain development).
-- Big Tech (research labs).
-- Aerospace primes.
+- Big 4 консалтинг (white-label-предложения).
+- Big Pharma (развитие доменов).
+- Big Tech (исследовательские лаборатории).
+- Аэрокосмические подрядчики.
 
-### Government partnerships
+### Государственные партнёрства
 
-- US National Labs.
-- EU Commission research.
-- UK National Research agency.
-- National standards bodies.
+- Национальные лаборатории США.
+- Исследования Еврокомиссии.
+- Национальное исследовательское агентство Великобритании.
+- Национальные органы стандартизации.
 
-## Success metrics
+## Метрики успеха
 
-### Year 1 (2027)
+### Год 1 (2027)
 
-- 500 Professional seats.
-- 5 Enterprise clients.
+- 500 мест Professional.
+- 5 клиентов Enterprise.
 - $3M ARR.
-- Core functionality complete.
+- Ядровая функциональность завершена.
 
-### Year 3 (2029)
+### Год 3 (2029)
 
-- 5000 Professional seats.
-- 50 Enterprise clients.
+- 5000 мест Professional.
+- 50 клиентов Enterprise.
 - $87M ARR.
-- 3 vertical markets.
+- 3 вертикальных рынка.
 
-### Year 5 (2031)
+### Год 5 (2031)
 
-- 20K Professional seats.
-- 200+ Enterprise clients.
+- 20K мест Professional.
+- 200+ клиентов Enterprise.
 - $500M ARR.
-- Federation launched.
-- Global presence.
+- Federation запущена.
+- Глобальное присутствие.
 
-## Risks и mitigation
+## Риски и митигация
 
-### Technical risks
+### Технические риски
 
-**Verum maturity**: dependency on Verum stdlib evolution.
-- Mitigation: contribute to Verum development.
+**Зрелость Verum**: зависимость от эволюции Verum stdlib.
+- Митигация: вклад в развитие Verum.
 
-**LLM reliability**: fluctuations в outputs.
-- Mitigation: SMT gate + multi-model ensemble.
+**Надёжность LLM**: флуктуации в выводах.
+- Митигация: SMT-фильтр + ансамбль из нескольких моделей.
 
-**Scale**: processing millions of claims.
-- Mitigation: lazy evaluation + federation.
+**Масштаб**: обработка миллионов утверждений.
+- Митигация: ленивая оценка + федерация.
 
-### Market risks
+### Рыночные риски
 
-**Long sales cycles**: 12-18 months для Enterprise.
-- Mitigation: parallel multi-tier approach.
+**Длинные циклы продаж**: 12–18 месяцев для Enterprise.
+- Митигация: параллельный мультиуровневый подход.
 
-**Competition**: existing vendors could add features.
-- Mitigation: structural moat через Diakrisis.
+**Конкуренция**: существующие поставщики могут добавить функции.
+- Митигация: структурный ров через Diakrisis.
 
-**LLM commoditization**: generic LLM could erode value.
-- Mitigation: Diakrisis-specific verification as differentiator.
+**Коммодитизация LLM**: обобщённые LLM могут размыть ценность.
+- Митигация: верификация, специфичная для Diakrisis, как дифференциатор.
 
-### Execution risks
+### Риски исполнения
 
-**Team building**: hiring top engineers difficult.
-- Mitigation: equity + technical mission.
+**Построение команды**: найм топ-инженеров затруднён.
+- Митигация: опционы + техническая миссия.
 
-**Customer success**: onboarding complex enterprise.
-- Mitigation: heavy consulting investment.
+**Успех клиента**: онбординг сложных корпоративных клиентов.
+- Митигация: значительные инвестиции в консалтинг.
 
-**Geopolitical**: multi-jurisdictional regulations.
-- Mitigation: localized deployments.
+**Геополитика**: мультиюрисдикционные регуляции.
+- Митигация: локализованные развёртывания.
 
 ## Следующий шаг
 
-Comparison с alternatives: [19 — Сравнение](./19-comparison).
+Сравнение с альтернативами: [19 — Сравнение](./19-comparison).
 
-Long-term vision: [20 — Перспективы](./20-futures).
+Долгосрочное видение: [20 — Перспективы](./20-futures).

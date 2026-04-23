@@ -7,274 +7,274 @@ title: Перспективы
 
 ## Горизонт 5 лет (2030)
 
-### Computational noosphere beginnings
+### Зарождение вычислительной ноосферы
 
-- 1000+ organizations on Noesis.
-- Federated knowledge-graph across 20+ institutions.
-- Multi-language support (English, Russian, Chinese, Japanese, German, Spanish, etc.).
-- Platform positioning established.
+- 1000+ организаций на Noesis.
+- Федеративный граф знаний между 20+ институциями.
+- Поддержка многих языков (английский, русский, китайский, японский, немецкий, испанский и т.д.).
+- Платформенное позиционирование установлено.
 
-### Industry standard adoption
+### Принятие в качестве отраслевого стандарта
 
-- Pharmaceutical industry: 5-10 top pharmas using Noesis для regulatory submissions.
-- Aerospace: 3-5 primes using для certification.
-- Financial services: 10+ major banks для compliance.
-- Academia: 100+ universities using для research.
+- Фармацевтическая отрасль: 5–10 топ-фармкомпаний используют Noesis для регуляторных подач.
+- Аэрокосмос: 3–5 подрядчиков используют для сертификации.
+- Финансовые услуги: 10+ крупных банков для соответствия.
+- Академия: 100+ университетов используют для исследований.
 
-### Research impact
+### Исследовательский импакт
 
-- Major cross-foundation discoveries published.
-- Consciousness research formalized с map of 325+ theories.
-- Quantum gravity unification efforts structured.
-- Evidence-based policy analysis standard.
+- Опубликованы крупные межосновательные открытия.
+- Исследования сознания формализованы с картой 325+ теорий.
+- Усилия по объединению квантовой гравитации структурированы.
+- Доказательный анализ политик — стандарт.
 
 ## Горизонт 10 лет (2035)
 
-### Global knowledge infrastructure
+### Глобальная инфраструктура знаний
 
-**Vision**: Noesis станет **operational infrastructure** human knowledge — так же как TCP/IP для internet.
+**Видение**: Noesis станет **операционной инфраструктурой** человеческого знания — так же как TCP/IP для интернета.
 
-**Concrete milestones**:
-- 10000+ organizations globally.
-- Cross-border research automated.
-- Policy analysis across 50+ nations coordinated.
-- Patent office integrations.
-- Standards bodies adoption.
-- UN/WHO/UNESCO integrations.
+**Конкретные вехи**:
+- 10000+ организаций в мире.
+- Межстрановые исследования автоматизированы.
+- Анализ политик между 50+ странами координирован.
+- Интеграции с патентными ведомствами.
+- Принятие органами стандартизации.
+- Интеграции UN/WHO/UNESCO.
 
 ### Научная революция
 
-**Effects**:
-- Cross-discipline integration accelerates.
-- Dead-end theories retired faster (structural analysis).
-- Novel hypotheses generated faster (LLM-assisted).
-- Reproducibility crisis resolved (structural proof).
+**Эффекты**:
+- Межотраслевая интеграция ускоряется.
+- Тупиковые теории отбрасываются быстрее (структурный анализ).
+- Новые гипотезы генерируются быстрее (с помощью LLM).
+- Кризис воспроизводимости разрешён (структурное доказательство).
 
-**Expected outcomes**:
-- Drug discovery cycles: 10 years → 3 years.
-- Cross-field collaborative research норма.
-- Scientific literature fully structured.
-- Interdisciplinary PhDs easier.
+**Ожидаемые результаты**:
+- Циклы разработки препаратов: 10 лет → 3 года.
+- Межполевые совместные исследования — норма.
+- Научная литература полностью структурирована.
+- Междисциплинарные PhD проще.
 
-### Economic impact
+### Экономический импакт
 
-- Direct Noesis revenue: $1-5B/year.
-- Indirect productivity gains: $100B-1T across knowledge economy.
-- Reshape consulting industry (less administrative work).
-- Transform pharma regulatory (massive time-to-market reductions).
+- Прямая выручка Noesis: $1–5B/год.
+- Непрямой прирост продуктивности: $100B–1T по экономике знаний.
+- Реформирование консалтинговой индустрии (меньше административной работы).
+- Трансформация фармрегулирования (массовое сокращение времени вывода на рынок).
 
 ## Горизонт 20 лет (2045)
 
-### Civilization-scale infrastructure
+### Инфраструктура цивилизационного масштаба
 
-**Vision**: Noesis participates в **planetary knowledge management** — координация глобальных challenges.
+**Видение**: Noesis участвует в **планетарном управлении знаниями** — координация глобальных вызовов.
 
-**Applications**:
-- **Climate change**: all climate research coordinated, policy decisions evidence-based.
-- **Pandemic preparedness**: global health knowledge federated, rapid response.
-- **Energy transition**: technology, policy, deployment coordinated.
-- **Artificial intelligence governance**: AI alignment + safety + capabilities structured.
-- **Interplanetary exploration**: mission planning at civilization scale.
+**Применения**:
+- **Изменение климата**: все климатические исследования координированы, политические решения доказательные.
+- **Готовность к пандемии**: глобальные знания здравоохранения федерированы, быстрый ответ.
+- **Энергетический переход**: технологии, политика, развёртывание координированы.
+- **Управление искусственным интеллектом**: алайнмент + безопасность + возможности ИИ структурированы.
+- **Межпланетные исследования**: планирование миссий в цивилизационном масштабе.
 
 ### Научный ландшафт
 
-- 325+ theories of consciousness: fully structural map.
-- Unified physics: structural comparisons complete.
-- Biology: multi-scale integration mature.
-- Social sciences: cross-cultural frameworks formal.
+- 325+ теорий сознания: полностью структурная карта.
+- Унифицированная физика: структурные сравнения завершены.
+- Биология: мультимасштабная интеграция зрелая.
+- Социальные науки: кросс-культурные каркасы формальны.
 
-### Technology evolution
+### Эволюция технологий
 
-- Quantum computing integration (Phase 6 extensions).
-- Neural interfaces (UHM feedback loop).
-- Federated machine learning (privacy-preserving).
-- Automated scientific discovery.
+- Интеграция квантовых вычислений (расширения фазы 6).
+- Нейроинтерфейсы (петля обратной связи UHM).
+- Федеративное машинное обучение (с сохранением конфиденциальности).
+- Автоматизированные научные открытия.
 
 ## Горизонт 50 лет (2076)
 
-### Fundamental transformation
+### Фундаментальная трансформация
 
-**Speculation** (с statuses [И] — interpretation):
+**Спекуляция** (со статусами [И] — интерпретация):
 
-- Science evolves to structural-first methodology.
-- Humanities transformed through structural tools.
-- Education: every student from high school using structural knowledge tools.
-- Research productivity: 10-100× current.
+- Наука эволюционирует к методологии «структура прежде всего».
+- Гуманитарные науки трансформированы через структурные инструменты.
+- Образование: каждый учащийся со школы использует структурные инструменты знания.
+- Исследовательская продуктивность: в 10–100 раз выше нынешней.
 
-### Civilization challenges addressed
+### Цивилизационные вызовы
 
-- **Longevity research**: drug discovery 100× faster.
-- **Space colonization**: infrastructure planning at civilization scale.
-- **Sustainable development**: policy + tech + economics integrated.
-- **Philosophical traditions**: preserved + engaged through structural tools.
+- **Исследования долголетия**: разработка препаратов в 100 раз быстрее.
+- **Колонизация космоса**: планирование инфраструктуры в цивилизационном масштабе.
+- **Устойчивое развитие**: политика + технологии + экономика интегрированы.
+- **Философские традиции**: сохранены + вовлечены через структурные инструменты.
 
-### Mathematical horizon
+### Математический горизонт
 
-- Diakrisis-level foundations established as standard.
-- New mathematical discoveries accelerated.
-- Cross-foundation translations routine.
-- Meta-mathematical work becomes common practice.
+- Основания уровня Diakrisis установлены как стандарт.
+- Ускорены новые математические открытия.
+- Межосновательные переводы стали рутинными.
+- Мета-математическая работа становится распространённой практикой.
 
-## Горизонт бесконечный
+## Бесконечный горизонт
 
-### Fundamental limits
+### Фундаментальные пределы
 
-По **NO-10 (Lawvere bounded)**:
-- Noesis никогда не достигнет completeness.
-- Self-reference always bounded.
-- Always new questions at higher levels.
+По **NO-10 (ограничение Ловера)**:
+- Noesis никогда не достигнет полноты.
+- Самореференция всегда ограничена.
+- Всегда новые вопросы на более высоких уровнях.
 
 По **TH-Final ABSOLUTA_TOTALIS**:
-- No "level 6" foundation ever.
-- Structural bounds are absolute.
-- Human curiosity not structurally impeded.
+- Никакого «уровня 6» основания никогда.
+- Структурные границы абсолютны.
+- Человеческое любопытство не имеет структурных препятствий.
 
 ### Философская перспектива
 
-**Diakrisis principle П-0.0** (акт первичен, объекты — следы): **remains fundamental**.
+**Принцип Diakrisis П-0.0** (акт первичен, объекты — следы): **остаётся фундаментальным**.
 
-- Noesis — **инструмент** для работы с следами акта.
+- Noesis — **инструмент** для работы со следами акта.
 - **Акт различения** сам по себе — не объект, не часть Noesis.
-- Human cognition remains **source** of new distinctions.
-- Noesis **amplifies**, не replaces human insight.
+- Человеческое познание остаётся **источником** новых различений.
+- Noesis **усиливает**, а не заменяет человеческое прозрение.
 
-## Рисkи на горизонте
+## Риски на горизонте
 
-### Technical обеспечение
+### Технические
 
-- Verum maturity: continued investment required.
-- LLM evolution: adaptability needed.
-- Scale: engineering challenges.
-- Security: ever-evolving threats.
+- Зрелость Verum: требуются продолжающиеся инвестиции.
+- Эволюция LLM: нужна адаптивность.
+- Масштаб: инженерные вызовы.
+- Безопасность: постоянно эволюционирующие угрозы.
 
-### Market
+### Рыночные
 
-- Competition: large incumbents may enter.
-- Commoditization: LLM capabilities becoming common.
-- Adoption curve: enterprise sales cycles long.
+- Конкуренция: крупные игроки могут войти.
+- Коммодитизация: возможности LLM становятся обыденными.
+- Кривая принятия: корпоративные циклы продаж длинные.
 
-### Philosophical
+### Философские
 
-- Over-formalization risk: losing human insight.
-- Monoculture: one framework dominating.
-- Corporate capture: private knowledge становится dominant.
-- Access inequality: who has access to structural tools.
+- Риск чрезмерной формализации: потеря человеческого прозрения.
+- Монокультура: доминирование одного каркаса.
+- Корпоративный захват: приватное знание становится доминирующим.
+- Неравенство доступа: у кого есть доступ к структурным инструментам.
 
-### Ethical
+### Этические
 
-- AI governance: structural tools should be transparent.
-- Data privacy: federation requires trust.
-- Knowledge commons: balance private/public.
-- Cultural respect: humanities applications need care.
+- Управление ИИ: структурные инструменты должны быть прозрачными.
+- Приватность данных: федерация требует доверия.
+- Общественные знания: баланс приватного/публичного.
+- Культурное уважение: применения в гуманитарных науках требуют осторожности.
 
-## Mitigation стратегии
+## Стратегии митигации
 
-### Technical
+### Технические
 
-- Open-source Core.
-- Federation protocols open.
-- Interoperability.
-- Vendor-neutral.
+- Открытое ядро.
+- Открытые протоколы федерации.
+- Интероперабельность.
+- Нейтральность к поставщикам.
 
-### Market
+### Рыночные
 
-- Multi-vertical strategy.
-- Network effects defendable.
-- Continuous innovation.
+- Мультивертикальная стратегия.
+- Защищённые сетевые эффекты.
+- Непрерывные инновации.
 
-### Philosophical
+### Философские
 
-- Honest признание limits (NO-10).
-- Human-in-the-loop essential.
-- Structural tools **complement**, not replace intuition.
-- Explicit methodological principles (П-0.\*).
+- Честное признание пределов (NO-10).
+- Human-in-the-loop существенен.
+- Структурные инструменты **дополняют**, а не заменяют интуицию.
+- Явные методологические принципы (П-0.\*).
 
-### Ethical
+### Этические
 
-- Open governance.
-- Community input.
-- Academic oversight.
-- Regulatory engagement.
-- Digital commons contribution.
+- Открытое управление.
+- Вклад сообщества.
+- Академический надзор.
+- Регуляторная вовлечённость.
+- Вклад в цифровые общественные блага.
 
 ## Гипотетические сценарии
 
-### Сценарий 1: Breakthrough adoption
+### Сценарий 1: Прорывное принятие
 
-Year 2030: major pharma публикует $5B-savings paper. Industry adoption accelerates.
-Year 2035: Noesis standard в 80% pharma, 60% aerospace.
-Year 2040: global infrastructure role established.
+2030 год: крупная фармкомпания публикует работу об экономии $5B. Отраслевое принятие ускоряется.
+2035 год: Noesis — стандарт в 80% фармы, 60% аэрокосмоса.
+2040 год: роль глобальной инфраструктуры установлена.
 
-### Сценарий 2: Research transformation
+### Сценарий 2: Трансформация исследований
 
-Year 2032: first cross-foundation theorem proved at scale.
-Year 2035: scientific publication standards require structural metadata.
-Year 2040: interdisciplinary PhDs become norm.
+2032 год: первая межосновательная теорема доказана в масштабе.
+2035 год: стандарты научных публикаций требуют структурных метаданных.
+2040 год: междисциплинарные PhD становятся нормой.
 
-### Сценарий 3: Policy revolution
+### Сценарий 3: Революция политик
 
-Year 2028: first major policy analysis through Noesis influences legislation.
-Year 2030: EU Commission adopts systematically.
-Year 2035: evidence-based governance standard в OECD.
+2028 год: первый крупный анализ политики через Noesis влияет на законодательство.
+2030 год: Еврокомиссия принимает систематически.
+2035 год: доказательное управление — стандарт в ОЭСР.
 
-### Сценарий 4: Scientific culture shift
+### Сценарий 4: Сдвиг научной культуры
 
-Year 2030: reproducibility crisis abates as Noesis-backed research proves reproducible.
-Year 2033: pre-registration standard через Noesis.
-Year 2036: major scientific breakthroughs traceable to structural work.
+2030 год: кризис воспроизводимости ослабевает, поскольку исследования, поддержанные Noesis, оказываются воспроизводимыми.
+2033 год: предварительная регистрация — стандарт через Noesis.
+2036 год: крупные научные прорывы прослеживаются до структурной работы.
 
-### Сценарий 5: AI integration
+### Сценарий 5: Интеграция ИИ
 
-Year 2028: first AI-generated theorems verified at scale.
-Year 2032: AI research partners become standard.
-Year 2035: human-AI collaborative research majority of new results.
+2028 год: первые сгенерированные ИИ теоремы верифицированы в масштабе.
+2032 год: ИИ-партнёры в исследованиях становятся стандартом.
+2035 год: коллаборация человек–ИИ в исследованиях составляет большинство новых результатов.
 
 ## Что Noesis — не сделает
 
-### NOT: general AI
-Noesis не претендует быть общим ИИ. LLM within Noesis — инструмент, не автономный agent.
+### НЕ: общий ИИ
+Noesis не претендует быть общим ИИ. LLM внутри Noesis — инструмент, а не автономный агент.
 
-### NOT: omniscience
-По Lawvere (NO-10): никогда. Honest границы всегда.
+### НЕ: всеведение
+По Ловеру (NO-10): никогда. Честные границы всегда.
 
-### NOT: замещение людей
-Human judgment центральный. Noesis augments, never replaces.
+### НЕ: замещение людей
+Человеческое суждение центрально. Noesis усиливает, а не заменяет.
 
-### NOT: "theory of everything"
-TH-Final ABSOLUTA_TOTALIS: structurally impossible. Noesis operates within bounds.
+### НЕ: «теория всего»
+TH-Final ABSOLUTA_TOTALIS: структурно невозможно. Noesis действует в границах.
 
-### NOT: perfect system
-Bugs будут. Limitations будут. Continuous improvement needed.
+### НЕ: идеальная система
+Ошибки будут. Ограничения будут. Непрерывное улучшение требуется.
 
 ## Заключение
 
-**Noesis** — ambitious но **bounded** проект.
+**Noesis** — амбициозный, но **ограниченный** проект.
 
-**Bounded**:
-- По Diakrisis foundation (не больше того, что Diakrisis обеспечивает).
-- По TH-Final ABSOLUTA_TOTALIS (5-dim structural limits).
-- По NO-10 Lawvere (no completeness claims).
-- По 97.T tradeoff (structural constraints).
+**Ограниченный**:
+- Основанием Diakrisis (не больше того, что Diakrisis обеспечивает).
+- TH-Final ABSOLUTA_TOTALIS (5-мерные структурные пределы).
+- NO-10 Ловера (без притязаний на полноту).
+- 97.T-компромиссом (структурные ограничения).
 
-**Ambitious**:
-- Universal knowledge infrastructure.
-- Every Rich-knowledge-domain applicable.
-- Computational noosphere eventually.
-- Multi-decade horizon.
+**Амбициозный**:
+- Универсальная инфраструктура знаний.
+- Применим к каждому Rich-домену знания.
+- Вычислительная ноосфера в перспективе.
+- Многодесятилетний горизонт.
 
 **Честно**:
 - Мы не знаем точно, что будет в 2050.
-- Технология evolves.
-- Competition emerges.
-- Societal needs change.
+- Технологии эволюционируют.
+- Появляется конкуренция.
+- Общественные потребности меняются.
 
 **Но мы знаем**:
-- Мат-структура Diakrisis solid.
-- Implementation path clear.
-- Demand for structural knowledge work will grow.
-- Formally-backed platforms will dominate.
+- Мат-структура Diakrisis надёжна.
+- Путь реализации ясен.
+- Спрос на структурную работу со знаниями будет расти.
+- Формально обоснованные платформы будут доминировать.
 
-**Noesis positioned** как **technology of inevitability**: сочетание ∞-category theory + computational advances + AI integration — это **необходимый next step** для knowledge work.
+**Noesis позиционируется** как **технология неизбежности**: сочетание теории ∞-категорий + вычислительных достижений + интеграции ИИ — это **необходимый следующий шаг** для работы со знаниями.
 
 ---
 
@@ -284,20 +284,20 @@ Bugs будут. Limitations будут. Continuous improvement needed.
 
 **Noesis** — инженерная платформа (инструмент).
 
-**Vision** — computational noosphere (общество).
+**Видение** — вычислительная ноосфера (общество).
 
-Путь долгий. Но structural work полезен уже сегодня, useful tomorrow, essential decade ahead.
+Путь долгий. Но структурная работа полезна уже сегодня, полезна завтра, существенна в грядущее десятилетие.
 
 **Каждый пользователь, каждая организация, каждое государство, каждая научная сфера** может участвовать — в своём масштабе, своём темпе, своей области.
 
-**Noesis** — не финал, а **начало новой эры** knowledge work.
+**Noesis** — не финал, а **начало новой эры** работы со знаниями.
 
 ---
 
 ## Следующий шаг
 
-Для entry point: [00 — Введение](./00-introduction).
+Для точки входа: [00 — Введение](./00-introduction).
 
 Для технического понимания: [02 — Архитектура](./02-architecture).
 
-Для business perspective: [17 — Монетизация](./17-monetization).
+Для бизнес-перспективы: [17 — Монетизация](./17-monetization).

@@ -7,69 +7,69 @@ title: Автоматизированный peer review
 
 ## Мотивация
 
-**Peer review** — краеугольный камень научной валидации, но current system страдает от фундаментальных недостатков:
+**Peer review** — краеугольный камень научной валидации, но текущая система страдает от фундаментальных недостатков:
 
-- **Субъективность**: reviewer bias, личностные факторы, школы мысли.
-- **Неполнота**: reviewer читает фрагментарно, cross-references не проверяются.
-- **Time cost**: months → years per cycle.
-- **Reproducibility crisis**: mostly informal textual verification, silent errors passes.
-- **Inconsistency**: разные reviewers приходят к противоположным conclusions.
-- **Scale**: volume submissions растёт exponentially, reviewers — linearly.
+- **Субъективность**: предвзятость рецензента, личностные факторы, школы мысли.
+- **Неполнота**: рецензент читает фрагментарно, перекрёстные ссылки не проверяются.
+- **Временные затраты**: месяцы → годы на цикл.
+- **Кризис воспроизводимости**: в основном неформальная текстовая верификация, тихие ошибки проходят.
+- **Несогласованность**: разные рецензенты приходят к противоположным заключениям.
+- **Масштаб**: объём подач растёт экспоненциально, рецензенты — линейно.
 
-**Noesis** предлагает **структурный peer review**: automated verification of claims, dependencies, coherence — с human reviewer как final arbiter, not primary filter.
+**Noesis** предлагает **структурный peer review**: автоматизированную верификацию утверждений, зависимостей, когерентности — с человеком-рецензентом как финальным арбитром, а не первичным фильтром.
 
 ## Уровни peer review в Noesis
 
-### Уровень 1: структурная корректность (automated)
+### Уровень 1: структурная корректность (автоматически)
 
-Проверки **без human intervention**:
+Проверки **без вмешательства человека**:
 
-- **Claim well-formedness**: все claims имеют типизированные antecedents / consequents.
-- **Dependency completeness**: все используемые results имеют doc-refs.
-- **Citation integrity**: cited works actually exist, claimed results correctly quoted.
-- **Formula syntax**: LaTeX formulas корректно parsed.
-- **Definition consistency**: все terms имеют exactly one definition or explicit overloading.
+- **Корректность формы утверждения**: все утверждения имеют типизированные антецеденты / консеквенты.
+- **Полнота зависимостей**: все используемые результаты имеют ссылки на документы.
+- **Целостность цитирования**: цитируемые работы действительно существуют, заявленные результаты корректно процитированы.
+- **Синтаксис формул**: LaTeX-формулы корректно разобраны.
+- **Согласованность определений**: все термины имеют ровно одно определение или явную перегрузку.
 
-**Output**: pass/fail + список structural issues.
+**Вывод**: pass/fail + список структурных проблем.
 
-### Уровень 2: семантическая когерентность (automated)
+### Уровень 2: семантическая когерентность (автоматически)
 
-Проверки требующие **structural analysis**:
+Проверки, требующие **структурного анализа**:
 
-- **Logical consistency**: SMT-check соседних claims — нет противоречий.
-- **Theorem-proof alignment**: statement matches proof structure (claims что доказывается, доказывается то что claimed).
-- **Axiom usage**: claimed axioms indeed used, нет unused hypotheses, нет hidden dependencies.
-- **Methodological integrity**: claimed method применяется корректно (e.g., statistical tests satisfy assumptions).
-- **Empirical-theoretical link**: empirical claims support theoretical conclusions structurally.
+- **Логическая согласованность**: SMT-проверка соседних утверждений — нет противоречий.
+- **Соответствие теоремы и доказательства**: формулировка соответствует структуре доказательства (что утверждается, то и доказывается).
+- **Использование аксиом**: заявленные аксиомы действительно используются, нет неиспользуемых гипотез, нет скрытых зависимостей.
+- **Методологическая целостность**: заявленный метод применяется корректно (например, статистические тесты удовлетворяют предпосылкам).
+- **Эмпирико-теоретическая связь**: эмпирические утверждения структурно поддерживают теоретические заключения.
 
-**Output**: coherence report с specific issues + suggested fixes.
+**Вывод**: отчёт о когерентности с конкретными проблемами + предложенными исправлениями.
 
-### Уровень 3: оценка вклада (hybrid automated + human)
+### Уровень 3: оценка вклада (гибрид автомат + человек)
 
-Assessments требующие **judgment**:
+Оценки, требующие **суждения**:
 
-- **Novelty analysis**: structural comparison с corpus of prior work → unique contribution identified.
-- **Significance**: downstream implications через dependency graph → impact estimated.
-- **Rigor level**: L1/L2/L3 epistemic status honest.
-- **Clarity**: readability, notation consistency, presentation quality.
-- **Domain placement**: правильная атрибуция в knowledge-space.
+- **Анализ новизны**: структурное сравнение с корпусом предшествующих работ → выявлен уникальный вклад.
+- **Значимость**: последующие импликации через граф зависимостей → оценено воздействие.
+- **Уровень строгости**: эпистемический статус L1/L2/L3 честен.
+- **Ясность**: читаемость, согласованность обозначений, качество презентации.
+- **Размещение в области**: правильная атрибуция в пространстве знаний.
 
-**Output**: reviewer-grade report с scores + detailed rationale.
+**Вывод**: отчёт уровня рецензента с оценками + детальным обоснованием.
 
-### Уровень 4: human override (required)
+### Уровень 4: человеческое решение (обязательно)
 
-**Final decisions** остаются человеческими:
+**Финальные решения** остаются человеческими:
 
-- Accept/reject/revise.
-- Policy decisions (journal scope, editorial).
-- Value judgments (importance, elegance).
-- Ethical considerations.
+- Принятие/отклонение/доработка.
+- Политические решения (область журнала, редакционные).
+- Ценностные суждения (важность, элегантность).
+- Этические соображения.
 
-**Noesis augments** reviewer, не replaces.
+**Noesis усиливает** рецензента, а не заменяет.
 
-## Конкретные peer review operations
+## Конкретные операции peer review
 
-### PR-Op 1: structural validation
+### PR-Op 1: структурная валидация
 
 ```
 validate_structure(manuscript)
@@ -79,7 +79,7 @@ validate_structure(manuscript)
   → returns structured_issues[]
 ```
 
-**Example output**:
+**Пример вывода**:
 
 ```yaml
 structural_issues:
@@ -97,9 +97,9 @@ structural_issues:
     issue: "Uses 'Banach fixed point theorem' without citing standard reference"
 ```
 
-**Automation level**: 95% (некоторые term identifications requires context).
+**Уровень автоматизации**: 95% (некоторые идентификации терминов требуют контекста).
 
-### PR-Op 2: semantic coherence check
+### PR-Op 2: проверка семантической когерентности
 
 ```
 coherence_check(claims[])
@@ -109,7 +109,7 @@ coherence_check(claims[])
   → returns coherence_report
 ```
 
-**Example**:
+**Пример**:
 
 ```yaml
 coherence_analysis:
@@ -131,9 +131,9 @@ coherence_analysis:
       severity: MODERATE
 ```
 
-### PR-Op 3: empirical-theoretical consistency
+### PR-Op 3: эмпирико-теоретическая согласованность
 
-Для papers с empirical component:
+Для статей с эмпирическим компонентом:
 
 ```
 empirical_check(paper)
@@ -143,7 +143,7 @@ empirical_check(paper)
   → returns empirical_report
 ```
 
-**Example** (hypothetical clinical trial):
+**Пример** (гипотетическое клиническое испытание):
 
 ```yaml
 empirical_analysis:
@@ -165,7 +165,7 @@ empirical_analysis:
     note: "Actual power slightly below claimed"
 ```
 
-### PR-Op 4: novelty analysis
+### PR-Op 4: анализ новизны
 
 ```
 novelty_analysis(paper, corpus)
@@ -175,7 +175,7 @@ novelty_analysis(paper, corpus)
   → returns novelty_report
 ```
 
-**Example**:
+**Пример**:
 
 ```yaml
 novelty_report:
@@ -197,9 +197,9 @@ novelty_report:
       note: "Paper may be inadvertent duplicate of Chen (2022)"
 ```
 
-### PR-Op 5: methodological review
+### PR-Op 5: методологический обзор
 
-Для papers introducing new methods:
+Для статей, представляющих новые методы:
 
 ```
 method_review(method, application)
@@ -209,7 +209,7 @@ method_review(method, application)
   → returns method_report
 ```
 
-### PR-Op 6: downstream impact
+### PR-Op 6: последующее влияние
 
 ```
 impact_estimate(paper)
@@ -218,7 +218,7 @@ impact_estimate(paper)
   → returns impact_report
 ```
 
-### PR-Op 7: reviewer aggregation
+### PR-Op 7: агрегация рецензентов
 
 ```
 aggregate_reviews(human_reviews, automated_reports)
@@ -228,312 +228,312 @@ aggregate_reviews(human_reviews, automated_reports)
   → returns editorial_summary
 ```
 
-## Peer review workflows
+## Сценарии peer review
 
-### WF-PR-1: submission pipeline
+### WF-PR-1: конвейер подачи
 
 ```
-Submission 
-  → Structural validation (automated, minutes)
-  → Structural issues flagged to author
-  → Author revises based на automated report
-  → Re-submission
-  → Coherence analysis (automated, hours)
-  → Novelty analysis (automated, hours)
-  → Impact estimate (automated, hours)
-  → Human reviewer assignment (days)
-  → Human review with automated reports as reference
-  → Editorial decision
-  → Notification + published with Noesis-verified badge
+Подача
+  → Структурная валидация (автомат, минуты)
+  → Структурные проблемы отмечены автору
+  → Автор правит на основе автоматического отчёта
+  → Повторная подача
+  → Анализ когерентности (автомат, часы)
+  → Анализ новизны (автомат, часы)
+  → Оценка влияния (автомат, часы)
+  → Назначение человека-рецензента (дни)
+  → Человеческий обзор с автоматическими отчётами как референс
+  → Редакционное решение
+  → Уведомление + публикация со знаком Noesis-verified
 ```
 
-**Time savings**: 50-80% reduction в reviewer workload, since structural issues pre-filtered.
+**Экономия времени**: сокращение нагрузки рецензента на 50-80%, так как структурные проблемы предварительно отфильтрованы.
 
-### WF-PR-2: cross-reference validation
+### WF-PR-2: валидация перекрёстных ссылок
 
-Automated за-scenes:
+Автоматически за кулисами:
 
-- Every paper claimed reference checked.
-- Actual quoted text matched против original.
-- Flags mismatches: "Paper cites Theorem 3 from Smith (2019), but Smith (2019) has only Theorems 1-2."
+- Каждая заявленная ссылка статьи проверяется.
+- Фактически процитированный текст сверяется с оригиналом.
+- Отмечает несоответствия: «Статья цитирует Теорему 3 из Smith (2019), но Smith (2019) имеет только Теоремы 1-2».
 
-### WF-PR-3: conflict-of-interest detection
+### WF-PR-3: обнаружение конфликта интересов
 
-- Author's prior publications.
-- Reviewer's prior publications.
-- Structural graph identifies potential conflicts (co-authorships, advisor relationships).
-- Automated assignment avoiding conflicts.
+- Предшествующие публикации автора.
+- Предшествующие публикации рецензента.
+- Структурный граф выявляет потенциальные конфликты (соавторство, отношения научного руководства).
+- Автоматическое назначение, избегающее конфликтов.
 
-### WF-PR-4: replication assessment
+### WF-PR-4: оценка воспроизводимости
 
-Для experimental papers:
+Для экспериментальных статей:
 
-- Methods section parsed structurally.
-- Completeness assessment: all steps specified.
-- Required info: sample size rationale, statistical test, effect sizes, CI.
-- Flags incomplete methods.
+- Раздел методов разбирается структурно.
+- Оценка полноты: все шаги специфицированы.
+- Требуемая информация: обоснование размера выборки, статистический тест, размеры эффектов, ДИ.
+- Отмечает неполные методы.
 
-### WF-PR-5: retraction analysis
+### WF-PR-5: анализ отзывов
 
-После paper published:
+После публикации статьи:
 
-- Continuous monitoring: new results contradicting paper?
-- If new evidence emerges → automated flag → human evaluator
-- Structural propagation: if paper retracted, all dependent works flagged.
+- Непрерывный мониторинг: новые результаты противоречат статье?
+- Если появляется новое свидетельство → автоматический флаг → человек-оценщик.
+- Структурное распространение: если статья отозвана, все зависимые работы отмечаются.
 
-## Meta-review: reviewing the reviewers
+## Мета-обзор: рецензирование рецензентов
 
-**Noesis enables audit** of review process itself:
+**Noesis включает аудит** самого процесса рецензирования:
 
-- **Reviewer quality tracking**: do their reviews correlate с later citations / reproducibility?
-- **Bias detection**: systematic patterns (favoring certain authors, topics).
-- **Consistency**: same reviewer gives consistent judgments across papers?
-- **Improvement metrics**: reviewer training, feedback loops.
+- **Отслеживание качества рецензента**: коррелируют ли его рецензии с последующими цитированиями / воспроизводимостью?
+- **Обнаружение предвзятости**: систематические закономерности (в пользу определённых авторов, тем).
+- **Согласованность**: даёт ли один и тот же рецензент согласованные суждения по разным статьям?
+- **Метрики улучшения**: обучение рецензентов, циклы обратной связи.
 
-### Journal-level analysis
+### Анализ на уровне журнала
 
-- Editorial bias.
-- Acceptance rate consistency.
-- Publication lag.
-- Retraction rate.
-- Impact factor analysis structurally sound?
+- Редакционная предвзятость.
+- Согласованность показателя принятия.
+- Задержка публикации.
+- Показатель отзывов.
+- Анализ импакт-фактора структурно обоснован?
 
-## Specific journal integration scenarios
+## Конкретные сценарии интеграции с журналами
 
-### Scenario 1: Nature/Science-tier journal
+### Сценарий 1: журнал уровня Nature/Science
 
-- Every submission runs structural validation.
-- Coherence + novelty checks before human review.
-- Reviewers receive **Noesis report** alongside manuscript.
-- Accept/reject decisions track agreement with automated signals.
+- Каждая подача проходит структурную валидацию.
+- Проверки когерентности и новизны до человеческого обзора.
+- Рецензенты получают **отчёт Noesis** вместе с рукописью.
+- Решения о принятии/отклонении отслеживают согласие с автоматическими сигналами.
 
-### Scenario 2: math journal
+### Сценарий 2: математический журнал
 
-- Theorem proofs parsed структурно.
-- Logical consistency SMT-verified.
-- Dependencies traced.
-- Counter-example search automated.
-- Reviewer focuses on **elegance**, **significance** — structural issues pre-filtered.
+- Доказательства теорем разбираются структурно.
+- Логическая согласованность верифицируется SMT.
+- Зависимости отслеживаются.
+- Поиск контрпримеров автоматизирован.
+- Рецензент фокусируется на **элегантности**, **значимости** — структурные проблемы предварительно отфильтрованы.
 
-### Scenario 3: biomedical journal
+### Сценарий 3: биомедицинский журнал
 
-- Statistical validity automated.
-- Effect size consistency.
-- Replication feasibility.
-- Conflict-of-interest detection.
-- Reviewer focuses on **clinical relevance**, **generalizability**.
+- Статистическая валидность автоматизирована.
+- Согласованность размера эффекта.
+- Осуществимость репликации.
+- Обнаружение конфликта интересов.
+- Рецензент фокусируется на **клинической релевантности**, **обобщаемости**.
 
-### Scenario 4: social sciences journal
+### Сценарий 4: журнал социальных наук
 
-- Methodology validity.
-- Statistical assumptions.
-- Data availability.
-- Replication plan.
+- Валидность методологии.
+- Статистические предпосылки.
+- Доступность данных.
+- План репликации.
 
-### Scenario 5: humanities journal
+### Сценарий 5: гуманитарный журнал
 
-- Citation integrity.
-- Argumentative structure.
-- Source quality.
-- Rhetorical analysis.
+- Целостность цитирования.
+- Аргументативная структура.
+- Качество источников.
+- Риторический анализ.
 
-## Business model for peer review
+## Бизнес-модель для peer review
 
-### Journals
+### Журналы
 
-- **Premium subscriptions**: $10K-100K/year per journal для automated peer review pipeline.
-- **Per-submission fees**: $50-500 per paper processed.
-- **Analytics packages**: reviewer performance, editorial effectiveness.
+- **Премиальные подписки**: $10K-100K/год на журнал для конвейера автоматизированного peer review.
+- **Плата за подачу**: $50-500 за обработанную статью.
+- **Аналитические пакеты**: эффективность рецензентов, редакционная эффективность.
 
-### Universities
+### Университеты
 
-- **Pre-submission review**: PhD students / faculty run papers через Noesis before submission.
-- **Tenure evaluation**: structural analysis of publication record.
+- **Пред-подачный обзор**: аспиранты / преподаватели прогоняют статьи через Noesis до подачи.
+- **Оценка на tenure**: структурный анализ публикационного послужного списка.
 
-### Funding agencies
+### Финансирующие агентства
 
-- **Proposal evaluation**: automated coherence / feasibility analysis.
-- **Research output assessment**: quality of resulting publications.
+- **Оценка предложений**: автоматизированный анализ когерентности / осуществимости.
+- **Оценка результатов исследований**: качество итоговых публикаций.
 
-### Regulatory bodies
+### Регуляторные органы
 
-- **Clinical trial proposals**: structural validity pre-approval.
-- **Drug submission**: automated regulatory review assistance.
+- **Предложения по клиническим испытаниям**: структурная валидность до одобрения.
+- **Подача лекарств**: автоматизированная помощь в регуляторном обзоре.
 
-### Research integrity offices
+### Офисы научной добросовестности
 
-- **Misconduct investigations**: structural analysis of questionable publications.
-- **Plagiarism detection** (structural, not just textual).
+- **Расследования нарушений**: структурный анализ сомнительных публикаций.
+- **Обнаружение плагиата** (структурное, не только текстовое).
 
-## Case study: math peer review transformation
+## Кейс: трансформация математического peer review
 
-**Current state**:
-- Reviewer spends 40-80 hours per paper.
-- Verifies proofs манually.
-- Often only spot-checks (full verification impractical).
-- Silent errors.
+**Текущее состояние**:
+- Рецензент тратит 40-80 часов на статью.
+- Верифицирует доказательства вручную.
+- Часто только выборочные проверки (полная верификация непрактична).
+- Тихие ошибки.
 
-**With Noesis**:
-- Automated structural check: 1 hour.
-- SMT verification of claims: 4-8 hours.
-- Counter-example search: 2-4 hours.
-- Reviewer focuses on significance / novelty: 8-16 hours.
-- **Total reviewer time**: 10-20 hours (60-80% reduction).
-- **Accuracy improvement**: silent errors eliminated.
+**С Noesis**:
+- Автоматическая структурная проверка: 1 час.
+- SMT-верификация утверждений: 4-8 часов.
+- Поиск контрпримеров: 2-4 часа.
+- Рецензент фокусируется на значимости / новизне: 8-16 часов.
+- **Общее время рецензента**: 10-20 часов (сокращение на 60-80%).
+- **Улучшение точности**: тихие ошибки устранены.
 
-## Case study: pharmaceutical peer review
+## Кейс: фармацевтическое peer review
 
-**Current**: reviewers check data manually, often miss statistical issues.
+**Сейчас**: рецензенты проверяют данные вручную, часто упускают статистические проблемы.
 
-**Noesis pipeline**:
-1. Data integrity check (automated).
-2. Statistical validity (automated).
-3. Effect size consistency (automated).
-4. Clinical relevance (human reviewer).
-5. Safety signal analysis (hybrid).
+**Конвейер Noesis**:
+1. Проверка целостности данных (автомат).
+2. Статистическая валидность (автомат).
+3. Согласованность размера эффекта (автомат).
+4. Клиническая релевантность (человек-рецензент).
+5. Анализ сигналов безопасности (гибрид).
 
-**Outcome**: higher quality published papers, faster review cycle.
+**Результат**: более качественные публикуемые статьи, более быстрый цикл рецензирования.
 
-## Honesty и ограничения
+## Честность и ограничения
 
-Noesis peer review имеет **rigorous bounds**:
+Peer review Noesis имеет **строгие границы**:
 
-### NOT capable
+### НЕ способна
 
-- **Value judgments**: "is this important?" — human.
-- **Elegance assessment**: mathematical beauty — human.
-- **Clinical relevance**: medical judgment.
-- **Policy implications**: societal analysis.
-- **Ethical concerns**: human values required.
-- **Creative contribution**: novelty beyond structure.
+- **Ценностные суждения**: «это важно?» — человек.
+- **Оценка элегантности**: математическая красота — человек.
+- **Клиническая релевантность**: медицинское суждение.
+- **Политические импликации**: общественный анализ.
+- **Этические опасения**: требуются человеческие ценности.
+- **Творческий вклад**: новизна за пределами структуры.
 
-### IS capable
+### Способна
 
-- **Logical consistency**: structurally verifiable.
-- **Citation integrity**: factual checks.
-- **Method validity**: formal assumption checks.
-- **Empirical consistency**: statistical validity.
-- **Cross-reference check**: comprehensive.
-- **Dependency tracking**: complete.
-- **Novelty analysis**: structural comparison.
+- **Логическая согласованность**: структурно верифицируема.
+- **Целостность цитирования**: фактические проверки.
+- **Валидность метода**: формальные проверки предпосылок.
+- **Эмпирическая согласованность**: статистическая валидность.
+- **Проверка перекрёстных ссылок**: исчерпывающая.
+- **Отслеживание зависимостей**: полное.
+- **Анализ новизны**: структурное сравнение.
 
-По **NO-10** (Lawvere-bounded) + **NO-16** boundary: **everything involving meaning / value judgments remains human**.
+По **NO-10** (Lawvere-ограниченность) + граница **NO-16**: **всё, что связано со смыслом / ценностными суждениями, остаётся человеческим**.
 
-## Academic integrity
+## Академическая добросовестность
 
-### Misconduct detection
+### Обнаружение нарушений
 
-- **Plagiarism** (structural, not textual): detection of claim-copying even если wording different.
-- **Duplicate publication**: same results в different venues.
-- **Inappropriate self-citation**: citation rings.
-- **p-hacking detection** (in statistical papers).
-- **HARKing** (hypothesis after results known) — via timestamp integrity.
+- **Плагиат** (структурный, не текстовый): обнаружение копирования утверждений, даже если формулировки различны.
+- **Дублирующая публикация**: одни и те же результаты в разных местах.
+- **Неуместное самоцитирование**: цитатные круги.
+- **Обнаружение p-hacking** (в статистических статьях).
+- **HARKing** (гипотеза после того, как известны результаты) — через целостность временных меток.
 
-### Prevention
+### Предотвращение
 
-Authors checking their own work pre-submission:
-- Avoid methodology issues.
-- Identify missing references.
-- Check novelty claims.
+Авторы проверяют свою работу до подачи:
+- Избегают методологических проблем.
+- Выявляют отсутствующие ссылки.
+- Проверяют заявления о новизне.
 
-## Implementation roadmap
+## План развития реализации
 
-### Phase 1 (Year 1): math peer review
+### Фаза 1 (Год 1): математическое peer review
 
-- Partner с 1-2 math journals.
-- Implement PR-Op 1-3 for math.
-- Pilot with 100 papers.
-- Iterate based on reviewer feedback.
+- Партнёрство с 1-2 математическими журналами.
+- Реализация PR-Op 1-3 для математики.
+- Пилот со 100 статьями.
+- Итерации на основе обратной связи рецензентов.
 
-### Phase 2 (Year 2): science journals
+### Фаза 2 (Год 2): научные журналы
 
-- Partner с science journals.
-- Extend to empirical / experimental domains.
-- 5-10 journals operational.
+- Партнёрство с научными журналами.
+- Расширение на эмпирические / экспериментальные области.
+- 5-10 журналов в работе.
 
-### Phase 3 (Year 3-5): mainstream adoption
+### Фаза 3 (Годы 3-5): массовое принятие
 
-- 50+ journals integrated.
-- Industry-standard reviews include Noesis-analysis.
-- Publishing policies reference Noesis-verification status.
+- 50+ журналов интегрированы.
+- Отраслевые стандарты рецензий включают анализ Noesis.
+- Политики публикации ссылаются на статус Noesis-verified.
 
-### Phase 4 (Year 5-10): editorial transformation
+### Фаза 4 (Годы 5-10): редакционная трансформация
 
-- Most top-tier journals integrated.
-- Peer review cycle 50-80% faster.
-- Retraction rate decreased.
-- Trust в scientific literature recovered.
+- Большинство топовых журналов интегрированы.
+- Цикл peer review на 50-80% быстрее.
+- Показатель отзывов снижен.
+- Доверие к научной литературе восстановлено.
 
-## Future directions
+## Будущие направления
 
-### Open peer review + Noesis
+### Открытый peer review + Noesis
 
-Combining open review + structural verification:
+Сочетание открытого обзора и структурной верификации:
 
-- **Transparent**: all reviews + automated reports public.
-- **Accountable**: reviewer identity tracked.
-- **Structural**: all claims verifiable.
-- **Collaborative**: community contributes post-publication.
+- **Прозрачный**: все обзоры и автоматические отчёты публичны.
+- **Подотчётный**: личность рецензента отслеживается.
+- **Структурный**: все утверждения верифицируемы.
+- **Коллаборативный**: сообщество вносит вклад после публикации.
 
-### Living reviews
+### Живые обзоры
 
-Papers не static — reviews continue:
+Статьи не статичны — обзоры продолжаются:
 
-- New data emerges → structural re-analysis.
-- Contradicting results → automated flag.
-- Post-publication corrections integrated.
+- Появляются новые данные → структурный повторный анализ.
+- Противоречащие результаты → автоматический флаг.
+- Интегрированы исправления после публикации.
 
-### Meta-analysis automation
+### Автоматизация мета-анализа
 
-Noesis enables **automated meta-analyses**:
+Noesis включает **автоматизированные мета-анализы**:
 
-- All relevant papers structurally compared.
-- Effect sizes aggregated.
-- Heterogeneity analyzed.
-- Conclusions automated + human-interpreted.
+- Все релевантные статьи структурно сравниваются.
+- Размеры эффектов агрегируются.
+- Анализируется гетерогенность.
+- Заключения автоматизированы и интерпретируются человеком.
 
-### Living scientific consensus
+### Живой научный консенсус
 
-Community-maintained structural agreement:
+Структурное согласие, поддерживаемое сообществом:
 
-- Current understanding of field.
-- Evidence weights.
-- Disagreements structured.
-- Status updates real-time.
+- Текущее понимание области.
+- Веса свидетельств.
+- Структурированные разногласия.
+- Обновления статуса в реальном времени.
 
 ## Заключение
 
-**Peer review transformation через Noesis**:
+**Трансформация peer review через Noesis**:
 
-- Automated structural checks → reviewer workload halved.
-- Coherence verification → silent errors eliminated.
-- Novelty analysis → duplicates prevented.
-- Impact estimation → editorial efficiency.
-- **Humans focus на judgment**, machines on verification.
+- Автоматические структурные проверки → нагрузка рецензента уполовинена.
+- Верификация когерентности → тихие ошибки устранены.
+- Анализ новизны → дубликаты предотвращены.
+- Оценка влияния → редакционная эффективность.
+- **Люди фокусируются на суждении**, машины — на верификации.
 
-**Cultural shift required**:
+**Требуется культурный сдвиг**:
 
-- Researchers adopt structural practices.
-- Journals accept automated reports.
-- Reviewers trained в structural tools.
-- Publishers invest в infrastructure.
+- Исследователи принимают структурные практики.
+- Журналы принимают автоматические отчёты.
+- Рецензенты обучены структурным инструментам.
+- Издатели инвестируют в инфраструктуру.
 
 **Но**:
 
-- Technology demonstrable.
-- Economic argument compelling (time savings, quality gains).
-- Adoption path clear (start math → spread).
+- Технология демонстрируема.
+- Экономический аргумент убедителен (экономия времени, выигрыш в качестве).
+- Путь принятия ясен (начать с математики → распространить).
 
-**Long-term vision**:
+**Долгосрочное видение**:
 
-Every published paper — **structurally verified**. Scientific consensus — **computationally traceable**. Reproducibility crisis — **structurally resolved**. Trust in science — **restored through transparency**.
+Каждая опубликованная статья — **структурно верифицирована**. Научный консенсус — **вычислительно прослеживаем**. Кризис воспроизводимости — **структурно разрешён**. Доверие к науке — **восстановлено через прозрачность**.
 
-Noesis не решает всё, но даёт tools для решения того, что можно решить структурно. Остальное — человеческая ответственность.
+Noesis не решает всё, но даёт инструменты для решения того, что можно решить структурно. Остальное — человеческая ответственность.
 
 ---
 
 ## Следующий шаг
 
-Related: [23 — LLM augmentation](./23-llm-augmentation) — усиление LLM-агентов через Diakrisis constraints.
+Связанное: [23 — LLM augmentation](./23-llm-augmentation) — усиление LLM-агентов через ограничения Diakrisis.
 
-Connected: [21 — Math frontier](./21-math-frontier), [05 — Agent](./05-agent).
+Связанные: [21 — Math frontier](./21-math-frontier), [05 — Agent](./05-agent).

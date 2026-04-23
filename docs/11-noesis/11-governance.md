@@ -1,408 +1,408 @@
 ---
 sidebar_position: 11
-title: Governance и compliance
+title: Управление и соответствие
 ---
 
-# Noesis в governance и compliance
+# Noesis в управлении и соответствии
 
 ## Обзор
 
-Legal, regulatory, policy domains требуют **multi-jurisdictional** structural analysis. Noesis — единственная платформа formally integrating законодательные системы.
+Правовой, регуляторный, политический домены требуют **мультиюрисдикционного** структурного анализа. Noesis — единственная платформа, формально интегрирующая законодательные системы.
 
 ---
 
-## 1. Legal frameworks
+## 1. Правовые каркасы
 
-### 1.1 Multi-jurisdictional compliance
+### 1.1 Мультиюрисдикционное соответствие
 
-**Проблема**: organizations operating globally must comply со законами EU, US, China, UK, Russia, и т.д. Каждая система — отдельная knowledge-object.
-
-**Применение**:
-- Каждая jurisdiction → knowledge-object.
-- Законы как claims.
-- Regulations как dependencies.
-- Cross-jurisdictional translations detect conflicts.
-
-**Example**: GDPR (EU) vs CCPA (California) vs PIPL (China):
-- Structural differences (consent model, data minimization, etc.).
-- Obstruction measures quantify incompatibility.
-- Compliant-in-both detection automated.
-
-### 1.2 Contract analysis
+**Проблема**: организации, действующие глобально, должны соответствовать законам ЕС, США, Китая, Великобритании, России и т.д. Каждая система — отдельный объект знания.
 
 **Применение**:
-- Contract clauses as claims.
-- Cross-references as dependencies.
-- Conflict detection via `contradicts` edges.
-- Translation between contract types (M&A, employment, IP).
+- Каждая юрисдикция → объект знания.
+- Законы как утверждения.
+- Регламенты как зависимости.
+- Межъюрисдикционные переводы обнаруживают конфликты.
 
-### 1.3 Case law
+**Пример**: GDPR (ЕС) vs CCPA (Калифорния) vs PIPL (Китай):
+- Структурные различия (модель согласия, минимизация данных и т.д.).
+- Меры препятствий количественно оценивают несовместимость.
+- Обнаружение соответствия в обоих автоматизировано.
+
+### 1.2 Анализ контрактов
 
 **Применение**:
-- Precedents as claims.
-- Citation graph as dependencies.
-- Reversal / distinguishing detected.
-- Cross-jurisdictional precedent analysis.
+- Пункты контрактов как утверждения.
+- Перекрёстные ссылки как зависимости.
+- Обнаружение конфликтов через рёбра `contradicts`.
+- Перевод между типами контрактов (M&A, трудовые, ИС).
 
-### 1.4 International treaties
+### 1.3 Прецедентное право
 
-**Применение**: multi-party treaties — structural consistency analysis, interpretation clause conflicts.
+**Применение**:
+- Прецеденты как утверждения.
+- Граф цитирования как зависимости.
+- Обнаружение отмены / различения.
+- Межъюрисдикционный анализ прецедентов.
+
+### 1.4 Международные договоры
+
+**Применение**: многосторонние договоры — анализ структурной согласованности, конфликты интерпретационных клауз.
 
 ---
 
-## 2. Regulatory compliance
+## 2. Регуляторное соответствие
 
-### 2.1 Financial services
+### 2.1 Финансовые услуги
 
-**Regulations**: SEC, FINRA, FCA, BaFin, MAS, CBRC.
-
-**Применение**:
-- Rule text → claims.
-- Cross-regulatory mapping.
-- Real-time compliance verification.
-- Change impact analysis.
-
-### 2.2 Healthcare
-
-**Regulations**: HIPAA, GDPR-health, FDA 21 CFR, ISO 14971, IEC 62304.
+**Регуляторы**: SEC, FINRA, FCA, BaFin, MAS, CBRC.
 
 **Применение**:
-- Privacy requirements structured.
-- Data handling specs linked to regs.
-- Cross-border data transfer analysis.
+- Текст правил → утверждения.
+- Отображение между регуляторами.
+- Верификация соответствия в реальном времени.
+- Анализ влияния изменений.
 
-### 2.3 Environmental
+### 2.2 Здравоохранение
 
-**Regulations**: Clean Air Act, EU ETS, Paris Agreement, national carbon markets.
+**Регуляторы**: HIPAA, GDPR-health, FDA 21 CFR, ISO 14971, IEC 62304.
 
 **Применение**:
-- Emission reporting requirements.
-- Carbon accounting methodologies.
-- Multi-jurisdictional reporting structured.
+- Требования конфиденциальности структурированы.
+- Спецификации обработки данных связаны с регламентами.
+- Анализ трансграничных передач данных.
 
-### 2.4 Banking / AML
+### 2.3 Окружающая среда
 
-**Regulations**: Basel III, FATF, OFAC, EU AMLD.
+**Регуляторы**: Clean Air Act, EU ETS, Парижское соглашение, национальные углеродные рынки.
 
-**Применение**: multi-jurisdictional AML compliance, sanctions analysis.
+**Применение**:
+- Требования по отчётности о выбросах.
+- Методологии углеродного учёта.
+- Мультиюрисдикционная отчётность структурирована.
 
-### 2.5 Telecommunications
+### 2.4 Банкинг / ПОД
 
-**Regulations**: FCC (US), OFCOM (UK), RKN (Russia), MIIT (China).
+**Регуляторы**: Basel III, FATF, OFAC, EU AMLD.
 
-**Применение**: spectrum allocations, service quality requirements, cross-border coordination.
+**Применение**: мультиюрисдикционное соответствие ПОД, анализ санкций.
+
+### 2.5 Телекоммуникации
+
+**Регуляторы**: FCC (США), OFCOM (Великобритания), РКН (Россия), MIIT (Китай).
+
+**Применение**: распределение спектра, требования к качеству услуг, трансграничная координация.
 
 ---
 
-## 3. Policy analysis
+## 3. Анализ политики
 
-### 3.1 Policy design
-
-**Применение**:
-- Policy proposals as knowledge-objects.
-- Dependencies to evidence base.
-- Impact assessment structured.
-- Stakeholder analysis.
-
-### 3.2 Policy comparison
+### 3.1 Проектирование политики
 
 **Применение**:
-- Cross-national policy comparisons.
-- Best practices identification.
-- Translation obstacles quantified.
+- Предложения по политике как объекты знания.
+- Зависимости к доказательной базе.
+- Оценка воздействия структурирована.
+- Анализ заинтересованных сторон.
 
-### 3.3 Regulatory impact assessment (RIA)
+### 3.2 Сравнение политик
 
-**Применение**: structural analysis of regulatory changes, cost-benefit formally tracked.
+**Применение**:
+- Межстрановые сравнения политик.
+- Идентификация лучших практик.
+- Препятствия перевода количественно оценены.
 
-### 3.4 Policy evolution
+### 3.3 Оценка регуляторного воздействия (RIA)
 
-**Применение**: temporal tracking of policy changes (dynamic epistemic logic extension).
+**Применение**: структурный анализ регуляторных изменений, соотношение затрат и выгод формально отслеживается.
 
----
+### 3.4 Эволюция политики
 
-## 4. Government operations
-
-### 4.1 Inter-agency coordination
-
-**Применение**: agency knowledge-objects, shared claims, jurisdictional boundaries formal.
-
-### 4.2 Public procurement
-
-**Применение**: procurement requirements, vendor compliance, audit trails.
-
-### 4.3 Public-private partnerships
-
-**Применение**: PPP agreements structured, obligation tracking.
-
-### 4.4 Regulatory sandbox programs
-
-**Применение**: innovation projects with regulatory exemptions tracked.
+**Применение**: временнóе отслеживание изменений политики (расширение через динамическую эпистемическую логику).
 
 ---
 
-## 5. International organizations
+## 4. Государственные операции
 
-### 5.1 UN / Treaty bodies
+### 4.1 Межведомственная координация
 
-**Применение**: multilateral treaties, working group proposals, voting records.
+**Применение**: ведомственные объекты знания, общие утверждения, юрисдикционные границы формализованы.
 
-### 5.2 WTO
+### 4.2 Государственные закупки
 
-**Применение**: trade agreements, dispute resolution, tariff schedules.
+**Применение**: требования к закупкам, соответствие поставщиков, аудит-следы.
 
-### 5.3 WHO / International health
+### 4.3 Государственно-частные партнёрства
 
-**Применение**: IHR, pandemic preparedness, cross-border health policy.
+**Применение**: соглашения ГЧП структурированы, отслеживание обязательств.
 
-### 5.4 OECD
+### 4.4 Программы регуляторной песочницы
 
-**Применение**: cross-country policy benchmarks, best-practices integration.
+**Применение**: инновационные проекты с регуляторными исключениями отслеживаются.
 
 ---
 
-## 6. Standards bodies
+## 5. Международные организации
+
+### 5.1 ООН / Договорные органы
+
+**Применение**: многосторонние договоры, предложения рабочих групп, записи голосований.
+
+### 5.2 ВТО
+
+**Применение**: торговые соглашения, разрешение споров, тарифные расписания.
+
+### 5.3 ВОЗ / Международное здравоохранение
+
+**Применение**: ММСП, готовность к пандемиям, трансграничная политика здравоохранения.
+
+### 5.4 ОЭСР
+
+**Применение**: межстрановые политические тесты, интеграция лучших практик.
+
+---
+
+## 6. Органы по стандартизации
 
 ### 6.1 ISO
 
-**Применение**: ISO standards как knowledge-objects, cross-standard consistency, national mappings.
+**Применение**: стандарты ISO как объекты знания, согласованность между стандартами, национальные отображения.
 
 ### 6.2 IEEE
 
-**Применение**: technical standards, emerging technology governance.
+**Применение**: технические стандарты, управление новыми технологиями.
 
 ### 6.3 IETF / W3C
 
-**Применение**: internet/web standards, protocol evolution.
+**Применение**: интернет/веб-стандарты, эволюция протоколов.
 
-### 6.4 Industry-specific
+### 6.4 Отраслевые
 
-- **Automotive**: SAE, ISO/TS 16949.
-- **Aerospace**: AS9100, DO-178C.
-- **Medical**: FDA, ISO 13485.
-- **Pharma**: ICH, cGMP.
+- **Автомобильные**: SAE, ISO/TS 16949.
+- **Аэрокосмические**: AS9100, DO-178C.
+- **Медицинские**: FDA, ISO 13485.
+- **Фармацевтические**: ICH, cGMP.
 
 ---
 
-## 7. Corporate compliance
+## 7. Корпоративное соответствие
 
 ### 7.1 Sarbanes-Oxley (SOX)
 
-**Применение**: internal controls, financial reporting requirements.
+**Применение**: внутренние контроли, требования к финансовой отчётности.
 
-### 7.2 Environmental, Social, Governance (ESG)
-
-**Применение**:
-- ESG frameworks (GRI, SASB, TCFD).
-- Disclosures structured.
-- Cross-framework reconciliation.
-
-### 7.3 Anti-corruption (FCPA, UK Bribery Act)
-
-**Применение**: compliance programs, due diligence, training records.
-
-### 7.4 Whistleblower protection
-
-**Применение**: process documentation, case tracking, protected disclosure analysis.
-
----
-
-## 8. Tax compliance
-
-### 8.1 Multi-jurisdictional taxation
-
-**Применение**: tax treaties, transfer pricing, BEPS (OECD).
-
-### 8.2 Tax controversy
-
-**Применение**: case tracking, position papers, precedent analysis.
-
-### 8.3 Indirect taxes
-
-**Применение**: VAT, GST, sales tax — cross-border structural analysis.
-
----
-
-## 9. Intellectual property
-
-### 9.1 Patent portfolio management
+### 7.2 Экологическое, социальное, корпоративное управление (ESG)
 
 **Применение**:
-- Patent claims structured.
-- Prior art tracking.
-- Family relationships.
-- Licensing state.
+- Каркасы ESG (GRI, SASB, TCFD).
+- Раскрытия структурированы.
+- Согласование между каркасами.
 
-### 9.2 Trademark / copyright
+### 7.3 Антикоррупция (FCPA, UK Bribery Act)
 
-**Применение**: brand portfolios, content rights, fair use analysis.
+**Применение**: программы соответствия, due diligence, записи об обучении.
 
-### 9.3 Trade secrets
+### 7.4 Защита информаторов
 
-**Применение**: trade secret documentation, access control, misappropriation cases.
-
----
-
-## 10. Data governance
-
-### 10.1 Data privacy
-
-**Применение**: privacy policies formal, GDPR Article 30 records of processing, Subject Access Requests (SAR) tracking.
-
-### 10.2 Data quality
-
-**Применение**: data lineage, quality metrics, remediation tracking.
-
-### 10.3 Data ethics
-
-**Применение**: AI governance, algorithmic accountability, bias assessment.
-
-### 10.4 Data sovereignty
-
-**Применение**: cross-border data transfer rules, Schrems II implications.
+**Применение**: документация процесса, отслеживание кейсов, анализ защищённых раскрытий.
 
 ---
 
-## 11. Cybersecurity governance
+## 8. Налоговое соответствие
+
+### 8.1 Мультиюрисдикционное налогообложение
+
+**Применение**: налоговые договоры, трансфертное ценообразование, BEPS (ОЭСР).
+
+### 8.2 Налоговые споры
+
+**Применение**: отслеживание кейсов, позиционные документы, анализ прецедентов.
+
+### 8.3 Косвенные налоги
+
+**Применение**: НДС, GST, налог с продаж — трансграничный структурный анализ.
+
+---
+
+## 9. Интеллектуальная собственность
+
+### 9.1 Управление патентным портфелем
+
+**Применение**:
+- Патентные формулы структурированы.
+- Отслеживание предшествующего уровня техники.
+- Семейные отношения.
+- Состояние лицензирования.
+
+### 9.2 Товарный знак / авторское право
+
+**Применение**: бренд-портфели, права на контент, анализ добросовестного использования.
+
+### 9.3 Коммерческая тайна
+
+**Применение**: документация коммерческой тайны, контроль доступа, кейсы неправомерного использования.
+
+---
+
+## 10. Управление данными
+
+### 10.1 Конфиденциальность данных
+
+**Применение**: формализованные политики конфиденциальности, записи обработки по статье 30 GDPR, отслеживание запросов субъектов данных (SAR).
+
+### 10.2 Качество данных
+
+**Применение**: происхождение данных, метрики качества, отслеживание исправлений.
+
+### 10.3 Этика данных
+
+**Применение**: управление ИИ, алгоритмическая подотчётность, оценка предвзятости.
+
+### 10.4 Суверенитет данных
+
+**Применение**: правила трансграничной передачи данных, последствия Schrems II.
+
+---
+
+## 11. Управление кибербезопасностью
 
 ### 11.1 NIST CSF / ISO 27001
 
-**Применение**: framework mappings, control implementations, audit evidence.
+**Применение**: отображения каркасов, реализации контролей, аудиторские доказательства.
 
-### 11.2 Vulnerability management
+### 11.2 Управление уязвимостями
 
-**Применение**: CVE tracking, remediation SLOs, patch management.
+**Применение**: отслеживание CVE, SLO устранения, управление патчами.
 
-### 11.3 Incident response
+### 11.3 Реагирование на инциденты
 
-**Применение**: incident playbooks, case tracking, lessons learned.
+**Применение**: плейбуки инцидентов, отслеживание кейсов, извлечённые уроки.
 
-### 11.4 Third-party risk
+### 11.4 Риск третьих сторон
 
-**Применение**: supply chain security, vendor assessments, SBOMs.
-
----
-
-## 12. Audit & assurance
-
-### 12.1 Internal audit
-
-**Применение**: audit programs, finding tracking, remediation monitoring.
-
-### 12.2 External audit (Big 4)
-
-**Применение**: audit evidence, disclosure tracking, SOC reports.
-
-### 12.3 Compliance audit
-
-**Применение**: continuous compliance monitoring, exception handling.
+**Применение**: безопасность цепочки поставок, оценки поставщиков, SBOM.
 
 ---
 
-## Cross-governance patterns
+## 12. Аудит и заверение
 
-### Pattern 1: Harmonization across jurisdictions
+### 12.1 Внутренний аудит
 
-Multi-jurisdictional regulations harmonized через structural translations. Example: ESG disclosures (GRI, SASB, TCFD).
+**Применение**: аудиторские программы, отслеживание находок, мониторинг исправлений.
 
-### Pattern 2: Real-time compliance
+### 12.2 Внешний аудит (Big 4)
 
-Transaction-level compliance verification (финансовые services, pharma).
+**Применение**: аудиторские доказательства, отслеживание раскрытий, SOC-отчёты.
 
-### Pattern 3: Regulatory change management
+### 12.3 Аудит соответствия
 
-Automatic propagation of regulatory changes к affected policies, procedures.
-
-### Pattern 4: Multi-stakeholder coordination
-
-Governments, corporations, civil society — structural platform.
-
-### Pattern 5: Evidence-based policy
-
-Policy claims linked to empirical evidence, periodic revalidation.
+**Применение**: непрерывный мониторинг соответствия, обработка исключений.
 
 ---
 
-## Value quantification
+## Паттерны управления
 
-| Domain | Current cost (per org) | Noesis impact | Noesis cost |
+### Паттерн 1: Гармонизация между юрисдикциями
+
+Мультиюрисдикционные регламенты гармонизированы через структурные переводы. Пример: раскрытия ESG (GRI, SASB, TCFD).
+
+### Паттерн 2: Соответствие в реальном времени
+
+Верификация соответствия на уровне транзакций (финансовые услуги, фарма).
+
+### Паттерн 3: Управление регуляторными изменениями
+
+Автоматическое распространение регуляторных изменений на затронутые политики, процедуры.
+
+### Паттерн 4: Координация многих заинтересованных сторон
+
+Правительства, корпорации, гражданское общество — структурная платформа.
+
+### Паттерн 5: Политика на основе доказательств
+
+Политические утверждения, связанные с эмпирическими доказательствами, периодическая ревалидация.
+
+---
+
+## Количественная оценка ценности
+
+| Домен | Текущая стоимость (на орг) | Эффект Noesis | Стоимость Noesis |
 |---|---|---|---|
-| Multi-jurisdiction regulatory | $50-500M/yr | -40% | $2-10M/yr |
-| SOX compliance | $10-100M/yr | -30% | $500K-5M/yr |
-| ESG reporting | $5-50M/yr | -50% | $500K-2M/yr |
-| Tax compliance | $20-200M/yr | -25% | $1-10M/yr |
-| IP portfolio | $5-50M/yr | -35% | $500K-5M/yr |
+| Мультиюрисдикционное регулирование | $50-500M/год | -40% | $2-10M/год |
+| Соответствие SOX | $10-100M/год | -30% | $500K-5M/год |
+| Отчётность ESG | $5-50M/год | -50% | $500K-2M/год |
+| Налоговое соответствие | $20-200M/год | -25% | $1-10M/год |
+| Портфель ИС | $5-50M/год | -35% | $500K-5M/год |
 
-Typical ROI: **5-15×** in 3 years for enterprises.
-
----
-
-## Government-specific deployment
-
-### 12.4 On-premises / air-gapped
-
-For sensitive government applications:
-- Air-gapped deployments.
-- FedRAMP High authorization.
-- Government-community clouds.
-- Classification-level access.
-
-### 12.5 Federal interoperability
-
-**Применение**: cross-agency knowledge sharing, CDM/CAP compliance, FISMA.
-
-### 12.6 Citizen services
-
-**Применение**: plain-language policy explanations, service eligibility, appeals tracking.
+Типовая окупаемость: **5-15×** за 3 года для корпораций.
 
 ---
 
-## Integration с legal/regulatory tools
+## Развёртывание для государственных организаций
 
-- **Westlaw** / **LexisNexis**: legal research integration.
-- **Bloomberg Law**: regulatory updates.
-- **Thomson Reuters** compliance platforms.
-- **Diligent** (corporate governance).
-- **Workiva** (financial reporting).
-- **OneTrust** (privacy).
+### 12.4 Локальное / изолированное развёртывание
+
+Для чувствительных государственных приложений:
+- Изолированные развёртывания (air-gapped).
+- Авторизация FedRAMP High.
+- Государственно-сообщественные облака.
+- Доступ по уровню секретности.
+
+### 12.5 Федеральная интероперабельность
+
+**Применение**: межведомственный обмен знаниями, соответствие CDM/CAP, FISMA.
+
+### 12.6 Услуги гражданам
+
+**Применение**: объяснения политики простым языком, право на услуги, отслеживание апелляций.
 
 ---
 
-## Monetization для governance
+## Интеграция с правовыми/регуляторными инструментами
 
-### Tier: Government & Agencies
+- **Westlaw** / **LexisNexis**: интеграция правовых исследований.
+- **Bloomberg Law**: регуляторные обновления.
+- **Thomson Reuters** платформы соответствия.
+- **Diligent** (корпоративное управление).
+- **Workiva** (финансовая отчётность).
+- **OneTrust** (конфиденциальность).
 
-- On-premises deployments.
-- FedRAMP certification.
-- Classification-level support.
-- Custom training.
-- **Price**: $500K-5M/year per agency.
+---
 
-### Tier: Law firms
+## Монетизация для управления
 
-- Multi-client workspaces.
-- Matter-based access control.
-- Integration с time-tracking.
-- **Price**: $200K-2M/year per firm.
+### Тариф: правительство и ведомства
 
-### Tier: Compliance departments
+- Локальные развёртывания.
+- Сертификация FedRAMP.
+- Поддержка уровня секретности.
+- Индивидуальное обучение.
+- **Цена**: $500K-5M/год на ведомство.
 
-- Enterprise compliance platform.
-- Framework library.
-- Real-time monitoring.
-- **Price**: $500K-5M/year per large organization.
+### Тариф: юридические фирмы
 
-### Tier: Policy think tanks
+- Рабочие пространства на нескольких клиентов.
+- Контроль доступа на основе дел.
+- Интеграция с учётом времени.
+- **Цена**: $200K-2M/год на фирму.
 
-- Academic pricing.
-- Research collaboration features.
-- Publication support.
-- **Price**: $50K-500K/year per institution.
+### Тариф: департаменты соответствия
+
+- Корпоративная платформа соответствия.
+- Библиотека каркасов.
+- Мониторинг в реальном времени.
+- **Цена**: $500K-5M/год на крупную организацию.
+
+### Тариф: политические аналитические центры
+
+- Академическое ценообразование.
+- Возможности научного сотрудничества.
+- Поддержка публикаций.
+- **Цена**: $50K-500K/год на учреждение.
 
 ## Следующий шаг
 
-Humanities: [12 — Гуманитарные применения](./12-humanities).
+Гуманитарные науки: [12 — Гуманитарные применения](./12-humanities).
 
-Business: [13 — Бизнес и стратегия](./13-business).
+Бизнес: [13 — Бизнес и стратегия](./13-business).
 
-Case studies: [14 — Кейсы](./14-case-studies).
+Кейсы: [14 — Кейсы](./14-case-studies).

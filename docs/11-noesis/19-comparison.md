@@ -3,297 +3,297 @@ sidebar_position: 19
 title: Сравнение с альтернативами
 ---
 
-# Noesis vs Альтернативы
+# Noesis и альтернативы
 
-## Summary table
+## Сводная таблица
 
-| Capability | Obsidian / Roam | Lean 4 | Semantic Wiki | KG + RAG+LLM | ∞-topos research systems | **Noesis** |
+| Возможность | Obsidian / Roam | Lean 4 | Семантическая wiki | KG + RAG+LLM | ∞-топосные исследовательские системы | **Noesis** |
 |---|---|---|---|---|---|---|
-| Typed links | ✗ | ✓ | Partial | ✗ | ✓ | ✓ |
-| Coherence verification | ✗ | ✓ | ✗ | ✗ | Partial | ✓ (descent) |
-| Multi-theory | ✗ | ✗ | Partial | ✓ | ✓ | ✓ |
-| Cross-domain translation | ✗ | ✗ | ✗ | Heuristic | Heuristic | **Kan extensions** |
-| LLM agent | Plugin | ✗ | ✗ | Primary | Experimental | **Giry-monadic** |
-| Epistemic statuses | ✗ | Bool | ✗ | ✗ | Partial | **L1/L2/L3 + orthomodular** |
-| Self-reference | ✗ | ✗ | ✗ | ✗ | Partial | **α_Apeiron + T_meta** |
-| Reflexive cycles (L-II+) | ✗ | ✗ | ✗ | ✗ | L-II only | **L-I, L-II, L-III** |
-| Mathematical foundation | ✗ | Type theory | ✗ | Nothing formal | ∞-topos | **Diakrisis (уровень 5+)** |
-| Formal bounds | ✗ | ✗ | ✗ | ✗ | Local (M-10 style) | **TH-Final ABSOLUTA_TOTALIS** |
-| Empirical validation | ✗ | ✗ | ✗ | ✗ | Partial | **Structural + empirical hooks** |
-| Domain scope | Any (informal) | Math | General | Any | Science | **Any Rich-domain** |
-| Verification | ✗ | Full type | ✗ | ✗ | Variable | **SMT + axiom-check** |
-| Scalability | Local | Local | Medium | High | Local | **High (federation)** |
+| Типизированные связи | ✗ | ✓ | Частично | ✗ | ✓ | ✓ |
+| Верификация когерентности | ✗ | ✓ | ✗ | ✗ | Частично | ✓ (спуск) |
+| Многотеорийность | ✗ | ✗ | Частично | ✓ | ✓ | ✓ |
+| Кросс-доменный перевод | ✗ | ✗ | ✗ | Эвристический | Эвристический | **Расширения Кана** |
+| LLM-агент | Плагин | ✗ | ✗ | Основной | Экспериментальный | **В монаде Жири** |
+| Эпистемические статусы | ✗ | Булев | ✗ | ✗ | Частично | **L1/L2/L3 + ортомодулярные** |
+| Самореференция | ✗ | ✗ | ✗ | ✗ | Частично | **α_Apeiron + T_meta** |
+| Рефлексивные циклы (L-II+) | ✗ | ✗ | ✗ | ✗ | Только L-II | **L-I, L-II, L-III** |
+| Математическое основание | ✗ | Теория типов | ✗ | Формального нет | ∞-топос | **Diakrisis (уровень 5+)** |
+| Формальные границы | ✗ | ✗ | ✗ | ✗ | Локальные (стиль M-10) | **TH-Final ABSOLUTA_TOTALIS** |
+| Эмпирическая валидация | ✗ | ✗ | ✗ | ✗ | Частично | **Структурные + эмпирические зацепки** |
+| Область применения | Любая (неформально) | Математика | Общая | Любая | Наука | **Любой Rich-домен** |
+| Верификация | ✗ | Полная типовая | ✗ | ✗ | Переменная | **SMT + проверка аксиом** |
+| Масштабируемость | Локально | Локально | Средняя | Высокая | Локально | **Высокая (федерация)** |
 
 ---
 
 ## Obsidian / Roam / Notion
 
 ### Что они
-Note-taking apps с bidirectional linking.
+Приложения для заметок с двусторонним связыванием.
 
 ### Сила
-- Simplicity.
-- Fast, responsive.
-- Huge user base.
-- Plugin ecosystem.
+- Простота.
+- Быстрые, отзывчивые.
+- Огромная пользовательская база.
+- Экосистема плагинов.
 
-### Слабость relative to Noesis
-- **Untyped**: links lack semantics.
-- **No verification**: text-based, no structure enforcement.
-- **No multi-theory coherence**.
-- **No formal guarantees**.
-- **No cross-domain translations**.
+### Слабость относительно Noesis
+- **Нетипизированные**: связям не хватает семантики.
+- **Без верификации**: текстовые, без поддержания структуры.
+- **Без многотеорийной когерентности**.
+- **Без формальных гарантий**.
+- **Без кросс-доменных переводов**.
 
 ### Когда использовать
 
-- Personal notes.
-- Simple knowledge accumulation.
-- No formal rigor required.
+- Личные заметки.
+- Простое накопление знаний.
+- Когда формальная строгость не требуется.
 
-### Noesis vs
+### Noesis по сравнению
 
-Noesis complementary: **import** Obsidian vaults, augment structurally. Obsidian remains valid для informal work.
+Noesis дополняет: **импортирует** хранилища Obsidian, обогащает структурно. Obsidian остаётся валидным для неформальной работы.
 
 ---
 
 ## Lean 4 / Coq / Agda
 
 ### Что они
-Dependent type theory proof assistants.
+Proof-ассистенты на теории зависимых типов.
 
 ### Сила
-- Complete formal verification.
-- Large libraries (mathlib4).
-- Active community.
+- Полная формальная верификация.
+- Большие библиотеки (mathlib4).
+- Активное сообщество.
 
-### Слабость relative to Noesis
-- **Single foundation**: fixed type theory.
-- **No multi-foundation** work.
-- **No semantic navigation**: purely syntactic.
-- **No LLM-driven** exploration.
-- **No epistemic stratification**.
-- **Monolithic**: one theory at a time.
+### Слабость относительно Noesis
+- **Одно основание**: фиксированная теория типов.
+- **Без работы с множественными основаниями**.
+- **Без семантической навигации**: чисто синтаксические.
+- **Без исследования, управляемого LLM**.
+- **Без эпистемической стратификации**.
+- **Монолитные**: одна теория за раз.
 
 ### Когда использовать
 
-- Formal verification of critical theorems.
-- Math foundations research.
-- Software verification (limited).
+- Формальная верификация критических теорем.
+- Исследования оснований математики.
+- Верификация ПО (ограниченно).
 
-### Noesis vs
+### Noesis по сравнению
 
-Noesis **integrates** with Lean 4:
-- Export Noesis claims → Lean for proof.
-- Import Lean-verified claims → [Т·L1] status.
-- Hybrid workflow.
+Noesis **интегрируется** с Lean 4:
+- Экспорт утверждений Noesis → Lean для доказательства.
+- Импорт Lean-верифицированных утверждений → статус [Т·L1].
+- Гибридный процесс.
 
 ---
 
-## Semantic Wiki (MediaWiki + extensions)
+## Семантические wiki (MediaWiki + расширения)
 
 ### Что они
-Wiki with typed relationships and queries.
+Wiki с типизированными отношениями и запросами.
 
 ### Сила
-- Established technology.
-- Structured data.
-- Query capability.
+- Устоявшаяся технология.
+- Структурированные данные.
+- Возможность запросов.
 
-### Слабость relative to Noesis
-- **1-categorical**: no composition, no 2-morphisms.
-- **No coherence**.
-- **No formal verification**.
-- **Limited scalability** (MediaWiki foundation).
+### Слабость относительно Noesis
+- **1-категорные**: без композиции, без 2-морфизмов.
+- **Без когерентности**.
+- **Без формальной верификации**.
+- **Ограниченная масштабируемость** (основа MediaWiki).
 
 ### Когда использовать
 
-- Organizational knowledge repositories.
-- Product documentation.
-- Internal encyclopedia.
+- Организационные репозитории знаний.
+- Продуктовая документация.
+- Внутренние энциклопедии.
 
-### Noesis vs
+### Noesis по сравнению
 
-Noesis **surpasses** semantic wikis on formal guarantees, mathematical rigor, multi-domain work.
+Noesis **превосходит** семантические wiki по формальным гарантиям, математической строгости, мультидоменной работе.
 
 ---
 
 ## Knowledge Graph + RAG + LLM
 
 ### Что они
-Modern AI-powered knowledge systems: vector embeddings + graph storage + LLM generation.
+Современные системы знаний на базе ИИ: векторные эмбеддинги + графовое хранилище + LLM-генерация.
 
 ### Сила
-- Scalable.
-- Semantic search.
-- LLM-driven interactions.
+- Масштабируемые.
+- Семантический поиск.
+- Взаимодействия на базе LLM.
 
-### Слабость relative to Noesis
-- **Text-based**: operates on content, not structure.
-- **Hallucinations unmanaged**.
-- **No verification**.
-- **No formal correctness guarantees**.
-- **Opaque**: why LLM said this? ad hoc.
-- **Silent failures**: wrong answers look right.
+### Слабость относительно Noesis
+- **Текстовые**: оперируют контентом, не структурой.
+- **Галлюцинации не управляются**.
+- **Без верификации**.
+- **Без формальных гарантий корректности**.
+- **Непрозрачные**: почему LLM так сказал? ad hoc.
+- **Тихие сбои**: неверные ответы выглядят правильно.
 
 ### Когда использовать
 
-- Information retrieval.
-- Content generation.
-- Customer support chatbots.
+- Извлечение информации.
+- Порождение контента.
+- Чат-боты клиентской поддержки.
 
-### Noesis vs
+### Noesis по сравнению
 
-Noesis uses LLM within **formal constraints**:
-- SMT gate prevents hallucinations (NO-9).
-- Operations verifiable.
-- Explainable (structural).
+Noesis использует LLM в рамках **формальных ограничений**:
+- SMT-фильтр предотвращает галлюцинации (NO-9).
+- Операции верифицируемы.
+- Объяснимы (структурно).
 
 ---
 
-## Specialized knowledge systems
+## Специализированные системы знаний
 
-### Rocq+Searching systems
+### Rocq+поисковые системы
 
-- Coq/Rocq formal proof, searchable.
-- Limited to proof assistants.
+- Формальные доказательства Coq/Rocq, поиск.
+- Ограничены proof-ассистентами.
 
 ### Alethea (Anthropic Cards Project)
 
-- Internal Anthropic knowledge management.
-- Proprietary.
+- Внутреннее управление знаниями Anthropic.
+- Проприетарное.
 
 ### Inferential AI
 
-- Research systems attempting reasoning.
-- Academic prototypes.
+- Исследовательские системы, пытающиеся рассуждать.
+- Академические прототипы.
 
-### Mathesis (from UHM project)
+### Mathesis (из проекта UHM)
 
-Mathesis — earlier-proposed system. **Diakrisis generalizes Mathesis** to всех Rich-knowledge-domain, не только scientific theories.
+Mathesis — более ранняя предложенная система. **Diakrisis обобщает Mathesis** на все Rich-домены знания, не только научные теории.
 
-По **NO-12**: Noesis (grounded в Diakrisis) структурно превосходит any system without Diakrisis foundation.
-
----
-
-## Feature-by-feature competitive analysis
-
-### 1. Structural organization
-
-**Obsidian/Roam**: hierarchical + bidirectional links.
-**Lean 4**: types + definitions + theorems.
-**Noesis**: **(∞,∞)-категорная** структура с gauge-invariance.
-
-### 2. Formal verification
-
-**Obsidian**: none.
-**Lean 4**: type-checking (full formal proof).
-**Noesis**: SMT gate + Axi-check + TH-Final bounds.
-
-### 3. Cross-domain operations
-
-**Obsidian**: manual links.
-**Lean 4**: not supported (single foundation).
-**Noesis**: **Kan extensions** (universal property-based).
-
-### 4. Epistemic stratification
-
-**Obsidian**: none.
-**Lean 4**: theorem/def/axiom binary.
-**Noesis**: **L1/L2/L3 + orthomodular** extension.
-
-### 5. Self-reference
-
-**Obsidian**: unhandled.
-**Lean 4**: stratified universes.
-**Noesis**: **α_Apeiron + T_meta + Lawvere-bounded**.
-
-### 6. Agent integration
-
-**Obsidian**: plugins (unreliable).
-**Lean 4**: GPT-f, Draft-Sketch-Prove (experimental).
-**Noesis**: **native Giry-monadic oracle + SMT gate**.
-
-### 7. Scalability
-
-**Obsidian**: local single-user.
-**Lean 4**: single-machine.
-**Noesis**: **local → server → federated global**.
-
-### 8. Business model
-
-**Obsidian**: freemium (~$50/year Catalyst).
-**Lean 4**: open source (no commercial).
-**Noesis**: **6-tier model**, enterprise focus.
+По **NO-12**: Noesis (опирающийся на Diakrisis) структурно превосходит любую систему без основания Diakrisis.
 
 ---
 
-## Structural superiority argument
+## Покомпонентный конкурентный анализ
 
-### NO-12 theorem
+### 1. Структурная организация
 
-Любая knowledge-management система, не факторизующаяся через Diakrisis, структурно неполна на уровне ≥ 3 (meta-meta-theory level).
+**Obsidian/Roam**: иерархические + двусторонние связи.
+**Lean 4**: типы + определения + теоремы.
+**Noesis**: **(∞,∞)-категорная** структура с калибровочной инвариантностью.
+
+### 2. Формальная верификация
+
+**Obsidian**: нет.
+**Lean 4**: проверка типов (полное формальное доказательство).
+**Noesis**: SMT-фильтр + Axi-проверка + границы TH-Final.
+
+### 3. Кросс-доменные операции
+
+**Obsidian**: ручные связи.
+**Lean 4**: не поддерживаются (одно основание).
+**Noesis**: **расширения Кана** (на основе универсального свойства).
+
+### 4. Эпистемическая стратификация
+
+**Obsidian**: нет.
+**Lean 4**: бинарное теорема/def/аксиома.
+**Noesis**: **L1/L2/L3 + ортомодулярное** расширение.
+
+### 5. Самореференция
+
+**Obsidian**: не обрабатывается.
+**Lean 4**: стратифицированные вселенные.
+**Noesis**: **α_Apeiron + T_meta + ограничение по Ловеру**.
+
+### 6. Интеграция агента
+
+**Obsidian**: плагины (ненадёжные).
+**Lean 4**: GPT-f, Draft-Sketch-Prove (экспериментальные).
+**Noesis**: **нативный оракул в монаде Жири + SMT-фильтр**.
+
+### 7. Масштабируемость
+
+**Obsidian**: локально, один пользователь.
+**Lean 4**: одна машина.
+**Noesis**: **локально → сервер → федеративно глобально**.
+
+### 8. Бизнес-модель
+
+**Obsidian**: freemium (~$50/год Catalyst).
+**Lean 4**: открытый исходный код (без коммерции).
+**Noesis**: **6-уровневая модель**, корпоративный фокус.
+
+---
+
+## Аргумент структурного превосходства
+
+### Теорема NO-12
+
+Любая система управления знаниями, не факторизующаяся через Diakrisis, структурно неполна на уровне ≥ 3 (уровень мета-мета-теории).
 
 ### Что это значит
 
-**Level 0** (data): все системы competent.
-**Level 1** (theories): most systems adequate.
-**Level 2** (meta-theories): Lean 4 / Coq / ∞-topoi can do.
-**Level 3** (meta-meta = Diakrisis-level): **only** systems factoring через Diakrisis.
+**Уровень 0** (данные): все системы компетентны.
+**Уровень 1** (теории): большинство систем адекватны.
+**Уровень 2** (мета-теории): Lean 4 / Coq / ∞-топосы могут.
+**Уровень 3** (мета-мета = уровень Diakrisis): **только** системы, факторизующиеся через Diakrisis.
 
 ### Практические следствия
 
-Для operations на Level 3:
-- **Cross-foundation reasoning**: только Noesis.
-- **Global absoluteness reasoning**: только Noesis (TH-Final ABSOLUTA_TOTALIS).
-- **Universal knowledge-space navigation**: только Noesis (𝓜_Fnd).
+Для операций на уровне 3:
+- **Межосновательное рассуждение**: только Noesis.
+- **Глобальное абсолютистское рассуждение**: только Noesis (TH-Final ABSOLUTA_TOTALIS).
+- **Навигация по универсальному пространству знаний**: только Noesis (𝓜_Fnd).
 
 ---
 
-## When NOT to use Noesis
+## Когда НЕ использовать Noesis
 
-### Use Obsidian/Roam instead
+### Используйте Obsidian/Roam
 
-- Personal notes без formal structure.
-- Creative writing.
-- Daily journaling.
-- Simple task management.
+- Личные заметки без формальной структуры.
+- Творческое письмо.
+- Ежедневный журнал.
+- Простое управление задачами.
 
-### Use Lean 4 instead
+### Используйте Lean 4
 
-- Formal math theorems requiring complete proof.
-- Software verification (specific).
-- Math research at foundation level.
+- Формальные математические теоремы, требующие полного доказательства.
+- Верификация ПО (конкретная).
+- Математические исследования на уровне оснований.
 
-### Use MediaWiki instead
+### Используйте MediaWiki
 
-- Public encyclopedia (Wikipedia).
-- Large community-curated content.
-- No structural verification needed.
+- Публичная энциклопедия (Wikipedia).
+- Большой, курируемый сообществом контент.
+- Когда не нужна структурная верификация.
 
-### Use specialized domain tools
+### Используйте специализированные доменные инструменты
 
-- Primary statistical analysis: R, SAS.
-- Primary ML: PyTorch, TensorFlow.
-- Primary simulation: MATLAB, Modelica.
+- Первичный статистический анализ: R, SAS.
+- Первичный ML: PyTorch, TensorFlow.
+- Первичная симуляция: MATLAB, Modelica.
 
-Noesis **complements**, не replaces these.
+Noesis **дополняет**, а не заменяет их.
 
 ---
 
-## Integration vs replacement
+## Интеграция против замены
 
-Noesis **не** заменяет existing tools. Вместо этого:
+Noesis **не** заменяет существующие инструменты. Вместо этого:
 
-- **Imports** structure from Obsidian/Roam/Notion.
-- **Exports** theorems to Lean 4 for formal proof.
-- **Integrates** with wikis как data source.
-- **Augments** KG+RAG systems with structural verification.
-- **Orchestrates** specialized tools в unified framework.
+- **Импортирует** структуру из Obsidian/Roam/Notion.
+- **Экспортирует** теоремы в Lean 4 для формального доказательства.
+- **Интегрируется** с wiki как источником данных.
+- **Обогащает** KG+RAG-системы структурной верификацией.
+- **Оркеструет** специализированные инструменты в единый каркас.
 
-Цель: **universal integration hub** для knowledge work, не isolated tool.
+Цель: **универсальный интеграционный хаб** для работы со знаниями, а не изолированный инструмент.
 
 ---
 
 ## Следующий шаг
 
-Long-term vision: [20 — Перспективы](./20-futures).
+Долгосрочное видение: [20 — Перспективы](./20-futures).
