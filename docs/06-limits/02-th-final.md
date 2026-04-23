@@ -54,7 +54,7 @@ title: AFN-T — граничная лемма
 
 **Утверждение** (препринт `thm:afnt`): для любой $S \in \mathrm{R\text{-}S}$ и любого $n \in \mathbb{N} \cup \{\infty\}$ не существует объекта $X$, удовлетворяющего $(F_S) \wedge (\Pi_{4,S,n}) \wedge (\Pi_{3\text{-max},S,n})$.
 
-**Следствие**: уровень 6 иерархии ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)) формально пуст: $\mathcal{L}_6 = \emptyset$.
+**Следствие**: уровень 6 иерархии ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)) формально пуст: $\mathcal{L}_6 = \emptyset$ (в препринте — $\mathcal{L}_{\mathrm{Abs}} = \emptyset$, post-audit14 мнемоники).
 
 **Доказательство**: препринт §5 (α-часть, 3 леммы) + §6 (β-часть, accessibility argument) + новая Proposition `prop:proper-class` (proper-class-башни нарушают (R2)).
 

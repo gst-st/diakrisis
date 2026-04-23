@@ -124,7 +124,7 @@ $$
 
 ## Уточнения после препринт-аудита
 
-**Важное** (препринт Proposition `prop:strata-disjointness` + Remark `rem:level-as-role`): уровни читаются как **functional roles**, а не строго-партиционированные классы. Объект может играть несколько ролей одновременно. $\mathcal{L}_6$ пуст по AFN-T (trivial disjointness); $\mathcal{L}_{5+}^{\max} \subsetneq \mathcal{L}_{5+}$ строго; $\mathcal{L}_5 \cap \mathcal{L}_{5+}$ не обязательно пусто — условия (R1)-(R5) и (M1)-(M5) о разных аспектах.
+**Важное** (препринт Proposition `prop:level-structure`(ii), (iv)): страты читаются как **functional roles**, а не строго-партиционированные классы. Объект может играть несколько ролей одновременно. $\mathcal{L}_{\mathrm{Abs}}$ пуст по AFN-T (trivial disjointness); $\mathcal{L}_{\mathrm{Cls}}^{\top} \subsetneq \mathcal{L}_{\mathrm{Cls}}$ строго; $\mathcal{L}_{\mathrm{Fnd}} \cap \mathcal{L}_{\mathrm{Cls}}$ не обязательно пусто — условия (R1)-(R5) и (M1)-(M5) о разных аспектах.
 
 ## Связь с пятиосевая абсолютность AFN-T
 
@@ -143,6 +143,5 @@ $$
 ## Ссылки
 
 - **Препринт §9** — полное изложение 100.T, 101.T, 102.T с доказательствами;
-- **Препринт `prop:strata-disjointness`** — pattern пересечений уровней;
-- **Препринт `rem:level-as-role`** — уровни как functional roles;
-- [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — таблица соответствия.
+- **Препринт `prop:level-structure`** — структурные свойства страт (definability, multi-stratum membership, strict inclusion, emptiness);
+- [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — таблица соответствия $\mathcal{L}_k$ ↔ $\mathcal{L}_{\mathrm{Fnd/Cls/Cls^\top/Abs}}$.

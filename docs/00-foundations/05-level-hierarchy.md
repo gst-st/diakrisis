@@ -256,7 +256,7 @@ $$
 
 ## 4. Уровни как функциональные роли
 
-**Важное уточнение** (препринт Remark `rem:level-as-role`): уровни лучше читать как *functional roles*, а не строго-партиционированные классы. Один и тот же математический объект может играть несколько ролей:
+**Важное уточнение** (препринт Proposition `prop:level-structure`(ii)): уровни лучше читать как *functional roles*, а не строго-партиционированные классы. Один и тот же математический объект может играть несколько ролей:
 
 - $\mathrm{SH}(k)$ (motivic) $\in \mathcal{L}_4$ (парадигма) $\cap$ $\mathcal{L}_5$ (foundation) — двойная функция.
 - HoTT $\in \mathcal{L}_5$ (formal system) ∧ *Univalent Foundations programme* $\in \mathcal{L}_{5+}$ (meta-framework над HoTT-расширениями).
@@ -277,7 +277,7 @@ $$
 
 **Operation $\mathrm{Gen}$** (vertical meta-operation): образует класс frameworks, максимально генерирующих $\mathcal{L}_k$.
 
-**Коллапс-лемма** (Diakrisis-внутренняя, аналог `prop:collapse` препринта):
+**Коллапс-лемма** (Diakrisis-внутренняя; препринт сохраняет только non-collapse в `prop:no-collapse`):
 
 - $\mathrm{Cls}(\mathcal{L}_k) \hookrightarrow \mathcal{L}_{k+m}$ для $k \leq 4$: классификатор лемм уже содержится в областях/парадигмах.
 - $\mathrm{Cls}(\mathcal{L}_5) = \mathcal{L}_{5+}$ НЕ коллапсирует: genuinely новый тип объекта (meta-framework).
@@ -354,17 +354,16 @@ $$
 
 ## 8. Связь с препринтом (таблица)
 
-| Diakrisis-термин | Препринт label |
+| Diakrisis-термин | Препринт label (post-audit14 мнемоники) |
 |---|---|
-| Иерархия уровней 0..6 (строгая в Diakrisis) | Definition `def:hierarchy` (только 5, 5+, 5+^max, 6) |
-| Структурные свойства уровней 5/5+/5+^max | Proposition `prop:level-structure` |
-| Intersection pattern $\mathcal{L}_k$ | Proposition `prop:strata-disjointness` |
-| «5+» vs «6» обоснование (Cls/Gen) | §2.3 + Propositions `prop:no-collapse` |
-| Уровень 5 условия (R1)–(R5) | Definition `def:R` |
-| Уровень 5+ условия (M1)–(M5) | Definition `def:meta` |
-| Уровень 5+^max условия (Max-1)–(Max-4) | Definition `def:maximality` |
-| Уровень 6 условия $(F), (\Pi_4), (\Pi_{3\text{-max}})$ | Definitions `def:F`, `def:pi4`, `def:pi3max` |
-| Уровень 6 пуст | Theorem `thm:afnt` |
+| Иерархия уровней 0..6 (строгая в Diakrisis) | Definition `def:hierarchy` (только $\mathcal{L}_{\mathrm{Fnd}}, \mathcal{L}_{\mathrm{Cls}}, \mathcal{L}_{\mathrm{Cls}}^{\top}, \mathcal{L}_{\mathrm{Abs}}$) |
+| Структурные свойства страт | Proposition `prop:level-structure` |
+| Horizontal $\mathrm{Cls}$ vs vertical $\mathrm{Gen}$ | §2.3 + Proposition `prop:no-collapse` |
+| $\mathcal{L}_5$ условия (R1)–(R5) | $\mathcal{L}_{\mathrm{Fnd}}$ через Definition `def:rs` |
+| $\mathcal{L}_{5+}$ условия (M1)–(M5) | $\mathcal{L}_{\mathrm{Cls}}$ через Definition `def:meta` |
+| $\mathcal{L}_{5+}^{\max}$ условия (Max-1)–(Max-4) | $\mathcal{L}_{\mathrm{Cls}}^{\top}$ через Definition `def:maximality` |
+| $\mathcal{L}_6$ условия $(F), (\Pi_4), (\Pi_{3\text{-max}})$ | $\mathcal{L}_{\mathrm{Abs}}$ через Definitions `def:F`, `def:pi4`, `def:pi3max` |
+| $\mathcal{L}_6 = \emptyset$ | $\mathcal{L}_{\mathrm{Abs}} = \emptyset$ по Theorem `thm:afnt` |
 | $\nu$-инвариант и его стратификация | *Diakrisis-only* (23.T1, `/03-formal-architecture/08-cardinal-analysis`) |
 | Уровни 0, 1, 2, 3, 4 | *Diakrisis-only* (настоящий документ) |
 

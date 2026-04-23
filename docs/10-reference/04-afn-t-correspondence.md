@@ -25,7 +25,7 @@ title: Соответствие препринта MSFS
 |---|---|---|---|
 | **AFN-T (α-часть)** (α-часть) | Theorem~\ref{thm:afnt-alpha} | Boundary Lemma: Emptiness of Level 6 ((α)-Part) | Синтаксис-семантический мост: $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$, $\id_X$ нарушает $(\Pi_4)$ |
 | **AFN-T (β-часть)** (β-часть) | Theorem~\ref{thm:afnt-beta} | Boundary Lemma: No Limit-Based Escape ((β)-Part) | Трансфинитные приближения остаются в $\cS_S^{\mathrm{global}}$; proper-class-башни через Proposition~\ref{prop:proper-class} |
-| **AFN-T** | Theorem~\ref{thm:afnt} | Combined AFN-T | $\mathcal{L}_6$ структурно пуст как следствие |
+| **AFN-T** | Theorem~\ref{thm:afnt} | Combined AFN-T | $\mathcal{L}_{\mathrm{Abs}}$ структурно пуст как следствие |
 | **пятиосевая абсолютность AFN-T** | Theorem~\ref{thm:five-axis} | Five-Axis Absoluteness | Пять осей абсолютности граничной леммы |
 
 ### Пять осей абсолютности
@@ -84,25 +84,32 @@ title: Соответствие препринта MSFS
 | R-S условия (R1)–(R5) | Definition~\ref{def:rs} | То же |
 | M1–M5 | Definition~\ref{def:meta} | То же |
 | Max-1..Max-4 | Definition~\ref{def:maximality} | Max-3 формализована как depth-filtration (Remark~\ref{rem:max3-paradox-immunity}) |
-| $\mathfrak{Meta}_{5+}$ | $\Meta_{5+} = \mathcal{L}_{5+}$ | То же |
-| $\mathfrak{Meta}_{5+}^{\max}$ | $\Meta_{5+}^{\max} = \mathcal{L}_{5+}^{\max}$ | То же |
+| $\mathfrak{Meta}_{5+}$ | $\mathfrak{Meta}_{\mathrm{Cls}} = \mathcal{L}_{\mathrm{Cls}}$ | То же (переименовано в MSFS audit14) |
+| $\mathfrak{Meta}_{5+}^{\max}$ | $\mathfrak{Meta}_{\mathrm{Cls}}^{\top} = \mathcal{L}_{\mathrm{Cls}}^{\top}$ | То же (переименовано в MSFS audit14) |
 | T-2f\* (locally stratified completion) | (Max-3) depth filtration | Эквивалентная формулировка |
 
 ---
 
 ## Иерархия уровней
 
-Формальные уровни препринта (Definition~\ref{def:hierarchy}):
+**Препринт** формализует **четыре страты** через мнемонические индексы (Definition~\ref{def:hierarchy}, post-audit14):
 
-- $\mathcal{L}_0, \mathcal{L}_1, \mathcal{L}_2, \mathcal{L}_3, \mathcal{L}_4$ — descriptive (Remark~\ref{rem:formality-spectrum})
-- $\mathcal{L}_5$ — Rich-foundations (формально через (R1)–(R5))
-- $\mathcal{L}_{5+}$ — meta-frameworks (формально через (M1)–(M5))
-- $\mathcal{L}_{5+}^{\max}$ — максимальные meta-frameworks ((Max-1)–(Max-4))
-- $\mathcal{L}_6 = \emptyset$ — по AFN-T
+- $\mathcal{L}_{\mathrm{Fnd}}$ — Rich-foundations (формально через (R1)–(R5))
+- $\mathcal{L}_{\mathrm{Cls}}$ — классификаторы (формально через (M1)–(M5))
+- $\mathcal{L}_{\mathrm{Cls}}^{\top}$ — максимальные классификаторы ((Max-1)–(Max-4))
+- $\mathcal{L}_{\mathrm{Abs}} = \emptyset$ — по AFN-T (forbidden absolute foundation)
 
-**Соответствие с Diakrisis-терминологией**: уровни 0–5+ в точности совпадают. $\mathcal{L}_{5+}^{\max}$ в препринте эквивалентен «максимальному подклассу $\mathfrak{Meta}_{5+}^{\max}$» Diakrisis.
+**Diakrisis** использует внутреннюю расширенную шкалу $\mathcal{L}_0, \mathcal{L}_1, \mathcal{L}_2, \mathcal{L}_3, \mathcal{L}_4, \mathcal{L}_5, \mathcal{L}_{5+}, \mathcal{L}_{5+}^{\max}, \mathcal{L}_6$ через $\nu$-инвариант ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)). Соответствие:
 
-**Обоснование нотации** (почему «5+», а не «6», и почему нет «1+, 2+, 3+, 4+»): препринт §2.3 «On the Indexing Scheme» даёт формальное обоснование через Proposition~\ref{prop:collapse} (collapse below Level 5) и Proposition~\ref{prop:no-collapse} (no collapse at Level 5).
+| Diakrisis | MSFS (audit14) | Комментарий |
+|---|---|---|
+| $\mathcal{L}_5$ | $\mathcal{L}_{\mathrm{Fnd}}$ | Rich-foundation |
+| $\mathcal{L}_{5+}$ | $\mathcal{L}_{\mathrm{Cls}}$ | Classifier |
+| $\mathcal{L}_{5+}^{\max}$ | $\mathcal{L}_{\mathrm{Cls}}^{\top}$ | Maximal classifier |
+| $\mathcal{L}_6$ | $\mathcal{L}_{\mathrm{Abs}}$ | Forbidden absolute foundation |
+| $\mathcal{L}_0, \mathcal{L}_1, \mathcal{L}_2, \mathcal{L}_3, \mathcal{L}_4$ | (отсутствуют в MSFS) | Diakrisis-only, через $\nu$-инвариант |
+
+**Обоснование мнемонической нотации** (audit14 response): препринт §2.3 даёт формальное обоснование через Proposition~\ref{prop:no-collapse} (non-collapse of the horizontal meta at $\mathcal{L}_{\mathrm{Fnd}}$) и theory-level stabilization (Theorem~\ref{thm:meta-stab}). Мнемонические subscripts ($\mathrm{Fnd}$, $\mathrm{Cls}$, $\top$, $\mathrm{Abs}$) устраняют социологическую нумерацию «5/5+/6» в пользу категорно-прозрачных обозначений.
 
 ---
 
