@@ -136,7 +136,7 @@ This paper treats the totality of such foundations as a single categorical objec
 
 The structural questions we answer are the following.
 \begin{itemize}
-\item Is $\fM$ stratified by genuine levels of novelty? We construct an explicit seven-level hierarchy $\mathcal{L}_0 \subsetneq \ldots \subsetneq \mathcal{L}_5 \subsetneq \mathcal{L}_{5+}$ with two further nominal strata $\mathcal{L}_{5+}^{\max}$ and $\mathcal{L}_6$, of which the last is shown to be empty (\S\ref{sec:hierarchy}).
+\item Is $\fM$ stratified by genuine levels of novelty? We construct an explicit four-level formal hierarchy $\mathcal{L}_5 \subsetneq \mathcal{L}_{5+}$ with two further nominal strata $\mathcal{L}_{5+}^{\max}$ and $\mathcal{L}_6$, of which the last is shown to be empty (\S\ref{sec:hierarchy}).
 \item Is $\mathcal{L}_{5+}$ plural, or unique-up-to-equivalence? We prove it is plural: the $\infty$-cosmoi of Riehl--Verity, the Univalent Foundations programme of Voevodsky, and the cohesive framework of Schreiber are pairwise non-$2$-equivalent (Theorem~\ref{thm:meta-mult}). Restriction to the maximal sub-class $\Meta_{5+}^{\max}$, however, forces categoricity (Theorem~\ref{thm:meta-cat}).
 \item Is $\fM$ stable under meta-classification? We prove theory-level stabilization: iterated classification reproduces the same $(\infty, \infty)$-theory at each step, with set-theoretic instantiation ascending the Grothendieck-universe hierarchy $\kappa_1 < \kappa_2 < \cdots$ (Theorem~\ref{thm:meta-stab}).
 \item Is $\fM$ invariant under intensional refinement of foundations? We construct the display-$2$-class functor $\II : \cF^{\mathrm{op}} \to \Sint$ and establish its slice-locality: intensional distinctions (e.g.\ $\MLTT$ vs.\ $\ETT$) form fibres over points of $\fM$ without introducing new base points (Theorem~\ref{thm:slice-locality}). The separation of $\MLTT$ and $\ETT$ is detected via Hyland's effective topos $\mathrm{Eff}$.
@@ -184,7 +184,7 @@ The triple of conditions $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}
 
 \subsection{Structure of the Paper}
 
-\S\ref{sec:hierarchy} introduces the stratification of mathematical novelty into seven levels $\mathcal{L}_0, \ldots, \mathcal{L}_5, \mathcal{L}_{5+}, \mathcal{L}_6$, fixing the precise target of AFN-T as membership in $\mathcal{L}_6$. \S\ref{sec:rs} defines the class $\RS$ of Rich-metatheories and the associated $S$-definable class $\cS_S$. \S\ref{sec:conditions} formalizes the three Level-6 conditions $(F_S)$, $(\Pi_{4, S, n})$, $(\Pi_{3\text{-max}, S, n})$ and establishes (Remark~\ref{rem:level6-tautology}) that the triple is structurally self-contradictory via the syntax--semantics bridge of Lemma~\ref{lem:SS-membership}. The main theorem is proved in two complementary halves: \S\ref{sec:afnt-alpha} ($(\alpha)$-part: the syntax--semantics bridge of Lemma~\ref{lem:SS-membership} shows the Level-6 triple is structurally self-contradictory via the sub-pair $(F_S) \wedge (\Pi_{4, S, n})$) and \S\ref{sec:afnt-beta} ($(\beta)$-part: transfinite-limit approximations remain within $\cS_S^{\mathrm{global}}$, and proper-class towers either reduce to the $(\alpha)$-part or fall outside $\RS$). \S\ref{sec:five-axis} establishes absoluteness along five structural axes (horizontal over R-S, vertical over $(\infty, n)$-levels, meta-vertical over meta-iterations, lateral over alternative categorical orderings, and completeness within Lawvere-scope). \S\ref{sec:bypass} formally closes three historical bypass strategies: universe polymorphism, reflective towers bounded by one inaccessible cardinal, and intensional refinement via the display-$2$-class functor $\II : \cF^{\mathrm{op}} \to \Sint$ with slice-locality over $\fM$. \S\ref{sec:meta} develops the meta-classification of Level 5+ through three structural theorems (conditional categoricity, multiplicity, idempotent stabilization). \S\ref{sec:series} places AFN-T in the classical no-go series and states the subsumption theorem. \S\ref{sec:consequences} records consequences for current foundational programmes and open questions. Appendix~\ref{app:categorical} collects the categorical preliminaries; Appendix~\ref{app:paraconsistent} extends AFN-T to paraconsistent Rich-metatheories.
+\S\ref{sec:hierarchy} introduces the formal stratification into four strata $\mathcal{L}_5, \mathcal{L}_{5+}, \mathcal{L}_{5+}^{\max}, \mathcal{L}_6$, fixing the precise target of AFN-T as membership in $\mathcal{L}_6$. \S\ref{sec:rs} defines the class $\RS$ of Rich-metatheories and the associated $S$-definable class $\cS_S$. \S\ref{sec:conditions} formalizes the three Level-6 conditions $(F_S)$, $(\Pi_{4, S, n})$, $(\Pi_{3\text{-max}, S, n})$ and establishes (Remark~\ref{rem:level6-tautology}) that the triple is structurally self-contradictory via the syntax--semantics bridge of Lemma~\ref{lem:SS-membership}. The main theorem is proved in two complementary halves: \S\ref{sec:afnt-alpha} ($(\alpha)$-part: the syntax--semantics bridge of Lemma~\ref{lem:SS-membership} shows the Level-6 triple is structurally self-contradictory via the sub-pair $(F_S) \wedge (\Pi_{4, S, n})$) and \S\ref{sec:afnt-beta} ($(\beta)$-part: transfinite-limit approximations remain within $\cS_S^{\mathrm{global}}$, and proper-class towers either reduce to the $(\alpha)$-part or fall outside $\RS$). \S\ref{sec:five-axis} establishes absoluteness along five structural axes (horizontal over R-S, vertical over $(\infty, n)$-levels, meta-vertical over meta-iterations, lateral over alternative categorical orderings, and completeness within Lawvere-scope). \S\ref{sec:bypass} formally closes three historical bypass strategies: universe polymorphism, reflective towers bounded by one inaccessible cardinal, and intensional refinement via the display-$2$-class functor $\II : \cF^{\mathrm{op}} \to \Sint$ with slice-locality over $\fM$. \S\ref{sec:meta} develops the meta-classification of Level 5+ through three structural theorems (conditional categoricity, multiplicity, idempotent stabilization). \S\ref{sec:series} places AFN-T in the classical no-go series and states the subsumption theorem. \S\ref{sec:consequences} records consequences for current foundational programmes and open questions. Appendix~\ref{app:categorical} collects the categorical preliminaries; Appendix~\ref{app:paraconsistent} extends AFN-T to paraconsistent Rich-metatheories.
 
 \subsection{Apparatus versus Theorem: A Structural Asymmetry}\label{sec:apparatus-vs-theorem}
 
@@ -245,42 +245,29 @@ The classification serves two purposes: it makes the statement of AFN-T precise 
   vertmeta/.style={-{Stealth[length=2mm]}, thick, red, dashed},
   node distance=0.45cm
 ]
-\node[level, bluefill] (L0) {\textbf{Level 0} --- notes, intuitions};
-\node[level, bluefill, above=of L0] (L1) {\textbf{Level 1} --- lemmas};
-\node[level, bluefill, above=of L1] (L2) {\textbf{Level 2} --- theorems};
-\node[level, bluefill, above=of L2] (L3) {\textbf{Level 3} --- areas};
-\node[level, bluefill, above=of L3] (L4) {\textbf{Level 4} --- paradigms};
-\node[level, violetfill, above=of L4] (L5) {\textbf{Level 5} --- foundations (R-S)};
-\node[level, violetfill, above=of L5] (L5plus) {\textbf{Level 5+} --- meta-frameworks};
-\node[emptybox, above=of L5plus] (L6) {\textbf{Level 6} --- \emph{empty by AFN-T}};
-\draw[novelty] (L0.north) -- (L1.south);
-\draw[novelty] (L1.north) -- (L2.south);
-\draw[novelty] (L2.north) -- (L3.south);
-\draw[novelty] (L3.north) -- (L4.south);
-\draw[novelty] (L4.north) -- (L5.south);
+\node[level, violetfill] (L5) {\textbf{Level 5} --- Rich-foundations (R1)--(R5)};
+\node[level, violetfill, above=of L5] (L5plus) {\textbf{Level 5+} --- meta-frameworks (M1)--(M5)};
+\node[level, violetfill, above=of L5plus] (L5max) {\textbf{Level 5+$^{\max}$} --- (Max-1)--(Max-4)};
+\node[emptybox, above=of L5max] (L6) {\textbf{Level 6} --- \emph{empty by AFN-T}};
 \draw[horizmeta] (L5.north) -- (L5plus.south) node[midway, right, font=\scriptsize, blue!60!black] {$\,\mathrm{Cls}$};
-\draw[vertmeta] (L5plus.north) -- (L6.south) node[midway, right, font=\scriptsize, red] {$\,\mathrm{Gen}$};
+\draw[novelty] (L5plus.north) -- (L5max.south) node[midway, right, font=\scriptsize] {$\,\mathrm{max}$};
+\draw[vertmeta] (L5max.north) -- (L6.south) node[midway, right, font=\scriptsize, red] {$\,\mathrm{Gen}$};
 \draw[red, very thick] ($(L6.north west)+(0.4,-0.2)$) -- ($(L6.south east)+(-0.4,0.2)$);
 \draw[red, very thick] ($(L6.north east)+(-0.4,-0.2)$) -- ($(L6.south west)+(0.4,0.2)$);
 \end{tikzpicture}
-\caption{The stratified hierarchy of mathematical novelty, with distinct arrow types for the three structural transitions. Solid black arrows indicate \emph{novelty steps} (Levels $0 \to 5$: successive kinds of mathematical contribution). The blue dashed arrow $\mathrm{Cls}$ denotes the \emph{horizontal meta-operation} (classification without generation; see \S\ref{sec:indexing-scheme}), taking $\mathcal{L}_5$ to $\mathcal{L}_{5+}$. The red dashed arrow $\mathrm{Gen}$ denotes the \emph{vertical meta-operation} (maximal generativity), whose image $\mathcal{L}_6$ is empty by AFN-T (Theorem~\ref{thm:afnt}). Level 5 includes $\ZFC$, $\MLTT$, $\HoTT$, $(\infty, 1)$-topos theory, and noncommutative geometry. Level 5+ partitions into a maximal sub-class $\Meta_{5+}^{\max}$ (categorical by Theorem~\ref{thm:meta-cat}) and a plural complement of \emph{partial} meta-frameworks (Theorem~\ref{thm:meta-mult}; $\infty$-cosmoi, Univalent Foundations, cohesive $(\infty, 1)$-topoi), each classifying a strict sub-stack of $\fM$.}
+\caption{The formal stratification of $\fM$ into four strata. The blue dashed arrow $\mathrm{Cls}$ denotes the \emph{horizontal meta-operation} (classification without generation; see \S\ref{sec:indexing-scheme}), taking $\mathcal{L}_5$ to $\mathcal{L}_{5+}$. The maximality restriction selects the sub-class $\mathcal{L}_{5+}^{\max}$. The red dashed arrow $\mathrm{Gen}$ denotes the \emph{vertical meta-operation} (maximal generativity), whose image $\mathcal{L}_6$ is empty by AFN-T (Theorem~\ref{thm:afnt}). Level 5 includes $\ZFC$, $\MLTT$, $\HoTT$, $(\infty, 1)$-topos theory, and noncommutative geometry. Level 5+ partitions into a maximal sub-class $\Meta_{5+}^{\max}$ (categorical by Theorem~\ref{thm:meta-cat}) and a plural complement of \emph{partial} meta-frameworks (Theorem~\ref{thm:meta-mult}; $\infty$-cosmoi, Univalent Foundations, cohesive $(\infty, 1)$-topoi), each classifying a strict sub-stack of $\fM$.}
 \label{fig:hierarchy}
 \end{figure}
 
-\subsection{The Seven Levels}
+\subsection{The Formal Levels}
 
 \begin{definition}[Stratified hierarchy --- formal]\label{def:hierarchy}
-We define the \emph{levels} $\mathcal{L}_k$ as classes of mathematical objects or programmes, ordered by functional role:
+We define the formal \emph{levels} $\mathcal{L}_k$ as first-order classes of mathematical objects ordered by functional role:
 
 \begin{tabular}{@{}ll@{}}
 \toprule
 Class & Membership criterion \\ \midrule
-$\mathcal{L}_0$ & Objects with no formal mathematical content (notes, intuitions, marginalia) \\
-$\mathcal{L}_1$ & Technical results within an existing formal theory (lemmas) \\
-$\mathcal{L}_2$ & Substantively new formal results (theorems) \\
-$\mathcal{L}_3$ & Connected bodies of related theories, methods, and results (areas) \\
-$\mathcal{L}_4$ & Research programmes reframing broad classes of problems (paradigms) \\
-$\mathcal{L}_5$ & Axiomatically complete formal systems satisfying (R1)--(R5) of Definition~\ref{def:rs} \\
+$\mathcal{L}_5$ & Formal systems satisfying (R1)--(R5) of Definition~\ref{def:rs} \\
 $\mathcal{L}_{5+}$ & Meta-frameworks satisfying (M1)--(M5) of Definition~\ref{def:meta} \\
 $\mathcal{L}_{5+}^{\max}$ & Meta-frameworks additionally satisfying (Max-1)--(Max-4) of Definition~\ref{def:maximality} \\
 $\mathcal{L}_6$ & Objects satisfying $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$ for some $(S, n)$ \\
@@ -288,18 +275,16 @@ $\mathcal{L}_6$ & Objects satisfying $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{
 \end{tabular}
 \end{definition}
 
-Structural properties of the hierarchy, including strata definability, multi-level membership, the strict inclusion $\mathcal{L}_{5+}^{\max} \subsetneq \mathcal{L}_{5+}$, and the emptiness of $\mathcal{L}_6$, are consolidated in Proposition~\ref{prop:level-structure}.
+Structural properties of the hierarchy, including the strict inclusion $\mathcal{L}_{5+}^{\max} \subsetneq \mathcal{L}_{5+}$ and the emptiness of $\mathcal{L}_6$, are consolidated in Proposition~\ref{prop:level-structure}.
 
-\begin{remark}[Formality spectrum of the hierarchy]\label{rem:formality-spectrum}
-The criteria for $\mathcal{L}_0$--$\mathcal{L}_4$ are intentionally descriptive: ``lemma'', ``theorem'', ``area'', ``paradigm'' are pragmatic categories of mathematical work rather than mathematically defined predicates. No single formal definition separates, e.g., every ``lemma'' from every ``theorem''. These levels serve as an orienting classification whose role is to \emph{contrast} with the formal levels $\mathcal{L}_5$, $\mathcal{L}_{5+}$, $\mathcal{L}_{5+}^{\max}$, $\mathcal{L}_6$.
-
-The formal content of AFN-T concerns only the latter four: Definition~\ref{def:rs} gives a rigorous first-order characterization of $\mathcal{L}_5$ via (R1)--(R5); Definition~\ref{def:meta} gives a $2$-categorical characterization of $\mathcal{L}_{5+}$ via (M1)--(M5); Definition~\ref{def:maximality} strengthens it to $\mathcal{L}_{5+}^{\max}$ via (Max-1)--(Max-4); and Definitions~\ref{def:F}, \ref{def:pi4}, \ref{def:pi3max} characterize $\mathcal{L}_6$. All proofs in this paper treat only the formal strata; the descriptive levels appear only in examples and in the informal indexing discussion of \S\ref{sec:indexing-scheme}.
+\begin{remark}[Pre-formal orienting context]\label{rem:formality-spectrum}
+For orientation only, we note that mathematical work below the formal threshold falls into pragmatic categories --- notes and intuitions, lemmas, theorems, areas of study, research paradigms --- each of which is a descriptive rather than mathematically definable predicate. These pre-formal categories receive no index in Definition~\ref{def:hierarchy} and play no role in any claim or proof of this paper; they appear only as informal examples (e.g., Zermelo--Fraenkel set theory precedes its formalization as ``$\mathcal{L}_5$-member ZFC''). The formal content of AFN-T and of the surrounding classification of $\fM$ concerns exclusively the four strata of Definition~\ref{def:hierarchy}.
 \end{remark}
 
 \begin{proposition}[Structural properties of the hierarchy]\label{prop:level-structure}
 \begin{enumerate}
-\item[\textbf{(i)}] \emph{Definability.} Each class $\mathcal{L}_k$ is a (possibly proper) class definable in $\ZFC + 2\text{-inacc}$ augmented by the $2$-categorical machinery of Convention~\ref{conv:zfc-inacc}. For $\mathcal{L}_5$ the conditions are (R1)--(R5); for $\mathcal{L}_{5+}$ they are (M1)--(M5) of Definition~\ref{def:meta}; for $\mathcal{L}_{5+}^{\max}$ they strengthen to (Max-1)--(Max-4) of Definition~\ref{def:maximality}; $\mathcal{L}_6$ is defined by the triple $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$ for some $(S, n)$ (see Remark~\ref{rem:level6-tautology} for the structural self-contradiction of this triple).
-\item[\textbf{(ii)}] \emph{Functional distinctness, not formal disjointness.} $\mathcal{L}_5$ and $\mathcal{L}_{5+}$ are characterized by logically different condition sets (first-order $(R1)$--$(R5)$ on a formal system vs.\ $2$-categorical $(M1)$--$(M5)$ on a $2$-category). A mathematical object carrying both structures may satisfy both sets simultaneously, playing the generative role (Level 5) for its own internal logic and the non-generative classifying role (Level 5+) for an external class of foundations it classifies. Concrete multi-level cases: motivic stable homotopy theory $\mathrm{SH}(k)$ belongs to $\mathcal{L}_4$ (paradigm) and $\mathcal{L}_5$ (foundation); Univalent Foundations belongs to $\mathcal{L}_{5+}$ and its underlying $\HoTT$ to $\mathcal{L}_5$. We write $\mathrm{Level}(X) \subseteq \{0, 1, \ldots, 5, 5+, 5+^{\max}, 6\}$ for the set of levels containing $X$.
+\item[\textbf{(i)}] \emph{Definability.} Each class $\mathcal{L}_k$ ($k \in \{5, 5+, 5+^{\max}, 6\}$) is a (possibly proper) class definable in $\ZFC + 2\text{-inacc}$ augmented by the $2$-categorical machinery of Convention~\ref{conv:zfc-inacc}. For $\mathcal{L}_5$ the conditions are (R1)--(R5); for $\mathcal{L}_{5+}$ they are (M1)--(M5) of Definition~\ref{def:meta}; for $\mathcal{L}_{5+}^{\max}$ they strengthen to (Max-1)--(Max-4) of Definition~\ref{def:maximality}; $\mathcal{L}_6$ is defined by the triple $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$ for some $(S, n)$ (see Remark~\ref{rem:level6-tautology} for the structural self-contradiction of this triple).
+\item[\textbf{(ii)}] \emph{Multi-level membership.} $\mathcal{L}_5$ and $\mathcal{L}_{5+}$ are characterized by logically different condition sets (first-order $(R1)$--$(R5)$ on a formal system vs.\ $2$-categorical $(M1)$--$(M5)$ on a $2$-category). A mathematical object carrying both structures satisfies both sets simultaneously: e.g., Univalent Foundations belongs to $\mathcal{L}_{5+}$, with its underlying $\HoTT$ in $\mathcal{L}_5$. We write $\mathrm{Level}(X) \subseteq \{5, 5+, 5+^{\max}, 6\}$ for the set of formal levels containing $X$.
 \item[\textbf{(iii)}] \emph{Strict inclusion at the maximal layer.} $\mathcal{L}_{5+}^{\max} \subsetneq \mathcal{L}_{5+}$. Theorem~\ref{thm:meta-cat} asserts that any two members of $\mathcal{L}_{5+}^{\max}$ parametrized by the same Rich-metatheory are $(\infty, \infty)$-equivalent. Theorem~\ref{thm:meta-mult} produces $\geq 3$ pairwise non-$2$-equivalent members of the complement $\mathcal{L}_{5+} \setminus \mathcal{L}_{5+}^{\max}$: the $\infty$-cosmoi of Riehl--Verity, the Univalent Foundations programme, and the cohesive framework of Schreiber.
 \item[\textbf{(iv)}] \emph{Emptiness of Level 6.} $\mathcal{L}_6 = \emptyset$ by Theorem~\ref{thm:afnt}. Consequently $\mathcal{L}_5 \cap \mathcal{L}_6 = \mathcal{L}_{5+} \cap \mathcal{L}_6 = \mathcal{L}_{5+}^{\max} \cap \mathcal{L}_6 = \emptyset$ trivially.
 \end{enumerate}
@@ -308,7 +293,7 @@ The formal content of AFN-T concerns only the latter four: Definition~\ref{def:r
 \begin{proof}
 \textbf{(i)} Each criterion is first-order-expressible; the specified classes are definable.
 
-\textbf{(ii)} The condition sets concern disjoint aspects of an object: axioms with proof calculus vs.\ $2$-categorical structure with classifying functor. An object carrying both structures satisfies both criteria simultaneously. Multi-level examples are standard.
+\textbf{(ii)} The condition sets concern disjoint aspects of an object: axioms with proof calculus vs.\ $2$-categorical structure with classifying functor. An object carrying both structures satisfies both criteria simultaneously.
 
 \textbf{(iii)} Inclusion from Definitions~\ref{def:meta} and~\ref{def:maximality}: (Max-1)--(Max-4) strengthen (M1)--(M5). Strictness from Theorem~\ref{thm:meta-mult}: $\mathbf{F}_{\mathrm{cosmoi}}, \mathbf{F}_{\mathrm{univalent}}, \mathbf{F}_{\mathrm{cohesive}}$ lie in $\mathcal{L}_{5+} \setminus \mathcal{L}_{5+}^{\max}$ since their classification images are strict sub-stacks of $\fM$, violating (Max-1).
 
@@ -316,58 +301,6 @@ The formal content of AFN-T concerns only the latter four: Definition~\ref{def:r
 \end{proof}
 
 \subsection{Examples}
-
-\paragraph{Level 0.} Riemann's notebook entries on the $\zeta$-function prior to their systematic publication; Grothendieck's working papers prior to their formalization in SGA.
-
-\paragraph{Level 1.} Zorn's Lemma ($\ZFC + \mathrm{AC}$); K\"onig's Lemma; Yoneda's Lemma; Beck's Monadicity Lemma; the Five Lemma; the Snake Lemma; Schanuel's Lemma; Hensel's Lemma.
-
-\paragraph{Level 2.} G\"odel's First and Second Incompleteness Theorems (1931); Tarski's Undefinability of Truth (1936); the Atiyah--Singer Index Theorem (1963); Fermat's Last Theorem (Wiles, 1994); the Poincar\'e Conjecture (Perelman, 2003); the Cobordism Hypothesis (Lurie, 2009).
-
-\paragraph{Level 3.} Areas of mathematics, organized by type:
-
-\begin{itemize}
-\item \textbf{Algebraic structures}: group theory, ring theory, module theory, homological algebra, representation theory.
-\item \textbf{Geometric structures}: differential geometry, algebraic geometry, arithmetic geometry, symplectic geometry, non-commutative geometry.
-\item \textbf{Topological structures}: algebraic topology, differential topology, low-dimensional topology.
-\item \textbf{Analytical structures}: real analysis, complex analysis, functional analysis, harmonic analysis, partial differential equations, stochastic analysis.
-\item \textbf{Logical structures}: model theory, proof theory, recursion theory, set theory, categorical logic, reverse mathematics.
-\item \textbf{Number-theoretic structures}: analytic number theory, algebraic number theory, class field theory, automorphic forms.
-\item \textbf{Combinatorial structures}: graph theory, enumerative combinatorics, algebraic combinatorics, extremal combinatorics.
-\item \textbf{Category-theoretic structures}: $1$-categories, $2$-categories, $(\infty, n)$-categories, enriched categories, operadic structures, higher algebra.
-\item \textbf{Representation-theoretic structures}: finite group representations, Lie group representations, geometric representation theory.
-\item \textbf{Physical-mathematical structures}: topological quantum field theory, conformal field theory, integrable systems.
-\item \textbf{Probabilistic structures}: probability theory, stochastic analysis, ergodic theory, information theory.
-\end{itemize}
-
-\paragraph{Level 4.} Paradigms, with founders and dates:
-
-\begin{itemize}
-\item The categorical turn (Eilenberg--Mac Lane 1945).
-\item Sheaf theory (Leray, Cartan, Serre 1940s--1950s).
-\item Scheme theory (Grothendieck 1960s).
-\item Homological algebra (Cartan--Eilenberg 1956).
-\item $K$-theory (Atiyah--Hirzebruch 1960s).
-\item Topos theory (Grothendieck, Lawvere 1960s).
-\item Motives (Grothendieck 1960s, Voevodsky 1990s).
-\item Non-commutative geometry (Connes 1980s).
-\item Synthetic differential geometry (Kock, Lawvere 1970s).
-\item Gromov--Witten theory (Gromov, Witten 1985--1991).
-\item Mirror symmetry (Candelas, Kontsevich 1990s).
-\item $(\infty, 1)$-categories (Joyal, Lurie 2009).
-\item Higher algebra (Lurie 2017).
-\item Homotopy Type Theory (Awodey, Voevodsky 2005+).
-\item Univalent Foundations (Voevodsky 2010+).
-\item Perfectoid spaces (Scholze 2012).
-\item Condensed mathematics (Clausen, Scholze 2019+).
-\item The Langlands programme (Langlands 1967+).
-\item Geometric Langlands (Beilinson--Drinfeld 1990s+).
-\item $\infty$-cosmoi (Riehl--Verity 2022).
-\item Cohesive higher topos theory (Schreiber 2013).
-\item Operadic foundations (May, Boardman--Vogt 1972--1973).
-\item Higher topos theory (Lurie 2009).
-\item Reverse mathematics (Friedman, Simpson 1970s+).
-\item Algorithmic information theory (Kolmogorov, Chaitin 1960s).
-\end{itemize}
 
 \paragraph{Level 5.} Foundations, with characteristic features:
 
@@ -421,38 +354,16 @@ Whether the maximal sub-class $\Meta_{5+}^{\max}$ is non-empty is an existence q
 
 \paragraph{Level 6.} Empty, by AFN-T.
 
-\subsection{On the Indexing Scheme: Why ``Level 5+'' and Not ``Level 6''}\label{sec:indexing-scheme}
+\subsection{\texorpdfstring{The Indexing Scheme: $\{5, 5+, 5+^{\max}, 6\}$}{The Indexing Scheme: \{5, 5+, 5+-max, 6\}}}\label{sec:indexing-scheme}
 
-The indexing $\{0, 1, 2, 3, 4, 5, 5+, 5+^{\max}, 6\}$ is deliberately asymmetric. A principled reader may ask: why is there a ``Level $5+$'' but no ``Level $1+$'', ``Level $2+$'', and so on? And why is the class $\mathcal{L}_6$ assigned a fresh integer rather than becoming ``Level $5{+}{+}$'' or ``Level $5+$ of $5+$''? The answer is structural, not cosmetic, and we record it here as it governs how the hierarchy is to be read.
-
-\paragraph{The two meta-operations.} Over the levels $\mathcal{L}_k$ there are two distinct meta-operations:
+\paragraph{The two meta-operations.} Over the formal levels $\mathcal{L}_k$ there are two categorically distinct meta-operations:
 \begin{itemize}
 \item \textbf{Horizontal (classifying) meta.} Given a class $\mathcal{L}_k$, form the $2$-category $\mathrm{Cls}(\mathcal{L}_k)$ of frameworks \emph{classifying} but not \emph{generating} members of $\mathcal{L}_k$. Formally, $\mathbf{F} \in \mathrm{Cls}(\mathcal{L}_k)$ if $\mathbf{F}$ satisfies the analogues of (M1)--(M5): locally small, equipped with a classification functor into the moduli of $\mathcal{L}_k$, accessible, non-generative, and metatheory-parametrized.
 \item \textbf{Vertical (generative) meta.} Given $\mathcal{L}_k$, form the class $\mathrm{Gen}(\mathcal{L}_k)$ of frameworks that \emph{generate} members of $\mathcal{L}_k$ as internal derivations. These are the analogues of Level-6 candidates.
 \end{itemize}
-The horizontal meta-operation $\mathrm{Cls}$ is \emph{non-generative} by construction; the vertical meta-operation $\mathrm{Gen}$ is \emph{maximally generative}. They are categorically distinct: the first contributes no new mathematical novelty in the sense of Levels 0--5, while the second would constitute a new level of novelty.
+The ``$+$'' records the (non-trivial) horizontal meta; the integer step from $5$ to $6$ records the (vertical) generative meta.
 
-\paragraph{Why no ``Level $1+$, $2+$, $3+$, $4+$''.} We claim that for $k \in \{1, 2, 3, 4\}$ the horizontal meta $\mathrm{Cls}(\mathcal{L}_k)$ \emph{collapses} into an existing integer level, whereas for $k = 5$ it does not.
-
-\begin{proposition}[Collapse below Level 5]\label{prop:collapse}
-For each $k \in \{1, 2, 3, 4\}$, there is a canonical inclusion $\mathrm{Cls}(\mathcal{L}_k) \hookrightarrow \mathcal{L}_{k+m}$ for some $m \geq 1$, which is essentially surjective onto a full sub-$2$-category. Concretely:
-\begin{itemize}
-\item $\mathrm{Cls}(\mathcal{L}_1) \hookrightarrow \mathcal{L}_2 \cup \mathcal{L}_3$: a classifier of lemmas is either a theorem organizing them, or the area containing them.
-\item $\mathrm{Cls}(\mathcal{L}_2) \hookrightarrow \mathcal{L}_3 \cup \mathcal{L}_4$: a classifier of theorems is either the area containing them or the paradigm reframing them.
-\item $\mathrm{Cls}(\mathcal{L}_3) \hookrightarrow \mathcal{L}_4$: a classifier of areas is the organizing paradigm.
-\item $\mathrm{Cls}(\mathcal{L}_4) \hookrightarrow \mathcal{L}_5$: a classifier of paradigms is the common foundation beneath them.
-\end{itemize}
-\end{proposition}
-
-\begin{proof}[Proof sketch.]
-In each case the classifier is required to produce a coherent $2$-functor from instances of $\mathcal{L}_k$ to a single classifying object. For $k \leq 4$, such a coherent functor always factors through an existing higher integer level: the functor itself is a theorem (Level 2), its image is an area or paradigm (Levels 3--4), and its codomain is a foundation (Level 5). No additional structural novelty is introduced, since the integer hierarchy $0 \to 5$ already captures \emph{generative} novelty and \emph{non-generative} classification at these levels requires no further category-theoretic apparatus beyond what is already present.
-\end{proof}
-
-\begin{remark}[Status of Proposition~\ref{prop:collapse}]\label{rem:collapse-status}
-Since $\mathcal{L}_1, \mathcal{L}_2, \mathcal{L}_3, \mathcal{L}_4$ are defined descriptively (Remark~\ref{rem:formality-spectrum}), Proposition~\ref{prop:collapse} is a \emph{structural observation} about the informal hierarchy rather than a formal class-inclusion theorem. The inclusions $\mathrm{Cls}(\mathcal{L}_k) \hookrightarrow \mathcal{L}_{k+m}$ express: any classifier of objects informally recognized as lemmas/theorems/areas/paradigms is itself recognized, at a higher level of the informal hierarchy, as a theorem/area/paradigm/foundation. The proposition establishes why the symbols ``$1+$'', ``$2+$'', ``$3+$'', ``$4+$'' are absent from the indexing: their hypothetical content sits in existing integer levels. Proposition~\ref{prop:no-collapse}, by contrast, is a formal negative result about the formally-defined class $\mathcal{L}_5$.
-\end{remark}
-
-\begin{proposition}[No collapse at Level 5]\label{prop:no-collapse}
+\begin{proposition}[Non-collapse of the horizontal meta at Level 5]\label{prop:no-collapse}
 The classifier class $\mathrm{Cls}(\mathcal{L}_5)$ does \emph{not} embed into any $\mathcal{L}_k$ for $k \leq 5$, and it does not coincide with $\mathcal{L}_6$.
 \end{proposition}
 
@@ -466,25 +377,23 @@ Consequently $\mathrm{Cls}(\mathcal{L}_5)$ is a distinct class requiring a fresh
 
 The genuinely next candidate --- $\mathcal{L}_6$ --- arises from the \emph{vertical} meta-operation $\mathrm{Gen}$ applied to $\mathcal{L}_5$: a Level-6 object would be a maximally-generative foundation from which all of $\mathcal{L}_5$ derives. This is categorically a fresh step, not a further iteration of $\mathrm{Cls}$. We accordingly use a fresh integer index.
 
-\paragraph{Summary of the indexing logic.} The sequence reads:
+\paragraph{Summary of the indexing logic.} The formal sequence reads:
 \[
-\underbrace{\mathcal{L}_0, \mathcal{L}_1, \ldots, \mathcal{L}_4}_{\text{integer levels: novelty by work-type}} \; \to \; \underbrace{\mathcal{L}_5}_{\text{foundations}} \; \xrightarrow{\mathrm{Cls}} \; \underbrace{\mathcal{L}_{5+}}_{\text{classifiers}} \; \xrightarrow{\mathrm{Gen}} \; \underbrace{\mathcal{L}_6 = \emptyset}_{\text{AFN-T}}
+\underbrace{\mathcal{L}_5}_{\text{Rich-foundations (R1)--(R5)}} \; \xrightarrow{\mathrm{Cls}} \; \underbrace{\mathcal{L}_{5+}}_{\text{classifiers (M1)--(M5)}} \; \supsetneq \; \underbrace{\mathcal{L}_{5+}^{\max}}_{(\mathrm{Max}\text{-1})\text{--}(\mathrm{Max}\text{-4})} \; \xrightarrow{\mathrm{Gen}} \; \underbrace{\mathcal{L}_6 = \emptyset}_{\text{AFN-T}}
 \]
-Integer indices mark novelty steps; the ``$+$'' marks the (non-trivial) horizontal meta; the next integer ($6$) marks the (empty) vertical meta. The asymmetry of notation is a faithful reflection of the asymmetry of the meta-operations.
+The ``$+$'' marks the (non-trivial) horizontal meta, and the integer step from $5$ to $6$ marks the (empty) vertical meta.
 
 \subsection{Characteristic Properties by Level}
 
 \begin{itemize}
-\item \textbf{Levels 0--2} are distinguished by scope: a lemma is smaller in scope than a theorem; a theorem smaller than a cluster constituting an area.
-\item \textbf{Levels 3--4} differ in \emph{reframing depth}: an area uses its own methods; a paradigm introduces methods reframing the organization of mathematics itself. The categorical turn (Level 4) does not replace group theory; it reorganizes how group theory is expressed.
-\item \textbf{Levels 4--5} differ in \emph{foundational completeness}: a paradigm may use diverse foundations; a foundation is itself axiomatically self-contained and sufficient for formalizing mathematics.
-\item \textbf{Levels 5--5+} differ in \emph{functional role}: a foundation encodes mathematics; a meta-framework organizes the space of possible foundations as objects of a higher-order classification.
+\item \textbf{Levels 5--5+} differ in \emph{functional role}: a Rich-foundation encodes mathematics directly; a meta-framework organizes the space of possible foundations as objects of a higher-order classification.
+\item \textbf{Levels 5+--5+$^{\max}$} differ in \emph{classification scope}: a non-maximal meta-framework classifies a strict sub-stack of $\fM$; a maximal meta-framework classifies all of $\fM$ up to $(\infty, \infty)$-equivalence.
 \item \textbf{Levels 5+--6} differ in \emph{foundational character}: a meta-framework is \emph{non-generative} --- it organizes foundations without deriving their axioms from its own; a Level 6 object would be \emph{maximally generative} --- it would derive every foundation from itself. The gap between these two is the content of AFN-T.
 \end{itemize}
 
 \subsection{Notation}
 
-We write $\mathrm{Level}(X) = k$ to indicate that $X$ belongs to Level $k$. For a programme spanning multiple levels (a common occurrence: motivic theory is simultaneously Level 4 as paradigm and Level 5 as the specific foundation $\mathrm{SH}(k)$), we write $\mathrm{Level}(X) \subseteq \{k_1, k_2, \ldots\}$.
+We write $\mathrm{Level}(X) \subseteq \{5, 5+, 5+^{\max}, 6\}$ for the set of formal levels containing $X$. Multi-level membership is standard: e.g., Univalent Foundations belongs to $\mathcal{L}_{5+}$ and its underlying $\HoTT$ to $\mathcal{L}_5$.
 
 \section{Reasonable Rich-Metatheories}\label{sec:rs}
 
@@ -551,16 +460,25 @@ The formula $\phi_X$ specifies $X$ as an object of $\Syn(F) \subseteq \Syn(S)$ f
 Lemma~\ref{lem:SS-membership} is the critical syntax-to-semantics bridge: once a purported Level-6 object $X$ is formally definable, $X$ belongs to $\cS_S$ as an object of an $S$-reconstructible $(\infty, n_S)$-category, without any appeal to full-faithfulness of a single evaluation functor $\Syn(S) \to \cM$ (which need not hold --- G\"odel completeness gives faithfulness of the product $\Syn(S) \to \prod_\cM \cM$, not fully-faithfulness of an individual evaluation).
 \end{remark}
 
-\subsection{Size Stratification}
+\subsection{Size Stratification}\label{sec:size-stratification}
 
-Within $\cS_S$, objects are stratified by size:
+\paragraph{Size classes within $\cS_S$.}
 \begin{itemize}
-\item \textbf{Small} (elements of $\mathbf{U}_1$): sets of rank $< \kappa_1$, the first inaccessible cardinal.
+\item \textbf{Small} (elements of $\mathbf{U}_1$): sets of rank $< \kappa_1$.
 \item \textbf{Large} (elements of $\mathbf{U}_2 \setminus \mathbf{U}_1$): sets of rank in $[\kappa_1, \kappa_2)$.
-\item \textbf{Beyond $\mathbf{U}_2$}: sets of rank $\geq \kappa_2$, including objects arising as proper classes from the perspective of $\mathbf{U}_2$.
+\item \textbf{Beyond $\mathbf{U}_2$}: sets of rank $\geq \kappa_2$, including $\mathbf{U}_2$-proper classes.
 \end{itemize}
 
-The stratification is not essential to AFN-T but is used in \S\ref{sec:bypass-tower} (reflective towers) to bound the reflective cost at exactly one inaccessible cardinal.
+\paragraph{Cardinality bounds for ambient structures.}
+The following bounds make precise where each global object of the paper lives in the $\mathbf{U}_1 \subset \mathbf{U}_2$ hierarchy:
+\begin{itemize}
+\item A Rich-foundation $F \in \cF$ has countably many axioms by (R2), and its syntactic category $\Syn(F)$ is $\kappa_1$-accessible by (R5a); thus $F, \Syn(F) \in \mathbf{U}_1$, with $|\Ob(\Syn(F))/\!\simeq| \leq \kappa_1$.
+\item The $S$-definability class $\cS_S = \cS_S^{\mathrm{local}} \cup \cS_S^{\mathrm{global}}$ is $\mathbf{U}_2$-indexed: $\cS_S^{\mathrm{local}} \subseteq \mathbf{U}_1$ (objects of $\mathbf{U}_1$-sized models) and $\cS_S^{\mathrm{global}} \subseteq \mathbf{U}_2$ (derived constructions over $\cS_S^{\mathrm{local}}$ through $\mathbf{U}_2$-bounded functorial operations).
+\item The class of Rich-foundations $\cF$ is a $\mathbf{U}_2$-small $2$-category: $|\Ob(\cF)/\!\simeq| \leq 2^{\aleph_0} < \kappa_1$ (r.e.-axiomatized theories are countable; gauge-equivalence classes do not exceed the continuum), and $|\cF| \leq \kappa_2$ as a $2$-categorical structure in the ambient $\mathbf{U}_2$.
+\item The total $(\infty, n)$-category $\mathbf{StrCat}_{S, n}$ of $S$-structured $(\infty, n)$-categories (Definition~\ref{def:strcat}) is $\mathbf{U}_2$-small: its objects are accessible $(\infty, n)$-categories of size $\leq \kappa_1$, and its hom-spaces are $\mathbf{U}_2$-bounded via Lurie HTT~\cite{LurieHTT} \S 5.1. Explicitly, $|\Ob(\mathbf{StrCat}_{S, n})/\!\simeq| \leq 2^{\kappa_1} < \kappa_2$.
+\item The classifying $2$-stack $\fM = \cF / \mathrm{gauge}$ is $\mathbf{U}_2$-small, with $|\fM / \!\simeq_2| \leq \kappa_2$. The meta-iteration tower $\{\fM^{(5+ \cdot k)}\}_{k \geq 1}$ ascends the Grothendieck-universe hierarchy: $\fM^{(5+ \cdot 1)} \in \mathbf{U}_2$, and each further step requires a new inaccessible cardinal $\kappa_k$ with $\kappa_1 < \kappa_2 < \cdots$ (Theorem~\ref{thm:meta-stab}(b); the stabilization is at the theory level, not at the universe level).
+\end{itemize}
+These bounds together certify that every object appearing in AFN-T and in the classification apparatus lies within the two-inaccessible framework of Convention~\ref{conv:zfc-inacc}; no step of the paper escapes the universes $(\mathbf{U}_1, \mathbf{U}_2)$ except in the explicit universe-ascent of Theorem~\ref{thm:meta-stab}(b), where the ascent is a corollary of Barwick--Schommer-Pries unicity and is by design.
 
 \section{The Level-6 Conditions}\label{sec:conditions}
 
@@ -618,7 +536,7 @@ We prove the first half of AFN-T by the syntax--semantics bridge of Lemma~\ref{l
 
 \subsection{Statement}
 
-\begin{theorem}[AFN-T, $(\alpha)$-part]\label{thm:afnt-alpha}
+\begin{theorem}[Boundary Lemma: incompatibility of $(F_S) \wedge (\Pi_{4, S, n})$; AFN-T $(\alpha)$-part]\label{thm:afnt-alpha}
 For every Rich-metatheory $S \in \RS$ and every categorical level $n \in \mathbb{N} \cup \{\infty\}$, there exists no $(\infty, n)$-categorical object $X$ satisfying the Level-6 triple
 \[
 (F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n}).
@@ -664,7 +582,7 @@ We show that this strategy fails: the limit $A_\infty$ is itself a derived const
 
 \subsection{Statement}
 
-\begin{theorem}[AFN-T, $(\beta)$-part]\label{thm:afnt-beta}
+\begin{theorem}[Boundary Lemma: no limit-based escape; AFN-T $(\beta)$-part]\label{thm:afnt-beta}
 Let $\lambda$ be an ordinal whose cofinality is a regular cardinal with $\mathrm{cf}(\lambda) \leq \kappa_2$ (so $\lambda$ is bounded by the second Grothendieck universe), and let $\{A_\kappa\}_{\kappa < \lambda}$ be a transfinite sequence of objects satisfying:
 \begin{enumerate}[label=(\roman*)]
 \item Each $A_\kappa$ is formally specified within some Rich-foundation $F_\kappa$ over $S$.
