@@ -9,7 +9,7 @@ title: Абсолютность AFN-T (пять осей)
 
 **пятиосевая абсолютность AFN-T** — пятиосевая абсолютность AFN-T: теорема справедлива равномерно по **всем** структурным осям вариации формальной математики.
 
-**Каноническое изложение** — препринт [*AFN-T*](/10-reference/04-afn-t-correspondence) §7, Theorem `thm:five-axis`.
+**Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §7, Theorem `thm:five-axis`.
 
 Настоящий документ содержит Diakrisis-специфическую интерпретацию пяти осей и их связь с каноническим примитивом $(\langle\langle \cdot \rangle\rangle, \mathsf{M}, \alpha_\mathrm{math}, \sqsubset_\bullet)$.
 

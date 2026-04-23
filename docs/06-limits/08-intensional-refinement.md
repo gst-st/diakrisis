@@ -9,7 +9,7 @@ title: Intensional refinement (путь 3)
 
 **[Т]** — последний исторически-открытый обходной путь вокруг AFN-T формально закрыт: теоремы **98.T** (существование функтора $\mathbf{I}$) и **99.T** (slice-locality — AFN-T не затронута).
 
-**Каноническое изложение** — препринт [*AFN-T*](/10-reference/04-afn-t-correspondence) §8.3:
+**Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §8.3:
 
 - **98.T** = препринт Theorem `thm:I-existence` (construction of $\II : \cF^\mathrm{op} \to \Sint$).
 - **99.T** = препринт Theorem `thm:slice-locality` (projection to existing points of $\fM$).

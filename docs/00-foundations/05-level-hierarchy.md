@@ -9,7 +9,7 @@ title: Иерархия уровней (0..5+, 6)
 
 **[О]** Определительная шкала. **[Т]** — статус уровня 5+ и невозможность уровня 6 доказуемы (через AFN-T).
 
-**Формальное изложение** — препринт [*AFN-T*](/10-reference/04-afn-t-correspondence) §2, Definition `def:hierarchy`:
+**Формальное изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §2, Definition `def:hierarchy`:
 
 $$
 \mathcal{L}_k \text{ для } k \in \{0, 1, 2, 3, 4, 5, 5+, 5+^{\max}, 6\}.

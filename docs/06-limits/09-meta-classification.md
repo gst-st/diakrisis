@@ -9,7 +9,7 @@ title: Meta-classification Level 5+
 
 **[Т]** — формальное закрытие вопроса о позиции Diakrisis в пространстве Level 5+ meta-structures.
 
-**Каноническое изложение** — препринт [*AFN-T*](/10-reference/04-afn-t-correspondence) §9:
+**Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §9:
 
 - **100.T** = препринт Theorem `thm:meta-cat` (conditional meta-categoricity).
 - **101.T** = препринт Theorem `thm:meta-mult` (structural multiplicity).

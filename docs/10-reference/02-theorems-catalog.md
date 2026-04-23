@@ -9,9 +9,9 @@ title: Каталог теорем
 
 Полный **нормативный** каталог центральных теорем Diakrisis. Сгруппирован по номерам и темам. Для каждой теоремы — статус, краткая формулировка, источник.
 
-:::tip Соответствие AFN-T препринта
+:::tip Соответствие препринт MSFSа
 
-Формальные доказательства центральных теорем AFN-T (α, β, combined), пяти осей абсолютности, bypass-paths и meta-классификации Level 5+ **вынесены в препринт [AFN-T](/10-reference/04-afn-t-correspondence)** (`paper-en/paper.tex`). Diakrisis-каталог сохраняет внутреннюю нумерацию и контекст; полные формальные изложения — в препринте. Таблица соответствия `N.T` ↔ `thm:...`: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальные доказательства центральных теорем AFN-T (α, β, combined), пяти осей абсолютности, bypass-paths и meta-классификации Level 5+ **вынесены в препринт [MSFS](/10-reference/04-afn-t-correspondence)** (`paper-en/paper.tex`). Diakrisis-каталог сохраняет внутреннюю нумерацию и контекст; полные формальные изложения — в препринте. Таблица соответствия `N.T` ↔ `thm:...`: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 
@@ -379,7 +379,7 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 ## Негативные (AFN-T)
 
-**→ Препринт §5–§6. Полное формальное доказательство — в препринте [AFN-T](/10-reference/04-afn-t-correspondence).**
+**→ Препринт §5–§6. Полное формальное доказательство — в препринте [MSFS](/10-reference/04-afn-t-correspondence).**
 
 - **AFN-T (α-часть)** [Т·L1] — X как объект уровня 6 невозможно (α-часть, Леммы 1-3).
   → Препринт Theorem `thm:afnt-alpha` + Lemmas `lem:F-implies-model`, `lem:model-in-S`, `lem:interp-is-morita`.
@@ -494,7 +494,7 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 Центральный результат о структурной абсолютности: AFN-T выполняется для любой «разумной» Rich-метатеории.
 
-**→ Препринт §3 (R-S), §7 (пять осей). Полное формальное изложение — в препринте [AFN-T](/10-reference/04-afn-t-correspondence).**
+**→ Препринт §3 (R-S), §7 (пять осей). Полное формальное изложение — в препринте [MSFS](/10-reference/04-afn-t-correspondence).**
 
 - **Def R-S** [О] — Reasonable Rich-Metatheory: условия (R1) арифметика, (R2) r.e. аксиоматизация, (R3) непустая модель, (R4) Gödel-кодирование, (R5) категорная интерпретация.
   → Препринт Definition `def:rs`.
@@ -784,7 +784,7 @@ AFN-T — двумерно-абсолютный инвариант, параме
 | Интенсиональный refinement | Экстенсиональный коллапс | **98.T, 99.T** | ✅ formally closed |
 | Meta-classification Level 5+ | Самоклассификация | **100.T, 101.T, 102.T** | ✅ formally closed |
 
-Все три стандартных обходных пути формально закрыты; самоклассификация Diakrisis в пространстве Level 5+ meta-structures также формально закрыта. Корпус Diakrisis полностью устойчив к стандартным атакам на AFN-T: на extensional уровне — 5-осевая абсолютность (S, n, μ, ξ, π); на intensional уровне — slice-locality 99.T; на meta-classification уровне — stabilization 102.T. Детальное обсуждение: [/06-limits/02-th-final#три-bypass-paths--формальное-закрытие](/06-limits/02-th-final#три-bypass-paths--формальное-закрытие). Полные формальные доказательства — препринт [*AFN-T*](/10-reference/04-afn-t-correspondence) §8.
+Все три стандартных обходных пути формально закрыты; самоклассификация Diakrisis в пространстве Level 5+ meta-structures также формально закрыта. Корпус Diakrisis полностью устойчив к стандартным атакам на AFN-T: на extensional уровне — 5-осевая абсолютность (S, n, μ, ξ, π); на intensional уровне — slice-locality 99.T; на meta-classification уровне — stabilization 102.T. Детальное обсуждение: [/06-limits/02-th-final#три-bypass-paths--формальное-закрытие](/06-limits/02-th-final#три-bypass-paths--формальное-закрытие). Полные формальные доказательства — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §8.
 
 ## Связь с УГМ-теоремами
 

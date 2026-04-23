@@ -5,9 +5,9 @@ title: Что такое Diakrisis
 
 # Что такое Diakrisis — углублённое введение
 
-:::tip Самодостаточный препринт
+:::tip Самодостаточный препринт MSFS
 
-Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм Level 5+, slice-локальное интенсиональное уточнение, theory-level meta-stabilization, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*The Moduli Space of Formal Systems*](/10-reference/04-afn-t-correspondence)** — *Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ preprint labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм Level 5+, slice-локальное интенсиональное уточнение, theory-level meta-stabilization, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ MSFS labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 

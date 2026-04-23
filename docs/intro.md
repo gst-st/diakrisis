@@ -12,9 +12,9 @@ title: Введение в Diakrisis
 
 Теория теоретически **закрыта**: 102 теоремы в номерной системе устанавливают структуру 𝓜_Fnd (классифицирующий $(\infty,n)$-$2$-стек Rich-оснований), плюрализм Level 5+, slice-локальное интенсиональное уточнение, theory-level meta-stabilization с universe-ascent, полное соответствие УГМ ↔ α_Д-hybrid ⊗ 7D-quantum через **UFH** (85.T), и пятиосевую абсолютность граничной леммы AFN-T.
 
-:::tip Самодостаточный препринт: moduli space of formal systems
+:::tip Самодостаточный препринт MSFS
 
-Структурное ядро Diakrisis (𝓜_Fnd как $(\infty,n)$-классифицирующий $2$-стек, плюрализм Level 5+, slice-local intensional refinement через эффективный топос Hyland, theory-level meta-stabilization с universe-ascent, и AFN-T как boundary corollary) вынесено в самодостаточный препринт **[*The Moduli Space of Formal Systems*](/10-reference/04-afn-t-correspondence)** (*Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, 47 страниц, 54 theorem-like environments, 47 bib-entries): `paper-en/paper.tex`. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$). Точная таблица соответствия теорем $N.T$ ↔ preprint labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Структурное ядро Diakrisis (𝓜_Fnd как $(\infty,n)$-классифицирующий $2$-стек, плюрализм Level 5+, slice-локальное интенсиональное уточнение через эффективный топос Хайланда, theory-level meta-stabilization с universe-ascent, и AFN-T как граничная лемма) вынесено в самодостаточный **[*MSFS*](/10-reference/04-afn-t-correspondence)** (*The **M**oduli **S**pace of **F**ormal **S**ystems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, 47 страниц, 54 theorem-like environments, 47 bib-entries): `paper-en/paper.tex`. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$). Таблица соответствия теорем $N.T$ ↔ MSFS labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 
