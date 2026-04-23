@@ -5,6 +5,12 @@ title: Что такое Diakrisis
 
 # Что такое Diakrisis — углублённое введение
 
+:::tip Препринт AFN-T
+
+Формальное структурное ядро Diakrisis (TH-Final, пять осей абсолютности, bypass-paths, Level 5+ meta-классификация) вынесено в самодостаточный препринт **[*AFN-T*](/10-reference/04-afn-t-correspondence)** — *A No-Go Theorem for Absolute Foundations of Mathematics*. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ preprint labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+
+:::
+
 ## 1. Имя и его значение
 
 **Διάκρисис** (*diakrisis*) — древнегреческое слово:
