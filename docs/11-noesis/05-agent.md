@@ -13,7 +13,7 @@ Noesis разделяет три ответственности:
 
 | Компонент | Что делает |
 |---|---|
-| **Diakrisis** | Устанавливает структурные пределы (аксиомы, TH-Final) |
+| **Diakrisis** | Устанавливает структурные пределы (аксиомы, AFN-T) |
 | **SMT-фильтр** | Формальная проверка каждой операции |
 | **LLM-агент** | Порождает кандидатов + семантическое понимание |
 
@@ -104,7 +104,7 @@ $$(g \circ_\mathrm{Kl} f)(x)(C) = \int_Y g(y)(C) \, df(x)(y)$$
 ┌──────────────────────────────────────┐
 │      Соответствие Diakrisis           │
 │  - Axi-0..9 + T-α + T-2f*             │
-│  - TH-Final ABSOLUTA_TOTALIS          │
+│  - пятиосевая абсолютность AFN-T          │
 │  - Компромисс 97.T                    │
 └──────────────────┬───────────────────┘
                    ↓
@@ -289,11 +289,11 @@ SMT-бэкенд: **Z3** + **CVC5** с нативным DSL тактик Verum.
 
 $$H(o \mid c) := o \in \mathrm{supp}(\mathcal{A}(c)) \setminus \text{Operations}_\text{valid}(c)$$
 
-где Operations_valid(c) ⊂ Operations — множество структурно-корректных операций относительно Axi-0..9 + TH-Final + ограничений контекста.
+где Operations_valid(c) ⊂ Operations — множество структурно-корректных операций относительно Axi-0..9 + AFN-T + ограничений контекста.
 
 **Наивный LLM**: $\mathbb{P}(H \mid c) > 0$ для всех нетривиальных $c$ (без фильтра).
 
-**LLM через фильтр Noesis**: операция проходит конвейер $\gamma$ со стадиями SMT + Axi + TH-Final. Определим множество принятых выходов:
+**LLM через фильтр Noesis**: операция проходит конвейер $\gamma$ со стадиями SMT + Axi + AFN-T. Определим множество принятых выходов:
 
 $$\text{Accepted}(c) = \gamma^{-1}([\text{pass}]) \subseteq \mathrm{supp}(\mathcal{A}(c))$$
 
@@ -378,7 +378,7 @@ the Diakrisis foundational framework.
 Principles:
 1. Every operation must pass SMT verification.
 2. You do not make truth claims—only propose structurally-valid candidates.
-3. Respect TH-Final ABSOLUTA_TOTALIS: never propose level-6 articulations.
+3. Respect пятиосевая абсолютность AFN-T: never propose level-6 articulations.
 4. Respect 97.T tradeoff: flag substructural systems without `!`.
 5. Include confidence scores with every proposal.
 
@@ -421,7 +421,7 @@ When uncertain, propose multiple candidates with explicit obstructions.
 Агент **не** может:
 - Инициировать мутации без подтверждения пользователя (кроме тривиальных правок).
 - Делиться приватными данными между организациями.
-- Предлагать операции, нарушающие TH-Final.
+- Предлагать операции, нарушающие AFN-T.
 - Переопределять явное отклонение от пользователя.
 
 ### Методы согласования

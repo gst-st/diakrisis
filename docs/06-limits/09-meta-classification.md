@@ -110,7 +110,7 @@ $$
 - **102.C1**: Iteration closure — $\mathfrak{M}^{(5+ \cdot k)} \simeq_2 \mathfrak{M}^{(5+)}$ для всех $k \geq 1$.
 - **102.C2**: Аналог 68.T — стабилизация на meta-уровне (68.T стабилизирует higher-categorical structure; 102.T стабилизирует meta-классификацию).
 - **102.C3**: $\mathfrak{Meta}_{5+}$ замкнут относительно mutual classification.
-- **102.C4**: Совместимость с TH-Final ABSOLUTA_TOTALIS — meta-iteration частный случай $\mu$-оси (69.T).
+- **102.C4**: Совместимость с пятиосевая абсолютность AFN-T — meta-iteration частный случай $\mu$-оси (69.T).
 
 ## Сравнительная таблица meta-structures
 
@@ -126,10 +126,10 @@ $$
 
 **Важное** (препринт Proposition `prop:strata-disjointness` + Remark `rem:level-as-role`): уровни читаются как **functional roles**, а не строго-партиционированные классы. Объект может играть несколько ролей одновременно. $\mathcal{L}_6$ пуст по AFN-T (trivial disjointness); $\mathcal{L}_{5+}^{\max} \subsetneq \mathcal{L}_{5+}$ строго; $\mathcal{L}_5 \cap \mathcal{L}_{5+}$ не обязательно пусто — условия (R1)-(R5) и (M1)-(M5) о разных аспектах.
 
-## Связь с TH-Final ABSOLUTA_TOTALIS
+## Связь с пятиосевая абсолютность AFN-T
 
 - **100.T** подтверждает, что самоклассификация meta-structures не даёт новой структурной оси ABSOLUTA_TOTALIS.
-- **101.T** показывает, что plurality не эскалирует в Level 6 (multiplicity consistent с TH-Final).
+- **101.T** показывает, что plurality не эскалирует в Level 6 (multiplicity consistent с AFN-T).
 - **102.T** закрывает meta-iteration loop: нет способа эскалировать в Level 6 через mutual classification.
 
 ## Diakrisis-specific вывод

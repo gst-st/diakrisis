@@ -9,7 +9,7 @@ title: План развития
 
 - ✓ Корпус Diakrisis (102 теоремы в номерной системе, включая intensional refinement 98.T–99.T и meta-classification 100.T–102.T).
 - ✓ Мост UFH к УГМ.
-- ✓ TH-Final ABSOLUTA_TOTALIS (5-осевая абсолютность + 3 bypass paths + meta-classification closure).
+- ✓ пятиосевая абсолютность AFN-T (5-осевая абсолютность + 3 bypass paths + meta-classification closure).
 - ✓ Классификация L-уровней (exhaustive).
 - ✓ Проектные документы Noesis.
 - ✓ Ядровые теоремы NO-1..NO-18.

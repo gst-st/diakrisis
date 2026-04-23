@@ -162,7 +162,7 @@ Meta-classification stabilization (препринт Theorem `thm:meta-stab`, Dia
 - Работает с основаниями как с объектами.
 - Классифицирует через $\mathfrak{M}_\mathrm{Fnd} = \mathrm{Trace}(\mathsf{A})/\mathrm{gauge}$.
 - Даёт формальный язык для сравнения: ZFC ↔ ETCS (Morita), HoTT ↔ MLTT, CIC ↔ Coq.
-- Формализует пределы формализации (TH-Final).
+- Формализует пределы формализации (AFN-T).
 
 **Diakrisis на уровне 5+^max** (препринт (Max-1)–(Max-4)):
 
@@ -203,7 +203,7 @@ Meta-classification stabilization (препринт Theorem `thm:meta-stab`, Dia
 
 - **Препринт §2** — formal development of hierarchy;
 - **Препринт §9** — Level 5+ meta-classification;
-- [`/06-limits/02-th-final`](/06-limits/02-th-final) — TH-Final detail;
+- [`/06-limits/02-th-final`](/06-limits/02-th-final) — AFN-T detail;
 - [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) — пять осей;
 - [`/06-limits/09-meta-classification`](/06-limits/09-meta-classification) — meta-структура 100.T–102.T;
 - [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — полная таблица.

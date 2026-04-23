@@ -5,9 +5,9 @@ title: Что такое Diakrisis
 
 # Что такое Diakrisis — углублённое введение
 
-:::tip Препринт AFN-T
+:::tip Самодостаточный препринт
 
-Формальное структурное ядро Diakrisis (TH-Final, пять осей абсолютности, bypass-paths, Level 5+ meta-классификация) вынесено в самодостаточный препринт **[*AFN-T*](/10-reference/04-afn-t-correspondence)** — *A No-Go Theorem for Absolute Foundations of Mathematics*. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ preprint labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм Level 5+, slice-локальное интенсиональное уточнение, theory-level meta-stabilization, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*The Moduli Space of Formal Systems*](/10-reference/04-afn-t-correspondence)** — *Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ preprint labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 
@@ -122,7 +122,7 @@ title: Что такое Diakrisis
 ```
 
 - **Уровень 0** (⚬): вне Diakrisis.
-- **Уровень 1** (Διάκрисис): феноменологический корень; не формализуется полностью — TH-Final ABSOLUTA_TOTALIS.
+- **Уровень 1** (Διάκрисис): феноменологический корень; не формализуется полностью — пятиосевая абсолютность AFN-T.
 - **Уровень 2** (Z): три эквивалентные характеризации (16.T1).
 - **Уровень 3**: канонический примитив с 13 аксиомами.
 - **Уровень 4**: ρ-проекции — точные реализации (ZFC, HoTT, NCG, linear, AFA, cohesive, motivic, realizability).
@@ -147,9 +147,9 @@ title: Что такое Diakrisis
 - **98.T + 99.T**: intensional refinement — функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ + slice-locality над $\mathcal{M}_\mathrm{Fnd}$.
 - **100.T + 101.T + 102.T**: meta-classification Level 5+ — conditional categoricity + structural multiplicity + stabilization; самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$ завершена.
 
-### 5.2 Негативные: TH-Final ABSOLUTA_TOTALIS
+### 5.2 Негативные: пятиосевая абсолютность AFN-T
 
-**Пятиуровневая абсолютность** TH-Final:
+**Пятиуровневая абсолютность** AFN-T:
 
 | Уровень | Ось | Теорема |
 |---|---|---|
@@ -194,7 +194,7 @@ $$\alpha_{uhm} \cong_M \alpha_{\text{Д-hybrid}} \otimes 7D\text{-quantum}$$
 
 Анаксимандр: ἄπειрон (apeiron — «беспредельное») как первоначало, из которого через ἀπόκрисис (apokrisis — «отделение») возникают вещи.
 
-- **Apeiron** как мат-объект уровня 6 — невозможен (TH-Final ABSOLUTA_TOTALIS).
+- **Apeiron** как мат-объект уровня 6 — невозможен (пятиосевая абсолютность AFN-T).
 - **Apokrisis/diakrisis** (акт различения) — остаётся осмысленным как феноменологический корень.
 
 **Diakrisis** сохраняет философскую глубину (акт различения) без сверхамбиции apeiron.
@@ -212,14 +212,14 @@ Diakrisis — уровень **5+**:
 |---|---|
 | 5 | ZFC, HoTT, CIC, NCG |
 | 5+ | Diakrisis, ∞-cosmoi (Riehl-Verity) |
-| 6 | **Невозможно** (TH-Final) |
+| 6 | **Невозможно** (AFN-T) |
 
 **Полное описание иерархии уровней**: [/00-foundations/05-level-hierarchy](/00-foundations/05-level-hierarchy) — детальное соответствие между уровнями, мат-аппаратом, критериями и примерами; обоснование статуса 5+ Diakrisis.
 
 ## 9. Состояние проекта
 
 ### Теоретически
-**Закрыто**. 102 теоремы в номерной системе доказаны (включая 98.T–99.T intensional refinement и 100.T–102.T meta-classification Level 5+). 5-уровневая абсолютность TH-Final (ABSOLUTA_TOTALIS). UFH установлена.
+**Закрыто**. 102 теоремы в номерной системе доказаны (включая 98.T–99.T intensional refinement и 100.T–102.T meta-classification Level 5+). 5-уровневая абсолютность AFN-T (ABSOLUTA_TOTALIS). UFH установлена.
 
 ### Практически
 6 открытых программ:
@@ -239,8 +239,8 @@ Diakrisis — уровень **5+**:
 | Канонический примитив | [Т] доказуем | Четвёрка + 13 аксиом |
 | 𝓜_Fnd | [Т] определено | Trace(𝖠)/gauge (43.T1) |
 | Сборки | [Т/Т-набр] | УГМ, SM, cons |
-| TH-Final | [Т] доказано | No-go уровня 6 |
-| ABSOLUTA_TOTALIS | [Т] | 5-уровневая абсолютность TH-Final |
+| AFN-T | [Т] доказано | No-go уровня 6 |
+| ABSOLUTA_TOTALIS | [Т] | 5-уровневая абсолютность AFN-T |
 | UFH | [Т] | α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) |
 
 ## 11. Следующие шаги

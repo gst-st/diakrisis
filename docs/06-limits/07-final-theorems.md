@@ -14,7 +14,7 @@ title: Финальные теоремы — полное закрытие
 Документ содержит:
 
 - **70.T–71.T**: ν-инварианты артикуляций Διάкрисиς.
-- **72.T, 86.T**: паранепротиворечивая TH-Final.
+- **72.T, 86.T**: паранепротиворечивая AFN-T.
 - **73.T–77.T**: R-S hierarchy, консистентность bounds, derived closure.
 - **78.T–82.T**: программные теоремы (UFH programme, α_Д-poly, 𝓜_Fnd^{(∞,∞)}, (∞,∞)-Verum).
 - **85.T**: UFH — полное доказательство.
@@ -69,7 +69,7 @@ $$\alpha_{uhm} \cong_M \alpha_{\text{Д-hybrid}}^{!} \otimes_{⟪⟫} 7D\text{-q
 
 где `^{!}` фиксирует необходимость `!`-enriched метатеории, `⊗_{⟪⟫}` — tensor в 2-категории артикуляций (не произвольный).
 
-**97.C3 (структурная область TH-Final)**: TH-Final ABSOLUTA_TOTALIS **исключает** substructural R-S' без `!` не как контрпримеры, а как **тривиальные случаи** — Π_3-max уже нарушено на входе.
+**97.C3 (структурная область AFN-T)**: пятиосевая абсолютность AFN-T **исключает** substructural R-S' без `!` не как контрпримеры, а как **тривиальные случаи** — Π_3-max уже нарушено на входе.
 
 ### Диаграмма tradeoff
 
@@ -109,7 +109,7 @@ S' ∉ R-S                               S' ∈ R-S
 
 **Follows**: ν(α_Д-hybrid) = ω·2+1 (по tensor-свойству).
 
-## 72.T, 86.T: Paraconsistent TH-Final
+## 72.T, 86.T: Paraconsistent AFN-T
 
 ### 72.T [Т]: Paraconsistent R-S' absoluteness
 
@@ -118,7 +118,7 @@ S' ∉ R-S                               S' ∈ R-S
 - (Explosion-min) — ⊥ ⊬ everything.
 - (Strong-neg) — ∃ ∼ с (p ∧ ∼p) ⊢_∼ ⊥.
 
-Тогда TH-Final выполнена в R-S'.
+Тогда AFN-T выполнена в R-S'.
 
 ### 86.T [Т]: Полное доказательство через трансляция
 
@@ -129,7 +129,7 @@ $$\otimes(\varphi) = \begin{cases} \varphi & \text{если consistent} \\ \top 
 **Доказательство** (контур):
 
 1. S'* ⊆ S' как classical подтеория, S'* ∈ R-S.
-2. Предположим TH-Final не выполнена в S' — есть witness X.
+2. Предположим AFN-T не выполнена в S' — есть witness X.
 3. ⊗(X) ∈ S'* — witness в классический фрагмент.
 4. Проверка: (F_{S'*}), (Π_4_{S'*}), (Π_3-max_{S'*}) сохраняются под ⊗.
 5. Противоречит 55.T.
@@ -162,7 +162,7 @@ Con(R-S^n) ≤ Con(ZFC + n-inacc).
 | П-принцип | Формальный эквивалент |
 |---|---|
 | П-0.0 (акт первичен) | ABSOLUTA_TOTALIS (55.T + 59.T + 69.T + 84.T + 87.T) |
-| П-0.1 (пределы) | TH-Final |
+| П-0.1 (пределы) | AFN-T |
 | П-0.2 (экономия) | 13 аксиом + Con = ZFC+2inacc (90.T) |
 | П-0.3 (не-скаляр) | (∞,n)-стабилизация (59.T.2, 68.T) |
 | П-0.4 (категорность) | Internal language L_⟪⟫ (89.T) |
@@ -577,7 +577,7 @@ $$\Pi \dashv \flat \dashv \sharp \dashv \iota : \infty\text{-Grpd} \leftrightarr
 
 **QED**.
 
-**Следствие 92.C1**: Motivic-программа Voevodsky (SH(k), motives, periods) — в 𝓜_Fnd как конкретная точка α_motivic; подчиняется TH-Final (уровень 5+, не 6).
+**Следствие 92.C1**: Motivic-программа Voevodsky (SH(k), motives, periods) — в 𝓜_Fnd как конкретная точка α_motivic; подчиняется AFN-T (уровень 5+, не 6).
 
 ## 93.T: Realizability topos как α_realiz
 
@@ -752,7 +752,7 @@ Completeness: **Π_1^1** by Feferman's classical result for infinitary equivalen
 | # | Результат | Статус |
 |---|---|---|
 | 70.T–71.T | ν-инварианты α_Д-\* | [Т] |
-| 72.T, 86.T | Paraconsistent TH-Final | [Т] |
+| 72.T, 86.T | Paraconsistent AFN-T | [Т] |
 | 73.T | R-S стабилизируется | [Т] |
 | 74.T | Consistency bound | [Т] |
 | 75.T | П-0.\* ↔ формальные результаты | [Т] |
@@ -801,7 +801,7 @@ Completeness: **Π_1^1** by Feferman's classical result for infinitary equivalen
 
 Diakrisis **теоретически закрыта** после 102 теорем в номерной системе:
 
-- **5-уровневая абсолютность** TH-Final — ABSOLUTA_TOTALIS.
+- **5-уровневая абсолютность** AFN-T — ABSOLUTA_TOTALIS.
 - **UFH доказана** — полное соответствие УГМ ↔ Diakrisis.
 - **Все связующие теоремы** (cohesive, motivic, realizability).
 - **Категоричность + Internal language + Consistency** установлены.

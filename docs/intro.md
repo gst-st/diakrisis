@@ -10,11 +10,11 @@ title: Введение в Diakrisis
 
 **Diakrisis** (греч. διάκρισις — *«различение»*; Платон, *Софист* 253d) — **(∞,∞)-мета-структурная** математическая теория, формализующая пространство мат-оснований (ZFC, HoTT, NCG, ∞-топосы, CIC, linear, AFA, cohesive, motivic, realizability, УГМ, и др.) как структурированный объект с категорной, когезивной, фибрированной, gauge-, модальной и моduli-структурой. Каноническая формулировка — в (∞,∞)-категорной семантике (максимум higher-когерентность); τ-труncations τ_{≤n} дают (∞,n)-версии для практики (n=2 — стандарт для прувер-систем).
 
-Теория теоретически **закрыта**: 102 теоремы в номерной системе устанавливают пять-уровневую абсолютность TH-Final (**ABSOLUTA_TOTALIS**) + полное соответствие УГМ ↔ α_Д-hybrid ⊗ 7D-quantum через теорему **UFH** (85.T) + intensional refinement closure (98.T–99.T) + meta-classification Level 5+ stability (100.T–102.T).
+Теория теоретически **закрыта**: 102 теоремы в номерной системе устанавливают структуру 𝓜_Fnd (классифицирующий $(\infty,n)$-$2$-стек Rich-оснований), плюрализм Level 5+, slice-локальное интенсиональное уточнение, theory-level meta-stabilization с universe-ascent, полное соответствие УГМ ↔ α_Д-hybrid ⊗ 7D-quantum через **UFH** (85.T), и пятиосевую абсолютность граничной леммы AFN-T.
 
-:::tip Самодостаточный препринт AFN-T
+:::tip Самодостаточный препринт: moduli space of formal systems
 
-Структурное ядро Diakrisis (TH-Final, пять осей абсолютности, три bypass-paths, meta-классификация Level 5+) вынесено в самодостаточный препринт **[*AFN-T*](/10-reference/04-afn-t-correspondence)** (*A No-Go Theorem for Absolute Foundations of Mathematics*, 52 страницы, 71 theorem-like environment): `paper-en/paper.tex`. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$). Точная таблица соответствия теорем $N.T$ ↔ preprint labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Структурное ядро Diakrisis (𝓜_Fnd как $(\infty,n)$-классифицирующий $2$-стек, плюрализм Level 5+, slice-local intensional refinement через эффективный топос Hyland, theory-level meta-stabilization с universe-ascent, и AFN-T как boundary corollary) вынесено в самодостаточный препринт **[*The Moduli Space of Formal Systems*](/10-reference/04-afn-t-correspondence)** (*Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, 47 страниц, 54 theorem-like environments, 47 bib-entries): `paper-en/paper.tex`. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$). Точная таблица соответствия теорем $N.T$ ↔ preprint labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 
@@ -22,30 +22,30 @@ title: Введение в Diakrisis
 
 ## Центральные результаты
 
-### Позитивные
+### Основной вклад — структура пространства 𝓜_Fnd
 
 - **Классифицирующее пространство 𝓜_Fnd = Trace(𝖠)/gauge** (43.T1) — moduli всех Rich-оснований через bicategory-of-fractions (Pronk 1996).
-- **Категоричность** (88.T): модели Diakrisis единственны до (∞,∞)-эквивалентности.
-- **Internal language** L_⟪⟫ (89.T): внутренний формальный язык.
-- **Consistency** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
+- **Плюрализм Level 5+** (101.T): $\infty$-cosmoi (Риль–Верити), Univalent Foundations (Воеводский) и cohesive higher topoi (Шрайбер) попарно $2$-неэквивалентны как partial meta-frameworks; каждый классифицирует строгий под-стек 𝓜_Fnd.
+- **Условная мета-категоричность** (100.T): любые два представителя $\mathfrak{Meta}_{5+}^{\max}$ над одной и той же R-S $(\infty,\infty)$-эквивалентны (через Grothendieck–Lurie straightening с совместной верностью extensional/intensional классификационных функторов).
+- **Slice-локальное интенсиональное уточнение** (98.T + 99.T): функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ через канонический минимальный дисплейный класс; образ slice-локален над 𝓜_Fnd (интенсиональные различия MLTT vs ETT ложатся в слои над единственной точкой 𝓜_Fnd, инвариантно разделённые через эффективный топос Хайланда).
+- **Theory-level meta-stabilization с universe-ascent** (102.T): итерированная мета-классификация воспроизводит ту же $(\infty,\infty)$-теорию на каждом шаге (Barwick–Schommer-Pries unicity), но теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$.
 - **UFH** (85.T): α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) — полное математическое соответствие УГМ ↔ Diakrisis.
-- **Связующие теоремы** (91.T–94.T): cohesive ∞-topos, motivic homotopy theory, realizability topos, Universal Foundation в (∞,∞) — все вложены в 𝓜_Fnd как конкретные артикуляции.
-- **Intensional refinement** (98.T + 99.T): функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ через канонический минимальный дисплейный класс; slice-locality — $\mathbf{I}$-образ проецируется на $\mathcal{M}_\mathrm{Fnd}$ без новых точек.
-- **Meta-classification Level 5+** (100.T + 101.T + 102.T): Diakrisis — максимальный представитель плюралистичного класса $\mathfrak{Meta}_{5+}$; conditional uniqueness при (Max-1)–(Max-4); structural multiplicity без максимальности; stabilization $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$.
+- **Категоричность** (88.T), **внутренний язык L_⟪⟫** (89.T), **консистентность** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
+- **Связующие теоремы** (91.T–94.T): cohesive $\infty$-topos, motivic homotopy theory, realizability topos, Universal Foundation в $(\infty,\infty)$ — все вложены в 𝓜_Fnd как конкретные артикуляции.
 
-### Негативные: TH-Final ABSOLUTA_TOTALIS
+### Граничная лемма: пятиосевая абсолютность AFN-T
 
-**Пятиуровневая абсолютность TH-Final** — закрывает все structural paths «побега»:
+Следствие синтаксис-семантического сопряжения: **𝓜_Fnd не имеет максимальной точки**. Level 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — **структурно пустой stratum**. Абсолютность граничной леммы устанавливается по пяти осям:
 
-| Уровень | Ось | Теорема |
+| Ось | Переменная | Теорема |
 |---|---|---|
-| 1 | Метатеория S ∈ R-S | 55.T |
-| 2 | Категорный уровень n ∈ ℕ ∪ {∞} | 59.T.1 |
-| 3 | Мета-итерация μ | 69.T |
-| 4 | Альтернативный категорный порядок ξ | 84.T |
-| 5 | Полнота 4-мерности (нет 5-й оси) | 87.T |
+| Горизонтальная | S ∈ R-S | 55.T |
+| Вертикальная | n ∈ ℕ ∪ {∞} | 59.T.1 |
+| Мета-вертикальная | μ-итерации | 69.T |
+| Латеральная | ξ (альтернативные порядки) | 84.T |
+| Полнота | — (нет 5-й оси) | 87.T |
 
-«Уровень 6» как формальное основание математики **структурно невозможен** — доказано в каждой мыслимой структурной оси.
+AFN-T унифицирует классическую серию запретов Cantor → Russell → Gödel → Tarski → Lawvere → Ernst как специализации граничной леммы при разных maximality aspects.
 
 ## Что Diakrisis формализует
 
@@ -53,7 +53,7 @@ title: Введение в Diakrisis
 
 2. **Взаимные переходы** — Морита-эквивалентности, вложения, gauge-преобразования. Точное описание: α_ZFC ∼_{gauge} α_ETCS, HoTT ↔ MLTT, CIC ↔ Coq, etc.
 
-3. **Пределы формализации** — TH-Final в 5-уровневой абсолютности. Место в серии Cantor-Russell-Gödel-Tarski-Lawvere-TH-Final.
+3. **Пределы формализации** — AFN-T в 5-уровневой абсолютности. Место в серии Cantor-Russell-Gödel-Tarski-Lawvere-AFN-T.
 
 4. **Феноменологическую основу** — акт различения как до-формальное условие возможности любой математики. Διάκрисις — не объект, а акт.
 
@@ -74,7 +74,7 @@ title: Введение в Diakrisis
 - **(∞,1)-Diakrisis**: Lurie HTT-aligned.
 - **(∞,∞)-Diakrisis**: полная higher-когерентный структура.
 
-Связь: 2-Diakrisis = τ_{≤2}((∞,∞)-Diakrisis) через усечение (60.T). TH-Final абсолютна на всех уровнях (59.T.1).
+Связь: 2-Diakrisis = τ_{≤2}((∞,∞)-Diakrisis) через усечение (60.T). AFN-T абсолютна на всех уровнях (59.T.1).
 
 ### Производные понятия
 
@@ -113,7 +113,7 @@ title: Введение в Diakrisis
 ```
 
 - **Уровень 0** (⚬): вне Diakrisis.
-- **Уровень 1** (Διάκрисис): не формализуется полностью — TH-Final ABSOLUTA_TOTALIS.
+- **Уровень 1** (Διάκрисис): не формализуется полностью — пятиосевая абсолютность AFN-T.
 - **Уровень 2** (Z): три эквивалентные характеризации (16.T1).
 - **Уровень 3**: канонический примитив с 13 аксиомами.
 - **Уровень 4**: ρ-проекции — точные реализации конкретных оснований.
@@ -140,7 +140,7 @@ title: Введение в Diakrisis
 | α_inf-cat | (∞,∞) | Ω |
 | α_Apeiron | R-S | Ω |
 
-Все — в пределах R-S, не достигают уровня 6 (TH-Final).
+Все — в пределах R-S, не достигают уровня 6 (AFN-T).
 
 ## УГМ и UFH
 
@@ -191,7 +191,7 @@ ZFC, HoTT, NCG, ∞-Topos, CIC, logics catalog.
 УГМ (флагман), Стандартная модель, теории сознания (IIT, GWT, HOT, Orch-OR).
 
 ### 6. Пределы формализации
-TH-Neg-α, TH-Neg-β, TH-Final, no-go series, Path-of-limit-failure, what-remains-possible, **абсолютность** (5-уровневая, 55.T–69.T + 83.T–87.T), **финальные теоремы** (70.T–97.T), **intensional refinement** (98.T–99.T), **meta-classification Level 5+** (100.T–102.T).
+AFN-T (α-часть), AFN-T (β-часть), AFN-T, no-go series, Path-of-limit-failure, what-remains-possible, **абсолютность** (5-уровневая, 55.T–69.T + 83.T–87.T), **финальные теоремы** (70.T–97.T), **intensional refinement** (98.T–99.T), **meta-classification Level 5+** (100.T–102.T).
 
 ### 7. Методология
 Рекурсивные аудиты, негативные уроки.
@@ -232,7 +232,7 @@ TH-Neg-α, TH-Neg-β, TH-Final, no-go series, Path-of-limit-failure, what-remain
 
 ## Что Diakrisis не делает
 
-- **Не** «теория всего» — такая формально невозможна (TH-Final ABSOLUTA_TOTALIS).
+- **Не** «теория всего» — такая формально невозможна (пятиосевая абсолютность AFN-T).
 - **Не** замена ZFC/HoTT/NCG — **вмещает** их как gauge-классы.
 - **Не** философская спекуляция — содержание строго математическое.
 - **Не** претензия на уровень 6 — формально опровергнута 5-уровневой абсолютностью.

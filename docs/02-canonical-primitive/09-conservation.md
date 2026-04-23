@@ -56,7 +56,7 @@ $$\forall \phi \in L_{ZFC}: \quad \mathrm{Diakrisis} + \mathrm{ZFC} \vdash \phi 
 Diakrisis добавляет:
 - Возможность говорить о 𝓜_Fnd (модули-пространство оснований).
 - α_Apeiron как object (рефлексивная замкнутость).
-- Формальные no-go теоремы (TH-Neg, TH-Final).
+- Формальные no-go теоремы (AFN-T (α-часть), AFN-T).
 - Gauge-структуру на Trace(𝖠).
 - Cohesion Π ⊣ ♭ ⊣ ♯ ⊣ ι.
 

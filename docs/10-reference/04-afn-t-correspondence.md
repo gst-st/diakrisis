@@ -1,17 +1,17 @@
 ---
 sidebar_position: 4
-title: Соответствие AFN-T препринта
+title: Соответствие препринта Moduli Space of Formal Systems
 ---
 
-# Соответствие теорем Diakrisis ↔ AFN-T препринт
+# Соответствие теорем Diakrisis ↔ препринт
 
 ## Назначение документа
 
-**AFN-T препринт** (*A No-Go Theorem for Absolute Foundations of Mathematics*, Sereda 2026) — самодостаточная формальная версия структурного ядра Diakrisis, независимая от Diakrisis-нотации. Препринт содержит формально строгое доказательство невозможности абсолютного основания математики (TH-Final, level 5+ meta-classification, три bypass-paths).
+**Препринт** (*The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026) — самодостаточная формальная версия структурного ядра Diakrisis, независимая от Diakrisis-нотации. Препринт развивает структурную теорию $(\infty, n)$-классифицирующего $2$-стека $\fM$ Rich-оснований: (i) плюрализм Level 5+ ($\infty$-cosmoi / UF / cohesive pairwise non-$2$-эквивалентны), (ii) условную meta-категоричность через Grothendieck-Lurie straightening, (iii) slice-local intensional refinement через эффективный топос Hyland, (iv) theory-level meta-stabilization с universe-ascent по $\kappa_1 < \kappa_2 < \cdots$. В качестве boundary corollary закрывается Level-6 stratum (AFN-T), унифицируя классическую no-go серию Cantor–Russell–Gödel–Tarski–Lawvere–Ernst.
 
 Этот документ фиксирует **точное соответствие** между теоремами Diakrisis (внутренняя нумерация `N.T`, `N.C`) и labelled results препринта (`\ref{thm:...}` и т.п.). Каждая дублируемая теорема имеет **каноническое место** в препринте; Diakrisis-корпус ссылается на препринт, не воспроизводя доказательства.
 
-**Препринт:** `paper-en/paper.tex` (версия 1.0, 52 стр., 71 theorem-like environment, 48 bib-entries).
+**Препринт:** `paper-en/paper.tex` (версия 2.0, 47 стр., 54 theorem-like environment, 47 bib-entries).
 
 **Сборка:** `bun scripts/build-paper.ts` → `paper-en/afn-t-paper.pdf`.
 
@@ -19,43 +19,43 @@ title: Соответствие AFN-T препринта
 
 ## Ключевые теоремы
 
-### TH-Final и её части
+### Граничная лемма (AFN-T) и её части
 
 | Diakrisis | Препринт | Название | Комментарий |
 |---|---|---|---|
-| **TH-Neg** (α-часть) | Theorem~\ref{thm:afnt-alpha} | AFN-T $(\alpha)$-part | Формальная определимость $\Rightarrow$ Morita-редуцируемость |
-| **TH-Neg-Extended** (β-часть) | Theorem~\ref{thm:afnt-beta} | AFN-T $(\beta)$-part | Transfinite limit approach закрыт; proper-class towers foreclosed via Proposition~\ref{prop:proper-class} |
-| **TH-Final** | Theorem~\ref{thm:afnt} | Combined AFN-T | $\mathcal{L}_6$ структурно пуст |
-| **TH-Final ABSOLUTA_TOTALIS** | Theorem~\ref{thm:five-axis} | Five-Axis Absoluteness | Пять осей абсолютности |
+| **AFN-T (α-часть)** (α-часть) | Theorem~\ref{thm:afnt-alpha} | Boundary Lemma: Emptiness of Level 6 ((α)-Part) | Синтаксис-семантический мост: $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$, $\id_X$ нарушает $(\Pi_4)$ |
+| **AFN-T (β-часть)** (β-часть) | Theorem~\ref{thm:afnt-beta} | Boundary Lemma: No Limit-Based Escape ((β)-Part) | Трансфинитные приближения остаются в $\cS_S^{\mathrm{global}}$; proper-class-башни через Proposition~\ref{prop:proper-class} |
+| **AFN-T** | Theorem~\ref{thm:afnt} | Combined AFN-T | $\mathcal{L}_6$ структурно пуст как следствие |
+| **пятиосевая абсолютность AFN-T** | Theorem~\ref{thm:five-axis} | Five-Axis Absoluteness | Пять осей абсолютности граничной леммы |
 
-### Пять осей (абсолютность)
+### Пять осей абсолютности
 
 | Diakrisis | Препринт | Название |
 |---|---|---|
-| **55.T** | Theorem~\ref{thm:horizontal} | Horizontal (по $S \in \RS$) |
-| **59.T.1** | Theorem~\ref{thm:vertical} | Vertical (по $n \in \mathbb{N} \cup \{\infty\}$) |
-| **66.T** | Theorem~\ref{thm:direct-infty} + Lemma~\ref{lem:lawvere-inf} | Direct $(\infty,\infty)$ Lawvere FP (classical $S$) |
-| **69.T** | Theorem~\ref{thm:meta-vertical} | Meta-vertical (по $\mu$-iterations) |
-| **84.T** | Theorem~\ref{thm:lateral} | Lateral (альтернативные orderings) |
-| **87.T** | Theorem~\ref{thm:completeness} | Completeness (Lawvere-scope) |
+| **55.T** | Theorem~\ref{thm:horizontal} | Горизонтальная (по $S \in \RS$) |
+| **59.T.1** | Theorem~\ref{thm:vertical} | Вертикальная (по $n \in \mathbb{N} \cup \{\infty\}$) |
+| **69.T** | Theorem~\ref{thm:meta-vertical} | Мета-вертикальная (по $\mu$-итерациям) |
+| **84.T** | Theorem~\ref{thm:lateral} | Латеральная (альтернативные порядки) |
+| **87.T** | Theorem~\ref{thm:completeness} | Полнота (Lawvere-scope) |
+| (вспом.) | Lemma~\ref{lem:lawvere-inf} | $(\infty,\infty)$-Lawvere fixed-point |
 
-### Три bypass-paths
+### Три пути обхода
 
 | Diakrisis | Препринт | Путь |
 |---|---|---|
-| **57.T + 56.C1 + 61.T + 94.T** | Theorem~\ref{thm:universe} | Universe polymorphism (straightening) |
-| **19.T1 + 31.T3 + 68.T + 69.T + 90.T** | Theorem~\ref{thm:reflective} | Reflective towers (bounded by 1 inaccessible) |
-| **98.T** | Theorem~\ref{thm:I-existence} | Intensional refinement functor $\II$ (construction) |
-| **99.T** | Theorem~\ref{thm:slice-locality} | Slice-locality of $\II$ (closure) |
+| **57.T + 56.C1 + 61.T + 94.T** | Theorem~\ref{thm:universe} | Полиморфизм универсумов (через straightening) |
+| **19.T1 + 31.T3 + 68.T + 69.T + 90.T** | Theorem~\ref{thm:reflective} | Рефлексивные башни (в пределах одного недостижимого) |
+| **98.T** | Theorem~\ref{thm:I-existence} | Построение функтора интенсионального уточнения $\II$ |
+| **99.T** | Theorem~\ref{thm:slice-locality} | Slice-локальность $\II$ (через топос $\mathrm{Eff}$ Хайланда) |
 
-### Level 5+ meta-classification
+### Структура Level 5+ — основной математический вклад
 
 | Diakrisis | Препринт | Название |
 |---|---|---|
-| **100.T** | Theorem~\ref{thm:meta-cat} | Conditional meta-categoricity (Lair–Makkai–Paré) |
-| **101.T** | Theorem~\ref{thm:meta-mult} | Structural multiplicity ($\infty$-cosmoi, UF, cohesive) |
-| **102.T** | Theorem~\ref{thm:meta-stab} | Meta-classification stabilization |
-| **68.T** | Theorem~\ref{thm:bergner-lurie-stab} | $(\infty,\infty)$-stabilization (Barwick–Schommer-Pries) |
+| **100.T** | Theorem~\ref{thm:meta-cat} | Условная мета-категоричность (через Grothendieck–Lurie straightening) |
+| **101.T** | Theorem~\ref{thm:meta-mult} | Структурный плюрализм ($\infty$-cosmoi / UF / cohesive pairwise $2$-неэквивалентны) |
+| **102.T** | Theorem~\ref{thm:meta-stab} | Theory-level meta-stabilization с universe-ascent ($\kappa_1 < \kappa_2 < \ldots$) |
+| **68.T** | Theorem~\ref{thm:bergner-lurie-stab} | $(\infty,\infty)$-стабилизация (Barwick–Schommer-Pries) |
 
 ### Вспомогательные
 
@@ -106,15 +106,19 @@ title: Соответствие AFN-T препринта
 
 ---
 
-## Positioning против prior work
+## Позиционирование относительно предшествующих работ
 
-Препринт §10.5 явно fix позиционирование AFN-T относительно:
+Препринт §10.5 явно фиксирует позиционирование относительно:
 
-- **Ernst 2015** «The Prospects of Unlimited Category Theory» — ближайший formal precedent; Ernst — special case AFN-T restricted to categorical R-S c (R1)–(R3) Feferman.
-- **Hamkins 2012** set-theoretic multiverse — complementary (methodological pluralism); multiverse как Level-6 candidate foreclosed by AFN-T.
-- **Barwick–Schommer-Pries 2021** unicity — compatible (single-paradigm unicity within $(\infty, n)$-Cat; used as technical lemma Theorem~\ref{thm:bergner-lurie-stab}).
+- **Ernst 2015** «The Prospects of Unlimited Category Theory» — ближайший формальный предшественник; Ernst — специальный случай граничной леммы при ограничении на категорные R-S с (R1)–(R3) Фефермана.
+- **Hamkins 2012** set-theoretic multiverse — комплементарная позиция (методологический плюрализм); мультивселенная как кандидат на Level-6 исключена граничной леммой.
+- **Barwick–Schommer-Pries 2021** unicity — совместима (одно-парадигмальная единственность внутри $(\infty, n)$-Cat; используется как техническая лемма Theorem~\ref{thm:bergner-lurie-stab}, критична для (iv) — theory-level stabilization).
 
-Diakrisis **не дублирует** это positioning; отсылает к §10.5 препринта.
+Diakrisis **не дублирует** это позиционирование; отсылает к §10.5 препринта.
+
+## Архитектурное соответствие препринта
+
+Препринт построен по принципу **«moduli space primary, boundary lemma secondary»**: основной математический вклад — классификация структуры $\fM$ (четыре результата (i)–(iv) в Abstract), AFN-T — граничное следствие. Diakrisis следует тому же принципу: центральные результаты — плюрализм Level 5+ (101.T), условная мета-категоричность (100.T), slice-локальность $\II$ (99.T), theory-level meta-stabilization (102.T), UFH (85.T); AFN-T — структурная граница этой архитектуры.
 
 ---
 
@@ -134,7 +138,7 @@ Diakrisis **не дублирует** это positioning; отсылает к §
 
 ## Использование этого документа
 
-**При чтении Diakrisis-доков:** встретив теорему вида **55.T**, **100.T**, **TH-Final** и т.п., см. соответствующую строку таблицы выше → перейти к препринту за полным доказательством.
+**При чтении Diakrisis-доков:** встретив теорему вида **55.T**, **100.T**, **AFN-T** и т.п., см. соответствующую строку таблицы выше → перейти к препринту за полным доказательством.
 
 **При цитировании:** для внешних публикаций предпочитаемая ссылка — AFN-T препринт (self-contained, рецензируем); Diakrisis-документы ссылаются как source-материал корпуса.
 

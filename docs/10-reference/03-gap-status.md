@@ -9,7 +9,7 @@ title: Статус программ
 
 **Все теоретические вопросы Diakrisis закрыты**. Теоремы 85.T–96.T дают полные доказательства всех фундаментальных утверждений (см. [/06-limits/07-final-theorems](/06-limits/07-final-theorems)).
 
-### Пять уровней закрытия TH-Final
+### Пять уровней закрытия AFN-T
 
 | Уровень | Ось | Теорема |
 |---|---|---|
@@ -19,7 +19,7 @@ title: Статус программ
 | 4 | Категорный порядок (ξ) | 84.T |
 | 5 | Полнота 4-мерности | 87.T |
 
-**TH-Final ABSOLUTA_TOTALIS** — абсолютный структурный инвариант.
+**пятиосевая абсолютность AFN-T** — абсолютный структурный инвариант.
 
 ### Ключевые теоремы
 
@@ -39,7 +39,7 @@ title: Статус программ
 | N-04b | Intensional refinement (gauge-обогащение) | ✅ закрыто (98.T + 99.T) |
 | N-05 | Meta-classification Level 5+ (самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$) | ✅ закрыто (100.T + 101.T + 102.T) |
 
-## Классификация обходных путей вокруг TH-Final
+## Классификация обходных путей вокруг AFN-T
 
 В литературе оснований известны три классические линии, которыми предельные no-go-результаты могут быть атакованы: экстенсиональный коллапс отношения редукции, универс-полиморфные структуры без супремума, трансметатеоретическая рефлексивная башня. Плюс четвёртый вопрос — самоклассификация теории Level 5+ в пространстве возможных Level 5+ meta-structures. Каждая линия получает полное формальное закрытие в корпусе.
 
@@ -104,9 +104,9 @@ title: Статус программ
 
 **Содержание закрытия**:
 - **98.T** [Т·L2]: функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ построен через pullback-стабильные дисплейные 2-семейства (2-categorical lift Jacobs-Streicher, Gambino-Garner 2008). Доказаны свойства: homotopy invariance, gauge covariance, strict refinement of Morita (контрпример MLTT vs ETT, Hofmann 1995), Morita как 2-локализация **I**.
-- **99.T** [Т·L2]: образ **I** slice-локален — существует 2-Grothendieck-фибрация $\widetilde{\pi}: \mathcal{S}_\mathrm{int} \to \mathcal{M}_\mathrm{Fnd}$ такая, что $\pi = \widetilde{\pi} \circ \mathbf{I}$. Intensional refinement параметризует слои $\mathrm{Int}([\alpha])$ над gauge-классами, не базу. TH-Final ABSOLUTA_TOTALIS не затронута.
+- **99.T** [Т·L2]: образ **I** slice-локален — существует 2-Grothendieck-фибрация $\widetilde{\pi}: \mathcal{S}_\mathrm{int} \to \mathcal{M}_\mathrm{Fnd}$ такая, что $\pi = \widetilde{\pi} \circ \mathbf{I}$. Intensional refinement параметризует слои $\mathrm{Int}([\alpha])$ над gauge-классами, не базу. пятиосевая абсолютность AFN-T не затронута.
 
-**Структурное значение**: закрытие genuine-gap в защитах TH-Final на intensional-уровне. В связке с meta-classification (N-05 через 100.T–102.T) корпус Diakrisis полностью устойчив к стандартным атакам на всех трёх уровнях: extensional — 5-осевая абсолютность; intensional — slice-locality 99.T; meta-classification — stabilization 102.T.
+**Структурное значение**: закрытие genuine-gap в защитах AFN-T на intensional-уровне. В связке с meta-classification (N-05 через 100.T–102.T) корпус Diakrisis полностью устойчив к стандартным атакам на всех трёх уровнях: extensional — 5-осевая абсолютность; intensional — slice-locality 99.T; meta-classification — stabilization 102.T.
 
 ### П3++. Meta-classification Level 5+ (✅ теоретически закрыт)
 
@@ -173,11 +173,11 @@ title: Статус программ
 
 ## Принципы работы с программами
 
-**TH-Final закрывает уровень 6**. Программные задачи — **исключительно** на уровне 5+.
+**AFN-T закрывает уровень 6**. Программные задачи — **исключительно** на уровне 5+.
 
 **Закрытые направления** (не программа работы):
 - Поиск уровня 6 основания.
-- Попытки обойти TH-Final ABSOLUTA_TOTALIS.
+- Попытки обойти пятиосевая абсолютность AFN-T.
 - Radical new math как альтернатива.
 
 **Активные направления** — все на уровне 5+:
@@ -197,7 +197,7 @@ title: Статус программ
 ## Итог
 
 - **Теоретически**: Diakrisis **окончательно закрыта**. 102 теоремы в номерной системе доказаны (10.T1–T5, 11.T–45.T, 48.T–102.T), включая 98.T–99.T (intensional refinement) и 100.T–102.T (meta-classification).
-- **Защиты TH-Final**: все три стандартных обходных пути + самоклассификация Level 5+ формально закрыты.
+- **Защиты AFN-T**: все три стандартных обходных пути + самоклассификация Level 5+ формально закрыты.
   - Universe-polymorphism: 57.T, 56.C1, 61.T, 94.T.
   - Рефлексивная башня: 19.T1, 31.T3, 68.T, 69.T, 90.T.
   - Intensional refinement: 98.T, 99.T.
