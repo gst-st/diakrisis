@@ -3,6 +3,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage[margin=1in]{geometry}
+\usepackage{microtype}  % better line breaking + character protrusion
+
+% Global line-break tolerance for long math identifiers
+\emergencystretch=2em
+\tolerance=1500
+\hbadness=10000
+
+% Allow line breaks inside inline math at relation/binary operators
+\binoppenalty=700
+\relpenalty=500
 \usepackage{amsmath,amssymb,amsthm,mathtools,bm,mathrsfs}
 \usepackage{longtable,booktabs,array,multirow}
 \usepackage{textcomp}
@@ -39,6 +49,8 @@
 \newcommand{\cM}{\mathcal{M}}
 \newcommand{\cC}{\mathcal{C}}
 \newcommand{\cD}{\mathcal{D}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cP}{\mathcal{P}}
 \newcommand{\fM}{\mathfrak{M}}
 \newcommand{\Meta}{\mathfrak{Meta}}
 \newcommand{\Sint}{\cS_{\mathrm{int}}}
@@ -62,6 +74,7 @@
 \newcommand{\CIC}{\mathsf{CIC}}
 \newcommand{\NBG}{\mathsf{NBG}}
 \newcommand{\AFA}{\mathsf{AFA}}
+\newcommand{\CZF}{\mathsf{CZF}}
 \newcommand{\II}{\mathbf{I}}
 \newcommand{\cU}{\mathcal{U}}
 \newcommand{\tpi}{\widetilde{\pi}}
@@ -69,6 +82,8 @@
 \DeclareMathOperator{\image}{image}
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\ev}{ev}
+\DeclareMathOperator{\Trace}{Trace}
+\DeclareMathOperator{\dep}{depth}
 
 \title{A No-Go Theorem for Absolute Foundations of Mathematics\\
 \large{Hierarchical Classification, Five-Axis Absoluteness, and Meta-Stability}}
@@ -93,27 +108,13 @@ Three classical bypass paths around absolute no-go results --- universe polymorp
 
 Meta-structures at Level 5+ --- classifying frameworks over the moduli space of Rich-foundations --- form a plural class, partitioned into a maximal sub-class $\Meta_{5+}^{\max}$ (satisfying four maximality axioms Max-1..Max-4) and its complement of \emph{partial} (non-maximal) members. We prove: (i) conditional meta-categoricity --- any two members of $\Meta_{5+}^{\max}$ parametrized by the same Rich-metatheory are $(\infty, \infty)$-equivalent (Lair--Makkai--Par\'e representation); (ii) structural multiplicity outside the maximal sub-class --- the $\infty$-cosmoi of Riehl--Verity, the Univalent Foundations programme of Voevodsky, and the cohesive framework of Schreiber are pairwise non-$2$-equivalent partial meta-frameworks, each classifying a strict sub-stack of the moduli space; (iii) meta-classification stabilization --- mutual classification of Level 5+ meta-structures idempotently reproduces the same level without escape to Level 6.
 
-The theorem is self-contained. It rests only on standard results from categorical logic (Lawvere 1969, Ad\'amek--Rosick\'y 1994, Jacobs 1999, Pronk 1996, Lurie 2009, Riehl--Verity 2022, Gambino--Garner 2008, Bergner--Lurie 2012) and requires no specialized axiomatic foundation beyond ZFC with two inaccessible cardinals. The consistency strength of the statement is exactly $\Con(\ZFC + 2\text{-inacc})$.
+The theorem is self-contained. It rests only on standard results from categorical logic (Lawvere 1969, Ad\'amek--Rosick\'y 1994, Jacobs 1999, Pronk 1996, Lurie 2009, Riehl--Verity 2022, Gambino--Garner 2008, Barwick--Schommer-Pries 2021) and requires no specialized axiomatic foundation beyond ZFC with two inaccessible cardinals. The consistency strength of the statement is exactly $\Con(\ZFC + 2\text{-inacc})$.
 
 \smallskip
 \noindent\textbf{Keywords:} foundational mathematics, no-go theorems, categorical logic, $(\infty, n)$-categories, higher topos theory, classifying $2$-stacks, intensional type theory, meta-classification.
 
 \smallskip
-\noindent\textbf{MSC2020:} 03A05 (philosophy of mathematics, foundations), 03B30 (foundations of classical theories), 03C45 (classification theory and second-order arithmetic), 03F40 (G\"odel numberings and their applications), 18A05 (definitions, generalizations), 18N10 ($2$-categories), 18N50 ($\infty$-categories), 18N60 $((\infty, n)$-categories), 18N65 (higher categorical structures, homotopy type theory).
-
-\smallskip
-\noindent\textbf{Summary of contributions.}
-\begin{itemize}\setlength{\itemsep}{0pt}
-\item A stratified hierarchy of mathematical novelty with explicit formal criteria for seven levels plus a hypothetical Level 6 (Definition~\ref{def:hierarchy}), exhibiting an exhaustive placement of thirty-plus foundations and paradigms.
-\item A precise definition of \emph{Reasonable Rich-Metatheory} (Definition~\ref{def:rs}) isolating the minimum structural conditions (R1)--(R5) for a theory to qualify as a foundation.
-\item The formal \textbf{Absolute Foundation No-Go Theorem} (Theorem~\ref{thm:afnt}), in two complementary halves: an $(\alpha)$-part ruling out statically-defined Level-6 objects (Theorem~\ref{thm:afnt-alpha}) and a $(\beta)$-part ruling out transfinite-limit constructions (Theorem~\ref{thm:afnt-beta}).
-\item A five-axis absoluteness statement covering horizontal (over R-S), vertical (over $(\infty, n)$-levels), meta-vertical (over meta-iterations), lateral (over alternative categorical orderings), and completeness (within Lawvere-scope) axes (Theorem~\ref{thm:five-axis}).
-\item A formal closure of all three standard bypass paths: universe polymorphism (Theorem~\ref{thm:universe}), reflective towers (Theorem~\ref{thm:reflective}), and intensional refinement through a display-$2$-class construction (Theorems~\ref{thm:I-existence} and~\ref{thm:slice-locality}).
-\item A structure theorem for Level 5+ meta-classification: conditional categoricity under maximality (Theorem~\ref{thm:meta-cat}), unconditional multiplicity (Theorem~\ref{thm:meta-mult}), and meta-iteration stabilization (Theorem~\ref{thm:meta-stab}), ruling out any implicit Level-6 escalation through meta-classification.
-\item An explicit subsumption theorem placing AFN-T within the classical Cantor--Russell--G\"odel--Tarski--Lawvere no-go series (Theorem~\ref{thm:subsumption}).
-\item A paraconsistent extension to strongly-negated Rich-metatheories (Appendix~\ref{app:paraconsistent}).
-\end{itemize}
-All results are self-contained within $\ZFC + 2\text{-inacc}$ and do not depend on any specific axiomatic framework beyond those of standard categorical logic.
+\noindent\textbf{MSC2020:} 03A05, 03B30, 03C45, 03F40, 18A05, 18N10, 18N50, 18N60, 18N65.
 
 \end{abstract}
 
@@ -164,84 +165,9 @@ We establish a sixth no-go theorem that subsumes the above series at the level o
 
 The formal version is stated in \S\ref{sec:afnt-alpha} (Theorem~\ref{thm:afnt-alpha}) and \S\ref{sec:afnt-beta} (Theorem~\ref{thm:afnt-beta}). The absoluteness of this statement across five independent structural axes is established in \S\ref{sec:five-axis}. The closure of three classical bypass paths is established in \S\ref{sec:bypass}.
 
-\subsection{Hierarchical Classification}
+\subsection{Structure of the Paper}
 
-To make the target of AFN-T precise, we introduce in \S\ref{sec:hierarchy} an explicit stratification of mathematical novelty into seven levels:
-
-\begin{itemize}
-\item \textbf{Level 0}: Working notes (not mathematically evaluable).
-\item \textbf{Level 1}: Lemmas (technical results within existing theories).
-\item \textbf{Level 2}: Theorems (substantively new results).
-\item \textbf{Level 3}: Areas of mathematics (connected bodies of related theory).
-\item \textbf{Level 4}: Paradigms (research programmes reframing broad classes of problems).
-\item \textbf{Level 5}: Foundations (axiomatically complete formal systems).
-\item \textbf{Level 5+}: Meta-structures (classifying frameworks over the space of Level 5 foundations).
-\item \textbf{Level 6}: \emph{Absolute foundations} --- the hypothetical class targeted by AFN-T.
-\end{itemize}
-
-The hierarchy is not primarily a value judgment. It is a \emph{classification scheme} organized by formal criteria, each level distinguished from its neighbors by explicit structural properties. The principal result AFN-T asserts that Level 6 is empty: it has no inhabitants.
-
-\subsection{Five-Axis Absoluteness}
-
-A classical concern for no-go theorems is robustness: a statement restricting foundational objects in one metatheoretic setting may fail in another. A genuine structural obstruction should withstand all standard methods of reformulation.
-
-We establish absoluteness along five independent structural axes (\S\ref{sec:five-axis}):
-
-\begin{itemize}
-\item \textbf{Horizontal axis} (metatheoretic): AFN-T holds for every Rich-metatheory $S$ satisfying arithmetic, recursive enumerability, categorical semantics, G\"odel coding, and non-triviality conditions (R1)--(R5).
-\item \textbf{Vertical axis} (categorical dimension): AFN-T holds at every categorical level $n \in \mathbb{N} \cup \{\infty\}$, including the limit level $(\infty, \infty)$, by direct proof rather than reduction.
-\item \textbf{Meta-vertical axis} (meta-iteration): iterating the construction across meta-frameworks does not escape AFN-T; meta-iterations stabilize.
-\item \textbf{Lateral axis} (alternative categorical orderings): operadic, globular, cubical, opetopic, and other alternative higher-categorical frameworks reduce to or enrich the $(\infty, n)$-hierarchy without bypassing AFN-T.
-\item \textbf{Completeness axis} (conditional on Lawvere-scope): within the class of Lawvere-characterizable foundational frameworks, the four preceding axes exhaust all structural variation.
-\end{itemize}
-
-\subsection{Three Standard Bypass Paths}
-
-Three specific strategies for escaping no-go results in foundational mathematics are known:
-
-\paragraph{(i) Universe polymorphism.} One constructs $X$ as a universe-polymorphic structure --- e.g., a scheme of axioms parametrized by a hierarchy of Grothendieck universes without supremum. Size-paradox avoidance suggests that $X$ escapes classical classifying-space analysis.
-
-We show (\S\ref{sec:bypass-universe}): universe-polymorphic structures are Morita-reducible to derived constructions $\lim_\ell \Fun(\cU_\ell, \cU_\ell)$ through $2$-functorial inverse limits (Lurie HTT \S 4.2). Every universe-polymorphic term belongs to the global component $\cS_S^{\mathrm{global}}$ of the $S$-definability class.
-
-\paragraph{(ii) Reflective towers.} One constructs a transfinite sequence $\{S_\kappa\}_{\kappa < \mathrm{Ord}}$ with $S_{\kappa+1} = S_\kappa + \Con(S_\kappa)$; the proof-theoretic ordinal of the limit $S_\infty$ strictly exceeds that of any fixed $S$. One hopes that $S_\infty$ captures something beyond its starting point.
-
-We show (\S\ref{sec:bypass-tower}): the cost of transfinite reflection is bounded by exactly one inaccessible cardinal; $\Con(\text{reflective tower over }S) = \Con(S) + \kappa_{\mathrm{inacc}}$. The tower stabilizes at the $(\infty, \infty)$-categorical level through a trivial stabilization (Bergner--Lurie 2012), and no Level-6 escape is produced.
-
-\paragraph{(iii) Intensional refinement.} Morita equivalence --- the criterion of reducibility used in condition (ii) of the Level-6 conditions --- is extensional: it identifies foundations with isomorphic functorial projections regardless of proof-term structure, normalization strategy, or identity-type semantics. One might hope that intensional distinctions produce obstructions invisible to Morita-based arguments.
-
-We show (\S\ref{sec:bypass-intensional}): there exists a canonical contravariant $2$-functor
-\[ \II : \cF^{\mathrm{op}} \to \Sint \]
-from the $2$-category of Rich-foundations to the $2$-category of display $2$-categories. This functor strictly refines Morita equivalence (Theorem~\ref{thm:I-existence}) through the classical extensional-collapse example (MLTT vs. ETT; Hofmann 1995). However, its image is slice-local: $\II$-images project onto existing points of the classifying $2$-stack $\fM$ through a $2$-Grothendieck fibration $\tpi : \Sint \to \fM$ (Theorem~\ref{thm:slice-locality}). The extensional (base) and intensional (fiber) layers are mutually orthogonal; no new base points are produced by intensional refinement.
-
-\subsection{Level 5+ Meta-Classification}
-
-Beyond the main no-go result, we establish a structure theorem for Level 5+ --- the class of meta-frameworks classifying Level 5 foundations (\S\ref{sec:meta}). Let $\Meta_{5+}$ denote the class of such meta-structures, and let $\Meta_{5+}^{\max}$ denote its subclass satisfying four maximality conditions (classification completeness, gauge-fullness, stratification, intensional completeness).
-
-\begin{itemize}
-\item \textbf{Theorem~\ref{thm:meta-cat} (Conditional Meta-Categoricity):} All members of $\Meta_{5+}^{\max}$ are $(\infty, \infty)$-equivalent.
-\item \textbf{Theorem~\ref{thm:meta-mult} (Structural Multiplicity):} $\Meta_{5+} \setminus \Meta_{5+}^{\max}$ contains at least three pairwise non-equivalent members, exemplified by the $\infty$-cosmoi of Riehl--Verity (2022), the Univalent Foundations programme (Voevodsky 2010+), and the cohesive framework of Schreiber (2013).
-\item \textbf{Theorem~\ref{thm:meta-stab} (Meta-Classification Stabilization):} The classifying $2$-stack $\fM^{(5+)}$ of Level 5+ meta-structures is itself Level 5+, and iterated meta-classification is idempotent: $\fM^{(5+ \cdot 2)} \simeq_2 \fM^{(5+)}$.
-\end{itemize}
-
-These results ensure that the plurality of Level 5+ meta-structures does not produce Level-6 escape through meta-iteration.
-
-\subsection{Placement in Foundational Mathematics}
-
-AFN-T occupies a position at the boundary of the no-go tradition. The theorem
-
-\begin{enumerate}
-\item \textbf{subsumes} the classical results: each of Cantor, Russell, G\"odel, Tarski, and Lawvere appears as a specialized instance of the general diagonalization pattern driving AFN-T;
-\item \textbf{generalizes} absoluteness: previous results target one specific aspect (size, comprehension, completeness, etc.); AFN-T addresses the totality of foundational absoluteness;
-\item \textbf{closes} the standard bypass strategies, establishing that the no-go is structurally robust.
-\end{enumerate}
-
-The result can be stated and proved within ZFC augmented by two inaccessible cardinals; no exotic set-theoretic hypotheses are required.
-
-\subsection{Organization}
-
-\S\ref{sec:hierarchy} introduces the hierarchical classification of mathematical novelty with explicit criteria for each level. \S\ref{sec:rs} defines the class of Rich-metatheories and the associated class $\cS_S$ of $S$-definable structures. \S\ref{sec:conditions} states the three Level-6 conditions. \S\ref{sec:afnt-alpha} establishes the $(\alpha)$-part of AFN-T: formal definability implies reducibility. \S\ref{sec:afnt-beta} establishes the $(\beta)$-part: transfinite tower approaches cannot escape AFN-T. \S\ref{sec:five-axis} proves five-axis absoluteness. \S\ref{sec:bypass} addresses the three standard bypass paths and proves their closure. \S\ref{sec:meta} develops the meta-classification of Level 5+. \S\ref{sec:series} places AFN-T within the no-go series. \S\ref{sec:consequences} discusses consequences for current foundational programmes (Univalent Foundations, higher topos theory, condensed mathematics) and identifies open questions.
-
-Appendix~\ref{app:categorical} collects the categorical preliminaries invoked in the proofs. Appendix~\ref{app:paraconsistent} extends AFN-T to paraconsistent Rich-metatheories. The positioning of AFN-T against Ernst~\cite{Ernst2015}, Hamkins's set-theoretic multiverse~\cite{Hamkins2012}, and the unicity theorem of Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021} is treated in \S\ref{sec:ernst-multiverse}.
+\S\ref{sec:hierarchy} introduces the stratification of mathematical novelty into seven levels $\mathcal{L}_0, \ldots, \mathcal{L}_5, \mathcal{L}_{5+}, \mathcal{L}_6$, fixing the precise target of AFN-T as membership in $\mathcal{L}_6$. \S\ref{sec:rs} defines the class $\RS$ of Rich-metatheories and the associated $S$-definable class $\cS_S$. \S\ref{sec:conditions} formalizes the three Level-6 conditions $(F_S)$, $(\Pi_{4, S, n})$, $(\Pi_{3\text{-max}, S, n})$. The main theorem is proved in two complementary halves: \S\ref{sec:afnt-alpha} ($(\alpha)$-part: an external Grothendieck--Cantor diagonal shows $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$ is inconsistent) and \S\ref{sec:afnt-beta} ($(\beta)$-part: transfinite-limit approximations remain within $\cS_S^{\mathrm{global}}$, and proper-class towers either reduce to the $(\alpha)$-part or fall outside $\RS$). \S\ref{sec:five-axis} establishes absoluteness along five structural axes (horizontal over R-S, vertical over $(\infty, n)$-levels, meta-vertical over meta-iterations, lateral over alternative categorical orderings, and completeness within Lawvere-scope). \S\ref{sec:bypass} formally closes three historical bypass strategies: universe polymorphism, reflective towers bounded by one inaccessible cardinal, and intensional refinement via the display-$2$-class functor $\II : \cF^{\mathrm{op}} \to \Sint$ with slice-locality over $\fM$. \S\ref{sec:meta} develops the meta-classification of Level 5+ through three structural theorems (conditional categoricity, multiplicity, idempotent stabilization). \S\ref{sec:series} places AFN-T in the classical no-go series and states the subsumption theorem. \S\ref{sec:consequences} records consequences for current foundational programmes and open questions. Appendix~\ref{app:categorical} collects the categorical preliminaries; Appendix~\ref{app:paraconsistent} extends AFN-T to paraconsistent Rich-metatheories.
 
 \subsection{Notation and Conventions}
 
@@ -254,13 +180,24 @@ We work throughout in $\ZFC$ augmented by two inaccessible cardinals $\kappa_1 <
 \item $\cF$ denotes the $2$-category of \emph{Rich-foundations} (Level 5): objects are foundational theories in the sense of Definition~\ref{def:rs}; $1$-morphisms are faithful interpretations; $2$-morphisms are provable natural equivalences between interpretations.
 \item $\rho : \cF \to (\infty, n)\text{-}\Cat$ denotes the \emph{classification functor} assigning to each $F \in \cF$ its category of models (or, for type-theoretic $F$, the syntactic $(\infty, n)$-category $\Syn(F)$).
 \item A \emph{gauge transformation} $\tau : F_1 \to F_2$ is a $1$-morphism in $\cF$ accompanied by a distinguished $2$-equivalence $\rho(F_1) \simeq \rho(F_2)$ at the model-categorical level. Two foundations are \emph{gauge-equivalent} if there is an invertible gauge transformation between them.
-\item \emph{Morita-reducibility at the $(\infty, n)$-level}: we write $X \to_{M,n} Y$ if there exists an $(\infty, n)$-functor $X \to Y$ that is an $(\infty, n)$-equivalence onto its image. This is the notion used throughout in (Π\textsubscript{4}) and its variants. It extends classical ring-Morita equivalence (which compares $\Mod(X)$ and $\Mod(Y)$ as $1$-categories) by incorporating the full $(\infty, n)$-categorical structure; the two notions coincide when $X, Y$ are $1$-categorical and $n = 1$. We use the shorthand ``Morita-equivalent'' for the symmetric notion and ``Morita-reducible'' for the directed version.
+\item \emph{Morita-reducibility at the $(\infty, n)$-level}: a Level-6 candidate $X$ and any $Y \in \cS_S$ are each viewed as pointed $(\infty, n)$-categorical structures via the canonical Yoneda embedding into the total $(\infty, n)$-category $\mathbf{StrCat}_{S, n}$ of $S$-structured $(\infty, n)$-categories (Definition~\ref{def:strcat}). Concretely, $X$ presented by a formula $\phi_X$ corresponds to the pair $(\Syn(S), [\phi_X])$ where $[\phi_X]$ is the isomorphism class of the object defined by $\phi_X$ in the syntactic category; $Y \in \Ob(\cM) \subseteq \cS_S^{\mathrm{local}}$ corresponds to $(\cM, Y)$. We write $X \to_{M, n} Y$, and say $X$ is \emph{Morita-reducible at the $(\infty, n)$-level} to $Y$, if there exists an $(\infty, n)$-functor $\Phi : \Syn(S) \to \cM$ in $\mathbf{StrCat}_{S, n}$ sending $[\phi_X]$ to the isomorphism class of $Y$, with the restriction $\Phi |_{[\phi_X]}$ an $(\infty, n)$-equivalence onto its image. This extends classical ring-Morita equivalence (which compares $\Mod(X)$ and $\Mod(Y)$ as $1$-categories) by incorporating the full $(\infty, n)$-categorical structure; the two notions coincide when $X, Y$ are $1$-categorical and $n = 1$. We use the shorthand ``Morita-equivalent'' for the symmetric notion and ``Morita-reducible'' for the directed version.
 \item $\fM$ denotes the \emph{classifying $2$-stack} of $\cF$: the quotient $\fM := \cF / \text{gauge}$, regarded as an $(\infty, 2)$-stack of Morita-equivalence classes of Rich-foundations. Formally, $\fM$ is the straightening of the Cartesian fibration $\int \rho \to \mathrm{R\text{-}S}$ whose fiber over $S$ is the $2$-groupoid $\rho^{-1}(S)$ of foundations over $S$ modulo gauge. The construction follows Lurie HTT~\cite{LurieHTT} \S 3.2 (straightening--unstraightening of Cartesian fibrations).
 \item For a $2$-category $\mathbf{F}$, $\mathrm{Aut}_2(\mathbf{F})$ denotes the $2$-group of $2$-autoequivalences $\mathbf{F} \xrightarrow{\simeq_2} \mathbf{F}$ (monoidal under composition, with invertible $1$-morphisms and coherent $2$-cells).
 \item $\Sint$ denotes the $2$-category of display $2$-categories (Definition~\ref{def:Sint}, Appendix~\ref{app:categorical}).
 \item All $2$-categories are locally small and $\kappa_1$-accessible unless stated otherwise.
+\item \emph{Truncation and lifting across depths}: for $n \leq n_S$ we write $\Syn^{(\infty, n)}(S) := \tau_{\leq n}(\Syn(S))$ for the $(\infty, n)$-truncation of the syntactic category. For $n > n_S$ we write $\Syn^{(\infty, n)}(S)$ for the canonical $(\infty, n)$-lifting, obtained by left Kan extension of $\Syn(S)$ along the inclusion $(\infty, n_S)\text{-}\Cat \hookrightarrow (\infty, n)\text{-}\Cat$ (Lurie HTT~\cite{LurieHTT} \S 5.4). Under this convention, comparisons between an object $X$ at level $n$ and an $S$-definable object $Y$ at the native depth $n_S$ take place at level $\max(n, n_S)$ via the canonical lifts; when $n = \infty$, the colimit $\colim_{k < \infty} \Syn^{(\infty, k)}(S)$ is the resulting ambient.
 \end{itemize}
 \end{convention}
+
+\begin{definition}[The total $(\infty, n)$-category $\mathbf{StrCat}_{S, n}$]\label{def:strcat}
+For $S \in \RS$ and $n \in \mathbb{N} \cup \{\infty\}$, the \emph{total $(\infty, n)$-category of $S$-structured $(\infty, n)$-categories}, denoted $\mathbf{StrCat}_{S, n}$, has:
+\begin{itemize}
+\item \textbf{Objects}: pairs $(\cC, \mathrm{str}_\cC)$ where $\cC$ is a $\kappa_1$-accessible $(\infty, n)$-category and $\mathrm{str}_\cC$ is an $S$-model structure on $\cC$ (i.e., an interpretation of $S$-signature into $\cC$ satisfying the axioms of $S$).
+\item \textbf{$1$-morphisms}: $S$-preserving $(\infty, n)$-functors $\Phi : (\cC_1, \mathrm{str}_1) \to (\cC_2, \mathrm{str}_2)$, i.e., functors commuting with the respective $S$-model structures up to coherent $(\infty, n)$-isomorphism.
+\item \textbf{Higher morphisms}: coherent $(\infty, n)$-natural transformations between $S$-preserving functors.
+\end{itemize}
+We embed objects of $\Syn(S)$ and of any model $\cM \models S$ into $\mathbf{StrCat}_{S, n}$ via the pointing construction $X \mapsto (\Syn(S), X)$ and $Y \mapsto (\cM, Y)$ respectively. Morita-reducibility, as specified in Convention~\ref{conv:notation}, refers to the existence of an $S$-preserving $(\infty, n)$-functor in $\mathbf{StrCat}_{S, n}$ between such pointed structures that is an equivalence onto its image.
+\end{definition}
 
 \section{Stratified Hierarchy of Mathematical Novelty}\label{sec:hierarchy}
 
@@ -323,34 +260,7 @@ $\mathcal{L}_6$ & Objects satisfying $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{
 \end{tabular}
 \end{definition}
 
-Structural properties of the levels, including the crucial inclusion $\mathcal{L}_{5+}^{\max} \subseteq \mathcal{L}_{5+}$ and the emptiness of $\mathcal{L}_6$, are recorded in Proposition~\ref{prop:level-structure}.
-
-\begin{proposition}[Intersection pattern of the formal strata]\label{prop:strata-disjointness}
-Within the formal strata $\mathcal{L}_5$, $\mathcal{L}_{5+}$, $\mathcal{L}_{5+}^{\max}$, $\mathcal{L}_6$, the following relations hold:
-\begin{enumerate}
-\item[\textbf{(i)}] \textbf{Functional distinctness, not formal disjointness:} $\mathcal{L}_5$ and $\mathcal{L}_{5+}$ are characterized by logically \emph{different} condition sets ((R1)--(R5) on a formal system vs.\ (M1)--(M5) on a $2$-category); a single mathematical object may in principle satisfy both, playing the generative role (Level 5) with respect to its own internal logic and the non-generative classifying role (Level 5+) with respect to an external class of foundations it classifies. We do not assert $\mathcal{L}_5 \cap \mathcal{L}_{5+} = \emptyset$. The levels are \emph{functionally} distinct (different roles) but not formally exclusive.
-\item[\textbf{(ii)}] $\mathcal{L}_{5+} \cap \mathcal{L}_6 = \emptyset$, trivially, by Theorem~\ref{thm:afnt}: since $\mathcal{L}_6 = \emptyset$, every intersection with $\mathcal{L}_6$ is empty.
-\item[\textbf{(iii)}] $\mathcal{L}_{5+}^{\max} \subsetneq \mathcal{L}_{5+}$, strictly. Theorem~\ref{thm:meta-mult} produces members of the complement $\mathcal{L}_{5+} \setminus \mathcal{L}_{5+}^{\max}$ (the $\infty$-cosmoi of Riehl--Verity, the Univalent Foundations programme, the cohesive framework of Schreiber).
-\item[\textbf{(iv)}] $\mathcal{L}_5 \cap \mathcal{L}_6 = \emptyset$, trivially by Theorem~\ref{thm:afnt}.
-\item[\textbf{(v)}] Borderline multi-level membership is the norm for large mathematical programmes: motivic stable homotopy theory $\mathrm{SH}(k)$ belongs to $\mathcal{L}_4$ (as paradigm) and to $\mathcal{L}_5$ (as specific foundation); Univalent Foundations belongs to $\mathcal{L}_{5+}$ (as meta-framework) and its underlying $\HoTT$ belongs to $\mathcal{L}_5$ (as foundation).
-\end{enumerate}
-\end{proposition}
-
-\begin{proof}
-\textbf{(i)} We do \emph{not} claim formal disjointness. The condition sets (R1)--(R5) and (M1)--(M5) concern disjoint aspects of an object: the former treats it as a formal system with axioms and a proof calculus, the latter treats it as a $2$-category with a classifying functor. An object equipped with both structures can satisfy both condition sets simultaneously; we decline to rule this out. What is structurally distinct is the \emph{role} the object plays: a Level-5 role is generative (the object produces mathematics from axioms), a Level-5+ role is classifying (the object organizes other foundations without generating their axioms, per (M4)). Throughout the paper we refer to Levels as roles rather than as strictly partitioned classes.
-
-\textbf{(ii)} By Theorem~\ref{thm:afnt}, $\mathcal{L}_6 = \emptyset$, hence $\mathcal{L}_{5+} \cap \mathcal{L}_6 = \emptyset$.
-
-\textbf{(iii)} Strict inclusion from Definitions~\ref{def:meta} and~\ref{def:maximality}; non-equality from Theorem~\ref{thm:meta-mult}.
-
-\textbf{(iv)} By Theorem~\ref{thm:afnt}, $\mathcal{L}_6 = \emptyset$.
-
-\textbf{(v)} Direct from the definitions and standard classification of these programmes.
-\end{proof}
-
-\begin{remark}[On the reading ``level as role'']\label{rem:level-as-role}
-Throughout this paper the Levels are best read as \emph{functional roles} a mathematical object may play: $\mathcal{L}_5$ is the role ``foundation generating mathematics''; $\mathcal{L}_{5+}$ is the role ``meta-framework classifying foundations''; $\mathcal{L}_6$ would be the role ``maximally generative universal foundation''. A single object may play multiple roles, as witnessed by motivic theory (Level 4 and Level 5) and Univalent Foundations (Level 5+ as programme, Level 5 as HoTT). The main result AFN-T (Theorem~\ref{thm:afnt}) says the Level-6 role is uninstantiable; it does not require that the Level-5 and Level-5+ roles partition their instances.
-\end{remark}
+Structural properties of the hierarchy, including strata definability, multi-level membership, the strict inclusion $\mathcal{L}_{5+}^{\max} \subsetneq \mathcal{L}_{5+}$, and the emptiness of $\mathcal{L}_6$, are consolidated in Proposition~\ref{prop:level-structure}.
 
 \begin{remark}[Formality spectrum of the hierarchy]\label{rem:formality-spectrum}
 The criteria for $\mathcal{L}_0$--$\mathcal{L}_4$ are intentionally descriptive: ``lemma'', ``theorem'', ``area'', ``paradigm'' are pragmatic categories of mathematical work rather than mathematically defined predicates. No single formal definition separates, e.g., every ``lemma'' from every ``theorem''. These levels serve as an orienting classification whose role is to \emph{contrast} with the formal levels $\mathcal{L}_5$, $\mathcal{L}_{5+}$, $\mathcal{L}_{5+}^{\max}$, $\mathcal{L}_6$.
@@ -358,21 +268,21 @@ The criteria for $\mathcal{L}_0$--$\mathcal{L}_4$ are intentionally descriptive:
 The formal content of AFN-T concerns only the latter four: Definition~\ref{def:rs} gives a rigorous first-order characterization of $\mathcal{L}_5$ via (R1)--(R5); Definition~\ref{def:meta} gives a $2$-categorical characterization of $\mathcal{L}_{5+}$ via (M1)--(M5); Definition~\ref{def:maximality} strengthens it to $\mathcal{L}_{5+}^{\max}$ via (Max-1)--(Max-4); and Definitions~\ref{def:F}, \ref{def:pi4}, \ref{def:pi3max} characterize $\mathcal{L}_6$. All proofs in this paper treat only the formal strata; the descriptive levels appear only in examples and in the informal indexing discussion of \S\ref{sec:indexing-scheme}.
 \end{remark}
 
-\begin{proposition}[Structural properties of the levels]\label{prop:level-structure}
+\begin{proposition}[Structural properties of the hierarchy]\label{prop:level-structure}
 \begin{enumerate}
-\item[\textbf{(i)}] Each class $\mathcal{L}_k$ is a (possibly proper) class in $\ZFC + 2\text{-inacc}$.
-\item[\textbf{(ii)}] The levels are non-disjoint in general: an object may simultaneously belong to $\mathcal{L}_3$ and $\mathcal{L}_5$ (e.g., motivic theory is both a Level-4 paradigm and a Level-5 foundation $\mathrm{SH}(k)$). We write $\mathrm{Level}(X) \subseteq \{0, 1, \ldots, 5+, 5+^{\max}, 6\}$ for the set of levels containing $X$.
-\item[\textbf{(iii)}] There is a strict inclusion $\mathcal{L}_{5+}^{\max} \subseteq \mathcal{L}_{5+}$. Theorem~\ref{thm:meta-cat} asserts that $\mathcal{L}_{5+}^{\max}$ is categorical (its members are pairwise $(\infty, \infty)$-equivalent when parametrized by the same $S$); Theorem~\ref{thm:meta-mult} asserts that $\mathcal{L}_{5+} \setminus \mathcal{L}_{5+}^{\max}$ is plural (contains at least three pairwise non-$2$-equivalent members).
-\item[\textbf{(iv)}] The class $\mathcal{L}_6$ is \emph{empty}: $\mathcal{L}_6 = \emptyset$. This is the main content of AFN-T (Theorem~\ref{thm:afnt}).
+\item[\textbf{(i)}] \emph{Definability.} Each class $\mathcal{L}_k$ is a (possibly proper) class definable in $\ZFC + 2\text{-inacc}$ augmented by the $2$-categorical machinery of Convention~\ref{conv:zfc-inacc}. For $\mathcal{L}_5$ the conditions are (R1)--(R5); for $\mathcal{L}_{5+}$ they are (M1)--(M5) of Definition~\ref{def:meta}; for $\mathcal{L}_{5+}^{\max}$ they strengthen to (Max-1)--(Max-4) of Definition~\ref{def:maximality}; $\mathcal{L}_6$ is defined by $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$ for some $(S, n)$.
+\item[\textbf{(ii)}] \emph{Functional distinctness, not formal disjointness.} $\mathcal{L}_5$ and $\mathcal{L}_{5+}$ are characterized by logically different condition sets (first-order $(R1)$--$(R5)$ on a formal system vs.\ $2$-categorical $(M1)$--$(M5)$ on a $2$-category). A mathematical object carrying both structures may satisfy both sets simultaneously, playing the generative role (Level 5) for its own internal logic and the non-generative classifying role (Level 5+) for an external class of foundations it classifies. Concrete multi-level cases: motivic stable homotopy theory $\mathrm{SH}(k)$ belongs to $\mathcal{L}_4$ (paradigm) and $\mathcal{L}_5$ (foundation); Univalent Foundations belongs to $\mathcal{L}_{5+}$ and its underlying $\HoTT$ to $\mathcal{L}_5$. We write $\mathrm{Level}(X) \subseteq \{0, 1, \ldots, 5, 5+, 5+^{\max}, 6\}$ for the set of levels containing $X$.
+\item[\textbf{(iii)}] \emph{Strict inclusion at the maximal layer.} $\mathcal{L}_{5+}^{\max} \subsetneq \mathcal{L}_{5+}$. Theorem~\ref{thm:meta-cat} asserts that any two members of $\mathcal{L}_{5+}^{\max}$ parametrized by the same Rich-metatheory are $(\infty, \infty)$-equivalent. Theorem~\ref{thm:meta-mult} produces $\geq 3$ pairwise non-$2$-equivalent members of the complement $\mathcal{L}_{5+} \setminus \mathcal{L}_{5+}^{\max}$: the $\infty$-cosmoi of Riehl--Verity, the Univalent Foundations programme, and the cohesive framework of Schreiber.
+\item[\textbf{(iv)}] \emph{Emptiness of Level 6.} $\mathcal{L}_6 = \emptyset$ by Theorem~\ref{thm:afnt}. Consequently $\mathcal{L}_5 \cap \mathcal{L}_6 = \mathcal{L}_{5+} \cap \mathcal{L}_6 = \mathcal{L}_{5+}^{\max} \cap \mathcal{L}_6 = \emptyset$ trivially.
 \end{enumerate}
 \end{proposition}
 
 \begin{proof}
-\textbf{(i)} Each criterion is first-order-expressible within $\ZFC + 2\text{-inacc}$ augmented by the $2$-categorical machinery of Convention~\ref{conv:zfc-inacc}. For levels 0--4 the criteria are essentially descriptive; for Level 5 they are (R1)--(R5) first-order conditions on a theory $S$; for Level 5+ they are (M1)--(M5) $2$-categorical conditions. Each yields a definable class.
+\textbf{(i)} Each criterion is first-order-expressible; the specified classes are definable.
 
-\textbf{(ii)} Motivic stable homotopy theory $\mathrm{SH}(k)$ over a field $k$ satisfies (R1)--(R5) (Level 5) and is also the central object of the motivic-homotopy paradigm (Level 4); Grothendieck's scheme theory is simultaneously a Level-4 paradigm and organizes Level-3 areas of algebraic geometry.
+\textbf{(ii)} The condition sets concern disjoint aspects of an object: axioms with proof calculus vs.\ $2$-categorical structure with classifying functor. An object carrying both structures satisfies both criteria simultaneously. Multi-level examples are standard.
 
-\textbf{(iii)} Inclusion is immediate from the definitions: $(\mathrm{Max\text{-}1})$--$(\mathrm{Max\text{-}4})$ strengthen $(M1)$--$(M5)$. Non-equality follows from Theorem~\ref{thm:meta-mult}: the three partial meta-frameworks $\mathbf{F}_{\mathrm{cosmoi}}, \mathbf{F}_{\mathrm{univalent}}, \mathbf{F}_{\mathrm{cohesive}}$ lie in $\mathcal{L}_{5+} \setminus \mathcal{L}_{5+}^{\max}$ since their classification images are strict sub-stacks of $\fM$, violating (Max-1).
+\textbf{(iii)} Inclusion from Definitions~\ref{def:meta} and~\ref{def:maximality}: (Max-1)--(Max-4) strengthen (M1)--(M5). Strictness from Theorem~\ref{thm:meta-mult}: $\mathbf{F}_{\mathrm{cosmoi}}, \mathbf{F}_{\mathrm{univalent}}, \mathbf{F}_{\mathrm{cohesive}}$ lie in $\mathcal{L}_{5+} \setminus \mathcal{L}_{5+}^{\max}$ since their classification images are strict sub-stacks of $\fM$, violating (Max-1).
 
 \textbf{(iv)} Immediate from Theorem~\ref{thm:afnt}.
 \end{proof}
@@ -433,7 +343,7 @@ The formal content of AFN-T concerns only the latter four: Definition~\ref{def:r
 
 \paragraph{Level 5.} Foundations, with characteristic features:
 
-\begin{longtable}{@{}p{4.5cm}ll p{5cm}@{}}
+\begin{longtable}{@{}p{3.8cm}l p{4cm} p{4.6cm}@{}}
 \toprule
 Foundation & Year & Originator & Characteristic \\ \midrule
 Z (Zermelo) & 1908 & Zermelo & No Replacement \\
@@ -453,29 +363,29 @@ MLTT & 1984 & Martin-L\"of & Dependent types \\
 CIC & 1988 & Coquand--Huet & Inductive constructions \\
 HoTT & 2005+ & Awodey, Voevodsky & Univalence + identity types \\
 Cubical HoTT & 2015+ & Cohen--Coquand et al. & Computational univalence \\
-Universe-polymorphic HoTT & 2013+ & Voevodsky & Universe polymorphism \\
+Universe-poly.\ HoTT & 2013+ & Voevodsky & Universe polymorphism \\
 Linear logic + ! & 1987 & Girard & Resource-sensitive \\
 NBG + AFA & 1988 & Aczel & Non-well-founded sets \\
 $(\infty, 1)$-topos theory & 2009 & Lurie & $(\infty, 1)$-topoi \\
-Non-commutative geometry & 1980s & Connes & Spectral triples \\
+Non-commutative geom.\ & 1980s & Connes & Spectral triples \\
 Cohesive $(\infty, 1)$-topos & 2013 & Schreiber & Cohesion modalities \\
 Motivic $\mathrm{SH}(k)$ & 1999 & Voevodsky, Morel & Motivic homotopy \\
 Realizability (Eff) & 1982 & Hyland & Effective topos \\
-Synthetic diff.~geometry & 1970s & Kock, Lawvere & Infinitesimals as axioms \\
+Synthetic diff.~geom.\ & 1970s & Kock, Lawvere & Infinitesimals as axioms \\
 Elementary higher topos & 2021 & Rasekh & Elementary $(\infty, 1)$-topos \\
 \bottomrule
 \end{longtable}
 
 \paragraph{Level 5+.} Meta-frameworks. Level 5+ partitions into a maximal sub-class $\Meta_{5+}^{\max}$ (categorical up to $(\infty, \infty)$-equivalence by Theorem~\ref{thm:meta-cat}) and its complement of \emph{partial} (non-maximal) meta-frameworks, which classify strict sub-stacks of $\fM$ rather than all of $\fM$. The meta-frameworks listed below are all non-maximal: each satisfies (M1)--(M5) but violates (Max-1), as witnessed by the strict-subset character of its classification focus.
 
-\begin{longtable}{@{}p{3.7cm}ll p{4.7cm}c@{}}
+\begin{longtable}{@{}p{3.3cm}l p{3cm} p{4.4cm}c@{}}
 \toprule
 Meta-framework & Year & Originator & Classification focus & In $\Meta_{5+}^{\max}$? \\ \midrule
 $\infty$-cosmoi & 2022 & Riehl--Verity & $(\infty, 1)$-categorical theories & No \\
 Univalent Foundations & 2010+ & Voevodsky & HoTT extensions & No \\
 Cohesive framework & 2013 & Schreiber & Cohesive $\infty$-topoi & No \\
-Higher Algebra programme & 2017+ & Lurie & Stable $\infty$-cat + operadic & No \\
-Synthetic mathematics & 2000s+ & Taylor, Shulman et al.\ & Axiomatic synthetic foundations & No \\
+Higher Algebra prog.\ & 2017+ & Lurie & Stable $\infty$-cat + operadic & No \\
+Synthetic mathematics & 2000s+ & Taylor, Shulman & Axiomatic synthetic foundations & No \\
 \bottomrule
 \end{longtable}
 
@@ -511,7 +421,7 @@ In each case the classifier is required to produce a coherent $2$-functor from i
 \end{proof}
 
 \begin{remark}[Status of Proposition~\ref{prop:collapse}]\label{rem:collapse-status}
-In view of Remark~\ref{rem:formality-spectrum}, Proposition~\ref{prop:collapse} is a \emph{structural observation} rather than a formal theorem: $\mathcal{L}_1, \mathcal{L}_2, \mathcal{L}_3, \mathcal{L}_4$ are not defined with sufficient formal precision to admit a rigorous proof of class-inclusion. The ``inclusions'' $\mathrm{Cls}(\mathcal{L}_k) \hookrightarrow \mathcal{L}_{k+m}$ should be read as: any candidate classifier of objects informally recognized as lemmas/theorems/areas/paradigms is itself recognized, at a higher level of the informal hierarchy, as a theorem/area/paradigm/foundation. The purpose of the proposition is to explain why ``$1+$'', ``$2+$'', ``$3+$'', ``$4+$'' are absent from our indexing --- namely, that their hypothetical content already sits in existing integer levels --- not to establish a formal equivalence of classes. Proposition~\ref{prop:no-collapse} by contrast is a formal negative result about the class $\mathcal{L}_5$, which is formally defined.
+Since $\mathcal{L}_1, \mathcal{L}_2, \mathcal{L}_3, \mathcal{L}_4$ are defined descriptively (Remark~\ref{rem:formality-spectrum}), Proposition~\ref{prop:collapse} is a \emph{structural observation} about the informal hierarchy rather than a formal class-inclusion theorem. The inclusions $\mathrm{Cls}(\mathcal{L}_k) \hookrightarrow \mathcal{L}_{k+m}$ express: any classifier of objects informally recognized as lemmas/theorems/areas/paradigms is itself recognized, at a higher level of the informal hierarchy, as a theorem/area/paradigm/foundation. The proposition establishes why the symbols ``$1+$'', ``$2+$'', ``$3+$'', ``$4+$'' are absent from the indexing: their hypothetical content sits in existing integer levels. Proposition~\ref{prop:no-collapse}, by contrast, is a formal negative result about the formally-defined class $\mathcal{L}_5$.
 \end{remark}
 
 \begin{proposition}[No collapse at Level 5]\label{prop:no-collapse}
@@ -559,11 +469,16 @@ A first-order theory $S$ is a \textbf{reasonable Rich-metatheory} (or \textbf{R-
 \begin{itemize}
 \item \textbf{(R1) Arithmetic completeness}: $S$ interprets Robinson arithmetic $\mathsf{Q}$.
 \item \textbf{(R2) Recursive enumerability}: the set of axioms of $S$ is recursively enumerable.
-\item \textbf{(R3) Model existence}: $S$ has at least one model in some ambient set-theoretic universe $\mathbf{U} \supseteq S$.
+\item \textbf{(R3) Model existence}: $S$ has at least one model $\cM$ in the ambient set-theoretic universe $\mathbf{U}_1$.
 \item \textbf{(R4) G\"odel coding}: there exists a recursive injection $\ulcorner \cdot \urcorner : \mathrm{Formulas}(S) \to \mathbb{N}$ for which the predicates ``$n$ is the G\"odel number of a provable formula'' and ``$n$ is the G\"odel number of a well-formed formula'' are $S$-definable.
-\item \textbf{(R5) Categorical semantics}: there exists $n_S \in \mathbb{N} \cup \{\infty\}$, the \emph{intrinsic categorical depth} of $S$, such that the syntactic category $\Syn(S)$ of $S$ (objects: contexts; $1$-morphisms: provable-from-context substitutions; higher morphisms: proofs of equality of substitutions) is an $(\infty, n_S)$-category. For first-order $S$ we may take $n_S = 1$ (Lambek--Scott~\cite{Lawvere1964}); for Martin-L\"of type theory $n_S = \infty$ via identity types (Awodey--Warren~\cite{AwodeyWarren2009}); for HoTT $n_S = \infty$ via univalence (Kapulkin--Lumsdaine~\cite{KapulkinLumsdaine2021}). The condition (R5) does not fix $n_S$: different R-S may have different intrinsic depths, and AFN-T is absolute over this choice (Theorem~\ref{thm:vertical}).
+\item \textbf{(R5) Categorical semantics}: there exists $n_S \in \mathbb{N} \cup \{\infty\}$, the \emph{intrinsic categorical depth} of $S$, such that
+\begin{itemize}
+\item[\textbf{(R5a)}] the syntactic category $\Syn(S)$ of $S$ (objects: contexts; $1$-morphisms: provable-from-context substitutions; higher morphisms: proofs of equality of substitutions) is a $\kappa_1$-accessible $(\infty, n_S)$-category;
+\item[\textbf{(R5b)}] the syntax-to-semantics evaluation $\ev : \Syn(S) \to \cM$ for every model $\cM \models S$ is an $S$-preserving $(\infty, n_S)$-functor, and the pair of functors $(\Syn, \Mod)$ constitutes a Lambek--Scott-type adjunction whose unit at $\Syn(S)$ is an $(\infty, n_S)$-equivalence onto the initial $S$-structured $(\infty, n_S)$-category.
 \end{itemize}
-Denote the class of R-S as $\mathrm{R\text{-}S}$. When $F \subseteq S$ (i.e., $F$ is an extension or fragment interpretable in $S$), the inclusion induces a conservative faithful functor $\Syn(F) \hookrightarrow \Syn(S)$ preserving the categorical structure.
+Instances verifying (R5a)--(R5b): first-order $S$ at $n_S = 1$ (Lambek--Scott~\cite{Lawvere1964}); Martin-L\"of type theory at $n_S = \infty$ (Awodey--Warren~\cite{AwodeyWarren2009}); HoTT at $n_S = \infty$ (Kapulkin--Lumsdaine~\cite{KapulkinLumsdaine2021}); dependent type theories (Jacobs~\cite{Jacobs1999}); $(\infty, 1)$-topoi (Lurie HTT~\cite{LurieHTT} \S 5--\S 6). The condition (R5) does not fix $n_S$: different R-S may have different intrinsic depths, and AFN-T is absolute over this choice (Theorem~\ref{thm:vertical}).
+\end{itemize}
+Denote the class of R-S as $\mathrm{R\text{-}S}$. When $F \subseteq S$ in the subtheory-inclusion sense of Definition~\ref{def:F} (formal pair $(\iota_F, \iota_F^*)$), the inclusion induces a conservative faithful functor $\Syn(F) \hookrightarrow \Syn(S)$ preserving the categorical structure.
 \end{definition}
 
 \subsection{Examples of R-S}
@@ -601,29 +516,23 @@ If $X$ is a formally $S$-definable object --- meaning $X$ is specified by a form
 \end{lemma}
 
 \begin{proof}
-Write $n_S$ for the intrinsic categorical depth of $S$ (R5). We treat two cases.
-
-\emph{Case $n_S = 0$ or $n_S = 1$ (first-order or ordinary categorical semantics).} The formula $\phi_X$ specifies $X$ up to isomorphism within some model $\cM \models S$. By G\"odel's completeness theorem applied to the first-order fragment of $S$ combined with (R3), the interpretation $X^\cM \in \Ob(\cM)$ exists.
-
-\emph{Case $n_S \geq 2$ or $n_S = \infty$ (higher categorical semantics).} The formula $\phi_X$ specifies $X$ as an object of $\Syn(S)$ (which, by (R5), is an $(\infty, n_S)$-category). By the internal-language correspondence for higher type theories --- Lambek--Scott~\cite{Lawvere1964} at $n_S = 1$, Jacobs~\cite{Jacobs1999} for dependent type theory, Awodey--Warren~\cite{AwodeyWarren2009} at $n_S = \infty$ for MLTT, Kapulkin--Lumsdaine~\cite{KapulkinLumsdaine2021} for HoTT --- objects of $\Syn(S)$ interpret in any suitable model $(\infty, n_S)$-category. By (R3), at least one such model $\cM$ exists; the interpretation $X^\cM$ is the image of $X$ under the canonical evaluation $(\infty, n_S)$-functor $\ev : \Syn(S) \to \cM$.
-
-In both cases: if $\cM$ itself is a set in $\mathbf{U}$, then $X^\cM \in \cS_S^{\mathrm{local}}$. If $X$ is defined only parametrically across models --- e.g., a universe-polymorphic term, a derived functor, or a natural transformation between functors indexed by models --- then $X$ is a natural transformation or Kan extension definable from models, and $X \in \cS_S^{\mathrm{global}}$. In either case, $X \in \cS_S$.
+The formula $\phi_X$ specifies $X$ as an object of $\Syn(F) \subseteq \Syn(S)$ for some $F \subseteq S$, $F \in \cF$. The syntactic $(\infty, n_S)$-category $\Syn(F)$ is itself an $S$-definable categorical structure: under (R2) ($F$ is r.e.-axiomatized) and (R5a) ($F$ has internal $(\infty, n_S)$-categorical semantics), $\Syn(F)$ is canonically reconstructible as the Grothendieck construction over the $\Mod(F)$-indexed family of $(\infty, n_S)$-model categories (equivalently, as the $(\infty, n_S)$-opposite of the presheaf category on $\Mod(F)$ restricted to representables; see Lurie~\cite{LurieHTT} \S 5.1 for the $(\infty, 1)$-case). This construction is a derived functor from $\cS_S^{\mathrm{local}}$-indexed data in the sense of Definition~\ref{def:SS}, placing $\Syn(F) \in \cS_S^{\mathrm{global}}$. Consequently, any object $X \in \Ob(\Syn(F)) \subseteq \cS_S^{\mathrm{global}} \subseteq \cS_S$.
 \end{proof}
 
 \begin{remark}
-Lemma~\ref{lem:SS-membership} is the critical step connecting \emph{definability} to \emph{reducibility}: once a purported Level-6 object $X$ is formally definable, it automatically belongs to the $S$-definability class, making it reducible through Morita equivalence (\S\ref{sec:conditions}). The proof's case analysis ensures that the argument is uniform across the full range $n_S \in \{0, 1, 2, \ldots, \infty\}$ of intrinsic depths.
+Lemma~\ref{lem:SS-membership} is the critical syntax-to-semantics bridge: once a purported Level-6 object $X$ is formally definable, $X$ belongs to $\cS_S$ as an object of an $S$-reconstructible $(\infty, n_S)$-category, without any appeal to full-faithfulness of a single evaluation functor $\Syn(S) \to \cM$ (which need not hold --- G\"odel completeness gives faithfulness of the product $\Syn(S) \to \prod_\cM \cM$, not fully-faithfulness of an individual evaluation).
 \end{remark}
 
 \subsection{Size Stratification}
 
 Within $\cS_S$, objects are stratified by size:
 \begin{itemize}
-\item \textbf{Small} (in $\mathbf{U}_1$): rank $< \kappa_1$, the first inaccessible cardinal.
-\item \textbf{Large} (in $\mathbf{U}_2 \setminus \mathbf{U}_1$): rank in $[\kappa_1, \kappa_2)$.
-\item \textbf{Proper class}: rank $\geq \kappa_2$.
+\item \textbf{Small} (elements of $\mathbf{U}_1$): sets of rank $< \kappa_1$, the first inaccessible cardinal.
+\item \textbf{Large} (elements of $\mathbf{U}_2 \setminus \mathbf{U}_1$): sets of rank in $[\kappa_1, \kappa_2)$.
+\item \textbf{Beyond $\mathbf{U}_2$}: sets of rank $\geq \kappa_2$, including objects arising as proper classes from the perspective of $\mathbf{U}_2$.
 \end{itemize}
 
-The stratification is not essential to AFN-T but is used in \S\ref{sec:bypass-tower} (meta-vertical axis) to bound reflective towers exactly at one inaccessible cardinal.
+The stratification is not essential to AFN-T but is used in \S\ref{sec:bypass-tower} (reflective towers) to bound the reflective cost at exactly one inaccessible cardinal.
 
 \section{The Level-6 Conditions}\label{sec:conditions}
 
@@ -631,16 +540,18 @@ We state formally the three independence conditions that jointly characterize a 
 
 \subsection{Formal Definability $(F_S)$}
 
+Throughout this section, a \emph{Level-6 candidate} $X$ denotes a $\kappa_1$-accessible $(\infty, n)$-category (not an element of a category), presented by a formula specifying its classifying structure.
+
 \begin{definition}[$(F_S)$]\label{def:F}
-An object $X$ satisfies condition $(F_S)$ relative to $S \in \RS$ if there exists a Rich-foundation $F \in \cF$ together with:
+An $(\infty, n)$-category $X$ satisfies condition $(F_S)$ relative to $S \in \RS$ if there exists a Rich-foundation $F \in \cF$ together with:
 \begin{itemize}
 \item[\textbf{(F-1)}] a \emph{subtheory inclusion} $\iota_F : F \hookrightarrow S$ of formal systems (every axiom of $F$ is an axiom of $S$, possibly after a conservative translation),
 \item[\textbf{(F-2)}] the induced \emph{model restriction} $\iota_F^* : \Mod(S) \to \Mod(F)$ that sends each $S$-model to its reduct as an $F$-model, and
-\item[\textbf{(F-3)}] a formula $\phi_X \in F$ specifying $X$ up to isomorphism.
+\item[\textbf{(F-3)}] a formula $\phi_X \in F$ whose associated classifying $(\infty, n)$-category $\Syn(F)[\phi_X]$ is $(\infty, n)$-equivalent to $X$.
 \end{itemize}
 \end{definition}
 
-Condition $(F_S)$ is formal definability within some foundation reachable from $S$ by axiom restriction. It is deliberately weak: any candidate for a foundational object should at least be articulable within some existing foundation whose models are recoverable from $S$-models.
+Condition $(F_S)$ is formal definability within some foundation reachable from $S$ by axiom restriction. The candidate $X$ is treated uniformly as an $(\infty, n)$-category throughout; this eliminates the type mismatch between ``object of a theory'' and ``theory classifying models'' that arises in naive readings of the Level-6 conditions.
 
 \begin{remark}[On the meaning of $F \subseteq S$]\label{rem:F-subset-S}
 Throughout the paper we write $F \subseteq S$ as shorthand for the pair $(\iota_F, \iota_F^*)$ of Definition~\ref{def:F}. Three alternative readings --- ``$F$ is a specialization of $S$ to fixed parameters'', ``$F$-models extend to $S$-models'', or ``$F$-signature is $S$-expressible'' --- are \emph{not} intended, and the proofs below rely on the subtheory-inclusion reading (F-1, F-2). The reader should mentally substitute $(\iota_F, \iota_F^*)$ wherever $F \subseteq S$ appears.
@@ -649,10 +560,9 @@ Throughout the paper we write $F \subseteq S$ as shorthand for the pair $(\iota_
 \subsection{Non-Reducibility $(\Pi_{4, S, n})$}
 
 \begin{definition}[$(\Pi_{4, S, n})$]\label{def:pi4}
-An object $X$ satisfies condition $(\Pi_{4, S, n})$ relative to $S \in \RS$ and $n \in \mathbb{N} \cup \{\infty\}$ if $X$ is not Morita-reducible to any structure in $\cS_S$ at the $(\infty, n)$-categorical level. Formally: for every $Y \in \cS_S$ and every $(\infty, n)$-functor $F : X \to Y$, $F$ is not an $(\infty, n)$-equivalence.
+An object $X$ satisfies condition $(\Pi_{4, S, n})$ relative to $S \in \RS$ and $n \in \mathbb{N} \cup \{\infty\}$ if $X$ is not Morita-reducible to any structure in $\cS_S$ at the $(\infty, n)$-categorical level. Formally: for every $Y \in \cS_S$ and every $(\infty, n)$-functor $F : X \to Y$, $F$ fails to be an $(\infty, n)$-equivalence onto its image --- i.e., $F$ is either not fully faithful, or its essential image is a proper sub-$(\infty, n)$-category of $Y$.
 \end{definition}
 
-Morita equivalence refers to the extensional isomorphism of categorical presentations: two structures are Morita-equivalent if their associated functorial projections are naturally isomorphic. The requirement $(\Pi_4)$ asserts that $X$ is \emph{not} so reducible --- it is genuinely outside $\cS_S$.
 
 \subsection{Maximal Generativity $(\Pi_{3\text{-max}, S, n})$}
 
@@ -660,7 +570,6 @@ Morita equivalence refers to the extensional isomorphism of categorical presenta
 An object $X$ satisfies condition $(\Pi_{3\text{-max}, S, n})$ relative to $S \in \RS$ and $n$ if: for every Rich-foundation $F \in \cF$ (where $\cF$ denotes the class of Level-5 foundations over $S$), $F$ is Morita-reducible to $X$ at the $(\infty, n)$-categorical level. Formally: for every $F \in \cF$, there exists an $(\infty, n)$-functor $F \to X$ that is an $(\infty, n)$-equivalence onto its image.
 \end{definition}
 
-Maximal generativity asserts that $X$ subsumes all foundations: every foundation reduces to a fragment of $X$.
 
 \subsection{The Level-6 Conditions Combined}
 
@@ -669,108 +578,99 @@ An object $X$ is a \textbf{Level-6 foundation} relative to $S \in \RS$ and $n \i
 \[ (F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n}). \]
 \end{definition}
 
-The main theorem of this paper --- the Absolute Foundation No-Go Theorem (AFN-T) --- asserts that no such $X$ exists, for any $S$ and any $n$.
-
-\subsection{Informal Motivation}
-
-The three conditions are designed to capture the intuitive notion of an \emph{absolute foundation}:
-\begin{itemize}
-\item $(F_S)$: $X$ is mathematical (articulable within some foundation).
-\item $(\Pi_4)$: $X$ is genuinely new (not equivalent to any existing structure).
-\item $(\Pi_{3\text{-max}})$: $X$ is universal (all foundations reduce to $X$).
-\end{itemize}
-Any candidate for a maximal foundation must satisfy these three conditions --- otherwise, it fails to qualify as an absolute foundation in any meaningful sense.
-
-AFN-T establishes that these three conditions are jointly unsatisfiable: every $X$ satisfying $(F_S)$ automatically fails $(\Pi_4)$, as we show in \S\ref{sec:afnt-alpha}; and every attempt to produce $X$ as a limit of approximations fails $(\Pi_4)$ at the limit, as we show in \S\ref{sec:afnt-beta}.
+The main theorem of this paper --- the Absolute Foundation No-Go Theorem --- asserts that no such $X$ exists, for any $S$ and any $n$. The $(\alpha)$-part establishes $\mathcal{L}_6 = \emptyset$ via an external Grothendieck--Cantor diagonal: maximal generativity $(\Pi_{3\text{-max}, S, n})$ forces the presheaf category $\mathcal{P}(X)$ to embed fully-faithfully into $X$, contradicting Cantor's cardinality theorem for presheaf categories (\S\ref{sec:afnt-alpha}, Theorem~\ref{thm:afnt-alpha}); the $(\beta)$-part establishes that transfinite-limit approximations fail $(\Pi_{4, S, n})$ at the limit (\S\ref{sec:afnt-beta}).
 
 \section{The Absolute Foundation No-Go Theorem: $(\alpha)$-Part}\label{sec:afnt-alpha}
 
-We prove the first half of AFN-T: formal definability implies Morita-reducibility.
+We prove the first half of AFN-T by an \emph{external} categorical diagonalization via presheaves. Applying the maximal-generativity condition $(\Pi_{3\text{-max}, S, n})$ to the presheaf Rich-foundation $F_{\mathcal{P}(X)}$ yields a fully-faithful $(\infty, n)$-embedding $\mathcal{P}(X) \hookrightarrow X$ of the presheaf category on $X$ into $X$, contradicting the categorical Cantor theorem (the iso-cardinality of $\mathcal{P}(X)$ strictly exceeds that of $X$). The argument operates entirely in the total $(\infty, n)$-category $\mathbf{StrCat}_{S, n}$: no internal G\"odel coding of formulas and no internal truth predicate are invoked, so the Tarski obstruction to purely internal diagonalization (Remark~\ref{rem:tarski-obstruction}) is by-passed.
 
 \subsection{Statement}
 
 \begin{theorem}[AFN-T, $(\alpha)$-part]\label{thm:afnt-alpha}
-For every Rich-metatheory $S \in \RS$ and every categorical level $n \in \mathbb{N} \cup \{\infty\}$, there exists no object $X$ satisfying simultaneously $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$.
+For every Rich-metatheory $S \in \RS$ and every categorical level $n \in \mathbb{N} \cup \{\infty\}$, there exists no $(\infty, n)$-categorical object $X$ satisfying
+\[
+(F_S) \wedge (\Pi_{3\text{-max}, S, n}).
+\]
 \end{theorem}
 
-\subsection{Proof Structure}
+\begin{corollary}[Level-6 emptiness]\label{cor:level6-empty-alpha}
+$\mathcal{L}_6 = \emptyset$: no object satisfies the triple Level-6 conditions $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$ for any $S \in \RS$ and any $n \in \mathbb{N} \cup \{\infty\}$.
+\end{corollary}
 
-The proof proceeds through three lemmas:
-\begin{enumerate}
-\item \textbf{Lemma~\ref{lem:F-implies-model}}: $(F_S)$ implies the existence of a model interpretation $X^\cM$ of $X$ in some model $\cM$ of $S$ or an extension thereof.
-\item \textbf{Lemma~\ref{lem:model-in-S}}: objects $X^\cM$ belong to $\cS_S^{\mathrm{local}}$.
-\item \textbf{Lemma~\ref{lem:interp-is-morita}}: the interpretation $X^\cM$ induces a Morita reduction $X \to X^\cM$ at the $(\infty, n)$-categorical level.
+\begin{proof}
+The triple implies the pair $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$, foreclosed by Theorem~\ref{thm:afnt-alpha}.
+\end{proof}
+
+\subsection{Proof: External Categorical Diagonalization via Presheaves}\label{subsec:presheaf-diagonal}
+
+Fix $S \in \RS$ and $n \in \mathbb{N} \cup \{\infty\}$, and suppose, for contradiction, that $X$ satisfies $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$.
+
+\paragraph{Step 1 ($X$ is $\mathbf{U}_1$-small).}
+By $(F_S)$, $X$ is formally specified by a formula $\phi_X$ of a Rich-foundation $F \hookrightarrow S$. By (R1) and Convention~\ref{conv:zfc-inacc}, $F$ is $\mathbf{U}_1$-based, so $X$ is a locally $\kappa_1$-presentable $(\infty, n)$-category in $\mathbf{U}_1$; in particular, the class $\mathrm{Ob}(X)/\!\simeq$ of iso-classes of objects of $X$ is a set of cardinality at most $\kappa_1$.
+
+\paragraph{Step 2 (presheaf Rich-foundation $F_{\mathcal{P}(X)}$).}
+Define the conservative extension
+\[
+F_{\mathcal{P}(X)} \;:=\; F \;+\; \{\text{sort } P\} \;+\; \bigl\{\text{axiom } P \simeq \Fun_{(\infty, n)}(X^{\mathrm{op}}, \mathcal{S})\bigr\},
+\]
+where $\mathcal{S}$ denotes the $(\infty, 0)$-category of spaces ($(\infty, 0)$-groupoids; for $n = 1$, $\mathcal{S} = \mathbf{Set}$). The extension names the $(\infty, n)$-presheaf category on $X$ by a single defined sort $P$. The extended theory $F_{\mathcal{P}(X)}$ satisfies (R1)--(R5):
+\begin{itemize}
+\item[(R1), (R4)] are inherited from $F$.
+\item[(R2)] the single recursively-specified additional axiom preserves r.e.-axiomatizability.
+\item[(R3)] any $F$-model $\cM$ extends to an $F_{\mathcal{P}(X)}$-model by interpreting $P$ as $\Fun_{(\infty, n)}((X^{\cM})^{\mathrm{op}}, \mathcal{S})$ in the ambient $(\infty, n)$-categorical semantics.
+\item[(R5a)] the Lambek--Scott adjunction for $F$ extends to $F_{\mathcal{P}(X)}$ via the Yoneda universal property of the presheaf $(\infty, n)$-category (Lurie~\cite{LurieHTT} \S 5.1.3; Riehl--Verity~\cite{RiehlVerity2022} for the $\infty$-cosmoid presentation). (R5b) lifts correspondingly.
+\end{itemize}
+Hence $F_{\mathcal{P}(X)} \in \cF$.
+
+\paragraph{Step 3 (presheaf embedding from $(\Pi_{3\text{-max}})$).}
+Apply $(\Pi_{3\text{-max}, S, n})$ to $F_{\mathcal{P}(X)}$: there exists an $(\infty, n)$-functor
+\[
+\rho \;:\; \Syn(F_{\mathcal{P}(X)}) \longrightarrow X \quad \text{in } \mathbf{StrCat}_{S, n},
+\]
+an $(\infty, n)$-equivalence onto its essential image --- in particular fully faithful. Restriction to the sort $P \simeq \mathcal{P}(X) := \Fun_{(\infty, n)}(X^{\mathrm{op}}, \mathcal{S})$ yields a fully-faithful $(\infty, n)$-functor
+\[
+\iota \;:=\; \rho|_P \;:\; \mathcal{P}(X) \;\hookrightarrow\; X \quad \text{in } \mathbf{StrCat}_{S, n}.
+\]
+No internal G\"odel coding of formulas has been invoked: $\iota$ is a morphism of the external ambient $(\infty, n)$-category.
+
+\paragraph{Step 4 (categorical Cantor contradiction).}
+Two facts combine to foreclose the existence of $\iota$:
+\begin{enumerate}[label=(\alph*)]
+\item \emph{Full-faithfulness reflects iso-classes.} A fully-faithful $(\infty, n)$-functor $\iota : \mathcal{C} \to \mathcal{D}$ sends non-equivalent objects to non-equivalent objects (it reflects isomorphisms via $\Hom_\mathcal{C}(A, B) \xrightarrow{\simeq} \Hom_\mathcal{D}(\iota A, \iota B)$; Lurie~\cite{LurieHTT} \S 1.2.10 for $(\infty, 1)$, Riehl--Verity~\cite{RiehlVerity2022} for general $(\infty, n)$). Consequently $\iota$ induces an injection
+\[
+\mathrm{Ob}(\mathcal{P}(X))/\!\simeq \;\hookrightarrow\; \mathrm{Ob}(X)/\!\simeq.
+\]
+\item \emph{Cantor for presheaf categories.} For any non-empty $(\infty, n)$-category $X$, point-evaluation at iso-classes yields a surjection $\mathrm{Ob}(\mathcal{P}(X))/\!\simeq \twoheadrightarrow \pi_0(\mathcal{S})^{\mathrm{Ob}(X)/\simeq}$. Since $\pi_0(\mathcal{S})$ contains at least the empty and terminal spaces,
+\[
+|\mathrm{Ob}(\mathcal{P}(X))/\!\simeq| \;\geq\; 2^{|\mathrm{Ob}(X)/\!\simeq|} \;>\; |\mathrm{Ob}(X)/\!\simeq|
+\]
+by Cantor's theorem applied in the ambient $\ZFC + 2\text{-}\mathrm{inacc}$ of Convention~\ref{conv:zfc-inacc}.
 \end{enumerate}
+Combining (a) and (b):
+\[
+2^{|\mathrm{Ob}(X)/\!\simeq|} \;\leq\; |\mathrm{Ob}(\mathcal{P}(X))/\!\simeq| \;\leq\; |\mathrm{Ob}(X)/\!\simeq| \;<\; 2^{|\mathrm{Ob}(X)/\!\simeq|},
+\]
+a contradiction. The case $\mathrm{Ob}(X) = \emptyset$ is excluded by $(\Pi_{3\text{-max}, S, n})$: any non-trivial $F \in \cF$ (e.g., $\ZFC$, $\MLTT$) must Morita-reduce to $X$, forcing $|\mathrm{Ob}(X)/\!\simeq| \geq 1$; the Cantor step then still gives $|\mathrm{Ob}(\mathcal{P}(X))/\!\simeq| \geq 2 > 1$, contradicting the injection.
 
-Combined, these establish: $(F_S)(X) \Rightarrow \neg (\Pi_{4, S, n})(X)$, contradicting the hypothesis.
-
-\subsection{Lemma 1: Definability Implies Model Interpretation}
-
-\begin{lemma}\label{lem:F-implies-model}
-If $X$ satisfies $(F_S)$, then there exists a Rich-foundation $F$ with $F \subseteq S$, a model $\cM \models F$, and an object $X^\cM \in \Ob(\cM)$ such that $X^\cM$ is the interpretation of $\phi_X$ in $\cM$.
-\end{lemma}
-
-\begin{proof}
-By definition of $(F_S)$, there exists $F$ and $\phi_X \in F$ specifying $X$. By (R3) applied to $F$, there exists $\cM \models F$. By G\"odel's completeness theorem for the first-order fragment of $F$, the formula $\phi_X$ has a unique interpretation $X^\cM \in \Ob(\cM)$ up to isomorphism in $\cM$.
-
-Specifically: the class of $\phi_X$-models in $\cM$ (i.e., the extension of $\phi_X$ under $\cM$) is nonempty and carries a canonical equivalence class. Any representative of this class can be chosen as $X^\cM$.
-
-For higher-categorical levels $n \geq 1$, the construction extends through (R5): $\Syn(F)$ is an $(\infty, n)$-category, and $X$ corresponds to an object in $\Syn(F)$. The model interpretation $X^\cM$ is the image of this object in $\cM$ under the canonical functor $\Syn(F) \to \cM$.
-\end{proof}
-
-\subsection{Lemma 2: Model Objects Are $S$-Definable}
-
-\begin{lemma}\label{lem:model-in-S}
-$\Ob(\cM) \subseteq \cS_S^{\mathrm{local}}$ for every model $\cM$ of a Rich-foundation $F \subseteq S$.
-\end{lemma}
-
-\begin{proof}
-Direct application of Definition~\ref{def:SS}: $\cS_S^{\mathrm{local}}$ consists by definition of objects in $\Ob(\cM)$ for models $\cM$ of $S$. Since $F \subseteq S$, models of $F$ are also models of $S$ (in the extension sense); thus $\Ob(\cM) \subseteq \cS_S^{\mathrm{local}} \subseteq \cS_S$.
-
-For higher-categorical $n$, the same holds after applying (R5): objects in the $(\infty, n)$-model category associated with $\cM$ lie in $\cS_S^{\mathrm{local}}$.
-\end{proof}
-
-\subsection{Lemma 3: Model Interpretation Is a Morita Reduction}
-
-\begin{lemma}\label{lem:interp-is-morita}
-Let $X$ satisfy $(F_S)$ with interpretation $X^\cM \in \cS_S^{\mathrm{local}}$. Then there exists an $(\infty, n)$-functor $\rho_{X, \cM} : X \to X^\cM$ that is an $(\infty, n)$-equivalence.
-\end{lemma}
-
-\begin{proof}
-By (R5), $X$ corresponds to an object in $\Syn(F)$, and $X^\cM$ is its image in the model category $\cM$. The \emph{evaluation functor} $\ev : \Syn(F) \to \cM$ is, by the standard Lambek--Scott categorical semantics, an $(\infty, n)$-functor preserving the categorical structure up to $(\infty, n)$-equivalence. Restricted to the object $X$, this yields $\rho_{X, \cM} := \ev|_X : X \to X^\cM$.
-
-That $\rho_{X, \cM}$ is an $(\infty, n)$-equivalence follows from the completeness of first-order logic (for $n = 0$) and from the internal-language / categorical-semantics correspondence for higher type theories: Awodey--Warren~\cite{AwodeyWarren2009} for the $(\infty, 1)$-case; Lurie~\cite{LurieHTT} \S 5 (presentable $(\infty, 1)$-categories) and \S 6 ($(\infty, 1)$-topoi) for the topos-theoretic semantics; and Kapulkin--Lumsdaine~\cite{KapulkinLumsdaine2021} for the simplicial model of univalent type theory. For the $(\infty, \infty)$ limit we use unicity (Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021}) together with the comparison of models of Bergner--Rezk~\cite{BergnerRezk2013}.
-\end{proof}
-
-\subsection{Proof of Theorem~\ref{thm:afnt-alpha}}
-
-\begin{proof}
-Suppose, for contradiction, that $X$ satisfies $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$ for some $S \in \RS$ and $n \in \mathbb{N} \cup \{\infty\}$.
-
-By $(F_S)$ and Lemma~\ref{lem:F-implies-model}: there exists $\cM \models F \subseteq S$ and $X^\cM \in \Ob(\cM)$.
-
-By Lemma~\ref{lem:model-in-S}: $X^\cM \in \cS_S^{\mathrm{local}} \subseteq \cS_S$.
-
-By Lemma~\ref{lem:interp-is-morita}: there exists an $(\infty, n)$-functor $\rho_{X, \cM} : X \to X^\cM$ that is an $(\infty, n)$-equivalence.
-
-This directly contradicts $(\Pi_{4, S, n})$, which asserts that no such $(\infty, n)$-equivalence to $\cS_S$ exists.
-
-Therefore, no $X$ satisfies $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$. Note that the argument does not use $(\Pi_{3\text{-max}})$: the contradiction arises from $(F_S)$ and $(\Pi_4)$ alone. Hence the theorem follows.
-\end{proof}
+Hence no $X$ satisfies $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$. \qed
 
 \subsection{Remarks}
 
-\begin{remark}
-The $(\alpha)$-part is the formal engine of AFN-T: it shows that any \emph{formally definable} Level-6 candidate fails automatically. The maximal generativity condition $(\Pi_{3\text{-max}})$ is not needed for the contradiction; it is included in the Level-6 definition because it is part of what makes an object a ``foundation,'' but its satisfaction is not relevant to the no-go.
+\begin{remark}[External vs. internal diagonalization]\label{rem:external-internal}
+The proof above operates in the ambient total category $\mathbf{StrCat}_{S, n}$, not inside the syntactic category $\Syn(F)$. The only internal-to-$F$ datum used is the formula $\phi_X$ of Step 1; the presheaf foundation $F_{\mathcal{P}(X)}$ (Step 2), the Morita reduction $\rho$ and its restriction $\iota$ (Step 3), and the categorical Cantor theorem (Step 4) are external categorical facts, not internal formulas of $F$. The Grothendieck--Cantor obstruction that delivers the contradiction is expressed in the ambient set theory of Convention~\ref{conv:zfc-inacc}, without internal G\"odel coding of $F$-formulas.
 \end{remark}
 
-\begin{remark}
-The proof generalizes the classical Tarski undefinability theorem: Tarski shows that the truth predicate cannot be defined within the language. AFN-T shows that the absolute foundation cannot be defined within any foundation. Both results use the same diagonal structure but applied at different levels of abstraction.
+\begin{remark}[Why the Tarski obstruction is avoided]\label{rem:tarski-obstruction}
+A natural but flawed attempt at the $(\alpha)$-part proceeds through an internal Cantor--Lawvere diagonal inside $\Syn(F)$: compose an internal G\"odel coding $\mathsf{Pred}_X(F) \hookrightarrow \mathbb{N}_F$ with a characteristic morphism to build a weakly point-surjective $\alpha : X \to 2^X$, and apply Lemma~\ref{lem:lawvere-2}. The transpose of this composition with the canonical evaluation $\mathsf{ev} : 2^X \times X \to 2$, however, is an $F$-internal universal predicate $\mathrm{Truth}_F(n, x)$ satisfying $F \vdash \mathrm{Truth}_F(\ulcorner \psi \urcorner, x) \Leftrightarrow \psi(x)$ --- precisely the truth predicate for $F$, prohibited by Tarski's undefinability theorem (applicable since every $F \in \cF$ contains Robinson arithmetic $Q$ by (R1) and admits internal G\"odel coding by (R4)). The external presheaf diagonalization of \S\ref{subsec:presheaf-diagonal} avoids this obstruction by replacing internal syntactic diagonalization with external categorical (Grothendieck--Cantor) diagonalization, using only the ambient set-theoretic Cantor theorem and the full-faithfulness of functors in $\mathbf{StrCat}_{S, n}$.
 \end{remark}
 
-\begin{remark}
-The result does not rule out informal or intuitive Level-6 candidates that fail formal definability. What AFN-T establishes is that any object satisfying the \emph{formal} conditions for being a mathematical foundation automatically fails absoluteness.
+\begin{remark}[Deflationary corollary]\label{rem:deflation}
+An independent, strictly weaker closure of Level~6 is available through the syntax--semantics bridge of Lemma~\ref{lem:SS-membership}: any $S$-definable $X$ lies in $\cS_S^{\mathrm{global}}$, so the identity $\id_X : X \to X$ realizes a trivial Morita reduction to $X \in \cS_S$, contradicting $(\Pi_{4, S, n})$. This deflation closes the pair $(F_S) \wedge (\Pi_{4, S, n})$ without invoking $(\Pi_{3\text{-max}})$, providing a tautological belt-and-suspenders closure of $\mathcal{L}_6 = \emptyset$. The non-trivial content of Theorem~\ref{thm:afnt-alpha} is the presheaf diagonal of \S\ref{subsec:presheaf-diagonal}, which exhibits the genuine structural incompatibility between formal definability and maximal generativity through external categorical Cantor.
 \end{remark}
+
+\begin{remark}[Relation to classical no-go results]\label{rem:classical-nogo}
+Theorem~\ref{thm:afnt-alpha} is the $\cF$-Morita generalization of Cantor's theorem: the maximal-generativity condition $(\Pi_{3\text{-max}})$ forces the presheaf category $\mathcal{P}(X)$ --- viewed as a Rich-foundation via $F_{\mathcal{P}(X)}$ --- to embed fully-faithfully into $X$, contradicting Cantor. The subsumption of the full classical no-go series (Cantor, Russell, G\"odel, Tarski, Lawvere fixed-point, Ernst) under this schema is recorded in \S\ref{sec:series}.
+\end{remark>
 
 \section{The Absolute Foundation No-Go Theorem: $(\beta)$-Part}\label{sec:afnt-beta}
 
@@ -808,21 +708,28 @@ Therefore, $A_\infty$ is Morita-reducible to the underlying model-category colim
 
 \subsection{Proper-Class Towers Do Not Provide an Escape}
 
-One might hope to evade Theorem~\ref{thm:afnt-beta} by considering a sequence indexed by the \emph{proper class} of all ordinals, for which the accessibility argument of Ad\'amek--Rosick\'y~\cite{AdamekRosicky1994} does not immediately apply. We show that this is not a real escape path.
+One might hope to evade Theorem~\ref{thm:afnt-beta} by considering a sequence indexed by the \emph{proper class} of all ordinals, for which the accessibility argument of Ad\'amek--Rosick\'y~\cite{AdamekRosicky1994} does not immediately apply. A naive counting of G\"odel codes is inadequate: a transfinite reflection tower such as $S \mapsto S + \Con(S)$ iterated along $\mathrm{Ord}$ is generated by a \emph{single} recursive scheme, not a distinct axiom per ordinal. We accordingly close the proper-class path by R-S-closure, dichotomizing on whether the tower's limit is itself formally specifiable inside some Rich-metatheory.
 
-\begin{proposition}[Proper-class towers violate (R2)]\label{prop:proper-class}
-Let $\{A_\alpha\}_{\alpha \in \mathrm{Ord}}$ be a sequence indexed by the proper class of all ordinals, and suppose each $A_\alpha$ is formally specified within a Rich-foundation $F_\alpha$ over a metatheory $S$. Then the indexing data $(\alpha \mapsto F_\alpha, \phi_{A_\alpha})$ cannot be $S$-recursively enumerable, so $S$ itself fails condition (R2).
+\begin{proposition}[Proper-class towers: $\RS$-closure dichotomy]\label{prop:proper-class}
+Let $\{A_\alpha\}_{\alpha \in \mathrm{Ord}}$ be a proper-class-indexed tower with each $A_\alpha$ formally specified within a Rich-foundation $F_\alpha$ over a metatheory $S$, and let $A_\infty := \colim_{\alpha \in \mathrm{Ord}} A_\alpha$ denote the intended limit. Exactly one of the following holds.
+\begin{itemize}
+\item[\textbf{(a)}] \emph{Uniformly generated tower.} There exists a single recursive generating scheme $\psi(\alpha, A)$ in some metatheory $S_{\mathrm{tow}} \supseteq S$ such that $\psi$ specifies $\alpha \mapsto (F_\alpha, \phi_{A_\alpha})$ uniformly for all $\alpha \in \mathrm{Ord}$. If the limit $A_\infty$ admits a formula $\phi_{A_\infty}$ in $S_{\mathrm{tow}}$ and $S_{\mathrm{tow}} \in \RS$, then $A_\infty$ satisfies $(F_{S_{\mathrm{tow}}})$ and Theorem~\ref{thm:afnt-alpha} applied to $S_{\mathrm{tow}}$ forecloses Level~6 at $A_\infty$.
+\item[\textbf{(b)}] \emph{Non-uniformly generated tower.} There is no single recursive scheme in any $S' \in \RS$ generating the tower; the specification assignment $\alpha \mapsto (F_\alpha, \phi_{A_\alpha})$ is not $S'$-recursively enumerable for any $S' \in \RS$.
+\end{itemize}
+In case (b), the tower falls outside the scope of Definition~\ref{def:level6}: the limit $A_\infty$ cannot witness $(F_{S'})$ for any $S' \in \RS$, since $(F_{S'})$ requires a formula of $S'$ by (F-3) and (R2) forces any such formula to be r.e.-axiomatized.
 \end{proposition}
 
 \begin{proof}
-By (R4), each specification $(F_\alpha, \phi_{A_\alpha})$ admits a G\"odel code $\ulcorner (F_\alpha, \phi_{A_\alpha}) \urcorner \in \mathbb{N}$ in $S$. A proper-class-indexed family would require a surjection $\mathrm{Ord} \twoheadrightarrow \mathbb{N}$-valued assignment whose domain is a proper class; by Cantor's theorem such a surjection cannot be $S$-definable with countable $S$. Equivalently: the set of codes $\{\ulcorner (F_\alpha, \phi_{A_\alpha}) \urcorner : \alpha \in \mathrm{Ord}\}$ would have to be a definable $S$-class of cardinality $> \kappa_2$, contradicting (R2) (r.e.\ axiomatization forces the codes to form an r.e.\ subset of $\mathbb{N}$).
+\textbf{(a)} By hypothesis, the recursive scheme $\psi$ is a formula of $S_{\mathrm{tow}}$, and the limit is specified by the closure formula $\phi_{A_\infty}(A) \equiv \forall \alpha\,\psi(\alpha, A) \Rightarrow A = A_\alpha\text{-limit}$ (expressible in $S_{\mathrm{tow}}$ since $\mathrm{Ord}$ is an $S_{\mathrm{tow}}$-class). If $S_{\mathrm{tow}} \in \RS$, then Definition~\ref{def:F} yields $(F_{S_{\mathrm{tow}}})(A_\infty)$. Theorem~\ref{thm:afnt-alpha} applied to $(S_{\mathrm{tow}}, n)$ then forecloses the conjunction $(F_{S_{\mathrm{tow}}}) \wedge (\Pi_{3\text{-max}, S_{\mathrm{tow}}, n})$ at $A_\infty$: no Level-6 escape.
+
+\textbf{(b)} Suppose, toward contradiction, that $A_\infty$ satisfies $(F_{S'})$ for some $S' \in \RS$. By (F-3), there is a formula $\phi_{A_\infty} \in S'$ classifying $A_\infty$. By (R2), $S'$ is r.e.-axiomatized, so the derivation structure of $\phi_{A_\infty}$ is $S'$-recursively enumerable. Unfolding $\phi_{A_\infty}$ through the tower construction yields an $S'$-r.e.\ generating formula for the sequence $\alpha \mapsto (F_\alpha, \phi_{A_\alpha})$, contradicting non-uniformity. Hence $A_\infty$ satisfies no $(F_{S'})$ for $S' \in \RS$, and is not a Level-6 candidate.
 \end{proof}
 
 \begin{corollary}[No proper-class escape]\label{cor:no-proper-class}
-Proper-class towers lie outside $\RS$. In particular, they cannot produce a Level-6 counterexample within any Rich-metatheory.
+In both cases of Proposition~\ref{prop:proper-class}, proper-class-indexed towers produce no Level-6 witness: case (a) reduces to Theorem~\ref{thm:afnt-alpha} applied at a suitable Rich-metatheory, case (b) is disqualified by failure of formal definability.
 \end{corollary}
 
-Thus Theorem~\ref{thm:afnt-beta} exhausts the relevant tower constructions: set-sized transfinite towers are reduced by accessibility, and proper-class towers fall outside the scope of Rich-metatheories.
+Thus Theorem~\ref{thm:afnt-beta} exhausts the relevant tower constructions: set-sized transfinite towers are reduced by accessibility, and proper-class towers are handled by Proposition~\ref{prop:proper-class} --- either absorbed into the $(\alpha)$-part at a larger Rich-metatheory, or dismissed as non-r.e.\ and therefore outside the Level-6 conditions.
 
 \subsection{Concrete Towers}
 
@@ -866,14 +773,14 @@ We now combine the $(\alpha)$- and $(\beta)$-parts into the unified theorem.
 \begin{theorem}[Absolute Foundation No-Go Theorem, AFN-T]\label{thm:afnt}
 For every $S \in \RS$ and every $n \in \mathbb{N} \cup \{\infty\}$:
 \begin{enumerate}
-\item No object $X$ satisfying $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$ exists as a definable structure (Theorem~\ref{thm:afnt-alpha}).
-\item No limit $A_\infty$ of a transfinite sequence $\{A_\kappa\}_{\kappa < \lambda}$ of approximations satisfies $(\Pi_{4, S, n})$ (Theorem~\ref{thm:afnt-beta}).
+\item No object $X$ satisfying $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$ exists (Theorem~\ref{thm:afnt-alpha}, by external Grothendieck--Cantor diagonal via the presheaf Rich-foundation $F_{\mathcal{P}(X)}$), whence $\mathcal{L}_6 = \emptyset$ (Corollary~\ref{cor:level6-empty-alpha}).
+\item No limit $A_\infty$ of a transfinite sequence $\{A_\kappa\}_{\kappa < \lambda}$ of approximations satisfies $(\Pi_{4, S, n})$ (Theorem~\ref{thm:afnt-beta}); proper-class-indexed towers are absorbed into item 1 or fall outside $\RS$ (Proposition~\ref{prop:proper-class}).
 \end{enumerate}
 Thus Level-6 is structurally empty.
 \end{theorem}
 
 \begin{proof}
-Immediate from Theorems~\ref{thm:afnt-alpha} and~\ref{thm:afnt-beta}.
+Immediate from Theorem~\ref{thm:afnt-alpha} (with Corollary~\ref{cor:level6-empty-alpha}), Theorem~\ref{thm:afnt-beta}, and Proposition~\ref{prop:proper-class}.
 \end{proof}
 
 \section{Five-Axis Absoluteness}\label{sec:five-axis}
@@ -916,13 +823,14 @@ AFN-T (Theorem~\ref{thm:afnt}) holds for every $S \in \RS$ uniformly: there is a
 \end{theorem}
 
 \begin{proof}
-The proof of Theorem~\ref{thm:afnt-alpha} makes no assumption about $S$ beyond (R1)--(R5). Specifically:
+The proof of Theorem~\ref{thm:afnt-alpha} uses only (R1)--(R5) uniformly in $S$:
 \begin{itemize}
-\item Lemma~\ref{lem:F-implies-model} uses only (R3) (model existence) and G\"odel completeness for first-order logic, which holds for every $S$ satisfying (R1)--(R2).
-\item Lemma~\ref{lem:model-in-S} uses only the definition of $\cS_S$ (Definition~\ref{def:SS}).
-\item Lemma~\ref{lem:interp-is-morita} uses only (R5) (categorical semantics) and Lambek--Scott duality, which extends to all categorical semantics in $(\infty, n)$-categories.
+\item Step 1 ($\mathbf{U}_1$-smallness of $X$) uses (R1).
+\item Step 2 (conservative extension $F_{\mathcal{P}(X)} \in \cF$) uses (R2)--(R5), all preserved under the extension by a single defined sort.
+\item Step 3 (presheaf embedding $\iota : \mathcal{P}(X) \hookrightarrow X$) uses only the assumed condition $(\Pi_{3\text{-max}, S, n})$ applied to $F_{\mathcal{P}(X)}$.
+\item Step 4 (categorical Cantor) uses the ambient $\ZFC + 2\text{-}\mathrm{inacc}$ of Convention~\ref{conv:zfc-inacc} and standard $(\infty, n)$-categorical properties of fully-faithful functors.
 \end{itemize}
-Thus the proof is uniform in $S$, and the theorem applies to all $S \in \RS$.
+No datum from $S$ beyond (R1)--(R5) is invoked. Hence the proof applies uniformly to all $S \in \RS$.
 \end{proof}
 
 \subsection{Vertical Axis: Over Categorical Levels}
@@ -932,37 +840,11 @@ AFN-T (Theorem~\ref{thm:afnt}) holds for every categorical level $n \in \mathbb{
 \end{theorem}
 
 \begin{proof}
-The proof of Theorem~\ref{thm:afnt-alpha} uses (R5) to establish the $(\infty, n)$-categorical semantics of $S$. For each $n$, this semantics exists and supports Lambek--Scott duality (classical for $n = 0, 1$; Lurie~\cite{LurieHTT} \S 5--\S 6 for $n = 1$ via $(\infty, 1)$-topos semantics; and, for general $(\infty, n)$, the unicity theorem of Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021} together with the comparison of models of Bergner--Rezk~\cite{BergnerRezk2013}).
+The presheaf diagonal of Theorem~\ref{thm:afnt-alpha} relies on (R5a) to define $\Fun_{(\infty, n)}(X^{\mathrm{op}}, \mathcal{S})$ and to extend the Lambek--Scott adjunction to $F_{\mathcal{P}(X)}$. For each $n$, the presheaf $(\infty, n)$-category exists: classical for $n = 0, 1$; Lurie~\cite{LurieHTT} \S 5.1 for the $(\infty, 1)$-case; for general $(\infty, n)$, the unicity theorem of Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021} together with Bergner--Rezk~\cite{BergnerRezk2013} model comparison extends the Yoneda universal property.
 
-For the limit $n = \infty$: the $(\infty, \infty)$-categorical semantics exists via the stabilization
-\[ (\infty, \infty)\text{-}\Cat = \colim_{n < \infty} (\infty, n)\text{-}\Cat. \]
-The evaluation functor $\ev : \Syn(S) \to \cM$ extends to this limit, and the argument of Lemma~\ref{lem:interp-is-morita} applies.
-\end{proof}
-
-\begin{theorem}[Direct $(\infty, \infty)$-AFN-T for classical $S$]\label{thm:direct-infty}
-Let $S \in \RS$ be a \emph{classical} Rich-metatheory --- i.e., one whose internal logic of propositions contains the law of excluded middle, so that the Heyting algebra of internal truth values collapses to a Boolean algebra. Then AFN-T at the limit level $n = \infty$ admits a direct proof via the $(\infty, \infty)$-Lawvere fixed-point theorem, without reduction to finite $n$.
-\end{theorem}
-
-\begin{remark}[Scope of Theorem~\ref{thm:direct-infty}]\label{rem:direct-infty-scope}
-The classical restriction is essential for Step~5 below, which uses that internal negation has no fixed point in a Boolean algebra with at least two distinct truth values. For constructive (intuitionistic) $S \in \RS$ --- including $\HoTT$, $\MLTT$, $\CIC$, and $\CZF$ --- Theorem~\ref{thm:direct-infty} does not apply, but the main AFN-T (Theorem~\ref{thm:afnt}) remains valid, since Theorems~\ref{thm:afnt-alpha} and~\ref{thm:afnt-beta} rely on (R1)--(R5) without classicality, proceeding through Lambek--Scott reflection rather than Lawvere fixed-point. A constructive analogue of the Lawvere fixed-point (Escard\'o~\cite{Escardo2004} for computable sequentially compact spaces; constructively-valid forms available in intuitionistic topoi) yields a weaker but analogous statement for constructive $S$; we do not pursue it here.
-\end{remark}
-
-\begin{proof}[Proof of Theorem~\ref{thm:direct-infty}]
-The proof parallels Theorem~\ref{thm:afnt-alpha} but uses the Lawvere fixed-point lemma at level $(\infty, \infty)$ directly, avoiding reduction to finite $n$.
-
-\textbf{Step 1} (setup). Suppose, for contradiction, $X$ satisfies $(F_S) \wedge (\Pi_{4, S, \infty}) \wedge (\Pi_{3\text{-max}, S, \infty})$ for some classical $S \in \RS$ with intrinsic categorical depth $n_S = \infty$ (i.e., $\Syn(S)$ is an $(\infty, \infty)$-category). By $(F_S)$, there exists $F$ with subtheory inclusion $(\iota_F, \iota_F^*) : F \subseteq S$ and $\phi_X \in F$ specifying $X$. By (R5) applied at $n = \infty$, $\Syn(F)$ is an $(\infty, \infty)$-category, and $X \in \Ob(\Syn(F))$.
-
-\textbf{Step 2} ($(\infty, \infty)$-cartesian closed ambient category). We do \emph{not} require the existence of a full $(\infty, \infty)$-topos for $S$ (the theory of $(\infty, \infty)$-topoi is not completely canonical in the current literature). Instead we work in the ambient $(\infty, \infty)$-cartesian closed category
-\[ \cC_S := \colim_{n < \infty} \Syn^{(\infty, n)}(S), \]
-the colimit of the finite-depth syntactic categories, which exists and is cartesian closed in $(\infty, \infty)$-$\Cat$ by the $(\infty, \infty)$-stabilization of Theorem~\ref{thm:bergner-lurie-stab} together with the comparison of models of Bergner--Rezk~\cite{BergnerRezk2013} and the unicity theorem of Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021}. Inside $\cC_S$ there is a \emph{truth-values object} $\mathbf{Prop}_S$ (the classifier of $(-1)$-truncated objects, specialized from the $(\infty, 1)$ theory of Lurie HTT~\cite{LurieHTT} \S 6.5.1 via the truncation-stable inclusion $(\infty, 1)\text{-}\Cat \hookrightarrow (\infty, \infty)\text{-}\Cat$), which by the classicality assumption on $S$ is a Boolean $(\infty, \infty)$-algebra --- i.e., its truth-value lattice contains $\top \neq \bot$ as distinguishable constants and $\top \vee \bot = \top$, $\neg_S(\top) = \bot$, $\neg_S(\bot) = \top$.
-
-\textbf{Step 3} (coherent Yoneda embedding). Because $X \in \cF$ and $(\Pi_{3\text{-max}})(X)$ holds, every $F \in \cF$ Morita-reduces into $X$ at level $(\infty, \infty)$. This gives a family of coherent $(\infty, \infty)$-functors $\{F \to X\}_{F \in \cF}$ forming, through Grothendieck straightening (Lurie HTT~\cite{LurieHTT} \S 3.2), a coherently surjective Yoneda-style embedding $y_X : X \to \Fun_{(\infty, \infty)}(X^{\mathrm{op}}, \cC_S)$. Coherent surjectivity is the structural content of maximal generativity.
-
-\textbf{Step 4} (Lawvere fixed-point). By Lemma~\ref{lem:lawvere-inf} (Lawvere fixed-point at $(\infty, \infty)$), the existence of a coherently surjective $y_X$ in the $(\infty, \infty)$-cartesian closed category $\cC_S$ implies that every endomorphism $f : \mathbf{Prop}_S \to \mathbf{Prop}_S$ has an $(\infty, \infty)$-coherent fixed point.
-
-\textbf{Step 5} (contradiction via classical negation). Apply Step 4 to $f = \neg_S : \mathbf{Prop}_S \to \mathbf{Prop}_S$, the internal negation of $S$. By the classicality assumption on $S$ (Boolean internal logic), $\neg_S$ has no fixed point: a fixed point $t$ would satisfy $t = \neg_S(t)$, whence $t \vee \neg_S(t) = t$, but classicality gives $t \vee \neg_S(t) = \top$; combined with $t = \neg_S(t)$ this forces $t = \top = \neg_S(t) = \bot$, contradicting $\top \neq \bot$. This contradicts Step~4.
-
-Therefore no $X$ satisfies $(F_S) \wedge (\Pi_{4, S, \infty}) \wedge (\Pi_{3\text{-max}, S, \infty})$ for classical $S$.
+For the limit $n = \infty$: the presheaf construction stabilizes via
+\[ (\infty, \infty)\text{-}\Cat = \colim_{n < \infty} (\infty, n)\text{-}\Cat, \]
+and the categorical Cantor step transfers coherently: fully-faithfulness at level $\infty$ reflects iso-classes, and the Cantor bound $2^{|\mathrm{Ob}(X)/\!\simeq|} > |\mathrm{Ob}(X)/\!\simeq|$ holds at every level, hence at the colimit.
 \end{proof}
 
 \subsection{Meta-Vertical Axis: Over Meta-Iterations}
@@ -1066,7 +948,7 @@ Theorem~\ref{thm:completeness} is conditional: it holds for theories satisfying 
 AFN-T is absolute along five independent structural axes:
 \begin{enumerate}
 \item Horizontal (over $S \in \RS$): Theorem~\ref{thm:horizontal}.
-\item Vertical (over $n \in \mathbb{N} \cup \{\infty\}$): Theorem~\ref{thm:vertical}, with direct $(\infty, \infty)$-proof in Theorem~\ref{thm:direct-infty}.
+\item Vertical (over $n \in \mathbb{N} \cup \{\infty\}$): Theorem~\ref{thm:vertical}; the case $n = \infty$ follows from finite levels via $(\infty, \infty)$-stabilization (Theorem~\ref{thm:bergner-lurie-stab}).
 \item Meta-vertical (over meta-iterations): Theorem~\ref{thm:meta-vertical}.
 \item Lateral (over alternative orderings): Theorem~\ref{thm:lateral}.
 \item Completeness (within $\cL\cS$): Theorem~\ref{thm:completeness}.
@@ -1078,16 +960,14 @@ Thus for every quintuple $(S, n, \mu, \xi, \pi)$ where $S \in \RS$, $n \in \math
 Immediate from the five component theorems.
 \end{proof}
 
-\begin{remark}[On the logical independence of the five axes]\label{rem:axes-dependence}
-The five axes of Theorem~\ref{thm:five-axis} are pedagogically distinct but not all logically independent. Specifically:
-
+\begin{remark}[Logical structure of the five axes]\label{rem:axes-dependence}
+The five axes of Theorem~\ref{thm:five-axis} are not all logically independent:
 \begin{itemize}
-\item The \emph{completeness axis} (\S\ref{sec:completeness-axis}, conditional on $\cL\cS$) subsumes the horizontal axis: every R-S lies in $\cL\cS$ by the tautological choice of $\Syn = S$ and $\Mod = \Mod(S)$ guaranteed by (R5). Hence horizontal absoluteness is a consequence of completeness absoluteness restricted to R-S theories.
-\item The \emph{lateral axis} (Theorem~\ref{thm:lateral}) reduces to the vertical axis via the translations of alternative orderings into $(\infty, n)$-$\Cat$ at appropriate $n$ (Ara--Maltsiniotis~\cite{AraMaltsiniotis2017} and the unicity theorem of Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021}); it is not a genuinely independent axis.
-\item The \emph{meta-vertical axis} (Theorem~\ref{thm:meta-vertical}) is the closure of the vertical axis under meta-iteration $\mu$, stabilized by the $(\infty, \infty)$-theorem~\ref{thm:bergner-lurie-stab}.
+\item The \emph{completeness axis} (\S\ref{sec:completeness-axis}, conditional on $\cL\cS$) subsumes the horizontal axis: every R-S lies in $\cL\cS$ via the tautological choice of $\Syn = S$ and $\Mod = \Mod(S)$ guaranteed by (R5).
+\item The \emph{lateral axis} (Theorem~\ref{thm:lateral}) reduces to the vertical axis via the translations of alternative orderings into $(\infty, n)$-$\Cat$ at appropriate $n$ (Ara--Maltsiniotis~\cite{AraMaltsiniotis2017} and the unicity theorem of Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021}).
+\item The \emph{meta-vertical axis} (Theorem~\ref{thm:meta-vertical}) is the closure of the vertical axis under meta-iteration $\mu$, stabilized by Theorem~\ref{thm:bergner-lurie-stab}.
 \end{itemize}
-
-A minimal logically-independent presentation would therefore feature just two axes: horizontal (over R-S) and vertical (over $(\infty, n)$), with the remaining three derived from them through well-established structural reductions. We retain the five-axis formulation because each axis addresses a distinct class of attempted bypass arguments in the foundational literature, and naming them separately aids the reader in locating the relevant closure argument.
+A minimal logically-independent presentation features two axes: horizontal (over R-S) and vertical (over $(\infty, n)$). The five-axis formulation corresponds to five distinct classes of bypass arguments each of which requires a dedicated closure; naming the axes separately enables precise reference.
 \end{remark}
 
 \section{Three Standard Bypass Paths}\label{sec:bypass}
@@ -1339,7 +1219,7 @@ A meta-structure $\mathbf{F} \in \Meta_{5+}$ is \textbf{maximal} if additionally
 \begin{itemize}
 \item \textbf{(Max-1) Full classification}: $\image(\Cl_{\mathbf{F}}) = \fM$.
 \item \textbf{(Max-2) Gauge-fullness}: $\mathrm{Aut}_2(\mathbf{F})$ acts transitively on gauge classes in $\image(\Cl_{\mathbf{F}})$.
-\item \textbf{(Max-3) Depth stratification}: $\mathbf{F}$ admits a \emph{depth-indexed filtration} $\mathbf{F}^{(0)} \hookrightarrow \mathbf{F}^{(1)} \hookrightarrow \cdots \hookrightarrow \mathbf{F}^{(n)} \hookrightarrow \cdots$ with $\mathbf{F} \simeq_2 \colim_{n < \omega} \mathbf{F}^{(n)}$, such that every comprehension-style predicate $P$ of depth $n$ is evaluated using only objects of depth $< n$. Formally: for any predicate $P : \mathbf{F}^{(n)} \to \{0, 1\}$ appearing in a definition of an object in $\mathbf{F}^{(n)}$, all occurrences of the reflection operator $R_\mathbf{F}$, classification $\Cl_\mathbf{F}$, and subobject-classifier evaluations in $P$ have target depth strictly less than $n$.
+\item \textbf{(Max-3) Depth stratification}: $\mathbf{F}$ admits a \emph{depth-indexed filtration} $\mathbf{F}^{(0)} \hookrightarrow \mathbf{F}^{(1)} \hookrightarrow \cdots \hookrightarrow \mathbf{F}^{(n)} \hookrightarrow \cdots$ of accessible $2$-subcategories with $\mathbf{F} \simeq_2 \colim_{n < \omega} \mathbf{F}^{(n)}$, equipped with a \emph{depth function} $\dep : \Ob(\mathbf{F}) \to \omega$ assigning to each object the least $n$ such that the object lies in $\mathbf{F}^{(n)}$, satisfying the following \emph{predicativity condition}: for every predicate $P$ appearing in a definition by comprehension of an object $A \in \mathbf{F}^{(n)}$ (i.e., the definition has the form ``$A :=$ the object classifying $\{x : P(x)\}$''), every object $Y$ that appears as the target of a sub-expression in $P$ --- in particular every target of $R_\mathbf{F}$, $\Cl_\mathbf{F}$, or subobject-classifier evaluations --- satisfies $\dep(Y) < n$.
 \item \textbf{(Max-4) Intensional completeness}: there exists a $2$-functor $\II_{\mathbf{F}} : \mathbf{F}^{\mathrm{op}} \to \Sint$ satisfying properties (I-1)--(I-4) of Theorem~\ref{thm:I-existence}.
 \end{itemize}
 We denote the class of maximal meta-structures as $\Meta_{5+}^{\max}$.
@@ -1354,39 +1234,50 @@ The depth-stratification condition (Max-3) is a single axiom with bounded arity 
 \item \emph{Burali-Forti}: the class of all ordinals at depth $n$ includes its own ordinal.
 \item \emph{Girard $\mathrm{Type} : \mathrm{Type}$}: universe-in-itself violates depth-indexing.
 \end{itemize}
-Thus (Max-3) replaces the enumerative list of paradox families with a single structural condition that entails immunity from \emph{every} comprehension paradox reducible to depth-circularity, not only the five named above.
+Thus (Max-3), as a single structural condition, entails immunity from \emph{every} comprehension paradox reducible to depth-circularity --- not only the five listed above, which are subsumed as instances.
 \end{remark}
 
-\subsection{Conditional Meta-Categoricity}
+\subsection{Meta-Categoricity}
 
-\begin{theorem}[Conditional meta-categoricity]\label{thm:meta-cat}
-Let $\mathbf{F}_1, \mathbf{F}_2 \in \Meta_{5+}^{\max}$ be parametrized by the same Rich-metatheory $S \in \RS$. Then
-\[ \mathbf{F}_1 \simeq_{(\infty, \infty)} \mathbf{F}_2, \]
-i.e., $\mathbf{F}_1$ and $\mathbf{F}_2$ are $(\infty, \infty)$-equivalent.
+\begin{theorem}[Meta-Categoricity]\label{thm:meta-cat}
+Let $\mathbf{F}_1, \mathbf{F}_2 \in \Meta_{5+}^{\max}$ be parametrized by the same Rich-metatheory $S \in \RS$. Then $\mathbf{F}_1 \simeq_{(\infty, \infty)} \mathbf{F}_2$ via a canonical equivalence.
 \end{theorem}
 
 \begin{proof}
+We show that each $\mathbf{F}_i$ is canonically $(\infty, \infty)$-equivalent to a common object $\mathbf{F}_S^*$ constructed from $S$, whence $\mathbf{F}_1 \simeq_{(\infty, \infty)} \mathbf{F}_S^* \simeq_{(\infty, \infty)} \mathbf{F}_2$.
 
-\textbf{Step 1} (axioms form an accessible $2$-theory). Conditions (M1)--(M5) and (Max-1)--(Max-4) together form an \emph{accessible $2$-theory} $T_{5+}^{\max}$ in the sense of Ad\'amek--Rosick\'y~\cite{AdamekRosicky1994}. Verification:
-\begin{itemize}
-\item \textbf{r.e.\ axiomatization}: (M1)--(M5) and (Max-1)--(Max-4) together form a finite-to-r.e.\ set of conditions.
-\item \textbf{Arity bounded}: all conditions are formulated in $2$-categorical language with bounded arity.
-\item \textbf{Accessibility}: (M3) explicitly requires accessibility; (Max-1)--(Max-4) preserve it.
-\end{itemize}
-Thus $T_{5+}^{\max}$ is an accessible $2$-theory.
+\textbf{Step 1: the canonical maximal classifier.} Let $\rho : \cF \to (\infty, n_S)\text{-}\Cat$ be the classification functor of Convention~\ref{conv:notation}. Consider the $(\infty, 2)$-Grothendieck construction~\cite{LurieHTT} \S 3.2 applied to the Cartesian fibration $\int \rho \to S$, with gauge-quotient:
+\[ \mathbf{F}_S^* := \mathbf{St}(\rho) / \mathrm{gauge}, \]
+where $\mathbf{St}(\rho)$ is the straightening of $\rho$. By construction, $\mathbf{F}_S^*$ is a locally small $2$-category, its classification functor $\Cl_{\mathbf{F}_S^*}$ is essentially surjective onto $\fM$ (so (Max-1) is satisfied), and its $2$-automorphism group $\mathrm{Aut}_2(\mathbf{F}_S^*)$ is the canonical gauge action of $\fM$ on itself (so (Max-2) is satisfied).
 
-\textbf{Step 2} (accessible-category representation and categoricity). By the Lair--Makkai--Par\'e representation theorem for accessible $2$-theories (Lair~\cite{Lair1981}; Makkai--Par\'e~\cite{MakkaiPare1989} Chapter 3; see also Ad\'amek--Rosick\'y~\cite{AdamekRosicky1994} Chapter 2), every accessible $2$-theory is biequivalent to the $2$-category of models of a sketch. Any two model $2$-categories of $T_{5+}^{\max}$ that satisfy the same (Max-1)--(Max-4) maximality profile are determined up to canonical $2$-equivalence by the shared sketch.
+\textbf{Step 2: construction of $\Phi_\mathbf{F}$.} Any $\mathbf{F} \in \Meta_{5+}^{\max}$ carries four structures: a classification functor $\Cl_{\mathbf{F}} : \mathbf{F} \to \fM$ essentially surjective onto $\fM$ by (Max-1); a transitive $\mathrm{Aut}_2$-action on gauge classes by (Max-2); a canonical depth filtration $\mathbf{F}^{(\bullet)}$ by (Max-3); a canonical intensional completion $\II_{\mathbf{F}} : \mathbf{F}^{\mathrm{op}} \to \Sint$ with (I-1)--(I-4) by (Max-4).
 
-Formally: the maximality conditions (Max-1)--(Max-4) fix the classification image, the gauge action, the stratification profile, and the intensional completion uniquely up to coherent $2$-isomorphism. By Makkai--Par\'e~\cite{MakkaiPare1989} Theorem 3.4.1 (categoricity of accessible theories determined by their model category), $\mathbf{F}_1 \simeq_2 \mathbf{F}_2$. There is thus a $2$-functor $\Phi : \mathbf{F}_1 \xrightarrow{\simeq_2} \mathbf{F}_2$ with accessible inverse $\Phi^{-1}$.
+Each of these structures admits a universal presentation on $\mathbf{F}_S^*$: the classification is tautological (identity on $\fM$), the gauge is the canonical one, the depth filtration is the Grothendieck-construction stratification, and $\II_{\mathbf{F}_S^*}$ is the Yoneda-style embedding into $\Sint$ factoring through the slice-locality projection $\tilde\pi$ (Theorem~\ref{thm:slice-locality}). By the universal property of Grothendieck straightening (Lurie HTT~\cite{LurieHTT} Theorem 3.2.0.1) applied in the $(\infty, 2)$-category $\mathbf{StrCat}_{S, 2}$, there exists a unique (up to canonical $(\infty, 2)$-isomorphism) $2$-functor
+\[ \Phi_\mathbf{F} : \mathbf{F} \to \mathbf{F}_S^* \]
+preserving all four structures.
 
-\textbf{Step 3} (extension to $(\infty, \infty)$). By Lurie HTT~\cite{LurieHTT} \S 5.4.2 (accessible $(\infty, 1)$-categories), combined with the $\Theta_n$-space model of Rezk~\cite{Rezk2010} and the unicity theorem of Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021}, accessible $(\infty, n)$-theories for each $n \in \mathbb{N}$ satisfy $(\infty, n)$-categoricity.
+\textbf{Step 3: $\Phi_\mathbf{F}$ is essentially surjective.} For every gauge-class $[\alpha] \in \fM$, (Max-1) gives $A \in \mathbf{F}$ with $\Cl_\mathbf{F}(A) = [\alpha]$, and $\Phi_\mathbf{F}(A)$ projects to the same class in $\mathbf{F}_S^*$. Transitivity of the $\mathrm{Aut}_2(\mathbf{F})$-action on gauge classes (Max-2) ensures this covers all of $\mathbf{F}_S^*$.
 
-The passage $n \to \infty$ requires verifying that the family of $(\infty, n)$-categorical equivalences is coherent. Write $\Phi_n : \tau_{\leq n}(\mathbf{F}_1) \xrightarrow{\simeq_n} \tau_{\leq n}(\mathbf{F}_2)$ for the equivalence at each finite level. Since the truncation functors $\tau_{\leq n}$ preserve accessible structure and commute with the categorical-depth embeddings of Convention~\ref{conv:notation}, the family $\{\Phi_n\}_{n \in \mathbb{N}}$ is coherent: $\tau_{\leq n} \Phi_{n+1} \simeq \Phi_n \circ \tau_{\leq n}$ up to a natural $2$-isomorphism. The colimit of the family exists in $(\infty, \infty)$-$\Cat$ by the $(\infty, \infty)$-stabilization of Theorem~\ref{thm:bergner-lurie-stab} and yields an $(\infty, \infty)$-equivalence $\Phi_\infty : \mathbf{F}_1 \xrightarrow{\simeq_{(\infty, \infty)}} \mathbf{F}_2$.
+\textbf{Step 4: $\Phi_\mathbf{F}$ is fully faithful.} We prove that for every $A, B \in \mathbf{F}$ the induced map
+\[ \Phi_\mathbf{F} : \Hom_\mathbf{F}(A, B) \longrightarrow \Hom_{\mathbf{F}_S^*}(\Phi_\mathbf{F}(A), \Phi_\mathbf{F}(B)) \]
+is an equivalence of Hom-spaces.
 
-Applying the Whitehead-type criterion (Lemma~\ref{lem:whitehead} in Appendix~\ref{app:categorical}): a $2$-functor between accessible $(\infty, \infty)$-categories that is a $2$-equivalence at every finite truncation is itself an $(\infty, \infty)$-equivalence. Since $\Phi$ is a $2$-equivalence (Step 2) and extends coherently to each truncation, it lifts to an $(\infty, \infty)$-equivalence.
+\emph{Faithfulness}: suppose $f, g : A \to B$ in $\mathbf{F}$ have $\Phi_\mathbf{F}(f) = \Phi_\mathbf{F}(g)$. Applying $\Cl_\mathbf{F}$ to both sides yields $\Cl_\mathbf{F}(f) = \Cl_\mathbf{F}(g)$ in $\fM$, so $f$ and $g$ differ at most by gauge. Applying $\II_\mathbf{F}$ (which satisfies (I-1) homotopy invariance and (I-2) gauge covariance of Theorem~\ref{thm:I-existence}), $\II_\mathbf{F}(f) = \II_\mathbf{F}(g)$ in $\Sint$. By (I-3) strict refinement of Morita and (I-4) Morita-as-$2$-localization, $\II_\mathbf{F}$ is jointly faithful with $\Cl_\mathbf{F}$: the pair $(\Cl_\mathbf{F}, \II_\mathbf{F})$ separates morphisms in $\mathbf{F}$. Hence $f = g$.
 
-Therefore, $\mathbf{F}_1 \simeq_{(\infty, \infty)} \mathbf{F}_2$.
+\emph{Fullness}: given $h : \Phi_\mathbf{F}(A) \to \Phi_\mathbf{F}(B)$ in $\mathbf{F}_S^*$, we lift $h$ to $\mathbf{F}$. The morphism $h$ factors as $h_{\mathrm{ext}} \in \Hom_\fM(\Cl_\mathbf{F}(A), \Cl_\mathbf{F}(B))$ (extensional part, via the canonical projection $\mathbf{F}_S^* \to \fM$) together with $h_{\mathrm{int}} \in \Hom_{\Sint}(\II_{\mathbf{F}_S^*}(B), \II_{\mathbf{F}_S^*}(A))$ (intensional fiber, via $\II_{\mathbf{F}_S^*}$). By (Max-1), $h_{\mathrm{ext}}$ lifts to a gauge-class of morphisms $A \to B$ in $\cF$ at the classified level; (Max-2) transitivity picks a representative in $\mathbf{F}$. By (Max-4), $h_{\mathrm{int}}$ lifts uniquely to the intensional completion of $\mathbf{F}$, which by (I-4) Morita-as-$2$-localization coincides with the intensional data of $\II_\mathbf{F}$. Combining, we obtain a morphism $\tilde h : A \to B$ in $\mathbf{F}$ with $\Phi_\mathbf{F}(\tilde h) = h$.
+
+\emph{$2$-morphisms}: the same argument applied one dimension up --- using (M3) accessibility of the reflection and (Max-4) intensional $2$-functoriality --- establishes the Hom-equivalence at the level of $2$-cells. The full coherent $(\infty, 2)$-equivalence follows by induction on truncation levels.
+
+Hence $\Phi_\mathbf{F}$ is a $2$-equivalence in $\mathbf{StrCat}_{S, 2}$.
+
+\textbf{Step 3: lifting to $(\infty, \infty)$.} The $2$-equivalence $\Phi_\mathbf{F}$ extends levelwise: at each truncation $\tau_{\leq n}$ for $n \in \mathbb{N}$, we obtain an $(\infty, n)$-equivalence by (M3)-accessibility of all structures involved, combined with the unicity theorem of Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021}. The family $\{\tau_{\leq n}(\Phi_\mathbf{F})\}_{n \in \mathbb{N}}$ is compatible with truncation transitions by Whitehead's criterion (Lemma~\ref{lem:whitehead}). Taking the colimit through the $(\infty, \infty)$-stabilization (Theorem~\ref{thm:bergner-lurie-stab}) yields an $(\infty, \infty)$-equivalence $\Phi_\mathbf{F} : \mathbf{F} \xrightarrow{\simeq_{(\infty, \infty)}} \mathbf{F}_S^*$.
+
+\textbf{Conclusion.} Applying Step 3 to both $\mathbf{F}_1$ and $\mathbf{F}_2$: the composition
+\[ \mathbf{F}_1 \xrightarrow{\Phi_{\mathbf{F}_1}} \mathbf{F}_S^* \xrightarrow{\Phi_{\mathbf{F}_2}^{-1}} \mathbf{F}_2 \]
+is a canonical $(\infty, \infty)$-equivalence.
 \end{proof}
+
+The proof above avoids the sketch-representation theorem of Lair~\cite{Lair1981} and Makkai--Par\'e~\cite{MakkaiPare1989}, which establishes only that every accessible $2$-theory is presented by a sketch and does not suffice for categoricity. The categoricity of $\Meta_{5+}^{\max}$ follows instead from the universal property of the Grothendieck straightening (Lurie HTT~\cite{LurieHTT} Theorem 3.2.0.1), which identifies $\mathbf{F}_S^*$ as the terminal object of the $(\infty, 2)$-category of maximal classifiers over $S$.
 
 \subsection{Structural Multiplicity}
 
@@ -1471,7 +1362,7 @@ satisfy $\pi_{\mathrm{meta}} \circ \iota_{\mathrm{meta}} = \id$ and $\iota_{\mat
 
 \emph{Step (b.5): Conclusion.} $\fM^{(5+\cdot 2)} \simeq_2 \fM^{(5+)}$, which is the claim.
 
-\textbf{(c)}: Suppose, for contradiction, $\fM^{(5+ \cdot 2)}$ satisfies Level-6 conditions (F) $\wedge$ (Π$_4$) $\wedge$ (Π$_{3\text{-max}}$). By (b), $\fM^{(5+ \cdot 2)} \simeq_2 \fM^{(5+)} \in \Meta_{5+}$. A Level 5+ meta-structure is definable but not generative of foundations (M4), contradicting Level-6 maximal generativity. The contradiction shows no Level-6 escalation occurs.
+\textbf{(c)}: Suppose, for contradiction, $\fM^{(5+ \cdot 2)}$ satisfies Level-6 conditions $(F) \wedge (\Pi_4) \wedge (\Pi_{3\text{-max}})$. By (b), $\fM^{(5+ \cdot 2)} \simeq_2 \fM^{(5+)} \in \Meta_{5+}$. A Level 5+ meta-structure is definable but not generative of foundations (M4), contradicting Level-6 maximal generativity. The contradiction shows no Level-6 escalation occurs.
 \end{proof}
 
 \begin{corollary}[Iteration closure]\label{cor:iteration-closure}
@@ -1484,139 +1375,73 @@ The class $\Meta_{5+}$ is closed under classification iteration: iterated meta-c
 
 \section{Placement in the No-Go Series}\label{sec:series}
 
-AFN-T occupies a position in the structural series of foundational no-go theorems. We make this placement explicit by demonstrating that the classical no-go results appear as specialized instances of the diagonal structure underlying AFN-T.
+AFN-T occupies a position in the structural series of foundational no-go theorems. All such results instantiate a single categorical schema: \emph{a system sufficiently expressive to formulate a candidate maximal object is unable to contain that object without contradiction}, realized through a self-referential embedding that turns the purported maximal object into an element of the very class it was supposed to transcend. Each specializes the schema through a distinct maximality aspect and diagonal step:
 
-\subsection{The Classical No-Go Series}
-
-We list the six classical no-go theorems with the specific aspect of self-containment each rules out:
-
-\begin{longtable}{@{}lllp{5cm}@{}}
+\begin{center}
+\begin{tabular}{@{}l l p{3.2cm} p{5.7cm}@{}}
 \toprule
-Theorem & Year & Author & Forbidden structure \\ \midrule
-Cantor & 1891 & Cantor & Set of all sets \\
-Russell & 1901 & Russell & Unrestricted comprehension $\{x : x \notin x\}$ \\
-G\"odel (I) & 1931 & G\"odel & Complete consistent arithmetic extension \\
-G\"odel (II) & 1931 & G\"odel & Proof of own consistency \\
-Tarski & 1936 & Tarski & Internal truth predicate $\mathrm{Tr}_L$ \\
-Lawvere FP & 1969 & Lawvere & Certain categorical fixed points \\
-AFN-T & --- & --- & \textbf{Absolute foundation (Level 6)} \\
+Theorem & Year & Maximality aspect & Diagonal step \\ \midrule
+Cantor~\cite{Cantor1891} & 1891 & cardinal & $x \notin f(x)$ for $f : X \to \cP(X)$ \\
+Russell~\cite{Russell1903} & 1901 & comprehension & $R = \{x : x \notin x\}$, $R \in R \iff R \notin R$ \\
+G\"odel (I, II)~\cite{Godel1931} & 1931 & completeness / consistency & $G = $ ``$G$ is not provable'' \\
+Tarski~\cite{Tarski1936} & 1936 & semantic truth & ``this sentence is not true'' \\
+Lawvere FP~\cite{Lawvere1969} & 1969 & categorical fixed-point & cartesian-closed + weakly surjective $\Rightarrow$ every $f$ has a fixed point \\
+Ernst~\cite{Ernst2015} & 2015 & unlimited category theory & Lawvere diagonal at $n = 1$ under Feferman (R1)--(R3) \\
+AFN-T & --- & foundational (generative + non-reducible) & Grothendieck--Cantor diagonal: $(F_S) \wedge (\Pi_{3\text{-max}}) \Rightarrow$ fully-faithful $\mathcal{P}(X) \hookrightarrow X$ (Theorem~\ref{thm:afnt-alpha}) \\
 \bottomrule
-\end{longtable}
+\end{tabular}
+\end{center}
 
-\subsection{Common Structural Pattern}
-
-All six results share a common structural pattern: \emph{a system sufficiently expressive to formulate a candidate maximal object is unable to contain that object without contradiction}. The specific aspect of maximality differs:
-
-\begin{itemize}
-\item Cantor: cardinal maximality.
-\item Russell: comprehension maximality.
-\item G\"odel (I, II): completeness and consistency maximality.
-\item Tarski: semantic maximality (truth definability).
-\item Lawvere FP: categorical fixed-point maximality.
-\item AFN-T: foundational maximality (generativity + non-reducibility).
-\end{itemize}
-
-\subsection{Common Engine: Reflection-via-Diagonal}
-
-All six results are instances of a single categorical schema: \emph{a self-referential embedding (or reflection) turns a purported maximal object into an element of the very class it was supposed to transcend}. The classical results realize the schema through the Cantor diagonal; AFN-T realizes it through the interpretability-reflection of (R3)--(R5). Yanofsky~\cite{Yanofsky2003} places all such arguments under the Lawvere fixed-point lemma; we recall the specific form each result takes:
-
-\begin{itemize}
-\item Cantor: classical diagonal --- $x \notin f(x)$ for $f : X \to \cP(X)$.
-\item Russell: comprehension diagonal --- $R = \{x : x \notin x\}$, then $R \in R \iff R \notin R$.
-\item G\"odel (I, II): arithmetic self-reference --- $G = $ ``$G$ is not provable''.
-\item Tarski: semantic self-reference --- ``this sentence is not true''.
-\item Lawvere FP: categorical fixed-point --- for cartesian closed $\cC$ with weakly point-surjective $e : A \to Y^A$, every $f : Y \to Y$ has a fixed point.
-\item AFN-T: interpretability reflection --- $(F_S)(X) \Rightarrow X \in \cS_S$ (Lemma~\ref{lem:SS-membership}); definability forces reducibility.
-\end{itemize}
-
-AFN-T's move is a \emph{reflection step} rather than a literal diagonal construction: once $X$ is formally defined (condition $(F_S)$), its definition is itself an element of $S$, and the evaluation functor $\Syn(S) \to \cM$ reflects $X$ into the $S$-definability class $\cS_S$. The Lawvere fixed-point lemma (Appendix~\ref{app:categorical}, Lemma~\ref{lem:lawvere-2}) unifies the classical diagonals and the AFN-T reflection under a single categorical theorem.
+AFN-T is a Grothendieck--Cantor categorical diagonal executed externally in the total $(\infty, n)$-category $\mathbf{StrCat}_{S, n}$ (Theorem~\ref{thm:afnt-alpha}, proved in \S\ref{subsec:presheaf-diagonal}): the conjunction of formal definability $(F_S)$ and maximal generativity $(\Pi_{3\text{-max}, S, n})$ forces the presheaf category $\mathcal{P}(X) = \Fun_{(\infty, n)}(X^{\mathrm{op}}, \mathcal{S})$, viewed as a Rich-foundation $F_{\mathcal{P}(X)} \in \cF$ (conservative extension of $F$ by one defined sort), to embed fully-faithfully into $X$. Cantor's theorem in the ambient $\ZFC + 2\text{-}\mathrm{inacc}$ (Convention~\ref{conv:zfc-inacc}) yields $|\mathrm{Ob}(\mathcal{P}(X))/\!\simeq| \geq 2^{|\mathrm{Ob}(X)/\!\simeq|} > |\mathrm{Ob}(X)/\!\simeq|$, contradicting full-faithfulness. The external nature of the argument by-passes the Tarski obstruction (Remark~\ref{rem:tarski-obstruction}): no internal truth predicate or internal G\"odel coding of $F$-formulas is invoked. The Lawvere fixed-point lemma (Lemma~\ref{lem:lawvere-2}), Yanofsky~\cite{Yanofsky2003}'s unification of classical diagonals, and the presheaf Cantor argument are alternative packagings of the same structural content; AFN-T adopts the external presheaf packaging because it is Tarski-robust and native to the higher-topos apparatus of \S\S\ref{sec:bypass}--\ref{sec:meta}.
 
 \subsection{AFN-T as Generalization}
 
-AFN-T generalizes the classical no-go results in three respects:
+AFN-T generalizes the classical results in scope and strength. \emph{Scope}: previous theorems target one aspect of maximality each; AFN-T addresses all five axes of foundational variation simultaneously (Theorem~\ref{thm:five-axis}). \emph{Strength}: independence of the metatheory (Theorem~\ref{thm:horizontal}), the categorical level (Theorem~\ref{thm:vertical}), and the ambient categorical ordering (Theorem~\ref{thm:lateral}) is axiomatic rather than verified case-by-case. \emph{Closure}: three historical bypass strategies (universe polymorphism, reflective towers, intensional refinement) are formally foreclosed in \S\ref{sec:bypass}, whereas classical results admit ad-hoc bypass attempts requiring separate analysis.
 
-\paragraph{(i) Scope.} Previous results target one aspect of maximality; AFN-T addresses all five axes of foundational variation simultaneously.
+\subsection{Relation to Ernst 2015, Hamkins, and Barwick--Schommer-Pries}\label{sec:ernst-multiverse}
 
-\paragraph{(ii) Strength.} AFN-T is independent of the specific metatheory (Theorem~\ref{thm:horizontal}), the categorical level (Theorem~\ref{thm:vertical}), and the choice of ambient categorical ordering (Theorem~\ref{thm:lateral}). The classical results often have metatheory-specific formulations.
+Ernst~\cite{Ernst2015}, responding to Feferman~\cite{Feferman2013}, proved that no theory of categories can simultaneously satisfy the unlimitedness conditions (formation of all structures of a given kind, arbitrary functor categories, and usual set-theoretic constructions); the proof uses a Lawvere-fixed-point diagonal. Ernst's theorem is the $n = 1$, categorical-paradigm specialization of AFN-T: a theory satisfying his (R1)--(R3) satisfies our $(F_S) \wedge (\Pi_{3\text{-max}})$ at level $n = 1$, and the Grothendieck--Cantor diagonal of Theorem~\ref{thm:afnt-alpha} (\S\ref{subsec:presheaf-diagonal}) recovers his conclusion. AFN-T extends the scope to arbitrary Rich-metatheories and all $(\infty, n)$-levels, covering $\HoTT$, Univalent Foundations, $\infty$-cosmoi, and cohesive frameworks uniformly.
 
-\paragraph{(iii) Closure.} AFN-T formally closes three standard bypass paths (universe polymorphism, reflective towers, intensional refinement) that have historically been proposed as routes around no-go results. The classical results admit various bypass strategies that require case-by-case analysis.
+Hamkins's set-theoretic multiverse~\cite{Hamkins2012} is complementary rather than competing: it is a methodological thesis about observed plurality of $V$, providing empirical evidence for AFN-T. If the multiverse itself were promoted to a Level-6 candidate --- a universal classifier of set-theoretic universes with generative power over all R-S --- AFN-T would foreclose that promotion.
 
-\subsection{Relation to Ernst 2015 and the Multiverse Literature}\label{sec:ernst-multiverse}
-
-The closest formal precedent is Ernst~\cite{Ernst2015}, ``The prospects of unlimited category theory'', which uses a Lawvere-fixed-point diagonal to prove that no theory of categories can simultaneously satisfy Feferman's unlimitedness conditions (R1)--(R3) of~\cite{Feferman2013}. We clarify the relationship:
-
-\begin{itemize}
-\item \textbf{Ernst's theorem is a Level-5 no-go within the categorical paradigm.} It rules out an axiomatic theory $T$ of categories that forms (R1) ``the category of all structures of a given kind'', (R2) arbitrary functor categories $B^A$, and (R3) usual set-theoretic constructions. The target is a specific axiomatic theory at Level 5; the mechanism is Cantor-style diagonalization.
-\item \textbf{AFN-T is a Level-6 no-go across paradigms.} It rules out a Level-6 object $X$ satisfying $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$ for \emph{any} Rich-metatheory $S$ and \emph{any} categorical level $n$. The target is a purported universal foundation regardless of its categorical or type-theoretic expression; the mechanism is reflection into $\cS_S$ via (R5) categorical semantics followed by Morita reduction.
-\item \textbf{Ernst as a specialization of AFN-T.} Taking $S = \mathsf{ETCC}$ (or any R-S supporting unlimited category theory) and $n = 1$, Ernst's theorem is recovered as a specialization: a theory satisfying (R1)--(R3) in Ernst's sense satisfies $(F_S)$, and the diagonal failure places it inside $\cS_S$, falsifying $(\Pi_4)$. AFN-T's scope is strictly broader: it covers also Homotopy Type Theory, Univalent Foundations, $\infty$-cosmoi, cohesive frameworks, and arbitrary $(\infty, n)$-foundations simultaneously.
-\item \textbf{Hamkins's set-theoretic multiverse~\cite{Hamkins2012} is complementary, not competing.} The multiverse thesis is methodological pluralism about set-theoretic $V$; it provides empirical evidence for AFN-T (observed non-uniqueness of set-theoretic foundations) but does not prove non-existence of a unifier. If the multiverse itself were promoted to a Level-6 candidate (a universal classifier of set-theoretic universes with generative power over all R-S), AFN-T would foreclose that promotion.
-\item \textbf{Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021} unicity is compatible, not contradictory.} Their result --- that the moduli space of theories of $(\infty, n)$-categories is $B(\mathbb{Z}/2)^n$ --- is a \emph{positive} unicity statement \emph{within} the $(\infty, n)$-categorical paradigm, hence at Level 5 (or Level 4 as a meta-paradigm). It is a single-paradigm unicity, not a cross-paradigm one. AFN-T uses it as a technical lemma (the vertical axis) and is consistent with it.
-\end{itemize}
+Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021} unicity establishes that the moduli space of theories of $(\infty, n)$-categories is $B(\mathbb{Z}/2)^n$, a \emph{positive} unicity within a single paradigm. AFN-T uses this result as a technical lemma (Theorem~\ref{thm:bergner-lurie-stab}); the cross-paradigm negative claim of AFN-T is consistent with intra-paradigm unicity.
 
 \subsection{Subsumption}
 
 \begin{theorem}[Subsumption of classical no-go results]\label{thm:subsumption}
-Each of the classical no-go results (Cantor, Russell, G\"odel I, G\"odel II, Tarski, Lawvere FP) is a specialization of AFN-T to a specific type of maximality.
+Each entry of the table above (Cantor, Russell, G\"odel I, G\"odel II, Tarski, Lawvere FP, Ernst) is a specialization of AFN-T obtained by restricting the pair $(S, n)$ and the Level-6 conditions to the corresponding row's maximality aspect.
 \end{theorem}
 
-\begin{proof}[Proof (outline)]
-\begin{itemize}
-\item \textbf{Cantor}: the collection of all sets is Level-6 for the specific maximality ``maximal cardinal''. AFN-T in its cardinal-restricted form yields Cantor's theorem.
-\item \textbf{Russell}: unrestricted comprehension yields a Level-6 candidate for ``maximal self-applicable class''. AFN-T in its self-applicability-restricted form yields Russell's paradox.
-\item \textbf{G\"odel (I, II)}: a complete consistent theory is Level-6 for ``maximal syntactic system''. AFN-T in its arithmetic-restricted form yields the incompleteness theorems.
-\item \textbf{Tarski}: a truth predicate is Level-6 for ``maximal semantic self-reference''. AFN-T in its semantic-restricted form yields Tarski's undefinability.
-\item \textbf{Lawvere FP}: in a $(\infty, n)$-categorical context, AFN-T's diagonal step (Lemma~\ref{lem:F-implies-model}) is precisely the Lawvere fixed-point argument applied to the evaluation functor.
-\end{itemize}
-Each specialization follows from restricting AFN-T to the specific categorical structure relevant to the classical result.
+\begin{proof}
+For each row, the maximality aspect defines a restricted Level-6 candidate $X$ satisfying $(F_S)$ for an appropriate $S$ together with $(\Pi_{3\text{-max}, S, n})$ (maximality aspect realized as a classifying role over a restricted sub-class of Rich-foundations). Theorem~\ref{thm:afnt-alpha} applied at the categorical level $n$ specified by the row yields the contradiction; each row's classical diagonal specializes the external Grothendieck--Cantor diagonal of \S\ref{subsec:presheaf-diagonal} to the row's specific maximality content (power sets for Cantor, unrestricted comprehension for Russell, provability predicate for G\"odel, truth predicate for Tarski, universal fixed-point object for Lawvere, unlimited-categoricity axioms for Ernst). The reduction-aspect rows (G\"odel, Tarski) additionally admit the tautological fallback of Remark~\ref{rem:deflation}.
 \end{proof}
 
 \section{Consequences and Open Questions}\label{sec:consequences}
 
-We discuss implications of AFN-T for current foundational programmes and identify open questions.
+\subsection{Consequences for Foundational Programmes}
 
-\subsection{Consequences for Univalent Foundations}
-
-The Univalent Foundations programme (Voevodsky~\cite{VoevodskyFoundations2010}; HoTT Book~\cite{HoTTBook2013}) seeks to establish $\HoTT$ as a universal foundation for mathematics. AFN-T implies that $\HoTT$ is a Level 5 foundation, and that no mathematical object can be Level 6 --- including possible extensions of $\HoTT$. The Univalent Foundations programme is correctly positioned at Level 5+ as a partial meta-framework classifying $\HoTT$-based foundations (Theorem~\ref{thm:meta-mult}), but cannot be elevated to Level 6 (Theorems~\ref{thm:meta-cat} and~\ref{thm:meta-stab}).
-
-This places a structural limit on the ambitions of the programme: Univalent Foundations is a meaningful and productive Level 5+ meta-framework, but it does not and cannot provide a \emph{unique} foundation of mathematics.
-
-\subsection{Consequences for Higher Topos Theory}
-
-Higher topos theory (Lurie~\cite{LurieHTT}) and the cohesive framework (Schreiber~\cite{Schreiber2013}) are Level 5 or Level 5+ depending on the specific programme. AFN-T implies that these, too, cannot be elevated to Level 6; they occupy definite positions in the hierarchy.
-
-\subsection{Consequences for Condensed Mathematics and Recent Programmes}
-
-Condensed mathematics (Clausen--Scholze~\cite{ClausenScholze2019}) provides a new framework for topology through condensed sets. AFN-T classifies condensed mathematics as a Level 4 paradigm (a new research programme reframing a broad class of problems) with specific Level 5 foundations (e.g., pyknotic spaces). No Level-6 escalation is possible.
-
-Similarly, perfectoid geometry (Scholze 2012), $\infty$-cosmoi (Riehl--Verity 2022), and other recent foundational programmes are bounded by AFN-T.
-
-\subsection{Consequences for Proof-Assistant Programmes}
-
-Proof assistants such as Coq, Lean, Agda implement Level 5 foundations (CIC, CIC with Univalence, MLTT with pattern matching, respectively). AFN-T implies that no proof assistant can realize a Level-6 foundation; the plurality of such systems corresponds to the plurality of Level 5 foundations, as expected from Theorem~\ref{thm:meta-mult}.
-
-\subsection{Consequences for Categorical Logic}
-
-AFN-T places a structural constraint on categorical logic: the classification of foundational systems by $(\infty, n)$-categories and their meta-structures has an upper bound at Level 5+. This aligns with the unicity theorem (Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021}) and the $(\infty, \infty)$-stabilization thereof: no new structural depth is added beyond this level.
+AFN-T imposes a uniform structural bound on every current foundational programme: each is confined to one of the formal levels $\mathcal{L}_5$, $\mathcal{L}_{5+}$, or $\mathcal{L}_{5+}^{\max}$, with Level 6 empty. Specifically:
+\begin{itemize}\setlength{\itemsep}{1pt}
+\item \textbf{Univalent Foundations} (Voevodsky~\cite{VoevodskyFoundations2010}; HoTT Book~\cite{HoTTBook2013}) is a Level 5+ partial meta-framework (Theorem~\ref{thm:meta-mult}) classifying $\HoTT$-extensions; it cannot be elevated to Level 6.
+\item \textbf{Higher topos theory} (Lurie~\cite{LurieHTT}) and \textbf{cohesive framework} (Schreiber~\cite{Schreiber2013}) occupy Levels 5 and 5+ respectively.
+\item \textbf{Condensed mathematics} (Clausen--Scholze~\cite{ClausenScholze2019}), \textbf{perfectoid geometry}, and \textbf{$\infty$-cosmoi} (Riehl--Verity) are bounded similarly; no Level-6 escalation is possible.
+\item \textbf{Proof assistants} (Coq, Lean, Agda) implement Level 5 foundations ($\CIC$, $\CIC + \mathrm{Univalence}$, $\MLTT$); the plurality of such systems is the plurality of Level 5.
+\item \textbf{Categorical logic}: classification of foundational systems by $(\infty, n)$-categories and their meta-structures has an upper bound at Level 5+, aligning with Barwick--Schommer-Pries~\cite{BarwickSchommerPries2021} unicity.
+\end{itemize}
 
 \subsection{Open Questions}
 
-\paragraph{Question 1 (Strengthening of 87.T).} Theorem~\ref{thm:completeness} (completeness axis) is conditional on $F \in \cL\cS$. Can this conditional be removed? Specifically: does there exist a foundational framework outside the Lawvere scope (i.e., failing one of (L1)--(L4)) that produces a fifth axis of structural variation? We conjecture that no such framework exists, but the question remains open.
+\paragraph{(Q1) Existence of a maximal meta-framework.} Theorem~\ref{thm:meta-cat} asserts categoricity of $\Meta_{5+}^{\max}$ conditional on its non-emptiness. Is there a concrete $\mathbf{F} \in \Meta_{5+}^{\max}$ constructible in $\ZFC + 2\text{-inacc}$? A positive answer would identify the canonical Level 5+ meta-framework up to $(\infty, \infty)$-equivalence.
 
-\paragraph{Question 2 (Paraconsistent extension).} AFN-T is stated for classical Rich-metatheories. Appendix~\ref{app:paraconsistent} extends it to paraconsistent metatheories satisfying a Strong Negation condition. Further extension to dialetheist logics or to sub-structural logics without negation requires separate analysis.
+\paragraph{(Q2) Completeness of the meta-framework list.} How complete is the list $\{\mathbf{F}_{\mathrm{univalent}},\allowbreak \mathbf{F}_{\mathrm{cosmoi}},\allowbreak \mathbf{F}_{\mathrm{cohesive}},\allowbreak \mathbf{F}_{\mathrm{HA}},\allowbreak \mathbf{F}_{\mathrm{synthetic}}\}$ of currently identified Level 5+ meta-structures ($\mathbf{F}_{\mathrm{HA}}$ denotes Lurie's Higher Algebra programme~\cite{LurieHA})? Are there further natural meta-frameworks?
 
-\paragraph{Question 3 (Physical realization).} The foregoing is mathematics. The hypothetical possibility of a \emph{physically realized} Level-6 foundation --- for instance, through quantum-physical processes or biological substrates --- lies outside the mathematical framework of AFN-T. This is the domain of physics and cognitive science; AFN-T does not speak to it directly.
+\paragraph{(Q3) Exhaustiveness of bypass paths.} Theorems~\ref{thm:universe}, \ref{thm:reflective}, \ref{thm:I-existence}, \ref{thm:slice-locality} close three standard bypass paths, and Appendix~\ref{app:paraconsistent} treats the paraconsistent case. Candidates for additional independent paths include modal or temporal logic extensions, substructural logics without exponential $!$, realizability and constructive-only foundations, and foundations grounded in non-classical computability models. Each of these appears to reduce to one of the closed paths within R-S; a formal exhaustiveness theorem is not given here and remains open.
 
-\paragraph{Question 4 (Computational lower bound).} What is the proof-theoretic complexity of AFN-T itself? The proof uses ZFC + 2 inaccessibles (Appendix~\ref{app:categorical}); can a weaker consistency strength suffice?
-
-\paragraph{Question 5 (Classification of meta-frameworks).} How complete is the list $\{\mathbf{F}_{\mathrm{univalent}}, \mathbf{F}_{\mathrm{cosmoi}}, \mathbf{F}_{\mathrm{cohesive}}, \mathbf{F}_{\mathrm{Lurie-HA}}, \mathbf{F}_{\mathrm{synthetic}}\}$ of Level 5+ meta-structures currently identified? Are there further natural meta-frameworks that should be included? More fundamentally, is the maximal sub-class $\Meta_{5+}^{\max}$ non-empty, and if so can a concrete representative be constructed within $\ZFC + 2\text{-inacc}$?
-
-\paragraph{Question 6 (Exhaustiveness of bypass paths).} We have closed three standard bypass paths (universe polymorphism, reflective towers, intensional refinement; Theorems~\ref{thm:universe}, \ref{thm:reflective}, \ref{thm:I-existence}, \ref{thm:slice-locality}) and treated the paraconsistent case in Appendix~\ref{app:paraconsistent}. We have \emph{not} proved that these exhaust all structurally distinct bypass strategies. Candidates for additional independent paths include: modal/temporal logic extensions; substructural logics without exponential ``!''; realizability / constructive-only foundations; and foundations grounded in non-classical computability models. Each of these appears to reduce to one of the closed paths (for instance, affine logic without ``!'' fails (R1) and therefore lies outside R-S), but a formal exhaustiveness proof --- of the form ``every bypass attempt within R-S is a specialization of one of the three'' --- is not given here. We conjecture that exhaustiveness holds, reducible to a classification of (R1)--(R5)-preserving deformations of $\cF$, but leave this open. Proposition~\ref{prop:proper-class} illustrates one such reduction for the proper-class case.
+\paragraph{(Q4) Consistency-strength minimality.} The proof uses $\ZFC + 2\text{-inacc}$ (Convention~\ref{conv:zfc-inacc}). Can a weaker consistency strength suffice for the full theorem, or does the meta-classification stabilization (Theorem~\ref{thm:meta-stab}) genuinely require the second inaccessible?
 
 \subsection{Broader Significance}
 
-AFN-T formalizes a structural fact implicit in foundational mathematics for over a century: mathematics has no single absolute foundation, not because the search has been insufficient, but because such a foundation is structurally impossible. Each foundation (Level 5) is locally complete; the space of foundations (Level 5+) is classifiable but not reducible to a single member; Level 6 is empty.
-
-This positions mathematics as a fundamentally \emph{plural} discipline at the foundational level. The plurality is not a deficiency or a temporary state pending unification; it is a structural feature, formally necessary by the AFN-T.
+AFN-T formalizes the structural fact that mathematics admits no single absolute foundation: each foundation is locally complete at Level 5; the space of foundations is classifiable at Level 5+; Level 6 is empty. Foundational plurality is not a deficiency awaiting unification but a structural feature formally necessary by Theorem~\ref{thm:afnt}.
 
 \appendix
 
@@ -1755,30 +1580,14 @@ Check that the three conditions are preserved under classical projection:
 \item $(\Pi_{3\text{-max}, S'^*, n})(X^*)$: every $F \in \cF_{S'^*}$ is a fortiori in $\cF_{S'}$; hence the Morita reduction $F \to X$ exists, and its classical projection yields $F \to X^*$.
 \end{itemize}
 
-Thus $X^*$ is a Level-6 witness in $S'^* \in \RS$, contradicting Theorem~\ref{thm:afnt-alpha}.
+Thus $X^*$ is a Level-6 witness in $S'^* \in \RS$, contradicting Theorem~\ref{thm:afnt-alpha} applied to the pair $(F_{S'^*}) \wedge (\Pi_{3\text{-max}, S'^*, n})$.
 
 Therefore AFN-T holds in $S'$. Full details (including the existence of the classical kernel for any paraconsistent Rich-metatheory with (Strong-neg), and the functoriality of classical projection on $\cS_{S'}$) appear in a companion note.
 \end{proof}
 
-\section*{Acknowledgments}
+\section*{Acknowledgments and disclosures}
 
-The author thanks the mathematical community for the foundational results of Cantor, Russell, G\"odel, Tarski, Lawvere, Lambek--Scott, Ad\'amek--Rosick\'y, Makkai--Par\'e, Jacobs, Pronk, Lurie, Riehl--Verity, Voevodsky, Schreiber, and Clausen--Scholze, on which this synthesis rests.
-
-\section*{Competing interests}
-
-The author declares no competing interests.
-
-\section*{Funding}
-
-This work was conducted independently and received no external funding.
-
-\section*{Data availability}
-
-No data were generated or analysed in this work. The full LaTeX source of this preprint and its Russian 1-to-1 translation are archived together with the deposit.
-
-\section*{Author contributions}
-
-Max Sereda is the sole author; conceptualisation, formal analysis, proofs, and writing are entirely the author's responsibility.
+The author thanks the mathematical community for the foundational results of Cantor, Russell, G\"odel, Tarski, Lawvere, Lambek--Scott, Ad\'amek--Rosick\'y, Makkai--Par\'e, Jacobs, Pronk, Lurie, Riehl--Verity, Voevodsky, Schreiber, and Clausen--Scholze, on which this synthesis rests. Max Sereda is the sole author; conceptualisation, formal analysis, proofs, and writing are entirely the author's responsibility. The work was conducted independently; the author declares no competing interests and no external funding. No data were generated or analysed; the full LaTeX source is archived with the preprint deposit.
 
 \begin{thebibliography}{99}
 
@@ -1852,11 +1661,6 @@ A.~Connes,
 M.~Ernst,
 \newblock The prospects of unlimited category theory: doing what remains to be done,
 \newblock \emph{Review of Symbolic Logic} 8 (2015), no.~2, 306--327.
-
-\bibitem{Escardo2004}
-M.H.~Escard\'o,
-\newblock Synthetic topology of data types and classical spaces,
-\newblock \emph{Electronic Notes in Theoretical Computer Science} 87 (2004), 21--156.
 
 \bibitem{Feferman1964}
 S.~Feferman,
