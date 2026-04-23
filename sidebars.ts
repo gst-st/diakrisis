@@ -106,6 +106,7 @@ const sidebars: SidebarsConfig = {
         '06-limits/05-what-remains-possible',
         '06-limits/06-absoluteness',
         '06-limits/07-final-theorems',
+        '06-limits/08-intensional-refinement',
       ],
     },
     {

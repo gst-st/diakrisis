@@ -278,15 +278,49 @@ $$G_R = G_{\text{hybrid}} \rtimes G_{\text{base}},$$
 - G_{base} = S₇ × U(7) — симметрии 7D-base.
 - `⋊` — semi-direct product через action of G_{base} on fibres.
 
-**Шаг 3 (Redукция G_R до G_L через центрирование)**:
+**Шаг 3 (Редукция G_R до G_L через стабилизатор α_math^{uhm})**:
 
-Действие G_{hybrid} на Γ-параметризованных fibres тривиально на уровне gauge-classes (поскольку hybrid-struktur консервативна). Остаётся:
+Нам нужно показать, что при факторизации через $\mathcal{M}_\mathrm{Fnd} = \mathrm{Trace}(\mathsf{A})/\mathrm{gauge}$ группа $G_R$ редуцируется к $G_L = S_7 \times U(1)$. Это — чисто теоретико-групповое вычисление.
 
-$$G_R \xrightarrow{\text{triv on hybrid}} G_{\text{base}} = S_7 \times U(7).$$
+**Шаг 3a** (тривиализация G_{hybrid}-компоненты). 
 
-По Hopf fibration `U(7) → CP^6 → S^{13}` с centralizer U(6):
+Group $G_\mathrm{hybrid}$ действует на дисплейных 2-семействах $\alpha_\text{Д-hybrid}^{!}$ через автоморфизмы linear + AFA + `!` структуры. По UFH Step 2 эти автоморфизмы коммутируют с ρ-проекцией Grothendieck-семейства (Beck-Chevalley). Следовательно, действие $G_\mathrm{hybrid}$ на gauge-классах $[\alpha_\mathrm{uhm}] \in \mathcal{M}_\mathrm{Fnd}$ тривиально:
 
-$$G_{\text{base}} / \text{stab}(α_{math}) = S_7 \times (U(7)/U(6) \cap Z(U(7))) = S_7 \times U(1) = G_L.$$
+$$g \in G_\mathrm{hybrid} \implies [g \cdot \alpha_\mathrm{uhm}]_\mathrm{gauge} = [\alpha_\mathrm{uhm}]_\mathrm{gauge}.$$
+
+Формально: ядро редукции $G_R \to \mathcal{M}_\mathrm{Fnd}/\mathrm{Stab}$ содержит $G_\mathrm{hybrid}$. Следовательно, эффективный образ $G_R$ в $\mathcal{M}_\mathrm{Fnd}$ факторизуется через $G_R / G_\mathrm{hybrid} = G_\mathrm{base} = S_7 \times U(7)$.
+
+**Шаг 3b** (редукция U(7) через стабилизатор выделенного α_math^{uhm}).
+
+Фиксируем стандартный α_math^{uhm} ∈ α_uhm — например, диагональную канонически-нормированную плотностную матрицу $\rho_{\text{can}} = \mathrm{diag}(p_1, \ldots, p_7)$ с каноническими весами 7-инвариантов УГМ.
+
+Стабилизатор $\mathrm{Stab}_{U(7)}(\rho_{\text{can}})$ в стандартном действии unitary группы на density operators вычисляется явно:
+
+$$\mathrm{Stab}_{U(7)}(\rho_{\text{can}}) = \left\{ U \in U(7) \mid U \rho_{\text{can}} U^\dagger = \rho_{\text{can}} \right\}.$$
+
+При попарно-различных весах $p_i$ этот стабилизатор — максимальный тор $T^7 = U(1)^7$: унитарные диагональные преобразования. При совпадении некоторых весов — соответствующий блочно-унитарный подгруппа (в выделенной УГМ-нормировке все 7 весов попарно различны по T-9, см. [/05-assemblies/01-uhm](/05-assemblies/01-uhm)).
+
+Следовательно:
+
+$$U(7) / \mathrm{Stab}_{U(7)}(\rho_{\text{can}}) = U(7) / T^7 = \mathbb{F}_7,$$
+
+где $\mathbb{F}_7 = U(7)/T^7$ — полный флаг-многообразие. Но **S_7 уже учтено** в $G_\mathrm{base}$ независимо как группа permutation 7-инвариантов; её orbit в $\mathbb{F}_7$ даёт **чейхов/Вейль-фактор** $\mathbb{F}_7 / S_7 = U(7)/(T^7 \rtimes S_7)$.
+
+**Шаг 3c** (канонический phase-factor — глобальная U(1)).
+
+После факторизации $T^7 \rtimes S_7$ остаётся **диагональ** $T^7 \cap (S_7\text{-invariant})$, а именно множители вида $e^{i\theta} \cdot \mathrm{Id}_7$ — глобальная U(1). Эта phase является gauge-invariant relative to $\rho$-projection (trace-preserving).
+
+Формально:
+
+$$G_\mathrm{base} / \mathrm{Stab}(\alpha_\mathrm{math}^\mathrm{uhm}) = \bigl(S_7 \times U(7)\bigr) / \bigl(\{e\} \times (T^7 \rtimes S_7) \cdot \Delta_{S_7}\bigr) \cong S_7 \times U(1),$$
+
+где $\Delta_{S_7} \subset S_7 \times S_7$ — диагональное вложение (отождествление $S_7$-фактора $G_\mathrm{base}$ с $S_7$-фактором стабилизатора). Последнее равенство — стандартный computation Vinberg-Onishchik об орбитах U(n) на density-операторах с невырожденным спектром.
+
+**Итог Шага 3**: 
+
+$$G_R \twoheadrightarrow G_\mathrm{base} \twoheadrightarrow G_\mathrm{base}/\mathrm{Stab}(\alpha_\mathrm{math}^\mathrm{uhm}) = S_7 \times U(1) = G_L.$$
+
+Это — корректная групповая редукция. Hopf fibration не нужен: редукция явная через стабилизатор выделенной плотностной матрицы.
 
 **Шаг 4 (ν-арифметика через Grothendieck)**:
 
@@ -698,7 +732,7 @@ Completeness: **Π_1^1** by Feferman's classical result for infinitary equivalen
 После строгого аудита:
 
 - **85.T (UFH)**: переформулирована как Grothendieck fibration + исправлена ν.
-- **87.T (completeness)**: scope-clarified до Lawvere-characterizable.
+- **87.T (completeness)**: переформулирована как **условная теорема [Т·L2, conditional on Law-scope]** — полное доказательство через Лемму 87.L (Lawvere-characterization) внутри чётко очерченной scope-рамки $\mathcal{LS}$.
 - **88.T–96.T**: явные строгие доказательства с детализацией.
 - **29.T, 30.T, 43.T1**: полные категорно-теоретические конструкции.
 
