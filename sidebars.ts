@@ -152,6 +152,14 @@ const sidebars: SidebarsConfig = {
         '10-reference/04-afn-t-correspondence',
       ],
     },
+    {
+      type: 'category',
+      label: '12. Actic (ДЦ-дуал)',
+      link: {type: 'generated-index', title: 'Actic — действие-центричный дуал Diakrisis', slug: '/actic'},
+      items: [
+        '12-actic/00-foundations',
+      ],
+    },
   ],
   noesisSidebar: [
     {
