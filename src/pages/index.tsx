@@ -7,21 +7,18 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 /**
- * Визуализация Diakrisis (post-audit14).
+ * Minimalist abstract composition — no theory-specific labels.
  *
- * Фундаментальная суть: классифицирующий 2-стек 𝔐_Fnd пространства
- * Rich-foundations со стратификацией
+ * Geometric gesture conveys the essential structure without naming:
+ *  - central point (singularity of distinction, Δ)
+ *  - layered concentric rings (stratification)
+ *  - dashed outer boundary (limit)
+ *  - orbit points (plurality within the middle stratum)
+ *  - soft radial rays (axes of absoluteness, unlabeled)
+ *  - slow breath + counter-rotation
  *
- *     𝓛_Fnd → 𝓛_Cls ⊇ 𝓛_Cls^⊤ → 𝓛_Abs = ∅
- *
- * Композиция:
- *  - Центр Δ — Diakrisis ∈ 𝓛_Cls^⊤ (максимальный классификатор, 106.T).
- *  - Внутреннее кольцо 𝓛_Cls — partial classifiers (∞-cosmoi, UF, cohesive).
- *  - Среднее кольцо 𝓛_Fnd — Rich-foundations (ZFC, HoTT, CIC, NCG, Eff, ∞-topos, α_uhm).
- *  - Внешняя граница 𝓛_Abs (пунктир, красная) — пусто по AFN-T.
- *  - 5 лучей — пять осей абсолютности (S, n, μ, ξ, π).
- *  - Gauge-дуги на 𝓛_Fnd — Морита-эквивалентности.
- *  - Пульсация «дыхание» + мягкое встречное вращение колец.
+ * The intent is that the visual reads as a structured, bounded,
+ * contemplative cosmos rather than a diagram of any specific theory.
  */
 function DiakrisisVisualization() {
   const cx = 250;
@@ -44,198 +41,84 @@ function DiakrisisVisualization() {
     };
   }, []);
 
-  const coreR = 38;
-  const clsR = 88;
-  const fndR = 155;
-  const absR = 200;
+  // Radii — four concentric strata
+  const coreR = 24;
+  const innerR = 72;
+  const midR = 135;
+  const outerR = 185;
+  const boundaryR = 218;
 
-  const breath = 1 + Math.sin(time * 0.35) * 0.018;
+  // Soft breath modulation (~±1.5%)
+  const breath = 1 + Math.sin(time * 0.3) * 0.015;
 
-  const fndSpin = time * 0.65;
-  const clsSpin = -time * 0.9;
+  // Slow counter-rotation — wordless sense of flow
+  const midSpin = time * 0.45;
+  const innerSpin = -time * 0.7;
 
-  const fndNodes = [
-    {label: 'ZFC', weight: 1.0},
-    {label: 'HoTT', weight: 1.0},
-    {label: 'CIC', weight: 0.9},
-    {label: 'NCG', weight: 0.9},
-    {label: 'Eff', weight: 0.8},
-    {label: '∞-topos', weight: 0.9},
-    {label: 'α_uhm', weight: 1.15},
-  ];
+  // Mid ring: 7 abstract orbital points (no labels, no meaning assigned)
+  const midNodeCount = 7;
+  const midNodes: {x: number; y: number; pulse: number}[] = [];
+  for (let i = 0; i < midNodeCount; i++) {
+    const angle = ((i / midNodeCount) * 2 * Math.PI) + midSpin - Math.PI / 2;
+    const r = midR * breath;
+    const pulse = Math.sin(time * 0.5 + i * 0.9);
+    midNodes.push({
+      x: cx + Math.cos(angle) * r,
+      y: cy + Math.sin(angle) * r,
+      pulse,
+    });
+  }
 
-  const clsNodes = [
-    {label: '∞-cosmoi'},
-    {label: 'UF'},
-    {label: 'cohesive'},
-  ];
+  // Inner ring: 3 hollow marks, subtler counter-motion
+  const innerNodeCount = 3;
+  const innerNodes: {x: number; y: number}[] = [];
+  for (let i = 0; i < innerNodeCount; i++) {
+    const angle = ((i / innerNodeCount) * 2 * Math.PI) + innerSpin - Math.PI / 2;
+    const r = innerR * breath;
+    innerNodes.push({
+      x: cx + Math.cos(angle) * r,
+      y: cy + Math.sin(angle) * r,
+    });
+  }
 
-  const axes = [
-    {label: 'S'},
-    {label: 'n'},
-    {label: 'μ'},
-    {label: 'ξ'},
-    {label: 'π'},
-  ];
+  // Five radial whisper-rays
+  const rayCount = 5;
+  const rays: {ix: number; iy: number; ox: number; oy: number; pulse: number}[] = [];
+  for (let i = 0; i < rayCount; i++) {
+    const angle = ((i / rayCount) * 2 * Math.PI) - Math.PI / 2;
+    const pulse = (Math.sin(time * 0.33 + i * ((2 * Math.PI) / rayCount)) + 1) * 0.5;
+    rays.push({
+      ix: cx + Math.cos(angle) * (innerR + 10),
+      iy: cy + Math.sin(angle) * (innerR + 10),
+      ox: cx + Math.cos(angle) * (boundaryR - 12),
+      oy: cy + Math.sin(angle) * (boundaryR - 12),
+      pulse,
+    });
+  }
 
-  const ringPos = (angleDeg: number, r: number, rotDeg: number) => {
-    const a = ((angleDeg + rotDeg) - 90) * Math.PI / 180;
-    return {x: cx + Math.cos(a) * r, y: cy + Math.sin(a) * r};
-  };
-
-  const renderFndRing = () => {
-    const elements: JSX.Element[] = [];
-    const r = fndR * breath;
-    const n = fndNodes.length;
-    const step = 360 / n;
-    const rotDeg = fndSpin * 57.2958;
-
-    const morita: [number, number][] = [[0, 1], [1, 2], [3, 5], [4, 5], [6, 0], [6, 3]];
-    for (const [i, j] of morita) {
-      const aDeg = i * step;
-      const bDeg = j * step;
-      const a = ringPos(aDeg, r, rotDeg);
-      const b = ringPos(bDeg, r, rotDeg);
-      const midDeg = (aDeg + bDeg) / 2;
-      const ctrl = ringPos(midDeg, r * 0.55, rotDeg);
-      const pulse = 0.5 + Math.sin(time * 0.45 + (i + j) * 0.7) * 0.5;
-      elements.push(
-        <path key={`gauge-${i}-${j}`}
-          d={`M ${a.x} ${a.y} Q ${ctrl.x} ${ctrl.y} ${b.x} ${b.y}`}
-          fill="none"
-          stroke="var(--ifm-color-primary)"
-          strokeWidth={0.8}
-          opacity={0.12 + pulse * 0.08}
-        />,
-      );
-    }
-
-    for (let i = 0; i < n; i++) {
-      const deg = i * step;
-      const p = ringPos(deg, r, rotDeg);
-      const pulse = Math.sin(time * 0.55 + i * 0.8);
-      const w = fndNodes[i].weight;
-      elements.push(
-        <circle key={`fnd-${i}`}
-          cx={p.x} cy={p.y}
-          r={5 * w * breath}
-          fill="var(--ifm-color-primary)"
-          opacity={0.65 + pulse * 0.15}
-        />,
-      );
-      const labelP = ringPos(deg, r + 20, rotDeg);
-      elements.push(
-        <text key={`fnd-label-${i}`}
-          x={labelP.x} y={labelP.y}
-          className={styles.vertexLabel}
-          textAnchor="middle"
-          dominantBaseline="central"
-          style={{fontSize: '11px', opacity: 0.8}}
-        >
-          {fndNodes[i].label}
-        </text>,
-      );
-    }
-    return elements;
-  };
-
-  const renderClsRing = () => {
-    const elements: JSX.Element[] = [];
-    const r = clsR * breath;
-    const n = clsNodes.length;
-    const step = 360 / n;
-    const rotDeg = clsSpin * 57.2958;
-    for (let i = 0; i < n; i++) {
-      const deg = i * step;
-      const p = ringPos(deg, r, rotDeg);
-      const pulse = Math.sin(time * 0.5 + i * 1.2);
-      elements.push(
-        <circle key={`cls-${i}`}
-          cx={p.x} cy={p.y}
-          r={4 * breath}
-          fill="none"
-          stroke="var(--ifm-color-primary)"
-          strokeWidth={1.2}
-          opacity={0.55 + pulse * 0.2}
-        />,
-      );
-      const labelP = ringPos(deg, r - 16, rotDeg);
-      elements.push(
-        <text key={`cls-label-${i}`}
-          x={labelP.x} y={labelP.y}
-          className={styles.vertexLabel}
-          textAnchor="middle"
-          dominantBaseline="central"
-          style={{fontSize: '9.5px', opacity: 0.7, fontStyle: 'italic'}}
-        >
-          {clsNodes[i].label}
-        </text>,
-      );
-    }
-    return elements;
-  };
-
-  const renderAxes = () => {
-    const elements: JSX.Element[] = [];
-    const n = axes.length;
-    for (let i = 0; i < n; i++) {
-      const deg = (i * 360) / n;
-      const a = ((deg) - 90) * Math.PI / 180;
-      const inner = {
-        x: cx + Math.cos(a) * (coreR + 4),
-        y: cy + Math.sin(a) * (coreR + 4),
-      };
-      const outer = {
-        x: cx + Math.cos(a) * (absR - 6),
-        y: cy + Math.sin(a) * (absR - 6),
-      };
-      const pulse = Math.sin(time * 0.4 + i * (Math.PI * 2 / n));
-      elements.push(
-        <line key={`axis-${i}`}
-          x1={inner.x} y1={inner.y}
-          x2={outer.x} y2={outer.y}
-          stroke="var(--ifm-color-primary)"
-          strokeWidth={0.6}
-          strokeDasharray="1 4"
-          opacity={0.22 + pulse * 0.08}
-        />,
-      );
-      const lp = {
-        x: cx + Math.cos(a) * (absR + 14),
-        y: cy + Math.sin(a) * (absR + 14),
-      };
-      elements.push(
-        <text key={`axis-label-${i}`}
-          x={lp.x} y={lp.y}
-          className={styles.vertexLabel}
-          textAnchor="middle"
-          dominantBaseline="central"
-          style={{fontSize: '10px', opacity: 0.55, fontStyle: 'italic'}}
-        >
-          {axes[i].label}
-        </text>,
-      );
-    }
-    return elements;
-  };
+  // Central point micro-drift
+  const driftX = Math.sin(time * 0.27) * 1.2;
+  const driftY = Math.sin(time * 0.19) * 1.2;
+  const centerX = cx + driftX;
+  const centerY = cy + driftY;
 
   return (
-    <svg viewBox="0 0 500 500" className={styles.orbitalSvg}>
+    <svg viewBox="0 0 500 500" className={styles.orbitalSvg} aria-hidden="true">
       <defs>
-        <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.42" />
-          <stop offset="55%" stopColor="var(--ifm-color-primary)" stopOpacity="0.12" />
+        <radialGradient id="ambientGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.38" />
+          <stop offset="55%" stopColor="var(--ifm-color-primary)" stopOpacity="0.08" />
           <stop offset="100%" stopColor="var(--ifm-color-primary)" stopOpacity="0" />
         </radialGradient>
-        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="2.8" result="blur" />
+        <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.2" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
         <filter id="coreGlow" x="-100%" y="-100%" width="300%" height="300%">
-          <feGaussianBlur stdDeviation="5" result="blur" />
+          <feGaussianBlur stdDeviation="4" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
@@ -243,95 +126,123 @@ function DiakrisisVisualization() {
         </filter>
       </defs>
 
-      {/* Background — 𝔐_Fnd ambient glow */}
-      <circle cx={cx} cy={cy} r={absR * breath} fill="url(#bgGrad)" />
+      {/* Ambient breath */}
+      <circle cx={cx} cy={cy} r={boundaryR * breath} fill="url(#ambientGrad)" />
 
-      {/* 𝓛_Abs outer boundary — forbidden stratum */}
-      <circle cx={cx} cy={cy} r={absR * breath}
-        fill="none"
-        stroke="#c45454"
-        strokeWidth={1.2}
-        strokeDasharray="6 4"
-        opacity={0.45}
-      />
-      <text
-        x={cx} y={cy - absR * breath - 16}
-        className={styles.vertexLabel}
-        textAnchor="middle"
-        dominantBaseline="central"
-        style={{fontSize: '11px', fill: '#c45454', opacity: 0.7, fontStyle: 'italic'}}
-      >
-        𝓛_Abs = ∅ (AFN-T)
-      </text>
-
-      {/* Five axes of absoluteness */}
-      <g>{renderAxes()}</g>
-
-      {/* 𝓛_Fnd ring */}
-      <circle cx={cx} cy={cy} r={fndR * breath}
+      {/* Outer dashed boundary — unlabeled limit */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={boundaryR * breath}
         fill="none"
         stroke="var(--ifm-color-primary)"
-        strokeWidth={0.6}
-        opacity={0.14}
+        strokeWidth={0.7}
+        strokeDasharray="4 5"
+        opacity={0.28}
       />
-      <g filter="url(#glow)">{renderFndRing()}</g>
-      <text
-        x={cx} y={cy + fndR * breath + 38}
-        className={styles.vertexLabel}
-        textAnchor="middle"
-        dominantBaseline="central"
-        style={{fontSize: '10.5px', opacity: 0.5}}
-      >
-        𝓛_Fnd — Rich-foundations
-      </text>
 
-      {/* 𝓛_Cls ring */}
-      <circle cx={cx} cy={cy} r={clsR * breath}
+      {/* Five whisper-rays */}
+      {rays.map((ray, i) => (
+        <line
+          key={`ray-${i}`}
+          x1={ray.ix}
+          y1={ray.iy}
+          x2={ray.ox}
+          y2={ray.oy}
+          stroke="var(--ifm-color-primary)"
+          strokeWidth={0.45}
+          strokeDasharray="1 5"
+          opacity={0.12 + ray.pulse * 0.1}
+        />
+      ))}
+
+      {/* Outer ring — thin */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={outerR * breath}
         fill="none"
         stroke="var(--ifm-color-primary)"
         strokeWidth={0.5}
-        strokeDasharray="3 3"
-        opacity={0.22}
+        opacity={0.14}
       />
-      <g>{renderClsRing()}</g>
 
-      {/* Central Diakrisis ∈ 𝓛_Cls^⊤ */}
-      {(() => {
-        const wx = Math.sin(time * 0.29) * 1.6;
-        const wy = Math.sin(time * 0.21) * 1.6;
-        const x = cx + wx;
-        const y = cy + wy;
-        const r = coreR * breath;
-        return (
-          <g className={styles.coreGroup}>
-            <circle cx={x} cy={y} r={r * 1.35}
-              fill="var(--ifm-color-primary)"
-              opacity={0.14}
-              filter="url(#coreGlow)"
-            />
-            <circle cx={x} cy={y} r={r}
-              fill="var(--ifm-color-primary)"
-              className={styles.coreCircle}
-            />
-            <text x={x} y={y}
-              className={styles.coreSymbol}
-              textAnchor="middle"
-              dominantBaseline="central"
-            >
-              Δ
-            </text>
-            <text
-              x={x} y={y + r + 14}
-              className={styles.vertexLabel}
-              textAnchor="middle"
-              dominantBaseline="central"
-              style={{fontSize: '10.5px', opacity: 0.85, fontWeight: 600}}
-            >
-              Diakrisis ∈ 𝓛_Cls^⊤
-            </text>
-          </g>
-        );
-      })()}
+      {/* Mid ring — baseline */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={midR * breath}
+        fill="none"
+        stroke="var(--ifm-color-primary)"
+        strokeWidth={0.5}
+        opacity={0.2}
+      />
+
+      {/* Seven orbital points on the mid ring */}
+      <g filter="url(#softGlow)">
+        {midNodes.map((node, i) => (
+          <circle
+            key={`mid-node-${i}`}
+            cx={node.x}
+            cy={node.y}
+            r={3 + node.pulse * 0.8}
+            fill="var(--ifm-color-primary)"
+            opacity={0.55 + node.pulse * 0.25}
+          />
+        ))}
+      </g>
+
+      {/* Inner ring — dashed, softer */}
+      <circle
+        cx={cx}
+        cy={cy}
+        r={innerR * breath}
+        fill="none"
+        stroke="var(--ifm-color-primary)"
+        strokeWidth={0.6}
+        strokeDasharray="2 4"
+        opacity={0.35}
+      />
+
+      {/* Three hollow inner marks */}
+      {innerNodes.map((node, i) => (
+        <circle
+          key={`inner-node-${i}`}
+          cx={node.x}
+          cy={node.y}
+          r={2.4}
+          fill="none"
+          stroke="var(--ifm-color-primary)"
+          strokeWidth={1}
+          opacity={0.55}
+        />
+      ))}
+
+      {/* Central singularity — subtle glow + Δ */}
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={coreR * 1.6 * breath}
+        fill="var(--ifm-color-primary)"
+        opacity={0.1}
+        filter="url(#coreGlow)"
+      />
+      <circle
+        cx={centerX}
+        cy={centerY}
+        r={coreR * breath}
+        fill="var(--ifm-color-primary)"
+        className={styles.coreCircle}
+      />
+      <text
+        x={centerX}
+        y={centerY}
+        className={styles.coreSymbol}
+        textAnchor="middle"
+        dominantBaseline="central"
+      >
+        Δ
+      </text>
     </svg>
   );
 }
@@ -345,14 +256,10 @@ function HomepageHeader() {
             Diakrisis
           </Heading>
           <p className={styles.heroSubtitle}>
-            (∞,∞)-мета-структурная теория пространства математических оснований <code>𝓜<sub>Fnd</sub></code>
+            Мета-структурная теория пространства математических оснований
           </p>
           <p className={styles.heroDescription}>
-            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами в <strong>(∞,∞)-формулировке</strong>. Каждое Rich-основание <code>F</code> (ZFC, HoTT, CIC, NCG, linear, AFA, cohesive, motivic, realizability, УГМ, ...) — точка <code>α<sub>F</sub></code> классифицирующего 2-стека{' '}
-            <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Корпус: <strong>106 теорем</strong> в номерной системе с классификацией строгости L1/L2/L3. Теория теоретически <strong>закрыта</strong> на четырёх слоях: <strong>extensional</strong> (5-осевая абсолютность AFN-T), <strong>intensional</strong> (slice-локальность{' '}
-            <code>𝐈</code>{' '}через топос 𝐄𝐟𝐟 Хайланда — 98.T + 99.T), <strong>meta-classification</strong> (theory-level stabilization с universe-ascent — 100.T + 101.T + 102.T), <strong>maximality</strong> (Diakrisis ∈ <code>𝓛<sub>Cls</sub><sup>⊤</sup></code> как теорема — 103.T + 104.T + 105.T + 106.T). Самодостаточный препринт{' '}
-            <strong>MSFS</strong> (44 стр.) выносит структурное ядро в стандартной категорной нотации; AFN-T — граничная лемма, унифицирующая no-go серию Cantor → Russell → Gödel → Tarski → Lawvere → Ernst. <strong>UFH (85.T)</strong>:{' '}
-            <code>α<sub>uhm</sub> ≃<sub>gauge</sub> ∫<sub>Γ</sub> α<sub>Д-hybrid</sub><sup>!</sup>(Γ)</code> над <code>7D-quantum</code>.
+            Различение — первичный акт, не объект. Пространство всех математических оснований рассматривается как единая классифицирующая структура: каждое основание занимает в нём координатную позицию, и ни одно не абсолютно. Программа формализует это пространство, доказывает его структурный плюрализм и устанавливает формальную границу, обобщающую классическую серию no-go-теорем.
           </p>
           <div className={styles.heroButtons}>
             <Link className="button button--primary button--lg" to="/intro">

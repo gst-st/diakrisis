@@ -1,7 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
   <defs>
-    <style>.logo-text { fill: #2e5a88; font-family: Georgia, serif; font-size: 28px; font-weight: bold; }</style>
+    <linearGradient id="dkrLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4d40b8"/>
+      <stop offset="100%" stop-color="#8a75f0"/>
+    </linearGradient>
+    <radialGradient id="dkrLogoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8470ec" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#8470ec" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#8470ec" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <circle cx="30" cy="30" r="28" fill="none" stroke="#2e5a88" stroke-width="2"/>
-  <text class="logo-text" x="30" y="40" text-anchor="middle">Δ</text>
+  <!-- Soft ambient glow -->
+  <circle cx="32" cy="32" r="30" fill="url(#dkrLogoGlow)"/>
+  <!-- Outer dashed boundary — limit stratum -->
+  <circle cx="32" cy="32" r="29" stroke="url(#dkrLogoGrad)" stroke-width="1" stroke-dasharray="2.5 3" opacity="0.5"/>
+  <!-- Mid ring — classification layer -->
+  <circle cx="32" cy="32" r="21" stroke="url(#dkrLogoGrad)" stroke-width="1.2" opacity="0.65"/>
+  <!-- Inner ring — foundation layer -->
+  <circle cx="32" cy="32" r="12.5" stroke="url(#dkrLogoGrad)" stroke-width="1.4" opacity="0.85"/>
+  <!-- Central Δ -->
+  <text x="32" y="38.5" fill="url(#dkrLogoGrad)" font-family="'Exo 2', STIXTwoMath-Regular, 'Times New Roman', Georgia, serif" font-size="16" font-weight="500" text-anchor="middle" letter-spacing="0">Δ</text>
 </svg>

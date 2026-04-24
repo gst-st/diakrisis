@@ -13,10 +13,19 @@ const ghPagesBaseUrl = process.env.GH_PAGES_BASE_URL || '/';
 const config: Config = {
   title: 'Diakrisis',
   tagline: 'Математическая структура классификации оснований',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   url: ghPagesUrl,
   baseUrl: ghPagesBaseUrl,
+
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'icon', type: 'image/svg+xml', href: 'img/favicon.svg'}},
+    {tagName: 'link', attributes: {rel: 'alternate icon', type: 'image/x-icon', href: 'img/favicon.ico'}},
+    {tagName: 'link', attributes: {rel: 'apple-touch-icon', sizes: '180x180', href: 'img/apple-touch-icon.png'}},
+    {tagName: 'link', attributes: {rel: 'icon', type: 'image/png', sizes: '192x192', href: 'img/android-chrome-192x192.png'}},
+    {tagName: 'link', attributes: {rel: 'icon', type: 'image/png', sizes: '512x512', href: 'img/android-chrome-512x512.png'}},
+    {tagName: 'meta', attributes: {name: 'theme-color', content: '#5d4ebf'}},
+  ],
 
   organizationName: process.env.GH_ORG_NAME || 'uhm-theory',
   projectName: process.env.GH_PROJECT_NAME || 'diakrisis',
