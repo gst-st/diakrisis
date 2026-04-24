@@ -336,10 +336,10 @@ $$
 |---|---|---|---|
 | самомоделирование | $\varphi: \mathcal{C} \to \mathcal{C}$ категорное отображение | $\varphi^\kappa$-итерация | $\rho^* = \varphi(\Gamma)$ |
 | автопоэзис | $\mathsf{A}^\mathrm{act}$ активация (AC-сторона) | $\mathsf{A}^{\omega^2}$ | $\mathrm{Fix}(\mathsf{A}^{\omega^2})$ (по 113.T) |
-| самореференция | Lawvere-fixed-point $f: X \to X^X$ | стратифицированный Yanofsky | fixed point $p \in X$, ограничено T-2a\* |
+| самореференция | Ловер-fixed-point $f: X \to X^X$ | стратифицированный Яновский | fixed point $p \in X$, ограничено T-2a\* |
 | самонаблюдение | terminal coalgebra $X \to F(X)$ для подходящего $F$ | унfoldинг коалгебры | $\nu F$ — terminal coalgebra |
 | самосогласованность | оператор эквивалентности $\Phi \simeq \id$ | — | equalizer $\mathrm{eq}(\Phi, \id)$ |
-| самоописание | внутренний хом $[\alpha, \alpha]$ | Yoneda $\alpha \hookrightarrow \mathrm{End}(\alpha)$ | $\mathrm{End}(\alpha)$-точка |
+| самоописание | внутренний хом $[\alpha, \alpha]$ | Ёнеда $\alpha \hookrightarrow \mathrm{End}(\alpha)$ | $\mathrm{End}(\alpha)$-точка |
 | самокопирование | comultiplication $\Delta: \alpha \to \alpha \otimes \alpha$ | coalgebra-итерация | co-idempotent fixed object |
 | самоактивация | $\iota^\mathrm{act}: \mathrm{End}(\rangle\!\rangle \cdot \langle\!\langle) \hookrightarrow \rangle\!\rangle \cdot \langle\!\langle$ | $\iota(\mathsf{A})$ | $\varepsilon_\mathsf{A}$ (A-7) |
 

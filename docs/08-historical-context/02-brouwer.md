@@ -92,7 +92,7 @@ title: Брауэр — Urintuition
 - **Экзистенция через конструкцию**: ∃x. P(x) требует построения конкретного x.
 - **Отказ от LEM**: закон исключённого третьего (A ∨ ¬A) не принимается глобально.
 - **Отказ от double negation**: ¬¬A не влечёт A.
-- **Continuum**: интуиционистская версия (Brouwer's theorem about continuity).
+- **Continuum**: интуиционистская версия (Брауэр's theorem about continuity).
 
 ## Параллель с Diakrisis
 
@@ -143,7 +143,7 @@ title: Брауэр — Urintuition
 **Субъективизм vs имперсональность**:
 - Брауэр: Urintuition связан с конкретным сознанием.
 - Diakrisis: Διάκрисίς универсален, структурен.
-- **Следствие**: Brouwer требует «живого математика»; у нас — formal structure.
+- **Следствие**: Брауэр требует «живого математика»; у нас — formal structure.
 
 **Логика**:
 - Брауэр: ограничение на intuitionistic.
@@ -202,7 +202,7 @@ title: Брауэр — Urintuition
 ### В Diakrisis
 
 - **α_int**: артикуляция интуиционистской логики.
-- **Brouwer's position**: соответствует конкретному выбору в α_int.
+- **Брауэр's position**: соответствует конкретному выбору в α_int.
 - **Другие варианты**: classical (α_cl), linear (α_lin), и т.д.
 
 ### Gauge-equivalence
@@ -215,10 +215,10 @@ title: Брауэр — Urintuition
 
 ### Современное интуиционистское движение
 
-- **Heyting**: формализация intuitionistic logic.
-- **Martin-Löf**: MLTT.
+- **Гейтинг**: формализация intuitionistic logic.
+- **Мартин-Лёф**: MLTT.
 - **Bishop**: constructive analysis.
-- **Awodey, Voevodsky**: HoTT (с intuitionistic base).
+- **Awodey, Воеводский**: HoTT (с intuitionistic base).
 
 ### Computational impact
 

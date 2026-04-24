@@ -7,7 +7,7 @@ title: Теорема 108.T — AC/OC-дуальность
 
 :::tip MSFS-первоисточник
 
-Формальная версия теоремы — **MSFS Theorem~\ref{thm:ac-oc-duality}** (AC/OC Morita Duality), §11. Конструкция: adjoint pair $\varepsilon \dashv \alpha$ с $\varepsilon(F) = (F, \Syn(F), \id, \id)$ (syntactic self-enactment) и $\alpha(F, \cC, \iota, r) = F$. Ключевые технические детали: (i) essential surjectivity через выбранный reflector $r$ как часть данных, (ii) 2-functoriality $\Syn$ через Lurie HTT §5.1 + Kapulkin–Lumsdaine для $(\infty, n)$, (iii) $(\infty, \infty)$-lift через Barwick–Schommer-Pries. Ниже — абстрактное изложение для Diakrisis-контекста. Соответствие объектов — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) §«AC/OC-дуальность».
+Формальная версия теоремы — **MSFS Theorem~\ref{thm:ac-oc-duality}** (AC/OC Morita Duality), §11. Конструкция: adjoint pair $\varepsilon \dashv \alpha$ с $\varepsilon(F) = (F, \Syn(F), \id, \id)$ (syntactic self-enactment) и $\alpha(F, \cC, \iota, r) = F$. Ключевые технические детали: (i) essential surjectivity через выбранный reflector $r$ как часть данных, (ii) 2-functoriality $\Syn$ через Lurie HTT §5.1 + Kapulkin–Lumsdaine для $(\infty, n)$, (iii) $(\infty, \infty)$-lift через Барвик–Schommer-Pries. Ниже — абстрактное изложение для Diakrisis-контекста. Соответствие объектов — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) §«AC/OC-дуальность».
 
 :::
 
@@ -37,10 +37,10 @@ $$
 
 ### 2.1 План (параллельно MSFS Theorem~\ref{thm:ac-oc-duality})
 
-- **Шаг A — Full faithfulness $\varepsilon$**: 2-функториальность $\Syn$ (Lambek–Scott для $n = 1$; Kapulkin–Lumsdaine для $(\infty, n)$) даёт $\Hom_\cE(\varepsilon F_1, \varepsilon F_2) \simeq \Hom_\cF(F_1, F_2)$.
-- **Шаг B — Essential surjectivity на уровне gauge**: для любого квадрупла $(F, \cC, \iota, r)$ выбранный reflector $r$ (часть данных объекта) с инвертируемым counit $r \circ \iota \Rightarrow \id$ (Riehl–Verity Prop. 2.1.11) даёт gauge-эквивалентность $(F, \cC, \iota, r) \simeq \varepsilon(F)$.
-- **Шаг C — Когерентность с $\mathsf{M}/\mathsf{A}$**: $\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$ по наtуральности Lambek–Scott adjunction.
-- **Шаг D — $(\infty, \infty)$-lift**: Barwick–Schommer-Pries unicity + Bergner–Rezk model comparison обеспечивают параметрическую корректность в $n \in \mathbb{N} \cup \{\infty\}$; Lurie HTT §5.4 даёт accessibility filtered-colimits.
+- **Шаг A — Full faithfulness $\varepsilon$**: 2-функториальность $\Syn$ (Ламбек–Scott для $n = 1$; Kapulkin–Lumsdaine для $(\infty, n)$) даёт $\Hom_\cE(\varepsilon F_1, \varepsilon F_2) \simeq \Hom_\cF(F_1, F_2)$.
+- **Шаг B — Essential surjectivity на уровне gauge**: для любого квадрупла $(F, \cC, \iota, r)$ выбранный reflector $r$ (часть данных объекта) с инвертируемым counit $r \circ \iota \Rightarrow \id$ (Рил–Verity Prop. 2.1.11) даёт gauge-эквивалентность $(F, \cC, \iota, r) \simeq \varepsilon(F)$.
+- **Шаг C — Когерентность с $\mathsf{M}/\mathsf{A}$**: $\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$ по наtуральности Ламбек–Scott adjunction.
+- **Шаг D — $(\infty, \infty)$-lift**: Барвик–Schommer-Pries unicity + Bergner–Rezk model comparison обеспечивают параметрическую корректность в $n \in \mathbb{N} \cup \{\infty\}$; Lurie HTT §5.4 даёт accessibility filtered-colimits.
 - **Шаг E — Gauge-сохранение и сохранение глубин**: Ara–Maltsiniotis + Bergner–Rezk сохраняют gauge componentwise; Предложение 7.2 устанавливает $\nu(\alpha) = \mathsf{e}(\varepsilon(\alpha))$.
 - **Шаг F — Соответствие стратов**: $\varepsilon$ biject on стратах (Theorem~\ref{thm:ac-oc-duality}(c)).
 
@@ -110,7 +110,7 @@ $$
 \varepsilon(\alpha(\varepsilon_0)) \simeq \varepsilon_0.
 $$
 
-*Доказательство*. Yoneda-подобная: $\alpha \circ \varepsilon = [\varepsilon_\mathrm{math}, \mathrm{Perf}(-)]^\mathrm{hom}$; по универсальности $\varepsilon_\mathrm{math}$ как distinguished act это канонически эквивалентно $\mathrm{id}_{\langle\!\langle \cdot \rangle\!\rangle}$. Аналогично для $\varepsilon \circ \alpha$. ∎
+*Доказательство*. Ёнеда-подобная: $\alpha \circ \varepsilon = [\varepsilon_\mathrm{math}, \mathrm{Perf}(-)]^\mathrm{hom}$; по универсальности $\varepsilon_\mathrm{math}$ как distinguished act это канонически эквивалентно $\mathrm{id}_{\langle\!\langle \cdot \rangle\!\rangle}$. Аналогично для $\varepsilon \circ \alpha$. ∎
 
 ## 7. Шаг E: сохранение gauge и глубин
 
@@ -134,7 +134,7 @@ $$
 
 **Предложение 8.1.** Построенная на уровне 2-категорий эквивалентность $\varepsilon$ расширяется до $(\infty, \infty)$-эквивалентности.
 
-*Доказательство (набросок)*. Использует Barwick–Schommer-Pries unicity (как в 102.T-доказательстве meta-стабилизация), применённое на уровне $(\infty, n)$-truncations для всех $n < \infty$, с последующим стабилизированием по $n \to \infty$. Accessibility всех задействованных функторов гарантирует корректность трансфинитных предельных переходов. ∎
+*Доказательство (набросок)*. Использует Барвик–Schommer-Pries unicity (как в 102.T-доказательстве meta-стабилизация), применённое на уровне $(\infty, n)$-truncations для всех $n < \infty$, с последующим стабилизированием по $n \to \infty$. Accessibility всех задействованных функторов гарантирует корректность трансфинитных предельных переходов. ∎
 
 ## 9. Сохранение T-2f\* / T-2a\*
 
@@ -172,7 +172,7 @@ $\rangle\!\rangle \cdot \langle\!\langle^{(\infty, \infty)} = \mathrm{colim}_n \
 
 ## 11. Философская значимость
 
-108.T — не только технический результат. Это **структурное разрешение старого спора** объект-центричной и действие-центричной философий (Парменид vs Гераклит, Лейбниц vs Спиноза, Рассел vs Bergson, аналитика vs феноменология).
+108.T — не только технический результат. Это **структурное разрешение старого спора** объект-центричной и действие-центричной философий (Парменид vs Гераклит, Лейбниц vs Спиноза, Рассел vs Бергсон, аналитика vs феноменология).
 
 Обе традиции *правы* — но каждая видит только одну проекцию единой структуры. 108.T — *теорема сочетаемости* этих проекций, а не выбор между ними. Метастемология Чурилова ставила ДЦ *против* ОЦ; 108.T устанавливает их эквивалентность.
 

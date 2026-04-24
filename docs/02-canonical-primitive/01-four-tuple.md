@@ -105,7 +105,7 @@ $$\iota: \mathrm{End}(\llbracket\cdot\rrbracket) \;\hookrightarrow\; \llbracket\
 | Cat-enrichment | Cat-enriched category | Kelly 1982 |
 | Internal closure | Similar to 2-topos | Shulman 2008-2019 |
 | 2-fully-faithful ι | Slightly stronger than 2-topos | — |
-| Cohesion (Π ⊣ ♭ ⊣ ♯ ⊣ ι) | Schreiber cohesion | Schreiber 2013 |
+| Cohesion (Π ⊣ ♭ ⊣ ♯ ⊣ ι) | Шрайбер cohesion | Шрайбер 2013 |
 | Gauge action | Automorphism 2-group | Kelly, Lurie |
 
 ## 2. Эндо-функтор метаизации 𝖬
@@ -134,7 +134,7 @@ $$\iota: \mathrm{End}(\llbracket\cdot\rrbracket) \;\hookrightarrow\; \llbracket\
 Для существования colim'ов на предельных ординалах требуется:
 
 - **Accessibility**: существует регулярный кардинал λ_0 такой, что 𝖬 commuting with λ_0-filtered colimits.
-- **По Adámek-Rosický**: это гарантирует сходимость 𝖬-итераций к фиксированной точке для κ > λ_0 при достижимой стартовой точке.
+- **По Адамек-Росицкий**: это гарантирует сходимость 𝖬-итераций к фиксированной точке для κ > λ_0 при достижимой стартовой точке.
 
 Формально: **Axi-4** — accessibility 𝖬 — **необходимая** часть примитива.
 
@@ -184,7 +184,7 @@ Axi-7 утверждает: ρ(α_𝖬)(ρ(β)) ≃ ρ(𝖬(β)), связыва
 ### 2.6 Признанные редукции
 
 - 𝖬 как 2-функтор — **стандартная** конструкция.
-- 𝖬 accessible (сохраняющий филтр-колимиты) — **редукция** к accessible endofunctor theory (Adámek-Rosický).
+- 𝖬 accessible (сохраняющий филтр-колимиты) — **редукция** к accessible endofunctor theory (Адамек-Росицкий).
 - 𝖬-итерация Trace(𝖠) — **редукция** к initial/terminal (co)algebra (теоремы Адамека о фиксированных точках).
 
 ## 3. Выделенный объект α_math

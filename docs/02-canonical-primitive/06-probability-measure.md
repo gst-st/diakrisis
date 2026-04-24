@@ -148,7 +148,7 @@ ML как Bayesian inference: α (prior) → 𝖬(α) (posterior через data
 
 ## Признанные редукции
 
-- **Kolmogorov (1933)**: probability theory.
+- **Колмогоров (1933)**: probability theory.
 - **Giry (1982)**: Giry monad.
 - **Markov**: Markov chains.
 - **Bayes (1763)**: Bayes' theorem.

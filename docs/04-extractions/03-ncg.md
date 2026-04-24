@@ -11,12 +11,12 @@ title: NCG как извлечение
 
 ## Обзор
 
-NCG (Non-Commutative Geometry) — программа Alain Connes (1980-), объединяющая топологию, геометрию и алгебру через **спектральные тройки** (A, H, D). В Diakrisis представлена как α_NCG.
+NCG (Non-Commutative Geometry) — программа Alain Конн (1980-), объединяющая топологию, геометрию и алгебру через **спектральные тройки** (A, H, D). В Diakrisis представлена как α_NCG.
 
 ### Значение NCG
 
 - **Обобщение геометрии**: классические многообразия — частный случай.
-- **Связь с физикой**: стандартная модель физики Connes-Chamseddine.
+- **Связь с физикой**: стандартная модель физики Конн-Chamseddine.
 - **Квантовая механика**: естественная структура для квантовых систем.
 - **Операторные алгебры**: мостик между алгеброй и анализом.
 
@@ -90,13 +90,13 @@ NCG (Non-Commutative Geometry) — программа Alain Connes (1980-), об
 | J | антиунитарный | charge conj |
 | γ | Z/2-grading | chirality |
 
-## Reconstruction Connes
+## Reconstruction Конн
 
 **04.C1**: коммутативный gauge-класс NCG → классические спиновые многообразия.
 
-### Теорема Connes reconstruction
+### Теорема Конн reconstruction
 
-(Connes 2013): Если A коммутативна, то спектральная тройка (A, H, D) эквивалентна спиновому многообразию (M, g, S) с Dirac-оператором.
+(Конн 2013): Если A коммутативна, то спектральная тройка (A, H, D) эквивалентна спиновому многообразию (M, g, S) с Dirac-оператором.
 
 - **Точно**: коммутативные NCG ↔ спиновые многообразия.
 - **Следствие**: обычная риманова геометрия — частный случай NCG.
@@ -107,11 +107,11 @@ NCG (Non-Commutative Geometry) — программа Alain Connes (1980-), об
 
 ## Связь с SM
 
-**04.T2**: α_SM ⊂ α_NCG (стандартная модель через Connes-Chamseddine).
+**04.T2**: α_SM ⊂ α_NCG (стандартная модель через Конн-Chamseddine).
 
-### Connes-Chamseddine model
+### Конн-Chamseddine model
 
-(Chamseddine-Connes 1996+): Стандартная модель физики естественно выражается в NCG:
+(Chamseddine-Конн 1996+): Стандартная модель физики естественно выражается в NCG:
 
 - **Алгебра** A = A_F × C^∞(M), где A_F — конечномерная алгебра (частицы).
 - **Гильбертово H** = A_F-модуль ⊗ спиноры.
@@ -126,7 +126,7 @@ NCG (Non-Commutative Geometry) — программа Alain Connes (1980-), об
 
 ## Связь с УГМ
 
-**04.T3**: α_uhm ⊂ конечномерная NCG. 7D-размерность УГМ = спектральная размерность Connes-тройки.
+**04.T3**: α_uhm ⊂ конечномерная NCG. 7D-размерность УГМ = спектральная размерность Конн-тройки.
 
 ### Детализация связи
 
@@ -181,7 +181,7 @@ Spectral action S(D) = Tr(f(D/Λ)) = **АПЕЙРОН-F** для α_NCG. Это 
 
 ### Формализация
 
-**Spectral action** (Chamseddine-Connes):
+**Spectral action** (Chamseddine-Конн):
 - **S(D) := Tr(f(D/Λ))**, где f — подходящая функция, Λ — cutoff.
 - Аналог «partition function» в термодинамике.
 - Из spectral action выводится Lagrangian физики.
@@ -195,15 +195,15 @@ Spectral action S(D) = Tr(f(D/Λ)) = **АПЕЙРОН-F** для α_NCG. Это 
 ## Признанные редукции
 
 - Стандартная NCG Конна.
-- Connes-Chamseddine SM.
+- Конн-Chamseddine SM.
 - KO-theory, Bott periodicity.
 
 ### Источники
 
-- **Connes (1994)**: Noncommutative Geometry (книга).
-- **Connes (2013)**: Reconstruction theorem.
-- **Chamseddine-Connes (1996+)**: SM from NCG.
-- **Connes-Marcolli (2008)**: NCG + number theory.
+- **Конн (1994)**: Noncommutative Geometry (книга).
+- **Конн (2013)**: Reconstruction theorem.
+- **Chamseddine-Конн (1996+)**: SM from NCG.
+- **Конн-Marcolli (2008)**: NCG + number theory.
 - **Landi (1997)**: Introduction to NCG.
 
 ## Специфика α_NCG

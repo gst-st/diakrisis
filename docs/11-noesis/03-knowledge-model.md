@@ -279,7 +279,7 @@ fn check_axiom_compliance(c: Claim, α: Articulation) -> ComplianceReport {
     
     // ... all 13 axioms
     
-    // T-2f*: stratification (no Russell-type paradoxes)
+    // T-2f*: stratification (no Рассел-type paradoxes)
     verify!(not contains_paradox(c));
     
     ComplianceReport { ... }

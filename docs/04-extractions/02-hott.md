@@ -11,7 +11,7 @@ title: HoTT как извлечение
 
 ## Обзор
 
-HoTT (Homotopy Type Theory) — **современное** альтернативное основание, предложенное Awodey, Voevodsky, Coquand и другими (HoTT Book 2013). В Diakrisis: артикуляция α_HoTT ∈ ⟪⟫.
+HoTT (Homotopy Type Theory) — **современное** альтернативное основание, предложенное Awodey, Воеводский, Coquand и другими (HoTT Book 2013). В Diakrisis: артикуляция α_HoTT ∈ ⟪⟫.
 
 ### Значение HoTT
 
@@ -177,7 +177,7 @@ Univalence отражает интуицию:
 ### Детализация
 
 **MLTT + UA ∼ HoTT**:
-- MLTT (Martin-Löf Type Theory) + Univalence Axiom = HoTT.
+- MLTT (Мартин-Лёф Type Theory) + Univalence Axiom = HoTT.
 - Без UA: MLTT — другой gauge-класс.
 
 **Univalent Foundations**:
@@ -200,7 +200,7 @@ Univalence отражает интуицию:
 ### Источники
 
 - **Awodey-Warren (2009)**: Homotopy теория типов.
-- **Voevodsky (2010+)**: Univalent Foundations program.
+- **Воеводский (2010+)**: Univalent Foundations program.
 - **HoTT Book (2013)**: каноническая формализация.
 - **Shulman (2015+)**: теоретические results.
 - **Coquand et al. (2015)**: Cubical теория типов.
@@ -223,7 +223,7 @@ Univalence отражает интуицию:
 
 - Каноническая модель cubical: варианты.
 - Higher inductive types: классификация.
-- Относительность к ZFC: Voevodsky показал консистентность HoTT в ZFC.
+- Относительность к ZFC: Воеводский показал консистентность HoTT в ZFC.
 
 ## Применение HoTT в Diakrisis
 

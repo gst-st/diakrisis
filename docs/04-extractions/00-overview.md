@@ -56,7 +56,7 @@ title: Обзор извлечений
 | MLTT | α_MLTT | ω+1 | substitution | Π/Σ/Id |
 | Markov-конструктивизм | α_Markov | ω | Aut(Eff) | HA + принцип Маркова |
 | Bishop-конструктивизм | α_Bishop | ω | Aut(NNO-топоса) | choice-free вещ.\ анализ |
-| Feferman-предикативизм | α_Feferman | ω | Aut(ATR₀) | предикативная комплекция |
+| Феферман-предикативизм | α_Feferman | ω | Aut(ATR₀) | предикативная комплекция |
 | ∞-Topos | α_∞topos | ω·2 | ∞-autoequiv | (∞,1)-structure |
 | NCG | α_ncg | ω·2 | Aut(C\*-alg) | spectral triple |
 | Cohesive ∞-Topos | α_cohesion | ω·2+4 | ∞-aut + modalities | Π ⊣ ♭ ⊣ ♯ ⊣ ι |
@@ -83,7 +83,7 @@ title: Обзор извлечений
 ### Формулировка
 
 **Rich-F** — формальная система, удовлетворяющая:
-- Содержит арифметику (для Gödel).
+- Содержит арифметику (для Гёдель).
 - Имеет формальную аксиоматизацию.
 - Допускает категорное представление.
 
@@ -159,7 +159,7 @@ title: Обзор извлечений
 
 ### Источники
 
-- **Lawvere (1963)**: Functorial semantics.
+- **Ловер (1963)**: Functorial semantics.
 - **Lurie (2009)**: HTT — higher-topos perspective.
 - **Shulman (2008)**: 2-topoi.
 - **Stone (1936)**: духовная прародительница.

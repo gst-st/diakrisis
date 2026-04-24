@@ -34,7 +34,7 @@ Noesis требует **одновременно**:
 
 Существующие модули (3,781 строка):
 
-- `core/math/category.vr` — Functor, Monad, Adjunction, Yoneda, расширения Кана (1-категория).
+- `core/math/category.vr` — Functor, Monad, Adjunction, Ёнеда, расширения Кана (1-категория).
 - `core/math/simplicial.vr` — SimplicialSet, KanComplex, InfinityGroupoid.
 - `core/math/infinity_category.vr` — QuasiCategory, InfinityFunctor.
 - `core/math/infinity_topos.vr` — Site, GrothendieckTopology, InfSheaf.

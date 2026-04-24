@@ -56,7 +56,7 @@ primitive ε_translate : (source: α, target: α) -> Act
   @epsilon(omega + 1)
   @gauge
 
-// Акт конструкции по Brouwer
+// Акт конструкции по Брауэр
 primitive ε_construct : (spec: Spec) -> Act
   @epsilon(omega)
   @intuitionistic
@@ -88,7 +88,7 @@ fn activate_n<E: Act>(e: E, n: Ordinal) -> Act
   @requires(n < Omega)
 
 // Autopoietic замыкание (A-фикс. точка)
-fn autopoiesis<E: Act>(e: E) -> Act
+fn автопоэзис<E: Act>(e: E) -> Act
   @requires(ε(e) >= ω^2)
   @ensures(A^ω²(e) ≃ e)
 ```

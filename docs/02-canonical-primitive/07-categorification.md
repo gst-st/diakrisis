@@ -165,7 +165,7 @@ $$\mathrm{Decat}(\mathsf{M}(\alpha)) \to \alpha.$$
 
 - **Baez-Dolan (1995-1998)**: categorification program.
 - **Lurie (2009)**: HTT — higher categorification.
-- **Lawvere-Rosebrugh (2003)**: Sets for Mathematics.
+- **Ловер-Rosebrugh (2003)**: Sets for Mathematics.
 - **Baez et al. (2010)**: physics through categorification.
 
 ## Итог

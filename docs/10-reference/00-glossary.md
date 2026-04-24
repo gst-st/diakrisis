@@ -83,7 +83,7 @@ title: Глоссарий
 **Определение**: α_𝖬 := ι(𝖬) — представитель 𝖬.
 **Введено**: через Axi-1 + Axi-7.
 **Verum**: в разработке.
-**Замечание**: в Cat-модели Axi-8 нарушается; α_𝖬 Yoneda-представим.
+**Замечание**: в Cat-модели Axi-8 нарушается; α_𝖬 Ёнеда-представим.
 
 ### Fix(𝖬)
 
@@ -112,7 +112,7 @@ title: Глоссарий
 **Тип**: Ob(⟪⟫).
 **Определение**: инициальная 𝖬-алгебра и финальная 𝖬-коалгебра.
 **Введено**: 12.T1, 12.T2.
-**Verum**: в разработке (Adámek constructions).
+**Verum**: в разработке (Адамек constructions).
 **Свойства**: существуют при accessibility.
 
 ### Z (Z_1, Z_2, Z_3)
@@ -166,9 +166,9 @@ title: Глоссарий
 ### α_linear
 
 **Тип**: Ob(⟪⟫).
-**Определение**: артикуляция Girard-linear logic с exponential `!`.
+**Определение**: артикуляция Жирар-linear logic с exponential `!`.
 **ν**: ω+1.
-**Classical-equivalence**: через Girard-трансляция.
+**Classical-equivalence**: через Жирар-трансляция.
 
 ### α_affine
 
@@ -337,7 +337,7 @@ title: Глоссарий
 ### Краткий перечень ключевых
 
 - **10.T1**: консистентность в Cat.
-- **10.T2**: Russell-иммунитет.
+- **10.T2**: Рассел-иммунитет.
 - **10.T5**: существование Ω̄.
 - **13.T, 17.T**: Escape теоремы.
 - **16.T1**: эквивалентность Z_i.
@@ -425,7 +425,7 @@ title: Глоссарий
 ### Reflector r
 
 **Тип**: часть данных энактмента.
-**Определение**: левый adjoint $r : \cC \to \Syn(F)$ к $\iota$, с тождествами треугольника. Единственен up to unique invertible 2-cell (Riehl–Verity 2022, Adámek–Rosický 1994).
+**Определение**: левый adjoint $r : \cC \to \Syn(F)$ к $\iota$, с тождествами треугольника. Единственен up to unique invertible 2-cell (Рил–Verity 2022, Адамек–Росицкий 1994).
 **Значение**: обеспечивает canonicity essentially-surjective proof'а 108.T.
 
 ### ε-инвариант
@@ -448,11 +448,11 @@ title: Глоссарий
 **MSFS-соответствие**: Theorem~\ref{thm:dual-afnt}.
 **См.**: [/12-actic/05-dual-afn-t](/12-actic/05-dual-afn-t).
 
-### Lawvere-scope на $\cE$
+### Ловер-scope на $\cE$
 
 **Тип**: структурное условие для ε-completeness-axis.
-**Определение**: $\{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC \text{ closed symmetric monoidal}\}$ — включает Cartesian-closed, SMC, $*$-autonomous (универсальная диагональ Yanofsky).
-**Покрытие**: linear logic (Girard), ludics, квантовые enactments, resource-sensitive type theories.
+**Определение**: $\{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC \text{ closed symmetric monoidal}\}$ — включает Cartesian-closed, SMC, $*$-autonomous (универсальная диагональ Яновский).
+**Покрытие**: linear logic (Жирар), ludics, квантовые enactments, resource-sensitive type theories.
 
 ### $\mathsf{A}$ (активация)
 
@@ -481,11 +481,11 @@ title: Глоссарий
 **Семантика**: любой топос с натурально-числовым объектом.
 **MSFS-референс**: Bishop 1967, Bridges–Vita 2006.
 
-### Feferman-предикативизм
+### Феферман-предикативизм
 
 **Тип**: $\mathcal{L}_\mathrm{Fnd}$-точка; предикативная арифметическая сила $\mathsf{ATR}_0$.
 **Свойство**: предикативная комплекция.
-**MSFS-референс**: Feferman 1964.
+**MSFS-референс**: Феферман 1964.
 
 ### Ультрафинитизм (Есенин-Вольпин)
 

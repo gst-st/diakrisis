@@ -23,7 +23,7 @@ title: Статус программ
 
 ### Ключевые теоремы
 
-- **UFH** (85.T): α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция).
+- **UFH** (85.T): α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Гротендик-конструкция).
 - **Категоричность** (88.T): единственность до (∞,∞)-эквивалентности.
 - **Internal language** (89.T): L_⟪⟫ — внутренний формальный язык.
 - **Сила консистентности** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inacc).
@@ -41,7 +41,7 @@ title: Статус программ
 | N-06 | Членство Diakrisis в $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема (а не программа) | ✅ закрыто (103.T + 104.T + 105.T + 106.T) |
 | N-07 | AC/OC-симметрия корпуса | ✅ закрыто (107.T + 108.T + 109.T) |
 | N-08 | Вложение action-centric традиции (Метастемология Е. Чурилова) | ✅ закрыто (125.T): $\varepsilon = \omega \cdot 2 + 1$, дуальность через 108.T |
-| N-09 | Lawvere-scope на $\cE$ покрывает closed symmetric monoidal (linear logic, ludics, квантовые) | ✅ закрыто (Theorem dual-five-axis) |
+| N-09 | Ловер-scope на $\cE$ покрывает closed symmetric monoidal (linear logic, ludics, квантовые) | ✅ закрыто (Theorem dual-five-axis) |
 | N-10 | Подстратум слабых Rich-метатеорий (ограниченная арифметика I∆₀, Buss S₂ⁱ/T₂ⁱ, V₀, исчисления осуществимости) | 🟡 в программе — формирует собственный подстратум $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ с возможно-отдельным поведением мета-категоричности; связь с стандартными Rich-метатеориями через обратную математику (Simpson 2009). MSFS Open Question Q5 |
 
 ## Классификация обходных путей вокруг AFN-T
@@ -54,7 +54,7 @@ title: Статус программ
 | **Рефлексивная башня** | $S + \mathrm{Con}(S) + \mathrm{Con}(\mathrm{Con}(S)) + \ldots$ с ординалом $\sup_\kappa|S_\kappa|$, превосходящим любое фиксированное $\|S\|$ | ✅ **formally closed** | 19.T1 + 31.T3 + 68.T + 69.T + 90.T |
 | **Интенсиональный refinement** | Morita как экстенсиональный инвариант теряет proof-term, normalization strategy и identity-type данные | ✅ **formally closed** | **98.T** (функтор $\mathbf{I}$) + **99.T** (slice-locality) |
 | **Meta-classification Level 5+** | Неопределённость позиции Diakrisis в пространстве возможных Level 5+ meta-structures (risk of implicit Level-6-uniqueness claim) | ✅ **formally closed** | **100.T** (conditional мета-категоричность) + **101.T** (structural multiplicity) + **102.T** (meta-classification стабилизация) |
-| **Maximality membership** | Формальное членство Diakrisis в $\mathcal{L}_{\mathrm{Cls}}^{\top}$: (Max-1)–(Max-4) доказаны как теоремы. | ✅ **formally closed** | **103.T** (Max-1 universal articulation) + **104.T** (Max-2 gauge-fullness) + **105.T** (Max-3 universal парадокс-иммунность via Yanofsky) + **106.T** (сводная: Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$) |
+| **Maximality membership** | Формальное членство Diakrisis в $\mathcal{L}_{\mathrm{Cls}}^{\top}$: (Max-1)–(Max-4) доказаны как теоремы. | ✅ **formally closed** | **103.T** (Max-1 universal articulation) + **104.T** (Max-2 gauge-fullness) + **105.T** (Max-3 universal парадокс-иммунность via Яновский) + **106.T** (сводная: Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$) |
 
 ### Комментарий
 
@@ -104,7 +104,7 @@ title: Статус программ
 
 **Цель**: полная формализация Стандартной Модели физики как gauge-класса.
 
-**Статус**: α_NCG + Connes-Chamseddine дают ν = ω·2; связь с УГМ через 7D-quantum requires detail.
+**Статус**: α_NCG + Конн-Chamseddine дают ν = ω·2; связь с УГМ через 7D-quantum requires detail.
 
 ### П3+. Intensional refinement (✅ теоретически закрыт)
 
@@ -112,7 +112,7 @@ title: Статус программ
 
 **Содержание закрытия**:
 - **98.T** [Т·L2]: функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ построен через pullback-стабильные дисплейные 2-семейства (2-categorical lift Jacobs-Streicher, Gambino-Garner 2008). Доказаны свойства: homotopy invariance, gauge covariance, strict refinement of Morita (контрпример MLTT vs ETT, Hofmann 1995), Morita как 2-локализация **I**.
-- **99.T** [Т·L2]: образ **I** slice-локален — существует 2-Grothendieck-фибрация $\widetilde{\pi}: \mathcal{S}_\mathrm{int} \to \mathcal{M}_\mathrm{Fnd}$ такая, что $\pi = \widetilde{\pi} \circ \mathbf{I}$. Intensional refinement параметризует слои $\mathrm{Int}([\alpha])$ над gauge-классами, не базу. пятиосевая абсолютность AFN-T не затронута.
+- **99.T** [Т·L2]: образ **I** slice-локален — существует 2-Гротендик-фибрация $\widetilde{\pi}: \mathcal{S}_\mathrm{int} \to \mathcal{M}_\mathrm{Fnd}$ такая, что $\pi = \widetilde{\pi} \circ \mathbf{I}$. Intensional refinement параметризует слои $\mathrm{Int}([\alpha])$ над gauge-классами, не базу. пятиосевая абсолютность AFN-T не затронута.
 
 **Структурное значение**: закрытие genuine-gap в защитах AFN-T на интенсиональный-уровне. В связке с meta-classification (N-05 через 100.T–102.T) корпус Diakrisis полностью устойчив к стандартным атакам на всех трёх уровнях: extensional — 5-осевая абсолютность; интенсиональный — slice-locality 99.T; meta-classification — стабилизация 102.T.
 
@@ -121,8 +121,8 @@ title: Статус программ
 **Статус**: ✅ **formally closed** через 100.T + 101.T + 102.T. Вопрос о позиции Diakrisis в пространстве Level 5+ meta-structures закрыт в полной категорной строгости.
 
 **Содержание закрытия**:
-- **100.T** [Т·L2]: conditional мета-категоричность. Любые две максимальные (удовлетворяющие (Max-1)–(Max-4)) Level 5+ meta-structures (∞,∞)-эквивалентны. Доказательство через $T_{5+}^{\max}$ как accessible 2-theory + Lair's 2-categoricity (Adámek-Rosický 1994) + Lurie HTT §5.4.2 для (∞,∞)-extension.
-- **101.T** [Т·L2]: structural multiplicity. Без максимальности существуют минимум три попарно не-2-эквивалентных Level 5+ meta-structures: $\mathbf{F}_\mathrm{univalent}$ (Voevodsky UF programme), $\mathbf{F}_\mathrm{cosmoi}$ (Riehl-Verity 2022), $\mathbf{F}_\mathrm{cohesive}$ (Schreiber 2013). Доказательство через explicit различие $\mathrm{image}(\mathrm{Cl})$.
+- **100.T** [Т·L2]: conditional мета-категоричность. Любые две максимальные (удовлетворяющие (Max-1)–(Max-4)) Level 5+ meta-structures (∞,∞)-эквивалентны. Доказательство через $T_{5+}^{\max}$ как accessible 2-theory + Lair's 2-categoricity (Адамек-Росицкий 1994) + Lurie HTT §5.4.2 для (∞,∞)-extension.
+- **101.T** [Т·L2]: structural multiplicity. Без максимальности существуют минимум три попарно не-2-эквивалентных Level 5+ meta-structures: $\mathbf{F}_\mathrm{univalent}$ (Воеводский UF programme), $\mathbf{F}_\mathrm{cosmoi}$ (Рил-Verity 2022), $\mathbf{F}_\mathrm{cohesive}$ (Шрайбер 2013). Доказательство через explicit различие $\mathrm{image}(\mathrm{Cl})$.
 - **102.T** [Т·L2]: meta-classification стабилизация. Classifying 2-stack $\mathfrak{M}^{(5+)}$ meta-structures сам является Level 5+ meta-structure; $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$ (idempotence); Level 6 эскалация структурно невозможна. Доказательство через 68.T-analogue стабилизация.
 
 **Структурное значение**: Diakrisis формально зафиксирована как **максимальный и канонический** (но не единственный) представитель плюралистичного класса $\mathfrak{Meta}_{5+}$. Альтернативные Level 5+ meta-structures (∞-cosmoi, UF, cohesive) сосуществуют как partial representatives. Взаимная meta-classification замкнута, Level 6 эскалация невозможна. Самоописание Diakrisis завершено.
@@ -143,7 +143,7 @@ title: Статус программ
 По **82.T**: требует transfinite automation — долгосрочная программа.
 
 **Направления**:
-- Synthetic (∞,∞)-Cat (Riehl-Verity).
+- Synthetic (∞,∞)-Cat (Рил-Verity).
 - Higher Observational Type Theory (Awodey-Shulman).
 - Simplicial HoTT (Buchholtz).
 

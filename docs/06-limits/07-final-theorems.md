@@ -42,7 +42,7 @@ title: Финальные теоремы — полное закрытие
 - `!`-exponential даёт `!A ⊢ !A ⊗ !A` (contraction rule).
 - Peano induction axiom `(P(0) ∧ ∀n(P(n) → P(n+1))) → ∀n P(n)` требует дублирование гипотезы `P(n)` в induction-step.
 - Без contraction: `P(n)` используется **один раз**, induction-step невыводим.
-- С `!(P(n))`: дублирование возможно, PA выразима (Girard 1987 §V).
+- С `!(P(n))`: дублирование возможно, PA выразима (Жирар 1987 §V).
 
 **(b) ⟹ (c)**:
 - PA содержит арифметику Гёделя (самореференция + рекурсия).
@@ -50,18 +50,18 @@ title: Финальные теоремы — полное закрытие
 - PA-equivalent система имеет полную генеративность классической математики.
 
 **(c) ⟹ (d)**:
-- Π_3-max + формализуемость ⟹ R1 (арифметика) + R2 (r.e.) + R4 (Gödel-encoding).
+- Π_3-max + формализуемость ⟹ R1 (арифметика) + R2 (r.e.) + R4 (Гёдель-encoding).
 - R3 (непустая модель) + R5 (категорная интерпретация) — стандартны для Rich-систем.
 
 **(d) ⟹ (a)**:
 - По **54.T** (контрапозиция): `α_affine` без `!` ⟹ ν ≤ ω ⟹ S' ∉ R-S.
-- Следовательно, S' ∈ R-S ⟹ S' содержит `!` (или эквивалент через Girard-трансляцию).
+- Следовательно, S' ∈ R-S ⟹ S' содержит `!` (или эквивалент через Жирар-трансляцию).
 
 **QED**.
 
 ### Следствия
 
-**97.C1 (цена контракции)**: восстановление contraction возвращает потенциал **Girard-подобных парадоксов** (через `!` + неограниченная самореференция + `Type:Type`). В Diakrisis блокируется T-2f\*-стратификацией (18.T).
+**97.C1 (цена контракции)**: восстановление contraction возвращает потенциал **Жирар-подобных парадоксов** (через `!` + неограниченная самореференция + `Type:Type`). В Diakrisis блокируется T-2f\*-стратификацией (18.T).
 
 **97.C2 (уточнение UFH)**: `α_Д-hybrid := ν X. (X ⊗ X ⊸ X × X)` в R-S_{linear+AFA+!} — `!`-контекст **необходим** для Rich-статуса. Строгая UFH:
 
@@ -79,12 +79,12 @@ $$\alpha_{uhm} \cong_M \alpha_{\text{Д-hybrid}}^{!} \otimes_{⟪⟫} 7D\text{-q
 | ν-инвариант | ν ≤ ω | ν ≥ ω+1 |
 | Принадлежность R-S | S' ∉ R-S | S' ∈ R-S |
 | Позиция относительно Diakrisis | **вне периметра** | полноправный член 𝓜_Fnd |
-| Парадоксы | — | потенциал Girard-подобных, контролируется T-2f\* |
+| Парадоксы | — | потенциал Жирар-подобных, контролируется T-2f\* |
 
 ### Исторический контекст
 
-- **Gödel Dialectica (1958)**: явный перевод классической арифметики через T — предшественник Girard-трансляции.
-- **Girard (1987)**: изобретение linear logic как явного контроля ресурсов; `!` — структурный шлюз между linear и classical.
+- **Гёдель Dialectica (1958)**: явный перевод классической арифметики через T — предшественник Жирар-трансляции.
+- **Жирар (1987)**: изобретение linear logic как явного контроля ресурсов; `!` — структурный шлюз между linear и classical.
 - **Curry-Howard для linear**: `!` ↔ promotion — превращение ограниченного ресурса в неограниченный.
 
 ## 70.T–71.T: ν-инварианты Διάкрисиς-артикуляций
@@ -170,7 +170,7 @@ Con(R-S^n) ≤ Con(ZFC + n-inacc).
 
 ## 77.T: 𝒮_S syntactic-semantic closure
 
-**Формулировка**: 𝒮_S = closure_{derived-ops}(Ob(M_S)), где derived-ops = {colim, lim, Kan extensions, Grothendieck construction, Quillen adjunction, stable локализация}.
+**Формулировка**: 𝒮_S = closure_{derived-ops}(Ob(M_S)), где derived-ops = {colim, lim, Kan extensions, Гротендик construction, Quillen adjunction, stable локализация}.
 
 **Обоснование**:
 - Любая S-definable X выражается через term в T_S.
@@ -217,7 +217,7 @@ Trace^{(∞,∞)}(𝖠_∞)/gauge — (∞,∞)-stack.
 
 ### Формулировка
 
-**85.T** [Т]: Существует каноническая **Grothendieck-конструкция**:
+**85.T** [Т]: Существует каноническая **Гротендик-конструкция**:
 
 $$\alpha_{uhm} \simeq_{gauge} \int_{\Gamma \in \text{7D-quantum}} \alpha_{\text{Д-hybrid}}^{!}(\Gamma) \quad \text{в } \mathcal{M}_{Fnd},$$
 
@@ -225,7 +225,7 @@ $$\alpha_{uhm} \simeq_{gauge} \int_{\Gamma \in \text{7D-quantum}} \alpha_{\text{
 
 - `α_Д-hybrid^{!}` — α_Д-hybrid в `!`-enriched метатеории R-S_{linear+AFA+!} (необходимо по 97.T).
 - `7D-quantum` := Nuc(ℂ⁷) — stable (∞,1)-category of compact-projective ℂ⁷-modules (Lurie HA §7).
-- `∫` — Grothendieck construction over 7D-quantum base.
+- `∫` — Гротендик construction over 7D-quantum base.
 - `α_Д-hybrid^{!}(Γ)` — 7D-parametrized family, Γ-dependent.
 
 ### Замечание о форме теоремы
@@ -235,11 +235,11 @@ $$\alpha_{uhm} \simeq_{gauge} \int_{\Gamma \in \text{7D-quantum}} \alpha_{\text{
 - max(ω·2+1, ω+1) = ω·2+1 ≠ ν(α_uhm).
 - (ω·2+1) + (ω+1) = ω·3+1 ≠ ν(α_uhm).
 
-Grothendieck-конструкция исправляет это: итерация 𝖬 через параметрическую зависимость даёт **правильную** ν-арифметику.
+Гротендик-конструкция исправляет это: итерация 𝖬 через параметрическую зависимость даёт **правильную** ν-арифметику.
 
 ### Скорректированная ν(α_uhm)
 
-По факторизации через Grothendieck:
+По факторизации через Гротендик:
 
 $$\nu(\alpha_{uhm}) = \nu(7D\text{-quantum}) + \nu(\alpha_{\text{Д-hybrid}}^{!}) = (\omega + 1) + (\omega \cdot 2 + 1) = \omega \cdot 3 + 1.$$
 
@@ -263,7 +263,7 @@ $$G_L = S_7 \times U(1),$$
 
 где S₇ — permutation 7 инвариантов УГМ, U(1) — global phase.
 
-Правая (Grothendieck construction):
+Правая (Гротендик construction):
 
 $$G_R = G_{\text{hybrid}} \rtimes G_{\text{base}},$$
 
@@ -278,7 +278,7 @@ $$G_R = G_{\text{hybrid}} \rtimes G_{\text{base}},$$
 
 **Шаг 3a** (тривиализация G_{hybrid}-компоненты). 
 
-Group $G_\mathrm{hybrid}$ действует на дисплейных 2-семействах $\alpha_\text{Д-hybrid}^{!}$ через автоморфизмы linear + AFA + `!` структуры. По UFH Step 2 эти автоморфизмы коммутируют с ρ-проекцией Grothendieck-семейства (Beck-Chevalley). Следовательно, действие $G_\mathrm{hybrid}$ на gauge-классах $[\alpha_\mathrm{uhm}] \in \mathcal{M}_\mathrm{Fnd}$ тривиально:
+Group $G_\mathrm{hybrid}$ действует на дисплейных 2-семействах $\alpha_\text{Д-hybrid}^{!}$ через автоморфизмы linear + AFA + `!` структуры. По UFH Step 2 эти автоморфизмы коммутируют с ρ-проекцией Гротендик-семейства (Beck-Chevalley). Следовательно, действие $G_\mathrm{hybrid}$ на gauge-классах $[\alpha_\mathrm{uhm}] \in \mathcal{M}_\mathrm{Fnd}$ тривиально:
 
 $$g \in G_\mathrm{hybrid} \implies [g \cdot \alpha_\mathrm{uhm}]_\mathrm{gauge} = [\alpha_\mathrm{uhm}]_\mathrm{gauge}.$$
 
@@ -316,9 +316,9 @@ $$G_R \twoheadrightarrow G_\mathrm{base} \twoheadrightarrow G_\mathrm{base}/\mat
 
 Это — корректная групповая редукция. Hopf fibration не нужен: редукция явная через стабилизатор выделенной плотностной матрицы.
 
-**Шаг 4 (ν-арифметика через Grothendieck)**:
+**Шаг 4 (ν-арифметика через Гротендик)**:
 
-По стандартной теореме об ординалах Grothendieck construction (Lurie HTT §3.2 + ordinal analysis):
+По стандартной теореме об ординалах Гротендик construction (Lurie HTT §3.2 + ordinal analysis):
 
 $$\nu\left(\int_{B} F\right) = \nu(B) + \sup_{b \in B} \nu(F(b)).$$
 
@@ -356,12 +356,12 @@ G ∘ F: (G ∘ F)(Γ, x_Γ) = G(ρ(x_Γ)·Γ) = (ρ(x_Γ)·Γ, φ(ρ(x_Γ)·Γ)
 
 F, G коммутируют с G_L-action — следует из construction + S₇-симметрии в обеих сторонах. Следовательно, F, G дают **изоморфизм в 𝓜_Fnd = Trace(𝖠)/gauge**.
 
-**QED (доказательство UFH в корректной Grothendieck-форме)**.
+**QED (доказательство UFH в корректной Гротендик-форме)**.
 
 ### Следствия
 
 - **85.C1**: Verum-формализация УГМ ↔ формализация ∫_Γ α_Д-hybrid^{!}(Γ) over 7D-base (программа ≈ 75 сессий, 78.T).
-- **85.C2**: 223 теоремы УГМ — инстанциации теорем о Grothendieck construction в конкретной D(ℂ⁷)-реализации.
+- **85.C2**: 223 теоремы УГМ — инстанциации теорем о Гротендик construction в конкретной D(ℂ⁷)-реализации.
 - **85.C3**: `!`-контекст α_Д-hybrid^{!} **необходим** — без него (по 97.T) факторизация теряет Π_3-max.
 - **85.C4 (корректировка ν)**: ν(α_uhm) = ω·3+1 (ординально-точное значение); прежняя оценка ω·4 была приблизительной и теперь заменена.
 
@@ -371,7 +371,7 @@ F, G коммутируют с G_L-action — следует из construction +
 
 ### Строгое доказательство
 
-**Применяется обобщённая теорема Lair** (Adámek-Rosický 1994, Theorem 2.53):
+**Применяется обобщённая теорема Lair** (Адамек-Росицкий 1994, Theorem 2.53):
 
 > Для accessible 2-category Mod(T) accessible theory T с r.e.-axiomatization и fixed accessibility rank, любые две модели T 2-эквивалентны до канонической accessible equivalence.
 
@@ -392,7 +392,7 @@ Diakrisis как 2-theory T_Dk = (Axi-0..9 + T-α + T-2f\*):
 
 **Шаг 3 (Обобщение на (∞,∞))**:
 
-По **Lurie HTT §5.4.2** (accessible (∞,1)-categories) + обобщение на (∞,∞) через Θ_n-техники (Barwick-Kan 2012):
+По **Lurie HTT §5.4.2** (accessible (∞,1)-categories) + обобщение на (∞,∞) через Θ_n-техники (Барвик-Kan 2012):
 - Accessible (∞,∞)-theories также удовлетворяют 2-categoricity.
 - Следовательно, 88.T распространяется с 2-уровня на (∞,∞).
 
@@ -404,7 +404,7 @@ Diakrisis как 2-theory T_Dk = (Axi-0..9 + T-α + T-2f\*):
 
 ## 89.T: Internal language L_⟪⟫
 
-**89.T** [Т]: ⟪⟫ имеет каноническую internal language L_⟪⟫ в виде **2-типовой теории (2-HoTT)** через Yoneda-construction.
+**89.T** [Т]: ⟪⟫ имеет каноническую internal language L_⟪⟫ в виде **2-типовой теории (2-HoTT)** через Ёнеда-construction.
 
 ### Scope clarification
 
@@ -412,7 +412,7 @@ Diakrisis как 2-theory T_Dk = (Axi-0..9 + T-α + T-2f\*):
 
 ### Строгая конструкция
 
-**Шаг 1 (Yoneda-вложение)**:
+**Шаг 1 (Ёнеда-вложение)**:
 
 `y: ⟪⟫ ↪ 2-PSh(⟪⟫) = Fun(⟪⟫^op, Cat)` — 2-fully-faithful (стандарт).
 
@@ -429,7 +429,7 @@ Diakrisis как 2-theory T_Dk = (Axi-0..9 + T-α + T-2f\*):
 - Types = objects.
 - Terms = morphisms.
 - Prop-equality = 2-morphisms.
-- Dependent types через Grothendieck fibration.
+- Dependent types через Гротендик fibration.
 
 **Шаг 4 (Ограничение на y(⟪⟫))**:
 
@@ -472,7 +472,7 @@ L_⟪⟫ := internal language 2-PSh(⟪⟫), ограниченная на y(⟪
 
 **Шаг 1 (⟪⟫ — собственный класс)**:
 
-Axi-0 (непустотность) + Axi-1 (локально-малая 2-категория) требуют Ob(⟪⟫) — собственный класс. Это невозможно в ZFC (где классы — через схемы); требуется расширение ZFC с 1 inaccessible κ_1 (или Grothendieck universe U_1).
+Axi-0 (непустотность) + Axi-1 (локально-малая 2-категория) требуют Ob(⟪⟫) — собственный класс. Это невозможно в ZFC (где классы — через схемы); требуется расширение ZFC с 1 inaccessible κ_1 (или Гротендик universe U_1).
 
 **Шаг 2 (End(⟪⟫) ↪ ⟪⟫)**:
 
@@ -489,13 +489,13 @@ Axi-1 (internal closure) требует End(⟪⟫) ↪ ⟪⟫ как 2-fully-fa
 
 ## 91.T: Cohesive ∞-topos как α_cohesion
 
-**91.T** [Т]: Cohesive (∞,1)-topos Schreiber'а соответствует артикуляции α_cohesion ∈ Trace(𝖠) с ρ(α_cohesion) ≅ Cohesive(∞,1)-Topos и ν(α_cohesion) = ω·2.
+**91.T** [Т]: Cohesive (∞,1)-topos Шрайбер'а соответствует артикуляции α_cohesion ∈ Trace(𝖠) с ρ(α_cohesion) ≅ Cohesive(∞,1)-Topos и ν(α_cohesion) = ω·2.
 
 ### Строгое доказательство
 
 **Шаг 1 (Определение cohesive (∞,1)-topos)**:
 
-По Schreiber (2013, «Differential cohomology in a cohesive ∞-topos»): **H** — (∞,1)-topos cohesive над ∞-Grpd, если существует 4-adjunction:
+По Шрайбер (2013, «Differential cohomology in a cohesive ∞-topos»): **H** — (∞,1)-topos cohesive над ∞-Grpd, если существует 4-adjunction:
 
 $$\Pi \dashv \flat \dashv \sharp \dashv \iota : \infty\text{-Grpd} \leftrightarrows H,$$
 
@@ -528,17 +528,17 @@ $$\Pi \dashv \flat \dashv \sharp \dashv \iota : \infty\text{-Grpd} \leftrightarr
 
 **QED**.
 
-**Следствие 91.C1**: Schreiber's programme differential cohomology + higher gauge theory — реализуется в Diakrisis через α_cohesion; gauge-класс α_cohesion в 𝓜_Fnd соответствует полному Schreiber-корпусу.
+**Следствие 91.C1**: Шрайбер's programme differential cohomology + higher gauge theory — реализуется в Diakrisis через α_cohesion; gauge-класс α_cohesion в 𝓜_Fnd соответствует полному Шрайбер-корпусу.
 
 ## 92.T: Motivic homotopy theory как α_motivic
 
-**92.T** [Т]: Motivic homotopy theory Voevodsky-Morel соответствует α_motivic ∈ Trace(𝖠) с ν(α_motivic) = ω·2+1.
+**92.T** [Т]: Motivic homotopy theory Воеводский-Morel соответствует α_motivic ∈ Trace(𝖠) с ν(α_motivic) = ω·2+1.
 
 ### Строгое доказательство
 
 **Шаг 1 (Определение SH(k))**:
 
-По Voevodsky-Morel (1999): для поля k, **SH(k)** — stable motivic (∞,1)-category:
+По Воеводский-Morel (1999): для поля k, **SH(k)** — stable motivic (∞,1)-category:
 
 - Объекты: P¹-spectra над Spec(k).
 - Morita-реализация: SH(k) ≅ Sp(PSh_{Nis}(Sm_k)[W^{-1}_{A¹}]).
@@ -546,9 +546,9 @@ $$\Pi \dashv \flat \dashv \sharp \dashv \iota : \infty\text{-Grpd} \leftrightarr
 **Шаг 2 (SH(k) — Rich-система)**:
 
 - SH(k) содержит PA (через motivic cohomology) → R1.
-- r.e.-аксиоматизация через Morel-Voevodsky axioms → R2.
+- r.e.-аксиоматизация через Morel-Воеводский axioms → R2.
 - Non-empty: Sm_k ≠ ∅ → R3.
-- Gödel-encoding через motivic cohomology → R4.
+- Гёдель-encoding через motivic cohomology → R4.
 - Categorical interpretation: SH(k) — (∞,1)-category → R5.
 
 Следовательно, SH(k) ∈ R-S.
@@ -571,17 +571,17 @@ $$\Pi \dashv \flat \dashv \sharp \dashv \iota : \infty\text{-Grpd} \leftrightarr
 
 **QED**.
 
-**Следствие 92.C1**: Motivic-программа Voevodsky (SH(k), motives, periods) — в 𝓜_Fnd как конкретная точка α_motivic; подчиняется AFN-T (уровень 5+, не 6).
+**Следствие 92.C1**: Motivic-программа Воеводский (SH(k), motives, periods) — в 𝓜_Fnd как конкретная точка α_motivic; подчиняется AFN-T (уровень 5+, не 6).
 
 ## 93.T: Realizability topos как α_realiz
 
-**93.T** [Т]: Effective topos Hyland (1982) соответствует α_realiz ∈ Trace(𝖠) с ν(α_realiz) = ω+1.
+**93.T** [Т]: Effective topos Хайленд (1982) соответствует α_realiz ∈ Trace(𝖠) с ν(α_realiz) = ω+1.
 
 ### Строгое доказательство
 
 **Шаг 1 (Определение Eff)**:
 
-По Hyland (1982): **Eff** — effective topos, построенный из Partial Combinatorial Algebra (PCA):
+По Хайленд (1982): **Eff** — effective topos, построенный из Partial Combinatorial Algebra (PCA):
 
 - Объекты: pairs (X, ≈), где X — set, ≈ — partial equivalence relation, realized by PCA-elements.
 - Morphisms: realizable functions.
@@ -591,7 +591,7 @@ $$\Pi \dashv \flat \dashv \sharp \dashv \iota : \infty\text{-Grpd} \leftrightarr
 - PCA содержит Kleene's applicative structure → R1 (arithmetic).
 - Axioms Eff-constructively enumerable → R2.
 - Non-trivial: существует terminal object 1 ∈ Eff → R3.
-- Gödel-encoding через PCA → R4.
+- Гёдель-encoding через PCA → R4.
 - (Elementary) topos → R5.
 
 Следовательно, Eff ∈ R-S.
@@ -633,7 +633,7 @@ $$\Pi \dashv \flat \dashv \sharp \dashv \iota : \infty\text{-Grpd} \leftrightarr
 **Шаг 3 (Единственность)**:
 
 - Пусть α, α' ∈ Trace(𝖠_∞) с `τ_{≤2}(α) = τ_{≤2}(α') = α_R-S`.
-- По **63.T (Whitehead-критерий)**: если `τ_{≤n}(α) = τ_{≤n}(α')` для всех n, то α ≃ α'.
+- По **63.T (Уайтхед-критерий)**: если `τ_{≤n}(α) = τ_{≤n}(α')` для всех n, то α ≃ α'.
 - Поскольку L_∞ — left adjoint, оба α, α' суть canonical lift α_R-S.
 - Следовательно, α ≃ α' в ⟪⟫_∞.
 
@@ -681,7 +681,7 @@ Formulation: `∀ finite n, τ_{≤n}-equivalent`.
 
 Universal quantifier over all n ∈ ℕ + existential chain per level = **Π_1^1** (analytical hierarchy).
 
-Completeness: **Π_1^1** by Feferman's classical result for infinitary equivalence classes.
+Completeness: **Π_1^1** by Феферман's classical result for infinitary equivalence classes.
 
 **QED**.
 
@@ -725,8 +725,8 @@ Completeness: **Π_1^1** by Feferman's classical result for infinitary equivalen
 
 После строгого аудита:
 
-- **85.T (UFH)**: переформулирована как Grothendieck fibration + исправлена ν.
-- **87.T (completeness)**: переформулирована как **условная теорема [Т·L2, conditional on Law-scope]** — полное доказательство через Лемму 87.L (Lawvere-characterization) внутри чётко очерченной scope-рамки $\mathcal{LS}$.
+- **85.T (UFH)**: переформулирована как Гротендик fibration + исправлена ν.
+- **87.T (completeness)**: переформулирована как **условная теорема [Т·L2, conditional on Law-scope]** — полное доказательство через Лемму 87.L (Ловер-characterization) внутри чётко очерченной scope-рамки $\mathcal{LS}$.
 - **88.T–96.T**: явные строгие доказательства с детализацией.
 - **29.T, 30.T, 43.T1**: полные категорно-теоретические конструкции.
 
@@ -782,13 +782,13 @@ Completeness: **Π_1^1** by Feferman's classical result for infinitary equivalen
 
 ## Признанные редукции
 
-- **Adámek-Rosický (1994)** — Accessible categories + Lair's categoricity.
+- **Адамек-Росицкий (1994)** — Accessible categories + Lair's categoricity.
 - **Lurie HTT (2009)** — Internal (∞,1)-language.
 - **Lurie HA (2017)** — Stable (∞,1), ∞-operads.
-- **Riehl-Verity (2022)** — ∞-cosmoi.
-- **Schreiber (2013)** — Cohesive ∞-topos.
-- **Voevodsky-Morel (1999)** — Motivic homotopy.
-- **Hyland (1982)** — Realizability topos.
+- **Рил-Verity (2022)** — ∞-cosmoi.
+- **Шрайбер (2013)** — Cohesive ∞-topos.
+- **Воеводский-Morel (1999)** — Motivic homotopy.
+- **Хайленд (1982)** — Realizability topos.
 - **Priest (2006)** — Paraconsistent logic.
 - **Awodey-Shulman (2022)** — Higher Observational Type Theory.
 

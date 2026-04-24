@@ -69,12 +69,12 @@ $$
 Любой из путей 3.2–3.3 закрывает $\LAbsE = \emptyset$ для фиксированного $(S, n)$. Theorem~\ref{thm:dual-five-axis} (MSFS §11.6) устанавливает это единообразно по пяти осям:
 
 - **Scope-абсолютность (S-ось)**: Route 1 параметрическая по $S \in \RS$; $\SSE$ определён параметрически (Definition~\ref{def:SSE}).
-- **Depth-абсолютность (n-ось)**: truncation $\tau_{\leq n}$ коммутирует с Lambek-Scott adjunction; $\varepsilon$-лифтинг сохраняется (Lurie HTT §5.5).
-- **Meta-абсолютность (μ-ось)**: Grothendieck-Lurie straightening на $\fM_\cE$ параллельна straightening'у на $\fM$; стабилизация 102.T переносится.
+- **Depth-абсолютность (n-ось)**: truncation $\tau_{\leq n}$ коммутирует с Ламбек-Scott adjunction; $\varepsilon$-лифтинг сохраняется (Lurie HTT §5.5).
+- **Meta-абсолютность (μ-ось)**: Гротендик-Lurie straightening на $\fM_\cE$ параллельна straightening'у на $\fM$; стабилизация 102.T переносится.
 - **Gauge-абсолютность (ξ-ось)**: Ara-Maltsiniotis + Bergner-Rezk действуют componentwise на $(F, \cC, \iota, r)$.
-- **Performance-абсолютность (π-ось)**: LS($\cE$) = closed symmetric monoidal (см. §3.7), универсальная диагональ Yanofsky покрывает Cartesian-closed, SMC, $*$-autonomous.
+- **Performance-абсолютность (π-ось)**: LS($\cE$) = closed symmetric monoidal (см. §3.7), универсальная диагональ Яновский покрывает Cartesian-closed, SMC, $*$-autonomous.
 
-### 3.7 Lawvere-scope на $\cE$
+### 3.7 Ловер-scope на $\cE$
 
 $$\mathrm{LS}(\cE) = \{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC\ \text{closed symmetric monoidal}\}$$
 
@@ -82,9 +82,9 @@ $$\mathrm{LS}(\cE) = \{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC\ \
 
 - **Cartesian-closed** — диагональ $\Delta : A \to A \otimes A$ через Cartesian-продукт;
 - **Closed symmetric monoidal** — диагональ через internal hom $[A, A]$, без contraction;
-- **$*$-autonomous** — диагональ через инволютивный дуал $(-)^\perp$ (Girard, ludics).
+- **$*$-autonomous** — диагональ через инволютивный дуал $(-)^\perp$ (Жирар, ludics).
 
-Универсальная диагональ Yanofsky (2003) унифицирует классические формы (Cantor, Russell, Gödel, Tarski, Lawvere) в любой замкнутой моноидальной категории. Ось E закрывает $\varepsilon_\infty$ единообразно по всем трём уровням, включая линейную логику Жирара, ludics, квантово-логические enactments и resource-sensitive type theories.
+Универсальная диагональ Яновский (2003) унифицирует классические формы (Кантор, Рассел, Гёдель, Тарский, Ловер) в любой замкнутой моноидальной категории. Ось E закрывает $\varepsilon_\infty$ единообразно по всем трём уровням, включая линейную логику Жирара, ludics, квантово-логические enactments и resource-sensitive type theories.
 
 ### 3.8 Синтез
 

@@ -55,7 +55,7 @@ title: Провал Пути Ε
 
 - R-1 (Presheaf): ∞-categorical.
 - R-2a (Интерпретационное): модельная теория.
-- R-2b (Самомодельное): Lawvere fixed-point / Y-combinator.
+- R-2b (Самомодельное): Ловер fixed-point / Y-combinator.
 - R-2c (Выбор-зависимое): derived construction on 𝓜_Fnd.
 - R-3 (Enrichment): enriched category theory.
 - R-4 (Fibered): fibration theory.
@@ -79,7 +79,7 @@ title: Провал Пути Ε
 **R-2b — Самомодельное**:
 - R: A → Fix(F_A) (неподвижные точки на A).
 - **Предел**: Y-combinator-style.
-- **Результат**: Lawvere fixed point theorem.
+- **Результат**: Ловер fixed point theorem.
 
 **R-2c — Выбор-зависимое**:
 - R зависит от «выбора» на каждом шаге.
@@ -93,7 +93,7 @@ title: Провал Пути Ε
 - **Результат**: enriched category theory.
 
 **R-4 — Fibered**:
-- R через Grothendieck fibrations.
+- R через Гротендик fibrations.
 - **Результат**: fibration theory.
 
 **R-5 — Hybrid**:

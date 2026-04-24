@@ -152,13 +152,13 @@ $$\mathrm{Hom}(\mathsf{M}^L \alpha, \beta) \simeq \mathrm{Hom}(\alpha, \mathsf{M
 ## Признанные редукции
 
 - S4-модальность — стандартная.
-- Сопряжения à la Lawvere — стандартные.
+- Сопряжения à la Ловер — стандартные.
 - Наше применение — специфическое.
 
 ### Источники
 
 - **Kripke (1959, 1963)**: Kripke-семантика модальных логик.
-- **Lawvere (1970)**: Adjunctions as modalities.
+- **Ловер (1970)**: Adjunctions as modalities.
 - **Moggi (1991)**: Modal monads в computer science.
 - **Awodey-Kishida (2008)**: Topology and modal logic.
 - **Fourman (1977)**: Sheaf models of modal logic.
@@ -166,7 +166,7 @@ $$\mathrm{Hom}(\mathsf{M}^L \alpha, \beta) \simeq \mathrm{Hom}(\alpha, \mathsf{M
 ### Где **не** стандартно
 
 - Применение к мат-основаниям (не логике).
-- Совместимость с когезией Schreiber.
+- Совместимость с когезией Шрайбер.
 - Интерпретация 𝖬 как «эндо-функтор метаизации».
 
 ## Философская интерпретация
@@ -193,7 +193,7 @@ $$\mathrm{Hom}(\mathsf{M}^L \alpha, \beta) \simeq \mathrm{Hom}(\alpha, \mathsf{M
 ### К Escape Theorem (13.T)
 
 - Формулировка: «ρ(𝖬(α_T)) не лежит в ρ(α_T)» переводится в:
-- «□ Con(T) — нарушается в T» (Gödel II в модальной формулировке).
+- «□ Con(T) — нарушается в T» (Гёдель II в модальной формулировке).
 
 ### К Fix(𝖬)
 

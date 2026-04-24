@@ -39,7 +39,7 @@ $$
 - **(I-3) Strict refinement of Morita**: существуют $F_1 \sim_M F_2$ с $\mathbf{I}(F_1) \not\simeq \mathbf{I}(F_2)$.
 - **(I-4) Morita as 2-localization**: $\cU \circ \mathbf{I} \simeq \rho$; Morita = $\Sint[\mathcal{W}_\cU^{-1}]$ (Pronk 1996).
 
-**Ключевой concrete пример** (MSFS §8.3, Step 7): MLTT vs ETT — Morita-эквивалентны по [Hofmann 1995], но $\tau(\mathbf{I}(\mathrm{MLTT})) = 1 \neq 0 = \tau(\mathbf{I}(\mathrm{ETT}))$ через typing-invariant $\tau$ (effective normalization в effective topos $\mathrm{Eff}$ по Hyland 1982).
+**Ключевой concrete пример** (MSFS §8.3, Step 7): MLTT vs ETT — Morita-эквивалентны по [Hofmann 1995], но $\tau(\mathbf{I}(\mathrm{MLTT})) = 1 \neq 0 = \tau(\mathbf{I}(\mathrm{ETT}))$ через typing-invariant $\tau$ (effective normalization в effective topos $\mathrm{Eff}$ по Хайленд 1982).
 
 **Вычислительная рамка** (препринт уточнение): инвариант $\tau$ определён на $\Sint^{\mathrm{eff}} \subseteq \Sint$ — подкатегории, где все 2-эквивалентности computable в $\mathrm{Eff}$. Без этого ограничения $\tau$ не был бы 2-инвариантом (не-вычислимая эквивалентность могла бы идентифицировать normalizing и non-normalizing классы).
 
@@ -59,7 +59,7 @@ $$
 
 ## Закрытие обходного пути
 
-Путь 3 (интенсиональное уточнение) был последним open gap вокруг AFN-T. После MSFS §8 (формальное построение $\mathbf{I}$ + доказательство slice-locality через 2-Grothendieck fibration):
+Путь 3 (интенсиональное уточнение) был последним open gap вокруг AFN-T. После MSFS §8 (формальное построение $\mathbf{I}$ + доказательство slice-locality через 2-Гротендик fibration):
 
 | Путь | Статус до | Статус |
 |---|---|---|
@@ -79,7 +79,7 @@ $$
 
 Intensional refinement в Diakrisis — это **внутреннее уточнение артикуляций** через display-map 2-категории: артикуляции $F_1 \sim_\mathrm{gauge} F_2$ с различной proof-term-структурой (MLTT vs ETT, HoTT vs cubical HoTT, Coq vs Agda vs Lean) различимы по $\mathbf{I}$, но neutralize $\pi$-проекцию на $\mathfrak{M}_\mathrm{Fnd}$ (MSFS Corollary `cor:slice-level`).
 
-Связь с [T-2f\*](/02-canonical-primitive/02-axiomatics) (locally stratified completion): display-map filtration — частный случай T-2f\*-подобной depth-стратификации, необходимой для (Max-3) MSFS. **Универсальное обоснование (Max-3) для Diakrisis** — теорема 105.T ([`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): T-2f\* блокирует *все* Yanofsky-сводимые парадоксы, не только 5 именных семейств. В связке 98.T + 99.T (Max-4) + 105.T (Max-3) Diakrisis закрывает оба интенсиональный+depth уровня формальной защиты.
+Связь с [T-2f\*](/02-canonical-primitive/02-axiomatics) (locally stratified completion): display-map filtration — частный случай T-2f\*-подобной depth-стратификации, необходимой для (Max-3) MSFS. **Универсальное обоснование (Max-3) для Diakrisis** — теорема 105.T ([`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): T-2f\* блокирует *все* Яновский-сводимые парадоксы, не только 5 именных семейств. В связке 98.T + 99.T (Max-4) + 105.T (Max-3) Diakrisis закрывает оба интенсиональный+depth уровня формальной защиты.
 
 ## Диаграммы и Конкретные примеры
 

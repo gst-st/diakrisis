@@ -1,9 +1,9 @@
 ---
 sidebar_position: 4
-title: Gödel / Tarski / Cantor / Russell — традиция no-go
+title: Гёдель / Тарский / Кантор / Рассел — традиция no-go
 ---
 
-# Традиция no-go теорем — Gödel, Tarski, Cantor, Russell
+# Традиция no-go теорем — Гёдель, Тарский, Кантор, Рассел
 
 ## Статус
 
@@ -22,36 +22,36 @@ No-go теоремы — **структурные ограничения** на 
 
 ## Пять классических no-go теорем
 
-### Cantor (1899) — нет множества всех множеств
+### Кантор (1899) — нет множества всех множеств
 
 Если бы существовало U = {x : x — множество}, то |U| ≥ |𝒫(U)| > |U| (диагональ Кантора). Противоречие.
 
 **Содержание**: абсолютный максимум в set-theory не существует.
 
-#### Детализация Cantor
+#### Детализация Кантор
 
-**Cantor's theorem (1891)**: |𝒫(X)| > |X| для любого X.
+**Кантор's theorem (1891)**: |𝒫(X)| > |X| для любого X.
 
 **Следствие для U**:
 - Если U = set of all sets, то 𝒫(U) ⊂ U.
 - Значит |𝒫(U)| ≤ |U|.
-- Но по Cantor: |𝒫(U)| > |U|.
+- Но по Кантор: |𝒫(U)| > |U|.
 - Противоречие.
 
 **Значение**:
 - Запрещает naive «universe of all sets».
 - Мотивирует class-theoretic расширения (NBG, MK).
-- Grothendieck universes как частичный «обход» через иерархию.
+- Гротендик universes как частичный «обход» через иерархию.
 
-### Russell paradox (1901)
+### Рассел paradox (1901)
 
 R = {x : x ∉ x}. Тогда R ∈ R ⇔ R ∉ R. Противоречие.
 
 **Содержание**: неограниченная comprehension не работает.
 
-**Решение**: типизация (Russell-Whitehead), ZFC (ограниченная comprehension).
+**Решение**: типизация (Рассел-Уайтхед), ZFC (ограниченная comprehension).
 
-#### Детализация Russell
+#### Детализация Рассел
 
 **Paradox**: Let R = {x : x ∉ x}.
 
@@ -62,16 +62,16 @@ R = {x : x ∉ x}. Тогда R ∈ R ⇔ R ∉ R. Противоречие.
 
 **Решения**:
 
-- **Type theory** (Russell-Whitehead 1910-1913): hierarchical types avoid self-reference.
+- **Type theory** (Рассел-Уайтхед 1910-1913): hierarchical types avoid self-reference.
 - **ZFC** (Zermelo 1908, Fraenkel 1922): axiom of restricted comprehension.
 - **NBG**: classes vs sets distinction.
 - **Quine NF**: stratification.
 
-### Gödel I (1931) — неполнота
+### Гёдель I (1931) — неполнота
 
 Если T — достаточно сильная консистентная формальная теория (включая ℕ-арифметику), то ∃ утверждение G, такое что ни G, ни ¬G не доказуемы в T.
 
-#### Детализация Gödel I
+#### Детализация Гёдель I
 
 **Формулировка**:
 
@@ -83,7 +83,7 @@ R = {x : x ∉ x}. Тогда R ∈ R ⇔ R ∉ R. Противоречие.
 То существует sentence G_T с T ⊬ G_T и T ⊬ ¬G_T.
 
 **Доказательство** (contours):
-- Arithmetize syntax (Gödel numbering).
+- Arithmetize syntax (Гёдель numbering).
 - Diagonal lemma: construct sentence saying «I am not provable».
 - If provable — contradiction; if refutable — contradiction. So undecidable.
 
@@ -91,29 +91,29 @@ R = {x : x ∉ x}. Тогда R ∈ R ⇔ R ∉ R. Противоречие.
 - No sufficient formal system is complete.
 - Hilbert's program (complete + consistent формализация) — невозможно.
 
-### Gödel II (1931) — невозможность само-подтверждения
+### Гёдель II (1931) — невозможность само-подтверждения
 
 Con(T) — утверждение о консистентности T — **не** доказуемо в T (при условии Con(T)).
 
-#### Детализация Gödel II
+#### Детализация Гёдель II
 
 **Формулировка**:
 
-Пусть T удовлетворяет условиям Gödel I. Тогда если T консистентна, T ⊬ Con(T).
+Пусть T удовлетворяет условиям Гёдель I. Тогда если T консистентна, T ⊬ Con(T).
 
 **Доказательство**:
-- Применение Gödel I к специальному sentence Con(T).
+- Применение Гёдель I к специальному sentence Con(T).
 - Формальная reflection: T cannot prove its own консистентность.
 
 **Значение**:
 - No system justifies itself.
 - Fundamental limit of self-reference в formal systems.
 
-### Tarski (1936) — truth-undefinability
+### Тарский (1936) — truth-undefinability
 
 В достаточно сильной теории T, truth-предикат True_T не определим в T.
 
-#### Детализация Tarski
+#### Детализация Тарский
 
 **Формулировка**:
 
@@ -128,25 +128,25 @@ Let L be a formal language, 𝕯 — term denotation. Truth-predicate Tr(𝕯(φ
 - Hierarchy of languages L_0, L_1, ... for truth predicates.
 - **No language contains its own truth**.
 
-### Бонус: Lawvere fixed-point theorem (1969)
+### Бонус: Ловер fixed-point theorem (1969)
 
-Хотя не всегда в классическом списке из 5, Lawvere FPT — **категорное обобщение**:
+Хотя не всегда в классическом списке из 5, Ловер FPT — **категорное обобщение**:
 
 **Формулировка**: В cartesian closed category, если существует «weakly surjective» e: A → Y^A, то любой f: Y → Y имеет fixed point.
 
 **Следствия**:
-- Обобщает Cantor, Russell, Gödel, Tarski.
+- Обобщает Кантор, Рассел, Гёдель, Тарский.
 - Показывает, что все эти — инстанции **одной** категорной структуры.
 
 ## Общий паттерн
 
 Все пять — **самореферентные** ограничения:
 
-- **Cantor**: нет «max себя» в set-теории.
-- **Russell**: нет «само-отрицающего себя».
-- **Gödel I**: нет «само-полного себя».
-- **Gödel II**: нет «само-доказывающего себя».
-- **Tarski**: нет «само-определяющего истину».
+- **Кантор**: нет «max себя» в set-теории.
+- **Рассел**: нет «само-отрицающего себя».
+- **Гёдель I**: нет «само-полного себя».
+- **Гёдель II**: нет «само-доказывающего себя».
+- **Тарский**: нет «само-определяющего истину».
 
 ### Структурный анализ
 
@@ -156,12 +156,12 @@ Let L be a formal language, 𝕯 — term denotation. Truth-predicate Tr(𝕯(φ
 
 #### Конкретные аспекты
 
-- **Cantor**: cannot contain all of itself as element.
-- **Russell**: cannot have unrestricted self-description.
-- **Gödel I**: cannot prove all true self-statements.
-- **Gödel II**: cannot prove own консистентность.
-- **Tarski**: cannot define own truth.
-- **Lawvere FP**: various categorical incarnations.
+- **Кантор**: cannot contain all of itself as element.
+- **Рассел**: cannot have unrestricted self-description.
+- **Гёдель I**: cannot prove all true self-statements.
+- **Гёдель II**: cannot prove own консистентность.
+- **Тарский**: cannot define own truth.
+- **Ловер FP**: various categorical incarnations.
 
 Единый принцип: **self-reference** создаёт **fundamental limits**.
 
@@ -175,20 +175,20 @@ Let L be a formal language, 𝕯 — term denotation. Truth-predicate Tr(𝕯(φ
 
 | No-go | Отрицаемое | Аспект self-reference |
 |---|---|---|
-| Cantor | max set | self-containment |
-| Russell | self-negating set | self-negation |
-| Gödel I | completeness | self-completeness |
-| Gödel II | self-proof | self-justification |
-| Tarski | self-truth | self-definability |
-| Lawvere FP | fixed points of certain maps | categorical self-ref |
+| Кантор | max set | self-containment |
+| Рассел | self-negating set | self-negation |
+| Гёдель I | completeness | self-completeness |
+| Гёдель II | self-proof | self-justification |
+| Тарский | self-truth | self-definability |
+| Ловер FP | fixed points of certain maps | categorical self-ref |
 | **AFN-T** | **predel osnovanie** | **self-foundation** |
 
 ### Отличие AFN-T
 
 AFN-T **не** касается одного специфического свойства. Она касается **всей** претензии на foundation.
 
-- Cantor: о max element.
-- Gödel: о specific property (completeness, консистентность).
+- Кантор: о max element.
+- Гёдель: о specific property (completeness, консистентность).
 - **AFN-T**: о возможности быть **foundation** вообще.
 
 Более **обобщающая**.

@@ -436,4 +436,4 @@ Diakrisis удерживает оба слоя **в напряжении**: мы
 
 ## Следующий документ
 
-[/01-diakrisis-phenomenon/02-philosophical-parallels](/01-diakrisis-phenomenon/02-philosophical-parallels) — детальный разбор параллелей с Hegel, Brouwer, Simondon, Deleuze.
+[/01-diakrisis-phenomenon/02-philosophical-parallels](/01-diakrisis-phenomenon/02-philosophical-parallels) — детальный разбор параллелей с Гегель, Брауэр, Симондон, Делёз.

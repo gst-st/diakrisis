@@ -72,9 +72,9 @@ Diakrisis добавляет:
 
 ## Связь с теоремой Гёделя
 
-### Gödel II применимо
+### Гёдель II применимо
 
-- **Con(Diakrisis)** не доказуема в Diakrisis (Gödel II для Diakrisis).
+- **Con(Diakrisis)** не доказуема в Diakrisis (Гёдель II для Diakrisis).
 - **Con(ZFC)** доказуема в Diakrisis (через α_Apeiron).
 
 Второе — **выход** за ZFC (что и делает Diakrisis сильнее).
@@ -111,8 +111,8 @@ Diakrisis может **рассуждать** о математических с
 ## Признанные редукции
 
 - **Shoenfield (1967)**: Mathematical Logic (conservativity).
-- **Feferman (1980s)**: conservativity results.
-- **Gödel (1931)**: II incompleteness theorem.
+- **Феферман (1980s)**: conservativity results.
+- **Гёдель (1931)**: II incompleteness theorem.
 
 ## Итог
 

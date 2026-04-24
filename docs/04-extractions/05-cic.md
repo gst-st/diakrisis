@@ -190,7 +190,7 @@ Cubical HoTT — гибрид.
 - **Coquand-Huet (1988)**: Calculus of Constructions.
 - **Coquand-Paulin (1990)**: Inductive types.
 - **Werner (1994)**: SN proof.
-- **Martin-Löf (1984)**: ITT (предок CIC).
+- **Мартин-Лёф (1984)**: ITT (предок CIC).
 - **Coq development team (1984+)**: Coq system.
 - **Lean 4 (2021+)**: Modern CIC реализация.
 

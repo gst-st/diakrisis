@@ -48,7 +48,7 @@ $\mathbf{F}$ ∈ $\mathfrak{Meta}_{5+}^{\max}$ ⇔ дополнительно у
 
 - **(Max-1) Full classification**: $\mathrm{image}(\mathrm{Cl}_\mathbf{F}) = \mathfrak{M}_\mathrm{Fnd}$.
 - **(Max-2) Gauge-fullness**: $\mathrm{Aut}_2(\mathbf{F})$ транзитивно действует на gauge-классах.
-- **(Max-3) Depth stratification**: $\mathbf{F}$ admits depth-indexed filtration (MSFS Remark `rem:max3-парадокс-иммунность` — единая аксиома блокирующая Russell/Curry/Grelling/Burali-Forti/Girard через circular depth).
+- **(Max-3) Depth stratification**: $\mathbf{F}$ admits depth-indexed filtration (MSFS Remark `rem:max3-парадокс-иммунность` — единая аксиома блокирующая Рассел/Curry/Grelling/Burali-Forti/Жирар через circular depth).
 - **(Max-4) Intensional completeness**: $\II_\mathbf{F} : \mathbf{F}^\mathrm{op} \to \Sint$ удовлетворяет (I-1)–(I-4) из Theorem `thm:I-existence`.
 
 **Diakrisis** $\in \mathfrak{Meta}_{5+}^{\max}$: выполняется по полной конструкции ⟪⟫ + T-2f\* + 98.T/99.T.
@@ -61,7 +61,7 @@ $$
 \mathbf{F}_1 \simeq_{(\infty, \infty)} \mathbf{F}_2.
 $$
 
-**Метод доказательства** (MSFS §9.2): (M1)–(M5) + (Max-1)–(Max-4) образуют *accessible 2-theory* $T_{5+}^{\max}$; по Lair–Makkai–Paré representation (MSFS Lemma `lem:lair`) все модели $T_{5+}^{\max}$ в одной R-S канонически $2$-эквивалентны; через $\Theta_n$-model Rezk 2010 + unicity Barwick–Schommer-Pries 2021 + Whitehead extension Lurie HTT §6.5.4 — эквивалентность поднимается до $(\infty, \infty)$.
+**Метод доказательства** (MSFS §9.2): (M1)–(M5) + (Max-1)–(Max-4) образуют *accessible 2-theory* $T_{5+}^{\max}$; по Lair–Makkai–Paré representation (MSFS Lemma `lem:lair`) все модели $T_{5+}^{\max}$ в одной R-S канонически $2$-эквивалентны; через $\Theta_n$-model Rezk 2010 + unicity Барвик–Schommer-Pries 2021 + Уайтхед extension Lurie HTT §6.5.4 — эквивалентность поднимается до $(\infty, \infty)$.
 
 **Следствия** (Diakrisis-specific):
 
@@ -73,9 +73,9 @@ $$
 
 MSFS Theorem `thm:meta-mult`: в $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}_{5+}^{\max}$ существуют **≥ 3** попарно не-$2$-эквивалентных:
 
-- $\mathbf{F}_\mathrm{univalent}$ — Univalent Foundations programme (Voevodsky; HoTT Book 2013).
-- $\mathbf{F}_\mathrm{cosmoi}$ — $\infty$-cosmoi (Riehl–Verity 2022).
-- $\mathbf{F}_\mathrm{cohesive}$ — cohesive $(\infty, 1)$-topos каркас (Schreiber 2013).
+- $\mathbf{F}_\mathrm{univalent}$ — Univalent Foundations programme (Воеводский; HoTT Book 2013).
+- $\mathbf{F}_\mathrm{cosmoi}$ — $\infty$-cosmoi (Рил–Verity 2022).
+- $\mathbf{F}_\mathrm{cohesive}$ — cohesive $(\infty, 1)$-topos каркас (Шрайбер 2013).
 
 **Ключевое свойство**: ни одна не удовлетворяет (Max-1) — их classification-images являются *строго собственными* подстэками $\mathfrak{M}_\mathrm{Fnd}$:
 
@@ -100,10 +100,10 @@ $$
 — classifying 2-stack Level 5+ meta-structures. Тогда:
 
 - **(a)** $\mathfrak{M}^{(5+)} \in \mathfrak{Meta}_{5+}$ (self-meta).
-- **(b) Theory-level стабилизация**: $\mathfrak{M}^{(5+ \cdot 2)}$ реализует ту же $(\infty, \infty)$-теорию, что и $\mathfrak{M}^{(5+)}$, в смысле единственности Barwick–Schommer-Pries. Теоретико-множественная реализация, однако, **не идентична**: $\mathfrak{M}^{(5+ \cdot 2)}$ живёт на один уровень Grothendieck-универсума выше, и башня мета-итераций $\{\mathfrak{M}^{(5+ \cdot k)}\}_{k \geq 1}$ поднимается по иерархии недостижимых $\kappa_1 < \kappa_2 < \cdots$. Обозначение $\simeq_2$ фиксирует именно theory-level эквивалентность, а не set-level идентичность.
+- **(b) Theory-level стабилизация**: $\mathfrak{M}^{(5+ \cdot 2)}$ реализует ту же $(\infty, \infty)$-теорию, что и $\mathfrak{M}^{(5+)}$, в смысле единственности Барвик–Schommer-Pries. Теоретико-множественная реализация, однако, **не идентична**: $\mathfrak{M}^{(5+ \cdot 2)}$ живёт на один уровень Гротендик-универсума выше, и башня мета-итераций $\{\mathfrak{M}^{(5+ \cdot k)}\}_{k \geq 1}$ поднимается по иерархии недостижимых $\kappa_1 < \kappa_2 < \cdots$. Обозначение $\simeq_2$ фиксирует именно theory-level эквивалентность, а не set-level идентичность.
 - **(c) No Level-6 escalation**: ни одна мета-итерация $\mathfrak{M}^{(5+ \cdot k)}$ не удовлетворяет Level-6 условиям $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$ — Level 5+ meta-структура определима, но не генеративна над Rich-foundations (M4), что противоречит максимальной генеративности.
 
-**Метод доказательства** (MSFS §9.4): формальное вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty,\infty)}$ (категория accessible $(\infty, \infty)$-presheaves над $\fM$) через (M3) + Lurie HTT §5.4.2; следующие итерации Grothendieck-construction дают объекты в $\Pi_{(\infty, \infty + k)}$; Barwick–Schommer-Pries unicity (Theorem `thm:bergner-lurie-stab`) даёт theory-level эквивалентность — но не равенство универсумов.
+**Метод доказательства** (MSFS §9.4): формальное вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty,\infty)}$ (категория accessible $(\infty, \infty)$-presheaves над $\fM$) через (M3) + Lurie HTT §5.4.2; следующие итерации Гротендик-construction дают объекты в $\Pi_{(\infty, \infty + k)}$; Барвик–Schommer-Pries unicity (Theorem `thm:bergner-lurie-stab`) даёт theory-level эквивалентность — но не равенство универсумов.
 
 **Следствия** (Diakrisis-specific):
 
@@ -116,10 +116,10 @@ $$
 
 | Meta-structure | Scope classification | Gauge | Stratification | Intensional | $\in \mathfrak{Meta}_{5+}^{\max}$? |
 |---|---|---|---|---|---|
-| **Diakrisis-full** | Всё $\mathfrak{M}_\mathrm{Fnd}$ | ⟪⟫-autoeq | T-2f\* (Russell+4) | 98.T/99.T | ✅ **Да** |
-| Voevodsky UF | HoTT-extensions | Univalence | H-levels (partial) | Cubical | ❌ Нет |
-| Riehl–Verity ∞-cosmoi | $(\infty,1)$-theories | Isomorphisms | Не specific | Optional | ❌ Нет |
-| Schreiber cohesive | Cohesive $\infty$-topoi | Cohesion modalities | Не specific | Via cohesion | ❌ Нет |
+| **Diakrisis-full** | Всё $\mathfrak{M}_\mathrm{Fnd}$ | ⟪⟫-autoeq | T-2f\* (Рассел+4) | 98.T/99.T | ✅ **Да** |
+| Воеводский UF | HoTT-extensions | Univalence | H-levels (partial) | Cubical | ❌ Нет |
+| Рил–Verity ∞-cosmoi | $(\infty,1)$-theories | Isomorphisms | Не specific | Optional | ❌ Нет |
+| Шрайбер cohesive | Cohesive $\infty$-topoi | Cohesion modalities | Не specific | Via cohesion | ❌ Нет |
 | Lurie Higher Algebra | Stable $\infty$-cat + operadic | Standard | Implicit | Partial | ❌ Нет |
 
 ## Уточнения после препринт-аудита
@@ -147,7 +147,7 @@ $$
 
 - **103.T** (Max-1): $\mathrm{Artic}: \mathcal{F} \to \langle\!\langle \cdot \rangle\!\rangle$ существенно-сюръективен.
 - **104.T** (Max-2): $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$.
-- **105.T** (Max-3): T-2f\* блокирует универсально все Yanofsky-сводимые парадоксы.
+- **105.T** (Max-3): T-2f\* блокирует универсально все Яновский-сводимые парадоксы.
 - **106.T** сводная: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$.
 
 Детали — [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).

@@ -52,12 +52,12 @@ $$
 | Уровень | Формальный критерий | $\nu$-значение | Примеры |
 |---|---|---|---|
 | **$\mathcal{L}_0$** | $\alpha \notin \langle\!\langle \cdot \rangle\!\rangle$: пред-артикуляция (вне формальной метакатегории) | не определено | Математические наброски, приватные блокноты, открытые вопросы |
-| **$\mathcal{L}_1$** | $\sigma$ с $\nu_\alpha(\sigma) < \omega$ при $\alpha \in \mathcal{L}_5$: конечная 𝖬-глубина | $0 \leq \nu_\alpha(\sigma) < \omega$ | Yoneda, Zorn, König, Snake, Five, Schanuel, Hensel |
-| **$\mathcal{L}_2$** | $\sigma$ с $\nu_\alpha(\sigma) = \omega$: требует полной индуктивной мощности $\alpha$ | $\nu_\alpha(\sigma) = \omega$ | Gödel I/II (1931), Tarski (1936), Atiyah–Singer (1963), Wiles (1994), Perelman (2003), Cobordism Hypothesis (2009) |
+| **$\mathcal{L}_1$** | $\sigma$ с $\nu_\alpha(\sigma) < \omega$ при $\alpha \in \mathcal{L}_5$: конечная 𝖬-глубина | $0 \leq \nu_\alpha(\sigma) < \omega$ | Ёнеда, Zorn, König, Snake, Five, Schanuel, Hensel |
+| **$\mathcal{L}_2$** | $\sigma$ с $\nu_\alpha(\sigma) = \omega$: требует полной индуктивной мощности $\alpha$ | $\nu_\alpha(\sigma) = \omega$ | Гёдель I/II (1931), Тарский (1936), Atiyah–Singer (1963), Wiles (1994), Perelman (2003), Cobordism Hypothesis (2009) |
 | **$\mathcal{L}_3$** | 2-подкатегория $\mathcal{C} \subset \alpha_\Vert$, закрытая под $\mathsf{M}\vert_\mathcal{C}$ (область методов) | $\nu_\mathcal{C} = \omega \cdot k$, $2 \leq k < \omega$ | Group theory, algebraic geometry, homological algebra, probability, $(\infty, n)$-categories |
 | **$\mathcal{L}_4$** | 2-функтор $\Phi: \mathcal{C} \to \mathcal{D}$ между $\mathcal{L}_3$-классами, сохраняющий 𝖬 (парадигма) | $\nu(\Phi) = \omega^2$ (= $\omega \cdot \omega$) | Sheaves, schemes, HoTT-парадигма, motivic programme, condensed, Langlands, higher algebra |
 | **$\mathcal{L}_5^\mathrm{weak}$** | $\alpha$ удовлетворяет (R2)–(R5) и ограниченной форме (R1): слабая Rich-метатеория с ограниченной категорной глубиной $n_S$ | $\nu(\alpha) < \kappa_1$ | I∆₀, Buss $\mathsf{S}_2^i$/$\mathsf{T}_2^i$, $\mathsf{V}_0$, полиномиально-ограниченная арифметика, исчисления осуществимости (MSFS §3.4 Boundary cases; Q5). |
-| **$\mathcal{L}_5$** | $\alpha$ удовлетворяет (R1)–(R5): Rich formal system | $\kappa_1 \leq \nu(\alpha) < \kappa_2$ (как объект $\mathbf{StrCat}_{S, n}$) | ZFC, HoTT, CIC, ECC, NCG, MLTT, Eff, ∞-topos theory, Markov-конструктивизм, Bishop-конструктивизм, Feferman-предикативизм |
+| **$\mathcal{L}_5$** | $\alpha$ удовлетворяет (R1)–(R5): Rich formal system | $\kappa_1 \leq \nu(\alpha) < \kappa_2$ (как объект $\mathbf{StrCat}_{S, n}$) | ZFC, HoTT, CIC, ECC, NCG, MLTT, Eff, ∞-topos theory, Markov-конструктивизм, Bishop-конструктивизм, Феферман-предикативизм |
 | **$\mathcal{L}_{5+}$** | meta-articulation $\mathfrak{A}$, удовлетворяет (M1)–(M5) | $\nu(\mathfrak{A}) \geq \kappa_2$ | Diakrisis, $\infty$-cosmoi (Риль–Верити), Univalent Foundations, cohesive higher topos (Шрайбер), Higher Algebra (Люри) |
 | **$\mathcal{L}_{5+}^{\max}$** | $\mathfrak{A} \in \mathcal{L}_{5+}$ + (Max-1)–(Max-4) | $\nu(\mathfrak{A}) \geq \kappa_2$ + full image $\mathfrak{M}_\mathrm{Fnd}$ | **Diakrisis** (единственная, 100.T условная категоричность) |
 | **$\mathcal{L}_6$** | $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$: absolute foundation | $\nu$ выходит за Mahlo-иерархию R-S | **Пусто** по AFN-T (препринт Theorem `thm:afnt`) |
@@ -78,7 +78,7 @@ $$
 
 **Причины**:
 
-- *Не формализовано*: математическая интуиция до её артикуляции (записи Римана о ζ, черновики Grothendieck до SGA).
+- *Не формализовано*: математическая интуиция до её артикуляции (записи Римана о ζ, черновики Гротендик до SGA).
 - *Не формализуемо в принципе*: феноменологические акты (сам Διάκρισις, §1.5 интроспективный доступ).
 - *Открытый вопрос*: гипотеза без пути доказательства (Коллатц до установления status).
 
@@ -94,7 +94,7 @@ $$
 
 **Примеры** (полный список в препринте §2.2, но без строгих $\nu$-значений):
 
-- *Yoneda* ($\nu = 2$ в α_cat): $\mathrm{Hom}(h_a, F) \simeq F(a)$.
+- *Ёнеда* ($\nu = 2$ в α_cat): $\mathrm{Hom}(h_a, F) \simeq F(a)$.
 - *Zorn* ($\nu = 3$ в α_zfc + AC): эквивалент AC через частичные порядки.
 - *Snake*, *Five*, *Nine* ($\nu = 4$ в α_homalg): диаграммные леммы.
 - *Hensel* ($\nu = 5$ в α_p-adic): подъём корней.
@@ -110,8 +110,8 @@ $$
 
 **Примеры**:
 
-- *Gödel I/II* (в α_zfc): $\mathrm{PA}$ не полна; $\mathrm{Con}(\mathrm{PA})$ не доказуема в $\mathrm{PA}$.
-- *Tarski* (в α_zfc): неопределимость истины.
+- *Гёдель I/II* (в α_zfc): $\mathrm{PA}$ не полна; $\mathrm{Con}(\mathrm{PA})$ не доказуема в $\mathrm{PA}$.
+- *Тарский* (в α_zfc): неопределимость истины.
 - *Atiyah–Singer* (в α_diff_geo): index $= \hat A$-genus.
 - *Fermat Last* (Wiles в α_arith): $x^n + y^n = z^n$ без нетривиальных решений.
 - *Poincaré* (Perelman в α_diff_topo): симплициально-связные 3-многообразия $\sim S^3$.
@@ -160,19 +160,19 @@ $$
 **25+ канонических парадигм** (препринт §2.2):
 
 - Eilenberg–Mac Lane (1945): **categorical turn** — всё есть категория.
-- Leray–Grothendieck–Godement: **sheaf theory**.
-- Grothendieck: **scheme theory**, **K-theory**, **motives**, **topos theory**.
+- Leray–Гротендик–Godement: **sheaf theory**.
+- Гротендик: **scheme theory**, **K-theory**, **motives**, **topos theory**.
 - Cartan–Eilenberg: **homological algebra**.
-- Connes: **non-commutative geometry** (NCG).
-- Lawvere–Kock: **synthetic differential geometry** (SDG).
+- Конн: **non-commutative geometry** (NCG).
+- Ловер–Kock: **synthetic differential geometry** (SDG).
 - Gromov–Witten–Kontsevich: **mirror symmetry**.
 - Joyal–Lurie: **$(\infty, 1)$-categories**, **higher algebra**.
-- Awodey–Voevodsky: **HoTT**, **univalent foundations**.
+- Awodey–Воеводский: **HoTT**, **univalent foundations**.
 - Scholze: **perfectoid spaces**.
 - Clausen–Scholze: **condensed mathematics**.
 - Langlands: **Langlands programme**, **geometric Langlands**.
-- Riehl–Verity: **$\infty$-cosmoi**.
-- Schreiber: **cohesive higher topos theory**.
+- Рил–Verity: **$\infty$-cosmoi**.
+- Шрайбер: **cohesive higher topos theory**.
 - Lurie: **higher topos theory**.
 - Reverse mathematics; algorithmic information theory.
 
@@ -197,7 +197,7 @@ $$
 - Арифметические: PA, $\mathrm{Z}_2$.
 - Тип-теоретические: MLTT, CIC, ECC, HoTT, cubical HoTT, universe-polymorphic HoTT.
 - Substructural: Linear logic + !.
-- Продвинутые: AFA (Aczel), $(\infty, 1)$-topos theory (Lurie), NCG (Connes), cohesive $(\infty, 1)$-topos (Schreiber), motivic $\mathrm{SH}(k)$ (Voevodsky), realizability (Hyland Eff), SDG (Lawvere–Kock), elementary higher topos (Shulman).
+- Продвинутые: AFA (Aczel), $(\infty, 1)$-topos theory (Lurie), NCG (Конн), cohesive $(\infty, 1)$-topos (Шрайбер), motivic $\mathrm{SH}(k)$ (Воеводский), realizability (Хайленд Eff), SDG (Ловер–Kock), elementary higher topos (Shulman).
 
 ### $\mathcal{L}_{5+}$ — мета-каркас
 
@@ -214,9 +214,9 @@ $$
 | Проект | Авторы | Год | Scope | $\in \mathcal{L}_{5+}^{\max}$? |
 |---|---|---|---|---|
 | **Diakrisis** | — | 2025+ | Всё $\mathfrak{M}_\mathrm{Fnd}$ | ✅ Да |
-| $\infty$-cosmoi | Riehl–Verity | 2022 | $(\infty, 1)$-theories | ❌ Нет |
-| Univalent Foundations | Awodey, Voevodsky | 2010+ | HoTT-расширения | ❌ Нет |
-| Cohesive каркас (DCCT) | Schreiber | 2013 | Cohesive $\infty$-topoi | ❌ Нет |
+| $\infty$-cosmoi | Рил–Verity | 2022 | $(\infty, 1)$-theories | ❌ Нет |
+| Univalent Foundations | Awodey, Воеводский | 2010+ | HoTT-расширения | ❌ Нет |
+| Cohesive каркас (DCCT) | Шрайбер | 2013 | Cohesive $\infty$-topoi | ❌ Нет |
 | Higher Algebra (Lurie HA) | Lurie | 2017+ | Stable $\infty$-cat + operadic | ❌ Нет |
 | Synthetic mathematics | Taylor, Shulman et al. | 2000+ | Axiomatic synthetic | ❌ Нет |
 
@@ -229,7 +229,7 @@ $$
 - **(Max-3)** Depth-стратификация через T-2f\* (пять семейств парадоксов заблокированы).
 - **(Max-4)** Intensional completeness (98.T / 99.T).
 
-**Conditional мета-категоричность** (препринт Theorem `thm:meta-cat`, Diakrisis 100.T): любые два представителя $\mathcal{L}_{5+}^{\max}$ над одной и той же R-S $(\infty, \infty)$-эквивалентны через Grothendieck–Lurie straightening.
+**Conditional мета-категоричность** (препринт Theorem `thm:meta-cat`, Diakrisis 100.T): любые два представителя $\mathcal{L}_{5+}^{\max}$ над одной и той же R-S $(\infty, \infty)$-эквивалентны через Гротендик–Lurie straightening.
 
 **Meta-classification стабилизация** (препринт Theorem `thm:meta-stab`, Diakrisis 102.T): итерированная мета-классификация воспроизводит ту же $(\infty, \infty)$-теорию на каждом шаге (theory-level invariance); теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$ — **universe-ascent**.
 
@@ -316,9 +316,9 @@ $$
 
 **Diakrisis на уровне 5+^max** (MSFS (Max-1)–(Max-4), **все четыре доказаны как 103.T–106.T**, см. [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)):
 
-- **(Max-1)** [Т] Full classification: $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$ — Теорема **103.T** через универсальную конструкцию $S \mapsto \alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S)$ (Seely 1984 + Hofmann 1997 + Adámek–Rosický 1994).
+- **(Max-1)** [Т] Full classification: $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$ — Теорема **103.T** через универсальную конструкцию $S \mapsto \alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S)$ (Seely 1984 + Hofmann 1997 + Адамек–Росицкий 1994).
 - **(Max-2)** [Т] Gauge-fullness через автоэквивалентности ⟪⟫: $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$ — Теорема **104.T** через поднятие Морита-эквивалентностей R-S.
-- **(Max-3)** [Т] Depth-stratification через T-2f\* ([`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics)) — блокирует *универсально* (не только 5 семейств) все Yanofsky-сводимые самореферентные парадоксы — Теорема **105.T** через Yanofsky 2003 + глубину экспоненциалов.
+- **(Max-3)** [Т] Depth-stratification через T-2f\* ([`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics)) — блокирует *универсально* (не только 5 семейств) все Яновский-сводимые самореферентные парадоксы — Теорема **105.T** через Яновский 2003 + глубину экспоненциалов.
 - **(Max-4)** [Т] Intensional completeness через 98.T / 99.T ([`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement)): slice-локальность $\mathbf{I}_\mathrm{Diakrisis}$ над $\mathfrak{M}_\mathrm{Fnd}$ через эффективный топос Хайланда.
 
 **Сводная теорема 106.T**: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ — **теорема, а не программа**. Следствие 106.C2: $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ (утвердительный ответ на открытый вопрос MSFS после Theorem `thm:meta-cat`).
@@ -327,9 +327,9 @@ $$
 
 | Конструкция Diakrisis | Редукция | Источник |
 |---|---|---|
-| ⟪⟫ как 2-категория | Accessible 2-category | Adámek-Rosický 1994 |
-| 𝖬 | Accessible endofunctor | Adámek 1974 |
-| Trace(𝖠) | Initial 𝖬-algebra | Adámek 1974 |
+| ⟪⟫ как 2-категория | Accessible 2-category | Адамек-Росицкий 1994 |
+| 𝖬 | Accessible endofunctor | Адамек 1974 |
+| Trace(𝖠) | Initial 𝖬-algebra | Адамек 1974 |
 | ι: End(⟪⟫) ↪ ⟪⟫ | 2-topos-like inclusion | Shulman 2008 |
 | $\mathfrak{M}_\mathrm{Fnd}$ | Classifying 2-stack | Lurie HTT 2009 §3.2 |
 | Gauge-группа G | Automorphism 2-group | Kelly 1982 |

@@ -7,7 +7,7 @@ title: Путь Б — формализация УГМ
 
 :::tip Нормативный источник теорем AFN-T
 
-Для теорем структурного ядра (AFN-T, 55.T–87.T, 98.T–99.T, 100.T–102.T) нормативным источником при Verum-формализации служит **[*MSFS*](/10-reference/04-afn-t-correspondence)** (`internal/math-msfs/paper-en/paper.tex`): формулировки и доказательства в MSFS — канонические, Diakrisis-документы ссылаются на них. При разработке Lean-формализации этих теорем используется MSFS-нумерация (`thm:afnt-alpha`, `thm:five-axis`, и т. д.). Diakrisis-специфические конструкции (канонический примитив, 13 аксиом, gauge, **maximality proofs 103.T–106.T** через T-2f\* и Yanofsky 2003) формализуются отдельно по [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
+Для теорем структурного ядра (AFN-T, 55.T–87.T, 98.T–99.T, 100.T–102.T) нормативным источником при Verum-формализации служит **[*MSFS*](/10-reference/04-afn-t-correspondence)** (`internal/math-msfs/paper-en/paper.tex`): формулировки и доказательства в MSFS — канонические, Diakrisis-документы ссылаются на них. При разработке Lean-формализации этих теорем используется MSFS-нумерация (`thm:afnt-alpha`, `thm:five-axis`, и т. д.). Diakrisis-специфические конструкции (канонический примитив, 13 аксиом, gauge, **maximality proofs 103.T–106.T** через T-2f\* и Яновский 2003) формализуются отдельно по [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
 
 :::
 
@@ -45,7 +45,7 @@ title: Путь Б — формализация УГМ
 
 - **223 теоремы** — большая база для формализации.
 - **Физическое применение** (сознание, квантовая механика, гравитация).
-- **Флагманская сборка** Diakrisis через UFH (85.T): `α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция)`.
+- **Флагманская сборка** Diakrisis через UFH (85.T): `α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Гротендик-конструкция)`.
 - **Конкретная структура** — D(ℂ⁷), Lindblad-динамика, self-модель φ.
 
 ### Расширенные причины
@@ -94,7 +94,7 @@ title: Путь Б — формализация УГМ
 - Поддержка quantum-specific constructions (D(ℂ⁷), CPTP).
 - Trans-finite induction для ординалов.
 - 2-categorical rewriting.
-- Grothendieck universes.
+- Гротендик universes.
 
 ### Философская когерентность
 

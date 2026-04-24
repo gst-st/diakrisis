@@ -67,7 +67,7 @@ $$
 | $\varepsilon_\mathrm{разл}$ | $\omega$ | Базовый акт различения = $\varepsilon_\mathrm{math}$ |
 | $\varepsilon_\mathrm{construct}$ | $\omega$ | Конструктивный акт по Брауэру — основа интуиционизма |
 | $\varepsilon_\mathrm{enact}$ | $\omega + 1$ | Акт энактивации по Вареле |
-| $\varepsilon_\mathrm{autopoiesis}$ | $\omega^2$ | Самовоспроизведение (Матурана–Варела); $\mathsf{A}$-фиксточка |
+| $\varepsilon_\mathrm{автопоэзис}$ | $\omega^2$ | Самовоспроизведение (Матурана–Варела); $\mathsf{A}$-фиксточка |
 | $\varepsilon_\mathrm{SMD}$ | $\omega^2$ | Система-мыследеятельность Щедровицкого |
 | $\varepsilon_\mathrm{верификация}$ | $\omega \cdot 2$ | Практика формальной верификации (Verum) |
 | $\varepsilon_\mathrm{доказательство}$ | $\omega$ | Единичный акт доказательства |

@@ -18,7 +18,7 @@ title: AFN-T — граничная лемма
 
 Настоящий документ сохраняет Diakrisis-контекст (мотивация, канонический примитив, связь с внутренней аксиоматикой); формальные утверждения и доказательства — в препринте. Таблица соответствия номеров: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
-**Статус**: [Т] — структурно тавтологическое доказательство (Russell-type self-contradiction через синтаксис-семантическое сопряжение). Формализация в proof-assistant — программа [Пути Б](/09-applications/00-path-B-uhm-formalization).
+**Статус**: [Т] — структурно тавтологическое доказательство (Рассел-type self-contradiction через синтаксис-семантическое сопряжение). Формализация в proof-assistant — программа [Пути Б](/09-applications/00-path-B-uhm-formalization).
 
 ## Постановка (Diakrisis-контекст)
 
@@ -35,7 +35,7 @@ title: AFN-T — граничная лемма
 - (R1) арифметическая полнота через Robinson $\mathsf{Q}$;
 - (R2) r.e. аксиоматизация;
 - (R3) модельная непустота;
-- (R4) Gödel-кодирование;
+- (R4) Гёдель-кодирование;
 - (R5) категорная семантика в $(\infty, n_S)$ для некоторого $n_S \in \mathbb{N} \cup \{\infty\}$.
 
 **Класс $\mathcal{S}_S$ — $S$-определимых объектов** формально определён в в MSFS `def:SS`; соответствует понятию «S-определимых структур» в Diakrisis-корпусе без изменений.
@@ -66,7 +66,7 @@ AFN-T формулируется через объекты, но её содер
 - Классифицирующее пространство $\mathfrak{M}_\mathrm{Fnd}$ (препринт $\fM$) — полное, но не эскалируемое до Level-6.
 - Оператор $\mathsf{M}$ (accessible endofunctor) не порождает Level-6 fixed point в Fix($\mathsf{M}$).
 
-Это связывает AFN-T с 18.T (Russell-иммунитет) и 39.T (gauge-симметрия).
+Это связывает AFN-T с 18.T (Рассел-иммунитет) и 39.T (gauge-симметрия).
 
 ## Пять осей абсолютности — пятиосевая абсолютность AFN-T
 
@@ -80,7 +80,7 @@ AFN-T формулируется через объекты, но её содер
 | Вертикальная ($n \in \mathbb{N} \cup \{\infty\}$) | 59.T.1 | `thm:vertical` |
 | Мета-вертикальная ($\mu$-итерации) | 69.T | `thm:meta-vertical` |
 | Латеральная (альт.\ orderings) | 84.T | `thm:lateral` |
-| Полноты (Lawvere-scope) | 87.T | `thm:completeness` |
+| Полноты (Ловер-scope) | 87.T | `thm:completeness` |
 
 **Ключевое уточнение препринта** (`rem:axes-dependence`): пять осей логически зависимы — horizontal subsumes completeness; lateral ≡ vertical; meta-vertical = μ-closure of vertical. Минимальный логически независимый набор — **2 оси** (горизонтальная + вертикальная). Пятиосевая формулировка сохранена pedagogically для обзора обход-аргументов.
 
@@ -100,9 +100,9 @@ AFN-T формулируется через объекты, но её содер
 
 ## Структурная характеризация AFN-T (MSFS §10)
 
-- **Relation to no-go series** (Cantor, Russell, Gödel, Tarski, Lawvere, Ernst 2015) — MSFS `thm:subsumption`.
-- **Relation to Hamkins multiverse** — complementary; multiverse как Level-6 candidate foreclosed by AFN-T (MSFS `sec:ernst-multiverse`).
-- **Relation to Barwick–Schommer-Pries 2021 unicity** — compatible; intra-paradigm unicity используется как технический аргумент `thm:bergner-lurie-stab`.
+- **Relation to no-go series** (Кантор, Рассел, Гёдель, Тарский, Ловер, Эрнст 2015) — MSFS `thm:subsumption`.
+- **Relation to Хэмкинс multiverse** — complementary; multiverse как Level-6 candidate foreclosed by AFN-T (MSFS `sec:ernst-multiverse`).
+- **Relation to Барвик–Schommer-Pries 2021 unicity** — compatible; intra-paradigm unicity используется как технический аргумент `thm:bergner-lurie-stab`.
 
 Diakrisis не воспроизводит это positioning — см. MSFS §10.5.
 
@@ -114,7 +114,7 @@ $$
 \LAbs = \emptyset \quad \xleftrightarrow{\text{108.T}} \quad \LAbsE = \emptyset.
 $$
 
-109.T (Dual Boundary Lemma, MSFS Theorem~\ref{thm:dual-afnt}) формулирует ту же no-go на стороне энактментов: не существует $(F, \cC, \iota, r) \in \cE$, одновременно enactment-definable, non-coordinate, maximally receptive. Дуальная пятиосевая абсолютность (MSFS Theorem~\ref{thm:dual-five-axis}) покрывает ось performance-uniqueness через Lawvere-scope LS($\cE$) = closed symmetric monoidal (включает линейную логику, ludics, квантовые enactments; универсальная диагональ Yanofsky).
+109.T (Dual Boundary Lemma, MSFS Theorem~\ref{thm:dual-afnt}) формулирует ту же no-go на стороне энактментов: не существует $(F, \cC, \iota, r) \in \cE$, одновременно enactment-definable, non-coordinate, maximally receptive. Дуальная пятиосевая абсолютность (MSFS Theorem~\ref{thm:dual-five-axis}) покрывает ось performance-uniqueness через Ловер-scope LS($\cE$) = closed symmetric monoidal (включает линейную логику, ludics, квантовые enactments; универсальная диагональ Яновский).
 
 **Значение**: no-go симметрично по артикуляциям и актам-практикам. Пятый уровень защиты корпуса — AC/OC-дуальность ([`/10-reference/03-gap-status`](/10-reference/03-gap-status) §5 уровней защиты). Подробнее — [`/12-actic/05-dual-afn-t`](/12-actic/05-dual-afn-t).
 

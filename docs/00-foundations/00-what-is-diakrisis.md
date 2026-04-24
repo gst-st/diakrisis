@@ -133,19 +133,19 @@ flowchart TB
 
 ### 5.1 Позитивные
 
-- **10.T1–T5**: консистентность, Russell-иммунитет, самоартикуляция, неполнота α_math, Fix(𝖬).
+- **10.T1–T5**: консистентность, Рассел-иммунитет, самоартикуляция, неполнота α_math, Fix(𝖬).
 - **16.T1**: Z-эквивалентность (три характеризации) с явным cocycle-условием.
 - **18.T**: T-2f\* иммунитет к 5 семействам парадоксов.
 - **29.T + 30.T**: Universal Foundation + Reconstruction.
 - **43.T1**: 𝓜_Fnd = Trace(𝖠)/gauge — классифицирующее пространство через bicategory-of-fractions (Pronk 1996).
-- **85.T (UFH)**: α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) — полное соответствие УГМ ↔ Diakrisis.
+- **85.T (UFH)**: α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Гротендик-конструкция) — полное соответствие УГМ ↔ Diakrisis.
 - **88.T**: категоричность — единственность до (∞,∞)-эквивалентности.
 - **89.T**: internal language L_⟪⟫ — внутренний формальный язык.
 - **90.T**: Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
 - **91.T–93.T**: cohesive ∞-topos, motivic homotopy, realizability — все вложены в 𝓜_Fnd.
 - **98.T + 99.T**: интенсиональное уточнение — функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ + slice-locality над $\mathcal{M}_\mathrm{Fnd}$.
 - **100.T + 101.T + 102.T**: meta-classification Level 5+ — conditional categoricity + structural multiplicity + стабилизация; самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$ завершена.
-- **103.T + 104.T + 105.T + 106.T**: maximality proofs — (Max-1) universal articulation, (Max-2) gauge-fullness, (Max-3) универсальная парадокс-иммунность через Yanofsky 2003, сводная 106.T: **$\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**, закрывающая открытый вопрос MSFS о непустоте максимального подкласса. Детали — [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
+- **103.T + 104.T + 105.T + 106.T**: maximality proofs — (Max-1) universal articulation, (Max-2) gauge-fullness, (Max-3) универсальная парадокс-иммунность через Яновский 2003, сводная 106.T: **$\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**, закрывающая открытый вопрос MSFS о непустоте максимального подкласса. Детали — [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
 
 ### 5.2 Негативные: пятиосевая абсолютность AFN-T
 
@@ -210,7 +210,7 @@ Diakrisis — уровень **5+**:
 
 | Уровень | Примеры |
 |---|---|
-| 5 | ZFC, HoTT, CIC, NCG, Markov-конструктивизм, Bishop, Feferman-предикативизм |
+| 5 | ZFC, HoTT, CIC, NCG, Markov-конструктивизм, Bishop, Феферман-предикативизм |
 | 5+ | Diakrisis (максимальный, 103.T–106.T), ∞-cosmoi (Риль–Верити), Univalent Foundations (Воеводский), cohesive (Шрайбер) |
 | $5^\mathrm{weak}$ | Ограниченная арифметика (I∆₀ и т.д.), слабые Rich-метатеории |
 | 6 | **Невозможно** (AFN-T) |
@@ -242,7 +242,7 @@ Diakrisis — уровень **5+**:
 | Сборки | [Т/Т-набр] | УГМ, SM, cons |
 | AFN-T | [Т] доказано | No-go уровня 6 |
 | пятиосевая абсолютность AFN-T | [Т] | 5-уровневая абсолютность AFN-T |
-| UFH | [Т] | α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) |
+| UFH | [Т] | α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Гротендик-конструкция) |
 
 ## 11. Следующие шаги
 

@@ -7,7 +7,7 @@ title: Fibration-структура
 
 ## Статус
 
-**[Т]** — фибрационная структура через 11.T1-T2 + Grothendieck construction (standard).
+**[Т]** — фибрационная структура через 11.T1-T2 + Гротендик construction (standard).
 
 ## Обзор
 
@@ -59,7 +59,7 @@ $$p^{-1}(\alpha) = \{(\alpha, F) : F \in \mathrm{End}(\llbracket\cdot\rrbracket)
 
 - **cloven** — канонический лифтинг.
 - **split** — согласован с композицией.
-- По Grothendieck: эквивалентен **indexed 2-category** I: ⟪⟫^op → **2-Cat**.
+- По Гротендик: эквивалентен **indexed 2-category** I: ⟪⟫^op → **2-Cat**.
 
 ### Cloven fibration
 
@@ -75,7 +75,7 @@ $$p^{-1}(\alpha) = \{(\alpha, F) : F \in \mathrm{End}(\llbracket\cdot\rrbracket)
 
 ### Indexed 2-category
 
-По Grothendieck-Gabriel конструкции, cloven split fibration ⟺ indexed category: I: ⟪⟫^op → 2-Cat.
+По Гротендик-Gabriel конструкции, cloven split fibration ⟺ indexed category: I: ⟪⟫^op → 2-Cat.
 
 В нашем случае: I(α) = End(⟪⟫) (тривиально на объектах), I(f: α → β) = transport functor.
 
@@ -113,12 +113,12 @@ $$p^{-1}(\alpha) = \{(\alpha, F) : F \in \mathrm{End}(\llbracket\cdot\rrbracket)
 
 ## Признанные редукции
 
-- Стандартная Grothendieck-fibration (2-категорный вариант).
+- Стандартная Гротендик-fibration (2-категорный вариант).
 - Принципиальное расслоение в gauge-теоретическом смысле.
 
 ### Источники
 
-- Grothendieck (1960-1971): SGA 1, 4, 6 — теория фибраций.
+- Гротендик (1960-1971): SGA 1, 4, 6 — теория фибраций.
 - Street (1980s): 2-fibrations — 2-категорный вариант.
 - Bénabou: conceptualization in bicategories.
 - Hermida-Jacobs: fibrations for categorical logic.

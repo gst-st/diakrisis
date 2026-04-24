@@ -22,14 +22,14 @@ title: Структурные теоремы Актика (110.T–127.T)
 | ОЦ-теорема | AC-теорема | Суть |
 |---|---|---|
 | 43.T1 (классифицирующее $\mathfrak{M}_\mathrm{Fnd}$) | **110.T** | Классификация актов-практик через $\mathfrak{E}_\mathrm{Fnd}$ |
-| 85.T (UFH через Grothendieck) | **111.T** | UFH для перформансов |
+| 85.T (UFH через Гротендик) | **111.T** | UFH для перформансов |
 | 103.T (универсальная артикуляция) | **112.T** | Универсальный перформанс Актика-во-Актике |
-| — (новая) | **113.T** | Autopoiesis как $\mathsf{A}$-фиксточка |
+| — (новая) | **113.T** | Автопоэзис как $\mathsf{A}$-фиксточка |
 | 62.T (CPTP) | **114.T** | CPTP-дуал для перформансов |
 | T-96 (ρ*=φ(Γ)) | **115.T** | ε-версия самосогласованной рефлексии |
 | T-217 (TPM в стандартной модели) | **116.T** | ДЦ-TPM для квантового измерения |
 | — (новая) | **117.T** | SMD Щедровицкого как инстанция $\mathsf{A}^{\omega^2}$-фиксточки |
-| — (новая) | **118.T** | Enactivism Варелы как функтор |
+| — (новая) | **118.T** | Энактивизм Варелы как функтор |
 | T-124 (Goldilocks P) | **119.T** | Goldilocks-зона для $\mathsf{A}$-итерации |
 | — (новая) | **120.T** | Ludics Жирара как ДЦ-сетевая семантика |
 | — (новая) | **121.T** | BHK-интерпретация как $\varepsilon$-семантика |
@@ -54,7 +54,7 @@ $$
 
 ## 2. 111.T — UFH для перформансов
 
-**Теорема 111.T** [Т·L3]. *Существует Grothendieck-конструкция на $\mathfrak{E}_\mathrm{Fnd}$:*
+**Теорема 111.T** [Т·L3]. *Существует Гротендик-конструкция на $\mathfrak{E}_\mathrm{Fnd}$:*
 $$
 \int_{\mathfrak{E}_\mathrm{Fnd}} \mathrm{Perf}: \mathrm{Prac} \to \rangle\!\rangle \cdot \langle\!\langle
 $$
@@ -73,14 +73,14 @@ $$
 
 **Замечание.** $\varepsilon_\mathrm{actic}$ — это *практика, состоящая в том, чтобы формально различать акты-практики, применяя Актика-арсенал*. Метасемологическая работа Чурилова — инстанция $\varepsilon_\mathrm{actic}$ на уровне $\kappa = \omega \cdot 2 + 1$ (125.T). Работа над документом, который вы читаете, — $\kappa = \omega \cdot 3$.
 
-## 4. 113.T — autopoiesis как $\mathsf{A}$-фиксточка
+## 4. 113.T — автопоэзис как $\mathsf{A}$-фиксточка
 
 **Теорема 113.T** [Т·L3]. *Пусть $\varepsilon$ — акт класса живой системы. Тогда $\varepsilon$ автопоэтичен (в смысле Матурана–Варела) если и только если существует ординал $\kappa \geq \omega^2$ такой что:*
 $$
 \mathsf{A}^\kappa(\varepsilon) \simeq \varepsilon.
 $$
 
-**Интерпретация.** Autopoiesis = $\mathsf{A}$-фиксточка на уровне $\omega^2$. Это формализует «самовоспроизводящаяся активность, воспроизводящая свою собственную организацию».
+**Интерпретация.** Автопоэзис = $\mathsf{A}$-фиксточка на уровне $\omega^2$. Это формализует «самовоспроизводящаяся активность, воспроизводящая свою собственную организацию».
 
 **Следствие 113.C1.** Autopoietic замкнутость достигается не раньше $\omega^2$ — институционального уровня. Клетка, сообщество клеток, наука как практика — все суть $\mathsf{A}$-фиксточки на разных ординалах.
 
@@ -123,11 +123,11 @@ $$
 
 **Следствие.** СМД — корректная аналитика для институционального уровня практик. Ниже $\omega^2$ она избыточна; выше $\omega^2$ нуждается в расширении цивилизационными структурами.
 
-## 9. 118.T — enactivism как функтор
+## 9. 118.T — энактивизм как функтор
 
 **Теорема 118.T** [Т·L3]. *Существует $\aleph_0$-accessible функтор*
 $$
-\mathsf{Enact}: \rangle\!\rangle \cdot \langle\!\langle_\mathrm{embodied} \to \rangle\!\rangle \cdot \langle\!\langle_\mathrm{cognitive},
+\mathsf{Enact}: \rangle\!\rangle \cdot \langle\!\langle_\mathrm{embodied} \to \rangle\!\rangle \cdot \langle\!\langle_\mathrm{когнитивный},
 $$
 *переводящий sensorimotor-акты в когнитивные акты. $\mathsf{Enact}$ — 2-функтор, сохраняющий $\mathsf{A}$-итерацию.*
 
@@ -144,7 +144,7 @@ $$
 
 ## 11. 120.T — Ludics как ДЦ-сетевая семантика
 
-**Теорема 120.T** [Т·L3]. *Ludics (Girard) имеет каноническое Актика-отображение:*
+**Теорема 120.T** [Т·L3]. *Ludics (Жирар) имеет каноническое Актика-отображение:*
 $$
 \mathrm{Design} \simeq \mathrm{Perf}(\alpha_\mathrm{linear}), \quad \mathrm{Desseins} \simeq \mathrm{2-cells in } \rangle\!\rangle \cdot \langle\!\langle.
 $$
@@ -152,7 +152,7 @@ $$
 
 ## 12. 121.T — BHK как ε-семантика
 
-**Теорема 121.T** [Т·L3]. *Brouwer-Heyting-Kolmogorov семантика интуиционистской логики — в точности ε-семантика:*
+**Теорема 121.T** [Т·L3]. *Брауэр-Гейтинг-Колмогоров семантика интуиционистской логики — в точности ε-семантика:*
 $$
 \llbracket \phi \rrbracket_\mathrm{BHK} = \varepsilon(\alpha_\phi)
 $$
@@ -234,7 +234,7 @@ $$
 
 ### 14.4 126.T — формальный диалог как композиция $\mathsf{A}$-актов
 
-**Теорема 126.T** [Т·L3·Diakrisis-only]. *Пусть $\mathcal{D}$ — формальный диалог в смысле диалогической логики Лоренцена (Lorenzen 1960), состоящий из $k$ последовательных ходов Proponent/Opponent над пропозицией $\phi$. Тогда $\mathcal{D} \in \rangle\!\rangle \cdot \langle\!\langle$ как композиция $\mathsf{A}$-актов с суммарной глубиной:*
+**Теорема 126.T** [Т·L3·Diakrisis-only]. *Пусть $\mathcal{D}$ — формальный диалог в смысле диалогической логики Лоренцена (Лоренцен 1960), состоящий из $k$ последовательных ходов Proponent/Opponent над пропозицией $\phi$. Тогда $\mathcal{D} \in \rangle\!\rangle \cdot \langle\!\langle$ как композиция $\mathsf{A}$-актов с суммарной глубиной:*
 $$
 \mathsf{e}(\varepsilon_\mathcal{D}) = \omega + k,
 $$
@@ -244,13 +244,13 @@ $$
 
 **Следствие 126.C1.** Диалог Лоренцена с $k \to \infty$ ходами имеет предельную глубину $\omega \cdot 2$ (второй полный слой); это совпадает с границей $\mathsf{e}$-зоны Goldilocks (Теорема 119.T), где стабилизируется практика как традиция.
 
-**Следствие 126.C2.** Game-семантика Hintikka–Abramsky (Hintikka 1973, §10.4 MSFS) имеет ту же $\mathsf{A}$-глубину $\omega + k$ за $k$ раундов игры, по параллельной структуре Konstrukt-akt / диалог-ход. Это формализует структурную параллель между Лоренценом и Hintikka–Abramsky через 108.T.
+**Следствие 126.C2.** Game-семантика Хинтикка–Abramsky (Хинтикка 1973, §10.4 MSFS) имеет ту же $\mathsf{A}$-глубину $\omega + k$ за $k$ раундов игры, по параллельной структуре Konstrukt-akt / диалог-ход. Это формализует структурную параллель между Лоренценом и Хинтикка–Abramsky через 108.T.
 
 ---
 
 ### 14.5 127.T — замкнутость формально-логической ДЦ-подкатегории
 
-**Теорема 127.T** [Т·L3·Diakrisis-only]. *Пусть $\rangle\!\rangle \cdot \langle\!\langle_\mathrm{formal\text{-}logic} \subset \rangle\!\rangle \cdot \langle\!\langle$ — полная подкатегория, образованная объектами, дуальными к формально-логическим ДЦ-традициям — BHK-семантика, MLTT-judgements, диалог Лоренцена, game-семантика Hintikka–Abramsky, Ludics Жирара, Curry–Howard-Lambek, concurrency-формализмы (Actor / π-calculus / CSP). Тогда $\rangle\!\rangle \cdot \langle\!\langle_\mathrm{formal\text{-}logic}$ замкнута под:*
+**Теорема 127.T** [Т·L3·Diakrisis-only]. *Пусть $\rangle\!\rangle \cdot \langle\!\langle_\mathrm{formal\text{-}logic} \subset \rangle\!\rangle \cdot \langle\!\langle$ — полная подкатегория, образованная объектами, дуальными к формально-логическим ДЦ-традициям — BHK-семантика, MLTT-judgements, диалог Лоренцена, game-семантика Хинтикка–Abramsky, Ludics Жирара, Curry–Howard-Ламбек, concurrency-формализмы (Actor / π-calculus / CSP). Тогда $\rangle\!\rangle \cdot \langle\!\langle_\mathrm{formal\text{-}logic}$ замкнута под:*
 
 1. *Композицией актов* ($\varepsilon_1 \mid \varepsilon_2$, секвенциальная);
 2. *Параллельной композицией* ($\varepsilon_1 \otimes \varepsilon_2$, тензорная);
@@ -262,11 +262,11 @@ $$
 **Доказательство.** Замкнутость каждой операции проверяется покомпонентно:
 
 - **(1) Композиция**: каждая формально-логическая ДЦ-традиция (BHK / MLTT / Ludics / Curry–Howard) имеет явную операцию композиции (cut-rule, cut-elimination, bind, sequential composition). По 120.T $\mathrm{Design}_\mathrm{Ludics} \simeq \mathrm{Perf}(\alpha_\mathrm{linear})$ даёт структуру sequential composition. Secventiality преобразуется componentwise.
-- **(2) Параллельная**: каждая традиция имеет тензорный продукт (conjunctive composition в BHK; product type в MLTT; parallel composition в π-calculus / CSP; multiplicative conjunction ⊗ в linear logic / Ludics). По 120.T + Curry–Howard-Lambek (MSFS Remark~\ref{rem:enactive-traditions}): тензорный продукт сохраняет принадлежность к formal-logic ДЦ.
+- **(2) Параллельная**: каждая традиция имеет тензорный продукт (conjunctive composition в BHK; product type в MLTT; parallel composition в π-calculus / CSP; multiplicative conjunction ⊗ в linear logic / Ludics). По 120.T + Curry–Howard-Ламбек (MSFS Remark~\ref{rem:энактивный-traditions}): тензорный продукт сохраняет принадлежность к formal-logic ДЦ.
 - **(3) $\mathsf{A}$-активация**: $\mathsf{A}(\varepsilon)$ — подъём акта на уровень самосознающей практики. Для BHK-акта это BHK-akt второго порядка (конструкция конструкции); для Ludics-design это desseins-over-designs. Замкнутость следует из accessibility $\mathsf{A}$ (A-2) и того, что каждая формально-логическая традиция имеет $(\infty, 1)$-категорную структуру с $\kappa_1$-filtered colimits.
 - **(4) Gauge**: T-ε_c (конструктивный gauge-инвариант актов) обеспечивает, что gauge-преобразование constructively-enactable акта даёт снова constructively-enactable акт. Formal-logic ДЦ — строгий подкласс constructively-enactable.
 
-**Локальная эквивалентность с $\mathrm{SMC}^{(\infty, 1)}$**: следует из 120.T (Ludics category = symmetric monoidal closed) плюс Curry–Howard-Lambek изоморфии (пропозиция ↔ тип ↔ категория), применённой покомпонентно к каждой формально-логической традиции. Полная эквивалентность $\rangle\!\rangle \cdot \langle\!\langle_\mathrm{formal\text{-}logic} \simeq \mathrm{SMC}^{(\infty, 1)}$ — в одну сторону через 120.T, в обратную через реконструкцию формально-логической интерпретации для произвольной SMC-структуры (Seely 1989). ∎
+**Локальная эквивалентность с $\mathrm{SMC}^{(\infty, 1)}$**: следует из 120.T (Ludics category = symmetric monoidal closed) плюс Curry–Howard-Ламбек изоморфии (пропозиция ↔ тип ↔ категория), применённой покомпонентно к каждой формально-логической традиции. Полная эквивалентность $\rangle\!\rangle \cdot \langle\!\langle_\mathrm{formal\text{-}logic} \simeq \mathrm{SMC}^{(\infty, 1)}$ — в одну сторону через 120.T, в обратную через реконструкцию формально-логической интерпретации для произвольной SMC-структуры (Seely 1989). ∎
 
 **Следствие 127.C1** (Verum-следствие). Stdlib-слой `core.action.formal-logic.*` в Verum ([`/12-actic/09-verum-stdlib-sketch`](/12-actic/09-verum-stdlib-sketch)) имеет каноническое категорное обоснование через 127.T: $(\infty, 1)$-SMC-структура на core.action является минимально-достаточной для покрытия всех формально-логических ДЦ-традиций.
 

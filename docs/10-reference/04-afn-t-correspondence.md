@@ -7,7 +7,7 @@ title: Соответствие MSFS
 
 ## Назначение документа
 
-**MSFS** (*The **M**oduli **S**pace of **F**ormal **S**ystems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026) — самодостаточный препринт, формальная версия структурного ядра Diakrisis, независимая от Diakrisis-нотации. MSFS развивает структурную теорию $(\infty, n)$-классифицирующего $2$-стека $\fM$ Rich-оснований: (i) плюрализм Level 5+ ($\infty$-cosmoi / UF / cohesive попарно $2$-неэквивалентны), (ii) условную мета-категоричность через Grothendieck–Lurie straightening, (iii) slice-локальное интенсиональное уточнение через эффективный топос Хайланда, (iv) theory-level meta-стабилизация с universe-ascent по $\kappa_1 < \kappa_2 < \cdots$. В качестве граничной леммы закрывается Level-6 stratum (AFN-T), унифицируя классическую no-go серию Cantor–Russell–Gödel–Tarski–Lawvere–Ernst.
+**MSFS** (*The **M**oduli **S**pace of **F**ormal **S**ystems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026) — самодостаточный препринт, формальная версия структурного ядра Diakrisis, независимая от Diakrisis-нотации. MSFS развивает структурную теорию $(\infty, n)$-классифицирующего $2$-стека $\fM$ Rich-оснований: (i) плюрализм Level 5+ ($\infty$-cosmoi / UF / cohesive попарно $2$-неэквивалентны), (ii) условную мета-категоричность через Гротендик–Lurie straightening, (iii) slice-локальное интенсиональное уточнение через эффективный топос Хайланда, (iv) theory-level meta-стабилизация с universe-ascent по $\kappa_1 < \kappa_2 < \cdots$. В качестве граничной леммы закрывается Level-6 stratum (AFN-T), унифицируя классическую no-go серию Кантор–Рассел–Гёдель–Тарский–Ловер–Эрнст.
 
 Этот документ фиксирует **точное соответствие** между теоремами Diakrisis (внутренняя нумерация `N.T`, `N.C`) и labelled results MSFS (`\ref{thm:...}` и т.п.). Каждая дублируемая теорема имеет **каноническое место** в MSFS; Diakrisis-корпус ссылается на MSFS, не воспроизводя доказательства.
 
@@ -36,8 +36,8 @@ title: Соответствие MSFS
 | **59.T.1** | Theorem~\ref{thm:vertical} | Вертикальная (по $n \in \mathbb{N} \cup \{\infty\}$) |
 | **69.T** | Theorem~\ref{thm:meta-vertical} | Мета-вертикальная (по $\mu$-итерациям) |
 | **84.T** | Theorem~\ref{thm:lateral} | Латеральная (альтернативные порядки) |
-| **87.T** | Theorem~\ref{thm:completeness} | Полнота (Lawvere-scope) |
-| (вспом.) | Lemma~\ref{lem:lawvere-inf} | $(\infty,\infty)$-Lawvere fixed-point |
+| **87.T** | Theorem~\ref{thm:completeness} | Полнота (Ловер-scope) |
+| (вспом.) | Lemma~\ref{lem:lawvere-inf} | $(\infty,\infty)$-Ловер fixed-point |
 
 ### Три пути обхода
 
@@ -52,10 +52,10 @@ title: Соответствие MSFS
 
 | Diakrisis | MSFS | Название |
 |---|---|---|
-| **100.T** | Theorem~\ref{thm:meta-cat} | Условная мета-категоричность (через Grothendieck–Lurie straightening) |
+| **100.T** | Theorem~\ref{thm:meta-cat} | Условная мета-категоричность (через Гротендик–Lurie straightening) |
 | **101.T** | Theorem~\ref{thm:meta-mult} | Структурный плюрализм ($\infty$-cosmoi / UF / cohesive попарно $2$-неэквивалентны) |
 | **102.T** | Theorem~\ref{thm:meta-stab} | Theory-level meta-стабилизация с universe-ascent ($\kappa_1 < \kappa_2 < \ldots$) |
-| **68.T** | Theorem~\ref{thm:bergner-lurie-stab} | $(\infty,\infty)$-стабилизация (Barwick–Schommer-Pries) |
+| **68.T** | Theorem~\ref{thm:bergner-lurie-stab} | $(\infty,\infty)$-стабилизация (Барвик–Schommer-Pries) |
 
 ### Diakrisis и MSFS Q1 — статус внутренней работы
 
@@ -65,7 +65,7 @@ title: Соответствие MSFS
 |---|---|---|
 | (Max-1) universal articulation | **103.T** | $\mathrm{Artic}: \mathcal{F} \to \langle\!\langle \cdot \rangle\!\rangle$ существенно сюръективен |
 | (Max-2) gauge-fullness | **104.T** | $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\fM_\mathrm{Fnd})$ |
-| (Max-3) парадокс-иммунность | **105.T** | Универсальный Yanofsky-блокировщик через T-2f\* |
+| (Max-3) парадокс-иммунность | **105.T** | Универсальный Яновский-блокировщик через T-2f\* |
 | (Max-4) slice-locality | **99.T** (MSFS `thm:slice-locality`); сводная теорема **106.T** | Intensional refinement fibres, не экспандирует базу |
 
 **Статус по академическим стандартам**: MSFS-препринт оставляет Open Question Q1 о не-пустоте $\Meta_\mathrm{Cls}^\top$ **открытой** и ссылается на кандидата только как на *готовящийся work in preparation* (Remark rem:diakrisis-свидетель). Внутренние Diakrisis-проработки служат подготовительной базой для будущей отдельной рецензируемой публикации; их использование как установленного свидетельства в MSFS-претензиях запрещено. Diakrisis-корпус сохраняет внутреннюю полноту, но MSFS остаётся самодостаточным и не зависит от Diakrisis-ссылок.
@@ -76,7 +76,7 @@ title: Соответствие MSFS
 |---|---|---|
 | **103.T** | (Max-1) в Definition `def:maximality` | Universal articulation: $\mathrm{Artic}: \mathcal{F} \to \langle\!\langle \cdot \rangle\!\rangle$ существенно-сюръективен |
 | **104.T** | (Max-2) в Definition `def:maximality` | Gauge-fullness: $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$ |
-| **105.T** | (Max-3) в Definition `def:maximality` | Универсальная парадокс-иммунность через Yanofsky 2003 |
+| **105.T** | (Max-3) в Definition `def:maximality` | Универсальная парадокс-иммунность через Яновский 2003 |
 | **106.T** | Ответ на открытый вопрос после Theorem~\ref{thm:meta-cat} («$\mathcal{L}_{\mathrm{Cls}}^{\top}$ non-empty?») | Сводная: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ |
 
 **Граница**: MSFS намеренно оставляет непустоту $\mathcal{L}_{\mathrm{Cls}}^{\top}$ открытым вопросом для рецензионной чистоты (теорема о существовании представителя — внешняя по отношению к классификации). Diakrisis даёт свидетеля (саму себя) через явную конструкцию 103.T–106.T. Это — пример Diakrisis > MSFS: расширение за счёт специфической аксиоматики (T-2f\*) и внутренней метакатегории ⟪⟫, которых в MSFS нет.
@@ -88,14 +88,14 @@ title: Соответствие MSFS
 | Diakrisis | Источник полного proof | Краткое содержание |
 |---|---|---|
 | 110.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §1 | Классифицирующее пространство $\mathfrak{E}_\mathrm{Fnd}$ |
-| 111.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §2 | UFH для перформансов через Grothendieck-конструкцию |
+| 111.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §2 | UFH для перформансов через Гротендик-конструкцию |
 | 112.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §3 | Универсальный перформанс Актика-во-Актике |
-| 113.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §4 | Autopoiesis как $\mathsf{A}$-фиксточка уровня $\omega^2$ |
+| 113.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §4 | Автопоэзис как $\mathsf{A}$-фиксточка уровня $\omega^2$ |
 | 114.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §5 | CPTP-дуал для перформансов |
 | 115.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §6 | ε-версия самосогласованной рефлексии |
 | 116.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §7 | ДЦ-TPM для квантового измерения |
 | 117.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §8 | СМД Щедровицкого как $\mathsf{A}^{\omega^2}$-фиксточка |
-| 118.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §9 | Enactivism Варелы как функтор $\mathsf{Enact}$ |
+| 118.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §9 | Энактивизм Варелы как функтор $\mathsf{Enact}$ |
 | 119.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §10 | Goldilocks-зона для $\mathsf{A}$-итерации |
 | 120.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §11 | Ludics Жирара как ДЦ-сетевая семантика |
 | 121.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §12 | BHK-интерпретация как $\varepsilon$-семантика |
@@ -141,11 +141,11 @@ MSFS §11 «AC/OC Duality and the Dual Boundary Lemma» — формальная
 
 ### Ключевые структурные требования $\cE$
 
-1. **Reflector как часть данных**: $\cE$-объект — квадрупл $(F, \cC, \iota, r)$, где $r : \cC \to \Syn(F)$ — левый adjoint к $\iota$ с тождествами треугольника. Уникальность $r$ по $\iota$ up to unique invertible 2-cell (Riehl–Verity 2022, Adámek–Rosický 1994) обеспечивает canonicity essential-surjective части 108.T.
+1. **Reflector как часть данных**: $\cE$-объект — квадрупл $(F, \cC, \iota, r)$, где $r : \cC \to \Syn(F)$ — левый adjoint к $\iota$ с тождествами треугольника. Уникальность $r$ по $\iota$ up to unique invertible 2-cell (Рил–Verity 2022, Адамек–Росицкий 1994) обеспечивает canonicity essential-surjective части 108.T.
 
 2. **Dual-AFN-T — два независимых пути**: Theorem~\ref{thm:dual-afnt} доказывается (Route 1) прямым syntax-semantics bridge через Lemma~\ref{lem:SS-membership-E}, либо (Route 2) редукцией к $F \in \LAbs$ через $\varepsilon$-лифтинг $\cF$-координаций в $\cE$. Route 1 не требует 108.T.
 
-3. **Lawvere-scope $\mathrm{LS}(\cE)$**: $\{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC \text{ closed symmetric monoidal}\}$. Покрывает Cartesian-closed, SMC и $*$-autonomous — через универсальную диагональ Yanofsky; включает линейную логику, ludics Жирара, resource-sensitive type theories, квантовые enactments.
+3. **Ловер-scope $\mathrm{LS}(\cE)$**: $\{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC \text{ closed symmetric monoidal}\}$. Покрывает Cartesian-closed, SMC и $*$-autonomous — через универсальную диагональ Яновский; включает линейную логику, ludics Жирара, resource-sensitive type theories, квантовые enactments.
 
 4. **Класс $\SSE$**: componentwise замыкание базы $\SSE^{\mathrm{base}} = \{(F', \cM, \iota_\cM, r_\cM) : \cM \models S, \iota_\cM := \ev_\cM, r_\cM := (\ev_\cM)^L\}$ под операциями Definition~\ref{def:SS}.
 
@@ -154,7 +154,7 @@ MSFS §11 «AC/OC Duality and the Dual Boundary Lemma» — формальная
 | Diakrisis | MSFS | Содержание |
 |---|---|---|
 | **29.T–30.T** (universal foundation, reconstruction) | основа §3 (R-S), §5 (лемма $S$-definability) | Переформулированы как Definition~\ref{def:rs}, Lemma~\ref{lem:SS-membership} |
-| **43.T1** (classifying space) | Convention~\ref{conv:notation} ($\fM$ через Grothendieck construction) | $\mathfrak{M}_\mathrm{Fnd}$ = $\fM$ |
+| **43.T1** (classifying space) | Convention~\ref{conv:notation} ($\fM$ через Гротендик construction) | $\mathfrak{M}_\mathrm{Fnd}$ = $\fM$ |
 | **45.T** (derivable structures) | Охвачено общей $\cS_S^{\mathrm{global}}$ | Def~\ref{def:SS} |
 | **76.T** ($(\Pi_3\text{-max})$ предикативная форма) | Remark~\ref{rem:direct-infty-scope} (для constructive $S$) | Restriction |
 | **88.T** (internal categoricity) | Охватывается Theorem~\ref{thm:meta-cat} | Частный случай |
@@ -209,9 +209,9 @@ MSFS §11 «AC/OC Duality and the Dual Boundary Lemma» — формальная
 
 MSFS §10.5 явно фиксирует позиционирование относительно:
 
-- **Ernst 2015** «The Prospects of Unlimited Category Theory» — ближайший формальный предшественник; Ernst — специальный случай граничной леммы при ограничении на категорные R-S с (R1)–(R3) Фефермана.
-- **Hamkins 2012** set-theoretic multiverse — комплементарная позиция (методологический плюрализм); мультивселенная как кандидат на Level-6 исключена граничной леммой.
-- **Barwick–Schommer-Pries 2021** unicity — совместима (одно-парадигмальная единственность внутри $(\infty, n)$-Cat; используется как техническая лемма Theorem~\ref{thm:bergner-lurie-stab}, критична для (iv) — theory-level стабилизация).
+- **Эрнст 2015** «The Prospects of Unlimited Category Theory» — ближайший формальный предшественник; Эрнст — специальный случай граничной леммы при ограничении на категорные R-S с (R1)–(R3) Фефермана.
+- **Хэмкинс 2012** set-theoretic multiverse — комплементарная позиция (методологический плюрализм); мультивселенная как кандидат на Level-6 исключена граничной леммой.
+- **Барвик–Schommer-Pries 2021** unicity — совместима (одно-парадигмальная единственность внутри $(\infty, n)$-Cat; используется как техническая лемма Theorem~\ref{thm:bergner-lurie-stab}, критична для (iv) — theory-level стабилизация).
 
 Diakrisis **не дублирует** это позиционирование; отсылает к §10.5 препринта.
 

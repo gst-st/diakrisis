@@ -159,7 +159,7 @@ fn morita_check(α: Articulation, β: Articulation) -> MoritaResult {
 
 #### Вычисление расширения Кана
 
-По 85.T (UFH Grothendieck-конструкция) + поточечная формула (HTT 4.3.2.7):
+По 85.T (UFH Гротендик-конструкция) + поточечная формула (HTT 4.3.2.7):
 
 ```verum
 fn compute_lan(f: Functor, X: Presheaf) -> Presheaf {
@@ -341,7 +341,7 @@ CREATE INDEX idx_dependencies_target ON dependencies(target);
 
 ### Стандартные компоненты Verum, используемые в Noesis
 
-- `core/math/category.vr` — Functor, Monad, Adjunction, Yoneda, расширения Кана.
+- `core/math/category.vr` — Functor, Monad, Adjunction, Ёнеда, расширения Кана.
 - `core/math/infinity_category.vr` — QuasiCategory, InfinityFunctor.
 - `core/math/infinity_topos.vr` — Site, GrothendieckTopology, InfinityTopos.
 - `core/math/hott.vr` — Equiv, Fiber, унивалентность.

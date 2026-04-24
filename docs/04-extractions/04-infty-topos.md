@@ -134,20 +134,20 @@ title: ∞-Topos Lurie
 - Sheaf-структура — естественное следствие когезии + fibration.
 - α_∞topos — специфическая α_math, где sheaf-теория работает.
 
-## Когезивный ∞-topos Schreiber (DCCT)
+## Когезивный ∞-topos Шрайбер (DCCT)
 
-**05.T5**: Schreiber-когезия — конкретизация АПЕЙРОН-когезии.
+**05.T5**: Шрайбер-когезия — конкретизация АПЕЙРОН-когезии.
 
 ### DCCT
 
-**Differential Cohomology in a Cohesive ∞-Topos** (Schreiber 2013):
+**Differential Cohomology in a Cohesive ∞-Topos** (Шрайбер 2013):
 - Книга о гомотопически-когерентной математике физики.
 - Систематически разрабатывает Π ⊣ ♭ ⊣ ♯ ⊣ ι структуру.
 - Применения: геометрическая квантизация, supergeometry.
 
 ### Связь с Diakrisis
 
-- Наша cohesion ([/03-formal-architecture/02-cohesion](/03-formal-architecture/02-cohesion)) — **adapted** версия Schreiber.
+- Наша cohesion ([/03-formal-architecture/02-cohesion](/03-formal-architecture/02-cohesion)) — **adapted** версия Шрайбер.
 - В 2-категорном контексте (не ∞-топосе).
 - Совместима с gauge + fibration + modality.
 
@@ -185,13 +185,13 @@ title: ∞-Topos Lurie
 ## Признанные редукции
 
 - Lurie HTT — подробная известная теория.
-- Schreiber DCCT — известна.
+- Шрайбер DCCT — известна.
 
 ### Источники
 
 - **Lurie (2009)**: Higher Topos Theory (HTT).
 - **Lurie (2017+)**: Higher Algebra.
-- **Schreiber (2013)**: DCCT.
+- **Шрайбер (2013)**: DCCT.
 - **Rezk (2010)**: n-topoi.
 - **Toën-Vezzosi (2005)**: Segal topoi.
 
@@ -245,7 +245,7 @@ title: ∞-Topos Lurie
 | α_HoTT | α_HoTT ⊏ α_∞topos (univalent) |
 | α_NCG | Частично (через derived NCG) |
 | α_uhm | Не включается (разная структура) |
-| α_cohesion | α_cohesion ⊏ α_∞topos (Schreiber) |
+| α_cohesion | α_cohesion ⊏ α_∞topos (Шрайбер) |
 
 α_∞topos — **центральная** артикуляция для modern mathematical foundations.
 

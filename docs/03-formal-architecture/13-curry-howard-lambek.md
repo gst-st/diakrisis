@@ -1,23 +1,23 @@
 ---
 sidebar_position: 13
-title: Curry-Howard-Lambek
+title: Curry-Howard-Ламбек
 ---
 
-# Curry-Howard-Lambek в Diakrisis-контексте
+# Curry-Howard-Ламбек в Diakrisis-контексте
 
 ## Статус
 
-**[Т]** — CHL-correspondence через 12.T1-T4 каталога (Lambek-Scott + Awodey-Voevodsky + Abramsky-Coecke).
+**[Т]** — CHL-correspondence через 12.T1-T4 каталога (Ламбек-Scott + Awodey-Воеводский + Abramsky-Coecke).
 
 ## Обзор
 
-Классическое CHL-соответствие получает Diakrisis-обоснование: Curry-Howard (proofs = types) и Lambek (proofs = morphisms in CCC) объединяются как **специальные случаи** Морита-эквивалентности.
+Классическое CHL-соответствие получает Diakrisis-обоснование: Curry-Howard (proofs = types) и Ламбек (proofs = morphisms in CCC) объединяются как **специальные случаи** Морита-эквивалентности.
 
 ## Классическое CHL
 
 **Curry-Howard correspondence**: proofs в λ-исчислении = programs в типовой системе.
 
-**Lambek correspondence**: proofs (в intuitionistic logic) = morphisms в cartesian closed categories.
+**Ламбек correspondence**: proofs (в intuitionistic logic) = morphisms в cartesian closed categories.
 
 **CHL-триангуляция**:
 
@@ -27,7 +27,7 @@ title: Curry-Howard-Lambek
     λ-исчисление — категорная теория
 ```
 
-Все три — **формально эквивалентны** (Lambek-Scott, 1986).
+Все три — **формально эквивалентны** (Ламбек-Scott, 1986).
 
 **Вопрос для Diakrisis**: в каком смысле они эквивалентны формально?
 
@@ -61,7 +61,7 @@ $$\alpha_{prop} \;\sim_M\; \alpha_{lambda} \;\sim_M\; \alpha_{CCC}.$$
 
 В Diakrisis:
 - α_dep-prop (зависимая логика).
-- α_MLTT (Martin-Löf теория типов).
+- α_MLTT (Мартин-Лёф теория типов).
 - α_fib-cat (fibered category).
 
 Все Морита-эквивалентны (аналогично 12.T1).
@@ -72,7 +72,7 @@ $$\alpha_{dep\text{-}prop} \;\sim_M\; \alpha_{MLTT} \;\sim_M\; \alpha_{fib\text{
 
 ### Linear CHL
 
-**Linear logic** (Girard) ↔ **linear λ-calculus** ↔ **symmetric monoidal category**.
+**Linear logic** (Жирар) ↔ **linear λ-calculus** ↔ **symmetric monoidal category**.
 
 В Diakrisis: α_lin-prop ∼_M α_lin-lambda ∼_M α_SMC.
 
@@ -115,7 +115,7 @@ Gauge-преобразование между α_prop ↔ α_lambda ↔ α_CCC:
 
 - Proof φ ⇒ program t: φ ↔ типизация терма t.
 - Program t ⇒ morphism f: t ↔ морфизм в CCC.
-- Morphism f ⇒ proof φ: обратное через Yoneda.
+- Morphism f ⇒ proof φ: обратное через Ёнеда.
 
 ## Применения
 
@@ -154,8 +154,8 @@ Rich-основания (из 29.T) имеют CHL-структуру:
 
 - **Curry (1934, 1958)**: combinatory logic.
 - **Howard (1969)**: formulae-as-types.
-- **Lambek (1968, 1980)**: categorical logic.
-- **Lambek-Scott (1986)**: Introduction to Higher-Order Categorical Logic.
+- **Ламбек (1968, 1980)**: categorical logic.
+- **Ламбек-Scott (1986)**: Introduction to Higher-Order Categorical Logic.
 
 ## Итог
 
