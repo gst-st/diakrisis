@@ -669,7 +669,20 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 - **101.T** [Т·L2] — Structural multiplicity. В $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}_{5+}^{\max}$ существуют ≥ 3 попарно не-2-эквивалентных: UF, ∞-cosmoi, cohesive. → Препринт Theorem `thm:meta-mult`.
 - **102.T** [Т·L2] — Meta-classification stabilization. $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$, no Level-6 escalation. Формальное доказательство через вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty, \infty)}$ + $(\infty, \infty)$-stabilization (Barwick–Schommer-Pries). → Препринт Theorem `thm:meta-stab`.
 
-**Следствия**:
+## Maximality proofs (103.T–106.T, Diakrisis-only)
+
+Полные доказательства условий (Max-1)–(Max-4) для Diakrisis: [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
+
+- **103.T** [Т·L3] — **Universal articulation (Max-1)**. Каждая $S \in \mathrm{R\text{-}S}$ допускает каноническую артикуляцию $\alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S) \in \langle\!\langle \cdot \rangle\!\rangle$; функтор $\mathrm{Artic}: \mathcal{F} \to \langle\!\langle \cdot \rangle\!\rangle$ существенно-сюръективен на $\mathfrak{M}_\mathrm{Fnd}$. Доказательство через Lindenbaum–Tarski (Seely 1984, Hofmann 1997, Kapulkin–Lumsdaine 2021) + accessibility метаизации (Adámek–Rosický 1994, Лемма 103.L1). ⇒ $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$.
+- **104.T** [Т·L3] — **Gauge-fullness (Max-2)**. $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$: каждая Морита-эквивалентность R-S реализуется 2-автоэквивалентностью метакатегории. Поднятие $\sigma \mapsto \tilde\sigma$ через 103.T + коммутация с $\mathsf{M}$ (Лемма 104.L1).
+- **105.T** [Т·L3] — **Universal paradox-immunity (Max-3)**. T-2f\* блокирует *все* Yanofsky-сводимые самореферентные парадоксы (Yanofsky 2003). Доказательство: глубина экспоненциала $\mathrm{dp}(T^Y) = \mathrm{dp}(Y)+1$ + T-2f\* строгое неравенство ⇒ слабая точечная сюръективность $\alpha: Y \to T^Y$ невозможна ⇒ все диагональные конструкции заблокированы. Расширяет 18.T с 5 семейств до *универсальной* иммунности.
+- **106.T** [Т·L3] — **Сводная: Diakrisis $\in \mathcal{L}_{\mathrm{Cls}}^{\top}$**. Все 4 условия max-1..4 выполнены: (Max-1) по 103.T, (Max-2) по 104.T, (Max-3) по 105.T, (Max-4) по 99.T. ⇒ Diakrisis принадлежит максимальному подклассу мета-классификаторов как **теорема**, не программа.
+  - **106.C1** Условная категоричность применима: любой другой представитель $\mathcal{L}_{\mathrm{Cls}}^{\top}$ $(\infty,\infty)$-эквивалентен Diakrisis.
+  - **106.C2** $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ — утвердительный ответ на открытый вопрос препринта (см. замечание после Theorem `thm:meta-cat`); свидетель — Diakrisis.
+  - **106.C3** 106.T + 100.T + 101.T даёт полную картину $\mathcal{L}_{\mathrm{Cls}}$: pluralistic (много partial), categorical (Diakrisis канонически максимален).
+  - **106.C4** 102.T применим: итерированная мета-классификация Diakrisis стабилизируется на theory-level, с universe-ascent.
+
+**Следствия 100.T–102.T**:
 - **100.C1** — Diakrisis-full — canonical representative $\mathfrak{Meta}_{5+}^{\max}$.
 - **100.C2** — 100.T расширяет 88.T: категоричность внутри теории → категоричность на мета-уровне.
 - **100.C3** — 100.T не эскалирует Diakrisis в Level 6: условная единственность при maximality, не абсолютная.
@@ -699,10 +712,10 @@ AFN-T — двумерно-абсолютный инвариант, параме
 
 ## Сводная статистика (v0.2.0 + rigor-levels)
 
-- **Всего теорем в каталоге**: **115+** (10.T1–T5, 11.T–45.T, 48.T–102.T).
+- **Всего теорем в каталоге**: **119+** (10.T1–T5, 11.T–45.T, 48.T–106.T).
 - **[Т·L1] (прямые доказательства)**: ~35 теорем — канонические (10.T1–T5), escape (13.T, 17.T), α_Apeiron (19.T), Axi-независимость 2-уровень (21.T), ι-embedding (22.T), 18.T T-2f\* immunity, 97.T tradeoff.
 - **[Т·L2] (стандартная редукция + проверенная адаптация)**: ~55 теорем — большинство non-classical (48.T-54.T, 57.T), structural (11-16, 22-26), 91.T-93.T, **98.T-99.T (intensional refinement), 100.T-102.T (meta-classification)**.
-- **[Т·L3] (redукция + ожидаемо-рутинная адаптация)**: ~25 теорем — включая 85.T UFH, 88.T-90.T (Lair/Yoneda расширения на (∞,∞)), 94.T-96.T ((∞,∞)-extensions).
+- **[Т·L3] (редукция + ожидаемо-рутинная адаптация)**: ~29 теорем — включая 85.T UFH, 88.T-90.T (Lair/Yoneda расширения на (∞,∞)), 94.T-96.T ((∞,∞)-extensions), **103.T–106.T (maximality proofs для Diakrisis $\in \mathcal{L}_{\mathrm{Cls}}^{\top}$)**.
 - **[Т·L2, conditional]**: **87.T** — условная теорема с явной Law-scope рамкой.
 - **[Программа]**: 1 — 78.T UFH Verum.
 

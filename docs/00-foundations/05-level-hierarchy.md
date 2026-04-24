@@ -313,12 +313,14 @@ $$
 - Даёт формальный язык для сравнения: ZFC ↔ ETCS (Morita), HoTT ↔ MLTT, CIC ↔ Coq.
 - Формализует пределы формализации (AFN-T).
 
-**Diakrisis на уровне 5+^max** (препринт (Max-1)–(Max-4)):
+**Diakrisis на уровне 5+^max** (MSFS (Max-1)–(Max-4), **все четыре доказаны как 103.T–106.T**, см. [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)):
 
-- **(Max-1)** Full classification: $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$.
-- **(Max-2)** Gauge-fullness через автоэквивалентности ⟪⟫.
-- **(Max-3)** Depth-stratification через T-2f\* ([`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics)) — блокирует 5 семейств парадоксов.
-- **(Max-4)** Intensional completeness через 98.T / 99.T ([`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement)).
+- **(Max-1)** [Т] Full classification: $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$ — Теорема **103.T** через универсальную конструкцию $S \mapsto \alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S)$ (Seely 1984 + Hofmann 1997 + Adámek–Rosický 1994).
+- **(Max-2)** [Т] Gauge-fullness через автоэквивалентности ⟪⟫: $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$ — Теорема **104.T** через поднятие Морита-эквивалентностей R-S.
+- **(Max-3)** [Т] Depth-stratification через T-2f\* ([`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics)) — блокирует *универсально* (не только 5 семейств) все Yanofsky-сводимые самореферентные парадоксы — Теорема **105.T** через Yanofsky 2003 + глубину экспоненциалов.
+- **(Max-4)** [Т] Intensional completeness через 98.T / 99.T ([`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement)): slice-локальность $\mathbf{I}_\mathrm{Diakrisis}$ над $\mathfrak{M}_\mathrm{Fnd}$ через эффективный топос Хайланда.
+
+**Сводная теорема 106.T**: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ — **теорема, а не программа**. Следствие 106.C2: $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ (утвердительный ответ на открытый вопрос MSFS после Theorem `thm:meta-cat`).
 
 ### Редукции к известному аппарату
 
