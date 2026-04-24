@@ -123,7 +123,7 @@ title: Non-classical артикуляции
 
 ### Структура
 
-- S = NBG + AFA (Anti-Foundation Axiom заменяет Foundation).
+- S = NBG + AFA (Anti-Foundation Axiom заменяет аксиома фундирования).
 - Допускаются non-well-founded sets: x = {x}, циклические графы.
 - ρ(α_AFA-coalg) ≅ final coalgebra для подходящего эндо-функтора.
 
@@ -136,7 +136,7 @@ title: Non-classical артикуляции
 - x = y, y = {x} — циклические sets.
 - Bisimulation = identity.
 
-**Замена Foundation**: Foundation запрещает infinite descending chains ∈. AFA допускает bisimilar cycles.
+**Замена Foundation**: аксиома фундирования запрещает infinite descending chains ∈. AFA допускает bisimilar cycles.
 
 ### Ординальная позиция
 
@@ -273,7 +273,7 @@ $$X \in \lim_\ell \mathrm{Fun}(\mathcal{U}_\ell, \mathcal{U}_\ell).$$
 
 ### Сравнение с классическими foundations
 
-| Foundation | Polymorphism | Predicativity | Impredicativity |
+| Основание | Полиморфизм | Predicativity | Impredicativity |
 |---|---|---|---|
 | ZFC | implicit (через classes) | нет | да (powerset, replacement) |
 | ETCS | functorial | нет | да |

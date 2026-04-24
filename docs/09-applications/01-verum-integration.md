@@ -111,7 +111,7 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 **Базовая автоматика**:
 - Simplification.
-- Linear algebra manipulations.
+- Линейная алгебра manipulations.
 - Standard identities.
 
 **Diagram chases**:
@@ -189,7 +189,7 @@ fn live_by_uhm() -> Practice {
 
 1. **Core type system**: typechecker, normalization.
 2. **Basic libraries**: arithmetic, logic.
-3. **Linear algebra**: vectors, matrices, operators.
+3. **Линейная алгебра**: vectors, matrices, operators.
 4. **Quantum specifics**: density, CPTP, Lindblad.
 5. **Category theory**: functors, natural transformations.
 6. **2-category theory**: partial или full.

@@ -72,7 +72,7 @@ $$\alpha_{dep\text{-}prop} \;\sim_M\; \alpha_{MLTT} \;\sim_M\; \alpha_{fib\text{
 
 ### Linear CHL
 
-**Linear logic** (Жирар) ↔ **linear λ-calculus** ↔ **symmetric monoidal category**.
+**Линейная логика** (Жирар) ↔ **linear λ-calculus** ↔ **symmetric monoidal category**.
 
 В Diakrisis: α_lin-prop ∼_M α_lin-lambda ∼_M α_SMC.
 
@@ -133,7 +133,7 @@ Gauge-преобразование между α_prop ↔ α_lambda ↔ α_CCC:
 
 - **Categorical logic**: CCC как модель логики.
 - **∞-topoi**: HoTT-CHL.
-- **Linear algebra**: через linear CHL.
+- **Линейная алгебра**: через linear CHL.
 
 ### В Diakrisis
 

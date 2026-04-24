@@ -196,7 +196,7 @@ $$
 - Альтернативные: NFU, NF, CZF, IZF.
 - Арифметические: PA, $\mathrm{Z}_2$.
 - Тип-теоретические: MLTT, CIC, ECC, HoTT, cubical HoTT, universe-polymorphic HoTT.
-- Substructural: Linear logic + !.
+- Substructural: Линейная логика + !.
 - Продвинутые: AFA (Ачел), $(\infty, 1)$-topos theory (Люри), NCG (Конн), cohesive $(\infty, 1)$-topos (Шрайбер), motivic $\mathrm{SH}(k)$ (Воеводский), realizability (Хайленд Eff), SDG (Ловер–Kock), elementary higher topos (Шульман).
 
 ### $\mathcal{L}_{5+}$ — мета-каркас
