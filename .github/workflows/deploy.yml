@@ -53,8 +53,8 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=16384"
           GENERATE_SOURCEMAP: "false"
-          GH_PAGES_URL: "https://uhm-theory.github.io"
-          GH_PAGES_BASE_URL: "/diakrisis/"
+          GH_PAGES_URL: "https://diakrisis.gst.st"
+          GH_PAGES_BASE_URL: "/"
           GH_ORG_NAME: "uhm-theory"
           GH_PROJECT_NAME: "diakrisis"
 
