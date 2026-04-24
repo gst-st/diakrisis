@@ -38,6 +38,7 @@ title: Статус программ
 | 17 (N-04a) | SM как gauge-класс | 🟡 в программе (П3) |
 | N-04b | Intensional refinement (gauge-обогащение) | ✅ закрыто (98.T + 99.T) |
 | N-05 | Meta-classification Level 5+ (самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$) | ✅ закрыто (100.T + 101.T + 102.T) |
+| N-06 | Членство Diakrisis в $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема (а не программа) | ✅ закрыто (103.T + 104.T + 105.T + 106.T) |
 
 ## Классификация обходных путей вокруг AFN-T
 
@@ -49,6 +50,7 @@ title: Статус программ
 | **Рефлексивная башня** | $S + \mathrm{Con}(S) + \mathrm{Con}(\mathrm{Con}(S)) + \ldots$ с ординалом $\sup_\kappa|S_\kappa|$, превосходящим любое фиксированное $\|S\|$ | ✅ **formally closed** | 19.T1 + 31.T3 + 68.T + 69.T + 90.T |
 | **Интенсиональный refinement** | Morita как экстенсиональный инвариант теряет proof-term, normalization strategy и identity-type данные | ✅ **formally closed** | **98.T** (функтор $\mathbf{I}$) + **99.T** (slice-locality) |
 | **Meta-classification Level 5+** | Неопределённость позиции Diakrisis в пространстве возможных Level 5+ meta-structures (risk of implicit Level-6-uniqueness claim) | ✅ **formally closed** | **100.T** (conditional meta-categoricity) + **101.T** (structural multiplicity) + **102.T** (meta-classification stabilization) |
+| **Maximality membership** | Является ли Diakrisis формально членом $\mathcal{L}_{\mathrm{Cls}}^{\top}$? До 2026-04-24 — [Программа] с (Max-1), (Max-2) [Г], (Max-3) [С], (Max-4) [Т]. | ✅ **formally closed** | **103.T** (Max-1 universal articulation) + **104.T** (Max-2 gauge-fullness) + **105.T** (Max-3 universal paradox-immunity via Yanofsky) + **106.T** (сводная: Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$) |
 
 ### Комментарий
 
@@ -56,14 +58,15 @@ title: Статус программ
 
 Все три стандартных обходных пути формально закрыты. Intensional refinement закрыт через 98.T + 99.T. Meta-classification Level 5+ — последний потенциальный zazoр в самоописании Diakrisis — закрыт через 100.T–102.T: Diakrisis формально признана максимальным представителем плюралистичного класса $\mathfrak{Meta}_{5+}$, категоричность имеет место только при максимальных условиях (не абсолютная), mutual meta-classification стабилизируется на том же Level 5+ (не эскалирует к Level 6).
 
-**Двойная защита корпуса**:
+**Четвёртый уровень защиты корпуса**:
 - **Extensional уровень** — 5-осевая абсолютность (S, n, μ, ξ, π) на базе $\mathcal{M}_\mathrm{Fnd}$.
 - **Intensional уровень** — slice-locality 99.T на слоях $\mathrm{Int}([\alpha])$.
 - **Meta-classification уровень** — stabilization 102.T на $\mathfrak{M}^{(5+)}$.
+- **Maximality уровень** — Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема (106.T); все четыре (Max-i) доказаны; $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ (106.C2).
 
-Все три уровня взаимно-ортогональны; все три стабилизированы на Level 5+.
+Все четыре уровня взаимно-ортогональны; все четыре стабилизированы на Level 5+.
 
-Карта обходных путей и конкретных защит: [/06-limits/02-th-final#три-bypass-paths--формальное-закрытие](/06-limits/02-th-final#три-bypass-paths--формальное-закрытие). Полные формальные доказательства — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §8.
+Карта обходных путей и конкретных защит: [/06-limits/02-th-final#три-bypass-paths--формальное-закрытие](/06-limits/02-th-final#три-bypass-paths--формальное-закрытие). Полные формальные доказательства — [*MSFS*](/10-reference/04-afn-t-correspondence) §8 + [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) (103.T–106.T для уровня maximality, Diakrisis-only).
 
 Методологический урок о навигационной целостности корпуса: [NL-15](/07-methodology/03-negative-lessons#nl-15).
 
@@ -196,7 +199,7 @@ title: Статус программ
 
 ## Итог
 
-- **Теоретически**: Diakrisis **окончательно закрыта**. 102 теоремы в номерной системе доказаны (10.T1–T5, 11.T–45.T, 48.T–102.T), включая 98.T–99.T (intensional refinement) и 100.T–102.T (meta-classification).
+- **Теоретически**: Diakrisis **окончательно закрыта**. 106 теорем в номерной системе доказаны (10.T1–T5, 11.T–45.T, 48.T–106.T), включая 98.T–99.T (intensional refinement), 100.T–102.T (meta-classification), **103.T–106.T (maximality proofs: Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$)**.
 - **Защиты AFN-T**: все три стандартных обходных пути + самоклассификация Level 5+ формально закрыты.
   - Universe-polymorphism: 57.T, 56.C1, 61.T, 94.T.
   - Рефлексивная башня: 19.T1, 31.T3, 68.T, 69.T, 90.T.

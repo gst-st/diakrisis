@@ -25,7 +25,7 @@ title: Теоремы NO-1..NO-18
 
 ## NO-2 [Т·L1]: Сохранение Diakrisis
 
-**Формулировка**: Все 102 теоремы Diakrisis (в номерной системе 10.T1..102.T, включая 98.T–99.T intensional refinement и 100.T–102.T meta-classification Level 5+) переносятся на Noesis.Core через канонический функтор включения Noesis ↪ Diakrisis.
+**Формулировка**: Все 106 теорем Diakrisis (в номерной системе 10.T1..106.T, включая 98.T–99.T intensional refinement, 100.T–102.T meta-classification Level 5+, 103.T–106.T maximality proofs устанавливающие Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$) переносятся на Noesis.Core через канонический функтор включения Noesis ↪ Diakrisis.
 
 **Доказательство**: Noesis.Core = Diakrisis-full + инженерный слой (по NO-14). Инженерный слой ортогонален аксиомам. Все производные теоремы сохраняют валидность.
 

@@ -7,7 +7,7 @@ title: План развития
 
 ## Фаза 0: Основополагающий проект (Q1–Q2 2026, завершено)
 
-- ✓ Корпус Diakrisis (102 теоремы в номерной системе, включая intensional refinement 98.T–99.T и meta-classification 100.T–102.T).
+- ✓ Корпус Diakrisis (106 теорем в номерной системе, включая intensional refinement 98.T–99.T, meta-classification 100.T–102.T, и maximality proofs 103.T–106.T: Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема).
 - ✓ Мост UFH к УГМ.
 - ✓ пятиосевая абсолютность AFN-T (5-осевая абсолютность + 3 bypass paths + meta-classification closure).
 - ✓ Классификация L-уровней (exhaustive).

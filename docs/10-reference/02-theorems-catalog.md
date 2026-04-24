@@ -9,7 +9,7 @@ title: Каталог теорем
 
 Полный **нормативный** каталог центральных теорем Diakrisis. Сгруппирован по номерам и темам. Для каждой теоремы — статус, краткая формулировка, источник.
 
-:::tip Соответствие препринт MSFSа
+:::tip Соответствие MSFS
 
 Формальные доказательства теорем граничной леммы AFN-T (α, β, combined), пяти осей абсолютности, bypass-paths и meta-классификации Level 5+ **вынесены в препринт [MSFS](/10-reference/04-afn-t-correspondence)** (`paper-en/paper.tex`). Diakrisis-каталог сохраняет внутреннюю нумерацию и контекст; полные формальные изложения — в препринте. Таблица соответствия `N.T` ↔ `thm:...`: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
@@ -379,28 +379,28 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 ## Негативные (AFN-T)
 
-**→ Препринт §5–§6. Полное формальное доказательство — в препринте [MSFS](/10-reference/04-afn-t-correspondence).**
+**→ MSFS §5–§6. Полное формальное доказательство — в препринте [MSFS](/10-reference/04-afn-t-correspondence).**
 
 - **AFN-T (α-часть)** [Т·L1] — X как объект уровня 6 невозможно (α-часть, Леммы 1-3).
-  → Препринт Theorem `thm:afnt-alpha` + Lemmas `lem:F-implies-model`, `lem:model-in-S`, `lem:interp-is-morita`.
+  → MSFS Theorem `thm:afnt-alpha` + Lemmas `lem:F-implies-model`, `lem:model-in-S`, `lem:interp-is-morita`.
 - **AFN-T (α-часть)-extended** [Т·L1] — X как предел тоже невозможно (β-часть, Путь Ε).
-  → Препринт Theorem `thm:afnt-beta` + Proposition `prop:proper-class` (proper-class-башни вне R-S).
+  → MSFS Theorem `thm:afnt-beta` + Proposition `prop:proper-class` (proper-class-башни вне R-S).
 - **AFN-T** [Т·L1] — унифицированная no-go (AFN-T (α-часть) ∧ AFN-T (α-часть)-extended).
-  → Препринт Theorem `thm:afnt`. Следствие: $\mathcal{L}_6 = \emptyset$ (Proposition `prop:level-structure`(iv)).
+  → MSFS Theorem `thm:afnt`. Следствие: $\mathcal{L}_6 = \emptyset$ (Proposition `prop:level-structure`(iv)).
 
 ### Детализация
 
-**AFN-T (α-часть)**: (α)-часть — объектная формализация невозможна. Механизм: $(F_S) \Rightarrow X \in \mathcal{S}_S$ через Lambek–Scott reflection (препринт Lemma `lem:SS-membership`).
+**AFN-T (α-часть)**: (α)-часть — объектная формализация невозможна. Механизм: $(F_S) \Rightarrow X \in \mathcal{S}_S$ через Lambek–Scott reflection (MSFS Lemma `lem:SS-membership`).
 
-**AFN-T (α-часть)-extended**: (β)-часть — limit-approach не работает (провал Пути Ε). Механизм: accessibility-argument (Adámek–Rosický Thm 2.11, 2.45); proper-class-башни исключены через (R2) r.e.-аксиоматизации (препринт Proposition `prop:proper-class` + Corollary `cor:no-proper-class`).
+**AFN-T (α-часть)-extended**: (β)-часть — limit-approach не работает (провал Пути Ε). Механизм: accessibility-argument (Adámek–Rosický Thm 2.11, 2.45); proper-class-башни исключены через (R2) r.e.-аксиоматизации (MSFS Proposition `prop:proper-class` + Corollary `cor:no-proper-class`).
 
-**AFN-T**: унификация — граничная лемма. Пять осей абсолютности — пятиосевая абсолютность AFN-T (препринт Theorem `thm:five-axis`), с логической зависимостью осей через Remark `rem:axes-dependence`.
+**AFN-T**: унификация — граничная лемма. Пять осей абсолютности — пятиосевая абсолютность AFN-T (MSFS Theorem `thm:five-axis`), с логической зависимостью осей через Remark `rem:axes-dependence`.
 
 ### Положение AFN-T в no-go серии
 
-Препринт §10 + `thm:subsumption` явно позиционирует AFN-T в классической серии (Cantor, Russell, Gödel, Tarski, Lawvere, Ernst 2015) — AFN-T обобщает diagonal-аргументы через reflection-step (препринт §10.3 «Common Engine: Reflection-via-Diagonal»).
+MSFS §10 + `thm:subsumption` явно позиционирует AFN-T в классической серии (Cantor, Russell, Gödel, Tarski, Lawvere, Ernst 2015) — AFN-T обобщает diagonal-аргументы через reflection-step (MSFS §10.3 «Common Engine: Reflection-via-Diagonal»).
 
-Положение против Hamkins multiverse (complementary) и Barwick–Schommer-Pries 2021 unicity (compatible) — препринт `sec:ernst-multiverse`.
+Положение против Hamkins multiverse (complementary) и Barwick–Schommer-Pries 2021 unicity (compatible) — MSFS `sec:ernst-multiverse`.
 
 ## Вычислимость (07)
 
@@ -494,22 +494,22 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 Центральный результат о структурной абсолютности: AFN-T выполняется для любой «разумной» Rich-метатеории.
 
-**→ Препринт §3 (R-S), §7 (пять осей). Полное формальное изложение — в препринте [MSFS](/10-reference/04-afn-t-correspondence).**
+**→ MSFS §3 (R-S), §7 (пять осей). Полное формальное изложение — в препринте [MSFS](/10-reference/04-afn-t-correspondence).**
 
 - **Def R-S** [О] — Reasonable Rich-Metatheory: условия (R1) арифметика, (R2) r.e. аксиоматизация, (R3) непустая модель, (R4) Gödel-кодирование, (R5) категорная интерпретация.
-  → Препринт Definition `def:rs`.
+  → MSFS Definition `def:rs`.
 - **55.T** [Т·L1] — Absoluteness of AFN-T: для любой S ∈ R-S, AFN-T выполнена.
-  → Препринт Theorem `thm:horizontal` (горизонтальная ось).
+  → MSFS Theorem `thm:horizontal` (горизонтальная ось).
 - **3.3.1** [Т] — Опровержение AFN-T требует нарушения R-S-условий.
 
 ### Структура 𝒮_S и Леммы 2ₗ/2ᵍ
 
-- **Def** [О]: 𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global}. → Препринт Definition `def:SS`.
-- **Лемма 2ₗ** [Т] — Ob(M_F) ⊆ 𝒮_S^{local} ⊆ 𝒮_S (локальная). → Препринт Lemma `lem:model-in-S`.
-- **Лемма 2ᵍ** [Т] — S-определимый X ⊆ 𝒮_S (глобальная, через derived constructions). → Препринт Lemma `lem:SS-membership`.
-- **56.T** [Т·L2] — (F_S)(X) ⇒ X ∈ 𝒮_S (через categorical semantics). → Препринт Lemma `lem:SS-membership` (case analysis по $n_S$).
-- **57.T** [Т·L2] — ν(α_poly-HoTT) = ω·2+1 (HoTT baseline ω+1 + universe-iter +ω); Morita-редуцируема к `lim_ℓ Fun(𝒰_ℓ, 𝒰_ℓ)` (Lurie HTT §4.2). → Препринт Theorem `thm:universe` (universe polymorphism absoluteness, §8.1).
-- **58.T** [Т·L2] — Predicative Π_3-max_S' strictly weaker чем impredicative. → Препринт Remark `rem:direct-infty-scope` (конструктивный case).
+- **Def** [О]: 𝒮_S = 𝒮_S^{local} ∪ 𝒮_S^{global}. → MSFS Definition `def:SS`.
+- **Лемма 2ₗ** [Т] — Ob(M_F) ⊆ 𝒮_S^{local} ⊆ 𝒮_S (локальная). → MSFS Lemma `lem:model-in-S`.
+- **Лемма 2ᵍ** [Т] — S-определимый X ⊆ 𝒮_S (глобальная, через derived constructions). → MSFS Lemma `lem:SS-membership`.
+- **56.T** [Т·L2] — (F_S)(X) ⇒ X ∈ 𝒮_S (через categorical semantics). → MSFS Lemma `lem:SS-membership` (case analysis по $n_S$).
+- **57.T** [Т·L2] — ν(α_poly-HoTT) = ω·2+1 (HoTT baseline ω+1 + universe-iter +ω); Morita-редуцируема к `lim_ℓ Fun(𝒰_ℓ, 𝒰_ℓ)` (Lurie HTT §4.2). → MSFS Theorem `thm:universe` (universe polymorphism absoluteness, §8.1).
+- **58.T** [Т·L2] — Predicative Π_3-max_S' strictly weaker чем impredicative. → MSFS Remark `rem:direct-infty-scope` (конструктивный case).
 
 **Следствие 56.C1**: Universe-polymorphic modality X ∈ 𝒮_S^{global} → Morita-редуцируема → не уровень 6.
 
@@ -524,14 +524,14 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 Параметризация канонического примитива по категорному уровню n ∈ ℕ ∪ {∞}.
 
-**→ Препринт §7.2 (вертикальная ось), §7.3 (прямое $(\infty, \infty)$-доказательство).**
+**→ MSFS §7.2 (вертикальная ось), §7.3 (прямое $(\infty, \infty)$-доказательство).**
 
 - **Def 7.1** [О] — (∞,n)-Diakrisis: канонический примитив на уровне n.
-- **59.T** [Т·L2] — (∞,∞)-AFN-T: абсолютность в (∞,∞)-контексте (прямое доказательство через 67.T). → Препринт Theorem `thm:direct-infty` (для классических $S$) + Remark `rem:direct-infty-scope` (для конструктивных $S$ — main Theorem `thm:afnt`).
-- **59.T.1** [Т·L2] — (∞,n)-hierarchy: AFN-T выполняется для каждого n (через 63.T Whitehead). → Препринт Theorem `thm:vertical`.
-- **59.T.2** [Т·L3] — Stabilization: иерархия (∞,n) стабилизируется в (∞,∞). → Препринт Theorem `thm:bergner-lurie-stab` (Barwick–Schommer-Pries 2021 + Bergner–Rezk 2013).
+- **59.T** [Т·L2] — (∞,∞)-AFN-T: абсолютность в (∞,∞)-контексте (прямое доказательство через 67.T). → MSFS Theorem `thm:direct-infty` (для классических $S$) + Remark `rem:direct-infty-scope` (для конструктивных $S$ — main Theorem `thm:afnt`).
+- **59.T.1** [Т·L2] — (∞,n)-hierarchy: AFN-T выполняется для каждого n (через 63.T Whitehead). → MSFS Theorem `thm:vertical`.
+- **59.T.2** [Т·L3] — Stabilization: иерархия (∞,n) стабилизируется в (∞,∞). → MSFS Theorem `thm:bergner-lurie-stab` (Barwick–Schommer-Pries 2021 + Bergner–Rezk 2013).
 - **60.T** [Т·L2] — 2-Diakrisis ↪ (∞,∞)-Diakrisis через τ_{≤2}-локализация.
-- **61.T** [Т·L2] — α_inf-cat: новая артикуляция, ν = Ω (через 94.T). → Препринт `thm:universe` (частный случай) + Remark `rem:axes-dependence`.
+- **61.T** [Т·L2] — α_inf-cat: новая артикуляция, ν = Ω (через 94.T). → MSFS `thm:universe` (частный случай) + Remark `rem:axes-dependence`.
 - **62.T** [Т·L2] — (∞,∞)-Morita-эквивалентность корректна (через 83.T).
 
 **Следствие**: AFN-T **иерархически абсолютна** — в каждом (∞,n)-контексте, включая предельный n = ∞.
@@ -547,23 +547,23 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 Технические результаты о границах (∞,n)-иерархии и мета-вертикальная абсолютность.
 
-**→ Препринт §7.4 (мета-вертикальная ось), Appendix A (categorical preliminaries).**
+**→ MSFS §7.4 (мета-вертикальная ось), Appendix A (categorical preliminaries).**
 
-- **63.T** [Т·L2] — Whitehead-критерий: эквивалентность через full Postnikov tower. → Препринт Lemma `lem:whitehead` (Appendix A) + Lurie HTT §6.5.4.
+- **63.T** [Т·L2] — Whitehead-критерий: эквивалентность через full Postnikov tower. → MSFS Lemma `lem:whitehead` (Appendix A) + Lurie HTT §6.5.4.
 - **64.T** [Т·L2] — Конкретные потери τ_{≤2}: (∞,∞)-теоремы строго сильнее 2-версий.
 - **65.T** [Т·L2] — Canonical (∞,∞)-lift УГМ: α_uhm^{(∞,∞)} существует и единственна (через 94.T).
-- **66.T** [Т·L2] — (∞,∞)-Lawvere Fixed-Point: fixed point в (∞,∞)-cartesian closed. → Препринт Lemma `lem:lawvere-inf` (Appendix A).
-- **67.T** [Т·L2] — Прямая (∞,∞)-AFN-T: native proof без редукция через 55.T. → Препринт Theorem `thm:direct-infty` (для classical $S$).
-- **68.T** [Т при модели] — Trivial Stabilization: (∞,∞+1)-Cat = (∞,∞)-Cat. → Препринт Theorem `thm:bergner-lurie-stab`.
-- **69.T** [Т·L2] — Мета-гомотопическая абсолютность: meta-vertical absoluteness. → Препринт Theorem `thm:meta-vertical`.
+- **66.T** [Т·L2] — (∞,∞)-Lawvere Fixed-Point: fixed point в (∞,∞)-cartesian closed. → MSFS Lemma `lem:lawvere-inf` (Appendix A).
+- **67.T** [Т·L2] — Прямая (∞,∞)-AFN-T: native proof без редукция через 55.T. → MSFS Theorem `thm:direct-infty` (для classical $S$).
+- **68.T** [Т при модели] — Trivial Stabilization: (∞,∞+1)-Cat = (∞,∞)-Cat. → MSFS Theorem `thm:bergner-lurie-stab`.
+- **69.T** [Т·L2] — Мета-гомотопическая абсолютность: meta-vertical absoluteness. → MSFS Theorem `thm:meta-vertical`.
 
 ### Трёхмерная абсолютность AFN-T (исторически — ABSOLUTA_MAXIMA)
 
-После 84.T и 87.T трёхосевая форма (S, n, μ) расширена до пятиосевой **ABSOLUTA_TOTALIS** (S, n, μ, ξ, π); см. группу 84.T и препринт Theorem `thm:five-axis`. Трёхосевая форма сохраняется как частный случай (без латеральной и completeness осей).
+После 84.T и 87.T трёхосевая форма (S, n, μ) расширена до пятиосевой **ABSOLUTA_TOTALIS** (S, n, μ, ξ, π); см. группу 84.T и MSFS Theorem `thm:five-axis`. Трёхосевая форма сохраняется как частный случай (без латеральной и completeness осей).
 
-- **S** ∈ R-S (горизонтальная, 55.T). → Препринт `thm:horizontal`.
-- **n** ∈ ℕ ∪ {∞} (вертикальная, 59.T.1). → Препринт `thm:vertical`.
-- **μ** — мета-итерация произвольной вложенности (мета-вертикальная, 69.T). → Препринт `thm:meta-vertical`.
+- **S** ∈ R-S (горизонтальная, 55.T). → MSFS `thm:horizontal`.
+- **n** ∈ ℕ ∪ {∞} (вертикальная, 59.T.1). → MSFS `thm:vertical`.
+- **μ** — мета-итерация произвольной вложенности (мета-вертикальная, 69.T). → MSFS `thm:meta-vertical`.
 
 ### UFH^{(∞,∞)} — (∞,∞)-гипотеза факторизации
 
@@ -586,7 +586,7 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 - **85.T** [Т·L3] — UFH: структурная корреспонденция α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция). Формальная верификация 7D-параметризованного семейства α_Д-hybrid^{!}(Γ) — работа Пути Б. ν(α_uhm) = ω·3+1 (скорректировано с ω·4).
 - **86.T** [Т·L2] — Paraconsistent AFN-T: выполнена в R-S' с (Strong-neg) через трансляция ⊗.
-- **87.T** [Т·L2, conditional on Law-scope] — **Условная теорема**: для foundational theory $F \in \mathcal{LS}$ (Lawvere-scope: (L1) Syn(F), (L2) Mod(F), (L3) Syn ⊣ Mod adjunction, (L4) (∞,n)-реализация), 4-мерная абсолютность (S, n, μ, ξ) структурно полна. Доказательство через Лемму 87.L (Lawvere-characterization) + case analysis пяти случаев. Все исторически значимые foundations принадлежат $\mathcal{LS}$. → Препринт Definition `def:law-scope` + Theorem `thm:completeness` (пятая ось).
+- **87.T** [Т·L2, conditional on Law-scope] — **Условная теорема**: для foundational theory $F \in \mathcal{LS}$ (Lawvere-scope: (L1) Syn(F), (L2) Mod(F), (L3) Syn ⊣ Mod adjunction, (L4) (∞,n)-реализация), 4-мерная абсолютность (S, n, μ, ξ) структурно полна. Доказательство через Лемму 87.L (Lawvere-characterization) + case analysis пяти случаев. Все исторически значимые foundations принадлежат $\mathcal{LS}$. → MSFS Definition `def:law-scope` + Theorem `thm:completeness` (пятая ось).
 - **88.T** [Т·L3] — Категоричность Diakrisis: единственность до (∞,∞)-эквивалентности.
 - **89.T** [Т·L2] — Internal language L_⟪⟫ существует и полна.
 - **90.T** [Т·L2] — Exact сила консистентности = Con(ZFC + 2 inacc).
@@ -619,7 +619,7 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 - **81.T** [Т·L3] — 𝓜_Fnd^{(∞,∞)} presentable: (∞,∞)-stack.
 - **82.T** [Т·L2] — (∞,∞)-Verum complexity bound: transfinite automation required.
 - **83.T** [Т·L2] — Альтернативные категорные порядки: все Morita-редуцируются.
-- **84.T** [Т·L2] — ABSOLUTA_TOTALIS: 4-мерная абсолютность (латеральная ось). → Препринт Theorem `thm:lateral`.
+- **84.T** [Т·L2] — ABSOLUTA_TOTALIS: 4-мерная абсолютность (латеральная ось). → MSFS Theorem `thm:lateral`.
 
 ### Четырёхмерная абсолютность AFN-T
 
@@ -646,9 +646,9 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 Формальное закрытие intensional-слоя вокруг AFN-T. Детали: [/06-limits/08-intensional-refinement](/06-limits/08-intensional-refinement).
 
-- **Def 𝒮_int** [О] — 2-категория дисплейных 2-категорий $(\mathcal{C}, \mathcal{D}, \iota)$: ambient 2-category + pullback-стабильный дисплейный класс (D1)–(D4) + каноническое включение. → Препринт Definition `def:Sint` + Definitions `def:display-class`, `def:display-2-cat`.
-- **98.T** [Т·L2] — существование intensional refinement functor. Контравариантный 2-функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ со свойствами (I-1)–(I-4): homotopy invariance, gauge covariance, strict refinement of Morita (через типизационный инвариант $\tau$ в effective topos $\mathrm{Eff}$; контрпример MLTT vs ETT по Hofmann 1995, Streicher 1991), Morita как 2-локализация (Pronk 1996). → Препринт Theorem `thm:I-existence` (§8.3).
-- **99.T** [Т·L2] — slice-locality. 2-Grothendieck-фибрация $\widetilde{\pi}: \mathcal{S}_\mathrm{int} \to \mathcal{M}_\mathrm{Fnd}$ с $\pi = \widetilde{\pi} \circ \mathbf{I}$. Образ $\mathbf{I}$ проецируется на уже существующие точки $\mathcal{M}_\mathrm{Fnd}$. → Препринт Theorem `thm:slice-locality` + Corollary `cor:slice-level`.
+- **Def 𝒮_int** [О] — 2-категория дисплейных 2-категорий $(\mathcal{C}, \mathcal{D}, \iota)$: ambient 2-category + pullback-стабильный дисплейный класс (D1)–(D4) + каноническое включение. → MSFS Definition `def:Sint` + Definitions `def:display-class`, `def:display-2-cat`.
+- **98.T** [Т·L2] — существование intensional refinement functor. Контравариантный 2-функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ со свойствами (I-1)–(I-4): homotopy invariance, gauge covariance, strict refinement of Morita (через типизационный инвариант $\tau$ в effective topos $\mathrm{Eff}$; контрпример MLTT vs ETT по Hofmann 1995, Streicher 1991), Morita как 2-локализация (Pronk 1996). → MSFS Theorem `thm:I-existence` (§8.3).
+- **99.T** [Т·L2] — slice-locality. 2-Grothendieck-фибрация $\widetilde{\pi}: \mathcal{S}_\mathrm{int} \to \mathcal{M}_\mathrm{Fnd}$ с $\pi = \widetilde{\pi} \circ \mathbf{I}$. Образ $\mathbf{I}$ проецируется на уже существующие точки $\mathcal{M}_\mathrm{Fnd}$. → MSFS Theorem `thm:slice-locality` + Corollary `cor:slice-level`.
 
 **Следствия**:
 - **98.C1** — нетривиальность intensional refinement (Morita-эквивалентные точки могут иметь не-2-эквивалентные intensional-образы).
@@ -663,11 +663,11 @@ $$\mathrm{Fun}^{\mathcal{W}\text{-invariant}}(\mathrm{Trace}(\mathsf{A}), \mathc
 
 Формальное закрытие вопроса о самоклассификации Diakrisis в пространстве Level 5+ meta-structures. Детали: [/06-limits/09-meta-classification](/06-limits/09-meta-classification).
 
-- **Def $\mathfrak{Meta}_{5+}$** [О] — класс Level 5+ meta-structures: (M1) локальная малость, (M2) classification functor, (M3) accessible reflection, (M4) non-generative, (M5) metatheory-parametrized. → Препринт Definition `def:meta`.
-- **Def $\mathfrak{Meta}_{5+}^{\max}$** [О] — подкласс максимальных: (Max-1) full classification, (Max-2) gauge-fullness, (Max-3) depth stratification (формализована препринтом как единая accessible-2-theory аксиома блокирующая Russell/Curry/Grelling/Burali-Forti/Girard — см. `rem:max3-paradox-immunity`), (Max-4) intensional-completeness. → Препринт Definition `def:maximality`.
-- **100.T** [Т·L2] — Meta-categoricity under maximality. Любые $\mathbf{F}_1, \mathbf{F}_2 \in \mathfrak{Meta}_{5+}^{\max}$ в одной R-S удовлетворяют $\mathbf{F}_1 \simeq_{(\infty,\infty)} \mathbf{F}_2$. Доказательство: Lair–Makkai–Paré representation + (∞,∞)-extension через $\Theta_n$-model Rezk 2010 + Barwick–Schommer-Pries 2021 unicity + Whitehead. → Препринт Theorem `thm:meta-cat`.
-- **101.T** [Т·L2] — Structural multiplicity. В $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}_{5+}^{\max}$ существуют ≥ 3 попарно не-2-эквивалентных: UF, ∞-cosmoi, cohesive. → Препринт Theorem `thm:meta-mult`.
-- **102.T** [Т·L2] — Meta-classification stabilization. $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$, no Level-6 escalation. Формальное доказательство через вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty, \infty)}$ + $(\infty, \infty)$-stabilization (Barwick–Schommer-Pries). → Препринт Theorem `thm:meta-stab`.
+- **Def $\mathfrak{Meta}_{5+}$** [О] — класс Level 5+ meta-structures: (M1) локальная малость, (M2) classification functor, (M3) accessible reflection, (M4) non-generative, (M5) metatheory-parametrized. → MSFS Definition `def:meta`.
+- **Def $\mathfrak{Meta}_{5+}^{\max}$** [О] — подкласс максимальных: (Max-1) full classification, (Max-2) gauge-fullness, (Max-3) depth stratification (формализована MSFS как единая accessible-2-theory аксиома блокирующая Russell/Curry/Grelling/Burali-Forti/Girard — см. `rem:max3-paradox-immunity`), (Max-4) intensional-completeness. → MSFS Definition `def:maximality`.
+- **100.T** [Т·L2] — Meta-categoricity under maximality. Любые $\mathbf{F}_1, \mathbf{F}_2 \in \mathfrak{Meta}_{5+}^{\max}$ в одной R-S удовлетворяют $\mathbf{F}_1 \simeq_{(\infty,\infty)} \mathbf{F}_2$. Доказательство: Lair–Makkai–Paré representation + (∞,∞)-extension через $\Theta_n$-model Rezk 2010 + Barwick–Schommer-Pries 2021 unicity + Whitehead. → MSFS Theorem `thm:meta-cat`.
+- **101.T** [Т·L2] — Structural multiplicity. В $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}_{5+}^{\max}$ существуют ≥ 3 попарно не-2-эквивалентных: UF, ∞-cosmoi, cohesive. → MSFS Theorem `thm:meta-mult`.
+- **102.T** [Т·L2] — Meta-classification stabilization. $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$, no Level-6 escalation. Формальное доказательство через вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty, \infty)}$ + $(\infty, \infty)$-stabilization (Barwick–Schommer-Pries). → MSFS Theorem `thm:meta-stab`.
 
 ## Maximality proofs (103.T–106.T, Diakrisis-only)
 
@@ -768,7 +768,7 @@ AFN-T — двумерно-абсолютный инвариант, параме
 - **69.T** [Т·L2] — AFA-граница рефлексивных итераций.
 - **90.T** [Т·L2] — Con(Diakrisis-full) = Con(ZFC + 2 inacc) exact.
 
-→ Консолидированно в препринте Theorem `thm:reflective` (§8.2) + Theorem `thm:meta-vertical` (§7.4) + Convention `conv:zfc-inacc` (ZFC + 2 inacc).
+→ Консолидированно в в MSFS Theorem `thm:reflective` (§8.2) + Theorem `thm:meta-vertical` (§7.4) + Convention `conv:zfc-inacc` (ZFC + 2 inacc).
 
 **Статус**: formally closed.
 

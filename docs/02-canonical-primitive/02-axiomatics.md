@@ -270,8 +270,10 @@ Russell-иммунитет (Теорема 10.T2).
 
 #### Следствия
 
-- Все 5 семейств парадоксов (Russell, Curry, Grelling, Burali-Forti, Girard) — заблокированы (18.T).
+- Все 5 именных семейств парадоксов (Russell, Curry, Grelling, Burali-Forti, Girard) — заблокированы (18.T).
+- **Универсальная парадокс-иммунность** (105.T, [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): T-2f\* блокирует *любой* Yanofsky-сводимый самореферентный парадокс (Yanofsky 2003), не только именные 5 семейств. Включает Cantor, Tarski, Lawvere, Gödel-type, Löb и любой другой парадокс диагонального характера в cartesian-closed категориях.
 - Теория консистентна относительно ZFC + 2 инаксессибальных (10.T1).
+- **(Max-3)** из MSFS Definition `def:maximality` доказан для Diakrisis как теорема 105.T.
 
 ## Независимость аксиом
 

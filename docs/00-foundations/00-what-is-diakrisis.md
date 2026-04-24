@@ -130,7 +130,7 @@ title: Что такое Diakrisis
 
 ## 5. Центральные результаты
 
-Теоретически теория **закрыта**: 102 теоремы в номерной системе (115+ с под-теоремами).
+Теоретически теория **закрыта**: 106 теорем в номерной системе (119+ с под-теоремами).
 
 ### 5.1 Позитивные
 
@@ -146,6 +146,7 @@ title: Что такое Diakrisis
 - **91.T–93.T**: cohesive ∞-topos, motivic homotopy, realizability — все вложены в 𝓜_Fnd.
 - **98.T + 99.T**: intensional refinement — функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ + slice-locality над $\mathcal{M}_\mathrm{Fnd}$.
 - **100.T + 101.T + 102.T**: meta-classification Level 5+ — conditional categoricity + structural multiplicity + stabilization; самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$ завершена.
+- **103.T + 104.T + 105.T + 106.T**: maximality proofs — (Max-1) universal articulation, (Max-2) gauge-fullness, (Max-3) универсальная парадокс-иммунность через Yanofsky 2003, сводная 106.T: **$\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**, закрывающая открытый вопрос MSFS о непустоте максимального подкласса. Детали — [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
 
 ### 5.2 Негативные: пятиосевая абсолютность AFN-T
 
@@ -219,7 +220,7 @@ Diakrisis — уровень **5+**:
 ## 9. Состояние проекта
 
 ### Теоретически
-**Закрыто**. 102 теоремы в номерной системе доказаны (включая 98.T–99.T intensional refinement и 100.T–102.T meta-classification Level 5+). 5-уровневая абсолютность AFN-T (ABSOLUTA_TOTALIS). UFH установлена.
+**Закрыто**. 106 теорем в номерной системе доказаны (включая 98.T–99.T intensional refinement, 100.T–102.T meta-classification Level 5+, **103.T–106.T maximality proofs — Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**). 5-уровневая абсолютность AFN-T. UFH установлена.
 
 ### Практически
 6 открытых программ:
@@ -262,6 +263,6 @@ Diakrisis — уровень **5+**:
 ### Формальная навигация
 
 - [Каталог аксиом](/10-reference/01-axioms-catalog).
-- [Каталог теорем](/10-reference/02-theorems-catalog) — 102 теоремы в номерной системе.
+- [Каталог теорем](/10-reference/02-theorems-catalog) — 106 теорем в номерной системе.
 - [Статус программ](/10-reference/03-gap-status).
 - [Глоссарий](/10-reference/00-glossary).

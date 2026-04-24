@@ -11,14 +11,14 @@ title: Intensional refinement (путь 3)
 
 **Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §8.3:
 
-- **98.T** = препринт Theorem `thm:I-existence` (construction of $\II : \cF^\mathrm{op} \to \Sint$).
-- **99.T** = препринт Theorem `thm:slice-locality` (projection to existing points of $\fM$).
+- **98.T** = MSFS Theorem `thm:I-existence` (construction of $\II : \cF^\mathrm{op} \to \Sint$).
+- **99.T** = MSFS Theorem `thm:slice-locality` (projection to existing points of $\fM$).
 
-После закрытия этого пути три стандартных bypass-пути вокруг AFN-T — ✅ formally closed (препринт Theorem `thm:bypass-summary`).
+После закрытия этого пути три стандартных bypass-пути вокруг AFN-T — ✅ formally closed (MSFS Theorem `thm:bypass-summary`).
 
 ## Почему этот слой нужен
 
-Доказательство AFN-T α-части (препринт Lemma `lem:interp-is-morita`) использует Morita-эквивалентность как критерий редукции: $\rho(\alpha) \simeq X^{\mathcal{M}_F}$ ⇒ $X$ сводится к известной структуре. Morita — **экстенсиональный** инвариант: он отождествляет артикуляции, имеющие изоморфные $\rho$-проекции, независимо от конкретных proof-term-конструкций или identity-type-семантики.
+Доказательство AFN-T α-части (MSFS Lemma `lem:interp-is-morita`) использует Morita-эквивалентность как критерий редукции: $\rho(\alpha) \simeq X^{\mathcal{M}_F}$ ⇒ $X$ сводится к известной структуре. Morita — **экстенсиональный** инвариант: он отождествляет артикуляции, имеющие изоморфные $\rho$-проекции, независимо от конкретных proof-term-конструкций или identity-type-семантики.
 
 Гипотетический обходной путь: если intensional-level структура $F_\mathrm{int}$ над $F$ производит различие, *не видимое* Morita-эквивалентности, и это различие позволяет артикулировать новое Level-6 основание на intensional-уровне — тогда AFN-T можно было бы «обойти».
 
@@ -26,26 +26,26 @@ title: Intensional refinement (путь 3)
 
 ### 98.T: Существование $\mathbf{I}$
 
-Препринт Theorem `thm:I-existence`: существует контравариантный $2$-функтор
+MSFS Theorem `thm:I-existence`: существует контравариантный $2$-функтор
 
 $$
 \mathbf{I} : \langle\langle \cdot \rangle\rangle^{\mathrm{op}} \longrightarrow \mathcal{S}_\mathrm{int}
 $$
 
-со свойствами (I-1)–(I-4) (препринт Definition `def:Sint` для целевой 2-категории):
+со свойствами (I-1)–(I-4) (MSFS Definition `def:Sint` для целевой 2-категории):
 
 - **(I-1) Homotopy invariance**: 2-эквивалентность в $\langle\langle \cdot \rangle\rangle$ ⇒ 2-эквивалентность в $\mathcal{S}_\mathrm{int}$.
 - **(I-2) Gauge covariance**: gauge-transformation $\tau$ ⇒ 1-морфизм $\mathbf{I}(\tau)$.
 - **(I-3) Strict refinement of Morita**: существуют $F_1 \sim_M F_2$ с $\mathbf{I}(F_1) \not\simeq \mathbf{I}(F_2)$.
 - **(I-4) Morita as 2-localization**: $\cU \circ \mathbf{I} \simeq \rho$; Morita = $\Sint[\mathcal{W}_\cU^{-1}]$ (Pronk 1996).
 
-**Ключевой concrete пример** (препринт §8.3, Step 7): MLTT vs ETT — Morita-эквивалентны по [Hofmann 1995], но $\tau(\mathbf{I}(\mathrm{MLTT})) = 1 \neq 0 = \tau(\mathbf{I}(\mathrm{ETT}))$ через typing-invariant $\tau$ (effective normalization в effective topos $\mathrm{Eff}$ по Hyland 1982).
+**Ключевой concrete пример** (MSFS §8.3, Step 7): MLTT vs ETT — Morita-эквивалентны по [Hofmann 1995], но $\tau(\mathbf{I}(\mathrm{MLTT})) = 1 \neq 0 = \tau(\mathbf{I}(\mathrm{ETT}))$ через typing-invariant $\tau$ (effective normalization в effective topos $\mathrm{Eff}$ по Hyland 1982).
 
 **Вычислительная рамка** (препринт уточнение): инвариант $\tau$ определён на $\Sint^{\mathrm{eff}} \subseteq \Sint$ — подкатегории, где все 2-эквивалентности computable в $\mathrm{Eff}$. Без этого ограничения $\tau$ не был бы 2-инвариантом (не-вычислимая эквивалентность могла бы идентифицировать normalizing и non-normalizing классы).
 
 ### 99.T: Slice-locality
 
-Препринт Theorem `thm:slice-locality`: существует 2-функтор $\widetilde{\pi} : \mathcal{S}_\mathrm{int} \to \mathfrak{M}_\mathrm{Fnd}$ с 2-коммутирующей диаграммой:
+MSFS Theorem `thm:slice-locality`: существует 2-функтор $\widetilde{\pi} : \mathcal{S}_\mathrm{int} \to \mathfrak{M}_\mathrm{Fnd}$ с 2-коммутирующей диаграммой:
 
 $$
 \begin{array}{ccc}
@@ -55,11 +55,11 @@ $$
 \end{array}
 $$
 
-**Следствие** (препринт Corollary `cor:slice-level`): intensional refinement не добавляет новую структурную ось в AFN-T. База $\fM$ не затронута; TH-absoluteness не меняется.
+**Следствие** (MSFS Corollary `cor:slice-level`): intensional refinement не добавляет новую структурную ось в AFN-T. База $\fM$ не затронута; TH-absoluteness не меняется.
 
 ## Закрытие обходного пути
 
-Путь 3 (intensional refinement) был последним open gap вокруг AFN-T. После препринта §8 (формальное построение $\mathbf{I}$ + доказательство slice-locality через 2-Grothendieck fibration):
+Путь 3 (intensional refinement) был последним open gap вокруг AFN-T. После MSFS §8 (формальное построение $\mathbf{I}$ + доказательство slice-locality через 2-Grothendieck fibration):
 
 | Путь | Статус до | Статус |
 |---|---|---|
@@ -77,13 +77,13 @@ $$
 
 ## Diakrisis-specific контекст
 
-Intensional refinement в Diakrisis — это **внутреннее уточнение артикуляций** через display-map 2-категории: артикуляции $F_1 \sim_\mathrm{gauge} F_2$ с различной proof-term-структурой (MLTT vs ETT, HoTT vs cubical HoTT, Coq vs Agda vs Lean) различимы по $\mathbf{I}$, но neutralize $\pi$-проекцию на $\mathfrak{M}_\mathrm{Fnd}$ (препринт Corollary `cor:slice-level`).
+Intensional refinement в Diakrisis — это **внутреннее уточнение артикуляций** через display-map 2-категории: артикуляции $F_1 \sim_\mathrm{gauge} F_2$ с различной proof-term-структурой (MLTT vs ETT, HoTT vs cubical HoTT, Coq vs Agda vs Lean) различимы по $\mathbf{I}$, но neutralize $\pi$-проекцию на $\mathfrak{M}_\mathrm{Fnd}$ (MSFS Corollary `cor:slice-level`).
 
-Связь с [T-2f\*](/02-canonical-primitive/02-axiomatics) (locally stratified completion): display-map filtration — частный случай T-2f\*-подобной depth-стратификации, необходимой для (Max-3) препринта (препринт Remark `rem:max3-paradox-immunity`).
+Связь с [T-2f\*](/02-canonical-primitive/02-axiomatics) (locally stratified completion): display-map filtration — частный случай T-2f\*-подобной depth-стратификации, необходимой для (Max-3) MSFS. **Универсальное обоснование (Max-3) для Diakrisis** — теорема 105.T ([`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): T-2f\* блокирует *все* Yanofsky-сводимые парадоксы, не только 5 именных семейств. В связке 98.T + 99.T (Max-4) + 105.T (Max-3) Diakrisis закрывает оба intensional+depth уровня формальной защиты.
 
 ## Диаграммы и Конкретные примеры
 
-Препринт §8.3 содержит:
+MSFS §8.3 содержит:
 
 1. **MLTT vs ETT** — типичный extensional collapse; $\tau$-invariant: decidable vs undecidable typechecking.
 2. **HoTT vs cubical HoTT** — propositional vs computational univalence; одинаковый $\infty$-topos class, разные computational content.
@@ -91,7 +91,7 @@ Intensional refinement в Diakrisis — это **внутреннее уточн
 
 ## Ссылки
 
-- **Препринт §8.3** — full construction + proofs;
-- **Препринт `def:Sint`** — формальное определение $\Sint$ (display 2-classes, (D1)-(D4));
-- **Препринт `lem:pronk`** — Pronk bicategory-of-fractions, основание для (I-4);
+- **MSFS §8.3** — full construction + proofs;
+- **MSFS `def:Sint`** — формальное определение $\Sint$ (display 2-classes, (D1)-(D4));
+- **MSFS `lem:pronk`** — Pronk bicategory-of-fractions, основание для (I-4);
 - [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — таблица соответствия.

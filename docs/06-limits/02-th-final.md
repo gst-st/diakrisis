@@ -7,14 +7,14 @@ title: AFN-T — граничная лемма
 
 ## Статус и каноническая форма
 
-**Граничная лемма** структурной архитектуры Diakrisis. Формализует внешнюю границу пространства 𝓜_Fnd: Level 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — структурно пустой stratum. Основной математический вклад Diakrisis — не сама граница, а классификация **внутреннего устройства** 𝓜_Fnd (плюрализм Level 5+, условная мета-категоричность, slice-локальное интенсиональное уточнение, theory-level meta-stabilization).
+**Граничная лемма** структурной архитектуры Diakrisis. Формализует внешнюю границу пространства 𝓜_Fnd: Level 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — структурно пустой stratum. Основной математический вклад Diakrisis — не сама граница, а классификация **внутреннего устройства** 𝓜_Fnd (плюрализм Level 5+, условная мета-категоричность, slice-локальное интенсиональное уточнение, theory-level meta-stabilization, **maximality proofs 103.T–106.T устанавливающие Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорему**).
 
 **Каноническое изложение** находится в препринте (*The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026):
 
-- **AFN-T (combined)** = препринт Theorem `thm:afnt` (§5--§6).
-- **AFN-T (α-часть)**: Boundary Lemma: The Emptiness of Level 6 = препринт Theorem `thm:afnt-alpha` (§5). Синтаксис-семантический мост: $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$, $\id_X$ нарушает $(\Pi_4)$.
-- **AFN-T (β-часть)**: Boundary Lemma: No Limit-Based Escape = препринт Theorem `thm:afnt-beta` (§6). Трансфинитные приближения остаются в $\cS_S^{\mathrm{global}}$; proper-class-башни через Proposition `prop:proper-class`.
-- **пятиосевая абсолютность AFN-T** = препринт Theorem `thm:five-axis` (§7).
+- **AFN-T (combined)** = MSFS Theorem `thm:afnt` (§5--§6).
+- **AFN-T (α-часть)**: Boundary Lemma: The Emptiness of Level 6 = MSFS Theorem `thm:afnt-alpha` (§5). Синтаксис-семантический мост: $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$, $\id_X$ нарушает $(\Pi_4)$.
+- **AFN-T (β-часть)**: Boundary Lemma: No Limit-Based Escape = MSFS Theorem `thm:afnt-beta` (§6). Трансфинитные приближения остаются в $\cS_S^{\mathrm{global}}$; proper-class-башни через Proposition `prop:proper-class`.
+- **пятиосевая абсолютность AFN-T** = MSFS Theorem `thm:five-axis` (§7).
 
 Настоящий документ сохраняет Diakrisis-контекст (мотивация, канонический примитив, связь с внутренней аксиоматикой); формальные утверждения и доказательства — в препринте. Таблица соответствия номеров: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
@@ -30,7 +30,7 @@ title: AFN-T — граничная лемма
 
 ### Reasonable Rich-Metatheory (R-S)
 
-Формальное определение — препринт Definition `def:rs` (условия (R1)--(R5)). В Diakrisis-нотации соответствие полное:
+Формальное определение — MSFS Definition `def:rs` (условия (R1)--(R5)). В Diakrisis-нотации соответствие полное:
 
 - (R1) арифметическая полнота через Robinson $\mathsf{Q}$;
 - (R2) r.e. аксиоматизация;
@@ -38,11 +38,11 @@ title: AFN-T — граничная лемма
 - (R4) Gödel-кодирование;
 - (R5) категорная семантика в $(\infty, n_S)$ для некоторого $n_S \in \mathbb{N} \cup \{\infty\}$.
 
-**Класс $\mathcal{S}_S$ — $S$-определимых объектов** формально определён в препринте `def:SS`; соответствует понятию «S-определимых структур» в Diakrisis-корпусе без изменений.
+**Класс $\mathcal{S}_S$ — $S$-определимых объектов** формально определён в в MSFS `def:SS`; соответствует понятию «S-определимых структур» в Diakrisis-корпусе без изменений.
 
 ### Три условия уровня 6 — (F), (Π_4), (Π_3-max)
 
-Формальные определения: препринт `def:F`, `def:pi4`, `def:pi3max`. Условие (F_S) уточнено в препринте через пару (subtheory inclusion $\iota_F$, model restriction $\iota_F^*$) — уточнение, устраняющее амбивалентность прежней формулировки "$F \subseteq S$".
+Формальные определения: MSFS `def:F`, `def:pi4`, `def:pi3max`. Условие (F_S) уточнено в препринте через пару (subtheory inclusion $\iota_F$, model restriction $\iota_F^*$) — уточнение, устраняющее амбивалентность прежней формулировки "$F \subseteq S$".
 
 **Diakrisis-инварианты** (сохраняются):
 
@@ -52,11 +52,11 @@ title: AFN-T — граничная лемма
 
 ### AFN-T
 
-**Утверждение** (препринт `thm:afnt`): для любой $S \in \mathrm{R\text{-}S}$ и любого $n \in \mathbb{N} \cup \{\infty\}$ не существует объекта $X$, удовлетворяющего $(F_S) \wedge (\Pi_{4,S,n}) \wedge (\Pi_{3\text{-max},S,n})$.
+**Утверждение** (MSFS `thm:afnt`): для любой $S \in \mathrm{R\text{-}S}$ и любого $n \in \mathbb{N} \cup \{\infty\}$ не существует объекта $X$, удовлетворяющего $(F_S) \wedge (\Pi_{4,S,n}) \wedge (\Pi_{3\text{-max},S,n})$.
 
 **Следствие**: уровень 6 иерархии ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)) формально пуст: $\mathcal{L}_6 = \emptyset$ (в препринте — $\mathcal{L}_{\mathrm{Abs}} = \emptyset$, post-audit14 мнемоники).
 
-**Доказательство**: препринт §5 (α-часть, 3 леммы) + §6 (β-часть, accessibility argument) + новая Proposition `prop:proper-class` (proper-class-башни нарушают (R2)).
+**Доказательство**: MSFS §5 (α-часть, 3 леммы) + §6 (β-часть, accessibility argument) + новая Proposition `prop:proper-class` (proper-class-башни нарушают (R2)).
 
 ## Связь с каноническим примитивом
 
@@ -70,11 +70,11 @@ AFN-T формулируется через объекты, но её содер
 
 ## Пять осей абсолютности — пятиосевая абсолютность AFN-T
 
-См. [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) и препринт §7 (Theorem `thm:five-axis` + Remark `rem:axes-dependence`).
+См. [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) и MSFS §7 (Theorem `thm:five-axis` + Remark `rem:axes-dependence`).
 
 **Короткая форма**:
 
-| Ось | Diakrisis № | Препринт label |
+| Ось | Diakrisis № | MSFS label |
 |---|---|---|
 | Горизонтальная ($S \in \mathrm{R\text{-}S}$) | 55.T | `thm:horizontal` |
 | Вертикальная ($n \in \mathbb{N} \cup \{\infty\}$) | 59.T.1 | `thm:vertical` |
@@ -86,25 +86,25 @@ AFN-T формулируется через объекты, но её содер
 
 ## Три bypass-paths — формальное закрытие
 
-См. [`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement) (путь 3) и препринт §8.
+См. [`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement) (путь 3) и MSFS §8.
 
 **Taблица**:
 
-| Путь | Diakrisis № | Препринт label |
+| Путь | Diakrisis № | MSFS label |
 |---|---|---|
 | Universe polymorphism | 57.T + 56.C1 + 61.T + 94.T | `thm:universe` |
 | Reflective tower | 19.T1 + 31.T3 + 68.T + 69.T + 90.T | `thm:reflective` |
 | Intensional refinement | 98.T (construction) + 99.T (slice-locality) | `thm:I-existence` + `thm:slice-locality` |
 
-Все три **формально закрыты**; сводная теорема — препринт Theorem `thm:bypass-summary`.
+Все три **формально закрыты**; сводная теорема — MSFS Theorem `thm:bypass-summary`.
 
-## Структурная характеризация AFN-T (препринт §10)
+## Структурная характеризация AFN-T (MSFS §10)
 
-- **Relation to no-go series** (Cantor, Russell, Gödel, Tarski, Lawvere, Ernst 2015) — препринт `thm:subsumption`.
-- **Relation to Hamkins multiverse** — complementary; multiverse как Level-6 candidate foreclosed by AFN-T (препринт `sec:ernst-multiverse`).
+- **Relation to no-go series** (Cantor, Russell, Gödel, Tarski, Lawvere, Ernst 2015) — MSFS `thm:subsumption`.
+- **Relation to Hamkins multiverse** — complementary; multiverse как Level-6 candidate foreclosed by AFN-T (MSFS `sec:ernst-multiverse`).
 - **Relation to Barwick–Schommer-Pries 2021 unicity** — compatible; intra-paradigm unicity используется как технический аргумент `thm:bergner-lurie-stab`.
 
-Diakrisis не воспроизводит это positioning — см. препринт §10.5.
+Diakrisis не воспроизводит это positioning — см. MSFS §10.5.
 
 ## Diakrisis-specific интерпретация
 
@@ -127,4 +127,5 @@ AFN-T внутри Diakrisis — **структурное утверждение
 - [`06-absoluteness`](/06-limits/06-absoluteness) — Пять осей детальнее;
 - [`08-intensional-refinement`](/06-limits/08-intensional-refinement) — Путь 3 (intensional) формально;
 - [`09-meta-classification`](/06-limits/09-meta-classification) — Level 5+ meta-классификация;
+- [`10-maximality-theorems`](/06-limits/10-maximality-theorems) — полное обоснование Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ (103.T–106.T);
 - [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — полная таблица соответствия.

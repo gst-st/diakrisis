@@ -25,7 +25,7 @@ $$\text{Noesis.Core} := (\text{⟪⟫}_{\text{comp}},\; \mathsf{M}_{\text{comp}}
 
 **Теорема NO-1 (существование)** [Т·L1]: Noesis.Core **существует и единственна** до Verum-эквивалентности при условии R-S ⊇ ZFC + 2 недостижимых кардинала (по Diakrisis 88.T + 90.T).
 
-**Теорема NO-2 (консервативность над Diakrisis)** [Т·L1]: Все 102 теоремы Diakrisis (в номерной системе 10.T1..102.T, включая 98.T–99.T intensional refinement и 100.T–102.T meta-classification) **переносятся** на Noesis.Core через канонический функтор включения Noesis ↪ Diakrisis.
+**Теорема NO-2 (консервативность над Diakrisis)** [Т·L1]: Все 106 теорем Diakrisis (в номерной системе 10.T1..106.T, включая 98.T–99.T intensional refinement, 100.T–102.T meta-classification, 103.T–106.T maximality proofs) **переносятся** на Noesis.Core через канонический функтор включения Noesis ↪ Diakrisis.
 
 ## 2. Что даёт основание Diakrisis
 
