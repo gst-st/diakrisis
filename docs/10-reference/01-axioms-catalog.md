@@ -232,6 +232,109 @@ $$\mathrm{Ob}(\llbracket\cdot\rrbracket) \neq \emptyset.$$
 | T-α | Легко |
 | T-2f\* | Сложно |
 
+## Дуальная аксиоматика Актика (A-0..A-9 + T-ε + T-2a\* + T-ε_c)
+
+Полный параллельный список для ДЦ-примитива Актика. Каждая аксиома — структурный дуал соответствующей ОЦ-аксиомы. Канонический источник формулировок — [`/12-actic/02-dual-primitive`](/12-actic/02-dual-primitive) §2; настоящий каталог — нормативная транскрипция.
+
+### A-0 — непустотность актов
+
+$\mathrm{Ob}(\rangle\!\rangle \cdot \langle\!\langle) \neq \emptyset \wedge \varepsilon_\mathrm{math} \in \mathrm{Ob}(\rangle\!\rangle \cdot \langle\!\langle)$.
+
+**Дуал**: Axi-0. **Статус**: [П].
+
+### A-1 — 2-категорная структура ⟫·⟪
+
+$\rangle\!\rangle \cdot \langle\!\langle$ — локально-малая 2-категория с 2-полностью-верным $\iota^\mathrm{act}: \mathrm{End}(\rangle\!\rangle \cdot \langle\!\langle) \hookrightarrow \rangle\!\rangle \cdot \langle\!\langle$.
+
+**Дуал**: Axi-1. **Статус**: [П].
+
+### A-2 — $\mathsf{A}$ как accessible 2-функтор
+
+$\mathsf{A}: \rangle\!\rangle \cdot \langle\!\langle \to \rangle\!\rangle \cdot \langle\!\langle$ — accessible endo-2-функтор (активация).
+
+**Дуал**: Axi-2. **Статус**: [П]. **Следствия**: существование трансфинитных итераций $\mathsf{A}^\kappa$.
+
+### A-3 — выделенный $\varepsilon_\mathrm{math}$
+
+$\varepsilon_\mathrm{math} \in \mathrm{Ob}(\rangle\!\rangle \cdot \langle\!\langle)$ — начальный в подкатегории «подготавливаемых» актов.
+
+**Дуал**: Axi-3. **Статус**: [П].
+
+### A-4 — $\rho^\mathrm{act}$ через внутренний act-хом
+
+$\rho^\mathrm{act}(\varepsilon) = [\varepsilon_\mathrm{math}, \varepsilon]^\mathrm{act}$.
+
+**Дуал**: Axi-4. **Статус**: [П].
+
+### A-5 — $\rho^\mathrm{act}$-нетривиальность
+
+$\rho^\mathrm{act}(\varepsilon_1) \simeq \rho^\mathrm{act}(\varepsilon_2) \Rightarrow \varepsilon_1 \simeq \varepsilon_2$.
+
+**Дуал**: Axi-5. **Статус**: [П].
+
+### A-6 — $\rho^\mathrm{act}$ и $\mathsf{A}$ не перестановочны
+
+$\rho^\mathrm{act} \circ \mathsf{A} \not\cong \rho^\mathrm{act}$ в общем случае.
+
+**Дуал**: Axi-6. **Статус**: [П].
+
+### A-7 — самоактивируемость ($\mathsf{A}$-5w)
+
+$\varepsilon_\mathsf{A} := \iota^\mathrm{act}(\mathsf{A}) \in \rangle\!\rangle \cdot \langle\!\langle$ — акт «активировать $\mathsf{A}$» сам является объектом $\rangle\!\rangle \cdot \langle\!\langle$; $\rho^\mathrm{act}$ корректно определено на нём, и существует естественное преобразование
+$$
+\rho^\mathrm{act}(\varepsilon_\mathsf{A} \circ \varepsilon) \Rightarrow \mathsf{A}(\rho^\mathrm{act}(\varepsilon)).
+$$
+
+**Дуал**: Axi-7. **Статус**: [П].
+
+### A-8 ($\mathsf{A}$-5w\*) — критерий нетривиальности $\mathsf{A}$
+
+Строже чем A-7: преобразование A-7 — не всегда изо. Это гарантирует, что $\mathsf{A}$ действительно «активна» (не Yoneda-представима).
+
+**Дуал**: Axi-8. **Статус**: [П].
+
+### A-9 — достаточность актов для формализации
+
+$\rangle\!\rangle \cdot \langle\!\langle$ содержит достаточно актов для покрытия всех Rich-метатеорий $S \in \RS$: для каждой $S$ существует $\varepsilon_S$ — акт-перформанс $S$.
+
+**Дуал**: Axi-9. **Статус**: [П].
+
+### T-ε — не-привилегированность $\varepsilon_\mathrm{math}$
+
+Дуал T-α. Для любого акта $\varepsilon \in \rangle\!\rangle \cdot \langle\!\langle$ с $\nu(\varepsilon) = \nu(\varepsilon_\mathrm{math})$ существует автоморфизм $\sigma \in \mathrm{Aut}_2(\rangle\!\rangle \cdot \langle\!\langle)$ с $\sigma(\varepsilon_\mathrm{math}) = \varepsilon$. Математика-как-практика не привилегирована per se; она — представитель класса актов той же ε-глубины.
+
+**Дуал**: T-α. **Статус**: [П].
+
+### T-2a\* — активационно-стратифицированная комплетация
+
+Ключевая аксиома защиты от парадоксов. Выделение $\varepsilon_P$ по предикату $P$ допустимо ⟺ все вхождения $\mathsf{A}, \sqsupset_\bullet$ в $P$ имеют строго меньшую активационную глубину, чем $\varepsilon_P$.
+
+**Дуал**: T-2f\*. **Статус**: [П]. **Следствия**: блокирует пять семейств actic-парадоксов (Russell-act, Curry-act, Grelling-act, Burali-Forti-act, Girard-act); универсальное обобщение через Yanofsky-reducibility (113.T).
+
+### T-ε_c — конструктивный gauge-инвариант актов
+
+Дуал T-α_c. В конструктивных R-S gauge-орбита $\varepsilon$ сохраняет constructive content: если $\varepsilon_1 \sim_\mathrm{gauge} \varepsilon_2$ и $\varepsilon_1$ конструктивен, то $\varepsilon_2$ конструктивен.
+
+**Дуал**: T-α_c. **Статус**: [П].
+
+### Verum-готовность Актика-аксиом
+
+| Аксиома | Verum-статус |
+|---|---|
+| A-0 | Легко |
+| A-1 | Сложно (2-cat) |
+| A-2 | Средне (accessibility) |
+| A-3 | Легко |
+| A-4 | Средне (act-hom) |
+| A-5 | Легко |
+| A-6 | Средне |
+| A-7 | Сложно |
+| A-8 | Очень сложно |
+| A-9 | Сложно |
+| T-ε | Легко |
+| T-2a\* | Сложно |
+| T-ε_c | Средне |
+
 ## Следующий документ
 
 [/10-reference/02-theorems-catalog](/10-reference/02-theorems-catalog).

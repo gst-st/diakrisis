@@ -105,7 +105,7 @@ CIC (Calculus of Inductive Constructions) — мощное зависимое т
 
 ## Strong normalization = 𝖬-монотонность
 
-**06.C3**: CIC strong normalization = монотонность 𝖬-H (H — артикуляционная энтропия, из 27 framework).
+**06.C3**: CIC strong normalization = монотонность 𝖬-H (H — артикуляционная энтропия, из 27 каркас).
 
 ### Strong normalization
 

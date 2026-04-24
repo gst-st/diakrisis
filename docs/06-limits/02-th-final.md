@@ -7,7 +7,7 @@ title: AFN-T — граничная лемма
 
 ## Статус и каноническая форма
 
-**Граничная лемма** структурной архитектуры Diakrisis. Формализует внешнюю границу пространства 𝓜_Fnd: Level 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — структурно пустой stratum. Основной математический вклад Diakrisis — не сама граница, а классификация **внутреннего устройства** 𝓜_Fnd (плюрализм Level 5+, условная мета-категоричность, slice-локальное интенсиональное уточнение, theory-level meta-stabilization, **maximality proofs 103.T–106.T устанавливающие Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорему**).
+**Граничная лемма** структурной архитектуры Diakrisis. Формализует внешнюю границу пространства 𝓜_Fnd: Level 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — структурно пустой stratum. Основной математический вклад Diakrisis — не сама граница, а классификация **внутреннего устройства** 𝓜_Fnd (плюрализм Level 5+, условная мета-категоричность, slice-локальное интенсиональное уточнение, theory-level meta-стабилизация, **maximality proofs 103.T–106.T устанавливающие Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорему**).
 
 **Каноническое изложение** находится в препринте (*The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026):
 
@@ -54,7 +54,7 @@ title: AFN-T — граничная лемма
 
 **Утверждение** (MSFS `thm:afnt`): для любой $S \in \mathrm{R\text{-}S}$ и любого $n \in \mathbb{N} \cup \{\infty\}$ не существует объекта $X$, удовлетворяющего $(F_S) \wedge (\Pi_{4,S,n}) \wedge (\Pi_{3\text{-max},S,n})$.
 
-**Следствие**: уровень 6 иерархии ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)) формально пуст: $\mathcal{L}_6 = \emptyset$ (в препринте — $\mathcal{L}_{\mathrm{Abs}} = \emptyset$, post-audit14 мнемоники).
+**Следствие**: уровень 6 иерархии ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)) формально пуст: $\mathcal{L}_6 = \emptyset$ (в препринте — $\mathcal{L}_{\mathrm{Abs}} = \emptyset$, мнемоническая нотация).
 
 **Доказательство**: MSFS §5 (α-часть, 3 леммы) + §6 (β-часть, accessibility argument) + новая Proposition `prop:proper-class` (proper-class-башни нарушают (R2)).
 
@@ -82,9 +82,9 @@ AFN-T формулируется через объекты, но её содер
 | Латеральная (альт.\ orderings) | 84.T | `thm:lateral` |
 | Полноты (Lawvere-scope) | 87.T | `thm:completeness` |
 
-**Ключевое уточнение препринта** (`rem:axes-dependence`): пять осей логически зависимы — horizontal subsumes completeness; lateral ≡ vertical; meta-vertical = μ-closure of vertical. Минимальный логически независимый набор — **2 оси** (горизонтальная + вертикальная). Пятиосевая формулировка сохранена pedagogically для обзора bypass-аргументов.
+**Ключевое уточнение препринта** (`rem:axes-dependence`): пять осей логически зависимы — horizontal subsumes completeness; lateral ≡ vertical; meta-vertical = μ-closure of vertical. Минимальный логически независимый набор — **2 оси** (горизонтальная + вертикальная). Пятиосевая формулировка сохранена pedagogically для обзора обход-аргументов.
 
-## Три bypass-paths — формальное закрытие
+## Три обход-paths — формальное закрытие
 
 См. [`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement) (путь 3) и MSFS §8.
 
@@ -96,7 +96,7 @@ AFN-T формулируется через объекты, но её содер
 | Reflective tower | 19.T1 + 31.T3 + 68.T + 69.T + 90.T | `thm:reflective` |
 | Intensional refinement | 98.T (construction) + 99.T (slice-locality) | `thm:I-existence` + `thm:slice-locality` |
 
-Все три **формально закрыты**; сводная теорема — MSFS Theorem `thm:bypass-summary`.
+Все три **формально закрыты**; сводная теорема — MSFS Theorem `thm:обход-summary`.
 
 ## Структурная характеризация AFN-T (MSFS §10)
 
@@ -106,6 +106,18 @@ AFN-T формулируется через объекты, но её содер
 
 Diakrisis не воспроизводит это positioning — см. MSFS §10.5.
 
+## Дуал: 109.T (Dual-AFN-T) через 108.T
+
+AFN-T имеет симметричный ДЦ-дуал 109.T, устанавливаемый через 108.T (AC/OC Морита-дуальность, MSFS §11):
+
+$$
+\LAbs = \emptyset \quad \xleftrightarrow{\text{108.T}} \quad \LAbsE = \emptyset.
+$$
+
+109.T (Dual Boundary Lemma, MSFS Theorem~\ref{thm:dual-afnt}) формулирует ту же no-go на стороне энактментов: не существует $(F, \cC, \iota, r) \in \cE$, одновременно enactment-definable, non-coordinate, maximally receptive. Дуальная пятиосевая абсолютность (MSFS Theorem~\ref{thm:dual-five-axis}) покрывает ось performance-uniqueness через Lawvere-scope LS($\cE$) = closed symmetric monoidal (включает линейную логику, ludics, квантовые enactments; универсальная диагональ Yanofsky).
+
+**Значение**: no-go симметрично по артикуляциям и актам-практикам. Пятый уровень защиты корпуса — AC/OC-дуальность ([`/10-reference/03-gap-status`](/10-reference/03-gap-status) §5 уровней защиты). Подробнее — [`/12-actic/05-dual-afn-t`](/12-actic/05-dual-afn-t).
+
 ## Diakrisis-specific интерпретация
 
 AFN-T внутри Diakrisis — **структурное утверждение о границах формализации Различения** (phenomenon of distinction). Различение как акт (см. [`/01-diakrisis-phenomenon/00-act-not-object`](/01-diakrisis-phenomenon/00-act-not-object)) не сводится к объекту; AFN-T — математическое отражение этой философской аксиомы.
@@ -113,7 +125,7 @@ AFN-T внутри Diakrisis — **структурное утверждение
 Связь с П-0 принципами ([`/00-foundations/02-zero-principles`](/00-foundations/02-zero-principles)):
 
 - **П-0.0** (Act vs. object): Level-6 объект был бы объектификацией акта различения — запрещено;
-- **П-0.4** (Internal/external): полнота Level-5+ (classify) без эскалации в Level-6 (generate) — формальное выражение того, что classifier $\neq$ generator.
+- **П-0.4** (Internal/external): полнота Level-5+ (classify) без эскалации в Level-6 (generate) — формальное выражение того, что классификатор $\neq$ generator.
 
 ## Формализация и следующие шаги
 
@@ -125,7 +137,8 @@ AFN-T внутри Diakrisis — **структурное утверждение
 
 - [`03-no-go-series`](/06-limits/03-no-go-series) — AFN-T в классической серии no-go-теорем;
 - [`06-absoluteness`](/06-limits/06-absoluteness) — Пять осей детальнее;
-- [`08-intensional-refinement`](/06-limits/08-intensional-refinement) — Путь 3 (intensional) формально;
+- [`08-intensional-refinement`](/06-limits/08-intensional-refinement) — Путь 3 (интенсиональный) формально;
 - [`09-meta-classification`](/06-limits/09-meta-classification) — Level 5+ meta-классификация;
 - [`10-maximality-theorems`](/06-limits/10-maximality-theorems) — полное обоснование Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ (103.T–106.T);
+- [`/12-actic/05-dual-afn-t`](/12-actic/05-dual-afn-t) — 109.T Dual-AFN-T через 108.T;
 - [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — полная таблица соответствия.

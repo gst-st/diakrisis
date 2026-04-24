@@ -387,6 +387,126 @@ title: Глоссарий
 **Определение**: α_1 ∼_M α_2 ⟺ ρ(α_1) ≃ ρ(α_2).
 **Связь**: с gauge-классом в большинстве случаев.
 
+## Актика (ДЦ-дуал)
+
+### Актика
+
+**Тип**: формальный ДЦ-дуал Diakrisis.
+**Определение**: 2-категория pointed reflective enactments, дуальная $\cF$ через adjoint pair $\varepsilon \dashv \alpha$.
+**MSFS-соответствие**: $\cE$ в Definition~\ref{def:enactments}.
+**См.**: [/12-actic/00-foundations](/12-actic/00-foundations).
+
+### Энактмент
+
+**Тип**: объект $\cE$ = $\rangle\!\rangle \cdot \langle\!\langle$.
+**Определение (MSFS)**: квадрупл $(F, \cC, \iota, r)$ — теория + модель-категория + F-preserving pointing ι + **выбранный reflector r** (левый adjoint к ι) с тождествами треугольника.
+**MSFS-соответствие**: Definition~\ref{def:enactments}.
+
+### ⟫·⟪
+
+**Тип**: нотация Diakrisis.
+**Определение**: 2-категория актов/энактментов, дуальная ⟪⟫ через 108.T.
+**MSFS-соответствие**: $\cE$.
+
+### ε (AC-функтор)
+
+**Тип**: 2-функтор $\langle\!\langle \cdot \rangle\!\rangle \to \rangle\!\rangle \cdot \langle\!\langle$.
+**Определение**: syntactic self-enactment, $F \mapsto (F, \Syn(F), \id, \id)$.
+**Свойства**: fully faithful, правый adjoint к α.
+**MSFS-соответствие**: $\varepsilon$ в Definition~\ref{def:enactments}.
+
+### α (OC-функтор)
+
+**Тип**: 2-функтор $\rangle\!\rangle \cdot \langle\!\langle \to \langle\!\langle \cdot \rangle\!\rangle$.
+**Определение**: forgetful, $(F, \cC, \iota, r) \mapsto F$.
+**Свойства**: essentially surjective (после gauge), левый adjoint к ε.
+**MSFS-соответствие**: $\alpha$ в Definition~\ref{def:enactments}.
+
+### Reflector r
+
+**Тип**: часть данных энактмента.
+**Определение**: левый adjoint $r : \cC \to \Syn(F)$ к $\iota$, с тождествами треугольника. Единственен up to unique invertible 2-cell (Riehl–Verity 2022, Adámek–Rosický 1994).
+**Значение**: обеспечивает canonicity essentially-surjective proof'а 108.T.
+
+### ε-инвариант
+
+**Тип**: ординальный инвариант акта.
+**Определение**: активационная глубина акта — 7 уровней от 0 (событие) до Ω (апейрон-акт).
+**Дуал**: ν-инварианта артикуляции.
+**См.**: [/12-actic/03-epsilon-invariant](/12-actic/03-epsilon-invariant).
+
+### SSE ($\cS_S^\cE$)
+
+**Тип**: $\cE$-аналог класса $\cS_S$.
+**Определение (MSFS)**: componentwise closure базы $\SSE^{\mathrm{base}} = \{(F', \cM, \iota_\cM, r_\cM) : \cM \models S\}$ под операциями Definition~\ref{def:SS}.
+**MSFS-соответствие**: Definition~\ref{def:SSE}.
+
+### Dual Boundary Lemma / 109.T
+
+**Тип**: дуал AFN-T.
+**Определение**: $\LAbs^{\cE} = \emptyset$ — не существует enactment-absolute.
+**MSFS-соответствие**: Theorem~\ref{thm:dual-afnt}.
+**См.**: [/12-actic/05-dual-afn-t](/12-actic/05-dual-afn-t).
+
+### Lawvere-scope на $\cE$
+
+**Тип**: структурное условие для ε-completeness-axis.
+**Определение**: $\{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC \text{ closed symmetric monoidal}\}$ — включает Cartesian-closed, SMC, $*$-autonomous (универсальная диагональ Yanofsky).
+**Покрытие**: linear logic (Girard), ludics, квантовые enactments, resource-sensitive type theories.
+
+### $\mathsf{A}$ (активация)
+
+**Тип**: accessible endo-2-функтор на $\rangle\!\rangle \cdot \langle\!\langle$.
+**Определение**: дуал $\mathsf{M}$ — поднимает акт в практику более высокого порядка.
+**Адъюнкция**: $\mathsf{M} \dashv \mathsf{A}$ (124.T).
+
+### Метастемология (Е. Чурилов)
+
+**Тип**: предшественник Актика в русской традиции.
+**ε-координата**: $\omega \cdot 2 + 1$ (125.T).
+**Отличие**: Чурилов позиционирует ДЦ как замещающий ОЦ (замещающий); Актика устанавливает формальную дуальность через 108.T.
+
+## Дополнительные $\mathcal{L}_\mathrm{Fnd}$-точки (MSFS-синхронизация)
+
+### Markov-конструктивизм (Марков+Нагорный)
+
+**Тип**: $\mathcal{L}_\mathrm{Fnd}$-точка; конструктивная математика с принципом Маркова.
+**Семантика**: эффективный топос Хайланда; HA + MP; категорная реализация в $\mathrm{Eff}$.
+**Положение**: плюралистичный класс конструктивных оснований вместе с MLTT, BHK, реализуемостью.
+**MSFS-референс**: Table 2 (стр. 10), §3.2 Examples of R-S; MarkovNagornyj 1988.
+
+### Bishop-конструктивизм
+
+**Тип**: $\mathcal{L}_\mathrm{Fnd}$-точка; choice-free конструктивный действительный анализ.
+**Семантика**: любой топос с натурально-числовым объектом.
+**MSFS-референс**: Bishop 1967, Bridges–Vita 2006.
+
+### Feferman-предикативизм
+
+**Тип**: $\mathcal{L}_\mathrm{Fnd}$-точка; предикативная арифметическая сила $\mathsf{ATR}_0$.
+**Свойство**: предикативная комплекция.
+**MSFS-референс**: Feferman 1964.
+
+### Ультрафинитизм (Есенин-Вольпин)
+
+**Тип**: граничный случай между $\mathcal{L}_\mathrm{Fnd}$ и Non-examples.
+**Строгое прочтение**: нарушает (R1) — полная индукция Пеано недоступна.
+**Формализованные варианты**: ограниченная арифметика $\mathsf{I}\Delta_0$, Buss $\mathsf{S}_2^i/\mathsf{T}_2^i$, $\mathsf{V}_0$, полиномиально-ограниченная арифметика — слабые Rich-метатеории; подстратум $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ (N-10 в gap-status).
+**MSFS-референс**: Есенин-Вольпин 1961, 1970; Buss 1986; Simpson 2009 (обратная математика); §3.4 Boundary cases.
+
+### Noesis (практическое расширение Diakrisis)
+
+**Тип**: операционное расширение Diakrisis-корпуса; реализация мета-платформы знаний.
+**Содержание**: федеративная архитектура для индексации, навигации, сравнения и согласования мат-теорий на основе Diakrisis-формализма.
+**Положение**: не отдельный $\mathcal{L}_\mathrm{Cls}$-классификатор; наследует MSFS-координату Diakrisis через реализацию.
+**Documentation**: [`/noesis`](/noesis) (раздел 11-noesis).
+
+### Родин А. — философское обоснование категорной множественности
+
+**Тип**: философский lineage; не отдельная $\mathcal{L}_\mathrm{Fnd}$-точка.
+**Содержание**: прочтение категорных оснований как аксиоматической плюралистичности — consonant с формальной множественностью MSFS.
+**MSFS-референс**: Rodin 2014 (*Axiomatic Method and Category Theory*, Springer Synthese Library 364); Remark rem:soviet-tradition.
+
 ## Методологические термины
 
 ### П-0.0..П-0.7

@@ -117,7 +117,7 @@ type Dependency = {
     source: ClaimId,
     target: ClaimId,
     type: DependencyType,
-    witness: Option<Proof>,
+    свидетель: Option<Proof>,
 };
 ```
 
@@ -145,7 +145,7 @@ fn morita_check(α: Articulation, β: Articulation) -> MoritaResult {
     
     // Check equivalence
     if g_α == g_β {
-        return MoritaResult::Equivalent(witness);
+        return MoritaResult::Equivalent(свидетель);
     }
     
     // Search for Morita-bridge
@@ -287,7 +287,7 @@ CREATE TABLE dependencies (
     source TEXT,
     target TEXT,
     type TEXT,
-    witness TEXT,
+    свидетель TEXT,
     PRIMARY KEY (source, target, type)
 );
 

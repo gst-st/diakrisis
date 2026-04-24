@@ -54,12 +54,18 @@ title: Обзор извлечений
 | CIC | α_CIC | ω+2 | computation | inductive types |
 | HoTT | α_HoTT | ω+1 | univalence | path types |
 | MLTT | α_MLTT | ω+1 | substitution | Π/Σ/Id |
+| Markov-конструктивизм | α_Markov | ω | Aut(Eff) | HA + принцип Маркова |
+| Bishop-конструктивизм | α_Bishop | ω | Aut(NNO-топоса) | choice-free вещ.\ анализ |
+| Feferman-предикативизм | α_Feferman | ω | Aut(ATR₀) | предикативная комплекция |
 | ∞-Topos | α_∞topos | ω·2 | ∞-autoequiv | (∞,1)-structure |
 | NCG | α_ncg | ω·2 | Aut(C\*-alg) | spectral triple |
 | Cohesive ∞-Topos | α_cohesion | ω·2+4 | ∞-aut + modalities | Π ⊣ ♭ ⊣ ♯ ⊣ ι |
+| Ограниченная арифметика (I∆₀ и т.д.) | α_BA | < ω | Aut(ограниченных моделей) | **слабая Rich-метатеория** — подстратум $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ |
 | **УГМ** | **α_uhm** | **ω·4** | **S₇ × SM** | **D(ℂ⁷) + ℒ_Ω + φ** |
 
 УГМ — наш флагман, с максимальной ν_F = ω·4.
+
+**Граничные случаи** (§3.4 MSFS): строгий ультрафинитизм (Есенин-Вольпин) формально выводит из $\mathcal{L}_\mathrm{Fnd}$ через нарушение (R1); формализованные варианты (ограниченная арифметика, исчисления осуществимости) входят как слабые Rich-метатеории с ν_F < ω и формируют отдельный подстратум $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ (MSFS Open Question Q5; Diakrisis gap N-10).
 
 ### Что означает ν_F
 

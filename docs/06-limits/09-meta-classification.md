@@ -11,9 +11,9 @@ title: Meta-classification Level 5+
 
 **Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §9:
 
-- **100.T** = MSFS Theorem `thm:meta-cat` (conditional meta-categoricity).
+- **100.T** = MSFS Theorem `thm:meta-cat` (conditional мета-категоричность).
 - **101.T** = MSFS Theorem `thm:meta-mult` (structural multiplicity).
-- **102.T** = MSFS Theorem `thm:meta-stab` (meta-classification stabilization).
+- **102.T** = MSFS Theorem `thm:meta-stab` (meta-classification стабилизация).
 
 Настоящий документ содержит Diakrisis-специфическое следствие: **Diakrisis — канонический представитель** максимального подкласса $\mathfrak{Meta}_{5+}^{\max}$.
 
@@ -48,12 +48,12 @@ $\mathbf{F}$ ∈ $\mathfrak{Meta}_{5+}^{\max}$ ⇔ дополнительно у
 
 - **(Max-1) Full classification**: $\mathrm{image}(\mathrm{Cl}_\mathbf{F}) = \mathfrak{M}_\mathrm{Fnd}$.
 - **(Max-2) Gauge-fullness**: $\mathrm{Aut}_2(\mathbf{F})$ транзитивно действует на gauge-классах.
-- **(Max-3) Depth stratification**: $\mathbf{F}$ admits depth-indexed filtration (MSFS Remark `rem:max3-paradox-immunity` — единая аксиома блокирующая Russell/Curry/Grelling/Burali-Forti/Girard через circular depth).
+- **(Max-3) Depth stratification**: $\mathbf{F}$ admits depth-indexed filtration (MSFS Remark `rem:max3-парадокс-иммунность` — единая аксиома блокирующая Russell/Curry/Grelling/Burali-Forti/Girard через circular depth).
 - **(Max-4) Intensional completeness**: $\II_\mathbf{F} : \mathbf{F}^\mathrm{op} \to \Sint$ удовлетворяет (I-1)–(I-4) из Theorem `thm:I-existence`.
 
 **Diakrisis** $\in \mathfrak{Meta}_{5+}^{\max}$: выполняется по полной конструкции ⟪⟫ + T-2f\* + 98.T/99.T.
 
-## Теорема 100.T — conditional meta-categoricity
+## Теорема 100.T — conditional мета-категоричность
 
 MSFS Theorem `thm:meta-cat`: если $\mathbf{F}_1, \mathbf{F}_2 \in \mathfrak{Meta}_{5+}^{\max}$ параметризованы одной и той же R-S, то
 
@@ -75,7 +75,7 @@ MSFS Theorem `thm:meta-mult`: в $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}
 
 - $\mathbf{F}_\mathrm{univalent}$ — Univalent Foundations programme (Voevodsky; HoTT Book 2013).
 - $\mathbf{F}_\mathrm{cosmoi}$ — $\infty$-cosmoi (Riehl–Verity 2022).
-- $\mathbf{F}_\mathrm{cohesive}$ — cohesive $(\infty, 1)$-topos framework (Schreiber 2013).
+- $\mathbf{F}_\mathrm{cohesive}$ — cohesive $(\infty, 1)$-topos каркас (Schreiber 2013).
 
 **Ключевое свойство**: ни одна не удовлетворяет (Max-1) — их classification-images являются *строго собственными* подстэками $\mathfrak{M}_\mathrm{Fnd}$:
 
@@ -89,7 +89,7 @@ MSFS Theorem `thm:meta-mult`: в $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}
 - **101.C2**: Diakrisis — **максимальный** среди Level 5+ (единственная в $\mathfrak{Meta}_{5+}^{\max}$); остальные три — partial representatives.
 - **101.C3**: Plurality совместима с 100.T — единственность только в подклассе максимальных.
 
-## Теорема 102.T — meta-classification stabilization
+## Теорема 102.T — meta-classification стабилизация
 
 MSFS Theorem `thm:meta-stab`: определим
 
@@ -143,7 +143,7 @@ $$
 
 ## Продолжение: maximality proofs (103.T–106.T)
 
-Хотя 100.T–102.T закрывают вопросы Level 5+ самоклассификации, *формальное членство* Diakrisis в $\mathfrak{Meta}_{5+}^{\max}$ было [Программа] до 2026-04-24. Новые теоремы доводят статус до [Т]:
+100.T–102.T закрывают вопросы Level 5+ самоклассификации. Формальное членство Diakrisis в $\mathfrak{Meta}_{5+}^{\max}$ устанавливается как теорема:
 
 - **103.T** (Max-1): $\mathrm{Artic}: \mathcal{F} \to \langle\!\langle \cdot \rangle\!\rangle$ существенно-сюръективен.
 - **104.T** (Max-2): $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$.

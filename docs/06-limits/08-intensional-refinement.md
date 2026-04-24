@@ -14,13 +14,13 @@ title: Intensional refinement (путь 3)
 - **98.T** = MSFS Theorem `thm:I-existence` (construction of $\II : \cF^\mathrm{op} \to \Sint$).
 - **99.T** = MSFS Theorem `thm:slice-locality` (projection to existing points of $\fM$).
 
-После закрытия этого пути три стандартных bypass-пути вокруг AFN-T — ✅ formally closed (MSFS Theorem `thm:bypass-summary`).
+После закрытия этого пути три стандартных обход-пути вокруг AFN-T — ✅ formally closed (MSFS Theorem `thm:обход-summary`).
 
 ## Почему этот слой нужен
 
 Доказательство AFN-T α-части (MSFS Lemma `lem:interp-is-morita`) использует Morita-эквивалентность как критерий редукции: $\rho(\alpha) \simeq X^{\mathcal{M}_F}$ ⇒ $X$ сводится к известной структуре. Morita — **экстенсиональный** инвариант: он отождествляет артикуляции, имеющие изоморфные $\rho$-проекции, независимо от конкретных proof-term-конструкций или identity-type-семантики.
 
-Гипотетический обходной путь: если intensional-level структура $F_\mathrm{int}$ над $F$ производит различие, *не видимое* Morita-эквивалентности, и это различие позволяет артикулировать новое Level-6 основание на intensional-уровне — тогда AFN-T можно было бы «обойти».
+Гипотетический обходной путь: если интенсиональный-level структура $F_\mathrm{int}$ над $F$ производит различие, *не видимое* Morita-эквивалентности, и это различие позволяет артикулировать новое Level-6 основание на интенсиональный-уровне — тогда AFN-T можно было бы «обойти».
 
 ## Формальное содержание 98.T / 99.T
 
@@ -55,11 +55,11 @@ $$
 \end{array}
 $$
 
-**Следствие** (MSFS Corollary `cor:slice-level`): intensional refinement не добавляет новую структурную ось в AFN-T. База $\fM$ не затронута; TH-absoluteness не меняется.
+**Следствие** (MSFS Corollary `cor:slice-level`): интенсиональное уточнение не добавляет новую структурную ось в AFN-T. База $\fM$ не затронута; TH-absoluteness не меняется.
 
 ## Закрытие обходного пути
 
-Путь 3 (intensional refinement) был последним open gap вокруг AFN-T. После MSFS §8 (формальное построение $\mathbf{I}$ + доказательство slice-locality через 2-Grothendieck fibration):
+Путь 3 (интенсиональное уточнение) был последним open gap вокруг AFN-T. После MSFS §8 (формальное построение $\mathbf{I}$ + доказательство slice-locality через 2-Grothendieck fibration):
 
 | Путь | Статус до | Статус |
 |---|---|---|
@@ -72,14 +72,14 @@ $$
 - **98.C1–98.C3** — соответствуют препринт-следствиям `cor:slice-level` и замечаниям о нетривиальности, cohesion-совместимости, gauge-factoring.
 - **99.C1** — AFN-T абсолютность не требует пересмотра;
 - **99.C2** — N-04b gap (интенсиональность/экстенсиональность) формально закрыт;
-- **99.C3** — все три bypass-пути закрыты одновременно;
+- **99.C3** — все три обход-пути закрыты одновременно;
 - **99.C4** — пятиосевая абсолютность AFN-T сохраняет структурную полноту.
 
 ## Diakrisis-specific контекст
 
 Intensional refinement в Diakrisis — это **внутреннее уточнение артикуляций** через display-map 2-категории: артикуляции $F_1 \sim_\mathrm{gauge} F_2$ с различной proof-term-структурой (MLTT vs ETT, HoTT vs cubical HoTT, Coq vs Agda vs Lean) различимы по $\mathbf{I}$, но neutralize $\pi$-проекцию на $\mathfrak{M}_\mathrm{Fnd}$ (MSFS Corollary `cor:slice-level`).
 
-Связь с [T-2f\*](/02-canonical-primitive/02-axiomatics) (locally stratified completion): display-map filtration — частный случай T-2f\*-подобной depth-стратификации, необходимой для (Max-3) MSFS. **Универсальное обоснование (Max-3) для Diakrisis** — теорема 105.T ([`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): T-2f\* блокирует *все* Yanofsky-сводимые парадоксы, не только 5 именных семейств. В связке 98.T + 99.T (Max-4) + 105.T (Max-3) Diakrisis закрывает оба intensional+depth уровня формальной защиты.
+Связь с [T-2f\*](/02-canonical-primitive/02-axiomatics) (locally stratified completion): display-map filtration — частный случай T-2f\*-подобной depth-стратификации, необходимой для (Max-3) MSFS. **Универсальное обоснование (Max-3) для Diakrisis** — теорема 105.T ([`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): T-2f\* блокирует *все* Yanofsky-сводимые парадоксы, не только 5 именных семейств. В связке 98.T + 99.T (Max-4) + 105.T (Max-3) Diakrisis закрывает оба интенсиональный+depth уровня формальной защиты.
 
 ## Диаграммы и Конкретные примеры
 
@@ -87,7 +87,7 @@ MSFS §8.3 содержит:
 
 1. **MLTT vs ETT** — типичный extensional collapse; $\tau$-invariant: decidable vs undecidable typechecking.
 2. **HoTT vs cubical HoTT** — propositional vs computational univalence; одинаковый $\infty$-topos class, разные computational content.
-3. **Proof-assistants (Coq, Agda, Lean)** — intensional slices над shared CIC-zone.
+3. **Proof-assistants (Coq, Agda, Lean)** — интенсиональный slices над shared CIC-zone.
 
 ## Ссылки
 

@@ -240,7 +240,7 @@ $$
 
 **106.C3** *(Канoническая единственность)*. 106.T + 100.T + 101.T даёт полную картину: $\mathcal{L}_{\mathrm{Cls}}$ плюралистичен (∞-cosmoi, UF, cohesive, …), $\mathcal{L}_{\mathrm{Cls}}^{\top}$ категоричен (все представители $(\infty, \infty)$-эквивалентны), Diakrisis — представитель.
 
-**106.C4** *(Стабильность под мета-классификацией)*. 102.T + 106.T: итерированная мета-классификация Diakrisis воспроизводит ту же $(\infty, \infty)$-теорию (theory-level stabilization), с universe-ascent по $\kappa_1 < \kappa_2 < \ldots$.
+**106.C4** *(Стабильность под мета-классификацией)*. 102.T + 106.T: итерированная мета-классификация Diakrisis воспроизводит ту же $(\infty, \infty)$-теорию (theory-level стабилизация), с universe-ascent по $\kappa_1 < \kappa_2 < \ldots$.
 
 ## Зависимости и ссылки
 
@@ -249,7 +249,7 @@ $$
 - **Adámek–Rosický 1994** (accessible categories) — Лемма 103.L1.
 - **Seely 1984 + Hofmann 1997 + Kapulkin–Lumsdaine 2021** (categorical semantics of type theory) — Шаг 1 в 103.T.
 - **Yanofsky 2003** «A Universal Approach to Self-Referential Paradoxes» — фундамент 105.T.
-- **Lurie HTT 2009** §§3.2, 6 — $\infty$-categorical framework.
+- **Lurie HTT 2009** §§3.2, 6 — $\infty$-categorical каркас.
 - **Barwick–Schommer-Pries 2021** (unicity) — используется в 102.T, но не в 103.T–105.T.
 - **Hyland 1982** (effective topos) — для 99.T (Max-4).
 
@@ -264,9 +264,9 @@ $$
 ### Ссылки на MSFS
 
 - **(Max-1), (Max-2), (Max-3), (Max-4)** — Definition `def:maximality`.
-- **Conditional meta-categoricity** — Theorem `thm:meta-cat` (= 100.T).
+- **Conditional мета-категоричность** — Theorem `thm:meta-cat` (= 100.T).
 - **Intensional completeness** — Theorem `thm:slice-locality` (= 99.T).
-- **Universe-ascent stabilization** — Theorem `thm:meta-stab` (= 102.T).
+- **Universe-ascent стабилизация** — Theorem `thm:meta-stab` (= 102.T).
 
 ## Обновление status-registry
 
@@ -277,7 +277,7 @@ $$
 | (Max-1) full classification | [Г] | **[Т]** (103.T) |
 | (Max-2) gauge-fullness | [Г] | **[Т]** (104.T) |
 | (Max-3) depth stratification universal | [С] | **[Т]** (105.T) |
-| (Max-4) intensional completeness | [Т] (99.T) | **[Т]** (без изменений) |
+| (Max-4) интенсиональный completeness | [Т] (99.T) | **[Т]** (без изменений) |
 | Diakrisis $\in \mathcal{L}_{\mathrm{Cls}}^{\top}$ | [Программа] | **[Т]** (106.T) |
 | $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ | [открытый вопрос] | **[Т]** (106.C2) |
 
@@ -311,4 +311,4 @@ $$
 - [`/06-limits/09-meta-classification`](/06-limits/09-meta-classification) — 100.T/101.T/102.T;
 - [`/10-reference/02-theorems-catalog`](/10-reference/02-theorems-catalog) — каталог (обновлённый 103.T–106.T).
 
-**Каноническое место**: Diakrisis-documentation; MSFS MSFS сохраняет минимализм (audit14).
+**Каноническое место**: Diakrisis-documentation; MSFS сохраняет минимализм в мнемонической нотации страт.

@@ -164,7 +164,7 @@ author: user_id
 dependencies:
   - { id: A-Omega7, type: requires }
   - { id: A-Bures, type: requires }
-  - { id: T-62, type: requires, witness: "spectral-analysis.lean" }
+  - { id: T-62, type: requires, свидетель: "spectral-analysis.lean" }
 dependents:
   - { id: T-39, type: entails }
   - { id: 04.T2, type: entails }
@@ -227,7 +227,7 @@ mappings:
     type: translates_to
     confidence: 0.98
     obstruction: 0.02
-    witness: "bures-spectral-isomorphism"
+    свидетель: "bures-spectral-isomorphism"
   - source_claim: uhm:P_crit=2/7
     target_claim: diakrisis:ν(α_uhm)-contribution
     type: translates_to
@@ -238,7 +238,7 @@ natural_transformations:
     from: F_UHM_Diakrisis_v1
     to: F_UHM_Diakrisis_v2
     component_at: uhm:T-96
-    witness: "standard-refinement"
+    свидетель: "standard-refinement"
 obstruction_total: 0.05
 obstruction_worst:
   claim: "uhm:ℒ_Ω-specific-form"

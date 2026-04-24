@@ -124,6 +124,59 @@ Proof-assistant, разрабатываемый командой УГМ.
 - Sage, Mathematica, или Computer Algebra в Verum.
 - Verification of computational results.
 
+## Двойной stdlib: артикуляции + энактменты
+
+По 108.T (AC/OC Морита-дуальность) Verum-stdlib симметрично распадается на ОЦ и ДЦ-слои:
+
+### ОЦ-слой (артикуляции)
+
+- `core.math.frameworks` — артикуляции (ZFC, HoTT, CIC, LinLogic, ...).
+- `core.theory_interop` — межартикуляционные редукции (Морита-эквивалентности).
+- `core.proof` — доказательственные стратегии.
+- `core.verify` — верификация теорем.
+
+### ДЦ-слой (энактменты, Актика)
+
+- `core.action.primitives` — базовые акты ($\varepsilon_\mathrm{math}, \varepsilon_\mathrm{compute}, \varepsilon_\mathrm{observe}, \ldots$).
+- `core.action.enactments` — композиция, активация $\mathsf{A}$, autopoietic-замыкание.
+- `core.action.gauge` — gauge-свобода координаций; canonicalization.
+- `core.action.verify` — верификация практик; ε-аудит; gauge-согласованность.
+
+### Мост через 108.T
+
+Для каждой артикуляции $\alpha$ Verum автоматически индуцирует дуальный акт $\varepsilon(\alpha) = (F, \Syn(F), \id, \id)$:
+
+```verum
+fn α_to_ε<α: Articulation>(art: α) -> Act = ε_dual(art)
+fn ε_to_α<ε: Act>(act: ε) -> Articulation = α_dual(act)
+```
+
+Аннотация `@enact(epsilon = ...)` устанавливает ε-координату функции; команда `verum audit --epsilon src/` даёт ε-распределение корпуса, параллельно ν-распределению теорем.
+
+Детальный эскиз stdlib — [`/12-actic/09-verum-stdlib-sketch`](/12-actic/09-verum-stdlib-sketch). Дифференциация Verum: ни один другой прувер (Coq, Lean, Agda) не имеет нативного ДЦ-слоя с сертифицированной дуальностью ОЦ/ДЦ через 108.T.
+
+### Пример: УГМ-практика
+
+```verum
+import core.action.*
+import core.math.frameworks.UHM
+
+let α_uhm = UHM::articulation()       // ν(α_uhm) = ω · 3 + 1
+let ε_uhm = α_to_ε(α_uhm)             // ε(ε_uhm) = ω · 3 + 1 (по 108.T)
+
+@enact(epsilon = "omega_3_plus_1")
+fn live_by_uhm() -> Practice {
+  let γ = init_gamma_state();
+  while alive {
+    γ = evolve_lindblad(γ);
+    if reflection_threshold_crossed(γ) {
+      γ = apply_replacement(γ);
+    }
+    verify_consciousness_invariants(γ);
+  }
+}
+```
+
 ## План интеграции
 
 ### Сессия 1 (следующая): инвентаризация Verum
@@ -214,7 +267,7 @@ Proof-assistant, разрабатываемый командой УГМ.
 
 - Core operations.
 - First УГМ theorems.
-- Establish workflow.
+- Establish процесс.
 
 ### Medium-term (Сессии 11-30)
 

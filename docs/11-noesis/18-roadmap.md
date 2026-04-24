@@ -7,9 +7,9 @@ title: План развития
 
 ## Фаза 0: Основополагающий проект (Q1–Q2 2026, завершено)
 
-- ✓ Корпус Diakrisis (106 теорем в номерной системе, включая intensional refinement 98.T–99.T, meta-classification 100.T–102.T, и maximality proofs 103.T–106.T: Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема).
+- ✓ Корпус Diakrisis (127 теорем (106 ОЦ + 21 Актика) в номерной системе, включая интенсиональное уточнение 98.T–99.T, meta-classification 100.T–102.T, и maximality proofs 103.T–106.T: Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема).
 - ✓ Мост UFH к УГМ.
-- ✓ пятиосевая абсолютность AFN-T (5-осевая абсолютность + 3 bypass paths + meta-classification closure).
+- ✓ пятиосевая абсолютность AFN-T (5-осевая абсолютность + 3 обходные пути + meta-classification closure).
 - ✓ Классификация L-уровней (exhaustive).
 - ✓ Проектные документы Noesis.
 - ✓ Ядровые теоремы NO-1..NO-18.
