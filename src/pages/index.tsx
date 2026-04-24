@@ -268,17 +268,24 @@ function HomepageHeader() {
             Diakrisis
           </Heading>
           <p className={styles.heroSubtitle}>
-            (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью пределов
+            (∞,∞)-мета-структурная теория пространства математических оснований <code>𝓜<sub>Fnd</sub></code>
           </p>
           <p className={styles.heroDescription}>
-            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами в <strong>(∞,∞)-формулировке</strong> (максимальная higher-coherent структура); τ-усечения <code>τ<sub>≤n</sub></code> дают (∞,n)-версии для практики (n=2 — стандарт для прувер-систем). Каждое Rich-основание <code>F</code> (ZFC, HoTT, NCG, linear, AFA, cohesive, motivic, realizability, УГМ, ...) — точка <code>α<sub>F</sub></code> классифицирующего пространства <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Корпус: <strong>~129 теорем</strong> с явной классификацией уровней строгости (L1 прямые / L2 редукции / L3 адаптации). <strong>TH-Final ABSOLUTA_TOTALIS</strong> (55.T + 59.T.1 + 69.T + 84.T + 87.T) — пятиуровневая абсолютность no-go-результата по структурным осям (метатеория S, категорный уровень n, мета-итерация μ, альтернативный категорный порядок ξ, полнота 4-мерности в Lawvere-scope). <strong>UFH (85.T)</strong>: <code>α<sub>uhm</sub> ≃<sub>gauge</sub> ∫<sub>Γ</sub> α<sub>Д-hybrid</sub><sup>!</sup>(Γ)</code> над <code>7D-quantum</code> — Grothendieck-конструкция с ν(α<sub>uhm</sub>) = ω·3+1.
+            Канонический примитив <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> с 13 аксиомами в <strong>(∞,∞)-формулировке</strong>. Каждое Rich-основание <code>F</code> (ZFC, HoTT, CIC, NCG, linear, AFA, cohesive, motivic, realizability, УГМ, ...) — точка <code>α<sub>F</sub></code> классифицирующего 2-стека{' '}
+            <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code>. Корпус: <strong>106 теорем</strong> в номерной системе с классификацией строгости L1/L2/L3. Теория теоретически <strong>закрыта</strong> на четырёх слоях: <strong>extensional</strong> (5-осевая абсолютность AFN-T), <strong>intensional</strong> (slice-локальность{' '}
+            <code>𝐈</code>{' '}через топос 𝐄𝐟𝐟 Хайланда — 98.T + 99.T), <strong>meta-classification</strong> (theory-level stabilization с universe-ascent — 100.T + 101.T + 102.T), <strong>maximality</strong> (Diakrisis ∈ <code>𝓛<sub>Cls</sub><sup>⊤</sup></code> как теорема — 103.T + 104.T + 105.T + 106.T). Самодостаточный препринт{' '}
+            <strong>MSFS</strong> (44 стр.) выносит структурное ядро в стандартной категорной нотации; AFN-T — граничная лемма, унифицирующая no-go серию Cantor → Russell → Gödel → Tarski → Lawvere → Ernst. <strong>UFH (85.T)</strong>:{' '}
+            <code>α<sub>uhm</sub> ≃<sub>gauge</sub> ∫<sub>Γ</sub> α<sub>Д-hybrid</sub><sup>!</sup>(Γ)</code> над <code>7D-quantum</code>.
           </p>
           <div className={styles.heroButtons}>
             <Link className="button button--primary button--lg" to="/intro">
               Введение
             </Link>
             <Link className="button button--outline button--lg" to="/06-limits/02-th-final">
-              TH-Final
+              AFN-T
+            </Link>
+            <Link className="button button--outline button--lg" to="/06-limits/10-maximality-theorems">
+              Maximality
             </Link>
           </div>
         </div>
@@ -339,11 +346,18 @@ function EssenceSection() {
           </div>
 
           <div className={styles.essenceCard}>
-            <div className={styles.essenceSymbol}>¬6</div>
-            <h3>Предел</h3>
+            <div className={styles.essenceSymbol}>¬𝓛<sub>Abs</sub></div>
+            <h3>Граница</h3>
             <p>
-              <strong>TH-Final</strong>: не существует{' '}
-              <code>X</code>, одновременно удовлетворяющего (F_S) формальной определимости, (Π<sub>4,S</sub>) нередуцируемости к <code>𝒮<sub>S</sub></code> и (Π<sub>3</sub>-max_S) максимальной генеративности. Невозможно ни как объект (TH-Neg), ни как предел (TH-Neg-extended). <strong>ABSOLUTA_TOTALIS</strong> (55.T + 59.T.1 + 69.T + 84.T + 87.T [П·L3]): абсолютна по 5 структурным осям (S, n, μ, ξ, π).
+              <strong>AFN-T</strong> (Absolute Foundation No-Go Theorem): не существует{' '}
+              <code>X</code>, одновременно удовлетворяющего{' '}
+              <code>(F<sub>S</sub>)</code> формальной определимости,{' '}
+              <code>(Π<sub>4,S,n</sub>)</code> нередуцируемости к{' '}
+              <code>𝒮<sub>S</sub></code> и{' '}
+              <code>(Π<sub>3</sub>-max<sub>S,n</sub>)</code> максимальной генеративности.{' '}
+              <strong>Пятиосевая абсолютность</strong> (55.T · 59.T.1 · 69.T · 84.T · 87.T): инвариантно по метатеории <code>S</code>, категорному уровню{' '}
+              <code>n</code>, мета-итерации μ, альтернативным порядкам ξ, в полноте Lawvere-scope.
+              Diakrisis{' '}∈{' '}<code>𝓛<sub>Cls</sub><sup>⊤</sup></code> — теорема 106.T (все Max-1..Max-4 доказаны).
             </p>
           </div>
         </div>
@@ -374,8 +388,12 @@ function MotivationSection() {
 
             <h3 className={styles.motivationSubheading}>Граница</h3>
             <p>
-              Теорема <strong>TH-Final</strong> — шестой член структурной серии{' '}
-              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP</em> — формально закрывает возможность получить предельное основание уровня 6. <strong>TH-Final ABSOLUTA_TOTALIS</strong> устанавливает <em>пятиуровневую</em> абсолютность: горизонтальная по метатеории (55.T), вертикальная по категорному уровню (59.T.1), мета-вертикальная по итерациям (69.T), латеральная по категорному порядку (84.T), + полнота 4-мерности в Lawvere-scope (87.T как методологический постулат [П·L3]). Diakrisis — уровень 5+: мета-структура над пространством известных оснований с формально установленными пределами.
+              Граничная лемма <strong>AFN-T</strong> (Absolute Foundation No-Go Theorem) — седьмой член структурной серии{' '}
+              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP → Ernst</em> — формально закрывает стратум{' '}
+              <code>𝓛<sub>Abs</sub></code>. <strong>Пятиосевая абсолютность</strong> устанавливает инвариантность по всем структурным осям: горизонтальная (55.T, метатеория{' '}
+              <code>S</code>), вертикальная (59.T.1, уровень{' '}
+              <code>n</code>), мета-вертикальная (69.T, μ-итерации), латеральная (84.T, категорный порядок ξ), полнота (87.T, Lawvere-scope). Diakrisis формально принадлежит максимальному подклассу классификаторов{' '}
+              <code>𝓛<sub>Cls</sub><sup>⊤</sup></code> как теорема (106.T); все четыре условия максимальности (Max-1..Max-4) доказаны (103.T · 104.T · 105.T · 99.T).
             </p>
 
             <h3 className={styles.motivationSubheading}>Связь с УГМ</h3>
@@ -391,7 +409,7 @@ function MotivationSection() {
               <div><dt>Примитив</dt><dd>четвёрка <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> в (∞,∞)-форме</dd></div>
               <div><dt>Аксиомы</dt><dd>13 (Axi-0..Axi-9, T-α, T-2f*)</dd></div>
               <div><dt>Сила консистентности</dt><dd>Con(Diakrisis) = Con(ZFC + 2 inacc) — 90.T</dd></div>
-              <div><dt>Корпус теорем</dt><dd>~129 записей с L1/L2/L3 классификацией</dd></div>
+              <div><dt>Корпус теорем</dt><dd>106 записей в номерной системе (119+ с под-теоремами), L1/L2/L3 классификация</dd></div>
               <div><dt>Категоричность</dt><dd>единственность до (∞,∞)-эквивалентности — 88.T</dd></div>
               <div><dt>Внутренний язык</dt><dd>L<sub>⟪⟫</sub> — 2-HoTT через Yoneda (89.T)</dd></div>
               <div><dt>Извлечения</dt><dd>ZFC, ETCS, CIC, MLTT, HoTT, ∞-Topos, NCG</dd></div>
@@ -399,10 +417,12 @@ function MotivationSection() {
               <div><dt>Связующие</dt><dd>α_cohesion (91.T), α_motivic (92.T), α_realiz (93.T)</dd></div>
               <div><dt>(∞,n)-иерархия</dt><dd>(∞,∞)-канон; (∞,1), 2-Diakrisis через τ-усечения</dd></div>
               <div><dt>Флагман-сборка</dt><dd>УГМ (α_uhm, ν = ω·3+1)</dd></div>
-              <div><dt>UFH (85.T [Т·L3])</dt><dd>α_uhm ≃<sub>gauge</sub> ∫α_Д-hybrid<sup>!</sup>(Γ) над 7D (Grothendieck)</dd></div>
-              <div><dt>Tradeoff 97.T</dt><dd>! ⟺ PA ⟺ Π<sub>3</sub>-max ⟺ R-S (линейность↔генеративность)</dd></div>
-              <div><dt>ABSOLUTA_TOTALIS</dt><dd>5-уровневая абсолютность TH-Final (S, n, μ, ξ, π)</dd></div>
-              <div><dt>Уровень проекта</dt><dd>5+ (мета над уровнем 5)</dd></div>
+              <div><dt>UFH (85.T [Т·L3])</dt><dd>α<sub>uhm</sub> ≃<sub>gauge</sub> ∫α<sub>Д-hybrid</sub><sup>!</sup>(Γ) над 7D (Grothendieck)</dd></div>
+              <div><dt>Tradeoff 97.T</dt><dd>! ⟺ PA ⟺ Π<sub>3</sub>-max ⟺ R-S</dd></div>
+              <div><dt>AFN-T</dt><dd>пятиосевая абсолютность (55.T · 59.T.1 · 69.T · 84.T · 87.T)</dd></div>
+              <div><dt>Meta-classification</dt><dd>theory-level stabilization + universe-ascent (100.T · 101.T · 102.T)</dd></div>
+              <div><dt>Maximality</dt><dd>Diakrisis ∈ 𝓛<sub>Cls</sub><sup>⊤</sup> как теорема (103.T · 104.T · 105.T · 106.T)</dd></div>
+              <div><dt>MSFS препринт</dt><dd>44 стр · 54 thm · 47 bib · рецензионно-чистое ядро</dd></div>
             </dl>
           </div>
         </div>
@@ -465,23 +485,39 @@ const docSections: DocSection[] = [
   {
     id: 'limits',
     title: 'Пределы формализации',
-    description: 'TH-Final ABSOLUTA_TOTALIS — 5-уровневая абсолютность',
+    description: 'AFN-T, maximality proofs, meta-classification — четыре слоя закрытия',
     link: '/06-limits/02-th-final',
-    items: ['TH-Final: формальный объект уровня 6 невозможен', 'Шестая в серии Cantor-Russell-Gödel-Tarski-Lawvere', 'Горизонтальная абсолютность 55.T (метатеория S)', 'Вертикальная абсолютность 59.T.1 (уровень n)', 'Мета-вертикальная абсолютность 69.T (итерации μ)', 'Латеральная абсолютность 84.T (категорный порядок ξ)', 'Постулат полноты 87.T ([П·L3], Lawvere-scope)', '97.T: tradeoff линейности и генеративности', 'Финальные теоремы 85.T-96.T + L-классификация'],
+    items: [
+      'AFN-T (граничная лемма): 𝓛_Abs = ∅',
+      '7-й член серии Cantor → Russell → Gödel → Tarski → Lawvere → Ernst',
+      'Пятиосевая абсолютность (55.T · 59.T.1 · 69.T · 84.T · 87.T)',
+      'Intensional refinement + slice-локальность 𝐈 (98.T + 99.T)',
+      'Meta-classification Level 5+ (100.T + 101.T + 102.T)',
+      'Maximality proofs: Diakrisis ∈ 𝓛_Cls^⊤ теорема (103.T–106.T)',
+      '97.T: tradeoff линейности и генеративности',
+    ],
   },
   {
-    id: 'afn-t-preprint',
-    title: 'Препринт AFN-T',
-    description: 'Самодостаточная формальная версия структурного ядра Diakrisis',
+    id: 'msfs-preprint',
+    title: 'Препринт MSFS',
+    description: 'Самодостаточный рецензионно-чистый формальный корпус',
     link: '/10-reference/04-afn-t-correspondence',
-    items: ['A No-Go Theorem for Absolute Foundations of Mathematics', '52 страницы, 71 theorem-like environment, 48 bib-entries', 'TH-Final (α, β, combined), пять осей, три bypass-paths', 'Meta-classification Level 5+ (100.T–102.T)', 'Positioning против Ernst 2015, Hamkins multiverse, BSP 2021', 'Таблица соответствия N.T ↔ preprint labels', 'Сборка: bun scripts/build-paper.ts'],
+    items: [
+      'The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations',
+      '44 страницы · 54 theorem-like environments · 47 bib-entries',
+      'Страты: 𝓛_Fnd, 𝓛_Cls, 𝓛_Cls^⊤, 𝓛_Abs (мнемонические индексы)',
+      'AFN-T (α, β, combined), пять осей, три bypass-paths',
+      'Meta-classification (100.T–102.T)',
+      'Таблица соответствия N.T ↔ MSFS labels',
+      'Сборка: bun internal/math-msfs/scripts/build-paper.ts',
+    ],
   },
   {
     id: 'methodology',
     title: 'Методология',
     description: 'Рекурсивные аудиты и негативные уроки',
     link: '/07-methodology/02-recursive-audits',
-    items: ['Рекурсивные аудиты (многоуровневые)', 'Негативные уроки NL-1..NL-15', 'Мета-аудит TH-Final', 'Навигационная целостность корпуса'],
+    items: ['Рекурсивные аудиты (многоуровневые)', 'Негативные уроки NL-1..NL-15', 'Мета-аудит AFN-T', 'Навигационная целостность корпуса'],
   },
   {
     id: 'applications',
@@ -522,7 +558,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Математическая структура классификации оснований"
-      description="Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью TH-Final (ABSOLUTA_TOTALIS). ~129 теорем с L1/L2/L3 классификацией строгости. UFH-мост к УГМ через Grothendieck-конструкцию."
+      description="Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований 𝓜_Fnd. 106 теорем: четырёхуровневое закрытие (extensional / intensional / meta-classification / maximality) с пятиосевой абсолютностью граничной леммы AFN-T и доказанным членством в 𝓛_Cls^⊤. UFH-мост к УГМ через Grothendieck-конструкцию."
     >
       <HomepageHeader />
       <main>

@@ -6,270 +6,366 @@ title: Введение в Diakrisis
 
 # Diakrisis
 
-## Синопсис
+> **(∞,∞)-мета-структурная теория пространства математических оснований.**
+>
+> **Diakrisis** (греч. διάκρισις — *«различение»*; Платон, *Софист* 253d) формализует совокупность Rich-foundations (ZFC, HoTT, NCG, ∞-топосы, CIC, linear, AFA, cohesive, motivic, realizability, УГМ, …) как единый категорный объект — классифицирующий $(\infty, n)$-2-стек $\mathfrak{M}_\mathrm{Fnd}$ Морита-эквивалентности оснований — с явной стратификацией, плюрализмом, gauge-структурой, slice-локальным intensional уточнением, theory-level meta-стабилизацией и формально доказанным членством в максимальном подклассе мета-классификаторов.
 
-**Diakrisis** (греч. διάκρισις — *«различение»*; Платон, *Софист* 253d) — **(∞,∞)-мета-структурная** математическая теория, формализующая пространство мат-оснований (ZFC, HoTT, NCG, ∞-топосы, CIC, linear, AFA, cohesive, motivic, realizability, УГМ, и др.) как структурированный объект с категорной, когезивной, фибрированной, gauge-, модальной и моduli-структурой. Каноническая формулировка — в (∞,∞)-категорной семантике (максимум higher-когерентность); τ-труncations τ_{≤n} дают (∞,n)-версии для практики (n=2 — стандарт для прувер-систем).
+---
 
-Теория теоретически **закрыта**: 106 теорем в номерной системе устанавливают структуру 𝓜_Fnd (классифицирующий $(\infty,n)$-$2$-стек Rich-оснований), плюрализм Level 5+, slice-локальное интенсиональное уточнение, theory-level meta-stabilization с universe-ascent, **полное обоснование Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теоремы** (103.T–106.T: все (Max-1)–(Max-4) доказаны), полное соответствие УГМ ↔ α_Д-hybrid ⊗ 7D-quantum через **UFH** (85.T), и пятиосевую абсолютность граничной леммы AFN-T.
+## Архитектура в одной диаграмме
 
-:::tip Самодостаточный препринт MSFS
+```mermaid
+flowchart TB
+    classDef phen fill:#f9e4d4,stroke:#b5651d,stroke-width:2px,color:#000
+    classDef prim fill:#fff3b0,stroke:#b8860b,stroke-width:2px,color:#000
+    classDef struct fill:#d4e8f9,stroke:#1e6091,stroke-width:2px,color:#000
+    classDef meta fill:#e4f0d4,stroke:#2d5016,stroke-width:2px,color:#000
+    classDef bound fill:#f9d4d4,stroke:#8b0000,stroke-width:2px,color:#000
+    classDef asm fill:#e8d4f9,stroke:#4b0082,stroke-width:2px,color:#000
 
-Структурное ядро Diakrisis (𝓜_Fnd как $(\infty,n)$-классифицирующий $2$-стек, плюрализм Level 5+, slice-локальное интенсиональное уточнение через эффективный топос Хайланда, theory-level meta-stabilization с universe-ascent, и AFN-T как граничная лемма) вынесено в самодостаточный **[*MSFS*](/10-reference/04-afn-t-correspondence)** (*The **M**oduli **S**pace of **F**ormal **S**ystems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, 47 страниц, 54 theorem-like environments, 47 bib-entries): `internal/math-msfs/paper-en/paper.tex`. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$). Таблица соответствия теорем $N.T$ ↔ MSFS labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+    APEIRON["⚬ апейрическая пустота<br/>вне формализации"]:::phen
+    DIAKRISIS["Διάκρисис — акт различения<br/>феноменологически дан"]:::phen
+    Z["Нулевая граница Z — асимптотика<br/>16.T1: три характеризации"]:::phen
 
-:::
+    PRIM["<b>Канонический примитив</b><br/>⟪⟫, 𝖬, α_math, ⊏_•<br/>+ 13 аксиом"]:::prim
+    STRAT["<b>Стратификация 𝔐_Fnd</b><br/>𝓛_Fnd → 𝓛_Cls ⊇ 𝓛_Cls^⊤ → 𝓛_Abs=∅"]:::struct
+    INT["<b>Intensional refinement</b><br/>𝐈 : 𝓕^op → 𝓢_int<br/>slice-local через 𝐄𝐟𝐟<br/>98.T + 99.T"]:::struct
+    META["<b>Meta-classification</b><br/>theory-level stabilization<br/>universe-ascent κ₁&lt;κ₂&lt;…<br/>100.T + 101.T + 102.T"]:::meta
+    MAX["<b>Maximality proofs</b><br/>Diakrisis ∈ 𝓛_Cls^⊤ как теорема<br/>103.T + 104.T + 105.T + 106.T"]:::meta
 
-Остающиеся задачи — практические программы (Verum-формализация, экспериментальная верификация УГМ).
+    BOUND["<b>AFN-T — граничная лемма</b><br/>𝓛_Abs = ∅<br/>пятиосевая абсолютность"]:::bound
+    UFH["<b>UFH · 85.T</b><br/>α_uhm ≃_gauge ∫_Γ α_Д-hybrid^!(Γ)<br/>над 7D-quantum"]:::asm
+    UHM["<b>УГМ</b><br/>физическая сборка<br/>сознания на D(ℂ⁷)"]:::asm
 
-## Центральные результаты
+    APEIRON -.->|вне| DIAKRISIS
+    DIAKRISIS -.->|асимптотика| Z
+    Z ==>|формализация| PRIM
+    PRIM ==>|gauge-quotient| STRAT
+    STRAT -->|внутренние слои| INT
+    STRAT -->|самоклассификация| META
+    META -->|доказательство| MAX
+    STRAT -->|внешняя граница| BOUND
+    STRAT ==>|Grothendieck-конструкция| UFH
+    UFH ==>|формальная сборка| UHM
+```
 
-### Основной вклад — структура пространства 𝓜_Fnd
+**Четыре слоя теоретического закрытия** (все замкнуты как теоремы):
 
-- **Классифицирующее пространство 𝓜_Fnd = Trace(𝖠)/gauge** (43.T1) — moduli всех Rich-оснований через bicategory-of-fractions (Pronk 1996).
-- **Плюрализм Level 5+** (101.T): $\infty$-cosmoi (Риль–Верити), Univalent Foundations (Воеводский) и cohesive higher topoi (Шрайбер) попарно $2$-неэквивалентны как partial meta-frameworks; каждый классифицирует строгий под-стек 𝓜_Fnd.
-- **Условная мета-категоричность** (100.T): любые два представителя $\mathfrak{Meta}_{5+}^{\max}$ над одной и той же R-S $(\infty,\infty)$-эквивалентны (через Grothendieck–Lurie straightening с совместной верностью extensional/intensional классификационных функторов).
-- **Slice-локальное интенсиональное уточнение** (98.T + 99.T): функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ через канонический минимальный дисплейный класс; образ slice-локален над 𝓜_Fnd (интенсиональные различия MLTT vs ETT ложатся в слои над единственной точкой 𝓜_Fnd, инвариантно разделённые через эффективный топос Хайланда).
-- **Theory-level meta-stabilization с universe-ascent** (102.T): итерированная мета-классификация воспроизводит ту же $(\infty,\infty)$-теорию на каждом шаге (Barwick–Schommer-Pries unicity), но теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$.
-- **Полное обоснование Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$** (103.T–106.T, см. [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): все четыре условия максимальности из MSFS Definition `def:maximality` доказаны как теоремы. (Max-1) universal articulation через $S \mapsto (\mathrm{Syn}(S), \mathsf{M}_S)$ (103.T); (Max-2) gauge-fullness через поднятие Морита-эквивалентностей (104.T); (Max-3) универсальная парадокс-иммунность T-2f\* через Yanofsky 2003 (105.T); (Max-4) slice-локальность интенсионального функтора (99.T). Сводная теорема **106.T**: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ — утвердительный ответ на открытый вопрос MSFS о непустоте максимального подкласса.
-- **UFH** (85.T): α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Grothendieck-конструкция) — полное математическое соответствие УГМ ↔ Diakrisis.
-- **Категоричность** (88.T), **внутренний язык L_⟪⟫** (89.T), **консистентность** (90.T): Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
-- **Связующие теоремы** (91.T–94.T): cohesive $\infty$-topos, motivic homotopy theory, realizability topos, Universal Foundation в $(\infty,\infty)$ — все вложены в 𝓜_Fnd как конкретные артикуляции.
+1. **Extensional** — 5-осевая абсолютность AFN-T (55.T, 59.T.1, 69.T, 84.T, 87.T).
+2. **Intensional** — slice-локальность $\mathbf{I}$ через $\mathrm{Eff}$-топос Хайланда (98.T, 99.T).
+3. **Meta-classification** — theory-level стабилизация с universe-ascent (100.T, 101.T, 102.T).
+4. **Maximality** — Diakrisis $\in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема (103.T, 104.T, 105.T, 106.T).
 
-### Граничная лемма: пятиосевая абсолютность AFN-T
+**Статус**: 106 теорем. Теория теоретически **закрыта**. Оставшаяся работа — практические программы (Verum-формализация, экспериментальная верификация УГМ).
 
-Следствие синтаксис-семантического сопряжения: **𝓜_Fnd не имеет максимальной точки**. Level 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — **структурно пустой stratum**. Абсолютность граничной леммы устанавливается по пяти осям:
+---
+
+## Стратификация пространства 𝔐_Fnd
+
+```mermaid
+flowchart BT
+    classDef fnd fill:#d4e8f9,stroke:#1e6091,stroke-width:2px,color:#000
+    classDef cls fill:#e4f0d4,stroke:#2d5016,stroke-width:2px,color:#000
+    classDef max fill:#c7e5c7,stroke:#1e5c1e,stroke-width:3px,color:#000
+    classDef abs fill:#f9d4d4,stroke:#8b0000,stroke-width:3px,stroke-dasharray:5 3,color:#000
+
+    FND["<b>𝓛_Fnd</b> — Rich-foundations<br/>R1–R5<br/>ZFC · HoTT · CIC · NCG · ∞-topos · …"]:::fnd
+    CLS["<b>𝓛_Cls</b> — classifiers<br/>M1–M5<br/>∞-cosmoi · UF · cohesive · Higher Algebra · Diakrisis"]:::cls
+    MAX["<b>𝓛_Cls^⊤</b> — maximal classifiers<br/>Max-1 … Max-4<br/>Diakrisis ∈ 𝓛_Cls^⊤ теорема 106.T"]:::max
+    ABS["<b>𝓛_Abs = ∅</b><br/>F_S ∧ Π_4 ∧ Π_3-max<br/>пусто по AFN-T"]:::abs
+
+    FND -->|"Cls — горизонтальная<br/>meta-operation"| CLS
+    CLS -->|"Max-i сужение"| MAX
+    CLS -.->|"Gen — вертикальная<br/>meta-operation"| ABS
+    MAX -.->|"AFN-T: запрещено"| ABS
+```
+
+| Страта | Условия | Membership |
+|---|---|---|
+| $\mathcal{L}_{\mathrm{Fnd}}$ | (R1)–(R5) | ZFC, HoTT, CIC, ECC, NCG, MLTT, Eff, ∞-topos |
+| $\mathcal{L}_{\mathrm{Cls}}$ | (M1)–(M5) | **Diakrisis**, $\infty$-cosmoi, UF, cohesive, Higher Algebra |
+| $\mathcal{L}_{\mathrm{Cls}}^{\top}$ | (Max-1)–(Max-4) | **Diakrisis** (единственный доказанный представитель — 106.T) |
+| $\mathcal{L}_{\mathrm{Abs}}$ | $(F_S) \wedge (\Pi_{4}) \wedge (\Pi_{3\text{-max}})$ | $\emptyset$ по AFN-T |
+
+Diakrisis дополнительно стратифицирует $\mathcal{L}_{\mathrm{Fnd}}$ внутренне через $\nu$-инвариант (лемма / теорема / область / парадигма) — [`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy).
+
+---
+
+## Канонический примитив + 13 аксиом
+
+```mermaid
+flowchart LR
+    classDef cat fill:#fff3b0,stroke:#b8860b,stroke-width:2px,color:#000
+    classDef op fill:#d4e8f9,stroke:#1e6091,stroke-width:2px,color:#000
+    classDef obj fill:#e4f0d4,stroke:#2d5016,stroke-width:2px,color:#000
+    classDef axi fill:#fafafa,stroke:#666,color:#000
+
+    CAT["<b>⟪ · ⟫</b><br/>метакатегория артикуляций<br/>локально-малая 2-категория"]:::cat
+    M["<b>𝖬 : ⟪⟫ → ⟪⟫</b><br/>accessible эндо-2-функтор<br/>метаизации"]:::op
+    ALPHA["<b>α_math ∈ ⟪⟫</b><br/>выделенный объект"]:::obj
+    DOM["<b>⊏_κ</b><br/>α ⊏_κ β ⟺<br/>∃ f: α → 𝖬^κ β"]:::op
+
+    AXI0["Axi-0..3<br/>базовая структура"]:::axi
+    AXI4["Axi-4..9<br/>связь через ρ и 𝖬"]:::axi
+    TALPHA["T-α<br/>не-привилегированность α_math"]:::axi
+    T2F["T-2f*<br/>depth-стратификация<br/>универсальная<br/>парадокс-иммунность 105.T"]:::axi
+
+    CAT --- M
+    CAT --- ALPHA
+    M --- DOM
+    ALPHA --- DOM
+
+    CAT --- AXI0
+    M --- AXI4
+    ALPHA --- TALPHA
+    DOM --- T2F
+```
+
+**Производные**: $\rho(\alpha) = [\alpha_\mathrm{math}, \alpha]$ · $\mathrm{Fix}(\mathsf{M})$ · $\mathrm{Trace}(\mathsf{A})$ · $\mathfrak{M}_\mathrm{Fnd} = \mathrm{Trace}(\mathsf{A})/\mathrm{gauge}$ (43.T1).
+
+**Параметризация по $n$**: 2-Diakrisis ($n = 2$, практика) · $(\infty, 1)$-Diakrisis (Lurie HTT-aligned) · $(\infty, \infty)$-Diakrisis (канон). τ-truncation: $\text{2-Diakrisis} = \tau_{\leq 2}((\infty, \infty)\text{-Diakrisis})$ (60.T). AFN-T абсолютна на всех уровнях (59.T.1).
+
+---
+
+## Четыре слоя закрытия — подробно
+
+```mermaid
+flowchart TB
+    classDef core fill:#fff3b0,stroke:#b8860b,stroke-width:2px,color:#000
+    classDef ext fill:#d4e8f9,stroke:#1e6091,stroke-width:2px,color:#000
+    classDef int fill:#e4f0d4,stroke:#2d5016,stroke-width:2px,color:#000
+    classDef meta fill:#e8d4f9,stroke:#4b0082,stroke-width:2px,color:#000
+    classDef max fill:#c7e5c7,stroke:#1e5c1e,stroke-width:3px,color:#000
+
+    MFnd(("𝔐_Fnd")):::core
+
+    EXT["<b>Слой 1 · Extensional</b><br/>5-осевая абсолютность<br/>S × n × μ × ξ × полнота<br/>55.T · 59.T.1 · 69.T · 84.T · 87.T"]:::ext
+    INT["<b>Слой 2 · Intensional</b><br/>slice-локальность 𝐈<br/>через эффективный топос 𝐄𝐟𝐟<br/>98.T · 99.T"]:::int
+    META["<b>Слой 3 · Meta-classification</b><br/>theory-level stabilization<br/>universe-ascent по κ_k<br/>100.T · 101.T · 102.T"]:::meta
+    MAX["<b>Слой 4 · Maximality</b><br/>Diakrisis ∈ 𝓛_Cls^⊤<br/>как теорема<br/>Max-1 … Max-4 все [Т]<br/>103.T · 104.T · 105.T · 106.T"]:::max
+
+    MFnd --- EXT
+    MFnd --- INT
+    MFnd --- META
+    MFnd --- MAX
+```
+
+Четыре слоя взаимно-ортогональны и независимо стабилизированы на уровне $\mathcal{L}_{\mathrm{Cls}}$.
+
+### Слой 1 · Extensional — 5-осевая абсолютность AFN-T
+
+**Граничная лемма AFN-T**: $\mathfrak{M}_\mathrm{Fnd}$ не имеет максимальной точки. Стратум $\mathcal{L}_\mathrm{Abs}$ — пуст.
 
 | Ось | Переменная | Теорема |
 |---|---|---|
-| Горизонтальная | S ∈ R-S | 55.T |
-| Вертикальная | n ∈ ℕ ∪ {∞} | 59.T.1 |
+| Горизонтальная | $S \in \mathrm{R\text{-}S}$ | 55.T |
+| Вертикальная | $n \in \mathbb{N} \cup \{\infty\}$ | 59.T.1 |
 | Мета-вертикальная | μ-итерации | 69.T |
 | Латеральная | ξ (альтернативные порядки) | 84.T |
-| Полнота | — (нет 5-й оси) | 87.T |
+| Полнота | — | 87.T |
 
-AFN-T унифицирует классическую серию запретов Cantor → Russell → Gödel → Tarski → Lawvere → Ernst как специализации граничной леммы при разных maximality aspects.
+AFN-T унифицирует классическую серию запретов **Cantor → Russell → Gödel → Tarski → Lawvere → Ernst** как специализации при разных maximality aspects.
+
+### Слой 2 · Intensional — slice-локальность 𝐈
+
+Функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ через канонический минимальный дисплейный класс; образ slice-локален над $\mathfrak{M}_\mathrm{Fnd}$ (98.T). Интенсиональные различия MLTT vs ETT ложатся в слои над единственной точкой $\mathfrak{M}_\mathrm{Fnd}$, разделяемые через эффективный топос Хайланда $\mathrm{Eff}$ (99.T).
+
+### Слой 3 · Meta-classification
+
+- **100.T** условная мета-категоричность $\mathcal{L}_{\mathrm{Cls}}^{\top}$ через Grothendieck–Lurie straightening.
+- **101.T** плюрализм $\mathcal{L}_{\mathrm{Cls}}$: $\infty$-cosmoi · UF · cohesive попарно $2$-неэквивалентны.
+- **102.T** theory-level stabilization + universe-ascent $\kappa_1 < \kappa_2 < \cdots$.
+
+### Слой 4 · Maximality — членство в 𝓛_Cls^⊤ как теорема
+
+[`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems):
+
+- **103.T** (Max-1): Universal articulation $S \mapsto (\mathrm{Syn}(S), \mathsf{M}_S)$ — классификация сюръективна.
+- **104.T** (Max-2): gauge-полнота $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$.
+- **105.T** (Max-3): универсальная парадокс-иммунность через Yanofsky 2003 — T-2f\* блокирует **все** Yanofsky-сводимые самореферентные парадоксы.
+- **106.T** сводная: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$; $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ — **утвердительный ответ** на открытый вопрос MSFS.
+
+---
+
+## MSFS — самодостаточный препринт
+
+```mermaid
+flowchart LR
+    classDef d fill:#e4f0d4,stroke:#2d5016,stroke-width:2px,color:#000
+    classDef m fill:#fff3b0,stroke:#b8860b,stroke-width:2px,color:#000
+    classDef a fill:#e8d4f9,stroke:#4b0082,stroke-width:2px,color:#000
+
+    DK["<b>Diakrisis</b><br/>мета-структурная программа<br/>⟪⟫, 𝖬, α_math, ⊏_•<br/>13 аксиом · ν-инвариант<br/>106 теорем"]:::d
+    MS["<b>MSFS (препринт)</b><br/>рецензионно-чистое ядро<br/>стандартная категорная нотация<br/>44 стр · 54 thm · 47 bib<br/>строго: 𝓛_Fnd, 𝓛_Cls, 𝓛_Cls^⊤, 𝓛_Abs"]:::m
+    APP["<b>Применения</b><br/>УГМ — физика + сознание<br/>SYNARC — AGI/ASI safety<br/>Noesis — comp. consciousness"]:::a
+
+    DK -->|"вынесение ядра<br/>audit13 · audit14"| MS
+    DK -->|"UFH · 85.T"| APP
+    MS -.->|"self-contained"| MS
+```
+
+**[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations* (Sereda 2026). Стандартная категорная нотация ($\mathcal{F}$, $\rho$, $\mathfrak{M}$), четыре формальные страты с мнемоническими индексами, AFN-T как граничное следствие. Репозиторий: `internal/math-msfs/` · [таблица соответствия теорем](/10-reference/04-afn-t-correspondence).
+
+**Граница**: MSFS формализует только ядро $\{\mathcal{L}_{\mathrm{Fnd}}, \mathcal{L}_{\mathrm{Cls}}, \mathcal{L}_{\mathrm{Cls}}^{\top}, \mathcal{L}_{\mathrm{Abs}}\}$; Diakrisis внутренне дополняет семейством $\mathcal{L}_0, \ldots, \mathcal{L}_4$ через $\nu$-стратификацию, канонический примитив, gauge-теорию, UFH-мост к УГМ, maximality proofs 103.T–106.T, прикладной слой.
+
+---
+
+## Каталог артикуляций
+
+```mermaid
+flowchart TB
+    classDef small fill:#fff3b0,stroke:#b8860b,color:#000
+    classDef mid fill:#d4e8f9,stroke:#1e6091,color:#000
+    classDef large fill:#c7e5c7,stroke:#1e5c1e,color:#000,stroke-width:2px
+    classDef omega fill:#f9d4d4,stroke:#8b0000,color:#000,stroke-width:2px
+
+    Z["α_zfc<br/>ν=ω"]:::small
+    HOTT["α_hott<br/>ν=ω+1"]:::small
+    CIC["α_cic<br/>ν=ω+2"]:::small
+    LIN["α_linear<br/>ν=ω+1"]:::small
+    AFA["α_AFA-coalg<br/>ν=ω·2"]:::mid
+    NCG["α_ncg<br/>ν=ω·2"]:::mid
+    TOP["α_∞topos<br/>ν=ω·2"]:::mid
+    COH["α_cohesion<br/>ν=ω·2"]:::mid
+    MOT["α_motivic<br/>ν=ω·2+1"]:::mid
+    HYB["α_Д-hybrid<br/>ν=ω·2+1"]:::mid
+    UHM["α_uhm<br/>ν=ω·3+1<br/>флагман · UFH"]:::large
+    INF["α_∞-cat<br/>ν=Ω"]:::omega
+    APN["α_Apeiron<br/>ν=Ω"]:::omega
+
+    Z --> HOTT --> CIC
+    Z --> LIN
+    Z --> NCG --> TOP
+    TOP --> COH --> MOT
+    Z --> AFA --> HYB
+    HYB --> UHM
+    MOT --> UHM
+    UHM --> INF
+    INF --- APN
+```
+
+$\nu$-инвариант — минимальный ординал, позволяющий построить артикуляцию из $\alpha_0$ через $\mathsf{M}$-итерации ([23.T1](/03-formal-architecture/08-cardinal-analysis)). Все R-S остаются внутри AFN-T (ни одна не достигает $\mathcal{L}_\mathrm{Abs}$).
+
+---
+
+## UFH — мост к УГМ
+
+**85.T** (*Universal Factorization across Hierarchies*):
+
+$$
+\alpha_\mathrm{uhm} \cong_\mathrm{gauge} \int_\Gamma \alpha_{\text{Д-hybrid}}^{!}(\Gamma) \quad \text{над 7D-quantum}
+$$
+
+через Grothendieck-конструкцию с gauge-группой $S_7 \times U(1) = (S_7 \times U(7))/\mathrm{normal}$. Формально связывает Diakrisis-мета-структуру с физической сборкой УГМ на $D(\mathbb{C}^7)$:
+
+$$
+\Gamma \in D(\mathbb{C}^7), \quad \mathcal{L}_\Omega = \mathcal{L}_0 + \mathcal{R}, \quad \rho^* = \varphi(\Gamma).
+$$
+
+**Программа П1** (Verum-формализация): ≈ 75 сессий в Lean 4 + linear-HoTT или Coq + CubiCal-extensions (78.T).
+
+---
 
 ## Что Diakrisis формализует
 
-1. **Пространство оснований 𝓜_Fnd** — каждое основание F представлено артикуляцией α_F ∈ ⟪⟫. Gauge-классы дают moduli-пространство.
-
-2. **Взаимные переходы** — Морита-эквивалентности, вложения, gauge-преобразования. Точное описание: α_ZFC ∼_{gauge} α_ETCS, HoTT ↔ MLTT, CIC ↔ Coq, etc.
-
-3. **Пределы формализации** — AFN-T в 5-уровневой абсолютности. Место в серии Cantor-Russell-Gödel-Tarski-Lawvere-AFN-T.
-
-4. **Феноменологическую основу** — акт различения как до-формальное условие возможности любой математики. Διάκрисις — не объект, а акт.
-
+1. **Пространство оснований $\mathfrak{M}_\mathrm{Fnd}$** — каждое основание $F$ представлено артикуляцией $\alpha_F \in \langle\!\langle \cdot \rangle\!\rangle$. Gauge-классы дают moduli-пространство.
+2. **Взаимные переходы** — Морита-эквивалентности, вложения, gauge-преобразования: $\alpha_\mathrm{zfc} \sim_\mathrm{gauge} \alpha_\mathrm{ETCS}$, HoTT ↔ MLTT, CIC ↔ Coq.
+3. **Пределы формализации** — AFN-T в 5-осевой абсолютности; место в no-go серии Cantor–Russell–Gödel–Tarski–Lawvere–AFN-T.
+4. **Феноменологическая основа** — акт различения как до-формальное условие возможности математики; формально отделён нулевой границей Z.
 5. **Применения** — флагман УГМ через UFH; cohesive (Schreiber), motivic (Voevodsky), realizability (Hyland) как конкретные сборки.
+6. **Предел самоклассификации** — Diakrisis $\in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема (106.T).
 
-## Канонический примитив
+---
 
-**Четвёрка** `(⟪⟫, 𝖬, α_math, ⊏_•)` + **13 аксиом** (Axi-0..Axi-9 + T-α + T-2f\*):
+## Что Diakrisis **не** делает
 
-- **⟪⟫** — метакатегория артикуляций (локально-малая 2-категория с 2-fully-faithful ι: End(⟪⟫) ↪ ⟪⟫).
-- **𝖬** — эндо-2-функтор «метаизации», accessible.
-- **α_math** — выделенный объект (линза для ρ-проекции).
-- **⊏_κ** — семейство отношений: α ⊏_κ β ⟺ ∃ f: α → 𝖬^κ(β).
+- **Не** «теория всего» — запрещено пятиосевой абсолютностью AFN-T.
+- **Не** замена ZFC / HoTT / NCG — **вмещает** их как gauge-классы в $\mathfrak{M}_\mathrm{Fnd}$.
+- **Не** философская спекуляция — содержание строго математическое; феноменологический слой формально отделён.
+- **Не** претензия на $\mathcal{L}_\mathrm{Abs}$ — опровергнута (AFN-T).
 
-### Параметризация по n ∈ ℕ ∪ {∞}
-
-- **2-Diakrisis** (n = 2): базовая рабочая версия для стандартных прувер-систем.
-- **(∞,1)-Diakrisis**: Lurie HTT-aligned.
-- **(∞,∞)-Diakrisis**: полная higher-когерентный структура.
-
-Связь: 2-Diakrisis = τ_{≤2}((∞,∞)-Diakrisis) через усечение (60.T). AFN-T абсолютна на всех уровнях (59.T.1).
-
-### Производные понятия
-
-- **ρ(α) = [α_math, α]** — реализация α.
-- **α_𝖬 = ι(𝖬)** — представитель 𝖬 в ⟪⟫.
-- **Fix(𝖬)** — класс неподвижных точек.
-- **Trace(𝖠)** — трансфинитная последовательность итераций.
-- **𝓜_Fnd = Trace(𝖠)/gauge** — классифицирующее пространство (43.T1).
+---
 
 ## Пятислойная онтологическая структура
 
 ```
-                   ⚬ (апейрическая пустота)
-                          │
-                    [вне формализации]
-                          ↓
-       1. Διάκрисис (акт; феноменологически дан)
-                          │
-                 [частично формализуемо]
-                          ↓
-        2. Нулевая граница Z (асимптотика)
-                          │
-                 [формально описуемо]
-                          ↓
-      3. Канонический примитив (⟪⟫, 𝖬, α_math, ⊏_•)
-                          │
-                 [детально формализовано]
-                          ↓
-              4. ρ-проекции: извлечения
-                 ZFC, HoTT, NCG, linear, AFA,
-                 cohesive, motivic, realizability
-                          │
-                          ↓
-              5. Сборки: конкретные теории
-                 УГМ, SM, IIT/GWT/HOT
+   ⚬ (апейрическая пустота)
+            │   [вне формализации]
+            ↓
+ 1. Διάκрисис (акт; феноменологически дан)
+            │   [частично формализуемо]
+            ↓
+ 2. Нулевая граница Z (асимптотика, 16.T1)
+            │   [формально описуемо]
+            ↓
+ 3. Канонический примитив (⟪⟫, 𝖬, α_math, ⊏_•)
+            │   [детально формализовано]
+            ↓
+ 4. ρ-проекции: извлечения
+    ZFC · HoTT · NCG · linear · AFA ·
+    cohesive · motivic · realizability
+            │
+            ↓
+ 5. Сборки: конкретные теории
+    УГМ · SM · IIT / GWT / HOT
 ```
 
-- **Уровень 0** (⚬): вне Diakrisis.
-- **Уровень 1** (Διάκрисис): не формализуется полностью — пятиосевая абсолютность AFN-T.
-- **Уровень 2** (Z): три эквивалентные характеризации (16.T1).
-- **Уровень 3**: канонический примитив с 13 аксиомами.
-- **Уровень 4**: ρ-проекции — точные реализации конкретных оснований.
-- **Уровень 5**: сборки — УГМ (α_uhm, ν = ω·3+1), SM, cons-теории.
-
-## Каталог артикуляций
-
-| α | S | ν |
-|---|---|---|
-| α_zfc | ZFC | ω |
-| α_hott | HoTT | ω+1 |
-| α_cic | CIC | ω+2 |
-| α_realiz (93.T) | ZF+PCA | ω+1 |
-| α_linear | linear+! | ω+1 |
-| α_affine | affine без ! | ≤ ω |
-| α_AFA-coalg | NBG+AFA | ω·2 |
-| α_ncg | Connes | ω·2 |
-| α_∞topos | Lurie | ω·2 |
-| α_cohesion (91.T) | ZFC+cohesion | ω·2 |
-| α_poly-HoTT | Poly-HoTT | ω·2+1 |
-| α_motivic (92.T) | ZFC+inacc | ω·2+1 |
-| α_Д-hybrid | linear+AFA+! | ω·2+1 |
-| α_uhm | NBG+AFA | ω·3+1 |
-| α_inf-cat | (∞,∞) | Ω |
-| α_Apeiron | R-S | Ω |
-
-Все — в пределах R-S, не достигают уровня 6 (AFN-T).
-
-## УГМ и UFH
-
-**УГМ** (Унитарный Голономный Монизм) — флагманская физико-математическая сборка:
-
-- Γ ∈ D(ℂ⁷) — плотностная матрица на 7D.
-- ℒ_Ω = ℒ_0 + ℛ — Lindblad + regeneration.
-- φ: Γ → ρ\* — категорная self-модель.
-- T-96: ρ\* = φ(Γ) (фиксированная точка).
-
-**UFH (85.T)** — полное соответствие УГМ ↔ Diakrisis:
-
-$$\alpha_{uhm} \cong_M \alpha_{\text{Д-hybrid}} \otimes 7D\text{-quantum}$$
-
-через gauge-группу S₇ × U(1) = (S₇ × U(7))/normal.
-
-Следствие: Verum-формализация УГМ сводится к формализации α_Д-hybrid + 7D-quantum (программа ≈ 75 сессий, 78.T).
+---
 
 ## Статусы утверждений
 
-- **[Т]** — теорема (полное доказательство).
-- **[Т-набр]** — строгий набросок.
-- **[Г]** — гипотеза (оставшаяся).
-- **[С]** — условное (при явном допущении).
-- **[О]** — определение.
-- **[И]** — интерпретация.
-- **[П]** — постулат.
-- **[Программа]** — practical programme, не чисто теоретическое.
+- **[Т]** теорема (полное доказательство) · **[Т-набр]** строгий набросок
+- **[Г]** гипотеза · **[С]** условное (при явном допущении)
+- **[О]** определение · **[И]** интерпретация · **[П]** постулат
+- **[Программа]** практическая программа
 
-## Структура документации
+**Уровни строгости** (L1 / L2 / L3) — каждая теорема классифицирована по П-0.6.
 
-### 0. Основания
-Методология (11-принципы П-0.0..П-0.7), правила рабочей зоны, нулевая граница.
-
-### 1. Феномен различения
-Διάκрисις как акт. Феноменологическая данность. Философские параллели. Невозможность полной формализации.
-
-### 2. Канонический примитив
-Четвёрка (⟪⟫, 𝖬, α_math, ⊏_•), 13 аксиом, производные понятия, центральные теоремы 10.T1–19.T.
-
-### 3. Формальная архитектура
-2-категорная структура, ι-вложение, когезия, fibration, gauge, S4-модальность, двойственности, модельная теория, кардинальный анализ, non-classical articulations.
-
-### 4. Извлечения оснований
-ZFC, HoTT, NCG, ∞-Topos, CIC, logics catalog.
-
-### 5. Сборки
-УГМ (флагман), Стандартная модель, теории сознания (IIT, GWT, HOT, Orch-OR).
-
-### 6. Пределы формализации
-AFN-T (α-часть), AFN-T (β-часть), AFN-T, no-go series, Path-of-limit-failure, what-remains-possible, **абсолютность** (5-уровневая, 55.T–69.T + 83.T–87.T), **финальные теоремы** (70.T–97.T), **intensional refinement** (98.T–99.T), **meta-classification Level 5+** (100.T–102.T), **maximality proofs** (103.T–106.T: Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема).
-
-### 7. Методология
-Рекурсивные аудиты, негативные уроки.
-
-### 8. Исторический контекст
-Анаксимандр, Гегель, Брауэр, Deleuze/Simondon, традиция no-go.
-
-### 9. Применения
-Путь Б — формализация УГМ в Verum.
-
-### 10. Справочник
-Глоссарий, каталоги аксиом и теорем, статус программ.
-
-## Маршруты чтения
-
-### А — быстрое понимание (час)
-1. Это введение.
-2. [/06-limits/02-th-final](/06-limits/02-th-final) — граничная лемма.
-3. [/06-limits/06-absoluteness](/06-limits/06-absoluteness) — пятиуровневая абсолютность.
-4. [/02-canonical-primitive/00-overview](/02-canonical-primitive/00-overview) — формальное ядро.
-5. [/05-assemblies/01-uhm](/05-assemblies/01-uhm) — флагман-сборка.
-
-### Б — математическая форма (день-два)
-1. `/00-foundations/*` — методология.
-2. `/02-canonical-primitive/*` — канонические определения.
-3. `/03-formal-architecture/*` — архитектура.
-4. `/06-limits/*` — пределы, абсолютность, финальные теоремы.
-5. [/10-reference/02-theorems-catalog](/10-reference/02-theorems-catalog) — полный каталог.
-
-### В — полное погружение (многие сессии)
-Весь корпус последовательно.
-
-### Г — для участников Пути Б
-1. Это введение.
-2. [/09-applications/00-path-B-uhm-formalization](/09-applications/00-path-B-uhm-formalization).
-3. [/09-applications/01-verum-integration](/09-applications/01-verum-integration).
-4. [/05-assemblies/01-uhm](/05-assemblies/01-uhm).
-
-## Что Diakrisis не делает
-
-- **Не** «теория всего» — такая формально невозможна (пятиосевая абсолютность AFN-T).
-- **Не** замена ZFC/HoTT/NCG — **вмещает** их как gauge-классы.
-- **Не** философская спекуляция — содержание строго математическое.
-- **Не** претензия на уровень 6 — формально опровергнута 5-уровневой абсолютностью.
-
-**Уровень 5+**: мета-структура над пространством оснований уровня 5.
-
-Детальная иерархия уровней (0..5+, 6), соответствие мат-аппарату и обоснование статуса Diakrisis: [/00-foundations/05-level-hierarchy](/00-foundations/05-level-hierarchy).
-
-## Место в ландшафте
-
-- **Классические основания** (ZFC, ETCS, CIC, HoTT — уровень 5): точки в 𝓜_Fnd.
-- **Higher category theory** (Lurie HTT, Riehl-Verity): используется как техника.
-- **Univalent Foundations**, **2-topoi Шульмана**: близкие по уровню проекты с другим фокусом.
-- **Cohesive ∞-topos** (Schreiber): реализуется через α_cohesion (91.T).
-- **Motivic theory** (Grothendieck-Voevodsky): α_motivic (92.T).
-- **Realizability** (Hyland): α_realiz (93.T).
-
-Diakrisis — **мета-структурное** описание пространства всех этих оснований + их Morita-эквивалентностей, с формально установленными пределами.
+---
 
 ## Состояние проекта
 
-**Теоретически**: закрыто. 106 теорем в номерной системе (включая 98.T–99.T intensional refinement, 100.T–102.T meta-classification Level 5+, **103.T–106.T maximality proofs — Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**), 5-уровневая абсолютность, UFH доказана.
+**Теоретически**: закрыто на всех четырёх слоях. 106 теорем в номерной системе (119+ с под-теоремами).
 
-**Практически**: 6 открытых программ:
+**Практически**: 6 открытых программ — **П1** Verum-формализация УГМ · **П2** экспериментальная верификация · **П3** SM-детализация · **П4** $(\infty, \infty)$-прувер · **П5** AGI/ASI-расширения (SYNARC) · **П6** публикация MSFS.
 
-- **П1**: Verum-формализация УГМ (≈ 75 сессий).
-- **П2**: экспериментальная верификация УГМ.
-- **П3**: SM-детализация.
-- **П4**: (∞,∞)-прувер реализация.
-- **П5**: AGI/ASI-расширения (активная через SYNARC).
-- **П6**: Educational + публикация.
+Детали: [`/10-reference/03-gap-status`](/10-reference/03-gap-status).
 
-Детали программ: [/10-reference/03-gap-status](/10-reference/03-gap-status).
+---
+
+## Маршруты чтения
+
+### А · быстрое понимание (час)
+1. Это введение.
+2. [`/06-limits/02-th-final`](/06-limits/02-th-final) — граничная лемма AFN-T.
+3. [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) — maximality proofs.
+4. [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) — пятиосевая абсолютность.
+5. [`/02-canonical-primitive/00-overview`](/02-canonical-primitive/00-overview) — формальное ядро.
+6. [`/05-assemblies/01-uhm`](/05-assemblies/01-uhm) — флагман-сборка.
+
+### Б · математическая форма (день-два)
+1. `/00-foundations/*` — методология + ν-стратификация.
+2. `/02-canonical-primitive/*` — канонический примитив.
+3. `/03-formal-architecture/*` — 2-категорная архитектура.
+4. `/06-limits/*` — пределы, абсолютность, meta-classification, maximality.
+5. [`/10-reference/02-theorems-catalog`](/10-reference/02-theorems-catalog) — полный каталог.
+
+### В · полное погружение
+Весь корпус последовательно.
+
+### Г · для участников Пути Б
+1. Это введение.
+2. [`/09-applications/00-path-B-uhm-formalization`](/09-applications/00-path-B-uhm-formalization).
+3. [`/05-assemblies/01-uhm`](/05-assemblies/01-uhm).
+
+---
 
 ## Следующий шаг
 
-[/00-foundations/00-what-is-diakrisis](/00-foundations/00-what-is-diakrisis) — углублённое введение.
+**Для обзора:** [`/00-foundations/00-what-is-diakrisis`](/00-foundations/00-what-is-diakrisis) — углублённое введение.
 
-Для Пути Б: [/09-applications/00-path-B-uhm-formalization](/09-applications/00-path-B-uhm-formalization).
+**Для формального старта:** [`/02-canonical-primitive/00-overview`](/02-canonical-primitive/00-overview) — канонический примитив.
+
+**Для рецензента:** [*MSFS*](/10-reference/04-afn-t-correspondence) — самодостаточный препринт (44 стр.).
+
+**Для Пути Б:** [`/09-applications/00-path-B-uhm-formalization`](/09-applications/00-path-B-uhm-formalization).

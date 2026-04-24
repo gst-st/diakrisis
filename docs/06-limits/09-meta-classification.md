@@ -128,7 +128,7 @@ $$
 
 ## Связь с пятиосевая абсолютность AFN-T
 
-- **100.T** подтверждает, что самоклассификация meta-structures не даёт новой структурной оси ABSOLUTA_TOTALIS.
+- **100.T** подтверждает, что самоклассификация meta-structures не даёт новой структурной оси пятиосевая абсолютность AFN-T.
 - **101.T** показывает, что plurality не эскалирует в Level 6 (multiplicity consistent с AFN-T).
 - **102.T** закрывает meta-iteration loop: нет способа эскалировать в Level 6 через mutual classification.
 

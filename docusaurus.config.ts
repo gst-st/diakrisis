@@ -114,7 +114,7 @@ const config: Config = {
   themeConfig: {
     metadata: [
       {name: 'author', content: 'Diakrisis Authors'},
-      {name: 'description', content: 'Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований с пятиуровневой абсолютностью TH-Final (ABSOLUTA_TOTALIS). ~129 теорем с L1/L2/L3 классификацией строгости. UFH-мост к УГМ через Grothendieck-конструкцию.'},
+      {name: 'description', content: 'Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований 𝓜_Fnd. 106 теорем: четырёхуровневое закрытие (extensional / intensional / meta-classification / maximality) с пятиосевой абсолютностью граничной леммы AFN-T и доказанным членством в 𝓛_Cls^⊤. UFH-мост к УГМ через Grothendieck-конструкцию.'},
     ],
     image: 'img/logo.svg',
     colorMode: {
@@ -155,7 +155,12 @@ const config: Config = {
         {
           to: '/06-limits/02-th-final',
           position: 'left',
-          label: 'TH-Final',
+          label: 'AFN-T',
+        },
+        {
+          to: '/06-limits/10-maximality-theorems',
+          position: 'left',
+          label: 'Maximality',
         },
         {
           to: '/10-reference/02-theorems-catalog',
@@ -183,10 +188,11 @@ const config: Config = {
         {
           title: 'Ключевые результаты',
           items: [
-            {label: 'TH-Final', to: '/06-limits/02-th-final'},
-            {label: 'Universal Foundation (29.T)', to: '/04-extractions/00-overview'},
+            {label: 'AFN-T (граничная лемма)', to: '/06-limits/02-th-final'},
+            {label: 'Maximality proofs (103.T–106.T)', to: '/06-limits/10-maximality-theorems'},
+            {label: 'Meta-classification (100.T–102.T)', to: '/06-limits/09-meta-classification'},
             {label: 'Classifying Space (43.T1)', to: '/02-canonical-primitive/03-derived-notions'},
-            {label: 'УГМ-сборка', to: '/05-assemblies/01-uhm'},
+            {label: 'УГМ-сборка (UFH / 85.T)', to: '/05-assemblies/01-uhm'},
           ],
         },
         {

@@ -125,7 +125,7 @@ type Dependency = {
 - `add_dependency(articulation, source, target, type) -> Result<Articulation, AcyclicityViolation>`
 - `iterate_metaization(α: Articulation, k: Ordinal) -> Articulation` — применения 𝖬^k
 - `project_rho(α: Articulation) -> ConcreteCategory` — ρ-проекция.
-- `check_th_final(α: Articulation) -> TH_Final_Compliance`
+- `check_afn_t(α: Articulation) -> AFN_T_Compliance`
 
 ### Category Engine (движок категорий)
 
