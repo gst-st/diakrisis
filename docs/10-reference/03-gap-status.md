@@ -34,7 +34,7 @@ title: Статус программ
 | # | Gap | Статус |
 |---|---|---|
 | 01-15 | исходные gap'ы | ✅ закрыто |
-| 16 | Shulman 2-topos отличие | ✅ 11.C6 |
+| 16 | Шульман 2-topos отличие | ✅ 11.C6 |
 | 17 (N-04a) | SM как gauge-класс | 🟡 в программе (П3) |
 | N-04b | Интенсиональное уточнение (gauge-обогащение) | ✅ закрыто (98.T + 99.T) |
 | N-05 | Meta-classification уровень 5+ (самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$) | ✅ закрыто (100.T + 101.T + 102.T) |
@@ -85,7 +85,7 @@ title: Статус программ
 
 **Фазы**:
 1. α_Д-linear в Verum (10-20 сессий).
-2. α_Д-AFA через Aczel M-types (10-20 сессий).
+2. α_Д-AFA через Ачел M-types (10-20 сессий).
 3. α_Д-hybrid гибрид (10-20 сессий).
 4. D(ℂ⁷) + 7D-quantum (15-25 сессий).
 5. Tensor factorization + UFH-верификация (10-20 сессий).
@@ -111,7 +111,7 @@ title: Статус программ
 **Статус**: ✅ **формально закрыто** через 98.T + 99.T.
 
 **Содержание закрытия**:
-- **98.T** [Т·L2]: функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ построен через pullback-стабильные дисплейные 2-семейства (2-categorical lift Jacobs-Streicher, Gambino-Garner 2008). Доказаны свойства: homotopy invariance, gauge covariance, strict refinement of Morita (контрпример MLTT vs ETT, Hofmann 1995), Morita как 2-локализация **I**.
+- **98.T** [Т·L2]: функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ построен через pullback-стабильные дисплейные 2-семейства (2-categorical lift Джейкобс-Штрайхер, Гамбино-Гарнер 2008). Доказаны свойства: homotopy invariance, gauge covariance, strict refinement of Morita (контрпример MLTT vs ETT, Хофман 1995), Morita как 2-локализация **I**.
 - **99.T** [Т·L2]: образ **I** slice-локален — существует 2-Гротендик-фибрация $\widetilde{\pi}: \mathcal{S}_\mathrm{int} \to \mathcal{M}_\mathrm{Fnd}$ такая, что $\pi = \widetilde{\pi} \circ \mathbf{I}$. Интенсиональное уточнение параметризует слои $\mathrm{Int}([\alpha])$ над gauge-классами, не базу. пятиосевая абсолютность AFN-T не затронута.
 
 **Структурное значение**: закрытие genuine-gap в защитах AFN-T на интенсиональный-уровне. В связке с мета-классификация (N-05 через 100.T–102.T) корпус Diakrisis полностью устойчив к стандартным атакам на всех трёх уровнях: extensional — 5-осевая абсолютность; интенсиональный — slice-locality 99.T; мета-классификация — стабилизация 102.T.
@@ -121,8 +121,8 @@ title: Статус программ
 **Статус**: ✅ **формально закрыто** через 100.T + 101.T + 102.T. Вопрос о позиции Diakrisis в пространстве уровень 5+ meta-structures закрыт в полной категорной строгости.
 
 **Содержание закрытия**:
-- **100.T** [Т·L2]: условная мета-категоричность. Любые две максимальные (удовлетворяющие (Max-1)–(Max-4)) уровень 5+ meta-structures (∞,∞)-эквивалентны. Доказательство через $T_{5+}^{\max}$ как accessible 2-theory + Lair's 2-categoricity (Адамек-Росицкий 1994) + Lurie HTT §5.4.2 для (∞,∞)-extension.
-- **101.T** [Т·L2]: структурный плюрализм. Без максимальности существуют минимум три попарно не-2-эквивалентных уровень 5+ meta-structures: $\mathbf{F}_\mathrm{univalent}$ (Воеводский UF programme), $\mathbf{F}_\mathrm{cosmoi}$ (Рил-Verity 2022), $\mathbf{F}_\mathrm{cohesive}$ (Шрайбер 2013). Доказательство через explicit различие $\mathrm{image}(\mathrm{Cl})$.
+- **100.T** [Т·L2]: условная мета-категоричность. Любые две максимальные (удовлетворяющие (Max-1)–(Max-4)) уровень 5+ meta-structures (∞,∞)-эквивалентны. Доказательство через $T_{5+}^{\max}$ как accessible 2-theory + Lair's 2-categoricity (Адамек-Росицкий 1994) + Люри HTT §5.4.2 для (∞,∞)-extension.
+- **101.T** [Т·L2]: структурный плюрализм. Без максимальности существуют минимум три попарно не-2-эквивалентных уровень 5+ meta-structures: $\mathbf{F}_\mathrm{унивалентный}$ (Воеводский UF programme), $\mathbf{F}_\mathrm{cosmoi}$ (Рил-Верити 2022), $\mathbf{F}_\mathrm{cohesive}$ (Шрайбер 2013). Доказательство через explicit различие $\mathrm{image}(\mathrm{Cl})$.
 - **102.T** [Т·L2]: мета-классификация стабилизация. Classifying 2-stack $\mathfrak{M}^{(5+)}$ meta-structures сам является уровень 5+ meta-structure; $\mathfrak{M}^{(5+ \cdot 2)} \simeq_2 \mathfrak{M}^{(5+)}$ (idempotence); уровень 6 эскалация структурно невозможна. Доказательство через 68.T-analogue стабилизация.
 
 **Структурное значение**: Diakrisis формально зафиксирована как **максимальный и канонический** (но не единственный) представитель плюралистичного класса $\mathfrak{Meta}_{5+}$. Альтернативные уровень 5+ meta-structures (∞-cosmoi, UF, cohesive) сосуществуют как partial representatives. Взаимная мета-классификация замкнута, уровень 6 эскалация невозможна. Самоописание Diakrisis завершено.
@@ -143,8 +143,8 @@ title: Статус программ
 По **82.T**: требует transfinite automation — долгосрочная программа.
 
 **Направления**:
-- Synthetic (∞,∞)-Cat (Рил-Verity).
-- Higher Observational Type Theory (Awodey-Shulman).
+- Synthetic (∞,∞)-Cat (Рил-Верити).
+- Higher Observational Type Theory (Эводи-Шульман).
 - Simplicial HoTT (Buchholtz).
 
 ### П5. AGI/ASI-расширения

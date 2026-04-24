@@ -11,7 +11,7 @@ title: Канонический дуальный примитив Актика
 
 :::tip MSFS-первоисточник
 
-MSFS §11 Definition~\ref{def:enactments} — формальная инстанциация Diakrisis-абстрактного примитива. $\rangle\!\rangle \cdot \langle\!\langle$ соответствует $\cE$ в MSFS. Абстрактный $\varepsilon$-объект реализуется как **квадрупл** $(F, \cC, \iota, r)$ с **выбранным reflector'ом** $r : \cC \to \Syn(F)$ как частью данных (а не вспомогательным объектом), с тождествами треугольника в $\mathbf{StrCat}_{S, n_F}$. Уникальность $r$ по $\iota$ up to unique invertible 2-cell — стандартная (Рил–Verity 2022, Адамек–Росицкий 1994). Формальный изложение — MSFS §11; здесь — абстрактное изложение и Diakrisis-специфические расширения ($\mathsf{A}$-функтор, $\sqsupset_\bullet$, ε-инвариант, аксиомы A-0..A-9). Соответствие объектов — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+MSFS §11 Definition~\ref{def:enactments} — формальная инстанциация Diakrisis-абстрактного примитива. $\rangle\!\rangle \cdot \langle\!\langle$ соответствует $\cE$ в MSFS. Абстрактный $\varepsilon$-объект реализуется как **квадрупл** $(F, \cC, \iota, r)$ с **выбранным reflector'ом** $r : \cC \to \Syn(F)$ как частью данных (а не вспомогательным объектом), с тождествами треугольника в $\mathbf{StrCat}_{S, n_F}$. Уникальность $r$ по $\iota$ up to unique invertible 2-cell — стандартная (Рил–Верити 2022, Адамек–Росицкий 1994). Формальный изложение — MSFS §11; здесь — абстрактное изложение и Diakrisis-специфические расширения ($\mathsf{A}$-функтор, $\sqsupset_\bullet$, ε-инвариант, аксиомы A-0..A-9). Соответствие объектов — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 

@@ -57,7 +57,7 @@ $$
 | **$\mathcal{L}_3$** | 2-подкатегория $\mathcal{C} \subset \alpha_\Vert$, закрытая под $\mathsf{M}\vert_\mathcal{C}$ (область методов) | $\nu_\mathcal{C} = \omega \cdot k$, $2 \leq k < \omega$ | Group theory, algebraic geometry, homological algebra, probability, $(\infty, n)$-categories |
 | **$\mathcal{L}_4$** | 2-функтор $\Phi: \mathcal{C} \to \mathcal{D}$ между $\mathcal{L}_3$-классами, сохраняющий 𝖬 (парадигма) | $\nu(\Phi) = \omega^2$ (= $\omega \cdot \omega$) | Sheaves, schemes, HoTT-парадигма, motivic programme, condensed, Langlands, higher algebra |
 | **$\mathcal{L}_5^\mathrm{weak}$** | $\alpha$ удовлетворяет (R2)–(R5) и ограниченной форме (R1): слабая Rich-метатеория с ограниченной категорной глубиной $n_S$ | $\nu(\alpha) < \kappa_1$ | I∆₀, Buss $\mathsf{S}_2^i$/$\mathsf{T}_2^i$, $\mathsf{V}_0$, полиномиально-ограниченная арифметика, исчисления осуществимости (MSFS §3.4 Boundary cases; Q5). |
-| **$\mathcal{L}_5$** | $\alpha$ удовлетворяет (R1)–(R5): Rich formal system | $\kappa_1 \leq \nu(\alpha) < \kappa_2$ (как объект $\mathbf{StrCat}_{S, n}$) | ZFC, HoTT, CIC, ECC, NCG, MLTT, Eff, ∞-topos theory, Markov-конструктивизм, Bishop-конструктивизм, Феферман-предикативизм |
+| **$\mathcal{L}_5$** | $\alpha$ удовлетворяет (R1)–(R5): Rich formal system | $\kappa_1 \leq \nu(\alpha) < \kappa_2$ (как объект $\mathbf{StrCat}_{S, n}$) | ZFC, HoTT, CIC, ECC, NCG, MLTT, Eff, ∞-topos theory, Markov-конструктивизм, Бишоп-конструктивизм, Феферман-предикативизм |
 | **$\mathcal{L}_{5+}$** | meta-articulation $\mathfrak{A}$, удовлетворяет (M1)–(M5) | $\nu(\mathfrak{A}) \geq \kappa_2$ | Diakrisis, $\infty$-cosmoi (Риль–Верити), Univalent Foundations, cohesive higher topos (Шрайбер), Higher Algebra (Люри) |
 | **$\mathcal{L}_{5+}^{\max}$** | $\mathfrak{A} \in \mathcal{L}_{5+}$ + (Max-1)–(Max-4) | $\nu(\mathfrak{A}) \geq \kappa_2$ + full image $\mathfrak{M}_\mathrm{Fnd}$ | **Diakrisis** (единственная, 100.T условная категоричность) |
 | **$\mathcal{L}_6$** | $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$: абсолютное основание | $\nu$ выходит за Mahlo-иерархию R-S | **Пусто** по AFN-T (препринт теорема `thm:afnt`) |
@@ -115,7 +115,7 @@ $$
 - *Atiyah–Singer* (в α_diff_geo): index $= \hat A$-genus.
 - *Fermat Last* (Wiles в α_arith): $x^n + y^n = z^n$ без нетривиальных решений.
 - *Poincaré* (Perelman в α_diff_topo): симплициально-связные 3-многообразия $\sim S^3$.
-- *Cobordism Hypothesis* (Lurie в α_∞_cat): $(\infty, n)$-TQFT = fully dualizable object.
+- *Cobordism Hypothesis* (Люри в α_∞_cat): $(\infty, n)$-TQFT = fully dualizable object.
 
 ### $\mathcal{L}_3$ — область методов
 
@@ -166,14 +166,14 @@ $$
 - Конн: **non-commutative geometry** (NCG).
 - Ловер–Kock: **synthetic differential geometry** (SDG).
 - Gromov–Witten–Kontsevich: **mirror symmetry**.
-- Joyal–Lurie: **$(\infty, 1)$-categories**, **higher algebra**.
-- Awodey–Воеводский: **HoTT**, **univalent foundations**.
+- Joyal–Люри: **$(\infty, 1)$-categories**, **higher algebra**.
+- Эводи–Воеводский: **HoTT**, **унивалентный foundations**.
 - Scholze: **perfectoid spaces**.
 - Clausen–Scholze: **condensed mathematics**.
 - Langlands: **Langlands programme**, **geometric Langlands**.
-- Рил–Verity: **$\infty$-cosmoi**.
+- Рил–Верити: **$\infty$-cosmoi**.
 - Шрайбер: **cohesive higher topos theory**.
-- Lurie: **higher topos theory**.
+- Люри: **higher topos theory**.
 - Reverse mathematics; algorithmic information theory.
 
 **Замечание**: парадигма *сама* ещё не является Rich-системой (R-S) — она *использует* уровень 5 как параметр. Пример: HoTT как **формальная система** $\in \mathcal{L}_5$; HoTT как **парадигма рассуждения** $\in \mathcal{L}_4$. Функциональная двойственность отражает переход от теории к мета-теории.
@@ -197,7 +197,7 @@ $$
 - Арифметические: PA, $\mathrm{Z}_2$.
 - Тип-теоретические: MLTT, CIC, ECC, HoTT, cubical HoTT, universe-polymorphic HoTT.
 - Substructural: Linear logic + !.
-- Продвинутые: AFA (Aczel), $(\infty, 1)$-topos theory (Lurie), NCG (Конн), cohesive $(\infty, 1)$-topos (Шрайбер), motivic $\mathrm{SH}(k)$ (Воеводский), realizability (Хайленд Eff), SDG (Ловер–Kock), elementary higher topos (Shulman).
+- Продвинутые: AFA (Ачел), $(\infty, 1)$-topos theory (Люри), NCG (Конн), cohesive $(\infty, 1)$-topos (Шрайбер), motivic $\mathrm{SH}(k)$ (Воеводский), realizability (Хайленд Eff), SDG (Ловер–Kock), elementary higher topos (Шульман).
 
 ### $\mathcal{L}_{5+}$ — мета-каркас
 
@@ -214,11 +214,11 @@ $$
 | Проект | Авторы | Год | Scope | $\in \mathcal{L}_{5+}^{\max}$? |
 |---|---|---|---|---|
 | **Diakrisis** | — | 2025+ | Всё $\mathfrak{M}_\mathrm{Fnd}$ | ✅ Да |
-| $\infty$-cosmoi | Рил–Verity | 2022 | $(\infty, 1)$-theories | ❌ Нет |
-| Univalent Foundations | Awodey, Воеводский | 2010+ | HoTT-расширения | ❌ Нет |
+| $\infty$-cosmoi | Рил–Верити | 2022 | $(\infty, 1)$-theories | ❌ Нет |
+| Univalent Foundations | Эводи, Воеводский | 2010+ | HoTT-расширения | ❌ Нет |
 | Cohesive каркас (DCCT) | Шрайбер | 2013 | Cohesive $\infty$-topoi | ❌ Нет |
-| Higher Algebra (Lurie HA) | Lurie | 2017+ | Stable $\infty$-cat + operadic | ❌ Нет |
-| Synthetic mathematics | Taylor, Shulman et al. | 2000+ | Axiomatic synthetic | ❌ Нет |
+| Higher Algebra (Люри HA) | Люри | 2017+ | Stable $\infty$-cat + operadic | ❌ Нет |
+| Synthetic mathematics | Taylor, Шульман et al. | 2000+ | Axiomatic synthetic | ❌ Нет |
 
 ### $\mathcal{L}_{5+}^{\max}$ — максимальный подкласс
 
@@ -268,7 +268,7 @@ $$
 ### Пример двойственной роли: HoTT
 
 - Как **articulation** $\alpha_\mathrm{hott}$: $\nu = \omega + 1$ (счётный ординал), $\in \mathcal{L}_5$.
-- Как **paradigm** (univalent turn): $\Phi_\mathrm{UF}: \alpha_\mathrm{cat} \to \alpha_\mathrm{hott}$ с $\nu(\Phi_\mathrm{UF}) = \omega^2$, $\in \mathcal{L}_4$.
+- Как **paradigm** (унивалентный turn): $\Phi_\mathrm{UF}: \alpha_\mathrm{cat} \to \alpha_\mathrm{hott}$ с $\nu(\Phi_\mathrm{UF}) = \omega^2$, $\in \mathcal{L}_4$.
 
 Эта двойственность — не противоречие, а отражение богатой структуры: HoTT одновременно *объект* изучения и *инструмент* переорганизации.
 
@@ -316,7 +316,7 @@ $$
 
 **Diakrisis на уровне 5+^max** (MSFS (Max-1)–(Max-4), **все четыре доказаны как 103.T–106.T**, см. [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)):
 
-- **(Max-1)** [Т] Full classification: $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$ — Теорема **103.T** через универсальную конструкцию $S \mapsto \alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S)$ (Seely 1984 + Hofmann 1997 + Адамек–Росицкий 1994).
+- **(Max-1)** [Т] Full classification: $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$ — Теорема **103.T** через универсальную конструкцию $S \mapsto \alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S)$ (Сили 1984 + Хофман 1997 + Адамек–Росицкий 1994).
 - **(Max-2)** [Т] Gauge-fullness через автоэквивалентности ⟪⟫: $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$ — Теорема **104.T** через поднятие Морита-эквивалентностей R-S.
 - **(Max-3)** [Т] Depth-stratification через T-2f\* ([`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics)) — блокирует *универсально* (не только 5 семейств) все Яновский-сводимые самореферентные парадоксы — Теорема **105.T** через Яновский 2003 + глубину экспоненциалов.
 - **(Max-4)** [Т] Интенсиональная полнота через 98.T / 99.T ([`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement)): slice-локальность $\mathbf{I}_\mathrm{Diakrisis}$ над $\mathfrak{M}_\mathrm{Fnd}$ через эффективный топос Хайланда.
@@ -330,10 +330,10 @@ $$
 | ⟪⟫ как 2-категория | Accessible 2-category | Адамек-Росицкий 1994 |
 | 𝖬 | Accessible endofunctor | Адамек 1974 |
 | Trace(𝖠) | Initial 𝖬-algebra | Адамек 1974 |
-| ι: End(⟪⟫) ↪ ⟪⟫ | 2-topos-like inclusion | Shulman 2008 |
-| $\mathfrak{M}_\mathrm{Fnd}$ | Classifying 2-stack | Lurie HTT 2009 §3.2 |
-| Gauge-группа G | Automorphism 2-group | Kelly 1982 |
-| Интенсиональное уточнение $\mathbf{I}$ | Display 2-classes | Jacobs-Streicher, Gambino-Garner 2008 |
+| ι: End(⟪⟫) ↪ ⟪⟫ | 2-topos-like inclusion | Шульман 2008 |
+| $\mathfrak{M}_\mathrm{Fnd}$ | Classifying 2-stack | Люри HTT 2009 §3.2 |
+| Gauge-группа G | Automorphism 2-group | Келли 1982 |
+| Интенсиональное уточнение $\mathbf{I}$ | Display 2-classes | Джейкобс-Штрайхер, Гамбино-Гарнер 2008 |
 
 Все конструкции — **стандартный** $(\infty, \infty)$-категорный аппарат. Никакой новой foundational механики Diakrisis не вводит, только *синтезирует* известное в meta-каркас.
 

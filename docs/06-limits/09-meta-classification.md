@@ -61,7 +61,7 @@ $$
 \mathbf{F}_1 \simeq_{(\infty, \infty)} \mathbf{F}_2.
 $$
 
-**Метод доказательства** (MSFS §9.2): (M1)–(M5) + (Max-1)–(Max-4) образуют *accessible 2-theory* $T_{5+}^{\max}$; по Lair–Makkai–Paré representation (MSFS Lemma `lem:lair`) все модели $T_{5+}^{\max}$ в одной R-S канонически $2$-эквивалентны; через $\Theta_n$-model Rezk 2010 + unicity Барвик–Schommer-Pries 2021 + Уайтхед extension Lurie HTT §6.5.4 — эквивалентность поднимается до $(\infty, \infty)$.
+**Метод доказательства** (MSFS §9.2): (M1)–(M5) + (Max-1)–(Max-4) образуют *accessible 2-theory* $T_{5+}^{\max}$; по Lair–Makkai–Paré representation (MSFS Lemma `lem:lair`) все модели $T_{5+}^{\max}$ в одной R-S канонически $2$-эквивалентны; через $\Theta_n$-model Резк 2010 + unicity Барвик–Schommer-Pries 2021 + Уайтхед extension Люри HTT §6.5.4 — эквивалентность поднимается до $(\infty, \infty)$.
 
 **Следствия** (Diakrisis-specific):
 
@@ -73,13 +73,13 @@ $$
 
 MSFS Theorem `thm:meta-mult`: в $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}_{5+}^{\max}$ существуют **≥ 3** попарно не-$2$-эквивалентных:
 
-- $\mathbf{F}_\mathrm{univalent}$ — Univalent Foundations programme (Воеводский; HoTT Book 2013).
-- $\mathbf{F}_\mathrm{cosmoi}$ — $\infty$-cosmoi (Рил–Verity 2022).
+- $\mathbf{F}_\mathrm{унивалентный}$ — Univalent Foundations programme (Воеводский; HoTT Book 2013).
+- $\mathbf{F}_\mathrm{cosmoi}$ — $\infty$-cosmoi (Рил–Верити 2022).
 - $\mathbf{F}_\mathrm{cohesive}$ — cohesive $(\infty, 1)$-topos каркас (Шрайбер 2013).
 
 **Ключевое свойство**: ни одна не удовлетворяет (Max-1) — их classification-images являются *строго собственными* подстэками $\mathfrak{M}_\mathrm{Fnd}$:
 
-- $\mathrm{image}(\mathrm{Cl}_{\mathbf{F}_\mathrm{univalent}}) = $ HoTT-расширения;
+- $\mathrm{image}(\mathrm{Cl}_{\mathbf{F}_\mathrm{унивалентный}}) = $ HoTT-расширения;
 - $\mathrm{image}(\mathrm{Cl}_{\mathbf{F}_\mathrm{cosmoi}}) = $ $(\infty, 1)$-категорные теории;
 - $\mathrm{image}(\mathrm{Cl}_{\mathbf{F}_\mathrm{cohesive}}) = $ cohesive $\infty$-topoi.
 
@@ -103,7 +103,7 @@ $$
 - **(b) Theory-level стабилизация**: $\mathfrak{M}^{(5+ \cdot 2)}$ реализует ту же $(\infty, \infty)$-теорию, что и $\mathfrak{M}^{(5+)}$, в смысле единственности Барвик–Schommer-Pries. Теоретико-множественная реализация, однако, **не идентична**: $\mathfrak{M}^{(5+ \cdot 2)}$ живёт на один уровень Гротендик-универсума выше, и башня мета-итераций $\{\mathfrak{M}^{(5+ \cdot k)}\}_{k \geq 1}$ поднимается по иерархии недостижимых $\kappa_1 < \kappa_2 < \cdots$. Обозначение $\simeq_2$ фиксирует именно theory-level эквивалентность, а не set-level идентичность.
 - **(c) No уровня 6 escalation**: ни одна мета-итерация $\mathfrak{M}^{(5+ \cdot k)}$ не удовлетворяет уровня 6 условиям $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$ — уровень 5+ meta-структура определима, но не генеративна над Rich-foundations (M4), что противоречит максимальной генеративности.
 
-**Метод доказательства** (MSFS §9.4): формальное вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty,\infty)}$ (категория accessible $(\infty, \infty)$-presheaves над $\fM$) через (M3) + Lurie HTT §5.4.2; следующие итерации Гротендик-construction дают объекты в $\Pi_{(\infty, \infty + k)}$; Барвик–Schommer-Pries unicity (Theorem `thm:bergner-lurie-stab`) даёт theory-level эквивалентность — но не равенство универсумов.
+**Метод доказательства** (MSFS §9.4): формальное вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty,\infty)}$ (категория accessible $(\infty, \infty)$-presheaves над $\fM$) через (M3) + Люри HTT §5.4.2; следующие итерации Гротендик-construction дают объекты в $\Pi_{(\infty, \infty + k)}$; Барвик–Schommer-Pries unicity (Theorem `thm:bergner-lurie-stab`) даёт theory-level эквивалентность — но не равенство универсумов.
 
 **Следствия** (Diakrisis-specific):
 
@@ -117,10 +117,10 @@ $$
 | Meta-structure | Scope classification | Gauge | Stratification | Intensional | $\in \mathfrak{Meta}_{5+}^{\max}$? |
 |---|---|---|---|---|---|
 | **Diakrisis-full** | Всё $\mathfrak{M}_\mathrm{Fnd}$ | ⟪⟫-autoeq | T-2f\* (Рассел+4) | 98.T/99.T | ✅ **Да** |
-| Воеводский UF | HoTT-extensions | Univalence | H-levels (partial) | Cubical | ❌ Нет |
-| Рил–Verity ∞-cosmoi | $(\infty,1)$-theories | Isomorphisms | Не specific | Optional | ❌ Нет |
+| Воеводский UF | HoTT-extensions | Унивалентность | H-levels (partial) | Cubical | ❌ Нет |
+| Рил–Верити ∞-cosmoi | $(\infty,1)$-theories | Isomorphisms | Не specific | Optional | ❌ Нет |
 | Шрайбер cohesive | Cohesive $\infty$-topoi | Cohesion modalities | Не specific | Via cohesion | ❌ Нет |
-| Lurie Higher Algebra | Stable $\infty$-cat + operadic | Standard | Implicit | Partial | ❌ Нет |
+| Люри Higher Algebra | Stable $\infty$-cat + operadic | Standard | Implicit | Partial | ❌ Нет |
 
 ## Уточнения после препринт-аудита
 

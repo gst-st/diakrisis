@@ -7,7 +7,9 @@ title: Структурные теоремы Актика (110.T–127.T)
 
 :::tip MSFS-первоисточник
 
-Теоремы 107.T–109.T имеют формальный аналог в **MSFS §11** (Theorem~ef{thm:ac-oc-duality}, Corollary~\ref{cor:ac-oc-conservativity}, Theorem~ef{thm:dual-afnt}). Теоремы 110.T–127.T — Diakrisis-специфические расширения, не дублируемые в MSFS (они используют Diakrisis-only конструкции: $\mathsf{A}$-функтор, $\sqsupset_\bullet$, ε-инвариант, ОКА-стратификация). Полная таблица соответствия — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) §«AC/OC-дуальность».
+Теоремы 107.T–109.T имеют формальный аналог в **MSFS §11** (Theorem~
+ef{thm:ac-oc-duality}, Corollary~\ref{cor:ac-oc-conservativity}, Theorem~
+ef{thm:dual-afnt}). Теоремы 110.T–127.T — Diakrisis-специфические расширения, не дублируемые в MSFS (они используют Diakrisis-only конструкции: $\mathsf{A}$-функтор, $\sqsupset_\bullet$, ε-инвариант, ОКА-стратификация). Полная таблица соответствия — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) §«AC/OC-дуальность».
 
 :::
 
@@ -266,7 +268,7 @@ $$
 - **(3) $\mathsf{A}$-активация**: $\mathsf{A}(\varepsilon)$ — подъём акта на уровень самосознающей практики. Для BHK-акта это BHK-akt второго порядка (конструкция конструкции); для Ludics-design это desseins-over-designs. Замкнутость следует из accessibility $\mathsf{A}$ (A-2) и того, что каждая формально-логическая традиция имеет $(\infty, 1)$-категорную структуру с $\kappa_1$-filtered colimits.
 - **(4) Gauge**: T-ε_c (конструктивный gauge-инвариант актов) обеспечивает, что gauge-преобразование constructively-enactable акта даёт снова constructively-enactable акт. Formal-logic ДЦ — строгий подкласс constructively-enactable.
 
-**Локальная эквивалентность с $\mathrm{SMC}^{(\infty, 1)}$**: следует из 120.T (Ludics category = symmetric monoidal closed) плюс Curry–Howard-Ламбек изоморфии (пропозиция ↔ тип ↔ категория), применённой покомпонентно к каждой формально-логической традиции. Полная эквивалентность $\rangle\!\rangle \cdot \langle\!\langle_\mathrm{formal\text{-}logic} \simeq \mathrm{SMC}^{(\infty, 1)}$ — в одну сторону через 120.T, в обратную через реконструкцию формально-логической интерпретации для произвольной SMC-структуры (Seely 1989). ∎
+**Локальная эквивалентность с $\mathrm{SMC}^{(\infty, 1)}$**: следует из 120.T (Ludics category = symmetric monoidal closed) плюс Curry–Howard-Ламбек изоморфии (пропозиция ↔ тип ↔ категория), применённой покомпонентно к каждой формально-логической традиции. Полная эквивалентность $\rangle\!\rangle \cdot \langle\!\langle_\mathrm{formal\text{-}logic} \simeq \mathrm{SMC}^{(\infty, 1)}$ — в одну сторону через 120.T, в обратную через реконструкцию формально-логической интерпретации для произвольной SMC-структуры (Сили 1989). ∎
 
 **Следствие 127.C1** (Verum-следствие). Stdlib-слой `core.action.formal-logic.*` в Verum ([`/12-actic/09-verum-stdlib-sketch`](/12-actic/09-verum-stdlib-sketch)) имеет каноническое категорное обоснование через 127.T: $(\infty, 1)$-SMC-структура на core.action является минимально-достаточной для покрытия всех формально-логических ДЦ-традиций.
 

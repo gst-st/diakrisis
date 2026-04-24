@@ -169,7 +169,7 @@ Cubical HoTT — гибрид.
 | Свойство | CIC | HoTT |
 |---|---|---|
 | Identity type | β-reducing | path type |
-| Univalence | отсутствует | аксиома |
+| Унивалентность | отсутствует | аксиома |
 | Quotient types | через setoids | native (HITs) |
 | Computational | тотальное | частично (cubical) |
 | Universe | cumulative | non-cumulative |

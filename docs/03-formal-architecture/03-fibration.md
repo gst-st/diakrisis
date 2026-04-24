@@ -121,7 +121,7 @@ $$p^{-1}(\alpha) = \{(\alpha, F) : F \in \mathrm{End}(\llbracket\cdot\rrbracket)
 - Гротендик (1960-1971): SGA 1, 4, 6 — теория фибраций.
 - Street (1980s): 2-fibrations — 2-категорный вариант.
 - Bénabou: conceptualization in bicategories.
-- Hermida-Jacobs: fibrations for categorical logic.
+- Hermida-Джейкобс: fibrations for categorical logic.
 
 Вся теория — стандартна. Применение к Diakrisis — специфическое.
 
@@ -129,7 +129,7 @@ $$p^{-1}(\alpha) = \{(\alpha, F) : F \in \mathrm{End}(\llbracket\cdot\rrbracket)
 
 - **Street fibration** (1980): слабое понятие, для бикатегорий.
 - **2-fibration** (Hermida 1999): более сильное, cloven split.
-- **Cartesian fibration** (Lurie HTT): (∞,1)-обобщение.
+- **Cartesian fibration** (Люри HTT): (∞,1)-обобщение.
 
 Мы используем 2-fibration (Hermida-style) — адекватно для 2-категорий и согласовано с cohesion.
 

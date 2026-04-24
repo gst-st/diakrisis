@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: ∞-Topos Lurie
+title: ∞-Topos Люри
 ---
 
 # ∞-Topos как извлечение
@@ -11,7 +11,7 @@ title: ∞-Topos Lurie
 
 ## Обзор
 
-∞-Топосы (Lurie HTT, 2009) — обобщение теории топосов на (∞,1)-категорный контекст. Объединяют high-level category theory с homotopy theory. В Diakrisis: α_∞topos.
+∞-Топосы (Люри HTT, 2009) — обобщение теории топосов на (∞,1)-категорный контекст. Объединяют high-level category theory с homotopy theory. В Diakrisis: α_∞topos.
 
 ### Значение ∞-топосов
 
@@ -37,7 +37,7 @@ title: ∞-Topos Lurie
 - **Высшие морфизмы**: естественные ∞-преобразования.
 - **α_math**: выделенный ∞-топос (например, ∞Grpd).
 
-## Lurie HTT conditions (6.1.0.6)
+## Люри HTT conditions (6.1.0.6)
 
 (∞,1)-категория ℰ — ∞-топос ⇔:
 1. Presentability.
@@ -73,7 +73,7 @@ title: ∞-Topos Lurie
 
 ### Соответствие в Diakrisis
 
-| Lurie условие | В Diakrisis |
+| Люри условие | В Diakrisis |
 |---|---|
 | Presentability | Axi-4 (accessibility) |
 | Small colimits | Структурное свойство ⟪⟫ |
@@ -85,7 +85,7 @@ title: ∞-Topos Lurie
 
 ## Descent = ρ-функториальность
 
-**05.T2**: Lurie-descent ≡ ρ-функториальность при ω-колимитах.
+**05.T2**: Люри-descent ≡ ρ-функториальность при ω-колимитах.
 
 ### Детализация
 
@@ -173,8 +173,8 @@ title: ∞-Topos Lurie
 
 ### Детализация
 
-- HoTT — внутренний язык ∞-топоса (с univalent universe).
-- Каждый ∞-топос с univalent universe даёт модель HoTT.
+- HoTT — внутренний язык ∞-топоса (с унивалентный universe).
+- Каждый ∞-топос с унивалентный universe даёт модель HoTT.
 - Не все ∞-топосы — HoTT (нужна univalence).
 
 ### В Diakrisis
@@ -184,15 +184,15 @@ title: ∞-Topos Lurie
 
 ## Признанные редукции
 
-- Lurie HTT — подробная известная теория.
+- Люри HTT — подробная известная теория.
 - Шрайбер DCCT — известна.
 
 ### Источники
 
-- **Lurie (2009)**: Higher Topos Theory (HTT).
-- **Lurie (2017+)**: Higher Algebra.
+- **Люри (2009)**: Higher Topos Theory (HTT).
+- **Люри (2017+)**: Higher Algebra.
 - **Шрайбер (2013)**: DCCT.
-- **Rezk (2010)**: n-topoi.
+- **Резк (2010)**: n-topoi.
 - **Toën-Vezzosi (2005)**: Segal topoi.
 
 ### Что **не** стандартно
@@ -227,12 +227,12 @@ title: ∞-Topos Lurie
 
 - Переход от 2-категории ⟪⟫ к (∞,1)-категории.
 - Все аксиомы — с гомотопической когерентность.
-- Ожидаемый результат: более богатая теория, с связью к Lurie.
+- Ожидаемый результат: более богатая теория, с связью к Люри.
 
 ### HoTT-based Diakrisis
 
 - Формализация в HoTT вместо 2-category theory.
-- Univalence как центральная gauge-симметрия.
+- Унивалентность как центральная gauge-симметрия.
 - Путь к полной HoTT-формализации.
 
 Эти программы — открытые, зарезервированы для будущих сессий.
@@ -242,7 +242,7 @@ title: ∞-Topos Lurie
 | Извлечение | Отношение к α_∞topos |
 |---|---|
 | α_ZFC | α_ZFC ⊏ α_∞topos (через 1-topos) |
-| α_HoTT | α_HoTT ⊏ α_∞topos (univalent) |
+| α_HoTT | α_HoTT ⊏ α_∞topos (унивалентный) |
 | α_NCG | Частично (через derived NCG) |
 | α_uhm | Не включается (разная структура) |
 | α_cohesion | α_cohesion ⊏ α_∞topos (Шрайбер) |

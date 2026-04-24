@@ -7,7 +7,7 @@ title: Curry-Howard-Ламбек
 
 ## Статус
 
-**[Т]** — CHL-correspondence через 12.T1-T4 каталога (Ламбек–Скотт + Awodey-Воеводский + Abramsky-Coecke).
+**[Т]** — CHL-correspondence через 12.T1-T4 каталога (Ламбек–Скотт + Эводи-Воеводский + Abramsky-Coecke).
 
 ## Обзор
 

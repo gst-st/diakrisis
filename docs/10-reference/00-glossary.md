@@ -160,7 +160,7 @@ title: Глоссарий
 **Примеры**:
 - 𝒮_ZFC — все ZFC-определимые структуры.
 - 𝒮_{NBG+AFA} — включает non-well-founded sets.
-- 𝒮_HoTT — univalent types.
+- 𝒮_HoTT — унивалентный types.
 - 𝒮_linear — SMCC-структуры.
 
 ### α_linear
@@ -180,9 +180,9 @@ title: Глоссарий
 ### α_AFA-coalg
 
 **Тип**: Ob(⟪⟫).
-**Определение**: финальная коалгебра 𝖬 в метатеории NBG + Aczel's AFA.
+**Определение**: финальная коалгебра 𝖬 в метатеории NBG + Ачел's AFA.
 **ν**: ω·2.
-**Свойство**: Morita-редуцируема к Aczel's M-types.
+**Свойство**: Morita-редуцируема к Ачел's M-types.
 
 ### α_coinductive
 
@@ -425,7 +425,7 @@ title: Глоссарий
 ### Reflector r
 
 **Тип**: часть данных энактмента.
-**Определение**: левый adjoint $r : \cC \to \Syn(F)$ к $\iota$, с тождествами треугольника. Единственен up to unique invertible 2-cell (Рил–Verity 2022, Адамек–Росицкий 1994).
+**Определение**: левый adjoint $r : \cC \to \Syn(F)$ к $\iota$, с тождествами треугольника. Единственен up to unique invertible 2-cell (Рил–Верити 2022, Адамек–Росицкий 1994).
 **Значение**: обеспечивает canonicity essentially-surjective proof'а 108.T.
 
 ### ε-инвариант
@@ -445,7 +445,8 @@ title: Глоссарий
 
 **Тип**: дуал AFN-T.
 **Определение**: $\LAbs^{\cE} = \emptyset$ — не существует enactment-absolute.
-**MSFS-соответствие**: Theorem~ef{thm:dual-afnt}.
+**MSFS-соответствие**: Theorem~
+ef{thm:dual-afnt}.
 **См.**: [/12-actic/05-dual-afn-t](/12-actic/05-dual-afn-t).
 
 ### Ловер-scope на $\cE$
@@ -475,11 +476,11 @@ title: Глоссарий
 **Положение**: плюралистичный класс конструктивных оснований вместе с MLTT, BHK, реализуемостью.
 **MSFS-референс**: Table 2 (стр. 10), §3.2 Examples of R-S; MarkovNagornyj 1988.
 
-### Bishop-конструктивизм
+### Бишоп-конструктивизм
 
 **Тип**: $\mathcal{L}_\mathrm{Fnd}$-точка; choice-free конструктивный действительный анализ.
 **Семантика**: любой топос с натурально-числовым объектом.
-**MSFS-референс**: Bishop 1967, Bridges–Vita 2006.
+**MSFS-референс**: Бишоп 1967, Bridges–Vita 2006.
 
 ### Феферман-предикативизм
 

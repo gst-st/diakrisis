@@ -164,7 +164,7 @@ ef{thm:ac-oc-duality}) | Classifying $2$-stack of $\cE$ |
 
 ### Ключевые структурные требования $\cE$
 
-1. **Reflector как часть данных**: $\cE$-объект — квадрупл $(F, \cC, \iota, r)$, где $r : \cC \to \Syn(F)$ — левый adjoint к $\iota$ с тождествами треугольника. Уникальность $r$ по $\iota$ up to unique invertible 2-cell (Рил–Verity 2022, Адамек–Росицкий 1994) обеспечивает canonicity essential-surjective части 108.T.
+1. **Reflector как часть данных**: $\cE$-объект — квадрупл $(F, \cC, \iota, r)$, где $r : \cC \to \Syn(F)$ — левый adjoint к $\iota$ с тождествами треугольника. Уникальность $r$ по $\iota$ up to unique invertible 2-cell (Рил–Верити 2022, Адамек–Росицкий 1994) обеспечивает canonicity essential-surjective части 108.T.
 
 2. **Dual-AFN-T — два независимых пути**: Theorem~
 ef{thm:dual-afnt} доказывается (Route 1) прямым syntax-semantics bridge через Lemma~\ref{lem:SS-membership-E}, либо (Route 2) редукцией к $F \in \LAbs$ через $\varepsilon$-лифтинг $\cF$-координаций в $\cE$. Route 1 не требует 108.T.

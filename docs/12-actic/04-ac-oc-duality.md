@@ -7,7 +7,8 @@ title: Теорема 108.T — AC/OC-дуальность
 
 :::tip MSFS-первоисточник
 
-Формальная версия теоремы — **MSFS Theorem~ef{thm:ac-oc-duality}** (AC/OC Morita Duality), §11. Конструкция: adjoint pair $\varepsilon \dashv \alpha$ с $\varepsilon(F) = (F, \Syn(F), \id, \id)$ (syntactic self-enactment) и $\alpha(F, \cC, \iota, r) = F$. Ключевые технические детали: (i) essential surjectivity через выбранный reflector $r$ как часть данных, (ii) 2-functoriality $\Syn$ через Lurie HTT §5.1 + Kapulkin–Lumsdaine для $(\infty, n)$, (iii) $(\infty, \infty)$-lift через Барвик–Schommer-Pries. Ниже — абстрактное изложение для Diakrisis-контекста. Соответствие объектов — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) §«AC/OC-дуальность».
+Формальная версия теоремы — **MSFS Theorem~
+ef{thm:ac-oc-duality}** (AC/OC Morita Duality), §11. Конструкция: adjoint pair $\varepsilon \dashv \alpha$ с $\varepsilon(F) = (F, \Syn(F), \id, \id)$ (syntactic self-enactment) и $\alpha(F, \cC, \iota, r) = F$. Ключевые технические детали: (i) essential surjectivity через выбранный reflector $r$ как часть данных, (ii) 2-functoriality $\Syn$ через Люри HTT §5.1 + Капулкин–Ламсдейн для $(\infty, n)$, (iii) $(\infty, \infty)$-lift через Барвик–Schommer-Pries. Ниже — абстрактное изложение для Diakrisis-контекста. Соответствие объектов — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) §«AC/OC-дуальность».
 
 :::
 
@@ -23,7 +24,8 @@ $$
 
 *образующие $(\infty, \infty)$-категорную эквивалентность:*
 
-1. $\alpha \circ \varepsilon = \mathrm{id}_{\langle\!\langle \cdot \rangle\!\rangle}$ *строго*; $\varepsilon \circ \alpha$ gauge-эквивалентно $\mathrm{id}_{\rangle\!\rangle \cdot \langle\!\langle}$ через выбранный reflector $r$ в структуре объектов (MSFS Theorem~ef{thm:ac-oc-duality}(b)).
+1. $\alpha \circ \varepsilon = \mathrm{id}_{\langle\!\langle \cdot \rangle\!\rangle}$ *строго*; $\varepsilon \circ \alpha$ gauge-эквивалентно $\mathrm{id}_{\rangle\!\rangle \cdot \langle\!\langle}$ через выбранный reflector $r$ в структуре объектов (MSFS Theorem~
+ef{thm:ac-oc-duality}(b)).
 2. *Функтор $\varepsilon$ коммутирует с метаизацией/активацией:*
    $$\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon.$$
 3. $\varepsilon$ *сохраняет gauge-структуру*: существует каноническая эквивалентность gauge-quotient пространств
@@ -35,16 +37,19 @@ $$
 
 Доказательство 108.T параллельно доказательству 43.T1 (конструкция классифицирующего пространства $\fM_\mathrm{Fnd}$) и 103.T (универсальной артикуляции). Ключевая идея: **переинтерпретация синтаксис-семантического сопряжения в роли articulate/enact-дуальности**.
 
-### 2.1 План (параллельно MSFS Theorem~ef{thm:ac-oc-duality})
+### 2.1 План (параллельно MSFS Theorem~
+ef{thm:ac-oc-duality})
 
-- **Шаг A — Full faithfulness $\varepsilon$**: 2-функториальность $\Syn$ (Ламбек–Scott для $n = 1$; Kapulkin–Lumsdaine для $(\infty, n)$) даёт $\Hom_\cE(\varepsilon F_1, \varepsilon F_2) \simeq \Hom_\cF(F_1, F_2)$.
-- **Шаг B — Essential surjectivity на уровне gauge**: для любого квадрупла $(F, \cC, \iota, r)$ выбранный reflector $r$ (часть данных объекта) с инвертируемым counit $r \circ \iota \Rightarrow \id$ (Рил–Verity Prop. 2.1.11) даёт gauge-эквивалентность $(F, \cC, \iota, r) \simeq \varepsilon(F)$.
+- **Шаг A — Full faithfulness $\varepsilon$**: 2-функториальность $\Syn$ (Ламбек–Scott для $n = 1$; Капулкин–Ламсдейн для $(\infty, n)$) даёт $\Hom_\cE(\varepsilon F_1, \varepsilon F_2) \simeq \Hom_\cF(F_1, F_2)$.
+- **Шаг B — Essential surjectivity на уровне gauge**: для любого квадрупла $(F, \cC, \iota, r)$ выбранный reflector $r$ (часть данных объекта) с инвертируемым counit $r \circ \iota \Rightarrow \id$ (Рил–Верити Prop. 2.1.11) даёт gauge-эквивалентность $(F, \cC, \iota, r) \simeq \varepsilon(F)$.
 - **Шаг C — Когерентность с $\mathsf{M}/\mathsf{A}$**: $\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$ по наtуральности Ламбек–Scott adjunction.
-- **Шаг D — $(\infty, \infty)$-lift**: Барвик–Schommer-Pries unicity + Bergner–Rezk model comparison обеспечивают параметрическую корректность в $n \in \mathbb{N} \cup \{\infty\}$; Lurie HTT §5.4 даёт accessibility filtered-colimits.
-- **Шаг E — Gauge-сохранение и сохранение глубин**: Ara–Maltsiniotis + Bergner–Rezk сохраняют gauge componentwise; Предложение 7.2 устанавливает $\nu(\alpha) = \mathsf{e}(\varepsilon(\alpha))$.
-- **Шаг F — Соответствие стратов**: $\varepsilon$ biject on стратах (Theorem~ef{thm:ac-oc-duality}(c)).
+- **Шаг D — $(\infty, \infty)$-lift**: Барвик–Schommer-Pries unicity + Бергнер–Резк model comparison обеспечивают параметрическую корректность в $n \in \mathbb{N} \cup \{\infty\}$; Люри HTT §5.4 даёт accessibility filtered-colimits.
+- **Шаг E — Gauge-сохранение и сохранение глубин**: Ara–Maltsiniotis + Бергнер–Резк сохраняют gauge componentwise; Предложение 7.2 устанавливает $\nu(\alpha) = \mathsf{e}(\varepsilon(\alpha))$.
+- **Шаг F — Соответствие стратов**: $\varepsilon$ biject on стратах (Theorem~
+ef{thm:ac-oc-duality}(c)).
 
-Шаги A–F строго следуют MSFS §11 (Theorem~ef{thm:ac-oc-duality} proof); ниже — изложение в Diakrisis-нотации с явными ссылками на технические источники.
+Шаги A–F строго следуют MSFS §11 (Theorem~
+ef{thm:ac-oc-duality} proof); ниже — изложение в Diakrisis-нотации с явными ссылками на технические источники.
 
 ## 3. Шаг A: объектная конструкция $\varepsilon(\alpha)$
 

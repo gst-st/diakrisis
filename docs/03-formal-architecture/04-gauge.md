@@ -7,7 +7,7 @@ title: Gauge-структура
 
 ## Статус
 
-**[Т]** — gauge-структура G = Autoequiv_2(⟪⟫) установлена через 101.T-эквивалент + Kelly автоморфизмы 2-категорий.
+**[Т]** — gauge-структура G = Autoequiv_2(⟪⟫) установлена через 101.T-эквивалент + Келли автоморфизмы 2-категорий.
 
 ## Центральная идея
 
@@ -175,12 +175,12 @@ $$\rho^{(2)} = \eta_\tau \circ \rho^{(1)} \circ \eta_\tau^{-1}.$$
 
 | Наш элемент | Редукция | Источник |
 |---|---|---|
-| Gauge-группа G | Automorphism 2-group | Kelly 1982 |
+| Gauge-группа G | Automorphism 2-group | Келли 1982 |
 | Gauge-класс | Morita equivalence class | Morita 1958 |
 | Gauge-действие | Group action on moduli | Classical |
 | ρ как connection | Principal bundle connection | Kobayashi-Nomizu |
 | Curvature | Non-commutativity ρ-𝖬 | Gauge theory |
-| 𝓜_Fnd | Moduli stack of foundations | Lurie, DAG |
+| 𝓜_Fnd | Moduli stack of foundations | Люри, DAG |
 
 ### Что **не** стандартно
 

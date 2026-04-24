@@ -37,9 +37,9 @@ $$
 - **(I-1) Homotopy invariance**: 2-эквивалентность в $\langle\langle \cdot \rangle\rangle$ ⇒ 2-эквивалентность в $\mathcal{S}_\mathrm{int}$.
 - **(I-2) Gauge covariance**: gauge-transformation $\tau$ ⇒ 1-морфизм $\mathbf{I}(\tau)$.
 - **(I-3) Strict refinement of Morita**: существуют $F_1 \sim_M F_2$ с $\mathbf{I}(F_1) \not\simeq \mathbf{I}(F_2)$.
-- **(I-4) Morita as 2-localization**: $\cU \circ \mathbf{I} \simeq \rho$; Morita = $\Sint[\mathcal{W}_\cU^{-1}]$ (Pronk 1996).
+- **(I-4) Morita as 2-localization**: $\cU \circ \mathbf{I} \simeq \rho$; Morita = $\Sint[\mathcal{W}_\cU^{-1}]$ (Пронк 1996).
 
-**Ключевой concrete пример** (MSFS §8.3, Step 7): MLTT vs ETT — Morita-эквивалентны по [Hofmann 1995], но $\tau(\mathbf{I}(\mathrm{MLTT})) = 1 \neq 0 = \tau(\mathbf{I}(\mathrm{ETT}))$ через typing-invariant $\tau$ (effective normalization в effective topos $\mathrm{Eff}$ по Хайленд 1982).
+**Ключевой concrete пример** (MSFS §8.3, Step 7): MLTT vs ETT — Morita-эквивалентны по [Хофман 1995], но $\tau(\mathbf{I}(\mathrm{MLTT})) = 1 \neq 0 = \tau(\mathbf{I}(\mathrm{ETT}))$ через typing-invariant $\tau$ (effective normalization в effective topos $\mathrm{Eff}$ по Хайленд 1982).
 
 **Вычислительная рамка** (препринт уточнение): инвариант $\tau$ определён на $\Sint^{\mathrm{eff}} \subseteq \Sint$ — подкатегории, где все 2-эквивалентности computable в $\mathrm{Eff}$. Без этого ограничения $\tau$ не был бы 2-инвариантом (не-вычислимая эквивалентность могла бы идентифицировать normalizing и non-normalizing классы).
 
@@ -63,7 +63,7 @@ $$
 
 | Путь | Статус до | Статус |
 |---|---|---|
-| Universe polymorphism | closed (57.T, 56.C1, 61.T, 94.T) | closed |
+| полиморфизм универсумов | closed (57.T, 56.C1, 61.T, 94.T) | closed |
 | Reflective tower | closed (19.T1, 31.T3, 68.T, 69.T, 90.T) | closed |
 | **Интенсиональное уточнение** | research-programme (open) | **closed (98.T, 99.T)** |
 
@@ -93,5 +93,5 @@ MSFS §8.3 содержит:
 
 - **MSFS §8.3** — full construction + proofs;
 - **MSFS `def:Sint`** — формальное определение $\Sint$ (display 2-classes, (D1)-(D4));
-- **MSFS `lem:pronk`** — Pronk bicategory-of-fractions, основание для (I-4);
+- **MSFS `lem:pronk`** — Пронк bicategory-of-fractions, основание для (I-4);
 - [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — таблица соответствия.

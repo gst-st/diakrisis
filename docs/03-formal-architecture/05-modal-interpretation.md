@@ -7,7 +7,7 @@ title: Модальная интерпретация 𝖬
 
 ## Статус
 
-**[Т]** — S4-интерпретация 𝖬 в 2-категорной модальной семантике (стандарт Fitting 1969 + Kelly-Street).
+**[Т]** — S4-интерпретация 𝖬 в 2-категорной модальной семантике (стандарт Fitting 1969 + Келли-Street).
 
 ## Обзор
 
@@ -160,7 +160,7 @@ $$\mathrm{Hom}(\mathsf{M}^L \alpha, \beta) \simeq \mathrm{Hom}(\alpha, \mathsf{M
 - **Kripke (1959, 1963)**: Kripke-семантика модальных логик.
 - **Ловер (1970)**: Adjunctions as modalities.
 - **Moggi (1991)**: Modal monads в computer science.
-- **Awodey-Kishida (2008)**: Topology and modal logic.
+- **Эводи-Kishida (2008)**: Topology and modal logic.
 - **Fourman (1977)**: Sheaf models of modal logic.
 
 ### Где **не** стандартно
@@ -222,7 +222,7 @@ $$\mathrm{Hom}(\mathsf{M}^L \alpha, \beta) \simeq \mathrm{Hom}(\alpha, \mathsf{M
 ### Homotopy modal logic
 
 - В HoTT: модальности через adjunctions на типах.
-- Univalence как структурная модальность.
+- Унивалентность как структурная модальность.
 
 ## Следующий документ
 

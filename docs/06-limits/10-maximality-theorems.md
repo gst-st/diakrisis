@@ -38,7 +38,7 @@ $$
 
 ### Доказательство
 
-**Шаг 1. Синтаксическая $(\infty, n_S)$-категория.** Для любой $S \in \mathrm{R\text{-}S}$ определяем $\mathrm{Syn}(S)$ — синтаксическую $(\infty, n_S)$-категорию (конструкция Lindenbaum–Тарский адаптированная к dependent type theories: Seely 1984, Hofmann 1997, Kapulkin–Lumsdaine 2021 для HoTT, Lurie HTT §6 для $\infty$-случая). Существование $\mathrm{Syn}(S)$ гарантировано условием (R1) (PA-кодируемость) + (R2) (r.e.-аксиоматизация) + (R3) (внутренняя метатеория).
+**Шаг 1. Синтаксическая $(\infty, n_S)$-категория.** Для любой $S \in \mathrm{R\text{-}S}$ определяем $\mathrm{Syn}(S)$ — синтаксическую $(\infty, n_S)$-категорию (конструкция Lindenbaum–Тарский адаптированная к dependent type theories: Сили 1984, Хофман 1997, Капулкин–Ламсдейн 2021 для HoTT, Люри HTT §6 для $\infty$-случая). Существование $\mathrm{Syn}(S)$ гарантировано условием (R1) (PA-кодируемость) + (R2) (r.e.-аксиоматизация) + (R3) (внутренняя метатеория).
 
 **Шаг 2. Каноническая метаизация $\mathsf{M}_S$.**
 
@@ -247,9 +247,9 @@ $$
 ### Используемые стандартные результаты
 
 - **Адамек–Росицкий 1994** (accessible categories) — Лемма 103.L1.
-- **Seely 1984 + Hofmann 1997 + Kapulkin–Lumsdaine 2021** (categorical semantics of type theory) — Шаг 1 в 103.T.
+- **Сили 1984 + Хофман 1997 + Капулкин–Ламсдейн 2021** (categorical semantics of type theory) — Шаг 1 в 103.T.
 - **Яновский 2003** «A Universal Approach to Self-Referential Paradoxes» — фундамент 105.T.
-- **Lurie HTT 2009** §§3.2, 6 — $\infty$-categorical каркас.
+- **Люри HTT 2009** §§3.2, 6 — $\infty$-categorical каркас.
 - **Барвик–Schommer-Pries 2021** (unicity) — используется в 102.T, но не в 103.T–105.T.
 - **Хайленд 1982** (effective topos) — для 99.T (Max-4).
 

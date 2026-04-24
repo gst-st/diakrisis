@@ -58,7 +58,7 @@ Diakrisis-аналог: для $\alpha_\mathrm{hott}, \alpha_\mathrm{cic}, \alph
 
 ### Мета-вертикальная — 69.T
 
-Замкнутость относительно meta-итераций $\mu$: $(\infty, \infty + 1)$-Cat $\simeq (\infty, \infty)$-Cat (Барвик–Schommer-Pries 2021 через $\Theta_n$ Rezk 2010). Meta-иерархия не порождает структурной новизны за пределами $(\infty, \infty)$.
+Замкнутость относительно meta-итераций $\mu$: $(\infty, \infty + 1)$-Cat $\simeq (\infty, \infty)$-Cat (Барвик–Schommer-Pries 2021 через $\Theta_n$ Резк 2010). Meta-иерархия не порождает структурной новизны за пределами $(\infty, \infty)$.
 
 Diakrisis-аналог: iterated $\mathsf{M}^k(\alpha)$ не эскалирует до уровня 6 через мета-orbit.
 

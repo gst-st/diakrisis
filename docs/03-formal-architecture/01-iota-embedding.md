@@ -33,7 +33,7 @@ $$\iota(F) := \alpha_F.$$
 
 #### Формальная Ёнеда для 2-категорий
 
-**Лемма Ёнеда 2** (Kelly, 1982): Для 2-категории C, 2-функтор
+**Лемма Ёнеда 2** (Келли, 1982): Для 2-категории C, 2-функтор
 $$y: C \to [C^{op}, \mathrm{Cat}]$$
 $$y(X)(-) = \mathrm{Hom}_C(-, X)$$
 является 2-полностью-верным.
@@ -104,10 +104,10 @@ $$\alpha_{\mathsf{M}} := \iota(\mathsf{M}) \in \mathrm{Ob}(\llbracket\cdot\rrbra
 
 | Часть ι | Редукция | Источник |
 |---|---|---|
-| Ёнеда для 2-cat | 2-Ёнеда embedding | Kelly 1982 |
+| Ёнеда для 2-cat | 2-Ёнеда embedding | Келли 1982 |
 | Free cocompletion | Standard construction | MacLane 1971 |
-| 2-fully-faithful | Standard notion | Kelly, Bénabou |
-| Внутренний хом | Cartesian closure | Eilenberg-Kelly 1966 |
+| 2-fully-faithful | Standard notion | Келли, Bénabou |
+| Внутренний хом | Cartesian closure | Eilenberg-Келли 1966 |
 
 Всё — стандартная техника. **Новое** — комбинация в контексте Diakrisis с axi-1 как требованием.
 

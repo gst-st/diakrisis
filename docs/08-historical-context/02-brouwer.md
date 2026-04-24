@@ -217,8 +217,8 @@ title: Брауэр — Urintuition
 
 - **Гейтинг**: формализация intuitionistic logic.
 - **Мартин-Лёф**: MLTT.
-- **Bishop**: constructive analysis.
-- **Awodey, Воеводский**: HoTT (с intuitionistic base).
+- **Бишоп**: constructive analysis.
+- **Эводи, Воеводский**: HoTT (с intuitionistic base).
 
 ### Computational impact
 

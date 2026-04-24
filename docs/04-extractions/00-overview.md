@@ -39,7 +39,7 @@ title: Обзор извлечений
 | ZFC | α_ZFC | ω | членство ∈ |
 | ETCS | α_ETCS | ω+1 | Морита с ZFC |
 | CIC | α_CIC | ω+2 | вычислительные правила |
-| HoTT | α_HoTT | ω+1 | Univalence = gauge |
+| HoTT | α_HoTT | ω+1 | Унивалентность = gauge |
 | MLTT | α_MLTT | ω+1 | path types |
 | ∞-Topos | α_∞topos | ω·2 | descent + усечение |
 | NCG | α_ncg | ω·2 | спектральная тройка |
@@ -55,7 +55,7 @@ title: Обзор извлечений
 | HoTT | α_HoTT | ω+1 | univalence | path types |
 | MLTT | α_MLTT | ω+1 | substitution | Π/Σ/Id |
 | Markov-конструктивизм | α_Markov | ω | Aut(Eff) | HA + принцип Маркова |
-| Bishop-конструктивизм | α_Bishop | ω | Aut(NNO-топоса) | choice-free вещ.\ анализ |
+| Бишоп-конструктивизм | α_Bishop | ω | Aut(NNO-топоса) | choice-free вещ.\ анализ |
 | Феферман-предикативизм | α_Feferman | ω | Aut(ATR₀) | предикативная комплекция |
 | ∞-Topos | α_∞topos | ω·2 | ∞-autoequiv | (∞,1)-structure |
 | NCG | α_ncg | ω·2 | Aut(C\*-alg) | spectral triple |
@@ -130,7 +130,7 @@ title: Обзор извлечений
 Каждая точка соответствует **одному** основанию (Морита-класс):
 
 - [α_ZFC] = [α_ETCS] = [α_MorseKelley] — одна точка (все Морита-эквивалентны).
-- [α_HoTT] — отдельная точка (Univalence — существенна).
+- [α_HoTT] — отдельная точка (Унивалентность — существенна).
 - [α_UHM] — отдельная точка (физическая специфика).
 
 ### Структура между точками
@@ -160,8 +160,8 @@ title: Обзор извлечений
 ### Источники
 
 - **Ловер (1963)**: Functorial semantics.
-- **Lurie (2009)**: HTT — higher-topos perspective.
-- **Shulman (2008)**: 2-topoi.
+- **Люри (2009)**: HTT — higher-topos perspective.
+- **Шульман (2008)**: 2-topoi.
 - **Stone (1936)**: духовная прародительница.
 
 ## Новизна

@@ -72,9 +72,9 @@ $$
 ef{thm:dual-five-axis} (MSFS §11.6) устанавливает это единообразно по пяти осям:
 
 - **Scope-абсолютность (S-ось)**: Route 1 параметрическая по $S \in \RS$; $\SSE$ определён параметрически (Definition~\ref{def:SSE}).
-- **Depth-абсолютность (n-ось)**: truncation $\tau_{\leq n}$ коммутирует с Ламбек–Скотт adjunction; $\varepsilon$-лифтинг сохраняется (Lurie HTT §5.5).
-- **Meta-абсолютность (μ-ось)**: Гротендик-Lurie straightening на $\fM_\cE$ параллельна straightening'у на $\fM$; стабилизация 102.T переносится.
-- **Gauge-абсолютность (ξ-ось)**: Ara-Maltsiniotis + Bergner-Rezk действуют componentwise на $(F, \cC, \iota, r)$.
+- **Depth-абсолютность (n-ось)**: truncation $\tau_{\leq n}$ коммутирует с Ламбек–Скотт adjunction; $\varepsilon$-лифтинг сохраняется (Люри HTT §5.5).
+- **Meta-абсолютность (μ-ось)**: Гротендик-Люри straightening на $\fM_\cE$ параллельна straightening'у на $\fM$; стабилизация 102.T переносится.
+- **Gauge-абсолютность (ξ-ось)**: Ara-Maltsiniotis + Бергнер-Резк действуют componentwise на $(F, \cC, \iota, r)$.
 - **Performance-абсолютность (π-ось)**: LS($\cE$) = closed symmetric monoidal (см. §3.7), универсальная диагональ Яновский покрывает Cartesian-closed, SMC, $*$-autonomous.
 
 ### 3.7 Ловер-scope на $\cE$

@@ -87,7 +87,7 @@ $$\mathrm{Decat}(\mathsf{M}(\alpha)) \to \alpha.$$
 | 3 | 3-категория | 2Cat, Rel(2Cat) |
 | ... | ... | ... |
 | ∞ | (∞,1)-категория | ∞Grpd, ∞Top |
-| (∞,∞) | full ∞-category | Lurie's program |
+| (∞,∞) | full ∞-category | Люри's program |
 
 В Diakrisis — все уровни в Trace(𝖠).
 
@@ -126,7 +126,7 @@ $$\mathrm{Decat}(\mathsf{M}(\alpha)) \to \alpha.$$
 
 ### К mathematics
 
-- **Higher algebra** (Lurie): алгебра в высших категориях.
+- **Higher algebra** (Люри): алгебра в высших категориях.
 - **Derived categories**: через категорификацию.
 - **TQFT**: топологические квантовые теории поля — higher categorical.
 
@@ -164,7 +164,7 @@ $$\mathrm{Decat}(\mathsf{M}(\alpha)) \to \alpha.$$
 ## Признанные редукции
 
 - **Baez-Dolan (1995-1998)**: categorification program.
-- **Lurie (2009)**: HTT — higher categorification.
+- **Люри (2009)**: HTT — higher categorification.
 - **Ловер-Rosebrugh (2003)**: Sets for Mathematics.
 - **Baez et al. (2010)**: physics through categorification.
 
@@ -175,7 +175,7 @@ $$\mathrm{Decat}(\mathsf{M}(\alpha)) \to \alpha.$$
 - **36.T3**: ν = уровень категорификации.
 - **Иерархия**: sets → cats → 2-cats → ... → ∞-cats.
 - **УГМ**: ν = ω·3+1 — многоуровневая категорификация.
-- **Применения**: higher algebra, HoTT, Lurie HTT.
+- **Применения**: higher algebra, HoTT, Люри HTT.
 
 ## Следующий документ
 

@@ -208,7 +208,7 @@ $$\mathrm{Ob}(\llbracket\cdot\rrbracket) \neq \emptyset.$$
 
 - Diakrisis **не** HoTT: разные подходы.
 - **Морита**: α_hott ∈ 𝓜_Fnd.
-- **Univalence**: соответствует gauge-симметрии.
+- **Унивалентность**: соответствует gauge-симметрии.
 
 ### С NCG
 

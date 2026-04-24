@@ -125,7 +125,7 @@ flowchart LR
 
 **Производные**: $\rho(\alpha) = [\alpha_\mathrm{math}, \alpha]$ · $\mathrm{Fix}(\mathsf{M})$ · $\mathrm{Trace}(\mathsf{A})$ · $\mathfrak{M}_\mathrm{Fnd} = \mathrm{Trace}(\mathsf{A})/\mathrm{gauge}$ (43.T1).
 
-**Параметризация по $n$**: 2-Diakrisis ($n = 2$, практика) · $(\infty, 1)$-Diakrisis (Lurie HTT-aligned) · $(\infty, \infty)$-Diakrisis (канон). τ-truncation: $\text{2-Diakrisis} = \tau_{\leq 2}((\infty, \infty)\text{-Diakrisis})$ (60.T). AFN-T абсолютна на всех уровнях (59.T.1).
+**Параметризация по $n$**: 2-Diakrisis ($n = 2$, практика) · $(\infty, 1)$-Diakrisis (Люри HTT-aligned) · $(\infty, \infty)$-Diakrisis (канон). τ-truncation: $\text{2-Diakrisis} = \tau_{\leq 2}((\infty, \infty)\text{-Diakrisis})$ (60.T). AFN-T абсолютна на всех уровнях (59.T.1).
 
 ---
 
