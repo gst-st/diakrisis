@@ -240,6 +240,7 @@ function DiakrisisVisualization() {
         className={styles.coreSymbol}
         textAnchor="middle"
         dominantBaseline="central"
+        dy="-0.06em"
       >
         Δ
       </text>

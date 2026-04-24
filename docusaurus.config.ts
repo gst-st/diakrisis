@@ -87,6 +87,7 @@ const config: Config = {
               '\\Syn': '\\mathrm{Syn}',
               '\\Mod': '\\mathrm{Mod}',
               '\\Con': '\\mathrm{Con}',
+              '\\colim': '\\operatorname*{colim}',
               // Sans-serif theories
               '\\PA': '\\mathsf{PA}',
               '\\ZFC': '\\mathsf{ZFC}',
