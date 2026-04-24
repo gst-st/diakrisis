@@ -299,6 +299,64 @@ $$\text{Verum-proofs} \xrightarrow{\text{denote}} \text{Articulations}_\text{com
 
 ---
 
+## NO-19 [Т·L3]: Гигиена артикуляций (Articulation Hygiene)
+
+**Формулировка**: любая артикуляция $\alpha \in \mathrm{Articulations}_\mathrm{Noesis.Core}$, прошедшая core-pipeline (SMT + Axi + AFN-T + Hygiene), допускает операторную факторизацию **всех** её поверхностных «само-X» конструктов:
+
+$$
+\forall \alpha \in \mathrm{Articulations}_\mathrm{Noesis.Core},\; \forall c \in \mathrm{surface}(\alpha) \cap \{\text{само-}X \;|\; X \in \mathrm{Lex}\}: \quad \exists (\Phi_c,\; \kappa_c,\; t_c):\; \mathrm{factor}(c) = \bigl(\Phi_c,\; \Phi_c^{\kappa_c},\; t_c\bigr),
+$$
+
+где $\Phi_c$ — эндо-функтор в соответствующей метакатегории ($\mathsf{M}$- или $\mathsf{A}$-вариант), $\Phi_c^{\kappa_c}$ — его $\kappa$-итерация (ординал), $t_c$ — терминальный (или фиксированный) объект траектории.
+
+**Философский смысл**: артикуляция без операторной факторизации «само-X» недоопределена — не указан *какой* оператор, *какая* траектория, *какой* терминал. Гигиена блокирует такую недоопределённость структурно, не advisory.
+
+**Pipeline-место**: Hygiene — четвёртый этап core-pipeline после SMT, Axi, AFN-T:
+
+$$
+\text{запрос } q \;\xrightarrow{\;\text{SMT}\;}\; \text{функториальность}\;\xrightarrow{\;\text{Axi}\;}\; \text{A-0..A-9 + T-2f\*}\;\xrightarrow{\;\text{AFN-T}\;}\; \text{стратификация}\;\xrightarrow{\;\text{Hygiene}\;}\; \text{операторная факторизация «само-»}\;\Rightarrow\; \text{accept}.
+$$
+
+**Доказательство**:
+
+1. По Diakrisis-каноническому примитиву $(\langle\!\langle \cdot \rangle\!\rangle, \mathsf{M}, \alpha_\mathrm{math}, \sqsubset_\bullet)$: каждый морфизм в ⟪⟫ имеет глубину $\nu \in \mathrm{Ord}$, и каждая «само-X»-конструкция семантически эквивалентна подачи $\mathsf{M}^\kappa$ для некоторого $\kappa$ (T-α нетривиальность + accessibility $\mathsf{M}$).
+2. По 105.T (парадокс-иммунность): T-2f\* блокирует допустимость «само-X» при $\mathrm{dp}(c) \geq \nu(\alpha_c)$. Следовательно каждая принятая «само-X» имеет $\mathrm{dp}(c) < \nu(\alpha_c)$, т.е. лежит в $\mathsf{M}^{<\kappa}(\alpha_\mathrm{math})$-стратуме, что **даёт операторную факторизацию явно**.
+3. По 113.T (Актика): $\mathsf{A}$-дуал аналогичен для ε-акт-стороны; «само-» на AC-стороне факторизуется через $\mathsf{A}^{\kappa}$-итерацию + $\mathrm{Fix}(\mathsf{A})$.
+4. Hygiene-этап проверяет, что prose-поверхность действительно содержит эту факторизацию явно (не только *возможность* факторизации): surface должна содержать либо (a) явный символ оператора $\Phi$, либо (b) категорное уравнение неподвижной точки $\Phi(x) \simeq x$, либо (c) указание на ординал $\kappa$ итерации.
+
+**QED (при условии SMT-корректной парсер-реализации hygiene-проверки)**.
+
+---
+
+### Таблица канонических факторизаций
+
+Для каждого поверхностного «само-X» — операторная троица $(\Phi, \Phi^\kappa, t)$:
+
+| Поверхность | Оператор $\Phi$ | Траектория | Терминал $t$ |
+|---|---|---|---|
+| самомоделирование | $\varphi: \mathcal{C} \to \mathcal{C}$ категорное отображение | $\varphi^\kappa$-итерация | $\rho^* = \varphi(\Gamma)$ |
+| автопоэзис | $\mathsf{A}^\mathrm{act}$ активация (AC-сторона) | $\mathsf{A}^{\omega^2}$ | $\mathrm{Fix}(\mathsf{A}^{\omega^2})$ (по 113.T) |
+| самореференция | Lawvere-fixed-point $f: X \to X^X$ | стратифицированный Yanofsky | fixed point $p \in X$, ограничено T-2a\* |
+| самонаблюдение | terminal coalgebra $X \to F(X)$ для подходящего $F$ | унfoldинг коалгебры | $\nu F$ — terminal coalgebra |
+| самосогласованность | оператор эквивалентности $\Phi \simeq \id$ | — | equalizer $\mathrm{eq}(\Phi, \id)$ |
+| самоописание | внутренний хом $[\alpha, \alpha]$ | Yoneda $\alpha \hookrightarrow \mathrm{End}(\alpha)$ | $\mathrm{End}(\alpha)$-точка |
+| самокопирование | comultiplication $\Delta: \alpha \to \alpha \otimes \alpha$ | coalgebra-итерация | co-idempotent fixed object |
+| самоактивация | $\iota^\mathrm{act}: \mathrm{End}(\rangle\!\rangle \cdot \langle\!\langle) \hookrightarrow \rangle\!\rangle \cdot \langle\!\langle$ | $\iota(\mathsf{A})$ | $\varepsilon_\mathsf{A}$ (A-7) |
+
+Любая новая «само-X», не покрытая таблицей, требует явного задания троицы как part of articulation data.
+
+### Следствия NO-19
+
+**NO-19.C1** (*Метастемология-совместимость*). Гигиена формально реализует протокол Е. Чурилова (anticomplexity.org) «заменить само-конструкции операторным развёртыванием», без философского заимствования — как формальная теорема о core-pipeline Noesis.
+
+**NO-19.C2** (*Verum-следствие*). Verum-stdlib слой `core.articulation.hygiene.*` реализует hygiene-check как first-class type-family, отвергающую артикуляции с нефакторизованными «само-X» на уровне компилятора.
+
+**NO-19.C3** (*Защита от re-rhetoric*). NO-19 предотвращает регрессию от операторного развёртывания обратно к «само-»-риторике: операции, добавляющие в артикуляцию поверхностное «само-X» без обновления факторизации, отклоняются hygiene-этапом.
+
+**Практически**: любая артикуляция, проходящая через Noesis.Core — автоматически *протокол-чистая* в смысле Чурилова. Это переводит anti-self-reference discipline из advisory-уровня в structural-invariant.
+
+---
+
 ## Классификация NO-теорем
 
 | # | Название | Статус | L-уровень | Зависит от Diakrisis |
@@ -321,6 +379,7 @@ $$\text{Verum-proofs} \xrightarrow{\text{denote}} \text{Articulations}_\text{com
 | NO-16 | Полнота рецензирования | [Т] | L2 | NO-9, Axi-проверка |
 | NO-17 | Ограниченность вывода LLM | [Т] | L2 | NO-9, монада Giry |
 | NO-18 | Эквивалентность Verum-Diakrisis | [Т] | L3 | 89.T, Ламбек-Скотт |
+| NO-19 | Articulation Hygiene (само-X → operator+fixpoint) | [Т] | L3 | 105.T (T-2f\*), 113.T, 108.T |
 
 ## Границы применимости
 
