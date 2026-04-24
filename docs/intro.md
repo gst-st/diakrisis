@@ -14,7 +14,7 @@ title: Введение в Diakrisis
 
 :::tip Самодостаточный препринт MSFS
 
-Структурное ядро Diakrisis (𝓜_Fnd как $(\infty,n)$-классифицирующий $2$-стек, плюрализм Level 5+, slice-локальное интенсиональное уточнение через эффективный топос Хайланда, theory-level meta-stabilization с universe-ascent, и AFN-T как граничная лемма) вынесено в самодостаточный **[*MSFS*](/10-reference/04-afn-t-correspondence)** (*The **M**oduli **S**pace of **F**ormal **S**ystems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, 47 страниц, 54 theorem-like environments, 47 bib-entries): `paper-en/paper.tex`. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$). Таблица соответствия теорем $N.T$ ↔ MSFS labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Структурное ядро Diakrisis (𝓜_Fnd как $(\infty,n)$-классифицирующий $2$-стек, плюрализм Level 5+, slice-локальное интенсиональное уточнение через эффективный топос Хайланда, theory-level meta-stabilization с universe-ascent, и AFN-T как граничная лемма) вынесено в самодостаточный **[*MSFS*](/10-reference/04-afn-t-correspondence)** (*The **M**oduli **S**pace of **F**ormal **S**ystems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, 47 страниц, 54 theorem-like environments, 47 bib-entries): `internal/math-msfs/paper-en/paper.tex`. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$). Таблица соответствия теорем $N.T$ ↔ MSFS labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 

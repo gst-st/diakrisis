@@ -11,9 +11,9 @@ title: Соответствие MSFS
 
 Этот документ фиксирует **точное соответствие** между теоремами Diakrisis (внутренняя нумерация `N.T`, `N.C`) и labelled results MSFS (`\ref{thm:...}` и т.п.). Каждая дублируемая теорема имеет **каноническое место** в MSFS; Diakrisis-корпус ссылается на MSFS, не воспроизводя доказательства.
 
-**MSFS:** `paper-en/paper.tex` (версия 2.0, 47 стр., 54 theorem-like environment, 47 bib-entries).
+**MSFS:** `internal/math-msfs/paper-en/paper.tex` (версия 2.0, 47 стр., 54 theorem-like environment, 47 bib-entries).
 
-**Сборка:** `bun scripts/build-paper.ts` → `paper-en/afn-t-paper.pdf`.
+**Сборка:** `bun internal/math-msfs/scripts/build-paper.ts` → `paper-en/afn-t-paper.pdf`.
 
 ---
 
