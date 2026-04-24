@@ -117,7 +117,7 @@ title: Теории сознания как сборки
 
 ### Детализация HOT
 
-**Higher-Order Thought Theory** (Rosenthal 1986+):
+**высшего порядка Thought Theory** (Rosenthal 1986+):
 - Сознательное состояние = ментальное состояние, о котором есть HOT.
 - HOT может быть внутренним восприятием или мыслью.
 - Без HOT: unconscious state.

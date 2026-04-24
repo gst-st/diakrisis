@@ -7,7 +7,7 @@ title: Curry-Howard-Ламбек
 
 ## Статус
 
-**[Т]** — CHL-correspondence через 12.T1-T4 каталога (Ламбек-Scott + Awodey-Воеводский + Abramsky-Coecke).
+**[Т]** — CHL-correspondence через 12.T1-T4 каталога (Ламбек–Скотт + Awodey-Воеводский + Abramsky-Coecke).
 
 ## Обзор
 
@@ -27,7 +27,7 @@ title: Curry-Howard-Ламбек
     λ-исчисление — категорная теория
 ```
 
-Все три — **формально эквивалентны** (Ламбек-Scott, 1986).
+Все три — **формально эквивалентны** (Ламбек–Скотт, 1986).
 
 **Вопрос для Diakrisis**: в каком смысле они эквивалентны формально?
 
@@ -146,7 +146,7 @@ Gauge-преобразование между α_prop ↔ α_lambda ↔ α_CCC:
 Rich-основания (из 29.T) имеют CHL-структуру:
 
 - R1 (самоссылка) ↔ Curry-Howard fixed-point (Y-combinator).
-- R2 (мета-теория) ↔ Higher-order types.
+- R2 (мета-теория) ↔ высшего порядка types.
 - R3 (рефлексия) ↔ internal теория типов.
 - R4 (трансфинитная глубина) ↔ ∞-CHL.
 
@@ -155,7 +155,7 @@ Rich-основания (из 29.T) имеют CHL-структуру:
 - **Curry (1934, 1958)**: combinatory logic.
 - **Howard (1969)**: formulae-as-types.
 - **Ламбек (1968, 1980)**: categorical logic.
-- **Ламбек-Scott (1986)**: Introduction to Higher-Order Categorical Logic.
+- **Ламбек–Скотт (1986)**: Introduction to высшего порядка Categorical Logic.
 
 ## Итог
 

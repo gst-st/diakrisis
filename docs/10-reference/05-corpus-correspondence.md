@@ -55,9 +55,12 @@ title: Соответствие корпусов MSFS/Diakrisis/Актика/У�
 | Тема | MSFS | Diakrisis | Актика | УГМ | Noesis |
 |---|---|---|---|---|---|
 | M1–M5 классификаторы | Definition~\ref{def:meta} | 06-limits/09-мета-классификация | (дуал. через 108.T) | — | NO-12 (structural superiority) |
-| Meta-categoricity | Theorem~ef{thm:meta-cat} | 100.T | — | — | NO-1 (Noesis.Core уникальность) |
-| Meta-multiplicity | Theorem~ef{thm:meta-mult} | 101.T | — | — | — |
-| Meta-stabilisation | Theorem~ef{thm:meta-stab} | 102.T | 108.C5 (дуал) | — | — |
+| Meta-categoricity | Theorem~
+ef{thm:meta-cat} | 100.T | — | — | NO-1 (Noesis.Core уникальность) |
+| Meta-multiplicity | Theorem~
+ef{thm:meta-mult} | 101.T | — | — | — |
+| Meta-stabilisation | Theorem~
+ef{thm:meta-stab} | 102.T | 108.C5 (дуал) | — | — |
 | $\infty$-cosmoi Рил–Verity | §3 examples | 04-extractions/07-cosmoi | — | — | — |
 | Univalent Foundations Воеводский | §3 examples | 04-extractions/04-hott | — | — | — |
 | Cohesive Шрайбер | §3 examples | 04-extractions/08-cohesive | — | — | — |
@@ -69,7 +72,8 @@ title: Соответствие корпусов MSFS/Diakrisis/Актика/У�
 | (Max-1) universal articulation | (Max-1) в def:maximality | 103.T | (Diakrisis-only) | — | — |
 | (Max-2) gauge-fullness | (Max-2) в def:maximality | 104.T | (Diakrisis-only) | — | — |
 | (Max-3) парадокс-иммунность | (Max-3) в def:maximality | 105.T | 113.T (дуал. T-2a*) | — | NO-10 (Ловер-bound) |
-| (Max-4) slice-locality | Theorem~ef{thm:slice-locality} | 99.T | (Diakrisis-only) | — | — |
+| (Max-4) slice-locality | Theorem~
+ef{thm:slice-locality} | 99.T | (Diakrisis-only) | — | — |
 | Diakrisis ∈ L_Cls^⊤ | Q1 open | 106.T (свидетель, Diakrisis-only) | — | — | NO-12 |
 
 ### Уровень L_Abs (AFN-T граница)
@@ -79,10 +83,14 @@ title: Соответствие корпусов MSFS/Diakrisis/Актика/У�
 | (F_S) formally definable | §4 | 06-limits/02-th-final | — | — | — |
 | (Π_4) non-reducibility | §4 | 06-limits/02-th-final | — | — | — |
 | (Π_3-max) maximal generativity | §4 | 06-limits/02-th-final | — | — | — |
-| AFN-T (α)-part | Theorem~ef{thm:afnt-alpha} | 06-limits/02-th-final | — | — | NO-3, NO-9, NO-17 (AFN-T filter) |
-| AFN-T (β)-part | Theorem~ef{thm:afnt-beta} | 06-limits/02-th-final | — | — | — |
-| Combined AFN-T | Theorem~ef{thm:afnt} | 06-limits/02-th-final | — | — | — |
-| Five-axis absoluteness | Theorem~ef{thm:five-axis} | 55.T, 59.T.1, 69.T, 84.T, 87.T | — | — | — |
+| AFN-T (α)-part | Theorem~
+ef{thm:afnt-alpha} | 06-limits/02-th-final | — | — | NO-3, NO-9, NO-17 (AFN-T filter) |
+| AFN-T (β)-part | Theorem~
+ef{thm:afnt-beta} | 06-limits/02-th-final | — | — | — |
+| Combined AFN-T | Theorem~
+ef{thm:afnt} | 06-limits/02-th-final | — | — | — |
+| Five-axis absoluteness | Theorem~
+ef{thm:five-axis} | 55.T, 59.T.1, 69.T, 84.T, 87.T | — | — | — |
 | Three bypass paths | Theorems~\ref{thm:universe}, \ref{thm:reflective}, \ref{thm:slice-locality} | 57.T, 68.T, 98.T+99.T | — | — | — |
 
 ### AC/OC Morita duality (MSFS §11)
@@ -90,10 +98,13 @@ title: Соответствие корпусов MSFS/Diakrisis/Актика/У�
 | Тема | MSFS | Diakrisis | Актика | УГМ | Noesis |
 |---|---|---|---|---|---|
 | 2-категория $\cE$ | Definition~\ref{def:enactments} | $\rangle\!\rangle \cdot \langle\!\langle$ | 02-dual-primitive | — | NO-15 (Verum двойной stdlib) |
-| AC/OC Morita duality | Theorem~ef{thm:ac-oc-duality} | 108.T | 04-ac-oc-duality | ε_uhm через 108.T (05-assemblies/01-uhm §ДЦ-дуал) | — |
-| Dual-AFN-T | Theorem~ef{thm:dual-afnt} | 109.T | 05-dual-afn-t | граница амбиций УГМ (05-assemblies/01-uhm §ДЦ-дуал) | — |
+| AC/OC Morita duality | Theorem~
+ef{thm:ac-oc-duality} | 108.T | 04-ac-oc-duality | ε_uhm через 108.T (05-assemblies/01-uhm §ДЦ-дуал) | — |
+| Dual-AFN-T | Theorem~
+ef{thm:dual-afnt} | 109.T | 05-dual-afn-t | граница амбиций УГМ (05-assemblies/01-uhm §ДЦ-дуал) | — |
 | Conservativity | Corollary~\ref{cor:ac-oc-conservativity} | 107.T | 04-ac-oc-duality | — | — |
-| Dual five-axis | Theorem~ef{thm:dual-five-axis} | (вспом.) | 04-ac-oc-duality §6 | — | — |
+| Dual five-axis | Theorem~
+ef{thm:dual-five-axis} | (вспом.) | 04-ac-oc-duality §6 | — | — |
 
 ### Diakrisis-specific Актика-теоремы (110.T–127.T, Diakrisis-only)
 
@@ -159,7 +170,7 @@ title: Соответствие корпусов MSFS/Diakrisis/Актика/У�
 | NO-15 | Verum универсальность | 29.T, 43.T1, 89.T | — | 127.T (ДЦ-stdlib) |
 | NO-16 | Полнота рецензирования | NO-9, Axi-проверка | — | — |
 | NO-17 | Ограниченность LLM через Giry | NO-9, монада Giry | — | — |
-| NO-18 | Эквивалентность Verum ↔ Diakrisis | 89.T, Ламбек-Scott | — | — |
+| NO-18 | Эквивалентность Verum ↔ Diakrisis | 89.T, Ламбек–Скотт | — | — |
 
 ## Использование этой таблицы
 

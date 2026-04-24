@@ -52,7 +52,7 @@ title: Абсолютность AFN-T (пять осей)
 
 Независимость AFN-T от категорного уровня $n$. Прямое доказательство на уровне $(\infty, \infty)$ (MSFS Theorem `thm:direct-infty`, соответствует Diakrisis 66.T «$(\infty,\infty)$-Ловер fixed-point») использует Ловер FP в $(\infty, \infty)$-cartesian closed category $\mathcal{C}_S := \colim_n \mathrm{Syn}^{(\infty,n)}(S)$.
 
-**Важное ограничение** (MSFS Remark `rem:direct-infty-scope`): прямое доказательство на $(\infty, \infty)$ работает только для **классических** $S$ (Boolean internal logic). Для конструктивных $S$ (HoTT, MLTT, CIC, CZF) используется основная Theorem `thm:afnt` через Ламбек-Scott reflection.
+**Важное ограничение** (MSFS Remark `rem:direct-infty-scope`): прямое доказательство на $(\infty, \infty)$ работает только для **классических** $S$ (Boolean internal logic). Для конструктивных $S$ (HoTT, MLTT, CIC, CZF) используется основная Theorem `thm:afnt` через Ламбек–Скотт reflection.
 
 Diakrisis-аналог: для $\alpha_\mathrm{hott}, \alpha_\mathrm{cic}, \alpha_\mathrm{int}$ применяется [T-α_c](/02-canonical-primitive/02-axiomatics#t-alpha-spec) (конструктивный вариант).
 

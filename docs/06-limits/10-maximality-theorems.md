@@ -20,7 +20,7 @@ MSFS (Definition `def:maximality`) определяет класс $\mathcal{L}_
 - **(Max-1)** Full classification: $\mathrm{image}(\mathrm{Cl}_{\mathbf{F}}) = \mathfrak{M}_\mathrm{Fnd}$.
 - **(Max-2)** Gauge-fullness: $\mathrm{Aut}_2(\mathbf{F})$ действует на $\mathfrak{M}_\mathrm{Fnd}$ через полное покрытие $\mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$.
 - **(Max-3)** Depth-стратификация: $\mathbf{F}$ обладает depth-filtration, блокирующим *все* самореферентные парадоксы.
-- **(Max-4)** Intensional completeness: интенсиональный функтор $\mathbf{I}_{\mathbf{F}}$ слой-локален над $\mathfrak{M}_\mathrm{Fnd}$.
+- **(Max-4)** Интенсиональная полнота: интенсиональный функтор $\mathbf{I}_{\mathbf{F}}$ слой-локален над $\mathfrak{M}_\mathrm{Fnd}$.
 
 До настоящего документа Diakrisis имела: (Max-4) [Т], (Max-3) [С] (блокировка 5 известных семейств), (Max-1), (Max-2) [Г]. Ниже все четыре доводятся до [Т].
 
@@ -228,7 +228,7 @@ $$
 
 **(Max-3)** Depth-стратификация. Прямое следствие 105.T: T-2f\* блокирует все Яновский-сводимые парадоксы универсально. ∎
 
-**(Max-4)** Intensional completeness. MSFS Theorem `thm:slice-locality` (= 99.T в Diakrisis-нумерации): функтор $\mathbf{I}_\mathrm{Diakrisis}: \mathcal{F}^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ слой-локален над $\mathfrak{M}_\mathrm{Fnd}$; интенсиональные различия MLTT vs ETT ложатся в слои над единственной точкой $\mathfrak{M}_\mathrm{Fnd}$, разделяемые через эффективный топос Хайланда. ∎
+**(Max-4)** Интенсиональная полнота. MSFS Theorem `thm:slice-locality` (= 99.T в Diakrisis-нумерации): функтор $\mathbf{I}_\mathrm{Diakrisis}: \mathcal{F}^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ слой-локален над $\mathfrak{M}_\mathrm{Fnd}$; интенсиональные различия MLTT vs ETT ложатся в слои над единственной точкой $\mathfrak{M}_\mathrm{Fnd}$, разделяемые через эффективный топос Хайланда. ∎
 
 Все четыре условия выполнены. Следовательно $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$. ∎
 
@@ -264,8 +264,8 @@ $$
 ### Ссылки на MSFS
 
 - **(Max-1), (Max-2), (Max-3), (Max-4)** — Definition `def:maximality`.
-- **Conditional мета-категоричность** — Theorem `thm:meta-cat` (= 100.T).
-- **Intensional completeness** — Theorem `thm:slice-locality` (= 99.T).
+- **условная мета-категоричность** — Theorem `thm:meta-cat` (= 100.T).
+- **Интенсиональная полнота** — Theorem `thm:slice-locality` (= 99.T).
 - **Universe-ascent стабилизация** — Theorem `thm:meta-stab` (= 102.T).
 
 ## Обновление status-registry

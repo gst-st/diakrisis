@@ -245,7 +245,7 @@ $$
 
 Брауэр требует: утверждение «существует $x$ с $P(x)$» означает *я могу построить такой $x$*. Не: *в платонической сфере есть такой $x$*.
 
-*Формальное вложение*: **Theorem 116.T (Брауэр-embedding)**. BHK-interpretation доказательств вкладывается в $\rangle\!\rangle \cdot \langle\!\langle$ как $\varepsilon_\mathrm{construct}$-семейство; intuitionistic logic = syntactic shadow этого AC-аппарата.
+*Формальное вложение*: **Теорема 116.T (Брауэр-embedding)**. BHK-interpretation доказательств вкладывается в $\rangle\!\rangle \cdot \langle\!\langle$ как $\varepsilon_\mathrm{construct}$-семейство; intuitionistic logic = syntactic shadow этого AC-аппарата.
 
 ### 6.2 Гейтинг (1898–1980)
 

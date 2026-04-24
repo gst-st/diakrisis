@@ -151,11 +151,11 @@ title: ∞-Topos Lurie
 - В 2-категорном контексте (не ∞-топосе).
 - Совместима с gauge + fibration + modality.
 
-## Higher stacks
+## Высшие стэки
 
 **05.T6**: higher stacks через fibration-структуру.
 
-### Higher stacks
+### Высшие стэки
 
 - **1-stack**: обобщение sheaf для категорных данных.
 - **n-stack**: для n-категорных данных.

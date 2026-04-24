@@ -29,7 +29,7 @@ flowchart TB
 
     PRIM["<b>Канонический примитив</b><br/>⟪⟫, 𝖬, α_math, ⊏_•<br/>+ 13 аксиом"]:::prim
     STRAT["<b>Стратификация 𝔐_Fnd</b><br/>𝓛_Fnd → 𝓛_Cls ⊇ 𝓛_Cls^⊤ → 𝓛_Abs=∅"]:::struct
-    INT["<b>Intensional refinement</b><br/>𝐈 : 𝓕^op → 𝓢_int<br/>slice-local через 𝐄𝐟𝐟<br/>98.T + 99.T"]:::struct
+    INT["<b>Интенсиональное уточнение</b><br/>𝐈 : 𝓕^op → 𝓢_int<br/>slice-local через 𝐄𝐟𝐟<br/>98.T + 99.T"]:::struct
     META["<b>Meta-classification</b><br/>theory-level стабилизация<br/>universe-ascent κ₁&lt;κ₂&lt;…<br/>100.T + 101.T + 102.T"]:::meta
     MAX["<b>Maximality proofs</b><br/>Diakrisis ∈ 𝓛_Cls^⊤ как теорема<br/>103.T + 104.T + 105.T + 106.T"]:::meta
 
@@ -52,7 +52,7 @@ flowchart TB
 **Четыре слоя теоретического закрытия** (все замкнуты как теоремы):
 
 1. **Extensional** — 5-осевая абсолютность AFN-T (55.T, 59.T.1, 69.T, 84.T, 87.T).
-2. **Intensional** — slice-локальность $\mathbf{I}$ через $\mathrm{Eff}$-топос Хайланда (98.T, 99.T).
+2. **Интенсиональный слой** — slice-локальность $\mathbf{I}$ через $\mathrm{Eff}$-топос Хайланда (98.T, 99.T).
 3. **Meta-classification** — theory-level стабилизация с universe-ascent (100.T, 101.T, 102.T).
 4. **Maximality** — Diakrisis $\in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема (103.T, 104.T, 105.T, 106.T).
 
@@ -142,7 +142,7 @@ flowchart TB
     MFnd(("𝔐_Fnd")):::core
 
     EXT["<b>Слой 1 · Extensional</b><br/>5-осевая абсолютность<br/>S × n × μ × ξ × полнота<br/>55.T · 59.T.1 · 69.T · 84.T · 87.T"]:::ext
-    INT["<b>Слой 2 · Intensional</b><br/>slice-локальность 𝐈<br/>через эффективный топос 𝐄𝐟𝐟<br/>98.T · 99.T"]:::int
+    INT["<b>Слой 2 · Интенсиональный</b><br/>slice-локальность 𝐈<br/>через эффективный топос 𝐄𝐟𝐟<br/>98.T · 99.T"]:::int
     META["<b>Слой 3 · Meta-classification</b><br/>theory-level стабилизация<br/>universe-ascent по κ_k<br/>100.T · 101.T · 102.T"]:::meta
     MAX["<b>Слой 4 · Maximality</b><br/>Diakrisis ∈ 𝓛_Cls^⊤<br/>как теорема<br/>Max-1 … Max-4 все [Т]<br/>103.T · 104.T · 105.T · 106.T"]:::max
 
@@ -168,13 +168,13 @@ flowchart TB
 
 AFN-T унифицирует классическую серию запретов **Кантор → Рассел → Гёдель → Тарский → Ловер → Эрнст** как специализации при разных максимальность aspects.
 
-### Слой 2 · Intensional — slice-локальность 𝐈
+### Слой 2 · Интенсиональный — slice-локальность 𝐈
 
 Функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ через канонический минимальный дисплейный класс; образ slice-локален над $\mathfrak{M}_\mathrm{Fnd}$ (98.T). Интенсиональные различия MLTT vs ETT ложатся в слои над единственной точкой $\mathfrak{M}_\mathrm{Fnd}$, разделяемые через эффективный топос Хайланда $\mathrm{Eff}$ (99.T).
 
 ### Слой 3 · Meta-classification
 
-- **100.T** условная мета-категоричность $\mathcal{L}_{\mathrm{Cls}}^{\top}$ через Гротендик–Lurie straightening.
+- **100.T** условная мета-категоричность $\mathcal{L}_{\mathrm{Cls}}^{\top}$ через Гротендик–Люри straightening.
 - **101.T** плюрализм $\mathcal{L}_{\mathrm{Cls}}$: $\infty$-cosmoi · UF · cohesive попарно $2$-неэквивалентны.
 - **102.T** theory-level стабилизация + universe-ascent $\kappa_1 < \kappa_2 < \cdots$.
 

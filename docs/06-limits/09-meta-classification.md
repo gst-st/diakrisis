@@ -49,7 +49,7 @@ $\mathbf{F}$ ∈ $\mathfrak{Meta}_{5+}^{\max}$ ⇔ дополнительно у
 - **(Max-1) Full classification**: $\mathrm{image}(\mathrm{Cl}_\mathbf{F}) = \mathfrak{M}_\mathrm{Fnd}$.
 - **(Max-2) Gauge-fullness**: $\mathrm{Aut}_2(\mathbf{F})$ транзитивно действует на gauge-классах.
 - **(Max-3) Depth stratification**: $\mathbf{F}$ admits depth-indexed filtration (MSFS Remark `rem:max3-парадокс-иммунность` — единая аксиома блокирующая Рассел/Curry/Grelling/Burali-Forti/Жирар через circular depth).
-- **(Max-4) Intensional completeness**: $\II_\mathbf{F} : \mathbf{F}^\mathrm{op} \to \Sint$ удовлетворяет (I-1)–(I-4) из Theorem `thm:I-existence`.
+- **(Max-4) Интенсиональная полнота**: $\II_\mathbf{F} : \mathbf{F}^\mathrm{op} \to \Sint$ удовлетворяет (I-1)–(I-4) из Theorem `thm:I-existence`.
 
 **Diakrisis** $\in \mathfrak{Meta}_{5+}^{\max}$: выполняется по полной конструкции ⟪⟫ + T-2f\* + 98.T/99.T.
 

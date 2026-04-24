@@ -205,7 +205,7 @@ $$
 
 - **(M1)** $\mathfrak{A}$ классифицирует нетривиальный подкласс $\mathcal{L}_5$ через функтор $\mathrm{Cl}_\mathfrak{A}: \mathcal{L}_5 \supset \mathcal{D}_\mathfrak{A} \to \mathfrak{A}$.
 - **(M2)** $\mathfrak{A}$ имеет Gauge-группу — автоморфизмы классификации.
-- **(M3)** Intensional refinement: есть функтор $\mathbf{I}_\mathfrak{A}$ в категорию интенсиональных слоёв.
+- **(M3)** Интенсиональное уточнение: есть функтор $\mathbf{I}_\mathfrak{A}$ в категорию интенсиональных слоёв.
 - **(M4)** Stabilization: $\mathrm{Cls}(\mathfrak{A}) \simeq \mathfrak{A}$ на уровне $(\infty, \infty)$-категорий (препринт теорема `thm:meta-stab`).
 - **(M5)** Depth-стратификация: различает уровни 5, 5+, 5+^max внутри себя.
 
@@ -227,9 +227,9 @@ $$
 - **(Max-1)** Полная классификация: $\mathrm{image}(\mathrm{Cl}_\mathfrak{A}) = \mathfrak{M}_\mathrm{Fnd}$.
 - **(Max-2)** Gauge-полнота: все автоэквивалентности ⟪⟫ учтены.
 - **(Max-3)** Depth-стратификация через T-2f\* (пять семейств парадоксов заблокированы).
-- **(Max-4)** Intensional completeness (98.T / 99.T).
+- **(Max-4)** Интенсиональная полнота (98.T / 99.T).
 
-**Conditional мета-категоричность** (препринт теорема `thm:meta-cat`, Diakrisis 100.T): любые два представителя $\mathcal{L}_{5+}^{\max}$ над одной и той же R-S $(\infty, \infty)$-эквивалентны через Гротендик–Lurie straightening.
+**условная мета-категоричность** (препринт теорема `thm:meta-cat`, Diakrisis 100.T): любые два представителя $\mathcal{L}_{5+}^{\max}$ над одной и той же R-S $(\infty, \infty)$-эквивалентны через Гротендик–Люри straightening.
 
 **Meta-classification стабилизация** (препринт теорема `thm:meta-stab`, Diakrisis 102.T): итерированная мета-классификация воспроизводит ту же $(\infty, \infty)$-теорию на каждом шаге (theory-level invariance); теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$ — **universe-ascent**.
 
@@ -319,7 +319,7 @@ $$
 - **(Max-1)** [Т] Full classification: $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$ — Теорема **103.T** через универсальную конструкцию $S \mapsto \alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S)$ (Seely 1984 + Hofmann 1997 + Адамек–Росицкий 1994).
 - **(Max-2)** [Т] Gauge-fullness через автоэквивалентности ⟪⟫: $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$ — Теорема **104.T** через поднятие Морита-эквивалентностей R-S.
 - **(Max-3)** [Т] Depth-stratification через T-2f\* ([`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics)) — блокирует *универсально* (не только 5 семейств) все Яновский-сводимые самореферентные парадоксы — Теорема **105.T** через Яновский 2003 + глубину экспоненциалов.
-- **(Max-4)** [Т] Intensional completeness через 98.T / 99.T ([`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement)): slice-локальность $\mathbf{I}_\mathrm{Diakrisis}$ над $\mathfrak{M}_\mathrm{Fnd}$ через эффективный топос Хайланда.
+- **(Max-4)** [Т] Интенсиональная полнота через 98.T / 99.T ([`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement)): slice-локальность $\mathbf{I}_\mathrm{Diakrisis}$ над $\mathfrak{M}_\mathrm{Fnd}$ через эффективный топос Хайланда.
 
 **Сводная теорема 106.T**: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ — **теорема, а не программа**. Следствие 106.C2: $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ (утвердительный ответ на открытый вопрос MSFS после Theorem `thm:meta-cat`).
 
@@ -333,7 +333,7 @@ $$
 | ι: End(⟪⟫) ↪ ⟪⟫ | 2-topos-like inclusion | Shulman 2008 |
 | $\mathfrak{M}_\mathrm{Fnd}$ | Classifying 2-stack | Lurie HTT 2009 §3.2 |
 | Gauge-группа G | Automorphism 2-group | Kelly 1982 |
-| Intensional refinement $\mathbf{I}$ | Display 2-classes | Jacobs-Streicher, Gambino-Garner 2008 |
+| Интенсиональное уточнение $\mathbf{I}$ | Display 2-classes | Jacobs-Streicher, Gambino-Garner 2008 |
 
 Все конструкции — **стандартный** $(\infty, \infty)$-категорный аппарат. Никакой новой foundational механики Diakrisis не вводит, только *синтезирует* известное в meta-каркас.
 

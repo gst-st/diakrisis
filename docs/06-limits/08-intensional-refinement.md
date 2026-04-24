@@ -1,9 +1,9 @@
 ---
 sidebar_position: 8
-title: Intensional refinement (путь 3)
+title: Интенсиональное уточнение (путь 3)
 ---
 
-# Intensional refinement — формальное закрытие
+# Интенсиональное уточнение — формальное закрытие
 
 ## Статус
 
@@ -65,7 +65,7 @@ $$
 |---|---|---|
 | Universe polymorphism | closed (57.T, 56.C1, 61.T, 94.T) | closed |
 | Reflective tower | closed (19.T1, 31.T3, 68.T, 69.T, 90.T) | closed |
-| **Intensional refinement** | research-programme (open) | **closed (98.T, 99.T)** |
+| **Интенсиональное уточнение** | research-programme (open) | **closed (98.T, 99.T)** |
 
 ## Следствия
 
@@ -77,7 +77,7 @@ $$
 
 ## Diakrisis-specific контекст
 
-Intensional refinement в Diakrisis — это **внутреннее уточнение артикуляций** через display-map 2-категории: артикуляции $F_1 \sim_\mathrm{gauge} F_2$ с различной proof-term-структурой (MLTT vs ETT, HoTT vs cubical HoTT, Coq vs Agda vs Lean) различимы по $\mathbf{I}$, но neutralize $\pi$-проекцию на $\mathfrak{M}_\mathrm{Fnd}$ (MSFS Corollary `cor:slice-level`).
+Интенсиональное уточнение в Diakrisis — это **внутреннее уточнение артикуляций** через display-map 2-категории: артикуляции $F_1 \sim_\mathrm{gauge} F_2$ с различной proof-term-структурой (MLTT vs ETT, HoTT vs cubical HoTT, Coq vs Agda vs Lean) различимы по $\mathbf{I}$, но neutralize $\pi$-проекцию на $\mathfrak{M}_\mathrm{Fnd}$ (MSFS Corollary `cor:slice-level`).
 
 Связь с [T-2f\*](/02-canonical-primitive/02-axiomatics) (locally stratified completion): display-map filtration — частный случай T-2f\*-подобной depth-стратификации, необходимой для (Max-3) MSFS. **Универсальное обоснование (Max-3) для Diakrisis** — теорема 105.T ([`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): T-2f\* блокирует *все* Яновский-сводимые парадоксы, не только 5 именных семейств. В связке 98.T + 99.T (Max-4) + 105.T (Max-3) Diakrisis закрывает оба интенсиональный+depth уровня формальной защиты.
 

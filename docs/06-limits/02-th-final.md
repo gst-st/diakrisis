@@ -94,7 +94,7 @@ AFN-T формулируется через объекты, но её содер
 |---|---|---|
 | Universe polymorphism | 57.T + 56.C1 + 61.T + 94.T | `thm:universe` |
 | Reflective tower | 19.T1 + 31.T3 + 68.T + 69.T + 90.T | `thm:reflective` |
-| Intensional refinement | 98.T (construction) + 99.T (slice-locality) | `thm:I-existence` + `thm:slice-locality` |
+| Интенсиональное уточнение | 98.T (construction) + 99.T (slice-locality) | `thm:I-existence` + `thm:slice-locality` |
 
 Все три **формально закрыты**; сводная теорема — MSFS Theorem `thm:обход-summary`.
 
