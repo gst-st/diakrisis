@@ -150,6 +150,7 @@ const sidebars: SidebarsConfig = {
         '10-reference/02-theorems-catalog',
         '10-reference/03-gap-status',
         '10-reference/04-afn-t-correspondence',
+        '10-reference/05-corpus-correspondence',
       ],
     },
     {

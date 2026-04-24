@@ -11,7 +11,7 @@ title: Соответствие MSFS
 
 Этот документ фиксирует **точное соответствие** между теоремами Diakrisis (внутренняя нумерация `N.T`, `N.C`) и labelled results MSFS (`\ref{thm:...}` и т.п.). Каждая дублируемая теорема имеет **каноническое место** в MSFS; Diakrisis-корпус ссылается на MSFS, не воспроизводя доказательства.
 
-**MSFS:** `internal/math-msfs/paper-en/paper.tex` (версия 2.0, 47 стр., 54 theorem-like environment, 47 bib-entries).
+**MSFS:** `internal/math-msfs/paper-en/paper.tex` (57 стр., 54+ theorem-like environments, 64 bib-entries; включает §11 AC/OC Morita Duality и Example `ex:ac-preformal` для pre-формальной AC-практики).
 
 **Сборка:** `bun internal/math-msfs/scripts/build-paper.ts` → `paper-en/afn-t-paper.pdf`.
 
@@ -80,6 +80,33 @@ title: Соответствие MSFS
 | **106.T** | Ответ на открытый вопрос после Theorem~\ref{thm:meta-cat} («$\mathcal{L}_{\mathrm{Cls}}^{\top}$ non-empty?») | Сводная: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ |
 
 **Граница**: MSFS намеренно оставляет непустоту $\mathcal{L}_{\mathrm{Cls}}^{\top}$ открытым вопросом для рецензионной чистоты (теорема о существовании представителя — внешняя по отношению к классификации). Diakrisis даёт свидетеля (саму себя) через явную конструкцию 103.T–106.T. Это — пример Diakrisis > MSFS: расширение за счёт специфической аксиоматики (T-2f\*) и внутренней метакатегории ⟪⟫, которых в MSFS нет.
+
+### Diakrisis-only расширения Актика (110.T–127.T)
+
+Теоремы **110.T–127.T** — Diakrisis-specific extensions. Они используют конструкции, отсутствующие в MSFS ($\mathsf{A}$-эндофунктор, $\sqsupset_\bullet$-предшествование, ε-инвариант, ОКА-стратификация), и опираются на Diakrisis-specific аксиоматику A-0..A-9 + T-ε + T-2a\*. Все 18 теорем имеют статус **[Т·L3·Diakrisis-only]**: формальное доказательство в ZFC+2-inacc при условии принятия Diakrisis-аксиоматики, лежащей за пределами MSFS.
+
+| Diakrisis | Источник полного proof | Краткое содержание |
+|---|---|---|
+| 110.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §1 | Классифицирующее пространство $\mathfrak{E}_\mathrm{Fnd}$ |
+| 111.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §2 | UFH для перформансов через Grothendieck-конструкцию |
+| 112.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §3 | Универсальный перформанс Актика-во-Актике |
+| 113.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §4 | Autopoiesis как $\mathsf{A}$-фиксточка уровня $\omega^2$ |
+| 114.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §5 | CPTP-дуал для перформансов |
+| 115.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §6 | ε-версия самосогласованной рефлексии |
+| 116.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §7 | ДЦ-TPM для квантового измерения |
+| 117.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §8 | СМД Щедровицкого как $\mathsf{A}^{\omega^2}$-фиксточка |
+| 118.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §9 | Enactivism Варелы как функтор $\mathsf{Enact}$ |
+| 119.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §10 | Goldilocks-зона для $\mathsf{A}$-итерации |
+| 120.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §11 | Ludics Жирара как ДЦ-сетевая семантика |
+| 121.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §12 | BHK-интерпретация как $\varepsilon$-семантика |
+| 122.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §13 | Двумерная индексация знания |
+| 123.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §14.1 | Композиция не увеличивает $\mathsf{A}$-глубину |
+| 124.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §14.2 | Сопряжение $\mathsf{M} \dashv \mathsf{A}$ через 108.T |
+| 125.T | [`/12-actic/07-beyond-metastemology`](/12-actic/07-beyond-metastemology) §3 | Метастемология Чурилова: $\mathsf{e} = \omega \cdot 2 + 1$ |
+| 126.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §14.4 | Формальный диалог Лоренцена: $\mathsf{e} = \omega + k$ |
+| 127.T | [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §14.5 | Замкнутость формально-логической ДЦ-подкатегории |
+
+**Граница**: MSFS документирует 107.T–109.T как формальный minimum AC/OC-дуальности. Всё сверх — Diakrisis-specific. Эти теоремы не могут быть процитированы в MSFS-контексте без перевода в MSFS-язык (который потребует добавления $\mathsf{A}$-функтора, ε-инварианта и Diakrisis-аксиоматики).
 
 ### AC/OC-дуальность и дуальная граничная лемма (MSFS §11)
 
