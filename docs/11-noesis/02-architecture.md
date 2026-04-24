@@ -9,26 +9,28 @@ title: Архитектура — три слоя
 
 Noesis построен как **трёхслойная** система с чётким разделением ответственности. Каждый слой имеет конкретную роль, стабильный интерфейс, и реализуется независимо.
 
-```
-┌──────────────────────────────────────────────────────────┐
-│                   PRESENTATION LAYER                     │
-│  Editors · Graph viz · Status tables · Agent dialog      │
-└────────────────────────────┬─────────────────────────────┘
-                             │ NP (Noesis Protocol, JSON-RPC)
-┌────────────────────────────┴─────────────────────────────┐
-│                      Noesis.Core                         │
-│  ┌──────────┬──────────┬──────────┬──────────────────┐   │
-│  │ Primitive│ Category │ Agent    │ Federation       │   │
-│  │ Engine   │ Engine   │ Engine   │ Engine (phase 4) │   │
-│  └──────────┴──────────┴──────────┴──────────────────┘   │
-│       Language: Verum (dependent types + SMT + GPU)      │
-└────────────────────────────┬─────────────────────────────┘
-                             │
-┌────────────────────────────┴─────────────────────────────┐
-│                    STORAGE LAYER                         │
-│  Markdown+YAML · SQLite index · Git versioning           │
-│  Optional: distributed sheaf (federation)                │
-└──────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    classDef pres fill:#d4e8f9,stroke:#1e6091,stroke-width:2px,color:#000
+    classDef core fill:#fff3b0,stroke:#b8860b,stroke-width:2px,color:#000
+    classDef eng fill:#fffce0,stroke:#b8860b,color:#000
+    classDef store fill:#e4f0d4,stroke:#2d5016,stroke-width:2px,color:#000
+
+    P["<b>PRESENTATION LAYER</b><br/>Editors · Graph viz · Status tables · Agent dialog"]:::pres
+
+    subgraph CORE["Noesis.Core — Verum (dependent types + SMT + GPU)"]
+        direction LR
+        E1["Primitive<br/>Engine"]:::eng
+        E2["Category<br/>Engine"]:::eng
+        E3["Agent<br/>Engine"]:::eng
+        E4["Federation<br/>Engine (phase 4)"]:::eng
+    end
+    class CORE core
+
+    S["<b>STORAGE LAYER</b><br/>Markdown + YAML · SQLite index · Git versioning<br/>Optional: distributed sheaf (federation)"]:::store
+
+    P ==>|"NP (Noesis Protocol, JSON-RPC)"| CORE
+    CORE ==> S
 ```
 
 ## Слой представления (Presentation Layer)

@@ -7,14 +7,21 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 /**
- * Минималистичная визуализация Diakrisis.
+ * Визуализация Diakrisis (post-audit14).
  *
- * Композиция: треугольник трёх характеризаций нулевой границы Z.
- *  - Центральный символ Δ — акт различения (Διάκρисίс).
- *  - Три орбитальных узла — Z₁ (путь), Z₂ (побег), Z₃ (представимость).
- *  - Связующие дуги — 2-функторы Φ_{ij} (эквивалентность по 16.T1).
- *  - Пульс через «дыхание» breath — живая структура без времени.
- *  - Фоновое свечение с radial gradient.
+ * Фундаментальная суть: классифицирующий 2-стек 𝔐_Fnd пространства
+ * Rich-foundations со стратификацией
+ *
+ *     𝓛_Fnd → 𝓛_Cls ⊇ 𝓛_Cls^⊤ → 𝓛_Abs = ∅
+ *
+ * Композиция:
+ *  - Центр Δ — Diakrisis ∈ 𝓛_Cls^⊤ (максимальный классификатор, 106.T).
+ *  - Внутреннее кольцо 𝓛_Cls — partial classifiers (∞-cosmoi, UF, cohesive).
+ *  - Среднее кольцо 𝓛_Fnd — Rich-foundations (ZFC, HoTT, CIC, NCG, Eff, ∞-topos, α_uhm).
+ *  - Внешняя граница 𝓛_Abs (пунктир, красная) — пусто по AFN-T.
+ *  - 5 лучей — пять осей абсолютности (S, n, μ, ξ, π).
+ *  - Gauge-дуги на 𝓛_Fnd — Морита-эквивалентности.
+ *  - Пульсация «дыхание» + мягкое встречное вращение колец.
  */
 function DiakrisisVisualization() {
   const cx = 250;
@@ -37,136 +44,177 @@ function DiakrisisVisualization() {
     };
   }, []);
 
-  const rotationSpeed = 1.2;
   const coreR = 38;
-  const innerR = 72;
-  const triR = 135;
-  const boundaryR = 175;
+  const clsR = 88;
+  const fndR = 155;
+  const absR = 200;
 
-  const breath = 1 + Math.sin(time * 0.35) * 0.02;
+  const breath = 1 + Math.sin(time * 0.35) * 0.018;
 
-  const vertex = (idx: number, r: number) => {
-    const angle = ((idx * 120) - 90) * Math.PI / 180;
-    return {
-      x: cx + Math.cos(angle) * r,
-      y: cy + Math.sin(angle) * r,
-    };
+  const fndSpin = time * 0.65;
+  const clsSpin = -time * 0.9;
+
+  const fndNodes = [
+    {label: 'ZFC', weight: 1.0},
+    {label: 'HoTT', weight: 1.0},
+    {label: 'CIC', weight: 0.9},
+    {label: 'NCG', weight: 0.9},
+    {label: 'Eff', weight: 0.8},
+    {label: '∞-topos', weight: 0.9},
+    {label: 'α_uhm', weight: 1.15},
+  ];
+
+  const clsNodes = [
+    {label: '∞-cosmoi'},
+    {label: 'UF'},
+    {label: 'cohesive'},
+  ];
+
+  const axes = [
+    {label: 'S'},
+    {label: 'n'},
+    {label: 'μ'},
+    {label: 'ξ'},
+    {label: 'π'},
+  ];
+
+  const ringPos = (angleDeg: number, r: number, rotDeg: number) => {
+    const a = ((angleDeg + rotDeg) - 90) * Math.PI / 180;
+    return {x: cx + Math.cos(a) * r, y: cy + Math.sin(a) * r};
   };
 
-  const renderTriangleEdges = () => {
-    const r = triR * breath;
-    const edges: JSX.Element[] = [];
-    for (let i = 0; i < 3; i++) {
-      const a = vertex(i, r);
-      const b = vertex((i + 1) % 3, r);
-      const pulse = Math.sin(time * 0.55 + i * 0.9);
-      const opacity = 0.28 + pulse * 0.12;
-      edges.push(
-        <line key={`edge-${i}`}
-          x1={a.x} y1={a.y} x2={b.x} y2={b.y}
+  const renderFndRing = () => {
+    const elements: JSX.Element[] = [];
+    const r = fndR * breath;
+    const n = fndNodes.length;
+    const step = 360 / n;
+    const rotDeg = fndSpin * 57.2958;
+
+    const morita: [number, number][] = [[0, 1], [1, 2], [3, 5], [4, 5], [6, 0], [6, 3]];
+    for (const [i, j] of morita) {
+      const aDeg = i * step;
+      const bDeg = j * step;
+      const a = ringPos(aDeg, r, rotDeg);
+      const b = ringPos(bDeg, r, rotDeg);
+      const midDeg = (aDeg + bDeg) / 2;
+      const ctrl = ringPos(midDeg, r * 0.55, rotDeg);
+      const pulse = 0.5 + Math.sin(time * 0.45 + (i + j) * 0.7) * 0.5;
+      elements.push(
+        <path key={`gauge-${i}-${j}`}
+          d={`M ${a.x} ${a.y} Q ${ctrl.x} ${ctrl.y} ${b.x} ${b.y}`}
+          fill="none"
           stroke="var(--ifm-color-primary)"
-          strokeWidth={1.5}
-          opacity={opacity}
+          strokeWidth={0.8}
+          opacity={0.12 + pulse * 0.08}
         />,
       );
     }
-    return edges;
-  };
 
-  const renderRays = () => {
-    const elements: JSX.Element[] = [];
-    for (let i = 0; i < 3; i++) {
-      const pulse = Math.sin(time * 0.6 + i * (Math.PI * 2 / 3));
-      const len = (triR + pulse * 6) * breath;
-      const end = vertex(i, len);
-      const innerEnd = vertex(i, coreR);
+    for (let i = 0; i < n; i++) {
+      const deg = i * step;
+      const p = ringPos(deg, r, rotDeg);
+      const pulse = Math.sin(time * 0.55 + i * 0.8);
+      const w = fndNodes[i].weight;
       elements.push(
-        <line key={`ray-${i}`}
-          x1={innerEnd.x} y1={innerEnd.y}
-          x2={end.x} y2={end.y}
-          stroke="var(--ifm-color-primary)"
-          strokeWidth={1.5}
-          strokeLinecap="round"
-          opacity={0.4 + pulse * 0.15}
+        <circle key={`fnd-${i}`}
+          cx={p.x} cy={p.y}
+          r={5 * w * breath}
+          fill="var(--ifm-color-primary)"
+          opacity={0.65 + pulse * 0.15}
         />,
       );
+      const labelP = ringPos(deg, r + 20, rotDeg);
       elements.push(
-        <circle key={`node-${i}`}
-          cx={end.x} cy={end.y}
-          r={4 * breath}
-          fill="var(--ifm-color-primary)"
-          opacity={0.55 + pulse * 0.2}
-        />,
+        <text key={`fnd-label-${i}`}
+          x={labelP.x} y={labelP.y}
+          className={styles.vertexLabel}
+          textAnchor="middle"
+          dominantBaseline="central"
+          style={{fontSize: '11px', opacity: 0.8}}
+        >
+          {fndNodes[i].label}
+        </text>,
       );
     }
     return elements;
   };
 
-  const renderLabels = () => {
-    const labels = ['Z₁', 'Z₂', 'Z₃'];
-    const r = triR * breath + 26;
-    return labels.map((label, i) => {
-      const {x, y} = vertex(i, r);
-      return (
-        <text key={`label-${i}`}
-          x={x} y={y}
+  const renderClsRing = () => {
+    const elements: JSX.Element[] = [];
+    const r = clsR * breath;
+    const n = clsNodes.length;
+    const step = 360 / n;
+    const rotDeg = clsSpin * 57.2958;
+    for (let i = 0; i < n; i++) {
+      const deg = i * step;
+      const p = ringPos(deg, r, rotDeg);
+      const pulse = Math.sin(time * 0.5 + i * 1.2);
+      elements.push(
+        <circle key={`cls-${i}`}
+          cx={p.x} cy={p.y}
+          r={4 * breath}
+          fill="none"
+          stroke="var(--ifm-color-primary)"
+          strokeWidth={1.2}
+          opacity={0.55 + pulse * 0.2}
+        />,
+      );
+      const labelP = ringPos(deg, r - 16, rotDeg);
+      elements.push(
+        <text key={`cls-label-${i}`}
+          x={labelP.x} y={labelP.y}
           className={styles.vertexLabel}
           textAnchor="middle"
           dominantBaseline="central"
+          style={{fontSize: '9.5px', opacity: 0.7, fontStyle: 'italic'}}
         >
-          {label}
-        </text>
-      );
-    });
-  };
-
-  const renderGaugeArcs = () => {
-    const arcs: JSX.Element[] = [];
-    const r = innerR * breath;
-    for (let i = 0; i < 3; i++) {
-      const a = vertex(i, r);
-      const b = vertex((i + 1) % 3, r);
-      const midA = ((i * 120 + 60) - 90) * Math.PI / 180;
-      const ctrlR = r * 1.22;
-      const ctrlX = cx + Math.cos(midA) * ctrlR;
-      const ctrlY = cy + Math.sin(midA) * ctrlR;
-      const pulse = Math.sin(time * 0.5 + i * 1.1);
-      arcs.push(
-        <path key={`arc-${i}`}
-          d={`M ${a.x} ${a.y} Q ${ctrlX} ${ctrlY} ${b.x} ${b.y}`}
-          fill="none"
-          stroke="var(--ifm-color-primary)"
-          strokeWidth={1}
-          opacity={0.18 + pulse * 0.1}
-        />,
+          {clsNodes[i].label}
+        </text>,
       );
     }
-    return arcs;
+    return elements;
   };
 
-  const renderMiniTriangles = () => {
+  const renderAxes = () => {
     const elements: JSX.Element[] = [];
-    const mainR = triR * breath;
-    const miniR = 9;
-    for (let v = 0; v < 3; v++) {
-      const vp = vertex(v, mainR);
-      for (let i = 0; i < 3; i++) {
-        const a1 = ((i * 120) - 90) * Math.PI / 180;
-        const a2 = (((i + 1) * 120) - 90) * Math.PI / 180;
-        const x1 = vp.x + Math.cos(a1) * miniR;
-        const y1 = vp.y + Math.sin(a1) * miniR;
-        const x2 = vp.x + Math.cos(a2) * miniR;
-        const y2 = vp.y + Math.sin(a2) * miniR;
-        const pulse = Math.sin(time * 0.5 + v * 0.9 + i * 0.3);
-        elements.push(
-          <line key={`mini-${v}-${i}`}
-            x1={x1} y1={y1} x2={x2} y2={y2}
-            stroke="var(--ifm-color-primary)"
-            strokeWidth={0.5}
-            opacity={0.14 + pulse * 0.08}
-          />,
-        );
-      }
+    const n = axes.length;
+    for (let i = 0; i < n; i++) {
+      const deg = (i * 360) / n;
+      const a = ((deg) - 90) * Math.PI / 180;
+      const inner = {
+        x: cx + Math.cos(a) * (coreR + 4),
+        y: cy + Math.sin(a) * (coreR + 4),
+      };
+      const outer = {
+        x: cx + Math.cos(a) * (absR - 6),
+        y: cy + Math.sin(a) * (absR - 6),
+      };
+      const pulse = Math.sin(time * 0.4 + i * (Math.PI * 2 / n));
+      elements.push(
+        <line key={`axis-${i}`}
+          x1={inner.x} y1={inner.y}
+          x2={outer.x} y2={outer.y}
+          stroke="var(--ifm-color-primary)"
+          strokeWidth={0.6}
+          strokeDasharray="1 4"
+          opacity={0.22 + pulse * 0.08}
+        />,
+      );
+      const lp = {
+        x: cx + Math.cos(a) * (absR + 14),
+        y: cy + Math.sin(a) * (absR + 14),
+      };
+      elements.push(
+        <text key={`axis-label-${i}`}
+          x={lp.x} y={lp.y}
+          className={styles.vertexLabel}
+          textAnchor="middle"
+          dominantBaseline="central"
+          style={{fontSize: '10px', opacity: 0.55, fontStyle: 'italic'}}
+        >
+          {axes[i].label}
+        </text>,
+      );
     }
     return elements;
   };
@@ -175,12 +223,12 @@ function DiakrisisVisualization() {
     <svg viewBox="0 0 500 500" className={styles.orbitalSvg}>
       <defs>
         <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.45" />
-          <stop offset="50%" stopColor="var(--ifm-color-primary)" stopOpacity="0.13" />
+          <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.42" />
+          <stop offset="55%" stopColor="var(--ifm-color-primary)" stopOpacity="0.12" />
           <stop offset="100%" stopColor="var(--ifm-color-primary)" stopOpacity="0" />
         </radialGradient>
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feGaussianBlur stdDeviation="2.8" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
@@ -195,50 +243,70 @@ function DiakrisisVisualization() {
         </filter>
       </defs>
 
-      <circle cx={cx} cy={cy} r={boundaryR * breath} fill="url(#bgGrad)" />
+      {/* Background — 𝔐_Fnd ambient glow */}
+      <circle cx={cx} cy={cy} r={absR * breath} fill="url(#bgGrad)" />
 
-      <circle cx={cx} cy={cy} r={boundaryR * breath}
+      {/* 𝓛_Abs outer boundary — forbidden stratum */}
+      <circle cx={cx} cy={cy} r={absR * breath}
+        fill="none"
+        stroke="#c45454"
+        strokeWidth={1.2}
+        strokeDasharray="6 4"
+        opacity={0.45}
+      />
+      <text
+        x={cx} y={cy - absR * breath - 16}
+        className={styles.vertexLabel}
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{fontSize: '11px', fill: '#c45454', opacity: 0.7, fontStyle: 'italic'}}
+      >
+        𝓛_Abs = ∅ (AFN-T)
+      </text>
+
+      {/* Five axes of absoluteness */}
+      <g>{renderAxes()}</g>
+
+      {/* 𝓛_Fnd ring */}
+      <circle cx={cx} cy={cy} r={fndR * breath}
         fill="none"
         stroke="var(--ifm-color-primary)"
-        strokeWidth={1}
-        opacity={0.18}
+        strokeWidth={0.6}
+        opacity={0.14}
       />
+      <g filter="url(#glow)">{renderFndRing()}</g>
+      <text
+        x={cx} y={cy + fndR * breath + 38}
+        className={styles.vertexLabel}
+        textAnchor="middle"
+        dominantBaseline="central"
+        style={{fontSize: '10.5px', opacity: 0.5}}
+      >
+        𝓛_Fnd — Rich-foundations
+      </text>
 
-      <g style={{
-        transform: `rotate(${time * rotationSpeed}deg)`,
-        transformOrigin: `${cx}px ${cy}px`,
-      }}>
-        <circle cx={cx} cy={cy} r={innerR * breath}
-          fill="none"
-          stroke="var(--ifm-color-primary)"
-          strokeWidth={0.5}
-          strokeDasharray="2 4"
-          opacity={0.22}
-        />
-        <circle cx={cx} cy={cy} r={triR * breath}
-          fill="none"
-          stroke="var(--ifm-color-primary)"
-          strokeWidth={0.5}
-          opacity={0.1}
-        />
-        <g filter="url(#glow)">{renderGaugeArcs()}</g>
-        <g filter="url(#glow)">{renderTriangleEdges()}</g>
-        {renderMiniTriangles()}
-        <g filter="url(#glow)">{renderRays()}</g>
-        {renderLabels()}
-      </g>
+      {/* 𝓛_Cls ring */}
+      <circle cx={cx} cy={cy} r={clsR * breath}
+        fill="none"
+        stroke="var(--ifm-color-primary)"
+        strokeWidth={0.5}
+        strokeDasharray="3 3"
+        opacity={0.22}
+      />
+      <g>{renderClsRing()}</g>
 
+      {/* Central Diakrisis ∈ 𝓛_Cls^⊤ */}
       {(() => {
-        const wx = Math.sin(time * 0.31) * 2;
-        const wy = Math.sin(time * 0.23) * 2;
+        const wx = Math.sin(time * 0.29) * 1.6;
+        const wy = Math.sin(time * 0.21) * 1.6;
         const x = cx + wx;
         const y = cy + wy;
         const r = coreR * breath;
         return (
           <g className={styles.coreGroup}>
-            <circle cx={x} cy={y} r={r * 1.3}
+            <circle cx={x} cy={y} r={r * 1.35}
               fill="var(--ifm-color-primary)"
-              opacity={0.12}
+              opacity={0.14}
               filter="url(#coreGlow)"
             />
             <circle cx={x} cy={y} r={r}
@@ -251,6 +319,15 @@ function DiakrisisVisualization() {
               dominantBaseline="central"
             >
               Δ
+            </text>
+            <text
+              x={x} y={y + r + 14}
+              className={styles.vertexLabel}
+              textAnchor="middle"
+              dominantBaseline="central"
+              style={{fontSize: '10.5px', opacity: 0.85, fontWeight: 600}}
+            >
+              Diakrisis ∈ 𝓛_Cls^⊤
             </text>
           </g>
         );

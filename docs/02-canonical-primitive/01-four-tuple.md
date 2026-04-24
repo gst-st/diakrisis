@@ -314,26 +314,33 @@ $$\mathrm{mindepth}(\alpha, \beta) := \min\{\kappa \in \mathrm{Ord} : \alpha \sq
 
 ### 5.3 Диаграмма зависимостей
 
-```
-⟪⟫ ─────────────┐
- │              │
- ↓              ↓
- 𝖬           α_math
- │              │
- ↓              ↓
-⊏_•         ρ = [α_math, ·]
- │              │
- ↓              ↓
-mindepth    Trace(𝖠)
- │              │
- ↓              ↓
-              α_𝖬 = ι(𝖬)
-              │
-              ↓
-              Ω̄ = Fix(𝖬)
+```mermaid
+flowchart TB
+    classDef prim fill:#fff3b0,stroke:#b8860b,stroke-width:2px,color:#000
+    classDef der fill:#d4e8f9,stroke:#1e6091,stroke-width:2px,color:#000
+    classDef fix fill:#e4f0d4,stroke:#2d5016,stroke-width:2px,color:#000
+
+    META["⟪⟫"]:::prim
+    M["𝖬"]:::prim
+    ALPHA["α_math"]:::prim
+    DOM["⊏_•"]:::der
+    RHO["ρ = [α_math, ·]"]:::der
+    MIN["mindepth"]:::der
+    TRACE["Trace(𝖠)"]:::der
+    AM["α_𝖬 = ι(𝖬)"]:::der
+    FIX["Ω̄ = Fix(𝖬)"]:::fix
+
+    META --> M
+    META --> ALPHA
+    M --> DOM
+    ALPHA --> RHO
+    DOM --> MIN
+    RHO --> TRACE
+    TRACE --> AM
+    AM --> FIX
 ```
 
-(стрелка означает «определяется через»).
+Стрелка означает «определяется через».
 
 ## 6. Что не входит в примитив
 

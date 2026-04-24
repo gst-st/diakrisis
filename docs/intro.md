@@ -288,26 +288,26 @@ $$
 
 ## Пятислойная онтологическая структура
 
-```
-   ⚬ (апейрическая пустота)
-            │   [вне формализации]
-            ↓
- 1. Διάκрисис (акт; феноменологически дан)
-            │   [частично формализуемо]
-            ↓
- 2. Нулевая граница Z (асимптотика, 16.T1)
-            │   [формально описуемо]
-            ↓
- 3. Канонический примитив (⟪⟫, 𝖬, α_math, ⊏_•)
-            │   [детально формализовано]
-            ↓
- 4. ρ-проекции: извлечения
-    ZFC · HoTT · NCG · linear · AFA ·
-    cohesive · motivic · realizability
-            │
-            ↓
- 5. Сборки: конкретные теории
-    УГМ · SM · IIT / GWT / HOT
+```mermaid
+flowchart TB
+    classDef phen fill:#f9e4d4,stroke:#b5651d,stroke-width:2px,color:#000
+    classDef bound fill:#fff3b0,stroke:#b8860b,stroke-width:2px,color:#000
+    classDef form fill:#d4e8f9,stroke:#1e6091,stroke-width:2px,color:#000
+    classDef proj fill:#e4f0d4,stroke:#2d5016,stroke-width:2px,color:#000
+    classDef asm fill:#e8d4f9,stroke:#4b0082,stroke-width:2px,color:#000
+
+    A["⚬ — апейрическая пустота"]:::phen
+    B["1 · Διάκрисис — акт различения"]:::phen
+    C["2 · Нулевая граница Z<br/>(16.T1 · три характеризации)"]:::bound
+    D["3 · Канонический примитив<br/>⟪⟫, 𝖬, α_math, ⊏_•"]:::form
+    E["4 · ρ-проекции<br/>ZFC · HoTT · NCG · linear · AFA ·<br/>cohesive · motivic · realizability"]:::proj
+    F["5 · Сборки<br/>УГМ · SM · IIT / GWT / HOT"]:::asm
+
+    A -.->|вне формализации| B
+    B -.->|частично формализуемо| C
+    C ==>|формально описуемо| D
+    D ==>|детально формализовано| E
+    E ==>|конкретные реализации| F
 ```
 
 ---
