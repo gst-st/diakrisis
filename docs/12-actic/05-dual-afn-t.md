@@ -33,7 +33,7 @@ title: 109.T — Дуал-AFN-T (absolute-act-no-go)
 
 :::tip MSFS-первоисточник
 
-Формальная версия теоремы — MSFS Theorem~\ref{thm:dual-afnt} (Dual Boundary Lemma), §11. Соответствие объектов — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальная версия теоремы — MSFS Theorem~ef{thm:dual-afnt} (Dual Boundary Lemma), §11. Соответствие объектов — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 
@@ -44,7 +44,7 @@ title: 109.T — Дуал-AFN-T (absolute-act-no-go)
 - **Route 1 (прямой syntax-semantics bridge на $\cE$)**: если $(F, \cC, \iota, r)$ формально $S$-определим, то квадрупл принадлежит $\SSE^{\mathrm{global}}$ (Lemma~\ref{lem:SS-membership-E}); тождественный морфизм $(\id_F, \id_\cC)$ реализует запрещённую $(\tilde{\Pi}_4)$-координацию.
 - **Route 2 (через дуальность 108.T)**: $(F, \cC, \iota, r) \in \LAbsE$ влечёт $F \in \LAbs$ через $\varepsilon$-лифтинг $\cF$-координаций; противоречие с Corollary~\ref{cor:level6-empty-alpha}.
 
-Разделы 3.2–3.6 — изложение через 5 осей AFN-T; соответствует Theorem~\ref{thm:dual-five-axis}.
+Разделы 3.2–3.6 — изложение через 5 осей AFN-T; соответствует Theorem~ef{thm:dual-five-axis}.
 
 ### 3.2 Route 1 — прямой syntax-semantics bridge
 
@@ -66,7 +66,7 @@ $$
 
 ### 3.4 Распределение по пяти осям
 
-Любой из путей 3.2–3.3 закрывает $\LAbsE = \emptyset$ для фиксированного $(S, n)$. Theorem~\ref{thm:dual-five-axis} (MSFS §11.6) устанавливает это единообразно по пяти осям:
+Любой из путей 3.2–3.3 закрывает $\LAbsE = \emptyset$ для фиксированного $(S, n)$. Theorem~ef{thm:dual-five-axis} (MSFS §11.6) устанавливает это единообразно по пяти осям:
 
 - **Scope-абсолютность (S-ось)**: Route 1 параметрическая по $S \in \RS$; $\SSE$ определён параметрически (Definition~\ref{def:SSE}).
 - **Depth-абсолютность (n-ось)**: truncation $\tau_{\leq n}$ коммутирует с Ламбек-Scott adjunction; $\varepsilon$-лифтинг сохраняется (Lurie HTT §5.5).

@@ -7,12 +7,12 @@ title: AFN-T — граничная лемма
 
 ## Статус и каноническая форма
 
-**Граничная лемма** структурной архитектуры Diakrisis. Формализует внешнюю границу пространства 𝓜_Fnd: Level 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — структурно пустой stratum. Основной математический вклад Diakrisis — не сама граница, а классификация **внутреннего устройства** 𝓜_Fnd (плюрализм Level 5+, условная мета-категоричность, slice-локальное интенсиональное уточнение, theory-level meta-стабилизация, **maximality proofs 103.T–106.T устанавливающие Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорему**).
+**Граничная лемма** структурной архитектуры Diakrisis. Формализует внешнюю границу пространства 𝓜_Fnd: уровень 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — структурно пустой stratum. Основной математический вклад Diakrisis — не сама граница, а классификация **внутреннего устройства** 𝓜_Fnd (плюрализм уровень 5+, условная мета-категоричность, slice-локальное интенсиональное уточнение, theory-level meta-стабилизация, **maximality proofs 103.T–106.T устанавливающие Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорему**).
 
 **Каноническое изложение** находится в препринте (*The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026):
 
 - **AFN-T (combined)** = MSFS Theorem `thm:afnt` (§5--§6).
-- **AFN-T (α-часть)**: Boundary Lemma: The Emptiness of Level 6 = MSFS Theorem `thm:afnt-alpha` (§5). Синтаксис-семантический мост: $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$, $\id_X$ нарушает $(\Pi_4)$.
+- **AFN-T (α-часть)**: Boundary Lemma: The Emptiness of уровень 6 = MSFS Theorem `thm:afnt-alpha` (§5). Синтаксис-семантический мост: $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$, $\id_X$ нарушает $(\Pi_4)$.
 - **AFN-T (β-часть)**: Boundary Lemma: No Limit-Based Escape = MSFS Theorem `thm:afnt-beta` (§6). Трансфинитные приближения остаются в $\cS_S^{\mathrm{global}}$; proper-class-башни через Proposition `prop:proper-class`.
 - **пятиосевая абсолютность AFN-T** = MSFS Theorem `thm:five-axis` (§7).
 
@@ -24,7 +24,7 @@ title: AFN-T — граничная лемма
 
 Формальная математика развивается через выбор **основания** — формальной системы $F$ (ZFC, HoTT, CIC, NCG, ...). Естественен вопрос: существует ли **предельное** основание — такое $F^*$, из которого выводится вся иерархия оснований, включая свою собственную метатеоретическую позицию?
 
-**AFN-T** — структурный ответ: **нет**, и это не ограничение знания, а формальный инвариант, следующий из синтаксис-семантического сопряжения (R5). Лемма `lem:SS-membership` даёт $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$; тождественный автоморфизм $\id_X$ реализует тривиальную редукцию Мориты к $X \in \cS_S$, что противоречит нередуцируемости $(\Pi_4)$. Пара условий $(F_S) \wedge (\Pi_4)$ самопротиворечива; триплет Level-6 условий ($(F_S) \wedge (\Pi_4) \wedge (\Pi_{3\text{-max}})$) — тем более. Максимальная генеративность $(\Pi_{3\text{-max}})$ играет дефиниционную роль (семантический маркер «максимальности»), а не доказательную: её роль в AFN-T субсумирована.
+**AFN-T** — структурный ответ: **нет**, и это не ограничение знания, а формальный инвариант, следующий из синтаксис-семантического сопряжения (R5). Лемма `lem:SS-membership` даёт $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$; тождественный автоморфизм $\id_X$ реализует тривиальную редукцию Мориты к $X \in \cS_S$, что противоречит нередуцируемости $(\Pi_4)$. Пара условий $(F_S) \wedge (\Pi_4)$ самопротиворечива; триплет уровня 6 условий ($(F_S) \wedge (\Pi_4) \wedge (\Pi_{3\text{-max}})$) — тем более. Максимальная генеративность $(\Pi_{3\text{-max}})$ играет дефиниционную роль (семантический маркер «максимальности»), а не доказательную: её роль в AFN-T субсумирована.
 
 ## Канонический контекст (с опорой на препринт)
 
@@ -62,9 +62,9 @@ title: AFN-T — граничная лемма
 
 AFN-T формулируется через объекты, но её содержательный смысл в Diakrisis — это утверждение о метакатегории $\langle\langle \cdot \rangle\rangle$:
 
-- $\alpha_\mathrm{math}$ ∈ $\mathrm{Ob}(\langle\langle \cdot \rangle\rangle)$ — не-привилегированная артикуляция по [T-α](/02-canonical-primitive/02-axiomatics#t-alpha-spec); любой кандидат на Level-6 артикуляцию $\alpha_6$ нарушает либо $(\Pi_4)$, либо $(\Pi_3\text{-max})$.
-- Классифицирующее пространство $\mathfrak{M}_\mathrm{Fnd}$ (препринт $\fM$) — полное, но не эскалируемое до Level-6.
-- Оператор $\mathsf{M}$ (accessible endofunctor) не порождает Level-6 fixed point в Fix($\mathsf{M}$).
+- $\alpha_\mathrm{math}$ ∈ $\mathrm{Ob}(\langle\langle \cdot \rangle\rangle)$ — не-привилегированная артикуляция по [T-α](/02-canonical-primitive/02-axiomatics#t-alpha-spec); любой кандидат на уровня 6 артикуляцию $\alpha_6$ нарушает либо $(\Pi_4)$, либо $(\Pi_3\text{-max})$.
+- Классифицирующее пространство $\mathfrak{M}_\mathrm{Fnd}$ (препринт $\fM$) — полное, но не эскалируемое до уровня 6.
+- Оператор $\mathsf{M}$ (accessible endofunctor) не порождает уровня 6 fixed point в Fix($\mathsf{M}$).
 
 Это связывает AFN-T с 18.T (Рассел-иммунитет) и 39.T (gauge-симметрия).
 
@@ -101,7 +101,7 @@ AFN-T формулируется через объекты, но её содер
 ## Структурная характеризация AFN-T (MSFS §10)
 
 - **Relation to no-go series** (Кантор, Рассел, Гёдель, Тарский, Ловер, Эрнст 2015) — MSFS `thm:subsumption`.
-- **Relation to Хэмкинс multiverse** — complementary; multiverse как Level-6 candidate foreclosed by AFN-T (MSFS `sec:ernst-multiverse`).
+- **Relation to Хэмкинс multiverse** — complementary; multiverse как уровня 6 candidate foreclosed by AFN-T (MSFS `sec:ernst-multiverse`).
 - **Relation to Барвик–Schommer-Pries 2021 unicity** — compatible; intra-paradigm unicity используется как технический аргумент `thm:bergner-lurie-stab`.
 
 Diakrisis не воспроизводит это positioning — см. MSFS §10.5.
@@ -114,7 +114,9 @@ $$
 \LAbs = \emptyset \quad \xleftrightarrow{\text{108.T}} \quad \LAbsE = \emptyset.
 $$
 
-109.T (Dual Boundary Lemma, MSFS Theorem~\ref{thm:dual-afnt}) формулирует ту же no-go на стороне энактментов: не существует $(F, \cC, \iota, r) \in \cE$, одновременно enactment-definable, non-coordinate, maximally receptive. Дуальная пятиосевая абсолютность (MSFS Theorem~\ref{thm:dual-five-axis}) покрывает ось performance-uniqueness через Ловер-scope LS($\cE$) = closed symmetric monoidal (включает линейную логику, ludics, квантовые enactments; универсальная диагональ Яновский).
+109.T (Dual Boundary Lemma, MSFS Theorem~
+ef{thm:dual-afnt}) формулирует ту же no-go на стороне энактментов: не существует $(F, \cC, \iota, r) \in \cE$, одновременно enactment-definable, non-coordinate, maximally receptive. Дуальная пятиосевая абсолютность (MSFS Theorem~
+ef{thm:dual-five-axis}) покрывает ось performance-uniqueness через Ловер-scope LS($\cE$) = closed symmetric monoidal (включает линейную логику, ludics, квантовые enactments; универсальная диагональ Яновский).
 
 **Значение**: no-go симметрично по артикуляциям и актам-практикам. Пятый уровень защиты корпуса — AC/OC-дуальность ([`/10-reference/03-gap-status`](/10-reference/03-gap-status) §5 уровней защиты). Подробнее — [`/12-actic/05-dual-afn-t`](/12-actic/05-dual-afn-t).
 
@@ -124,8 +126,8 @@ AFN-T внутри Diakrisis — **структурное утверждение
 
 Связь с П-0 принципами ([`/00-foundations/02-zero-principles`](/00-foundations/02-zero-principles)):
 
-- **П-0.0** (Act vs. object): Level-6 объект был бы объектификацией акта различения — запрещено;
-- **П-0.4** (Internal/external): полнота Level-5+ (classify) без эскалации в Level-6 (generate) — формальное выражение того, что классификатор $\neq$ generator.
+- **П-0.0** (Act vs. object): уровня 6 объект был бы объектификацией акта различения — запрещено;
+- **П-0.4** (Internal/external): полнота уровня 5+ (classify) без эскалации в уровня 6 (generate) — формальное выражение того, что классификатор $\neq$ generator.
 
 ## Формализация и следующие шаги
 
@@ -138,7 +140,7 @@ AFN-T внутри Diakrisis — **структурное утверждение
 - [`03-no-go-series`](/06-limits/03-no-go-series) — AFN-T в классической серии no-go-теорем;
 - [`06-absoluteness`](/06-limits/06-absoluteness) — Пять осей детальнее;
 - [`08-intensional-refinement`](/06-limits/08-intensional-refinement) — Путь 3 (интенсиональный) формально;
-- [`09-meta-classification`](/06-limits/09-meta-classification) — Level 5+ meta-классификация;
+- [`09-мета-классификация`](/06-limits/09-meta-classification) — уровень 5+ meta-классификация;
 - [`10-maximality-theorems`](/06-limits/10-maximality-theorems) — полное обоснование Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ (103.T–106.T);
 - [`/12-actic/05-dual-afn-t`](/12-actic/05-dual-afn-t) — 109.T Dual-AFN-T через 108.T;
 - [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — полная таблица соответствия.

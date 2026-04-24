@@ -1,36 +1,36 @@
 ---
 sidebar_position: 9
-title: Meta-classification Level 5+
+title: Meta-classification уровень 5+
 ---
 
-# Meta-classification Level 5+ — единственность, множественность, стабилизация
+# Meta-classification уровень 5+ — единственность, множественность, стабилизация
 
 ## Статус
 
-**[Т]** — формальное закрытие вопроса о позиции Diakrisis в пространстве Level 5+ meta-structures.
+**[Т]** — формальное закрытие вопроса о позиции Diakrisis в пространстве уровень 5+ meta-structures.
 
 **Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §9:
 
-- **100.T** = MSFS Theorem `thm:meta-cat` (conditional мета-категоричность).
-- **101.T** = MSFS Theorem `thm:meta-mult` (structural multiplicity).
-- **102.T** = MSFS Theorem `thm:meta-stab` (meta-classification стабилизация).
+- **100.T** = MSFS Theorem `thm:meta-cat` (условная мета-категоричность).
+- **101.T** = MSFS Theorem `thm:meta-mult` (структурный плюрализм).
+- **102.T** = MSFS Theorem `thm:meta-stab` (мета-классификация стабилизация).
 
 Настоящий документ содержит Diakrisis-специфическое следствие: **Diakrisis — канонический представитель** максимального подкласса $\mathfrak{Meta}_{5+}^{\max}$.
 
 ## Мотивация
 
-Diakrisis — Level 5+ теория ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)). Теоремы **88.T** (категоричность Diakrisis до $(\infty,\infty)$-эквивалентности) и **94.T** (единственность $\alpha_{R\text{-}S}^{(\infty,\infty)}$ для каждой R-S) говорят о внутренней категоричности **самой теории**, но не описывают её позицию в пространстве *всех возможных* Level 5+ meta-structures.
+Diakrisis — уровень 5+ теория ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)). Теоремы **88.T** (категоричность Diakrisis до $(\infty,\infty)$-эквивалентности) и **94.T** (единственность $\alpha_{R\text{-}S}^{(\infty,\infty)}$ для каждой R-S) говорят о внутренней категоричности **самой теории**, но не описывают её позицию в пространстве *всех возможных* уровень 5+ meta-structures.
 
 Вопросы:
 
-1. **Единственна ли Diakrisis** в пространстве $\mathfrak{Meta}_{5+}$, или существуют альтернативные, структурно различные Level 5+ meta-structures?
-2. **Если существуют несколько**, что гарантирует, что их взаимная классификация не порождает Level 6 структуру?
+1. **Единственна ли Diakrisis** в пространстве $\mathfrak{Meta}_{5+}$, или существуют альтернативные, структурно различные уровень 5+ meta-structures?
+2. **Если существуют несколько**, что гарантирует, что их взаимная классификация не порождает уровень 6 структуру?
 
 Ответы — **100.T, 101.T, 102.T** в препринте.
 
 ## Формальные определения (MSFS §9.1)
 
-### $\mathfrak{Meta}_{5+}$ — класс Level 5+ meta-structures
+### $\mathfrak{Meta}_{5+}$ — класс уровень 5+ meta-structures
 
 Объект $\mathbf{F}$ ∈ $\mathfrak{Meta}_{5+}$ ⇔ удовлетворяет условиям (M1)–(M5) (MSFS Definition `def:meta`):
 
@@ -53,7 +53,7 @@ $\mathbf{F}$ ∈ $\mathfrak{Meta}_{5+}^{\max}$ ⇔ дополнительно у
 
 **Diakrisis** $\in \mathfrak{Meta}_{5+}^{\max}$: выполняется по полной конструкции ⟪⟫ + T-2f\* + 98.T/99.T.
 
-## Теорема 100.T — conditional мета-категоричность
+## Теорема 100.T — условная мета-категоричность
 
 MSFS Theorem `thm:meta-cat`: если $\mathbf{F}_1, \mathbf{F}_2 \in \mathfrak{Meta}_{5+}^{\max}$ параметризованы одной и той же R-S, то
 
@@ -67,9 +67,9 @@ $$
 
 - **100.C1**: Diakrisis-full — **канонический представитель** $\mathfrak{Meta}_{5+}^{\max}$.
 - **100.C2**: 100.T расширяет 88.T (внутренняя категоричность → meta-уровневая единственность).
-- **100.C3**: Нет эскалации до Level 6 через meta-классификацию.
+- **100.C3**: Нет эскалации до уровень 6 через meta-классификацию.
 
-## Теорема 101.T — structural multiplicity
+## Теорема 101.T — структурный плюрализм
 
 MSFS Theorem `thm:meta-mult`: в $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}_{5+}^{\max}$ существуют **≥ 3** попарно не-$2$-эквивалентных:
 
@@ -85,11 +85,11 @@ MSFS Theorem `thm:meta-mult`: в $\mathfrak{Meta}_{5+} \setminus \mathfrak{Meta}
 
 **Следствия** (Diakrisis-specific):
 
-- **101.C1**: Level 5+ **структурно плюралистичен** — аналог плюрализма Level 5 (ZFC ≠ HoTT ≠ NCG).
-- **101.C2**: Diakrisis — **максимальный** среди Level 5+ (единственная в $\mathfrak{Meta}_{5+}^{\max}$); остальные три — partial representatives.
+- **101.C1**: уровень 5+ **структурно плюралистичен** — аналог плюрализма уровень 5 (ZFC ≠ HoTT ≠ NCG).
+- **101.C2**: Diakrisis — **максимальный** среди уровень 5+ (единственная в $\mathfrak{Meta}_{5+}^{\max}$); остальные три — partial representatives.
 - **101.C3**: Plurality совместима с 100.T — единственность только в подклассе максимальных.
 
-## Теорема 102.T — meta-classification стабилизация
+## Теорема 102.T — мета-классификация стабилизация
 
 MSFS Theorem `thm:meta-stab`: определим
 
@@ -97,11 +97,11 @@ $$
 \mathfrak{M}^{(5+)} := \mathfrak{Meta}_{5+} \,/\, \mathrm{gauge}_\mathrm{meta}
 $$
 
-— classifying 2-stack Level 5+ meta-structures. Тогда:
+— classifying 2-stack уровень 5+ meta-structures. Тогда:
 
 - **(a)** $\mathfrak{M}^{(5+)} \in \mathfrak{Meta}_{5+}$ (self-meta).
 - **(b) Theory-level стабилизация**: $\mathfrak{M}^{(5+ \cdot 2)}$ реализует ту же $(\infty, \infty)$-теорию, что и $\mathfrak{M}^{(5+)}$, в смысле единственности Барвик–Schommer-Pries. Теоретико-множественная реализация, однако, **не идентична**: $\mathfrak{M}^{(5+ \cdot 2)}$ живёт на один уровень Гротендик-универсума выше, и башня мета-итераций $\{\mathfrak{M}^{(5+ \cdot k)}\}_{k \geq 1}$ поднимается по иерархии недостижимых $\kappa_1 < \kappa_2 < \cdots$. Обозначение $\simeq_2$ фиксирует именно theory-level эквивалентность, а не set-level идентичность.
-- **(c) No Level-6 escalation**: ни одна мета-итерация $\mathfrak{M}^{(5+ \cdot k)}$ не удовлетворяет Level-6 условиям $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$ — Level 5+ meta-структура определима, но не генеративна над Rich-foundations (M4), что противоречит максимальной генеративности.
+- **(c) No уровня 6 escalation**: ни одна мета-итерация $\mathfrak{M}^{(5+ \cdot k)}$ не удовлетворяет уровня 6 условиям $(F_S) \wedge (\Pi_{3\text{-max}, S, n})$ — уровень 5+ meta-структура определима, но не генеративна над Rich-foundations (M4), что противоречит максимальной генеративности.
 
 **Метод доказательства** (MSFS §9.4): формальное вложение $\mathfrak{Meta}_{5+} \hookrightarrow \Pi_{(\infty,\infty)}$ (категория accessible $(\infty, \infty)$-presheaves над $\fM$) через (M3) + Lurie HTT §5.4.2; следующие итерации Гротендик-construction дают объекты в $\Pi_{(\infty, \infty + k)}$; Барвик–Schommer-Pries unicity (Theorem `thm:bergner-lurie-stab`) даёт theory-level эквивалентность — но не равенство универсумов.
 
@@ -129,21 +129,21 @@ $$
 ## Связь с пятиосевая абсолютность AFN-T
 
 - **100.T** подтверждает, что самоклассификация meta-structures не даёт новой структурной оси пятиосевая абсолютность AFN-T.
-- **101.T** показывает, что plurality не эскалирует в Level 6 (multiplicity consistent с AFN-T).
-- **102.T** закрывает meta-iteration loop: нет способа эскалировать в Level 6 через mutual classification.
+- **101.T** показывает, что plurality не эскалирует в уровень 6 (multiplicity consistent с AFN-T).
+- **102.T** закрывает meta-iteration loop: нет способа эскалировать в уровень 6 через mutual classification.
 
 ## Diakrisis-specific вывод
 
 **Вопрос самоклассификации полностью закрыт.** Diakrisis:
 
-1. Уникально **максимальна** среди Level 5+ meta-structures (100.T + 101.T + **106.T**).
-2. Совместима с альтернативными Level 5+ meta-structures как partial representatives (101.T).
-3. Никакая meta-итерация не эскалирует теорию в Level 6 (102.T).
+1. Уникально **максимальна** среди уровень 5+ meta-structures (100.T + 101.T + **106.T**).
+2. Совместима с альтернативными уровень 5+ meta-structures как partial representatives (101.T).
+3. Никакая meta-итерация не эскалирует теорию в уровень 6 (102.T).
 4. **Принадлежность к $\mathcal{L}_{\mathrm{Cls}}^{\top}$ — теорема, не программа** (106.T). Все (Max-1)–(Max-4) доказаны (103.T–105.T + 99.T). Открытый вопрос MSFS о непустоте $\mathcal{L}_{\mathrm{Cls}}^{\top}$ закрыт утвердительно (106.C2: Diakrisis — свидетель).
 
 ## Продолжение: maximality proofs (103.T–106.T)
 
-100.T–102.T закрывают вопросы Level 5+ самоклассификации. Формальное членство Diakrisis в $\mathfrak{Meta}_{5+}^{\max}$ устанавливается как теорема:
+100.T–102.T закрывают вопросы уровень 5+ самоклассификации. Формальное членство Diakrisis в $\mathfrak{Meta}_{5+}^{\max}$ устанавливается как теорема:
 
 - **103.T** (Max-1): $\mathrm{Artic}: \mathcal{F} \to \langle\!\langle \cdot \rangle\!\rangle$ существенно-сюръективен.
 - **104.T** (Max-2): $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$.

@@ -341,7 +341,7 @@ title: Глоссарий
 - **10.T5**: существование Ω̄.
 - **13.T, 17.T**: Escape теоремы.
 - **16.T1**: эквивалентность Z_i.
-- **29.T**: Universal Foundation.
+- **29.T**: Универсальное основание.
 - **30.T**: Reconstruction.
 - **43.T1**: Classifying Space.
 - **AFN-T**: no-go уровня 6.
@@ -445,7 +445,7 @@ title: Глоссарий
 
 **Тип**: дуал AFN-T.
 **Определение**: $\LAbs^{\cE} = \emptyset$ — не существует enactment-absolute.
-**MSFS-соответствие**: Theorem~\ref{thm:dual-afnt}.
+**MSFS-соответствие**: Theorem~ef{thm:dual-afnt}.
 **См.**: [/12-actic/05-dual-afn-t](/12-actic/05-dual-afn-t).
 
 ### Ловер-scope на $\cE$

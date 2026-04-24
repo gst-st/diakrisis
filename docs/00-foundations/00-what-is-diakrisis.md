@@ -7,7 +7,7 @@ title: Что такое Diakrisis
 
 :::tip Самодостаточный препринт MSFS
 
-Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм Level 5+, slice-локальное интенсиональное уточнение, theory-level meta-стабилизация, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ MSFS labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм уровень 5+, slice-локальное интенсиональное уточнение, theory-level meta-стабилизация, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ MSFS labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 
@@ -136,7 +136,7 @@ flowchart TB
 - **10.T1–T5**: консистентность, Рассел-иммунитет, самоартикуляция, неполнота α_math, Fix(𝖬).
 - **16.T1**: Z-эквивалентность (три характеризации) с явным cocycle-условием.
 - **18.T**: T-2f\* иммунитет к 5 семействам парадоксов.
-- **29.T + 30.T**: Universal Foundation + Reconstruction.
+- **29.T + 30.T**: Универсальное основание + Reconstruction.
 - **43.T1**: 𝓜_Fnd = Trace(𝖠)/gauge — классифицирующее пространство через bicategory-of-fractions (Pronk 1996).
 - **85.T (UFH)**: α_uhm ≃_{gauge} ∫_Γ α_Д-hybrid^{!}(Γ) над 7D-quantum (Гротендик-конструкция) — полное соответствие УГМ ↔ Diakrisis.
 - **88.T**: категоричность — единственность до (∞,∞)-эквивалентности.
@@ -144,7 +144,7 @@ flowchart TB
 - **90.T**: Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
 - **91.T–93.T**: cohesive ∞-topos, motivic homotopy, realizability — все вложены в 𝓜_Fnd.
 - **98.T + 99.T**: интенсиональное уточнение — функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ + slice-locality над $\mathcal{M}_\mathrm{Fnd}$.
-- **100.T + 101.T + 102.T**: meta-classification Level 5+ — conditional categoricity + structural multiplicity + стабилизация; самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$ завершена.
+- **100.T + 101.T + 102.T**: мета-классификация уровень 5+ — условная категоричность + структурный плюрализм + стабилизация; самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$ завершена.
 - **103.T + 104.T + 105.T + 106.T**: maximality proofs — (Max-1) universal articulation, (Max-2) gauge-fullness, (Max-3) универсальная парадокс-иммунность через Яновский 2003, сводная 106.T: **$\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**, закрывающая открытый вопрос MSFS о непустоте максимального подкласса. Детали — [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
 
 ### 5.2 Негативные: пятиосевая абсолютность AFN-T
@@ -220,7 +220,7 @@ Diakrisis — уровень **5+**:
 ## 9. Состояние проекта
 
 ### Теоретически
-**Закрыто**. 127 теорем (106 ОЦ + 21 Актика) в номерной системе доказаны (включая 98.T–99.T интенсиональное уточнение, 100.T–102.T meta-classification Level 5+, **103.T–106.T maximality proofs — Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**). 5-уровневая абсолютность AFN-T. UFH установлена.
+**Закрыто**. 127 теорем (106 ОЦ + 21 Актика) в номерной системе доказаны (включая 98.T–99.T интенсиональное уточнение, 100.T–102.T мета-классификация уровень 5+, **103.T–106.T maximality proofs — Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**). 5-уровневая абсолютность AFN-T. UFH установлена.
 
 ### Практически
 6 открытых программ:

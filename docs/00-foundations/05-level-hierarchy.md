@@ -60,7 +60,7 @@ $$
 | **$\mathcal{L}_5$** | $\alpha$ удовлетворяет (R1)–(R5): Rich formal system | $\kappa_1 \leq \nu(\alpha) < \kappa_2$ (как объект $\mathbf{StrCat}_{S, n}$) | ZFC, HoTT, CIC, ECC, NCG, MLTT, Eff, ∞-topos theory, Markov-конструктивизм, Bishop-конструктивизм, Феферман-предикативизм |
 | **$\mathcal{L}_{5+}$** | meta-articulation $\mathfrak{A}$, удовлетворяет (M1)–(M5) | $\nu(\mathfrak{A}) \geq \kappa_2$ | Diakrisis, $\infty$-cosmoi (Риль–Верити), Univalent Foundations, cohesive higher topos (Шрайбер), Higher Algebra (Люри) |
 | **$\mathcal{L}_{5+}^{\max}$** | $\mathfrak{A} \in \mathcal{L}_{5+}$ + (Max-1)–(Max-4) | $\nu(\mathfrak{A}) \geq \kappa_2$ + full image $\mathfrak{M}_\mathrm{Fnd}$ | **Diakrisis** (единственная, 100.T условная категоричность) |
-| **$\mathcal{L}_6$** | $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$: absolute foundation | $\nu$ выходит за Mahlo-иерархию R-S | **Пусто** по AFN-T (препринт Theorem `thm:afnt`) |
+| **$\mathcal{L}_6$** | $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$: абсолютное основание | $\nu$ выходит за Mahlo-иерархию R-S | **Пусто** по AFN-T (препринт теорема `thm:afnt`) |
 
 ### Тотальное упорядочение
 
@@ -206,10 +206,10 @@ $$
 - **(M1)** $\mathfrak{A}$ классифицирует нетривиальный подкласс $\mathcal{L}_5$ через функтор $\mathrm{Cl}_\mathfrak{A}: \mathcal{L}_5 \supset \mathcal{D}_\mathfrak{A} \to \mathfrak{A}$.
 - **(M2)** $\mathfrak{A}$ имеет Gauge-группу — автоморфизмы классификации.
 - **(M3)** Intensional refinement: есть функтор $\mathbf{I}_\mathfrak{A}$ в категорию интенсиональных слоёв.
-- **(M4)** Stabilization: $\mathrm{Cls}(\mathfrak{A}) \simeq \mathfrak{A}$ на уровне $(\infty, \infty)$-категорий (препринт Theorem `thm:meta-stab`).
+- **(M4)** Stabilization: $\mathrm{Cls}(\mathfrak{A}) \simeq \mathfrak{A}$ на уровне $(\infty, \infty)$-категорий (препринт теорема `thm:meta-stab`).
 - **(M5)** Depth-стратификация: различает уровни 5, 5+, 5+^max внутри себя.
 
-**Structurnaya плюральность** (препринт Theorem `thm:meta-mult`, Diakrisis 101.T):
+**Structurnaya плюральность** (препринт теорема `thm:meta-mult`, Diakrisis 101.T):
 
 | Проект | Авторы | Год | Scope | $\in \mathcal{L}_{5+}^{\max}$? |
 |---|---|---|---|---|
@@ -229,9 +229,9 @@ $$
 - **(Max-3)** Depth-стратификация через T-2f\* (пять семейств парадоксов заблокированы).
 - **(Max-4)** Intensional completeness (98.T / 99.T).
 
-**Conditional мета-категоричность** (препринт Theorem `thm:meta-cat`, Diakrisis 100.T): любые два представителя $\mathcal{L}_{5+}^{\max}$ над одной и той же R-S $(\infty, \infty)$-эквивалентны через Гротендик–Lurie straightening.
+**Conditional мета-категоричность** (препринт теорема `thm:meta-cat`, Diakrisis 100.T): любые два представителя $\mathcal{L}_{5+}^{\max}$ над одной и той же R-S $(\infty, \infty)$-эквивалентны через Гротендик–Lurie straightening.
 
-**Meta-classification стабилизация** (препринт Theorem `thm:meta-stab`, Diakrisis 102.T): итерированная мета-классификация воспроизводит ту же $(\infty, \infty)$-теорию на каждом шаге (theory-level invariance); теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$ — **universe-ascent**.
+**Meta-classification стабилизация** (препринт теорема `thm:meta-stab`, Diakrisis 102.T): итерированная мета-классификация воспроизводит ту же $(\infty, \infty)$-теорию на каждом шаге (theory-level invariance); теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$ — **universe-ascent**.
 
 ### $\mathcal{L}_6$ — формально пустой уровень
 
@@ -299,7 +299,7 @@ $$
 
 - Не создаёт новую формальную основу — работает с существующими через $\langle\langle \cdot \rangle\rangle$.
 - Каждая «новая» конструкция редуцируется к известному аналогу (moduli-stack, accessible endofunctor, internal language).
-- Подпадает под AFN-T (препринт Theorem `thm:afnt`).
+- Подпадает под AFN-T (препринт теорема `thm:afnt`).
 
 **Diakrisis не на уровне 5** (не является самостоятельным generator-ом):
 
@@ -403,7 +403,7 @@ $$
 ## 10. Ссылки
 
 - **Препринт §2** — formal development of levels 5, 5+, 5+^max, 6;
-- **Препринт §9** — Level 5+ meta-classification;
+- **Препринт §9** — уровень 5+ мета-классификация;
 - [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) — 13 аксиом + T-2f\* depth-stratification;
 - [`/03-formal-architecture/08-cardinal-analysis`](/03-formal-architecture/08-cardinal-analysis) — $\nu$-стратификация и 23.T1;
 - [`/06-limits/02-th-final`](/06-limits/02-th-final) — AFN-T detail;

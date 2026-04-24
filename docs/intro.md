@@ -349,7 +349,7 @@ flowchart TB
 1. `/00-foundations/*` — методология + ν-стратификация.
 2. `/02-canonical-primitive/*` — канонический примитив.
 3. `/03-formal-architecture/*` — 2-категорная архитектура.
-4. `/06-limits/*` — пределы, абсолютность, meta-classification, максимальность.
+4. `/06-limits/*` — пределы, абсолютность, мета-классификация, максимальность.
 5. [`/10-reference/02-theorems-catalog`](/10-reference/02-theorems-catalog) — полный каталог.
 
 ### В · полное погружение
