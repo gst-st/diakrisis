@@ -176,7 +176,23 @@ function showFullscreen(sourceSvg) {
     if (!clone.getAttribute('viewBox') && sourceWidth > 0 && sourceHeight > 0) {
       clone.setAttribute('viewBox', `0 0 ${sourceWidth} ${sourceHeight}`);
     }
-    clone.style.cssText = 'max-width:92vw;max-height:88vh;width:auto;height:auto;display:block;pointer-events:none;';
+
+    // Strip Mermaid's width="100%" / height attribute that breaks sizing in flex stage
+    clone.removeAttribute('width');
+    clone.removeAttribute('height');
+
+    // Compute explicit sizing that fits viewport while preserving aspect ratio
+    const vb = clone.viewBox && clone.viewBox.baseVal;
+    const aspect = vb && vb.width > 0 && vb.height > 0 ? vb.width / vb.height : sourceWidth / sourceHeight;
+    const maxW = window.innerWidth * 0.92;
+    const maxH = window.innerHeight * 0.88;
+    let w = maxW;
+    let h = w / aspect;
+    if (h > maxH) {
+      h = maxH;
+      w = h * aspect;
+    }
+    clone.style.cssText = `width:${w}px;height:${h}px;display:block;pointer-events:none;`;
   }
 
   const toolbar = document.createElement('div');
