@@ -85,6 +85,58 @@ function decorateMermaid() {
   });
 }
 
+// Re-namespace IDs inside cloned SVG so url(#...) and href="#..." refs
+// resolve within the clone instead of the original SVG (defs collisions)
+function reidSvg(svg) {
+  const suffix = '_fs_' + Math.random().toString(36).slice(2, 8);
+  const idEls = svg.querySelectorAll('[id]');
+  const idMap = new Map();
+  idEls.forEach(el => {
+    const oldId = el.getAttribute('id');
+    const newId = oldId + suffix;
+    idMap.set(oldId, newId);
+    el.setAttribute('id', newId);
+  });
+  if (idMap.size === 0) return;
+
+  // Update url(#...) refs in attributes and inline styles
+  const attrNames = ['fill', 'stroke', 'filter', 'mask', 'clip-path', 'marker-start', 'marker-mid', 'marker-end'];
+  const all = svg.querySelectorAll('*');
+  all.forEach(el => {
+    attrNames.forEach(attr => {
+      const v = el.getAttribute(attr);
+      if (v && v.includes('url(#')) {
+        let nv = v;
+        idMap.forEach((newId, oldId) => {
+          nv = nv.replace(new RegExp(`url\\(#${escapeRegex(oldId)}\\)`, 'g'), `url(#${newId})`);
+        });
+        el.setAttribute(attr, nv);
+      }
+    });
+    // Inline style attribute
+    const style = el.getAttribute('style');
+    if (style && style.includes('url(#')) {
+      let ns = style;
+      idMap.forEach((newId, oldId) => {
+        ns = ns.replace(new RegExp(`url\\(#${escapeRegex(oldId)}\\)`, 'g'), `url(#${newId})`);
+      });
+      el.setAttribute('style', ns);
+    }
+    // href / xlink:href references
+    ['href', 'xlink:href'].forEach(attr => {
+      const v = el.getAttribute(attr);
+      if (v && v.startsWith('#')) {
+        const old = v.slice(1);
+        if (idMap.has(old)) el.setAttribute(attr, '#' + idMap.get(old));
+      }
+    });
+  });
+}
+
+function escapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function showFullscreen(sourceSvg) {
   if (document.querySelector('.mermaid-fullscreen-overlay')) return;
 
@@ -94,9 +146,21 @@ function showFullscreen(sourceSvg) {
   const stage = document.createElement('div');
   stage.className = 'mermaid-fullscreen-stage';
 
+  // Clone the SVG and the diagram needs viewBox + sizing to render
   const clone = sourceSvg.cloneNode(true);
-  clone.removeAttribute('style');
   clone.classList.add('mermaid-fullscreen-svg');
+
+  // Mermaid may set max-width: 100% on the SVG style; keep it but ensure visibility
+  const sourceRect = sourceSvg.getBoundingClientRect();
+  if (!clone.getAttribute('viewBox') && sourceRect.width > 0 && sourceRect.height > 0) {
+    clone.setAttribute('viewBox', `0 0 ${sourceRect.width} ${sourceRect.height}`);
+  }
+  // Force visible inline styles to override any inherited rules
+  clone.style.cssText = 'max-width:92vw;max-height:88vh;width:auto;height:auto;display:block;pointer-events:none;';
+
+  // Re-namespace internal IDs so url(#...) refs in defs/markers point to clone, not original
+  reidSvg(clone);
+
   stage.appendChild(clone);
 
   const toolbar = document.createElement('div');
