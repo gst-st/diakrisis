@@ -197,7 +197,7 @@ flowchart LR
     classDef m fill:#fff3b0,stroke:#b8860b,stroke-width:2px,color:#000
     classDef a fill:#e8d4f9,stroke:#4b0082,stroke-width:2px,color:#000
 
-    DK["<b>Diakrisis</b><br/>мета-структурная программа<br/>⟪⟫, 𝖬, α_math, ⊏_•<br/>13 аксиом · ν-инвариант<br/>127 теорем (106 ОЦ + 21 Актика)"]:::d
+    DK["<b>Diakrisis</b><br/>мета-структурная программа<br/>⟪⟫, 𝖬, α_math, ⊏_•<br/>13 аксиом · ν-инвариант<br/>132 теоремы (111 ОЦ + 21 Актика)"]:::d
     MS["<b>MSFS (препринт)</b><br/>рецензионно-чистое ядро<br/>стандартная категорная нотация<br/>44 стр · 54 thm · 47 bib<br/>строго: 𝓛_Fnd, 𝓛_Cls, 𝓛_Cls^⊤, 𝓛_Abs"]:::m
     APP["<b>Применения</b><br/>УГМ — физика + сознание<br/>SYNARC — AGI/ASI safety<br/>Noesis — comp. consciousness"]:::a
 
