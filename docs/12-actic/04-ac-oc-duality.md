@@ -133,7 +133,7 @@ $$
 \mathsf{e}(\varepsilon(\alpha)) = \min\{\kappa: \varepsilon(\alpha) \in \mathrm{colim}_{\beta<\kappa}\mathsf{A}^\beta(\varepsilon_\mathrm{math})\} = \min\{\kappa: \alpha \in \mathrm{colim}_{\beta<\kappa}\mathsf{M}^\beta(\alpha_\mathrm{math})\} = \nu(\alpha). \qed
 $$
 
-**Замечание**: эта эквивалентность — Diakrisis-специфическое расширение 108.T (не в MSFS); статус [С] условно на формальной версии Предложения 5.1.
+**Замечание**: эта эквивалентность — Diakrisis-специфическое расширение 108.T (не присутствует в MSFS-препринте). Статус **[С]** условно на формальной версии Предложения 5.1: $\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$ как 2-естественное преобразование. Полная формализация Предложения 5.1 — внутренняя open program (не блокирует основной результат 108.T, который [Т]).
 
 ## 8. Шаг F: $(\infty, \infty)$-расширение
 
