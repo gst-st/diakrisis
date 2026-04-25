@@ -36,10 +36,10 @@ flowchart TB
         direction TB
         PRIM_OC["<b>Канонический примитив</b><br/>⟪·⟫, 𝖬, α_math, ⊏_•<br/>+ 13 аксиом · Axi-0..9 + T-α + T-2f* + T-2f**"]:::oc
         STRAT_OC["<b>Стратификация 𝔐_Fnd</b><br/>𝓛_Fnd ⊃ 𝓛_Cls ⊃ 𝓛_Cls^⊤ ⊃ 𝓛_Abs<br/>условия R1–R5 / M1–M5 / Max-1..4"]:::struct
-        INT_OC["<b>Интенсиональное уточнение</b><br/>𝐈 : 𝓕^op → 𝓢_int<br/>срез-локальность через эфф. топос Хайланда<br/>98.T · 99.T"]:::struct
+        BOUND_OC["<b>AFN-T · граничная лемма</b><br/>𝓛_Abs = ∅<br/>пятиосевая абсолютность<br/>55.T · 59.T.1 · 69.T · 84.T · 87.T"]:::bound
         META_OC["<b>Мета-классификация</b><br/>стабилизация на теоретическом уровне<br/>восхождение по универсумам κ₁ &lt; κ₂<br/>100.T · 101.T · 102.T"]:::meta
         MAX_OC["<b>Доказательства максимальности</b><br/>Diakrisis ∈ 𝓛_Cls^⊤ как теорема<br/>103.T · 104.T · 105.T · 106.T<br/>+ закрытие 128.T..131.T"]:::max
-        BOUND_OC["<b>AFN-T · граничная лемма</b><br/>𝓛_Abs = ∅<br/>пятиосевая абсолютность<br/>55.T · 59.T.1 · 69.T · 84.T · 87.T"]:::bound
+        INT_OC["<b>Интенсиональное уточнение</b><br/>𝐈 : 𝓕^op → 𝓢_int<br/>срез-локальность через эфф. топос Хайланда<br/>98.T · 99.T"]:::struct
     end
 
     subgraph AC ["ДЦ-проекция · Актика · акты-перформансы"]
@@ -61,10 +61,10 @@ flowchart TB
     APEIRON -.-> DIAKRISIS -.-> Z -.-> DUALITY
 
     PRIM_OC ==> STRAT_OC
-    STRAT_OC --> INT_OC
+    STRAT_OC --> BOUND_OC
     STRAT_OC --> META_OC
     META_OC --> MAX_OC
-    STRAT_OC --> BOUND_OC
+    STRAT_OC --> INT_OC
 
     PRIM_AC ==> STRAT_AC
     STRAT_AC --> EPS
