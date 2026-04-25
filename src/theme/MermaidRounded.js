@@ -1,29 +1,79 @@
-// Applies rounded corners to Mermaid diagram nodes + fullscreen viewer with pan/zoom
-export function onRouteDidUpdate() {
-  setTimeout(() => {
-    // Rounded corners
-    const rects = document.querySelectorAll('.mermaid rect, .docusaurus-mermaid-container rect');
-    rects.forEach(rect => {
-      const currentRx = rect.getAttribute('rx');
-      if (!currentRx || parseFloat(currentRx) < 5) {
-        rect.setAttribute('rx', '10');
-        rect.setAttribute('ry', '10');
+// Mermaid: rounded corners + fullscreen viewer with pan/zoom.
+// Uses event delegation + MutationObserver to handle async Mermaid rendering.
+
+if (typeof window !== 'undefined') {
+  // Single global click handler — works for any Mermaid SVG present now or later
+  if (!window.__mermaidExpandClickBound) {
+    window.__mermaidExpandClickBound = true;
+
+    document.addEventListener('click', (event) => {
+      // Click on the explicit expand button
+      const expandBtn = event.target.closest('.mermaid-expand-button');
+      if (expandBtn) {
+        const container = expandBtn.closest('.docusaurus-mermaid-container, .mermaid');
+        const svg = container && container.querySelector('svg');
+        if (svg) {
+          event.stopPropagation();
+          event.preventDefault();
+          showFullscreen(svg);
+        }
+        return;
+      }
+
+      // Click anywhere on a Mermaid diagram itself
+      const diagramContainer = event.target.closest('.docusaurus-mermaid-container, .mermaid');
+      if (diagramContainer && !event.target.closest('.mermaid-fullscreen-overlay')) {
+        const svg = diagramContainer.querySelector('svg');
+        if (svg) {
+          event.stopPropagation();
+          event.preventDefault();
+          showFullscreen(svg);
+        }
       }
     });
+  }
+}
 
-    // Decorate every Mermaid diagram with an explicit "expand" affordance
-    const containers = document.querySelectorAll('.docusaurus-mermaid-container, .mermaid');
-    containers.forEach(container => {
-      if (container.dataset.expandReady) return;
-      container.dataset.expandReady = 'true';
+export function onRouteDidUpdate() {
+  decorateMermaid();
+  // Mermaid renders asynchronously; observe DOM until SVG appears
+  startObserver();
+}
 
-      const svg = container.querySelector('svg');
-      if (!svg) return;
+let observerStarted = false;
+function startObserver() {
+  if (typeof window === 'undefined' || observerStarted) return;
+  observerStarted = true;
 
-      // Wrap container so we can position the button
-      container.style.position = container.style.position || 'relative';
+  const observer = new MutationObserver(() => {
+    decorateMermaid();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+}
 
-      // Create expand button
+function decorateMermaid() {
+  // Rounded corners
+  const rects = document.querySelectorAll('.mermaid rect, .docusaurus-mermaid-container rect');
+  rects.forEach(rect => {
+    const currentRx = rect.getAttribute('rx');
+    if (!currentRx || parseFloat(currentRx) < 5) {
+      rect.setAttribute('rx', '10');
+      rect.setAttribute('ry', '10');
+    }
+  });
+
+  // Add expand button + cursor hint to each rendered diagram
+  const containers = document.querySelectorAll('.docusaurus-mermaid-container, .mermaid');
+  containers.forEach(container => {
+    const svg = container.querySelector('svg');
+    if (!svg) return;
+    if (container.dataset.expandReady === 'true') return;
+    container.dataset.expandReady = 'true';
+
+    container.style.position = container.style.position || 'relative';
+    svg.style.cursor = 'zoom-in';
+
+    if (!container.querySelector('.mermaid-expand-button')) {
       const btn = document.createElement('button');
       btn.className = 'mermaid-expand-button';
       btn.type = 'button';
@@ -31,30 +81,16 @@ export function onRouteDidUpdate() {
       btn.title = 'Развернуть на весь экран';
       btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>';
       container.appendChild(btn);
-
-      const openFullscreen = (event) => {
-        if (event) {
-          event.stopPropagation();
-          event.preventDefault();
-        }
-        showFullscreen(svg);
-      };
-
-      btn.addEventListener('click', openFullscreen);
-      svg.style.cursor = 'zoom-in';
-      svg.addEventListener('click', openFullscreen);
-    });
-  }, 500);
+    }
+  });
 }
 
 function showFullscreen(sourceSvg) {
-  // Avoid double-stack
   if (document.querySelector('.mermaid-fullscreen-overlay')) return;
 
   const overlay = document.createElement('div');
   overlay.className = 'mermaid-fullscreen-overlay';
 
-  // Stage holds the cloned SVG and applies pan/zoom transform
   const stage = document.createElement('div');
   stage.className = 'mermaid-fullscreen-stage';
 
@@ -63,7 +99,6 @@ function showFullscreen(sourceSvg) {
   clone.classList.add('mermaid-fullscreen-svg');
   stage.appendChild(clone);
 
-  // Toolbar
   const toolbar = document.createElement('div');
   toolbar.className = 'mermaid-fullscreen-toolbar';
 
@@ -80,7 +115,6 @@ function showFullscreen(sourceSvg) {
     return b;
   };
 
-  // State
   const state = { scale: 1, tx: 0, ty: 0 };
   const applyTransform = () => {
     stage.style.transform = `translate(${state.tx}px, ${state.ty}px) scale(${state.scale})`;
@@ -112,23 +146,26 @@ function showFullscreen(sourceSvg) {
     stage.style.cursor = 'grabbing';
     e.preventDefault();
   });
-  window.addEventListener('mousemove', (e) => {
+  const onMove = (e) => {
     if (!dragging) return;
     state.tx = e.clientX - dragStart.x;
     state.ty = e.clientY - dragStart.y;
     applyTransform();
-  });
-  window.addEventListener('mouseup', () => {
+  };
+  const onUp = () => {
     dragging = false;
     stage.style.cursor = 'grab';
-  });
+  };
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('mouseup', onUp);
 
   // Zoom via wheel
-  overlay.addEventListener('wheel', (e) => {
+  const onWheel = (e) => {
     e.preventDefault();
     const factor = e.deltaY < 0 ? 1.1 : 0.9;
     zoomBy(factor);
-  }, { passive: false });
+  };
+  overlay.addEventListener('wheel', onWheel, { passive: false });
 
   // Close on overlay-only click (not stage)
   overlay.addEventListener('click', (e) => {
@@ -145,6 +182,8 @@ function showFullscreen(sourceSvg) {
     overlay.remove();
     document.body.style.overflow = '';
     document.removeEventListener('keydown', onEsc);
+    window.removeEventListener('mousemove', onMove);
+    window.removeEventListener('mouseup', onUp);
   }
 
   stage.style.cursor = 'grab';
