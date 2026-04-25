@@ -247,7 +247,7 @@ title: Каталог теорем
 
 ## Универсальное основание (29, 30, 43)
 
-- **29.T** [Т·L2] — Универсальное основание: каждая Rich-F имеет единственное α_F ∈ Trace(𝖠). → Препринт переформулирована в Definition `def:rs` + Lemma `lem:SS-membership` (через categorical semantics R5).
+- **29.T** [Т·L2] — Универсальное основание: каждая Rich-F имеет единственное α_F ∈ Trace(𝖠). → Препринт переформулирована в Definition `def:rs` + Lemma `lem:SS-membership` (через categorical semantics R5). *Замечание*: 29.T — *базовая* версия (существование артикуляции для R-S); 103.T (Max-1) — *расширенная* (универсальная конструкция через сопряжение Ламбека-Скотта (R5b) с явной формулой $\alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S)$). 103.T строго сильнее 29.T.
 - **30.T** [Т·L2] — Reconstruction: из ρ(α_F) восстанавливается α_F. → Препринт неявно через (R5) + Ламбек–Scott reflection.
 - **43.T1** [Т·L2] — Classifying Space: Trace(𝖠)/gauge ≃ 𝓜_Fnd как 2-stack. → Препринт Convention `conv:notation` ($\fM$ как straightening of Cartesian fibration, Люри HTT §3.2).
 
