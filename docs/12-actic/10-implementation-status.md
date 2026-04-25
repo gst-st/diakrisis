@@ -129,6 +129,7 @@ Live-документ для отслеживания прогресса 10-ша
 ✅ **Теорема 124.T** ($\mathsf{M} \dashv \mathsf{A}$) — 2-categorical biadjunction в смешанной 2-категории через 108.T-эквивалентность; полное доказательство (Шаги A–D + R9.DC + triangle identities) — [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §14.2.1–§14.2.4 после R9. Безусловно [Т·L3].
 ✅ **Теорема 131.T** (стек-модель Axi-8) — все 13 аксиом одновременно реализуемы; Con(Diakrisis-13) ≤ Con(ZFC + 2-inacc), [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §131.T.
 ✅ **Теорема 16.10** (round-trip 108.T) — алгоритмическая разрешимость для конечно-аксиоматизированных R-S, [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) §5.
+✅ **Теорема 140.T** ($\mathrm{e}^\infty$ на $(\infty, \infty)$) — конструкция $(\infty, \infty)$-категории актов через adjoint tower + accessibility + универсальность ε-инварианта на полном уровне; [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.3 после R2.
 
 ### Что нужно реализовать
 
@@ -136,7 +137,7 @@ Live-документ для отслеживания прогресса 10-ша
 
 ### Что не покрыто (research-level)
 
-⚠️ **Polный (∞,∞)-categories формализация** — Verum имеет только (∞,1) через `core.math.infinity_category`. Для 140.T (ε-инвариант на (∞,∞)) нужно расширение.
+⚠️ **Polный (∞,∞)-categories формализация** — Verum имеет только (∞,1) через `core.math.infinity_category`. Теоретическая (∞,∞)-семантика для 140.T закрыта в R2 (полное доказательство в [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.3 — конструкция через colim/lim adjoint tower + BSP unicity); Verum-реализация требует расширения core.math.infinity_category до полных $(\infty, \infty)$ через комплициальные множества Verity 2008.
 ⚠️ **Linear types enforcement** — V1 shipped declaration discipline; enforcement deferred до V2.
 ⚠️ **Effect system** — нет встроенного; concurrent / async / IO как properties, не types.
 ⚠️ **T-2f\*\*\* омега-modal стратификация (136.T)** — требует расширения K-Refine kernel-правила для трансфинитных модальных рангов.
@@ -175,6 +176,7 @@ Live-документ для отслеживания прогресса 10-ша
 | 2026-04-25 | R10 закрыт: Теорема 131.T получила полное доказательство (6 шагов + 3 леммы) с red-team-корректировками |
 | 2026-04-25 | R5 закрыт: Теорема 16.10 (round-trip 108.T) формализована в новом документе [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) |
 | 2026-04-25 | R9 закрыт: Теорема 124.T получила полное доказательство (R9.OC + R9.DC + triangle identities) с unit/counit как каноническими образами тождественных морфизмов, без необходимости в monad-style unit для $\mathsf{M}, \mathsf{A}$ |
+| 2026-04-25 | R2 закрыт: Теорема 140.T получила полное доказательство (Шаги 1–5 + 5 лемм) — конструкция $(\infty, \infty)$-категории актов через colim/lim adjoint tower + accessibility $\mathsf{A}^\infty$ через индукцию по $n$ + универсальность $\mathrm{e}^\infty$ |
 
 ## Ссылки
 
