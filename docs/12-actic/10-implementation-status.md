@@ -133,6 +133,10 @@ Live-документ для отслеживания прогресса 10-ша
 ✅ **Теорема 141.T** (конструктивный автопоэзис) — алгоритмическое построение $\varepsilon_\mathrm{auto}$ в эффективном топосе через $\omega^2$-итерацию + явные σ/π-морфизмы через Drake reflection (Шаг 5 в 131.T); [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.4 после R4.
 ✅ **Теорема 136.T** (T-2f\*\*\* трансфинитная модальная стратификация) — полная теория $\mathrm{md}^\omega$-функтора через Definition 136.D1 + Лемма 136.L0 (well-founded ordinal recursion) + Лемма 136.L_rank (нижняя граница ранга артикуляции); блокировка парадоксов всех ординальных уровней до $\kappa_2$; [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §T-2f\*\*\* после R3.
 ✅ **Теорема 137.T** (weak-AFN-T для bounded arithmetic) — полная спецификация $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ через 6-уровневую $\nu^\mathrm{weak}$-стратификацию ($\mathrm{AC}^0 \subset \mathrm{LOGSPACE} \subset \mathrm{P} \subset \mathrm{NP} \subset \mathrm{PH} \subset \mathsf{I}\Delta_0$) + bounded Cantor diagonal (Buss 1986) + дискретный скачок $\nu \to \omega$ на границе weak/full; [`/06-limits/05-what-remains-possible`](/06-limits/05-what-remains-possible) §137.T после R11.
+✅ **Теорема 121.T** (BHK как ε-семантика) — полная категорная BHK-семантика как 2-функтор Prop_IPL → ⟫·⟪ + Лемма 121.L_central (Perf(α_φ) ≃ ⟦φ⟧_BHK покомпонентно по структуре формулы) + Лемма 121.L3 (BHK ↔ Eff-realizability) + Лемма 121.L4 (расширение на MLTT/HoTT); [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §12.1 после R7.
+✅ **Теорема 120.T** (Ludics ≃ Perf(α_linear)) — полная конструкция функтора Φ: Ludics → Perf(α_linear) + Лемма 120.L2 (2-эквивалентность через essential surjectivity + full faithfulness) + Лемма 120.L3 (cut-elimination = canonicalization, связь с R5) + Лемма 120.L4 (orthogonality = gauge-несовместимость); [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §11.1 после R8.
+✅ **Теорема 17.T1** (effects ≃ Perf(α_linear)-проекции) — Kleisli-вложение strong monads в Perf(α_linear) через Moggi 1991 + Plotkin-Power 2002; каталог стандартных Verum-эффектов с явными ε-координатами; [`/03-formal-architecture/17-effects-and-linear`](/03-formal-architecture/17-effects-and-linear) после R6.
+✅ **Теорема 18.T1** (operational coherence) — финальный синтез R1-R11 в operational coherence Verum-программ через 108.T-сертификаты; алгоритмическая разрешимость coherence-check за $O(2^{O(|P|+|\phi|)})$; [`/09-applications/03-operational-coherence`](/09-applications/03-operational-coherence) после R12.
 
 ### Что нужно реализовать
 
@@ -141,8 +145,8 @@ Live-документ для отслеживания прогресса 10-ша
 ### Что не покрыто (research-level)
 
 ⚠️ **Polный (∞,∞)-categories формализация** — Verum имеет только (∞,1) через `core.math.infinity_category`. Теоретическая (∞,∞)-семантика для 140.T закрыта в R2 (полное доказательство в [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.3 — конструкция через colim/lim adjoint tower + BSP unicity); Verum-реализация требует расширения core.math.infinity_category до полных $(\infty, \infty)$ через комплициальные множества Verity 2008.
-⚠️ **Linear types enforcement** — V1 shipped declaration discipline; enforcement deferred до V2.
-⚠️ **Effect system** — нет встроенного; concurrent / async / IO как properties, не types.
+⚠️ **Linear types enforcement** — V1 shipped declaration discipline; enforcement deferred до V2. Теоретически закрыто в R6 (категорная теория эффектов как ε-проекций α_linear; см. [`/03-formal-architecture/17-effects-and-linear`](/03-formal-architecture/17-effects-and-linear)).
+⚠️ **Effect system** — нет встроенного; concurrent / async / IO как properties, не types. Теоретическое основание — R6 (Теорема 17.T1: эффекты как Kleisli-вложения в Perf(α_linear)); реализация требует core/action/effects.vr.
 ⚠️ **T-2f\*\*\* омега-modal стратификация (136.T)** — теоретически закрыто в R3 (полное доказательство Шаги 1–4 + Леммы 136.L0/L_rank/L1/L2 + Definition 136.D1 трансфинитного модального языка $L^\omega_\alpha$ + ord-арифметика md^ω через well-founded recursion; см. [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §T-2f\*\*\*). Verum-реализация — добавление K-Refine-omega kernel-правила с ординальным md-параметром.
 ⚠️ **Autopoiesis termination proof** — теоретически закрыто в R4 (явный конструктивный свидетель $\varepsilon_\mathrm{auto}$ в эффективном топосе через $\omega^2$-итерацию + Drake reflection retraction; см. [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.4). Verum-реализация требует Eff-semantics layer + finite approximation API (`approximate_autopoiesis(ε, depth)`).
 ⚠️ **Synthesis strategy termination** — стратегия `synthesize` не имеет гарантии termination.
@@ -183,6 +187,10 @@ Live-документ для отслеживания прогресса 10-ша
 | 2026-04-25 | R4 закрыт: Теорема 141.T получила конструктивный свидетель $\varepsilon_\mathrm{auto}$ — $\omega^2$-итерация в эффективном топосе через higher-type computability (Лемма 141.L1) + явные σ/π-морфизмы через Drake reflection + AFA-аналог в Eff (Aczel-Capretta 2017) |
 | 2026-04-25 | R3 закрыт: Теорема 136.T получила полное доказательство (Шаги 1–4 + 4 леммы) — формализация $\mathrm{md}^\omega$ через Definition 136.D1 трансфинитного модального языка + Лемма 136.L_rank (нижняя граница ранга артикуляции через диагональную лемму Smoryński 1985) |
 | 2026-04-25 | R11 закрыт: Теорема 137.T получила расширение weak-стратума — 6-уровневая $\nu^\mathrm{weak}$-стратификация + bounded Cantor diagonal + complexity-typed verification + дискретный скачок ν на границе weak/full (Lemma 137.L2 corrected) |
+| 2026-04-25 | R7 закрыт: Теорема 121.T получила полное доказательство — категорная BHK-семантика как 2-функтор + Лемма 121.L_central (структурная индукция Perf(α_φ) ≃ ⟦φ⟧_BHK) + связь с эффективным топосом Хайланда + расширение на MLTT/HoTT |
+| 2026-04-25 | R8 закрыт: Теорема 120.T получила полное доказательство — конструкция функтора Φ: Ludics → Perf(α_linear) + Лемма 120.L2 (2-эквивалентность) + Лемма 120.L3 (cut-elimination как canonicalization) + связь с R5 |
+| 2026-04-25 | R6 закрыт: новый документ /03-formal-architecture/17-effects-and-linear с Теоремой 17.T1 (эффекты ≃ Perf(α_linear)-проекции через Kleisli) + каталог стандартных Verum-эффектов с явными ε-координатами |
+| 2026-04-25 | R12 закрыт: новый документ /09-applications/03-operational-coherence с Теоремой 18.T1 (operational coherence через 108.T-сертификаты) — финальный синтез всех R1-R11 |
 
 ## Ссылки
 

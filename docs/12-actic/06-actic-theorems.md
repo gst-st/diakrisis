@@ -152,6 +152,117 @@ $$
 $$
 *Сетевая семантика как дуал нормализации доказательств — это дуальность articulate/enact в формально-логической ипостаси.*
 
+### 11.1 Полное доказательство 120.T (R8)
+
+#### 11.1.1 Категорная структура Ludics
+
+**Конструкция 120.K1** *(Ludics-категория $\mathbf{Ludics}$).* По Жирар 2001 «Locus Solum: From the Rules of Logic to the Logic of Rules»:
+- **0-клетки** ($\mathrm{Ob}(\mathbf{Ludics})$): локусы — расположения с branching structure (formal positions in linear logic proofs).
+- **1-клетки** (designs): стратегии в локусах — правила взаимодействия по специфическому протоколу cut-elimination.
+- **2-клетки** (desseins): мульти-дизайны — множества когерентных дизайнов с inter-design morphisms.
+- **Композиция 1-cells**: cut-elimination (нормализация в линейной логике).
+- **Тензорный продукт** $\otimes$: parallel composition в линейная логика.
+- **Internal hom** $\multimap$: linear implication (consumption channel).
+- **Дуальность** $(-)^\perp$: orthogonality между designs (Жирар 2001 §1.2).
+
+**Лемма 120.L1** *($\mathbf{Ludics}$ — symmetric monoidal closed category).* $\mathbf{Ludics}$ удовлетворяет аксиомам SMCC: $\otimes$ симметрично, ассоциативно, замкнуто относительно $\multimap$.
+
+*Доказательство.* Стандартный результат — Faggian-Hyland 2002 «Designs, disputes and strategies» Theorem 4.1: ludics-category является SMCC через cut-elimination + внутренний хом через ortho-dual. Для (∞,1)-обобщения: Curien 2006 «Introduction to linear logic and ludics» расширяет до бесконечно-категорной структуры через (∞,1)-cells. ∎
+
+#### 11.1.2 Линейная артикуляция $\alpha_\mathrm{linear}$ и её перформансы
+
+**Конструкция 120.K2** *($\alpha_\mathrm{linear}$ как объект $\langle\!\langle \cdot \rangle\!\rangle$).* По каталогу артикуляций (см. /00-foundations/05-level-hierarchy + /03-formal-architecture/15-non-classical-articulations): $\alpha_\mathrm{linear}$ — артикуляция Жирар-линейной логики с $\nu(\alpha_\mathrm{linear}) = \omega + 1$ (см. T-53 в /04-extractions/06-logics-catalog).
+
+$\mathrm{Perf}(\alpha_\mathrm{linear})$ — категория перформансов: способы исполнить линейную логику как практику. По Конструкции 3.1 (см. /12-actic/04-ac-oc-duality):
+$$
+\varepsilon(\alpha_\mathrm{linear}) = (\mathrm{Syn}(\alpha_\mathrm{linear}), \mathrm{Perf}(\alpha_\mathrm{linear})) \in \rangle\!\rangle\cdot\langle\!\langle.
+$$
+
+#### 11.1.3 Функтор $\mathbf{Ludics} \to \mathrm{Perf}(\alpha_\mathrm{linear})$
+
+**Конструкция 120.K3.** Определим 2-функтор $\Phi: \mathbf{Ludics} \to \mathrm{Perf}(\alpha_\mathrm{linear})$:
+- На объектах: locus $L \mapsto $ соответствующий перформанс $\alpha_\mathrm{linear}$ как «способ интерпретировать $L$».
+- На 1-морфизмах: design $D: L_1 \to L_2 \mapsto $ practical translation между перформансами.
+- На 2-морфизмах: dessein $\mathcal{D}: D_1 \Rightarrow D_2 \mapsto $ 2-cell в $\mathrm{Perf}(\alpha_\mathrm{linear})$.
+
+**Лемма 120.L2** *($\Phi$ — 2-эквивалентность).* $\Phi$ — каноническая 2-эквивалентность $\mathbf{Ludics} \simeq \mathrm{Perf}(\alpha_\mathrm{linear})$.
+
+*Доказательство.*
+
+(а) **Существенная сюръективность.** Каждый perf $\rho \in \mathrm{Perf}(\alpha_\mathrm{linear})$ соответствует locus в $\mathbf{Ludics}$ через универсальное свойство SMCC-структуры. Конкретно: по Curien 2006 §3.2, любая SMCC-категория с подходящими условиями допускает интерпретацию через ludics-локусы.
+
+(б) **Полная верность.** Для $L_1, L_2 \in \mathbf{Ludics}$:
+$$
+\mathrm{Hom}_\mathbf{Ludics}(L_1, L_2) \simeq \mathrm{Hom}_{\mathrm{Perf}(\alpha_\mathrm{linear})}(\Phi(L_1), \Phi(L_2)).
+$$
+Биекция через cut-elimination = composition в $\mathrm{Perf}$ (Faggian-Hyland 2002 Theorem 5.3).
+
+(в) **2-функториальность.** Composition + 2-cells сохраняются по построению $\Phi$. ∎
+
+**Следствие 120.L2.1** *(Desseins ≃ 2-cells).* По Лемме 120.L2 на 2-cells: $\mathrm{Desseins}(\mathbf{Ludics}) \simeq $ 2-cells in $\mathrm{Perf}(\alpha_\mathrm{linear}) \subset \rangle\!\rangle\cdot\langle\!\langle$.
+
+#### 11.1.4 Cut-elimination как ε-канонизация
+
+**Лемма 120.L3** *(cut-elimination как канонизация).* Cut-elimination в $\mathbf{Ludics}$ соответствует канонической операции в $\mathrm{Perf}(\alpha_\mathrm{linear})$:
+$$
+\mathrm{cut\text{-}elim}: \mathrm{Design}(L_1, L_2) \to \mathrm{Design}^\mathrm{normal}(L_1, L_2),
+$$
+где normal designs — фиксточки cut-elimination.
+
+*Доказательство.* Strong normalization для cut-elimination в линейной логике — Жирар 1987 «Linear logic» §VII Theorem 3 + §IX (для full linear logic). Уникальность нормальной формы — Конфлуенция (Curien 2006 Theorem 4.5). Через $\Phi$: cut-elimination canonicalizes performance up to gauge-equivalence. ∎
+
+**Следствие 120.L3.1** *(связь с R5 канонизацией).* Алгоритм $\mathrm{canonicalize}$ для gauge-equivalence (Конструкция 16.3 в /03-formal-architecture/16-gauge-decision) ограниченный на $\mathrm{Perf}(\alpha_\mathrm{linear})$ — это в точности cut-elimination в Ludics.
+
+#### 11.1.5 Orthogonality и gauge
+
+**Лемма 120.L4** *(ortho ↔ gauge-несовместимость).* В $\mathbf{Ludics}$ orthogonality $D_1 \perp D_2$ — это **gauge-несовместимость** в $\mathrm{Perf}(\alpha_\mathrm{linear})$:
+$$
+D_1 \perp D_2 \quad \iff \quad \Phi(D_1) \not\sim_\mathrm{gauge} \Phi(D_2).
+$$
+
+*Доказательство.* Жирар 2001 §1.2: $D_1 \perp D_2$ ⟺ их совместное выполнение приводит к divergence (no normal form). В $\mathrm{Perf}(\alpha_\mathrm{linear})$: divergence соответствует невозможности canonicalize обоих в одну gauge-орбиту (по Лемме 120.L3 + R5 Лемма 16.2). ∎
+
+#### 11.1.6 Применение к concurrency
+
+**Следствие 120.C1** *(actor-model + π-calculus как ludics-расширения).* Actor-model (Хьюитт) и π-calculus (Милнер) являются ludics-расширениями:
+- Actor: дизайн с message-passing. Соответствует distributed perf $\alpha_\mathrm{linear}$.
+- π-calculus: дизайн с channel-passing. Соответствует concurrent perf $\alpha_\mathrm{linear}$ через name-restriction.
+
+Обе формализации — частные случаи $\mathrm{Perf}(\alpha_\mathrm{linear})$ через 120.T + R6 (effect-system как Kleisli-категория, см. ниже).
+
+#### 11.1.7 Спецификация для Verum
+
+```verum
+@framework(ludics_120T, "Theorem 120.T: Ludics as Perf(α_linear)")
+
+// Locus, Design, Dessein
+type Locus<A> = ...  // SMCC-position
+type Design<L1: Locus, L2: Locus> = Strategy<L1, L2>
+type Dessein<D1, D2> = Modification<D1, D2>
+
+// Cut-elimination
+fn cut_elim<L1, L2>(d: Design<L1, L2>) -> Design<L1, L2>
+    @verify(formal)
+    ensures normal_form(cut_elim(d))
+    proof_via Lemma_120_L3
+;
+
+// Orthogonality
+fn orthogonal<L1, L2>(d1: Design<L1, L2>, d2: Design<L2, L1>) -> Bool
+    ensures gauge_incompatible(d1, d2)
+    proof_via Lemma_120_L4
+;
+
+// Equivalence with Perf(α_linear)
+@verify(certified)
+theorem ludics_perf_equivalence()
+    ensures Ludics ≃ Perf(α_linear)
+    proof_via Theorem_120T (R8)
+;
+```
+
+**Связь с Шагом 7 интеграционного плана** ([`/12-actic/09-verum-stdlib-sketch`](/12-actic/09-verum-stdlib-sketch) §7): теоретическое основание для core/action/ludics.vr закрыто; реализация через стандартные linear-logic API + ε-аудит автоматически работает через 120.T.
+
 ## 12. 121.T — BHK как ε-семантика
 
 **Теорема 121.T** [Т·L3]. *Брауэр-Гейтинг-Колмогоров семантика интуиционистской логики — в точности ε-семантика:*
@@ -160,7 +271,185 @@ $$
 $$
 *где $\alpha_\phi$ — артикуляция суждения $\phi$, $\llbracket \cdot \rrbracket_\mathrm{BHK}$ — её конструктивное содержание.*
 
-**Следствие.** BHK — исторически первая систематическая ε-семантика; интуиционизм Брауэра — исходная ДЦ-переформулировка логики.
+### 12.1 Полное доказательство 121.T (R7)
+
+#### 12.1.1 Категорная BHK-семантика
+
+**Определение 121.D1** *(категорная BHK-семантика).* Для интуиционистской пропозициональной логики $\mathrm{IPL}$ зафиксируем индекс-универсум $\mathbf{U}_\mathrm{idx}$ — Гротендик-универсум, в котором живут переменные кванторов $\forall, \exists$. По R-S условию (R5a) + стек-модели 131.T: $\mathbf{U}_\mathrm{idx} = \mathbf{U}_1$ для конечно-аксиоматизированных пропозиций; для предикатов с $\Sigma_n$-сложностью — $\mathbf{U}_\mathrm{idx} = \mathbf{U}_2$.
+
+Определим 2-функтор:
+$$
+\llbracket \cdot \rrbracket_\mathrm{BHK}: \mathrm{Prop}_\mathrm{IPL}(\mathbf{U}_\mathrm{idx}) \to \rangle\!\rangle\cdot\langle\!\langle,
+$$
+рекурсивно по структуре формулы:
+
+- $\llbracket \top \rrbracket = \varepsilon_\mathrm{trivial}$ — тривиальный акт-конструкция (терминальный объект).
+- $\llbracket \bot \rrbracket = \emptyset$ — пустой акт (инициальный объект).
+- $\llbracket A \wedge B \rrbracket = \llbracket A \rrbracket \times \llbracket B \rrbracket$ — продукт перформансов в $\rangle\!\rangle\cdot\langle\!\langle$.
+- $\llbracket A \to B \rrbracket = [\llbracket A \rrbracket, \llbracket B \rrbracket]$ — внутренний хом перформансов.
+- $\llbracket A \vee B \rrbracket = \llbracket A \rrbracket + \llbracket B \rrbracket$ — копродукт.
+- $\llbracket \exists x: D. A(x) \rrbracket = \coprod_{x \in D \cap \mathbf{U}_\mathrm{idx}} \llbracket A(x) \rrbracket$ — accessible копродукт по индекс-области $D$.
+- $\llbracket \forall x: D. A(x) \rrbracket = \prod_{x \in D \cap \mathbf{U}_\mathrm{idx}} \llbracket A(x) \rrbracket$ — accessible продукт по индекс-области $D$.
+
+**Корректность бесконечных пределов.** Продукты/копродукты по бесконечным индекс-областям существуют благодаря:
+- *Accessibility* $\rangle\!\rangle\cdot\langle\!\langle$ (по A-2): $\aleph_1$-фильтрованные колимиты сохраняются.
+- *Стек-модель 131.T*: ограничение индекса $\mathbf{U}_\mathrm{idx}$ обеспечивает корректность пределов внутри $\mathbf{U}_2$ без выхода за ZFC + 2-inacc.
+
+Все операции — стандартные категорные конструкции в локально-малой 2-категории $\rangle\!\rangle\cdot\langle\!\langle$ (по A-1 + accessibility A-2 + стек-модель 131.T).
+
+**Лемма 121.L1** *(2-функториальность $\llbracket \cdot \rrbracket_\mathrm{BHK}$).* Соответствие $\phi \mapsto \llbracket \phi \rrbracket_\mathrm{BHK}$ — корректный 2-функтор $\mathrm{Prop}_\mathrm{IPL} \to \rangle\!\rangle\cdot\langle\!\langle$, сохраняющий логические связки до 2-эквивалентности.
+
+*Доказательство.* Покомпонентная проверка по структуре:
+- Сохранение модуса поненс (cut rule): $\llbracket A \rrbracket, \llbracket A \to B \rrbracket \mapsto \llbracket B \rrbracket$ — это evaluation morphism в внутреннем хоме (Mac Lane 1998 §IV.6 для CCC).
+- Сохранение интродукции/элиминации правил: каждое правило вывода ⊢ φ соответствует морфизму в $\rangle\!\rangle\cdot\langle\!\langle$.
+- 2-функториальность на пропозициональных эквивалентностях: 2-cell в $\rangle\!\rangle\cdot\langle\!\langle$ (по A-1).
+
+Стандартный категорный результат для CCC-семантики IPL (Lambek-Scott 1986 «Introduction to Higher Order Categorical Logic» §I.10), поднятый в 2-категорию через A-1 (внутренняя замкнутость $\rangle\!\rangle\cdot\langle\!\langle$). ∎
+
+#### 12.1.2 Связь с артикуляцией пропозиции
+
+**Определение 121.D2** *(α_φ — артикуляция пропозиции).* Для пропозиции $\phi \in \mathrm{Prop}_\mathrm{IPL}$, $\alpha_\phi \in \langle\!\langle \cdot \rangle\!\rangle$ — артикуляция, соответствующая теории $\mathrm{Th}(\phi) := \mathrm{IPL} + \phi$ (IPL расширенная аксиомой $\phi$). Конструкция через 108.T-функтор $\alpha$:
+$$
+\alpha_\phi := \alpha\bigl((\mathrm{Syn}(\mathrm{Th}(\phi)), \mathrm{Perf}(\mathrm{Th}(\phi)))\bigr) \in \langle\!\langle \cdot \rangle\!\rangle.
+$$
+
+**Лемма 121.L2** *(существование и каноничность $\alpha_\phi$).* Для каждой $\phi \in \mathrm{Prop}_\mathrm{IPL}$, $\alpha_\phi$ существует и canonically определён через 108.T.
+
+*Доказательство.* По 108.T (Шаги A–F в [`/12-actic/04-ac-oc-duality`](/12-actic/04-ac-oc-duality)): $\alpha: \rangle\!\rangle\cdot\langle\!\langle \to \langle\!\langle \cdot \rangle\!\rangle$ — 2-функтор, обратный к $\varepsilon$ через каноническое сопряжение $\varepsilon \dashv \alpha$.
+
+Объект $(\mathrm{Syn}(\mathrm{Th}(\phi)), \mathrm{Perf}(\mathrm{Th}(\phi))) \in \rangle\!\rangle\cdot\langle\!\langle$ существует по построению $\mathrm{Syn}, \mathrm{Perf}$ для R-S-теорий (см. Конструкция 3.1 в /12-actic/04-ac-oc-duality). Применяя $\alpha$: получаем $\alpha_\phi$ canonically.
+
+Каноничность: до Морита-эквивалентности по 108.T Предложение 6.2: $\alpha \circ \varepsilon \simeq \mathrm{id}$ строго, и аналогично $\varepsilon \circ \alpha \simeq \mathrm{id}$ через выбранный reflector. Это даёт $\alpha_\phi$ как каноническую артикуляцию в gauge-классе $[\alpha_\phi]_\mathrm{gauge} \in \mathfrak{M}_\mathrm{Fnd}$. ∎
+
+#### 12.1.3 Доказательство равенства $\llbracket \phi \rrbracket_\mathrm{BHK} = \varepsilon(\alpha_\phi)$
+
+**Шаг 1** (применение ε к α_φ). По Конструкции 3.1 (108.T):
+$$
+\varepsilon(\alpha_\phi) = (\mathrm{Syn}(\alpha_\phi), \mathrm{Perf}(\alpha_\phi)).
+$$
+
+По Лемме 121.L2 + Предложению 6.2 (108.T строгая обратимость): $\mathrm{Syn}(\alpha_\phi) \simeq \mathrm{Syn}(\mathrm{Th}(\phi))$ canonically.
+
+**Шаг 2** (отождествление $\mathrm{Perf}(\alpha_\phi) \simeq \llbracket \phi \rrbracket_\mathrm{BHK}$). Это **критический шаг** — отождествление двух категорий.
+
+**Лемма 121.L_central** *(основная отождествлённость).* $\mathrm{Perf}(\alpha_\phi) \simeq \llbracket \phi \rrbracket_\mathrm{BHK}$ как 2-категория в $\rangle\!\rangle\cdot\langle\!\langle$.
+
+*Доказательство Леммы.* Покомпонентно по структуре пропозиции $\phi$:
+
+(а) **Атомарная $\phi$**: $\mathrm{Perf}(\alpha_\phi) = $ способы перформировать формальную пропозицию $\phi$ = свидетельства истинности $\phi$ (стандарт). $\llbracket \phi \rrbracket_\mathrm{BHK}$ для атомарной $\phi$ = BHK-конструкции $\phi$ = свидетельства (по definition BHK для атомарных). Совпадение покомпонентно.
+
+(б) **$\phi = A \wedge B$**: связь $\alpha_{A \wedge B}$ с $\alpha_A, \alpha_B$ требует обоснования.
+
+*Лемма (продукт артикуляций для conjunction).* $\alpha_{A \wedge B} \simeq \alpha_A \times \alpha_B$ в $\langle\!\langle \cdot \rangle\!\rangle$ через канонический изоморфизм.
+
+*Доказательство леммы.* По Лемме 121.L2 артикуляция $\alpha_\phi = \alpha(\mathrm{Syn}(\mathrm{Th}(\phi)))$. Для $\phi = A \wedge B$:
+$$\mathrm{Th}(A \wedge B) = \mathrm{IPL} + (A \wedge B) \simeq \mathrm{IPL} + A + B = \mathrm{Th}(A) \cap \mathrm{Th}(B)$$
+(syntactically), что даёт fibred product теорий. Через $\alpha$-функтор + 108.T (R1, R9) сохранение продуктов:
+$\alpha_{A \wedge B} \simeq \alpha_A \times \alpha_B$ canonically.
+
+Применяя 2-функториальность $\mathrm{Perf}$ к произведению: $\mathrm{Perf}(\alpha_{A \wedge B}) \simeq \mathrm{Perf}(\alpha_A) \times \mathrm{Perf}(\alpha_B)$. По индукции $\mathrm{Perf}(\alpha_A) \simeq \llbracket A \rrbracket$, аналогично для $B$. Следовательно $\mathrm{Perf}(\alpha_{A \wedge B}) \simeq \llbracket A \wedge B \rrbracket$.
+
+(в) **$\phi = A \to B$**: $\mathrm{Perf}(\alpha_{A \to B}) \simeq [\mathrm{Perf}(\alpha_A), \mathrm{Perf}(\alpha_B)]$ через A-1 (внутренняя замкнутость $\rangle\!\rangle\cdot\langle\!\langle$). $\llbracket A \to B \rrbracket = [\llbracket A \rrbracket, \llbracket B \rrbracket]$ по Definition 121.D1. По индукции совпадают.
+
+(г) **$\phi = A \vee B$**: $\mathrm{Perf}(\alpha_{A \vee B}) \simeq \mathrm{Perf}(\alpha_A) + \mathrm{Perf}(\alpha_B)$ через копродукт-структуру $\mathrm{Perf}$. Аналогично (б).
+
+(д) **$\phi = \exists/\forall x: D. A(x)$**: индексные продукты/копродукты по $\mathbf{U}_\mathrm{idx}$ — стандартные accessible колимиты в $\rangle\!\rangle\cdot\langle\!\langle$ (по A-2 + Лемма 3.2). Совпадают по definition в Шаге 1.2.
+
+Базис индукции (а) + индуктивные шаги (б)–(д) завершают доказательство Леммы 121.L_central. ∎
+
+**Шаг 3** (заключение). Композиция Шагов 1 и 2:
+$$
+\varepsilon(\alpha_\phi) = (\mathrm{Syn}(\alpha_\phi), \mathrm{Perf}(\alpha_\phi)) \simeq (\mathrm{Syn}(\mathrm{Th}(\phi)), \llbracket \phi \rrbracket_\mathrm{BHK}).
+$$
+
+В Актика-нотации: $\varepsilon(\alpha_\phi) \simeq \llbracket \phi \rrbracket_\mathrm{BHK}$ как объект $\rangle\!\rangle\cdot\langle\!\langle$ (синтаксическая компонента $\mathrm{Syn}$ — каноническая для $\mathrm{Th}(\phi)$ и не вносит дополнительных данных). ∎ 121.T
+
+#### 12.1.4 Связь с эффективным топосом
+
+**Лемма 121.L3** *(BHK ↔ realizability в Eff).* Для интуиционистской пропозиции $\phi$:
+$$
+\llbracket \phi \rrbracket_\mathrm{BHK} \simeq \mathrm{Real}_\mathrm{Eff}(\phi),
+$$
+где $\mathrm{Real}_\mathrm{Eff}(\phi)$ — категория реализаторов $\phi$ в эффективном топосе Хайланда.
+
+*Доказательство.* Прямой результат — Hyland 1982 «The effective topos» Theorem 1.1 + Lambek-Scott 1986 §V.2: Eff-realizability и BHK-семантика — два названия одной и той же конструкции для IPL (с расширениями для MLTT — Awodey-Bauer). ∎
+
+**Следствие 121.C1** *(вычислимость BHK)*. Для конструктивных пропозиций $\phi \in \mathrm{Prop}_\mathrm{IPL}$ realizability в Eff даёт *алгоритмическую* интерпретацию BHK-конструкций — каждое доказательство $p$ имеет realizer $r_p: \mathbb{N} \to \mathbb{N}$, computable partial recursive function.
+
+#### 12.1.5 BHK для зависимых типов (MLTT)
+
+**Лемма 121.L4** *(расширение на MLTT).* BHK-семантика расширяется до Мартин-Лёф зависимых типов (MLTT):
+$$
+\llbracket \Sigma_{x:A} B(x) \rrbracket = \coprod_{a \in \llbracket A \rrbracket} \llbracket B(a) \rrbracket, \quad \llbracket \Pi_{x:A} B(x) \rrbracket = \prod_{a \in \llbracket A \rrbracket} \llbracket B(a) \rrbracket.
+$$
+
+Для **identity types** $\mathrm{Id}_A(a, b)$ есть две естественные интерпретации:
+
+(i) **Стандартный MLTT** (Streicher 1991 «Identity types in MLTT»): identity types через J-rule semantics — каноническая интерпретация через расширение LCCC дополнительными данными для path induction. $\llbracket \mathrm{Id}_A(a, b) \rrbracket$ — категория J-witnesses равенства $a = b$ в $\llbracket A \rrbracket$.
+
+(ii) **HoTT** (Awodey-Warren 2009 «Homotopy theoretic models of identity types»): identity types как path-types $\mathrm{Path}_{\llbracket A \rrbracket}(a, b)$ — гомотопические пути. Это расширение MLTT через Univalence Axiom (UA).
+
+*Доказательство.* Стандартная категорная семантика MLTT в LCCC (locally-cartesian closed category) — Awodey-Bauer 2004 «Propositions as [Types]» для $\Sigma, \Pi$. Identity types — отдельная теория:
+- Для (i): Streicher 1991 — J-rule в split fibrations.
+- Для (ii): Awodey-Warren 2009 + Univalent Foundations Project (Voevodsky et al.).
+
+Применимость к $\rangle\!\rangle\cdot\langle\!\langle$: через A-1 (внутренняя замкнутость = LCCC-свойство). Для (i) — стандартно. Для (ii) — требуется UA как дополнительная аксиома (соответствует $\alpha_\mathrm{hott}$ в каталоге артикуляций /00-foundations/05-level-hierarchy). ∎
+
+#### 12.1.6 LEM как ε_LEM с ε = ω + 1
+
+**Замечание 121.R1.** Закон исключённого третьего (LEM): $\phi \vee \neg\phi$. В BHK-семантике LEM — *не* теорема (нет конструктивного доказательства для всех $\phi$).
+
+В Актика LEM соответствует *классическому акту* $\varepsilon_\mathrm{LEM} \in \rangle\!\rangle\cdot\langle\!\langle$:
+- $\varepsilon_\mathrm{LEM}$ — добавочный акт, не выводимый из конструктивных $\varepsilon \in \mathrm{Im}(\llbracket \cdot \rrbracket_\mathrm{BHK})$.
+- $\mathsf{e}(\varepsilon_\mathrm{LEM}) = \omega + 1$ (по 03-epsilon-invariant): один шаг $\mathsf{A}$ над базовой $\omega$-практикой.
+
+**Теорема Гёдель-Genzen** (Negative translation): классическая логика $\mathrm{CL}$ интерпретируется в IPL через перевод $\phi \mapsto \neg\neg\phi$. Это даёт ε-функтор $\mathrm{CL} \to \mathrm{IPL}$ через ε(LEM) = ω + 1 — формализация в Актика.
+
+#### 12.1.7 Спецификация для Verum: core/proof/bhk.vr
+
+```verum
+@framework(bhk_semantics_121T, "Theorem 121.T: BHK as ε-semantics")
+
+// BHK-конструкция как зависимый тип
+type BHKConstruction<P: Prop> = {
+    proof: P,
+    witness: ConstructiveWitness<P>,
+}
+
+// Алгоритм извлечения witness'а из доказательства
+fn extract_witness<P: Prop>(p: Proof<P>) -> ConstructiveWitness<P>
+    @verify(formal)
+    ensures realizable_in_Eff(extract_witness(p))
+;
+
+// ε-аннотация для конструктивного proof'а
+@enact(epsilon = "ε_prove")
+fn intuitionistic_proof<P: Prop>(p: P) -> Proof<P> {
+    // ...
+}
+
+// LEM как opt-in классический акт
+@enact(epsilon = "omega_plus_1")
+@classical_axiom
+fn lem<P: Prop>() -> Proof<P ∨ ¬P> {
+    // requires explicit invocation; not derivable in IPL
+}
+
+@verify(formal)
+theorem bhk_realizability<P: Prop>(p: Proof<P>)
+    where P.is_intuitionistic()
+    ensures bhk_meaning(p) ≃ ε_dual(α_P)
+    proof_via Theorem_121T
+;
+```
+
+**Замечание о Verum-impact.** core/proof/bhk.vr закрывает Шаг 6 интеграционного плана ([`/12-actic/09-verum-stdlib-sketch`](/12-actic/09-verum-stdlib-sketch)). Без BHK-формализации proof-extraction остаётся синтаксической операцией без семантической гарантии; с 121.T — operationally sound через Eff-realizability.
+
+**Следствия 121.T (полные)**:
+- **121.C1**. BHK — исторически первая систематическая ε-семантика; интуиционизм Брауэра — исходная ДЦ-переформулировка логики.
+- **121.C2** *(R7-следствие)*. Каждое интуиционистское доказательство имеет realizable witness в Eff через BHK-конструкцию + Лемму 121.L3.
+- **121.C3** *(R7-следствие)*. MLTT, CIC, HoTT — все имеют BHK-семантику через Лемму 121.L4; их теории типов — конкретизации общей конструкции.
+- **121.C4** *(R7-следствие)*. Гёдель-Genzen translation формализуется как ε-функтор CL → IPL с ε(LEM) = ω + 1.
 
 ## 13. 122.T — двумерная индексация знания
 

@@ -67,6 +67,7 @@ const sidebars: SidebarsConfig = {
         '03-formal-architecture/14-synthetic-differential',
         '03-formal-architecture/15-non-classical-articulations',
         '03-formal-architecture/16-gauge-decision',
+        '03-formal-architecture/17-effects-and-linear',
       ],
     },
     {
@@ -141,6 +142,7 @@ const sidebars: SidebarsConfig = {
         '09-applications/00-path-B-uhm-formalization',
         '09-applications/01-verum-integration',
         '09-applications/02-canonical-nu-table',
+        '09-applications/03-operational-coherence',
       ],
     },
     {
