@@ -216,7 +216,7 @@ const config: Config = {
         {
           to: '/06-limits/10-maximality-theorems',
           position: 'left',
-          label: 'Maximality',
+          label: 'Максимальность',
         },
         {
           to: '/10-reference/02-theorems-catalog',
@@ -245,9 +245,9 @@ const config: Config = {
           title: 'Ключевые результаты',
           items: [
             {label: 'AFN-T (граничная лемма)', to: '/06-limits/02-th-final'},
-            {label: 'Maximality proofs (103.T–106.T)', to: '/06-limits/10-maximality-theorems'},
-            {label: 'Meta-classification (100.T–102.T)', to: '/06-limits/09-meta-classification'},
-            {label: 'Classifying Space (43.T1)', to: '/02-canonical-primitive/03-derived-notions'},
+            {label: 'Доказательства максимальности (103.T–106.T)', to: '/06-limits/10-maximality-theorems'},
+            {label: 'Мета-классификация (100.T–102.T)', to: '/06-limits/09-meta-classification'},
+            {label: 'Классифицирующее пространство (43.T1)', to: '/02-canonical-primitive/03-derived-notions'},
             {label: 'УГМ-сборка (UFH / 85.T)', to: '/05-assemblies/01-uhm'},
           ],
         },
@@ -257,14 +257,14 @@ const config: Config = {
             {label: 'Глоссарий', to: '/10-reference/00-glossary'},
             {label: 'Каталог аксиом', to: '/10-reference/01-axioms-catalog'},
             {label: 'Каталог теорем', to: '/10-reference/02-theorems-catalog'},
-            {label: 'Статус gap', to: '/10-reference/03-gap-status'},
+            {label: 'Статус пробелов', to: '/10-reference/03-gap-status'},
           ],
         },
         {
           title: 'Связанные проекты',
           items: [
-            {label: 'УГМ Theory (website)', href: 'https://holon.sh'},
-            {label: 'Verum language', href: 'https://verum-lang.org/'},
+            {label: 'УГМ — сайт теории', href: 'https://holon.sh'},
+            {label: 'Verum', href: 'https://verum-lang.org/'},
           ],
         },
       ],

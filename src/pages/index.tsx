@@ -41,21 +41,16 @@ function DiakrisisVisualization() {
     };
   }, []);
 
-  // Radii — four concentric strata
   const coreR = 24;
   const innerR = 72;
   const midR = 135;
   const outerR = 185;
   const boundaryR = 218;
 
-  // Soft breath modulation (~±1.5%)
   const breath = 1 + Math.sin(time * 0.3) * 0.015;
-
-  // Slow counter-rotation — wordless sense of flow
   const midSpin = time * 0.45;
   const innerSpin = -time * 0.7;
 
-  // Mid ring: 7 abstract orbital points (no labels, no meaning assigned)
   const midNodeCount = 7;
   const midNodes: {x: number; y: number; pulse: number}[] = [];
   for (let i = 0; i < midNodeCount; i++) {
@@ -69,7 +64,6 @@ function DiakrisisVisualization() {
     });
   }
 
-  // Inner ring: 3 hollow marks, subtler counter-motion
   const innerNodeCount = 3;
   const innerNodes: {x: number; y: number}[] = [];
   for (let i = 0; i < innerNodeCount; i++) {
@@ -81,7 +75,6 @@ function DiakrisisVisualization() {
     });
   }
 
-  // Five radial whisper-rays
   const rayCount = 5;
   const rays: {ix: number; iy: number; ox: number; oy: number; pulse: number}[] = [];
   for (let i = 0; i < rayCount; i++) {
@@ -96,7 +89,6 @@ function DiakrisisVisualization() {
     });
   }
 
-  // Central point micro-drift
   const driftX = Math.sin(time * 0.27) * 1.2;
   const driftY = Math.sin(time * 0.19) * 1.2;
   const centerX = cx + driftX;
@@ -126,10 +118,8 @@ function DiakrisisVisualization() {
         </filter>
       </defs>
 
-      {/* Ambient breath */}
       <circle cx={cx} cy={cy} r={boundaryR * breath} fill="url(#ambientGrad)" />
 
-      {/* Outer dashed boundary — unlabeled limit */}
       <circle
         cx={cx}
         cy={cy}
@@ -141,7 +131,6 @@ function DiakrisisVisualization() {
         opacity={0.28}
       />
 
-      {/* Five whisper-rays */}
       {rays.map((ray, i) => (
         <line
           key={`ray-${i}`}
@@ -156,7 +145,6 @@ function DiakrisisVisualization() {
         />
       ))}
 
-      {/* Outer ring — thin */}
       <circle
         cx={cx}
         cy={cy}
@@ -167,7 +155,6 @@ function DiakrisisVisualization() {
         opacity={0.14}
       />
 
-      {/* Mid ring — baseline */}
       <circle
         cx={cx}
         cy={cy}
@@ -178,7 +165,6 @@ function DiakrisisVisualization() {
         opacity={0.2}
       />
 
-      {/* Seven orbital points on the mid ring */}
       <g filter="url(#softGlow)">
         {midNodes.map((node, i) => (
           <circle
@@ -192,7 +178,6 @@ function DiakrisisVisualization() {
         ))}
       </g>
 
-      {/* Inner ring — dashed, softer */}
       <circle
         cx={cx}
         cy={cy}
@@ -204,7 +189,6 @@ function DiakrisisVisualization() {
         opacity={0.35}
       />
 
-      {/* Three hollow inner marks */}
       {innerNodes.map((node, i) => (
         <circle
           key={`inner-node-${i}`}
@@ -218,7 +202,6 @@ function DiakrisisVisualization() {
         />
       ))}
 
-      {/* Central singularity — subtle glow + Δ */}
       <circle
         cx={centerX}
         cy={centerY}
@@ -260,7 +243,7 @@ function HomepageHeader() {
             Мета-структурная теория пространства математических оснований
           </p>
           <p className={styles.heroDescription}>
-            Различение — первичный акт, не объект. Пространство всех математических оснований рассматривается как единая классифицирующая структура: каждое основание занимает в нём координатную позицию, и ни одно не абсолютно. Программа формализует это пространство, доказывает его структурный плюрализм и устанавливает формальную границу, обобщающую классическую серию no-go-теорем.
+            Различение — первичный акт, не объект. Множественность математических оснований рассматривается как единая классифицирующая структура: каждое основание занимает в ней координатную позицию, и ни одно не абсолютно. Программа формализует это пространство, доказывает его структурный плюрализм и устанавливает формальную границу, обобщающую классическую серию no-go-теорем.
           </p>
           <div className={styles.heroButtons}>
             <Link className="button button--primary button--lg" to="/intro">
@@ -270,7 +253,7 @@ function HomepageHeader() {
               AFN-T
             </Link>
             <Link className="button button--outline button--lg" to="/06-limits/10-maximality-theorems">
-              Maximality
+              Максимальность
             </Link>
           </div>
         </div>
@@ -288,61 +271,39 @@ function EssenceSection() {
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>Суть</Heading>
         <p className={styles.sectionSubtitle}>
-          Четыре компонента, из которых выводится весь корпус.
+          Четыре содержательных компонента, из которых собирается весь корпус.
         </p>
 
         <div className={styles.essenceGrid}>
           <div className={styles.essenceCard}>
-            <div className={styles.essenceSymbol}>⟪⟫</div>
+            <div className={styles.essenceSymbol}>I</div>
             <h3>Примитив</h3>
             <p>
-              Локально-малая 2-категория с 2-полностью-верным вложением{' '}
-              <code>ι: End(⟪⟫) ↪ ⟪⟫</code>. Объекты — артикуляции α. Эндо-2-функтор{' '}
-              <code>𝖬: ⟪⟫ → ⟪⟫</code> задаёт метаизацию. Выделенный объект{' '}
-              <code>α<sub>math</sub></code> — линза реализации. Семейство отношений{' '}
-              <code>⊏<sub>κ</sub></code> индексируется ординалами и фиксирует глубину подартикуляции.
+              Минимальная мета-структура: пространство артикуляций, оператор метаизации, выделенная линза реализации, семейство отношений подартикуляции. Достаточно для того, чтобы основание стало координатой.
             </p>
           </div>
 
           <div className={styles.essenceCard}>
-            <div className={styles.essenceSymbol}>Axi</div>
+            <div className={styles.essenceSymbol}>II</div>
             <h3>Аксиоматика</h3>
             <p>
-              13 условий: Axi-0..Axi-9 (существование, 2-категорная структура,{' '}
-              <code>𝖬</code>-функториальность, реализация через внутренний хом, нетривиальность,
-              самоартикулируемость, достаточность) + структурные{' '}
-              <code>T-α</code> (непривилегированность{' '}
-              <code>α<sub>math</sub></code>) и{' '}
-              <code>T-2f*</code> (локально-стратифицированная комплетация, блокирующая парадоксы самоссылки).
+              Тринадцать формальных условий — о существовании и базовой структуре примитивов, о непривилегированности линзы, о стратификации по глубине, блокирующей самореферентные парадоксы.
             </p>
           </div>
 
           <div className={styles.essenceCard}>
-            <div className={styles.essenceSymbol}>𝓜</div>
+            <div className={styles.essenceSymbol}>III</div>
             <h3>Классификация</h3>
             <p>
-              <strong>29.T</strong> (Universal Foundation): каждое Rich-основание{' '}
-              <code>F</code> определяет единственную{' '}
-              <code>α<sub>F</sub></code> с точностью до gauge.{' '}
-              <strong>30.T</strong> (Reconstruction): обратное восстановление из{' '}
-              <code>ρ(α<sub>F</sub>)</code>. Вместе — биекция между Rich-основаниями и точками{' '}
-              <code>𝓜<sub>Fnd</sub> = Trace(𝖠)/gauge</code> (<strong>43.T1</strong>).
+              Каждое достаточно богатое основание единственным образом артикулируется в общем пространстве модулей; обратное восстановление через линзу реализации даёт биекцию.
             </p>
           </div>
 
           <div className={styles.essenceCard}>
-            <div className={styles.essenceSymbol}>¬𝓛<sub>Abs</sub></div>
+            <div className={styles.essenceSymbol}>IV</div>
             <h3>Граница</h3>
             <p>
-              <strong>AFN-T</strong> (Absolute Foundation No-Go Theorem): не существует{' '}
-              <code>X</code>, одновременно удовлетворяющего{' '}
-              <code>(F<sub>S</sub>)</code> формальной определимости,{' '}
-              <code>(Π<sub>4,S,n</sub>)</code> нередуцируемости к{' '}
-              <code>𝒮<sub>S</sub></code> и{' '}
-              <code>(Π<sub>3</sub>-max<sub>S,n</sub>)</code> максимальной генеративности.{' '}
-              <strong>Пятиосевая абсолютность</strong> (55.T · 59.T.1 · 69.T · 84.T · 87.T): инвариантно по метатеории <code>S</code>, категорному уровню{' '}
-              <code>n</code>, мета-итерации μ, альтернативным порядкам ξ, в полноте Lawvere-scope.
-              Diakrisis{' '}∈{' '}<code>𝓛<sub>Cls</sub><sup>⊤</sup></code> — теорема 106.T (все Max-1..Max-4 доказаны).
+              Абсолютное основание невозможно. Граница пятиосево абсолютна — по основанию, по категорному уровню, по мета-итерации, по альтернативному порядку, по условию полноты.
             </p>
           </div>
         </div>
@@ -357,57 +318,40 @@ function MotivationSection() {
       <div className="container">
         <div className={styles.motivationLayout}>
           <div className={styles.motivationText}>
-            <Heading as="h2" className={styles.sectionTitle}>Мотивация</Heading>
+            <Heading as="h2" className={styles.sectionTitle}>Контекст</Heading>
 
             <h3 className={styles.motivationSubheading}>Постановка</h3>
             <p>
-              Современная мат-логика обладает широким спектром формальных оснований — ZFC, ETCS, CIC, MLTT, HoTT, NCG, (∞,1)-топосы Лурье — каждое из которых покрывает существенный фрагмент мат-практики, но ни одно не обладает привилегированным статусом. Отношения между ними (Морита-эквивалентность, интерпретация, gauge-соответствие) исследуются ad hoc. Отсутствует систематический формализм, в котором отдельные основания занимают координатные позиции в общем пространстве.
+              Основание математики множественно. Несколько формально различных оснований покрывают существенные фрагменты практики; ни одно не привилегировано. Отношения между ними исследуются разрозненно, без общей системы координат.
             </p>
 
             <h3 className={styles.motivationSubheading}>Программа</h3>
             <p>
-              Diakrisis строит такое пространство — классифицирующий объект{' '}
-              <code>𝓜<sub>Fnd</sub></code>, внутри которого основания становятся точками, а переходы между ними — морфизмами. Канонический примитив{' '}
-              <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> фиксирует минимальную 2-категорную структуру, достаточную для этой классификации, без заимствования технических терминов у уже существующих оснований (принцип П-0.1).
+              Diakrisis строит классифицирующее пространство, в котором основания становятся точками, а переходы — морфизмами. Минимальная мета-структура достаточна для общей классификации без заимствования технических терминов у конкретных оснований.
             </p>
 
             <h3 className={styles.motivationSubheading}>Граница</h3>
             <p>
-              Граничная лемма <strong>AFN-T</strong> (Absolute Foundation No-Go Theorem) — седьмой член структурной серии{' '}
-              <em>Cantor → Russell → Gödel → Tarski → Lawvere-FP → Ernst</em> — формально закрывает стратум{' '}
-              <code>𝓛<sub>Abs</sub></code>. <strong>Пятиосевая абсолютность</strong> устанавливает инвариантность по всем структурным осям: горизонтальная (55.T, метатеория{' '}
-              <code>S</code>), вертикальная (59.T.1, уровень{' '}
-              <code>n</code>), мета-вертикальная (69.T, μ-итерации), латеральная (84.T, категорный порядок ξ), полнота (87.T, Lawvere-scope). Diakrisis формально принадлежит максимальному подклассу классификаторов{' '}
-              <code>𝓛<sub>Cls</sub><sup>⊤</sup></code> как теорема (106.T); все четыре условия максимальности (Max-1..Max-4) доказаны (103.T · 104.T · 105.T · 99.T).
+              Граница — единая no-go-теорема, унифицирующая классическую серию no-go-результатов. Она структурно абсолютна по пяти независимым осям одновременно. Дуальная сторона расширяет границу на акт-центричное представление.
             </p>
 
-            <h3 className={styles.motivationSubheading}>Связь с УГМ</h3>
+            <h3 className={styles.motivationSubheading}>Внутри границы</h3>
             <p>
-              Теорема <strong>UFH (85.T, [Т·L3])</strong> устанавливает структурную корреспонденцию:{' '}
-              <code>α<sub>uhm</sub> ≃<sub>gauge</sub> ∫<sub>Γ</sub> α<sub>Д-hybrid</sub><sup>!</sup>(Γ)</code> над <code>7D-quantum</code> — Grothendieck-конструкция с gauge-группой S₇ × U(1). Ординальная арифметика: ν(α<sub>uhm</sub>) = ν(7D) + ν(α<sub>Д-hybrid</sub>) = (ω+1) + (ω·2+1) = <strong>ω·3+1</strong>. Путь Б: Verum-формализация сводится к формализации α<sub>Д-hybrid</sub><sup>!</sup> + 7D-quantum + Grothendieck construction.
+              Пространство классификаторов имеет нетривиальную внутреннюю структуру. Интенсиональное уточнение различает основания, экстенсионально эквивалентные. Мета-классификация стабилизируется на теоретическом уровне с восхождением по универсумам Гротендика. Корпус формально входит в максимальный подкласс классификаторов.
             </p>
           </div>
 
           <div className={styles.motivationFacts}>
-            <Heading as="h3" className={styles.factsTitle}>Ключевые показатели</Heading>
+            <Heading as="h3" className={styles.factsTitle}>Состояние</Heading>
             <dl className={styles.factsList}>
-              <div><dt>Примитив</dt><dd>четвёрка <code>(⟪⟫, 𝖬, α<sub>math</sub>, ⊏<sub>•</sub>)</code> в (∞,∞)-форме</dd></div>
-              <div><dt>Аксиомы</dt><dd>13 (Axi-0..Axi-9, T-α, T-2f*)</dd></div>
-              <div><dt>Сила консистентности</dt><dd>Con(Diakrisis) = Con(ZFC + 2 inacc) — 90.T</dd></div>
-              <div><dt>Корпус теорем</dt><dd>106 записей в номерной системе (119+ с под-теоремами), L1/L2/L3 классификация</dd></div>
-              <div><dt>Категоричность</dt><dd>единственность до (∞,∞)-эквивалентности — 88.T</dd></div>
-              <div><dt>Внутренний язык</dt><dd>L<sub>⟪⟫</sub> — 2-HoTT через Yoneda (89.T)</dd></div>
-              <div><dt>Извлечения</dt><dd>ZFC, ETCS, CIC, MLTT, HoTT, ∞-Topos, NCG</dd></div>
-              <div><dt>Non-classical α</dt><dd>α_linear, α_AFA-coalg, α_poly-HoTT, α_Д-hybrid</dd></div>
-              <div><dt>Связующие</dt><dd>α_cohesion (91.T), α_motivic (92.T), α_realiz (93.T)</dd></div>
-              <div><dt>(∞,n)-иерархия</dt><dd>(∞,∞)-канон; (∞,1), 2-Diakrisis через τ-усечения</dd></div>
-              <div><dt>Флагман-сборка</dt><dd>УГМ (α_uhm, ν = ω·3+1)</dd></div>
-              <div><dt>UFH (85.T [Т·L3])</dt><dd>α<sub>uhm</sub> ≃<sub>gauge</sub> ∫α<sub>Д-hybrid</sub><sup>!</sup>(Γ) над 7D (Grothendieck)</dd></div>
-              <div><dt>Tradeoff 97.T</dt><dd>! ⟺ PA ⟺ Π<sub>3</sub>-max ⟺ R-S</dd></div>
-              <div><dt>AFN-T</dt><dd>пятиосевая абсолютность (55.T · 59.T.1 · 69.T · 84.T · 87.T)</dd></div>
-              <div><dt>Meta-classification</dt><dd>theory-level stabilization + universe-ascent (100.T · 101.T · 102.T)</dd></div>
-              <div><dt>Maximality</dt><dd>Diakrisis ∈ 𝓛<sub>Cls</sub><sup>⊤</sup> как теорема (103.T · 104.T · 105.T · 106.T)</dd></div>
-              <div><dt>MSFS препринт</dt><dd>44 стр · 54 thm · 47 bib · рецензионно-чистое ядро</dd></div>
+              <div><dt>Аксиоматика</dt><dd>тринадцать условий минимальной структуры</dd></div>
+              <div><dt>Корпус</dt><dd>сто тридцать пять формальных утверждений</dd></div>
+              <div><dt>Метатеория</dt><dd>стандартная теория множеств с двумя недостижимыми кардиналами; граница тугая</dd></div>
+              <div><dt>Стратификация</dt><dd>основания, классификаторы, максимальные классификаторы; абсолютный стратум пуст</dd></div>
+              <div><dt>Граница</dt><dd>пятиосевая абсолютность no-go-теоремы</dd></div>
+              <div><dt>Категоричность</dt><dd>максимальный подкласс — единственная точка до канонической эквивалентности</dd></div>
+              <div><dt>Дуальная сторона</dt><dd>акт-центричная проекция с собственной формальной серией</dd></div>
+              <div><dt>Связанные корпуса</dt><dd>самодостаточный препринт MSFS, прикладные сборки, инженерная платформа знаний</dd></div>
             </dl>
           </div>
         </div>
@@ -430,71 +374,101 @@ const docSections: DocSection[] = [
     title: 'Основания проекта',
     description: 'Нулевые принципы, нулевая граница, иерархия уровней',
     link: '/00-foundations/00-what-is-diakrisis',
-    items: ['Что такое Diakrisis', 'Метод работы', 'Нулевые принципы П-0.0..П-0.7', 'Концепт нулевой границы Z', 'Иерархия уровней (0..5+, 6)'],
+    items: [
+      'Что такое Diakrisis',
+      'Метод работы',
+      'Нулевые принципы',
+      'Нулевая граница',
+      'Иерархия уровней структурной мощности',
+    ],
   },
   {
     id: 'phenomenon',
     title: 'Феномен различения',
     description: 'Διάκрисίс как акт',
     link: '/01-diakrisis-phenomenon/00-act-not-object',
-    items: ['Моменты акта: расщепление, направление, соотнесение', 'Феноменологическое обоснование', 'Параллели с Гегелем, Брауэром, Делёзом', 'Формальные корреспонденции: α_Д-linear / AFA / hybrid'],
+    items: [
+      'Различение как акт, не объект',
+      'Феноменологическое обоснование',
+      'Параллели в философской традиции',
+      'Формальные корреспонденции',
+    ],
   },
   {
     id: 'primitive',
     title: 'Канонический примитив',
-    description: '(⟪⟫, 𝖬, α_math, ⊏_•) + 13 аксиом',
+    description: 'Четыре первичных понятия и тринадцать аксиом',
     link: '/02-canonical-primitive/00-overview',
-    items: ['Четвёрка примитивов, строгая типизация', 'Axi-0..Axi-9 + T-α + T-2f*', 'Производные: ρ, Fix(𝖬), Trace(𝖠), Z₁/Z₂/Z₃', 'Центральные теоремы 10.T1..T5'],
+    items: [
+      'Метакатегория артикуляций и её структура',
+      'Эндофунктор метаизации',
+      'Выделенная линза реализации',
+      'Семейство отношений подартикуляции',
+      'Тринадцать аксиом и их независимость',
+    ],
   },
   {
     id: 'architecture',
     title: 'Формальная архитектура',
-    description: '2-категория, когезия, gauge, модальность',
+    description: 'Внутренняя замкнутость, когезия, калибровка, модальность',
     link: '/03-formal-architecture/00-metacategory-structure',
-    items: ['ι-вложение End(⟪⟫) ↪ ⟪⟫', 'Когезия Π ⊣ ♭ ⊣ ♯ ⊣ ι', 'Фибрация, gauge, S4-модальность', 'Вычислимость, информация, CHL, SDG', 'Non-classical: α_linear, α_AFA-coalg, α_Д-hybrid'],
+    items: [
+      'Вложение пространства эндооператоров в метакатегорию',
+      'Когезивная четвёрка-сопряжение',
+      'Расслоение, калибровка, модальная интерпретация',
+      'Соответствие Карри–Ховарда–Ламбека',
+      'Не-классические артикуляции',
+    ],
   },
   {
     id: 'extractions',
     title: 'Извлечения оснований',
-    description: 'ZFC, HoTT, NCG, ∞-Topos, CIC',
+    description: 'Конкретные основания как точки классифицирующего пространства',
     link: '/04-extractions/00-overview',
-    items: ['Каждое основание F — α_F ∈ Trace(𝖠)', 'Universal Foundation Theorem (29.T)', 'Reconstruction Theorem (30.T)', 'Classifying Space 𝓜_Fnd (43.T1)'],
+    items: [
+      'Универсальная теорема об артикуляции основания',
+      'Теорема о восстановлении основания из реализации',
+      'Классифицирующее пространство модулей',
+      'Каталог логик и оснований',
+    ],
   },
   {
     id: 'assemblies',
     title: 'Сборки',
-    description: 'УГМ, Стандартная модель, теории сознания',
+    description: 'УГМ, физические и философские теории как специализации примитива',
     link: '/05-assemblies/01-uhm',
-    items: ['α_uhm — 7 инвариантов, ν = ω·3+1', 'T-96 (ρ* = φ(Γ)) ↔ Axi-7 (04.T2)', 'UFH (85.T): α_uhm ≃ ∫α_Д-hybrid(Γ) над 7D', 'IIT, GWT, HOT, Orch-OR как точки в 𝓜_Fnd', 'SM через Connes-Chamseddine'],
+    items: [
+      'Универсальный гомометрический манифольд',
+      'Универсальная гипотеза о структурной корреспонденции',
+      'Стандартная модель через спектральные тройки',
+      'Теории сознания как точки в пространстве модулей',
+    ],
   },
   {
     id: 'limits',
     title: 'Пределы формализации',
-    description: 'AFN-T, maximality proofs, meta-classification — четыре слоя закрытия',
+    description: 'No-go-теорема, доказательства максимальности, мета-классификация',
     link: '/06-limits/02-th-final',
     items: [
-      'AFN-T (граничная лемма): 𝓛_Abs = ∅',
-      '7-й член серии Cantor → Russell → Gödel → Tarski → Lawvere → Ernst',
-      'Пятиосевая абсолютность (55.T · 59.T.1 · 69.T · 84.T · 87.T)',
-      'Intensional refinement + slice-локальность 𝐈 (98.T + 99.T)',
-      'Meta-classification Level 5+ (100.T + 101.T + 102.T)',
-      'Maximality proofs: Diakrisis ∈ 𝓛_Cls^⊤ теорема (103.T–106.T)',
-      '97.T: tradeoff линейности и генеративности',
+      'No-go-теорема для абсолютных оснований',
+      'Место в классической no-go-серии',
+      'Пятиосевая абсолютность',
+      'Интенсиональное уточнение и срез-локальность',
+      'Мета-классификация со стабилизацией на теоретическом уровне',
+      'Доказательства максимальности',
+      'Закрытие открытых вопросов после теоремы 106',
     ],
   },
   {
     id: 'msfs-preprint',
     title: 'Препринт MSFS',
-    description: 'Самодостаточный рецензионно-чистый формальный корпус',
+    description: 'Самодостаточная формальная версия в стандартной нотации',
     link: '/10-reference/04-afn-t-correspondence',
     items: [
-      'The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations',
-      '44 страницы · 54 theorem-like environments · 47 bib-entries',
-      'Страты: 𝓛_Fnd, 𝓛_Cls, 𝓛_Cls^⊤, 𝓛_Abs (мнемонические индексы)',
-      'AFN-T (α, β, combined), пять осей, три bypass-paths',
-      'Meta-classification (100.T–102.T)',
-      'Таблица соответствия N.T ↔ MSFS labels',
-      'Сборка: bun internal/math-msfs/scripts/build-paper.ts',
+      'Пространство модулей формальных систем',
+      'Пять структурных результатов',
+      'No-go-теорема как граничное следствие',
+      'Соответствие нумерации с корпусом Diakrisis',
     ],
   },
   {
@@ -502,14 +476,38 @@ const docSections: DocSection[] = [
     title: 'Методология',
     description: 'Рекурсивные аудиты и негативные уроки',
     link: '/07-methodology/02-recursive-audits',
-    items: ['Рекурсивные аудиты (многоуровневые)', 'Негативные уроки NL-1..NL-15', 'Мета-аудит AFN-T', 'Навигационная целостность корпуса'],
+    items: [
+      'Рекурсивные многоуровневые аудиты',
+      'Негативные уроки',
+      'Мета-аудит главной no-go-теоремы',
+      'Навигационная целостность корпуса',
+    ],
   },
   {
-    id: 'applications',
-    title: 'Применения',
-    description: 'Путь Б — формализация УГМ в Verum',
-    link: '/09-applications/00-path-B-uhm-formalization',
-    items: ['223 теоремы УГМ → Verum', 'Критерии успеха К-Б-1..К-Б-5', 'Многосессионный план', 'UFH (85.T): α_uhm ≃ ∫α_Д-hybrid^!(Γ) над 7D', 'Интеграция с Verum-системой'],
+    id: 'noesis',
+    title: 'Noesis',
+    description: 'Инженерная платформа знаний над Diakrisis',
+    link: '/11-noesis/00-introduction',
+    items: [
+      'Введение и архитектура',
+      'Модель знаний и операции',
+      'Агент с проверкой формальной корректности',
+      'Федерация и управление',
+      'Дорожная карта реализации в фазах',
+    ],
+  },
+  {
+    id: 'actic',
+    title: 'Актика',
+    description: 'Дуальная акт-центричная проекция',
+    link: '/12-actic/00-foundations',
+    items: [
+      'Дуальный канонический примитив',
+      'Морита-двойственность артикуляций и актов',
+      'Дуальная no-go-теорема',
+      'Эпсилон-инвариант глубины актов',
+      'Формальное расширение Метастемологии',
+    ],
   },
 ];
 
@@ -519,7 +517,7 @@ function OverviewSection() {
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>Обзор корпуса</Heading>
         <p className={styles.sectionSubtitle}>
-          Одиннадцать разделов — от феноменологии акта к формальной классификации оснований и Verum-формализации.
+          Одиннадцать разделов — от феноменологии акта различения через формальную классификацию оснований к инженерной реализации.
         </p>
         <div className={styles.docsGrid}>
           {docSections.map((section) => (
@@ -543,7 +541,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Математическая структура классификации оснований"
-      description="Diakrisis — (∞,∞)-мета-структурная теория пространства мат-оснований 𝓜_Fnd. 106 теорем: четырёхуровневое закрытие (extensional / intensional / meta-classification / maximality) с пятиосевой абсолютностью граничной леммы AFN-T и доказанным членством в 𝓛_Cls^⊤. UFH-мост к УГМ через Grothendieck-конструкцию."
+      description="Diakrisis — мета-структурная теория пространства математических оснований. Каноническая аксиоматика из тринадцати условий, корпус из ста тридцати пяти теорем, пятиосевая абсолютность граничной no-go-теоремы, доказанное членство в максимальном подклассе классификаторов."
     >
       <HomepageHeader />
       <main>
