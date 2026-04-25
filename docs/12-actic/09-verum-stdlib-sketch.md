@@ -60,6 +60,15 @@ primitive ε_translate : (source: α, target: α) -> Act
 primitive ε_construct : (spec: Spec) -> Act
   @epsilon(omega)
   @intuitionistic
+
+// Акт классификации онтологий (расширение каталога с поставкой Verum
+// OWL 2 V1 — VUVA §11.2 + §21). Покрывает subsumption (C ⊑ D),
+// instance-check (a : C), и DL-классификационную иерархию,
+// дispатчируемую через `core.theory_interop` + Noesis NP
+// `ontology/*` endpoints (`11-noesis/24-owl2-integration.md`).
+primitive ε_classify : (ontology: Ontology) -> Act
+  @epsilon(omega)
+  @ontology
 ```
 
 ## 2. core.action.enactments
