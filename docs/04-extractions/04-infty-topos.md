@@ -53,7 +53,7 @@ title: ∞-Topos Люри
 **Presentability**:
 - ℰ — presentable (∞,1)-category.
 - Аналог locally presentable category в 1-категорном случае.
-- В Diakrisis: соответствует Axi-4 (accessibility).
+- В Diakrisis: соответствует Axi-4 (доступность).
 
 **Все малые колимиты**:
 - ℰ кокомплетна.
@@ -75,7 +75,7 @@ title: ∞-Topos Люри
 
 | Люри условие | В Diakrisis |
 |---|---|
-| Presentability | Axi-4 (accessibility) |
+| Presentability | Axi-4 (доступность) |
 | Small colimits | Структурное свойство ⟪⟫ |
 | Descent | Функториальность ρ |
 | Effective unions | Axi-9 (достаточность) |

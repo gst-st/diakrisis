@@ -15,9 +15,9 @@ title: Curry-Howard-Ламбек
 
 ## Классическое CHL
 
-**Curry-Howard correspondence**: proofs в λ-исчислении = programs в типовой системе.
+**Соответствие Карри–Ховарда**: доказательства в λ-исчислении = программы в типовой системе.
 
-**Ламбек correspondence**: proofs (в intuitionistic logic) = morphisms в cartesian closed categories.
+**Соответствие Ламбека**: доказательства (в интуиционистской логике) = морфизмы в декартово замкнутых категориях.
 
 **CHL-триангуляция**:
 

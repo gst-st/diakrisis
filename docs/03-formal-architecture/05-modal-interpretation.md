@@ -99,7 +99,7 @@ $$\mathsf{M}: \llbracket\cdot\rrbracket \to \llbracket\cdot\rrbracket \Leftright
 
 ## Сопряжение
 
-𝖬 имеет левый сопряжённый 𝖬^L (по accessibility), дающий ◇ через:
+𝖬 имеет левый сопряжённый 𝖬^L (по доступности), дающий ◇ через:
 
 $$\mathrm{Hom}(\mathsf{M}^L \alpha, \beta) \simeq \mathrm{Hom}(\alpha, \mathsf{M}\beta).$$
 
@@ -205,7 +205,7 @@ $$\mathrm{Hom}(\mathsf{M}^L \alpha, \beta) \simeq \mathrm{Hom}(\alpha, \mathsf{M
 
 - Trace — последовательность □^κ(α_0).
 - Модальная интерпретация: «итеративное применение необходимости».
-- При достаточной accessibility — сходимость к Fix(𝖬).
+- При достаточной доступности — сходимость к Fix(𝖬).
 
 ## Связь с другими логиками
 
