@@ -206,7 +206,7 @@ flowchart LR
     MS -.->|"self-contained"| MS
 ```
 
-**[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations* (Sereda 2026). Стандартная категорная нотация ($\mathcal{F}$, $\rho$, $\mathfrak{M}$), четыре формальные страты с мнемоническими индексами, AFN-T как граничное следствие. Репозиторий: `internal/math-msfs/` · [таблица соответствия теорем](/10-reference/04-afn-t-correspondence).
+**[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations* (Sereda 2026). Стандартная категорная нотация ($\mathcal{F}$, $\rho$, $\mathfrak{M}$), четыре формальные страты с мнемоническими индексами, AFN-T как граничное следствие. Опубликованная версия: [Zenodo (DOI: 10.5281/zenodo.19755781)](https://zenodo.org/records/19755781) · [таблица соответствия теорем](/10-reference/04-afn-t-correspondence).
 
 **Граница**: MSFS формализует только ядро $\{\mathcal{L}_{\mathrm{Fnd}}, \mathcal{L}_{\mathrm{Cls}}, \mathcal{L}_{\mathrm{Cls}}^{\top}, \mathcal{L}_{\mathrm{Abs}}\}$; Diakrisis внутренне дополняет семейством $\mathcal{L}_0, \ldots, \mathcal{L}_4$ через $\nu$-стратификацию, канонический примитив, калибровочную теорию, UFH-мост к УГМ, доказательства максимальности 103.T–106.T, прикладной слой.
 
@@ -368,6 +368,6 @@ flowchart TB
 
 **Для формального старта:** [`/02-canonical-primitive/00-overview`](/02-canonical-primitive/00-overview) — канонический примитив.
 
-**Для рецензента:** [*MSFS*](/10-reference/04-afn-t-correspondence) — самодостаточный препринт (44 стр.).
+**Для рецензента:** [*MSFS*](/10-reference/04-afn-t-correspondence) — самодостаточный препринт; опубликованная версия на [Zenodo (DOI: 10.5281/zenodo.19755781)](https://zenodo.org/records/19755781).
 
 **Для Пути Б:** [`/09-applications/00-path-B-uhm-formalization`](/09-applications/00-path-B-uhm-formalization).

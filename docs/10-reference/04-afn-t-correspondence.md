@@ -11,9 +11,9 @@ title: Соответствие MSFS
 
 Этот документ фиксирует **точное соответствие** между теоремами Diakrisis (внутренняя нумерация `N.T`, `N.C`) и labelled results MSFS (`\ref{thm:...}` и т.п.). Каждая дублируемая теорема имеет **каноническое место** в MSFS; Diakrisis-корпус ссылается на MSFS, не воспроизводя доказательства.
 
-**MSFS:** `internal/math-msfs/paper-en/paper.tex` (57 стр., 54+ theorem-like environments, 64 bib-entries; включает §11 AC/OC Morita Duality и Example `ex:ac-preformal` для pre-формальной AC-практики).
+**MSFS:** 57 стр., 54+ theorem-like environments, 64 bib-entries; включает §11 AC/OC Morita Duality и Example `ex:ac-preformal` для pre-формальной AC-практики.
 
-**Сборка:** `bun internal/math-msfs/scripts/build-paper.ts` → `paper-en/afn-t-paper.pdf`.
+**Опубликованная версия:** [Zenodo (DOI: 10.5281/zenodo.19755781)](https://zenodo.org/records/19755781) — каноническая публикационная ссылка для внешнего цитирования.
 
 ---
 

@@ -65,14 +65,25 @@ const config: Config = {
               '\\cD': '\\mathcal{D}',
               '\\cL': '\\mathcal{L}',
               '\\cP': '\\mathcal{P}',
+              '\\cE': '\\mathcal{E}',
+              '\\cU': '\\mathcal{U}',
               // Fraktur
               '\\fM': '\\mathfrak{M}',
+              '\\fME': '\\mathfrak{M}_{\\mathcal{E}}',
               '\\Meta': '\\mathfrak{Meta}',
               // Mnemonic strata (post-audit14)
               '\\LFnd': '\\mathcal{L}_{\\mathrm{Fnd}}',
               '\\LCls': '\\mathcal{L}_{\\mathrm{Cls}}',
               '\\LClsMax': '\\mathcal{L}_{\\mathrm{Cls}}^{\\top}',
               '\\LAbs': '\\mathcal{L}_{\\mathrm{Abs}}',
+              // Enactment-side strata (Актика / AC-OC duality)
+              '\\LFndE': '\\mathcal{L}_{\\mathrm{Fnd}}^{\\mathcal{E}}',
+              '\\LClsE': '\\mathcal{L}_{\\mathrm{Cls}}^{\\mathcal{E}}',
+              '\\LClsMaxE': '(\\mathcal{L}_{\\mathrm{Cls}}^{\\top})^{\\mathcal{E}}',
+              '\\LAbsE': '\\mathcal{L}_{\\mathrm{Abs}}^{\\mathcal{E}}',
+              '\\SSE': '\\mathcal{S}_{S}^{\\mathcal{E}}',
+              '\\SSEbase': '\\mathcal{S}_{S}^{\\mathcal{E},\\,\\mathrm{base}}',
+              '\\SSEglobal': '\\mathcal{S}_{S}^{\\mathcal{E},\\,\\mathrm{global}}',
               // Roman operators
               '\\id': '\\mathrm{id}',
               '\\Ob': '\\mathrm{Ob}',
@@ -87,6 +98,11 @@ const config: Config = {
               '\\Syn': '\\mathrm{Syn}',
               '\\Mod': '\\mathrm{Mod}',
               '\\Con': '\\mathrm{Con}',
+              '\\Trace': '\\mathrm{Trace}',
+              '\\dep': '\\mathrm{depth}',
+              '\\ev': '\\mathrm{ev}',
+              '\\image': '\\operatorname{image}',
+              '\\tpi': '\\widetilde{\\pi}',
               '\\colim': '\\operatorname*{colim}',
               // Sans-serif theories
               '\\PA': '\\mathsf{PA}',
@@ -96,6 +112,11 @@ const config: Config = {
               '\\ETT': '\\mathsf{ETT}',
               '\\CIC': '\\mathsf{CIC}',
               '\\NBG': '\\mathsf{NBG}',
+              '\\AFA': '\\mathsf{AFA}',
+              '\\CZF': '\\mathsf{CZF}',
+              '\\Eff': '\\mathsf{Eff}',
+              '\\NCG': '\\mathsf{NCG}',
+              '\\OWL': '\\mathsf{OWL}',
               // Compound
               '\\RS': '\\mathrm{R\\text{-}S}',
               '\\Sint': '\\mathcal{S}_{\\mathrm{int}}',
@@ -263,6 +284,7 @@ const config: Config = {
         {
           title: 'Связанные проекты',
           items: [
+            {label: 'MSFS препринт (Zenodo)', href: 'https://zenodo.org/records/19755781'},
             {label: 'УГМ — сайт теории', href: 'https://holon.sh'},
             {label: 'Verum', href: 'https://verum-lang.org/'},
           ],

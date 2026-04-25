@@ -11,7 +11,7 @@ title: Каталог теорем
 
 :::tip Соответствие MSFS
 
-Формальные доказательства теорем граничной леммы AFN-T (α, β, combined), пяти осей абсолютности, обход-paths и meta-классификации уровень 5+ **вынесены в препринт [MSFS](/10-reference/04-afn-t-correspondence)** (`internal/math-msfs/paper-en/paper.tex`). Diakrisis-каталог сохраняет внутреннюю нумерацию и контекст; полные формальные изложения — в препринте. Таблица соответствия `N.T` ↔ `thm:...`: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальные доказательства теорем граничной леммы AFN-T (α, β, combined), пяти осей абсолютности, обходных путей и мета-классификации уровень 5+ **вынесены в препринт [MSFS](/10-reference/04-afn-t-correspondence)** ([Zenodo](https://zenodo.org/records/19755781)). Diakrisis-каталог сохраняет внутреннюю нумерацию и контекст; полные формальные изложения — в препринте. Таблица соответствия `N.T` ↔ `thm:...`: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 

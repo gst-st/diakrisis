@@ -7,7 +7,7 @@ title: Что такое Diakrisis
 
 :::tip Самодостаточный препринт MSFS
 
-Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм уровень 5+, срез-локальное интенсиональное уточнение, мета-стабилизация на теоретическом уровне, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-специфичных $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ MSFS-меток: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм уровень 5+, срез-локальное интенсиональное уточнение, мета-стабилизация на теоретическом уровне, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-специфичных $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Опубликованная версия: [Zenodo (DOI: 10.5281/zenodo.19755781)](https://zenodo.org/records/19755781). Таблица соответствия $N.T$ ↔ MSFS-меток: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 

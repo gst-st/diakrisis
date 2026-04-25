@@ -192,9 +192,9 @@ ef{thm:dual-five-axis} | (вспом.) | 04-ac-oc-duality §6 | — | — |
 ### При разработке
 
 Расширение любого корпуса (добавление теоремы, изменение статуса, переименование):
-1. Изменить в каноническом месте (MSFS для MSFS-теорем, Diakrisis для Diakrisis-теорем, etc.).
+1. Изменить в каноническом месте (MSFS для MSFS-теорем, Diakrisis для Diakrisis-теорем, и т. д.).
 2. Обновить эту таблицу, если появилась новая cross-связь.
-3. Запустить Diakrisis build (`npx docusaurus build`) и MSFS build (`bun scripts/build-paper.ts`) — verifying clean rebuild.
+3. Перепроверить чистоту сборки обоих корпусов (Diakrisis Docusaurus + MSFS LaTeX).
 4. Зафиксировать коммитом с описанием какие строки таблицы затронуты.
 
 ## Следующий документ
