@@ -528,7 +528,7 @@ function OverviewSection() {
       <div className="container">
         <Heading as="h2" className={styles.sectionTitle}>Обзор корпуса</Heading>
         <p className={styles.sectionSubtitle}>
-          Одиннадцать разделов — от феноменологии акта различения через формальную классификацию оснований к инженерной реализации.
+          От феноменологии акта различения через формальную классификацию оснований к инженерной реализации.
         </p>
         <div className={styles.docsGrid}>
           {docSections.map((section) => (
