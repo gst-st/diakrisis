@@ -58,10 +58,7 @@ flowchart TB
     UHM["<b>УГМ</b><br/>физическая сборка сознания<br/>на D(ℂ⁷)"]:::asm
     METASTEM["<b>Метастемология Е. Чурилова</b><br/>координата ε = ω·2 + 1<br/>125.T"]:::asm
 
-    APEIRON -.-> DIAKRISIS -.-> Z
-    Z ==> PRIM_OC
-    Z -.-> DUALITY
-    Z ==> PRIM_AC
+    APEIRON -.-> DIAKRISIS -.-> Z -.-> DUALITY
 
     PRIM_OC ==> STRAT_OC
     STRAT_OC --> INT_OC
@@ -75,8 +72,8 @@ flowchart TB
     META_AC --> MAX_AC
     STRAT_AC --> BOUND_AC
 
-    PRIM_OC <==> DUALITY
-    DUALITY <==> PRIM_AC
+    DUALITY ==> PRIM_OC
+    DUALITY ==> PRIM_AC
     BOUND_OC <-.-> BOUND_AC
 
     STRAT_OC ==> UFH
