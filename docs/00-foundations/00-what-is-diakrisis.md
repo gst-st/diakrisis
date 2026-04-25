@@ -7,7 +7,7 @@ title: Что такое Diakrisis
 
 :::tip Самодостаточный препринт MSFS
 
-Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм уровень 5+, slice-локальное интенсиональное уточнение, theory-level meta-стабилизация, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-specific $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ MSFS labels: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
+Формальное структурное ядро Diakrisis (структура 𝓜_Fnd, плюрализм уровень 5+, срез-локальное интенсиональное уточнение, мета-стабилизация на теоретическом уровне, граничная лемма AFN-T как следствие) вынесено в самодостаточный препринт **[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*. Препринт использует только стандартную категорную нотацию (без Diakrisis-специфичных $\langle\langle \cdot \rangle\rangle$, $\mathsf{M}$, $\alpha_\mathrm{math}$) и независимо рецензируем. Таблица соответствия $N.T$ ↔ MSFS-меток: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
 :::
 
@@ -143,9 +143,9 @@ flowchart TB
 - **89.T**: internal language L_⟪⟫ — внутренний формальный язык.
 - **90.T**: Con(Diakrisis-full) = Con(ZFC + 2 inaccessibles).
 - **91.T–93.T**: cohesive ∞-topos, motivic homotopy, realizability — все вложены в 𝓜_Fnd.
-- **98.T + 99.T**: интенсиональное уточнение — функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ + slice-locality над $\mathcal{M}_\mathrm{Fnd}$.
+- **98.T + 99.T**: интенсиональное уточнение — функтор $\mathbf{I}: \langle\!\langle \cdot \rangle\!\rangle^\mathrm{op} \to \mathcal{S}_\mathrm{int}$ + срез-локальность над $\mathcal{M}_\mathrm{Fnd}$.
 - **100.T + 101.T + 102.T**: мета-классификация уровень 5+ — условная категоричность + структурный плюрализм + стабилизация; самоклассификация Diakrisis в $\mathfrak{Meta}_{5+}$ завершена.
-- **103.T + 104.T + 105.T + 106.T**: maximality proofs — (Max-1) universal articulation, (Max-2) gauge-fullness, (Max-3) универсальная парадокс-иммунность через Яновский 2003, сводная 106.T: **$\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**, закрывающая открытый вопрос MSFS о непустоте максимального подкласса. Детали — [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
+- **103.T + 104.T + 105.T + 106.T**: доказательства максимальности — (Max-1) универсальная артикуляция, (Max-2) калибровочная полнота, (Max-3) универсальная парадокс-иммунность через Яновский 2003, сводная 106.T: **$\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**, закрывающая открытый вопрос MSFS о непустоте максимального подкласса. Детали — [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems).
 
 ### 5.2 Негативные: пятиосевая абсолютность AFN-T
 
@@ -220,7 +220,7 @@ Diakrisis — уровень **5+**:
 ## 9. Состояние проекта
 
 ### Теоретически
-**Закрыто**. 127 теорем (106 ОЦ + 21 Актика) в номерной системе доказаны (включая 98.T–99.T интенсиональное уточнение, 100.T–102.T мета-классификация уровень 5+, **103.T–106.T maximality proofs — Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**). 5-уровневая абсолютность AFN-T. UFH установлена.
+**Закрыто**. 132 теоремы (111 ОЦ + 21 Актика) в номерной системе доказаны (включая 98.T–99.T интенсиональное уточнение, 100.T–102.T мета-классификация уровень 5+, **103.T–106.T доказательства максимальности — Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорема**, 128.T–131.T закрытие остаточных открытых вопросов: ядро калибровочной сюръекции, инициальность, T-2f\*\* модальная стратификация, реализация Axi-8 в $(\infty,2)$-стек модели). Пятиосевая абсолютность AFN-T. UFH установлена.
 
 ### Практически
 6 открытых программ:

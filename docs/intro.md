@@ -208,7 +208,7 @@ flowchart LR
 
 **[*MSFS*](/10-reference/04-afn-t-correspondence)** — *The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations* (Sereda 2026). Стандартная категорная нотация ($\mathcal{F}$, $\rho$, $\mathfrak{M}$), четыре формальные страты с мнемоническими индексами, AFN-T как граничное следствие. Репозиторий: `internal/math-msfs/` · [таблица соответствия теорем](/10-reference/04-afn-t-correspondence).
 
-**Граница**: MSFS формализует только ядро $\{\mathcal{L}_{\mathrm{Fnd}}, \mathcal{L}_{\mathrm{Cls}}, \mathcal{L}_{\mathrm{Cls}}^{\top}, \mathcal{L}_{\mathrm{Abs}}\}$; Diakrisis внутренне дополняет семейством $\mathcal{L}_0, \ldots, \mathcal{L}_4$ через $\nu$-стратификацию, канонический примитив, gauge-теорию, UFH-мост к УГМ, maximality proofs 103.T–106.T, прикладной слой.
+**Граница**: MSFS формализует только ядро $\{\mathcal{L}_{\mathrm{Fnd}}, \mathcal{L}_{\mathrm{Cls}}, \mathcal{L}_{\mathrm{Cls}}^{\top}, \mathcal{L}_{\mathrm{Abs}}\}$; Diakrisis внутренне дополняет семейством $\mathcal{L}_0, \ldots, \mathcal{L}_4$ через $\nu$-стратификацию, канонический примитив, калибровочную теорию, UFH-мост к УГМ, доказательства максимальности 103.T–106.T, прикладной слой.
 
 ---
 
@@ -340,7 +340,7 @@ flowchart TB
 ### А · быстрое понимание (час)
 1. Это введение.
 2. [`/06-limits/02-th-final`](/06-limits/02-th-final) — граничная лемма AFN-T.
-3. [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) — maximality proofs.
+3. [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) — доказательства максимальности.
 4. [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) — пятиосевая абсолютность.
 5. [`/02-canonical-primitive/00-overview`](/02-canonical-primitive/00-overview) — формальное ядро.
 6. [`/05-assemblies/01-uhm`](/05-assemblies/01-uhm) — флагман-сборка.
