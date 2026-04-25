@@ -484,6 +484,17 @@ const docSections: DocSection[] = [
     ],
   },
   {
+    id: 'applications',
+    title: 'Применения',
+    description: 'Прикладные программы и формальная верификация',
+    link: '/09-applications/00-path-B-uhm-formalization',
+    items: [
+      'Путь Б — формализация УГМ через Verum',
+      'Интеграция с Verum-системой',
+      'Каноническая ν-таблица для Verum',
+    ],
+  },
+  {
     id: 'noesis',
     title: 'Noesis',
     description: 'Инженерная платформа знаний над Diakrisis',
