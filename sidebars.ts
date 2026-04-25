@@ -139,6 +139,7 @@ const sidebars: SidebarsConfig = {
       items: [
         '09-applications/00-path-B-uhm-formalization',
         '09-applications/01-verum-integration',
+        '09-applications/02-canonical-nu-table',
       ],
     },
     {
@@ -202,6 +203,7 @@ const sidebars: SidebarsConfig = {
         '11-noesis/21-math-frontier',
         '11-noesis/22-peer-review',
         '11-noesis/23-llm-augmentation',
+        '11-noesis/24-owl2-integration',
       ],
     },
   ],
