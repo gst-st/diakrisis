@@ -33,54 +33,54 @@ flowchart TB
     Z["Нулевая граница Z<br/>16.T1 · три эквивалентные характеризации"]:::phen
 
     subgraph OC ["ОЦ-проекция · артикуляции"]
+        direction TB
         PRIM_OC["<b>Канонический примитив</b><br/>⟪·⟫, 𝖬, α_math, ⊏_•<br/>+ 13 аксиом · Axi-0..9 + T-α + T-2f* + T-2f**"]:::oc
         STRAT_OC["<b>Стратификация 𝔐_Fnd</b><br/>𝓛_Fnd ⊃ 𝓛_Cls ⊃ 𝓛_Cls^⊤ ⊃ 𝓛_Abs<br/>условия R1–R5 / M1–M5 / Max-1..4"]:::struct
         INT_OC["<b>Интенсиональное уточнение</b><br/>𝐈 : 𝓕^op → 𝓢_int<br/>срез-локальность через эфф. топос Хайланда<br/>98.T · 99.T"]:::struct
         META_OC["<b>Мета-классификация</b><br/>стабилизация на теоретическом уровне<br/>восхождение по универсумам κ₁ &lt; κ₂<br/>100.T · 101.T · 102.T"]:::meta
         MAX_OC["<b>Доказательства максимальности</b><br/>Diakrisis ∈ 𝓛_Cls^⊤ как теорема<br/>103.T · 104.T · 105.T · 106.T<br/>+ закрытие 128.T..131.T"]:::max
+        BOUND_OC["<b>AFN-T · граничная лемма</b><br/>𝓛_Abs = ∅<br/>пятиосевая абсолютность<br/>55.T · 59.T.1 · 69.T · 84.T · 87.T"]:::bound
     end
 
     subgraph AC ["ДЦ-проекция · Актика · акты-перформансы"]
+        direction TB
         PRIM_AC["<b>Дуальный примитив</b><br/>⟫·⟪, 𝖠, ε_math, ⊐_•<br/>+ 13 дуальных аксиом"]:::ac
         STRAT_AC["<b>Дуальная стратификация 𝔐_Fnd^ε</b><br/>𝓛_Fnd^ε ⊃ 𝓛_Cls^ε ⊃ 𝓛_Cls^⊤,ε ⊃ 𝓛_Abs^ε<br/>симметрично ОЦ"]:::struct
         EPS["<b>ε-инвариант</b><br/>e^∞ : ⟫·⟪_∞ → Ord<br/>ординальная глубина актов<br/>ω · ω+1 · ω·2+1 · ω·3 · ω²<br/>140.T"]:::struct
         META_AC["<b>Дуальная мета-классификация</b><br/>симметрично 100.T..102.T<br/>через ε-функтор"]:::meta
         MAX_AC["<b>Дуальные закрытия</b><br/>Актика ∈ 𝓛_Cls^⊤,ε как теорема<br/>138.T · 139.T<br/>+ существование автопоэзиса 141.T"]:::max
+        BOUND_AC["<b>дуал-AFN-T · 109.T</b><br/>𝓛_Abs^ε = ∅<br/>акт-абсолютная страта пуста"]:::bound
     end
 
     DUALITY{"<b>108.T · ДЦ/ОЦ-двойственность</b><br/>(∞, ∞)-Морита-эквивалентность<br/>𝔐_Fnd ≃ 𝔐_Fnd^ε<br/>сопряжение ε ⊣ α каноническое"}:::bridge
-
-    BOUND_OC["<b>AFN-T · граничная лемма</b><br/>𝓛_Abs = ∅<br/>пятиосевая абсолютность<br/>55.T · 59.T.1 · 69.T · 84.T · 87.T"]:::bound
-    BOUND_AC["<b>дуал-AFN-T · 109.T</b><br/>𝓛_Abs^ε = ∅<br/>акт-абсолютная страта пуста"]:::bound
 
     UFH["<b>UFH · 85.T</b><br/>α_uhm ≃_калибр ∫_Γ α_Д-hybrid^!(Γ)<br/>над 7D-quantum<br/>Гротендик-конструкция"]:::asm
     UHM["<b>УГМ</b><br/>физическая сборка сознания<br/>на D(ℂ⁷)"]:::asm
     METASTEM["<b>Метастемология Е. Чурилова</b><br/>координата ε = ω·2 + 1<br/>125.T"]:::asm
 
-    APEIRON -.->|за пределами формализации| DIAKRISIS
-    DIAKRISIS -.->|асимптотическая граница| Z
-    Z ==>|формализация| PRIM_OC
-    Z ==>|формализация| PRIM_AC
+    APEIRON -.-> DIAKRISIS -.-> Z
+    Z ==> PRIM_OC
+    Z ==> PRIM_AC
 
-    PRIM_OC ==>|калибровочный фактор| STRAT_OC
-    STRAT_OC -->|внутренние слои| INT_OC
-    STRAT_OC -->|самоклассификация| META_OC
-    META_OC -->|доказательство| MAX_OC
-    STRAT_OC -->|внешняя граница| BOUND_OC
+    PRIM_OC ==> STRAT_OC
+    STRAT_OC --> INT_OC
+    STRAT_OC --> META_OC
+    META_OC --> MAX_OC
+    STRAT_OC --> BOUND_OC
 
-    PRIM_AC ==>|калибровочный фактор| STRAT_AC
-    STRAT_AC -->|глубинная стратификация| EPS
-    STRAT_AC -->|самоклассификация| META_AC
-    META_AC -->|доказательство| MAX_AC
-    STRAT_AC -->|внешняя граница| BOUND_AC
+    PRIM_AC ==> STRAT_AC
+    STRAT_AC --> EPS
+    STRAT_AC --> META_AC
+    META_AC --> MAX_AC
+    STRAT_AC --> BOUND_AC
 
     PRIM_OC <==> DUALITY
     DUALITY <==> PRIM_AC
-    BOUND_OC <-.->|двойственность границ| BOUND_AC
+    BOUND_OC <-.-> BOUND_AC
 
-    STRAT_OC ==>|Гротендик-конструкция| UFH
-    UFH ==>|формальная сборка| UHM
-    STRAT_AC -.->|ε-координата| METASTEM
+    STRAT_OC ==> UFH
+    UFH ==> UHM
+    STRAT_AC -.-> METASTEM
 ```
 
 ### Симметричное закрытие в обеих проекциях
