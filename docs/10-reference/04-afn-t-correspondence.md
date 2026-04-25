@@ -99,6 +99,18 @@ ef{thm:meta-cat} («$\mathcal{L}_{\mathrm{Cls}}^{\top}$ non-empty?») | Свод
 
 **Граница**: MSFS намеренно оставляет непустоту $\mathcal{L}_{\mathrm{Cls}}^{\top}$ открытым вопросом для рецензионной чистоты (теорема о существовании представителя — внешняя по отношению к классификации). Diakrisis даёт свидетеля (саму себя) через явную конструкцию 103.T–106.T. Это — пример Diakrisis > MSFS: расширение за счёт специфической аксиоматики (T-2f\*) и внутренней метакатегории ⟪⟫, которых в MSFS нет.
 
+### MSFS Q3, Q4, Q5 — статус закрытия в Diakrisis-расширениях
+
+| MSFS Open Q | Содержание | Закрытие в Diakrisis | Статус |
+|---|---|---|---|
+| **Q1** Existence в $\Meta_\mathrm{Cls}^\top$ | Witness в ZFC + 2-inacc | 103.T–106.T + 131.T (стек-модель) — Diakrisis ∈ $\mathcal{L}_\mathrm{Cls}^\top$ как теорема | open в MSFS / закрыто в Diakrisis-расширении |
+| **Q2** Completeness списка $\Meta_\mathrm{Cls}$ | Are there further natural meta-frameworks? | open | open в обоих |
+| **Q3** Exhaustiveness bypass paths | Modal/temporal/substructural extensions | **133.T** (исчерпывающесть в R-S) в [`/06-limits/05-what-remains-possible`](/06-limits/05-what-remains-possible) | Diakrisis закрыл «известные конструкции исчерпаны» |
+| **Q4** Consistency-strength minimality | Достаточно ли 1-inacc? | **134.T** (тугость границы): 1-inacc недостаточно | Diakrisis закрыл |
+| **Q5** Sub-stack of weak R-S | Bounded-arithmetic как отдельный стратум? | **137.T** + 6-уровневая $\nu^\mathrm{weak}$-стратификация в [`/06-limits/05-what-remains-possible`](/06-limits/05-what-remains-possible) §137.T | Diakrisis закрыл |
+
+**Принципиальное замечание**. Diakrisis-закрытия Q3, Q4, Q5 — *расширения* MSFS, не опровержения. Они опираются на Diakrisis-специфические конструкции (стек-модель 131.T, ε-инвариант, T-2f\*\*\*-стратификация), которые лежат за рамками MSFS-минимализма. MSFS Q3-Q5 правомерно остаются открытыми **в рамках MSFS-самодостаточного формализма**; Diakrisis-расширение даёт их формальные ответы при принятии дополнительной аксиоматики.
+
 ### Diakrisis-only расширения Актика (110.T–127.T)
 
 Теоремы **110.T–127.T** — Diakrisis-specific extensions. Они используют конструкции, отсутствующие в MSFS ($\mathsf{A}$-эндофунктор, $\sqsupset_\bullet$-предшествование, ε-инвариант, ОКА-стратификация), и опираются на Diakrisis-specific аксиоматику A-0..A-9 + T-ε + T-2a\*. Все 18 теорем имеют статус **[Т·L3·Diakrisis-only]**: формальное доказательство в ZFC+2-inacc при условии принятия Diakrisis-аксиоматики, лежащей за пределами MSFS.

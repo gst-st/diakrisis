@@ -482,6 +482,21 @@ T-α работает на уровне *одной* линзы; AFN-T — на 
 - Теория консистентна относительно ZFC + 2 инаксессибальных (10.T1).
 - **(Max-3)** из MSFS Definition `def:maximality` доказан для Diakrisis как теорема 105.T.
 
+#### Связь Diakrisis dp/md с MSFS dep-функцией
+
+MSFS Definition `def:maximality` (Max-3) использует *depth function* $\mathrm{dep}: \mathrm{Ob}(\mathbf{F}) \to \omega$ с **predicativity condition** на predicate $P$ в comprehension: для всех $Y$, появляющихся как target подвыражения в $P$, $\mathrm{dep}(Y) < n$.
+
+Diakrisis $\mathrm{dp}$ (depth) и $\mathrm{md}$ (modal depth) — соответствующие функции:
+
+| MSFS | Diakrisis | Расширение |
+|---|---|---|
+| $\mathrm{dep}: \mathrm{Ob}(\mathbf{F}) \to \omega$ | $\mathrm{dp}: \mathrm{Pred}(L_\alpha) \to \omega$ | стандарт |
+| $\mathrm{dep}(Y) < n$ для всех $Y$ в $P$ | $\mathrm{dp}(P) < \mathrm{dp}(\alpha_P)$ (T-2f\*) | стандарт |
+| (только конечные) | $\mathrm{md}(P) < \mathrm{md}(\alpha_P)$ (T-2f\*\*, 130.T) | модальный |
+| (только конечные) | $\mathrm{md}^\omega(P) < \mathrm{md}^\omega(\alpha_P)$ (T-2f\*\*\*, 136.T) | трансфинитный |
+
+Diakrisis md-стратификация — *расширение* MSFS dep-функции на модальные и трансфинитные ординалы. На конечных классических предикатах $\mathrm{md} = \mathrm{dep}$.
+
 ### T-2f\*\* — модальная стратификация (Теорема 130.T)
 
 **Усиление T-2f\*** для блокировки парадоксов вне Яновский-сводимости (Berry, парадоксальное применение Löb, паранепротиворечивый Curry):
