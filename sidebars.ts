@@ -66,6 +66,7 @@ const sidebars: SidebarsConfig = {
         '03-formal-architecture/13-curry-howard-lambek',
         '03-formal-architecture/14-synthetic-differential',
         '03-formal-architecture/15-non-classical-articulations',
+        '03-formal-architecture/16-gauge-decision',
       ],
     },
     {

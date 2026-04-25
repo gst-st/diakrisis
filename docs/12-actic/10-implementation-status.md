@@ -103,11 +103,13 @@ Live-документ для отслеживания прогресса 10-ша
 
 ### Шаг 10 — Morita-двойственность round-trip test
 
-- **Статус**: ⚪ план
+- **Статус**: ⚪ план; теоретическое основание готово (Теорема 16.10)
 - **Файл**: `core/theory_interop/bridges/oc_dc_bridge.vr`
 - **Зависимости**: все предыдущие
-- **Приёмочный критерий**: round-trip для 132 OC + 21 AC теорем
-- **Содержание**: функции `translate`/`inverse`, round-trip property test
+- **Теоретическое основание**: [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) §5 (Теорема 16.10)
+- **Приёмочный критерий**: round-trip для 132 OC + 21 AC теорем (все finitely-axiomatized; Теорема 16.5 даёт разрешимость)
+- **Содержание**: функции `translate`/`inverse`/`canonicalize`, round-trip property test
+- **Сложность**: $O(2^{O(|\alpha|)})$ single-exponential per теорема
 - **Прогресс**: 0/3 элемента
 
 ## Gap-аналитика
@@ -120,6 +122,13 @@ Live-документ для отслеживания прогресса 10-ша
 ✅ **`@framework(name, citation)`** — полноправный data, не модификация kernel.
 ✅ **`@enact(epsilon = ...)`** аннотация — связь между artikulation и enactment.
 ✅ **Двойная stdlib OC/DC** — `core.math.*` + `core.action.*` спроектированы.
+
+### Теоретические основания закрыты ([Т·L3])
+
+✅ **Предложение 5.1** ($\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$) — каноническая 2-естественная эквивалентность, [`/12-actic/04-ac-oc-duality`](/12-actic/04-ac-oc-duality) §5. Обеспечивает теорему ν(α) = e(ε(α)) (Следствие 5.10), что делает `verum audit --epsilon` теоретически обоснованным.
+✅ **Теорема 124.T** ($\mathsf{M} \dashv \mathsf{A}$) — сопряжение метаизации и активации, [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §14.2. Безусловно [Т·L3] после R1.
+✅ **Теорема 131.T** (стек-модель Axi-8) — все 13 аксиом одновременно реализуемы; Con(Diakrisis-13) ≤ Con(ZFC + 2-inacc), [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §131.T.
+✅ **Теорема 16.10** (round-trip 108.T) — алгоритмическая разрешимость для конечно-аксиоматизированных R-S, [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) §5.
 
 ### Что нужно реализовать
 
@@ -162,10 +171,15 @@ Live-документ для отслеживания прогресса 10-ша
 | Дата | Изменение |
 |---|---|
 | 2026-04-25 | Первоначальная версия документа после анализа Verum verification-architecture |
+| 2026-04-25 | R1 закрыт: Предложение 5.1 переведено [С]→[Т] с полным 2-категорным доказательством; обновление таблицы «теоретические основания закрыты» |
+| 2026-04-25 | R10 закрыт: Теорема 131.T получила полное доказательство (6 шагов + 3 леммы) с red-team-корректировками |
+| 2026-04-25 | R5 закрыт: Теорема 16.10 (round-trip 108.T) формализована в новом документе [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) |
 
 ## Ссылки
 
 - [`/12-actic/09-verum-stdlib-sketch`](/12-actic/09-verum-stdlib-sketch) — детальный план интеграции (Шаги 1-10).
 - [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) — теоремы 107.T-127.T + 138.T-141.T.
-- [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §T-2f\*\*\* — теорема 136.T.
+- [`/12-actic/04-ac-oc-duality`](/12-actic/04-ac-oc-duality) §5 — Предложение 5.1 (R1).
+- [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §131.T — стек-модель (R10), §T-2f\*\*\* — теорема 136.T.
+- [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) — Теорема 16.10 (R5).
 - [`/06-limits/05-what-remains-possible`](/06-limits/05-what-remains-possible) §137.T — Weak-AFN-T.
