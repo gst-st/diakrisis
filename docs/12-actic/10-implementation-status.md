@@ -132,6 +132,7 @@ Live-документ для отслеживания прогресса 10-ша
 ✅ **Теорема 140.T** ($\mathrm{e}^\infty$ на $(\infty, \infty)$) — конструкция $(\infty, \infty)$-категории актов через adjoint tower + accessibility + универсальность ε-инварианта на полном уровне; [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.3 после R2.
 ✅ **Теорема 141.T** (конструктивный автопоэзис) — алгоритмическое построение $\varepsilon_\mathrm{auto}$ в эффективном топосе через $\omega^2$-итерацию + явные σ/π-морфизмы через Drake reflection (Шаг 5 в 131.T); [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.4 после R4.
 ✅ **Теорема 136.T** (T-2f\*\*\* трансфинитная модальная стратификация) — полная теория $\mathrm{md}^\omega$-функтора через Definition 136.D1 + Лемма 136.L0 (well-founded ordinal recursion) + Лемма 136.L_rank (нижняя граница ранга артикуляции); блокировка парадоксов всех ординальных уровней до $\kappa_2$; [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §T-2f\*\*\* после R3.
+✅ **Теорема 137.T** (weak-AFN-T для bounded arithmetic) — полная спецификация $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ через 6-уровневую $\nu^\mathrm{weak}$-стратификацию ($\mathrm{AC}^0 \subset \mathrm{LOGSPACE} \subset \mathrm{P} \subset \mathrm{NP} \subset \mathrm{PH} \subset \mathsf{I}\Delta_0$) + bounded Cantor diagonal (Buss 1986) + дискретный скачок $\nu \to \omega$ на границе weak/full; [`/06-limits/05-what-remains-possible`](/06-limits/05-what-remains-possible) §137.T после R11.
 
 ### Что нужно реализовать
 
@@ -181,6 +182,7 @@ Live-документ для отслеживания прогресса 10-ша
 | 2026-04-25 | R2 закрыт: Теорема 140.T получила полное доказательство (Шаги 1–5 + 5 лемм) — конструкция $(\infty, \infty)$-категории актов через colim/lim adjoint tower + accessibility $\mathsf{A}^\infty$ через индукцию по $n$ + универсальность $\mathrm{e}^\infty$ |
 | 2026-04-25 | R4 закрыт: Теорема 141.T получила конструктивный свидетель $\varepsilon_\mathrm{auto}$ — $\omega^2$-итерация в эффективном топосе через higher-type computability (Лемма 141.L1) + явные σ/π-морфизмы через Drake reflection + AFA-аналог в Eff (Aczel-Capretta 2017) |
 | 2026-04-25 | R3 закрыт: Теорема 136.T получила полное доказательство (Шаги 1–4 + 4 леммы) — формализация $\mathrm{md}^\omega$ через Definition 136.D1 трансфинитного модального языка + Лемма 136.L_rank (нижняя граница ранга артикуляции через диагональную лемму Smoryński 1985) |
+| 2026-04-25 | R11 закрыт: Теорема 137.T получила расширение weak-стратума — 6-уровневая $\nu^\mathrm{weak}$-стратификация + bounded Cantor diagonal + complexity-typed verification + дискретный скачок ν на границе weak/full (Lemma 137.L2 corrected) |
 
 ## Ссылки
 

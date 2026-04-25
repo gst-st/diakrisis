@@ -310,15 +310,102 @@ flowchart TB
 
 **Шаг 4** (Simpson 2009 reverse-mathematics). $\mathsf{I}\Delta_0$ не доказывает существование универсального элемента собственного класса; bounded-аналог Cantor-диагонали работает на $\Sigma_1^b$-уровне. Это даёт *bounded* версию AFN-T α-части. ∎
 
+#### 137.T-расширение (R11): полная спецификация weak-стратума
+
+##### ν^weak-инвариант ниже ω
+
+**Определение 137.D1** *(weak-ν-инвариант).* Для $S \in \mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ — стратификация по полиномиальной сложности:
+
+| Слой | Уровень | $\nu^\mathrm{weak}$ | Пример |
+|---|---|---|---|
+| **слой -3** | $\mathrm{AC}^0$-вычислимое | 0 | constant-depth circuit theories |
+| **слой -2** | $\mathrm{LOGSPACE}$-вычислимое | 1 | $\mathsf{V}^0$ |
+| **слой -1** | $\mathrm{P}$-вычислимое | 2 | $\mathsf{V}^1$, $\mathsf{S}_2^1$ |
+| **слой 0** | $\mathrm{NP}$-полиномиальное | 3 | $\mathsf{S}_2^2$, $\mathsf{T}_2^1$ |
+| **слой 1** | $\mathrm{PH}$-полиномиальное | $n < \omega$ | $\mathsf{S}_2^n$ |
+| **слой ω⁻** | $\mathsf{I}\Delta_0$ (without exp) | $\omega - 1$ | строго weak |
+| *(вне weak)* | $\mathsf{I}\Delta_0 + \exp$ | $\geq \omega$ | уже R-S через exp |
+
+**Замечание о границе.** $\mathsf{I}\Delta_0 + \exp$ — *не* в weak-стратуме строго: добавление totality экспоненты позволяет восстановить полную PA-индукцию (Hájek-Pudlák 1993 §II.2 Theorem). Это переводит теорию в стандартный $\mathcal{L}_\mathrm{Fnd}$ с $\nu \geq \omega$. Границей weak-стратума является именно $\mathsf{I}\Delta_0$ без экспоненты.
+
+**Лемма 137.L1** *(монотонность $\nu^\mathrm{weak}$).* $\nu^\mathrm{weak}$ — порядок-сохраняющий: если $S_1 \subseteq S_2$ как теории и обе $\in \mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$, то $\nu^\mathrm{weak}(S_1) \leq \nu^\mathrm{weak}(S_2)$. Стандартный результат из обратной математики (Simpson 2009 §X.4) + bounded arithmetic (Buss 1986 §6).
+
+**Лемма 137.L2** *(дисконтинуитет на границе weak / full).* Для $S \in \mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$: $\nu^\mathrm{weak}(S) < \omega$. При переходе в стандартный $\mathcal{L}_\mathrm{Fnd}$ через consistency-strengthening: $\nu(\overline{S}) \geq \omega$, где $\overline{S}$ — расширение $S$ полной PA-индукцией.
+
+*Доказательство.* Дисконтинуитет — следствие обратной математики: добавление полной PA-индукции к bounded-теории $S$ скачком увеличивает $\nu$ от конечного к $\omega$, поскольку только полная индукция даёт $\Pi_3$-max-генеративность (по 97.T в [`/06-limits/07-final-theorems`](/06-limits/07-final-theorems)).
+
+Связь между $\nu^\mathrm{weak}$ и $\nu$ — *не* monotone embedding (как ошибочно утверждалось ранее), а *discrete jump* при пересечении границы weak/full. ∎
+
+##### Дуальный ε^weak-инвариант
+
+**Определение 137.D2** *(weak-ε-инвариант).* Дуально по 108.T-ограниченному на weak-стратум: $\varepsilon^\mathrm{weak}(\varepsilon_S) = \nu^\mathrm{weak}(\alpha_S) \in [0, \omega)$ для $S \in \mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$.
+
+##### Связь с complexity-aware verification
+
+**Лемма 137.L3** *(complexity-soundness).* Verum-программа в weak-стратуме (через `@framework(bounded_arithmetic, ...)`) автоматически имеет ограниченную complexity по соответствующему $\nu^\mathrm{weak}$-уровню. Это даёт *complexity-typed* verification:
+- $\mathrm{P}$-программы: $\nu^\mathrm{weak} = 2$, верифицируемы в полиномиальное время.
+- $\mathrm{NP}$-программы: $\nu^\mathrm{weak} = 3$, верификация — co-NP.
+- И так далее.
+
+##### Применение weak-AFN-T
+
+Применение Леммы SS-membership (MSFS §5; стандарт AFN-T α-части) к bounded-стратуму:
+- $(\mathrm{F}_S^*)$ с $\Sigma_1^b$-формулой $\phi_X$ ⟹ $X \in \mathcal{S}_S^{*,\mathrm{global}}$ (Шаг 1).
+- $\mathrm{id}_X$ нарушает $(\Pi_4^*)$ (Шаг 2).
+- Тройка несовместна (Шаг 3).
+
+В отличие от full AFN-T, доказательство для weak использует **bounded Cantor diagonal**: диагональный аргумент работает на $\Sigma_1^b$-уровне, не на полном PA-уровне (Buss 1986 «Bounded arithmetic» §6.5 для $\Sigma_1^b$-индукции).
+
 #### Следствия 137.T
 
-- $\mathcal{L}_\mathrm{Abs}^\mathrm{weak} = \emptyset$: даже в bounded-стратуме нет абсолютного основания.
-- AFN-T для классического $\mathcal{L}_\mathrm{Fnd}$ и weak-AFN-T для $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ — *параллельные* теоремы, не выводимые друг из друга (разные R-S условия).
-- Сила непротиворечивости weak-AFN-T: $\mathrm{Con}(\text{weak-AFN-T}) = \mathrm{Con}(\mathrm{ZFC} + 1\text{-inacc})$ (по 134.T достаточно одного недостижимого для weak-стратума).
+- **137.C1**. $\mathcal{L}_\mathrm{Abs}^\mathrm{weak} = \emptyset$: даже в bounded-стратуме нет абсолютного основания.
+- **137.C2**. AFN-T для классического $\mathcal{L}_\mathrm{Fnd}$ и weak-AFN-T для $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ — *параллельные* теоремы, не выводимые друг из друга (разные R-S условия).
+- **137.C3**. Сила непротиворечивости weak-AFN-T: $\mathrm{Con}(\text{weak-AFN-T}) = \mathrm{Con}(\mathrm{ZFC} + 1\text{-inacc})$ — для weak-стратума достаточно одного недостижимого (по сравнению с $2$-inacc для full).
+- **137.C4** *(Verum-impact)*. Weak-стратум открывает Verum для practical complexity-bounded verification (cryptography, embedded systems, real-time): `core.math.frameworks.bounded_arithmetic.vr` как отдельный фреймворк со своими complexity-types.
+
+#### Спецификация для Verum
+
+```verum
+@framework(bounded_arithmetic_137T, "Theorem 137.T: weak-AFN-T for bounded R-S")
+
+// Подстратум L_Fnd^weak
+trait WeakRichS {
+    fn nu_weak(&self) -> u32;  // weak-ν-инвариант, < ω
+    fn complexity_class(&self) -> ComplexityClass;
+    fn is_R_S_weak(&self) -> bool;  // (R1*)..(R5*) проверка
+}
+
+// Конкретные weak-frameworks
+@framework(I_Delta_0, "Bounded arithmetic I∆_0, ν^weak ≤ ω")
+struct I_Delta_0;
+impl WeakRichS for I_Delta_0 { ... }
+
+@framework(S_2_1, "Buss S_2^1 for P-time, ν^weak = 2")
+struct S_2_1;
+impl WeakRichS for S_2_1 { ... }
+
+@framework(V_0, "V^0 for AC^0, ν^weak = 1")
+struct V_0;
+impl WeakRichS for V_0 { ... }
+
+// Дуальные weak-практики
+@enact(epsilon_weak = "p_time")
+fn poly_time_practice<T>(input: T) -> Output where T: Sized {
+    // ...
+}
+
+@verify(complexity_typed)
+theorem weak_AFN_T()
+    ensures L_Abs_weak == empty
+    proof_via Theorem_137T
+;
+```
 
 #### Связь с дуальной стороной
 
 **Замечание 137.R1**. Дуальный weak-AFN-T для AC-стороны: $\mathcal{L}_\mathrm{Abs}^{\mathcal{E}, \mathrm{weak}} = \emptyset$ — следует из 137.T через ДЦ/ОЦ-двойственность 108.T, ограниченную на weak-стратум. Это даёт полное закрытие weak-стратума на обеих сторонах.
+
+**Замечание 137.R2**. Связь с обратной математикой Simpson 2009: $\mathsf{RCA}_0, \mathsf{WKL}_0, \mathsf{ACA}_0$ — точки $\mathcal{L}_\mathrm{Fnd}$ выше weak-стратума, но ниже full-PA. Они *не* в weak-стратуме (имеют $\nu \geq \omega$), но строго слабее full ZFC. Между weak-стратумом и full $\mathcal{L}_\mathrm{Fnd}$ есть промежуточная subcalibration через reverse-mathematics hierarchy.
 
 ## Следующий документ
 
