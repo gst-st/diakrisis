@@ -60,6 +60,7 @@ flowchart TB
 
     APEIRON -.-> DIAKRISIS -.-> Z
     Z ==> PRIM_OC
+    Z -.-> DUALITY
     Z ==> PRIM_AC
 
     PRIM_OC ==> STRAT_OC
