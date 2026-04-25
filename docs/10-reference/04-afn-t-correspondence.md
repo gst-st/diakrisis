@@ -171,7 +171,7 @@ ef{thm:dual-afnt} доказывается (Route 1) прямым syntax-semanti
 
 3. **условия Ловера $\mathrm{LS}(\cE)$**: $\{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC \text{ closed symmetric monoidal}\}$. Покрывает Cartesian-closed, SMC и $*$-autonomous — через универсальную диагональ Яновский; включает линейную логику, ludics Жирара, resource-sensitive type theories, квантовые enactments.
 
-4. **Класс $\SSE$**: componentwise замыкание базы $\SSE^{\mathrm{base}} = \{(F', \cM, \iota_\cM, r_\cM) : \cM \models S, \iota_\cM := \ev_\cM, r_\cM := (\ev_\cM)^L\}$ под операциями Definition~\ref{def:SS}.
+4. **Класс $\SSE$**: componentwise замыкание базы $\SSEbase = \{(F', \cM, \iota_\cM, r_\cM) : \cM \models S, \iota_\cM := \ev_\cM, r_\cM := (\ev_\cM)^L\}$ под операциями Definition~\ref{def:SS}.
 
 ### Вспомогательные
 

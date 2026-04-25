@@ -42,7 +42,7 @@ ef{thm:dual-afnt} (Dual Boundary Lemma), §11. Соответствие объе
 
 Предположение о существовании $\varepsilon_\infty$ противоречиво в ZFC + $2$-inacc (совместная сила Diakrisis + Актика по 107.T). Два независимых пути:
 
-- **Route 1 (прямой syntax-semantics bridge на $\cE$)**: если $(F, \cC, \iota, r)$ формально $S$-определим, то квадрупл принадлежит $\SSE^{\mathrm{global}}$ (Lemma~\ref{lem:SS-membership-E}); тождественный морфизм $(\id_F, \id_\cC)$ реализует запрещённую $(\tilde{\Pi}_4)$-координацию.
+- **Route 1 (прямой syntax-semantics bridge на $\cE$)**: если $(F, \cC, \iota, r)$ формально $S$-определим, то квадрупл принадлежит $\SSEglobal$ (Lemma~\ref{lem:SS-membership-E}); тождественный морфизм $(\id_F, \id_\cC)$ реализует запрещённую $(\tilde{\Pi}_4)$-координацию.
 - **Route 2 (через дуальность 108.T)**: $(F, \cC, \iota, r) \in \LAbsE$ влечёт $F \in \LAbs$ через $\varepsilon$-лифтинг $\cF$-координаций; противоречие с Corollary~\ref{cor:level6-empty-alpha}.
 
 Разделы 3.2–3.6 — изложение через 5 осей AFN-T; соответствует Theorem~
@@ -50,7 +50,7 @@ ef{thm:dual-five-axis}.
 
 ### 3.2 Route 1 — прямой syntax-semantics bridge
 
-Пусть $(F, \cC, \iota, r)$ удовлетворяет $(\tilde{F}_S) \wedge (\tilde{\Pi}_4)$. По $(\tilde{F}_S)$ квадрупл формально $S$-определим (формулы $(\phi_F, \psi_\cC, \chi_\iota, \chi_r)$ в некотором $F' \hookrightarrow S$); по **Lemma~\ref{lem:SS-membership-E}** (enactment syntax-semantics bridge) квадрупл $\in \SSE^{\mathrm{global}} \subseteq \SSE$. Тождественный морфизм
+Пусть $(F, \cC, \iota, r)$ удовлетворяет $(\tilde{F}_S) \wedge (\tilde{\Pi}_4)$. По $(\tilde{F}_S)$ квадрупл формально $S$-определим (формулы $(\phi_F, \psi_\cC, \chi_\iota, \chi_r)$ в некотором $F' \hookrightarrow S$); по **Lemma~\ref{lem:SS-membership-E}** (enactment syntax-semantics bridge) квадрупл $\in \SSEglobal \subseteq \SSE$. Тождественный морфизм
 $$
 (\id_F, \id_\cC) : (F, \cC, \iota, r) \longrightarrow (F, \cC, \iota, r)
 $$

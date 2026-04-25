@@ -438,7 +438,7 @@ title: Глоссарий
 ### SSE ($\cS_S^\cE$)
 
 **Тип**: $\cE$-аналог класса $\cS_S$.
-**Определение (MSFS)**: componentwise closure базы $\SSE^{\mathrm{base}} = \{(F', \cM, \iota_\cM, r_\cM) : \cM \models S\}$ под операциями Definition~\ref{def:SS}.
+**Определение (MSFS)**: componentwise closure базы $\SSEbase = \{(F', \cM, \iota_\cM, r_\cM) : \cM \models S\}$ под операциями Definition~\ref{def:SS}.
 **MSFS-соответствие**: Definition~\ref{def:SSE}.
 
 ### Dual Boundary Lemma / 109.T
