@@ -131,6 +131,7 @@ Live-документ для отслеживания прогресса 10-ша
 ✅ **Теорема 16.10** (round-trip 108.T) — алгоритмическая разрешимость для конечно-аксиоматизированных R-S, [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) §5.
 ✅ **Теорема 140.T** ($\mathrm{e}^\infty$ на $(\infty, \infty)$) — конструкция $(\infty, \infty)$-категории актов через adjoint tower + accessibility + универсальность ε-инварианта на полном уровне; [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.3 после R2.
 ✅ **Теорема 141.T** (конструктивный автопоэзис) — алгоритмическое построение $\varepsilon_\mathrm{auto}$ в эффективном топосе через $\omega^2$-итерацию + явные σ/π-морфизмы через Drake reflection (Шаг 5 в 131.T); [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.4 после R4.
+✅ **Теорема 136.T** (T-2f\*\*\* трансфинитная модальная стратификация) — полная теория $\mathrm{md}^\omega$-функтора через Definition 136.D1 + Лемма 136.L0 (well-founded ordinal recursion) + Лемма 136.L_rank (нижняя граница ранга артикуляции); блокировка парадоксов всех ординальных уровней до $\kappa_2$; [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §T-2f\*\*\* после R3.
 
 ### Что нужно реализовать
 
@@ -141,7 +142,7 @@ Live-документ для отслеживания прогресса 10-ша
 ⚠️ **Polный (∞,∞)-categories формализация** — Verum имеет только (∞,1) через `core.math.infinity_category`. Теоретическая (∞,∞)-семантика для 140.T закрыта в R2 (полное доказательство в [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.3 — конструкция через colim/lim adjoint tower + BSP unicity); Verum-реализация требует расширения core.math.infinity_category до полных $(\infty, \infty)$ через комплициальные множества Verity 2008.
 ⚠️ **Linear types enforcement** — V1 shipped declaration discipline; enforcement deferred до V2.
 ⚠️ **Effect system** — нет встроенного; concurrent / async / IO как properties, не types.
-⚠️ **T-2f\*\*\* омега-modal стратификация (136.T)** — требует расширения K-Refine kernel-правила для трансфинитных модальных рангов.
+⚠️ **T-2f\*\*\* омега-modal стратификация (136.T)** — теоретически закрыто в R3 (полное доказательство Шаги 1–4 + Леммы 136.L0/L_rank/L1/L2 + Definition 136.D1 трансфинитного модального языка $L^\omega_\alpha$ + ord-арифметика md^ω через well-founded recursion; см. [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §T-2f\*\*\*). Verum-реализация — добавление K-Refine-omega kernel-правила с ординальным md-параметром.
 ⚠️ **Autopoiesis termination proof** — теоретически закрыто в R4 (явный конструктивный свидетель $\varepsilon_\mathrm{auto}$ в эффективном топосе через $\omega^2$-итерацию + Drake reflection retraction; см. [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §15.4). Verum-реализация требует Eff-semantics layer + finite approximation API (`approximate_autopoiesis(ε, depth)`).
 ⚠️ **Synthesis strategy termination** — стратегия `synthesize` не имеет гарантии termination.
 
@@ -179,6 +180,7 @@ Live-документ для отслеживания прогресса 10-ша
 | 2026-04-25 | R9 закрыт: Теорема 124.T получила полное доказательство (R9.OC + R9.DC + triangle identities) с unit/counit как каноническими образами тождественных морфизмов, без необходимости в monad-style unit для $\mathsf{M}, \mathsf{A}$ |
 | 2026-04-25 | R2 закрыт: Теорема 140.T получила полное доказательство (Шаги 1–5 + 5 лемм) — конструкция $(\infty, \infty)$-категории актов через colim/lim adjoint tower + accessibility $\mathsf{A}^\infty$ через индукцию по $n$ + универсальность $\mathrm{e}^\infty$ |
 | 2026-04-25 | R4 закрыт: Теорема 141.T получила конструктивный свидетель $\varepsilon_\mathrm{auto}$ — $\omega^2$-итерация в эффективном топосе через higher-type computability (Лемма 141.L1) + явные σ/π-морфизмы через Drake reflection + AFA-аналог в Eff (Aczel-Capretta 2017) |
+| 2026-04-25 | R3 закрыт: Теорема 136.T получила полное доказательство (Шаги 1–4 + 4 леммы) — формализация $\mathrm{md}^\omega$ через Definition 136.D1 трансфинитного модального языка + Лемма 136.L_rank (нижняя граница ранга артикуляции через диагональную лемму Smoryński 1985) |
 
 ## Ссылки
 
