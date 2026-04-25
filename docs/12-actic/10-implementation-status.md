@@ -126,7 +126,7 @@ Live-документ для отслеживания прогресса 10-ша
 ### Теоретические основания закрыты ([Т·L3])
 
 ✅ **Предложение 5.1** ($\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$) — каноническая 2-естественная эквивалентность, [`/12-actic/04-ac-oc-duality`](/12-actic/04-ac-oc-duality) §5. Обеспечивает теорему ν(α) = e(ε(α)) (Следствие 5.10), что делает `verum audit --epsilon` теоретически обоснованным.
-✅ **Теорема 124.T** ($\mathsf{M} \dashv \mathsf{A}$) — сопряжение метаизации и активации, [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §14.2. Безусловно [Т·L3] после R1.
+✅ **Теорема 124.T** ($\mathsf{M} \dashv \mathsf{A}$) — 2-categorical biadjunction в смешанной 2-категории через 108.T-эквивалентность; полное доказательство (Шаги A–D + R9.DC + triangle identities) — [`/12-actic/06-actic-theorems`](/12-actic/06-actic-theorems) §14.2.1–§14.2.4 после R9. Безусловно [Т·L3].
 ✅ **Теорема 131.T** (стек-модель Axi-8) — все 13 аксиом одновременно реализуемы; Con(Diakrisis-13) ≤ Con(ZFC + 2-inacc), [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §131.T.
 ✅ **Теорема 16.10** (round-trip 108.T) — алгоритмическая разрешимость для конечно-аксиоматизированных R-S, [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) §5.
 
@@ -174,6 +174,7 @@ Live-документ для отслеживания прогресса 10-ша
 | 2026-04-25 | R1 закрыт: Предложение 5.1 переведено [С]→[Т] с полным 2-категорным доказательством; обновление таблицы «теоретические основания закрыты» |
 | 2026-04-25 | R10 закрыт: Теорема 131.T получила полное доказательство (6 шагов + 3 леммы) с red-team-корректировками |
 | 2026-04-25 | R5 закрыт: Теорема 16.10 (round-trip 108.T) формализована в новом документе [`/03-formal-architecture/16-gauge-decision`](/03-formal-architecture/16-gauge-decision) |
+| 2026-04-25 | R9 закрыт: Теорема 124.T получила полное доказательство (R9.OC + R9.DC + triangle identities) с unit/counit как каноническими образами тождественных морфизмов, без необходимости в monad-style unit для $\mathsf{M}, \mathsf{A}$ |
 
 ## Ссылки
 

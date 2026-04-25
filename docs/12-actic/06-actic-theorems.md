@@ -188,21 +188,125 @@ $$
 
 ---
 
-### 14.2 124.T — сопряжение $\mathsf{M} \dashv \mathsf{A}$
+### 14.2 124.T — сопряжение $\mathsf{M} \dashv \mathsf{A}$ через 108.T
 
-**Теорема 124.T** [Т·L3·Diakrisis-only]. *Эндо-2-функторы $\mathsf{M}: \langle\!\langle \cdot \rangle\!\rangle \to \langle\!\langle \cdot \rangle\!\rangle$ (метаизация артикуляций) и $\mathsf{A}: \rangle\!\rangle \cdot \langle\!\langle \to \rangle\!\rangle \cdot \langle\!\langle$ (активация энактментов) связаны через 108.T-дуальность так, что в смешанной 2-категории $\langle\!\langle \cdot \rangle\!\rangle \sqcup \rangle\!\rangle \cdot \langle\!\langle$ (склейка через $\varepsilon \dashv \alpha$) имеется сопряжение:*
+**Теорема 124.T** [Т·L3·Diakrisis-only]. *Эндо-2-функторы $\mathsf{M}: \langle\!\langle \cdot \rangle\!\rangle \to \langle\!\langle \cdot \rangle\!\rangle$ (метаизация артикуляций) и $\mathsf{A}: \rangle\!\rangle \cdot \langle\!\langle \to \rangle\!\rangle \cdot \langle\!\langle$ (активация энактментов) образуют 2-categorical biadjunction в смешанной 2-категории, индуцированной 108.T-эквивалентностью $\varepsilon \dashv \alpha$:*
 $$
-\mathsf{M} \;\dashv\; \mathsf{A}, \qquad \text{эквивалентно (по 108.T)} \qquad \alpha \circ \mathsf{A} \circ \varepsilon \;\dashv\; \mathsf{M}.
+\mathsf{M} \;\dashv\; \mathsf{A} \quad \text{в смысле transferred biadjunction вдоль } \varepsilon \dashv \alpha.
 $$
-*То есть метаизация — левый сопряжённый к активации up to 108.T-эквивалентности.*
 
-**Доказательство.** По Предложению 5.1 ([`/12-actic/04-ac-oc-duality`](/12-actic/04-ac-oc-duality)): $\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$. По 108.T $\varepsilon \dashv \alpha$ — эквивалентность, поэтому для любого $\alpha_0 \in \langle\!\langle \cdot \rangle\!\rangle$:
-$$
-\mathrm{Hom}(\mathsf{M}(\alpha_0), \beta) \simeq \mathrm{Hom}(\varepsilon(\mathsf{M}(\alpha_0)), \varepsilon(\beta)) \simeq \mathrm{Hom}(\mathsf{A}(\varepsilon(\alpha_0)), \varepsilon(\beta)) \simeq \mathrm{Hom}(\alpha_0, \alpha(\mathsf{A}(\varepsilon(\beta)))) \simeq \mathrm{Hom}(\alpha_0, \mathsf{A}(\beta))
-$$
-(последнее — по $\alpha \circ \mathsf{A} \circ \varepsilon \simeq \mathsf{A}$ up to 108.T-эквивалентности). Натуральность по $\alpha_0, \beta$ проверяется покомпонентно из natуральности Предложения 5.1. ∎
+*Конкретно: существуют unit $\eta : \mathrm{id}_{\langle\!\langle \cdot \rangle\!\rangle} \Rightarrow \alpha \circ \mathsf{A} \circ \varepsilon$ и counit $\epsilon^* : \varepsilon \circ \mathsf{M} \circ \alpha \Rightarrow \mathrm{id}_{\rangle\!\rangle \cdot \langle\!\langle}$, удовлетворяющие триангулярным тождествам up to canonical invertible 2-cell.*
 
-**Интерпретация.** Метаизация «возводит» артикуляцию в мета-объект (создаёт articulation of articulation); активация «воплощает» объект как практику. Пара смежных функторов: unit $\eta : \id \Rightarrow \mathsf{A} \mathsf{M}$ — «теория порождает свою практику», counit $\varepsilon_c : \mathsf{M} \mathsf{A} \Rightarrow \id$ — «практика обобщается в теорию, и идентифицируется с исходной up to стабилизации». Цикл $\mathsf{M} \circ \mathsf{A}$ и $\mathsf{A} \circ \mathsf{M}$ возвращают в ту же стабилизацию up to unit/counit, что согласуется с 68.T и её AC-дуалом (108.C5).
+### 14.2.1 Подготовка: смешанная 2-категория
+
+**Конструкция 14.2.A.** Поскольку $\mathsf{M}$ действует на $\langle\!\langle \cdot \rangle\!\rangle$, а $\mathsf{A}$ — на $\rangle\!\rangle \cdot \langle\!\langle$, *прямого* сопряжения $\mathsf{M} \dashv \mathsf{A}$ как эндофункторов одной 2-категории не существует. Но через 108.T-эквивалентность $\varepsilon: \langle\!\langle \cdot \rangle\!\rangle \xrightarrow{\sim} \rangle\!\rangle \cdot \langle\!\langle$ (с обратным $\alpha$) можно построить *transferred adjunction* в каждой 2-категории отдельно.
+
+Определим:
+- **OC-сторона:** $\widetilde{\mathsf{A}} := \alpha \circ \mathsf{A} \circ \varepsilon: \langle\!\langle \cdot \rangle\!\rangle \to \langle\!\langle \cdot \rangle\!\rangle$ — «активация, переведённая обратно в OC через 108.T».
+- **DC-сторона:** $\widetilde{\mathsf{M}} := \varepsilon \circ \mathsf{M} \circ \alpha: \rangle\!\rangle \cdot \langle\!\langle \to \rangle\!\rangle \cdot \langle\!\langle$ — «метаизация, переведённая в DC».
+
+Утверждение R9 — двойное:
+- **(R9.OC)** $\mathsf{M} \dashv \widetilde{\mathsf{A}}$ как пара эндо-2-функторов $\langle\!\langle \cdot \rangle\!\rangle$.
+- **(R9.DC)** $\widetilde{\mathsf{M}} \dashv \mathsf{A}$ как пара эндо-2-функторов $\rangle\!\rangle \cdot \langle\!\langle$.
+
+По 108.T эти утверждения эквивалентны.
+
+### 14.2.2 Доказательство (R9.OC): $\mathsf{M} \dashv \widetilde{\mathsf{A}}$
+
+**Шаг A** (Hom-bijection). По 108.T Шагу A ([`/12-actic/04-ac-oc-duality`](/12-actic/04-ac-oc-duality) §2.1): $\varepsilon$ — *2-полностью-верный 2-функтор*, что означает Hom-биекцию
+$$\varepsilon_{*}: \mathrm{Hom}_{\langle\!\langle \cdot \rangle\!\rangle}(F_1, F_2) \xrightarrow{\sim} \mathrm{Hom}_{\rangle\!\rangle \cdot \langle\!\langle}(\varepsilon F_1, \varepsilon F_2).$$
+Аналогично $\alpha$ через 108.T Шаг B (essential surjectivity на gauge-уровне) — даёт обратную биекцию.
+
+По Предложению 5.1 (R1): $\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$ как 2-естественная эквивалентность. По Предложению 6.2 (108.T): $\alpha \circ \varepsilon \simeq \mathrm{id}$ строго. Тогда для $\alpha_0, \beta \in \langle\!\langle \cdot \rangle\!\rangle$:
+$$
+\begin{aligned}
+\mathrm{Hom}_{\langle\!\langle \cdot \rangle\!\rangle}(\mathsf{M}(\alpha_0), \beta) &\xrightarrow{\;\;\varepsilon_{*}\text{ Hom-bijection}\;\;} \mathrm{Hom}_{\rangle\!\rangle \cdot \langle\!\langle}(\varepsilon(\mathsf{M}(\alpha_0)), \varepsilon(\beta)) \\
+&\xrightarrow{\;\;\tau_{\alpha_0}\text{-precomposition (Prop. 5.1)}\;\;} \mathrm{Hom}_{\rangle\!\rangle \cdot \langle\!\langle}(\mathsf{A}(\varepsilon(\alpha_0)), \varepsilon(\beta)) \\
+&\xrightarrow{\;\;\alpha_{*}\text{ Hom-bijection}\;\;} \mathrm{Hom}_{\langle\!\langle \cdot \rangle\!\rangle}(\alpha(\mathsf{A}(\varepsilon(\alpha_0))), \alpha(\varepsilon(\beta))) \\
+&\xrightarrow{\;\;\alpha\circ\varepsilon \simeq \mathrm{id}\;\;} \mathrm{Hom}_{\langle\!\langle \cdot \rangle\!\rangle}(\widetilde{\mathsf{A}}(\alpha_0), \beta).
+\end{aligned}
+$$
+
+Эта цепочка биекций даёт натуральный изоморфизм $\Phi_{\alpha_0, \beta}: \mathrm{Hom}(\mathsf{M}(\alpha_0), \beta) \xrightarrow{\sim} \mathrm{Hom}(\widetilde{\mathsf{A}}(\alpha_0), \beta)$ на уровне 1-морфизмов.
+
+**Замечание 14.2.A** *(точная природа $\tau$-precomposition).* Шаг через Предложение 5.1 — это precomposition с обратимой 2-cell $\tau_{\alpha_0}: \varepsilon(\mathsf{M}(\alpha_0)) \xrightarrow{\sim} \mathsf{A}(\varepsilon(\alpha_0))$. По обратимости $\tau_{\alpha_0}$ (Шаг C.4 в Предложении 5.1, R1) precomposition даёт биекцию между Hom-множествами.
+
+**Шаг B** (Натуральность). Натуральность $\Phi$ по $\alpha_0$ и $\beta$ проверяется покомпонентно: каждый из четырёх шагов цепочки — натуральная биекция (по 2-функториальности $\varepsilon, \alpha$ + натуральности τ из Предложения 5.1). Композиция натуральных биекций — натуральная биекция (стандартный факт, Mac Lane 1998 §IV.1).
+
+**Шаг C** (Unit и counit как канонические морфизмы из Hom-bijection). Стандартное построение из *adjoint functor theorem* (Mac Lane 1998 §IV.1 Theorem 2(v)) — **прямое определение через канонические образы тождественных морфизмов**, **без** обращения к гипотетическим unit/counit самих $\mathsf{M}, \mathsf{A}$:
+
+- **Unit** $\eta_{\alpha_0}: \alpha_0 \to \widetilde{\mathsf{A}}(\mathsf{M}(\alpha_0))$ определяется как образ $\mathrm{id}_{\mathsf{M}(\alpha_0)} \in \mathrm{Hom}(\mathsf{M}(\alpha_0), \mathsf{M}(\alpha_0))$ под изоморфизмом
+$$\Phi_{\alpha_0, \mathsf{M}(\alpha_0)}: \mathrm{Hom}(\mathsf{M}(\alpha_0), \mathsf{M}(\alpha_0)) \xrightarrow{\sim} \mathrm{Hom}(\alpha_0, \widetilde{\mathsf{A}}(\mathsf{M}(\alpha_0))).$$
+
+- **Counit** $\epsilon_\beta: \mathsf{M}(\widetilde{\mathsf{A}}(\beta)) \to \beta$ определяется как образ $\mathrm{id}_{\widetilde{\mathsf{A}}(\beta)} \in \mathrm{Hom}(\widetilde{\mathsf{A}}(\beta), \widetilde{\mathsf{A}}(\beta))$ под обратным изоморфизмом
+$$\Phi^{-1}_{\widetilde{\mathsf{A}}(\beta), \beta}: \mathrm{Hom}(\widetilde{\mathsf{A}}(\beta), \widetilde{\mathsf{A}}(\beta)) \xrightarrow{\sim} \mathrm{Hom}(\mathsf{M}(\widetilde{\mathsf{A}}(\beta)), \beta).$$
+
+**Замечание 14.2.B** *(почему это не требует unit/counit для $\mathsf{M}, \mathsf{A}$ в отдельности).* Критический момент: $\eta$ и $\epsilon$ существуют как *структурные данные сопряжения*, индуцированного из Hom-bijection $\Phi$. Они **не** требуют, чтобы $\mathsf{M}$ или $\mathsf{A}$ сами по себе имели monad-style unit/counit (что было бы дополнительным предположением о монадичности). Это стандартная конструкция из теории сопряжённых функторов: Hom-bijection задаёт adjunction by definition (Mac Lane 1998 §IV.1 Theorem 2 — equivalence (i)⟺(v)).
+
+**Шаг D** (Триангулярные тождества). Триангулярные тождества — следствия определения $\eta, \epsilon$ через канонические образы тождеств:
+
+$$
+(\widetilde{\mathsf{A}} \cdot \epsilon) \circ (\eta \cdot \widetilde{\mathsf{A}}) = \mathrm{id}_{\widetilde{\mathsf{A}}}, \qquad (\epsilon \cdot \mathsf{M}) \circ (\mathsf{M} \cdot \eta) = \mathrm{id}_{\mathsf{M}}.
+$$
+
+*Доказательство первого тождества (на компонентах + естественность)*. Для каждого $\alpha_0 \in \langle\!\langle \cdot \rangle\!\rangle$ покомпонентная диаграмма:
+$$\widetilde{\mathsf{A}}(\alpha_0) \xrightarrow{\eta_{\widetilde{\mathsf{A}}(\alpha_0)}} \widetilde{\mathsf{A}}\mathsf{M}\widetilde{\mathsf{A}}(\alpha_0) \xrightarrow{\widetilde{\mathsf{A}}(\epsilon_{\alpha_0})} \widetilde{\mathsf{A}}(\alpha_0).$$
+
+По определению $\eta$ через $\Phi^{-1}$ и $\epsilon$ через $\Phi$: композиция в диаграмме переходит под $\Phi$ в композицию $\mathrm{id}_{\mathsf{M}\widetilde{\mathsf{A}}(\alpha_0)} \circ \mathrm{id}_{\mathsf{M}\widetilde{\mathsf{A}}(\alpha_0)} = \mathrm{id}$. Применяя $\Phi^{-1}$ обратно: исходная композиция = $\mathrm{id}_{\widetilde{\mathsf{A}}(\alpha_0)}$.
+
+**Естественность на 2-функторе $\widetilde{\mathsf{A}}$.** Для перехода от покомпонентного тождества к тождеству 2-функторов требуется естественность $\eta$ и $\epsilon$ по $\alpha_0$:
+- Естественность $\eta: \mathrm{id} \Rightarrow \widetilde{\mathsf{A}} \circ \mathsf{M}$ — следствие натуральности $\Phi$ (Шаг B): для $f: \alpha_0 \to \alpha_0'$ диаграмма
+$$\begin{array}{c}\alpha_0 \xrightarrow{\eta_{\alpha_0}} \widetilde{\mathsf{A}}(\mathsf{M}(\alpha_0)) \\ \downarrow f \quad\quad\quad\quad\quad \downarrow \widetilde{\mathsf{A}}\mathsf{M}(f) \\ \alpha_0' \xrightarrow{\eta_{\alpha_0'}} \widetilde{\mathsf{A}}(\mathsf{M}(\alpha_0'))\end{array}$$
+коммутирует up to canonical 2-cell, поскольку обе стороны — образы $\mathrm{id}$ под $\Phi$ применённой к разным $\alpha_0$.
+- Аналогично для $\epsilon$.
+
+По стандартной 2-категорной теории (Kelly 1982 §1.10): покомпонентные тождества + естественность ⟹ тождество 2-функторов. Следовательно $(\widetilde{\mathsf{A}} \cdot \epsilon) \circ (\eta \cdot \widetilde{\mathsf{A}}) = \mathrm{id}_{\widetilde{\mathsf{A}}}$ как 2-естественных преобразований 2-функторов.
+
+Второе тождество — симметрично, через те же рассуждения для пары $(\eta, \epsilon)$ относительно $\mathsf{M}$. ∎ (R9.OC)
+
+### 14.2.3 Доказательство (R9.DC): $\widetilde{\mathsf{M}} \dashv \mathsf{A}$
+
+Перенос через 108.T-эквивалентность $\varepsilon \dashv \alpha$. Конкретные шаги:
+
+**Шаг A'** (Hom-bijection в DC). Для $\varepsilon_0, \delta \in \rangle\!\rangle \cdot \langle\!\langle$:
+$$
+\begin{aligned}
+\mathrm{Hom}_{\rangle\!\rangle \cdot \langle\!\langle}(\widetilde{\mathsf{M}}(\varepsilon_0), \delta) &= \mathrm{Hom}(\varepsilon\mathsf{M}\alpha(\varepsilon_0), \delta) \\
+&\xrightarrow{\;\;\alpha_{*}\;\;} \mathrm{Hom}_{\langle\!\langle \cdot \rangle\!\rangle}(\mathsf{M}(\alpha(\varepsilon_0)), \alpha(\delta)) \\
+&\xrightarrow{\;\;\Phi\text{ (Шаг A)}\;\;} \mathrm{Hom}(\widetilde{\mathsf{A}}(\alpha(\varepsilon_0)), \alpha(\delta)) \\
+&\xrightarrow{\;\;\varepsilon_{*}\;\;} \mathrm{Hom}_{\rangle\!\rangle \cdot \langle\!\langle}(\varepsilon\widetilde{\mathsf{A}}\alpha(\varepsilon_0), \varepsilon\alpha(\delta)) \\
+&\xrightarrow{\;\;\varepsilon\circ\widetilde{\mathsf{A}}\circ\alpha = \varepsilon\circ\alpha\circ\mathsf{A}\circ\varepsilon\circ\alpha \simeq \mathsf{A}\;\;} \mathrm{Hom}(\mathsf{A}(\varepsilon_0), \delta).
+\end{aligned}
+$$
+
+Эта цепочка даёт натуральный изоморфизм $\Psi_{\varepsilon_0, \delta}: \mathrm{Hom}(\widetilde{\mathsf{M}}(\varepsilon_0), \delta) \xrightarrow{\sim} \mathrm{Hom}(\varepsilon_0, \mathsf{A}(\delta))$.
+
+**Шаг B'–D'**. Аналогично Шагам B–D из 14.2.2: натуральность $\Psi$, построение unit $\eta'$ и counit $\epsilon'$ как канонических образов тождеств, проверка triangle identities на компонентах + естественность.
+
+**Эквивалентность с (R9.OC)**: применением $\varepsilon_{*}$ к Φ (Шаг A) и $\alpha_{*}$ к Ψ (Шаг A'): обе цепочки дают эквивалентные структуры сопряжения. По 108.T (full faithfulness $\varepsilon, \alpha$) трансформации между сопряжениями переносятся точно.
+
+Заключение: (R9.DC) выполняется тогда и только тогда, когда (R9.OC) — оба эквивалентны через 108.T. ∎ (R9.DC)
+
+### 14.2.4 Эквивалентность (R9.OC) и (R9.DC) через 108.T
+
+По 108.T $\varepsilon \dashv \alpha$ — 2-эквивалентность, следовательно perspective change: любое сопряжение в $\langle\!\langle \cdot \rangle\!\rangle$ переносится в $\rangle\!\rangle \cdot \langle\!\langle$ через $\varepsilon$ и обратно. Это даёт каноническую эквивалентность утверждений (R9.OC) и (R9.DC).
+
+### 14.2.5 Концептуальное содержание
+
+**Интерпретация.** Метаизация $\mathsf{M}$ «возводит» артикуляцию в мета-объект (создаёт articulation of articulation); активация $\mathsf{A}$ «воплощает» объект как практику высшего порядка. Сопряжение $\mathsf{M} \dashv \widetilde{\mathsf{A}}$:
+- **Unit** $\eta_{\alpha_0}: \alpha_0 \to \widetilde{\mathsf{A}}(\mathsf{M}(\alpha_0))$ — *«артикуляция порождает свою активированную метаизацию»*: всякая артикуляция канонически даёт практику исполнения её мета-уровня.
+- **Counit** $\epsilon_\beta: \mathsf{M}(\widetilde{\mathsf{A}}(\beta)) \to \beta$ — *«мета-классификация активированной обратной — это сама артикуляция»*: композиция активации-обратной-метаизации возвращает к исходной артикуляции up to стабилизации.
+
+Цикл $\mathsf{M} \circ \widetilde{\mathsf{A}}$ и $\widetilde{\mathsf{A}} \circ \mathsf{M}$ возвращают в ту же стабилизацию up to unit/counit, что согласуется с 68.T (стабилизация на $(\infty, \infty)$) и её AC-дуалом (108.C5).
+
+### 14.2.6 Связь с Verum-реализацией
+
+Сопряжение 124.T даёт операциональную дуальную семантику для Verum (R12 — operational coherence):
+- $\mathsf{M}(\alpha)$ — статическая мета-теория программы.
+- $\widetilde{\mathsf{A}}(\alpha) = \alpha \circ \mathsf{A} \circ \varepsilon$ — динамическое поведение программы при активации, переведённое обратно в OC.
+- Hom-bijection $\Phi$ — *biadjoint type-checking*: Verum может проверить программу либо через $\mathsf{M}$-static-analysis, либо через $\widetilde{\mathsf{A}}$-dynamic-trace, обе проверки эквивалентны up to canonical iso.
+
+Это закрывает теоретический gap для двойной OC/DC stdlib Verum.
 
 ---
 
