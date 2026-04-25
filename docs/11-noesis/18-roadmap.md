@@ -251,6 +251,84 @@ title: План развития
 **Геополитика**: мультиюрисдикционные регуляции.
 - Митигация: локализованные развёртывания.
 
+## Phase α-ε детальный план (на основе аудитов H3-H6)
+
+После систематического engineering + competitive + industrial аудита (`internal/audit-noesis-engineering-industrial.md`) выделены явные production-gaps. Детальный план их закрытия:
+
+### Phase α: MVP Foundational (Q3 2026 — Q1 2027)
+
+**Цель**: working single-tenant Noesis.Core с claim management + SMT verification.
+
+- Knowledge model: schema + CRUD + cycle detection + transactional propagation.
+- Operations CLI: claim/dependents (transitive + cycle-safe), morita/relatives (rate-limited), coherence/check.
+- Agent: Giry-pipeline + multi-SMT consensus (Z3 + CVC5 + Yices, 2-of-3 quorum), prompt injection mitigation.
+- Verum integration: Lean 4 backend + theorem export (initial).
+- Auth: OAuth 2.0 + OIDC.
+- Audit logs: structured logs + tamper-proof (Merkle chain).
+- Performance benchmarks: prototype + suite.
+
+### Phase β: Multi-tenant + RBAC + Audit (Q2-Q3 2027)
+
+**Цель**: enterprise-ready single-region deployment.
+
+- Multi-tenancy: per-tenant data isolation.
+- RBAC + ABAC роли (owner, contributor, viewer + attribute-based for compliance).
+- Encryption: at rest (AES-256) + in transit (TLS 1.3).
+- Secret management: HashiCorp Vault integration.
+- Vulnerability scanning: CI/CD pipeline (Snyk, Dependabot).
+- Compliance: GDPR right-to-erasure protocol; SOC-2 controls baseline.
+
+### Phase γ: Federation + Verum (Q4 2027 — Q2 2028)
+
+**Цель**: distributed Noesis с robust federation.
+
+- CRDT-based claim store: Yjs/Automerge-style operational transforms для conflict-free updates.
+- BFT consensus для critical claims: 2-of-3 instance signature validation.
+- Federation discovery: DHT (Kademlia-style) или ICANN-registry.
+- Network partitioning: split-brain handling + reconciliation.
+- Verum-stdlib full implementation: `core.action.*` + Lean 4 / Coq backend.
+- LLM augmentation deep integration (23-llm-augmentation).
+
+### Phase δ: LLM augmentation + advanced agent (Q3 2028 — Q1 2029)
+
+**Цель**: AI-native knowledge platform.
+
+- Constraint-driven LLM augmentation (23-llm-augmentation §«Constraint-driven»).
+- Automated peer review (22-peer-review) — production-ready.
+- Advanced agent operations: ascend/descend, multi-step reasoning, planning.
+- Multi-region active-active deployment.
+
+### Phase ε: Enterprise + Compliance (Q2 2029+)
+
+**Цель**: full enterprise compliance + scale.
+
+- HIPAA: encryption + BAA agreements.
+- ITAR: separated US-only deployment.
+- ISO-27001: full certification.
+- FedRAMP: control implementation для US Federal.
+- SLA: 99.99% uptime; multi-region active-active; backup RPO ≤ 1h, RTO ≤ 15m.
+- Observability: Prometheus metrics + OpenTelemetry tracing + anomaly detection (ML-based).
+
+## Сводная таблица gaps → roadmap
+
+| Gap (из H3-H6) | Phase | Comment |
+|---|---|---|
+| Auth (OAuth/OIDC) | α | Critical для MVP |
+| Multi-SMT consensus | α | Defense in depth |
+| Cycle detection | α | Correctness |
+| Tamper-proof audit logs | α | Compliance baseline |
+| Encryption at rest | β | Enterprise |
+| RBAC + ABAC | β | Enterprise |
+| GDPR right-to-erasure | β | EU users |
+| SOC-2 controls | β | Enterprise customers |
+| CRDT claim store | γ | Federation |
+| BFT consensus | γ | Byzantine resistance |
+| Federation discovery | γ | Distributed |
+| Verum-stdlib full | γ | Formal correctness depth |
+| HIPAA / ITAR | ε | Healthcare / Defense |
+| FedRAMP | ε | US Federal |
+| Multi-region active-active | ε | High availability |
+
 ## Следующий шаг
 
 Сравнение с альтернативами: [19 — Сравнение](./19-comparison).
