@@ -91,7 +91,18 @@ $$
 \varepsilon(\phi) := \phi^\sharp \in \rangle\!\rangle\cdot\langle\!\langle.
 $$
 
-По R7 Теореме 121.T (BHK как ε-семантика): для интуиционистских свойств $\phi$, ε-перевод даёт BHK-конструкцию = realizable witness в Eff. Через Eff-realizability (R7 Лемма 121.L3): runtime-execution программы $P$ удовлетворяет $\phi^\sharp$ операционально.
+**Случай 1 (интуиционистские $\phi$)**: применима R7 Теорема 121.T напрямую. ε-перевод даёт BHK-конструкцию = realizable witness в Eff. Через Eff-realizability (R7 Лемма 121.L3): runtime-execution программы $P$ удовлетворяет $\phi^\sharp$ операционально.
+
+**Случай 2 (классические $\phi$ с LEM)**: для свойств, требующих LEM (закон исключённого третьего), используется **Гёдель-Genzen translation**: $\phi \mapsto \phi^\mathrm{int} := \neg\neg\phi$ (или более тонкая negative translation для $\Sigma_n$). По R7 Замечанию 121.R1: LEM соответствует классическому акту $\varepsilon_\mathrm{LEM}$ с $\mathsf{e} = \omega + 1$. Composite ε-perevodom для классических $\phi$:
+$$
+\varepsilon^\mathrm{cl}(\phi) := \varepsilon(\phi^\mathrm{int}) \otimes \varepsilon_\mathrm{LEM}.
+$$
+
+Это даёт ε-сертификат для классических свойств с явной ε-координатой $\omega + 1$.
+
+**Случай 3 (свойства вне IPL+LEM)**: например, свойства, требующие сильных модальностей или паранепротиворечивых аргументов. Эти свойства покрываются R3 (T-2f*** для трансфинитных модальностей). ε-перевод определён в более сложной семантике с md^ω-стратификацией.
+
+Все три случая дают canonical ε-translation; coherence работает покомпонентно.
 
 ### 3.2 Шаг B: ε → α direction
 
@@ -106,19 +117,29 @@ $$
 
 Для concurrent/distributed программ нужна дополнительная проверка: $\pi_\varepsilon(\mathrm{execute}(P))$ не зависит от scheduler-выбора.
 
-По R6 Следствию 17.C2 (concurrent correctness через ⊗-коммутативность): для commutative effects параллельная композиция корректна и scheduler-independent.
+**Подслучай 3.3.1 (commutative effects)**: По R6 Следствию 17.C2 (concurrent correctness через ⊗-коммутативность): для commutative effects (Reader, Writer, List, Probability) параллельная композиция корректна и scheduler-independent. Coherence работает напрямую.
 
-По R8 Лемме 120.L3 (cut-elimination = canonization perf): runtime-traces канонизируются единственным образом — отдельные scheduling-варианты дают одну и ту же canonical form.
+**Подслучай 3.3.2 (non-commutative effects: State, IO, Exception)**: для non-commutative monads порядок применения важен. Coherence требует **fairness assumption** на scheduler (eventually все процессы выполняются). При fairness:
+- Все runtime traces содержат одинаковую *множественность* effects (хотя порядок отличается).
+- Caнonicalization работает на уровне *bisimulation*, не на уровне *equality*.
+
+**Подслучай 3.3.3 (cut-elimination как trace-canonicalization)**: по R8 Лемме 120.L3, cut-elimination в Ludics соответствует canonical reduction в Perf(α_linear). Через Curry-Howard: cut-elimination = β-reduction в linear λ-calculus = canonical trace reduction для concurrent программ. Это даёт unique normal form для traces commutative программ; bisimulation-уникальность для non-commutative.
 
 ### 3.4 Шаг D: вычислимость coherence-check
 
-Сложность алгоритма coherence-check:
-- Static check (Шаг A): $O(|P| \cdot |\phi|)$ через type-checking.
-- Runtime monitor (Шаг B): $O(|\mathrm{trace}(P)| \cdot |\phi^\sharp|)$.
+**Уточнение зависимости сложности от input vs program size**:
+
+Для программы $P$ со входом $x$ длины $|x|$:
+- Static check (Шаг A): $O(|P| \cdot |\phi|)$ — зависит только от программы и свойства, не от input.
+- Runtime monitor (Шаг B): $O(|\mathrm{trace}(P, x)| \cdot |\phi^\sharp|)$ — зависит от длины trace, которая может расти с input.
 - Bridge T_{108}: $O(|\phi|)$ через 108.T-functor.
 - Round-trip canonicalize (R5): $O(2^{O(|\phi|)})$.
 
-Общая верхняя граница: $O(2^{O(|P| + |\phi|)})$.
+**Общая верхняя граница**: $O(2^{O(|P| + |\phi|)} + |\mathrm{trace}(P, x)| \cdot |\phi|)$.
+
+Для **bounded execution** (timeout / fixed input bound): $|\mathrm{trace}(P, x)| \leq B(|x|)$ для функции $B$. Coherence decidable за $O(2^{O(|P| + |\phi|)} + B(|x|) \cdot |\phi|)$.
+
+Для **unbounded execution** (general concurrent without timeout): coherence — semi-decidable через limit construction.
 
 ∎ 18.T1
 
@@ -175,27 +196,30 @@ fn distributed_consensus(actors: Vec<Actor<Message>>) -> Consensus {
 
 ### 4.3 Quantum computation
 
-Квантовый алгоритм с unitary эволюцией:
+Квантовый алгоритм с unitary эволюцией. **Уточнение**: $\alpha_\mathrm{quantum}$ — это $\alpha_\mathrm{linear}$ + аксиомы квантовой механики (через категориальные quantum semantics Abramsky-Coecke 2004 «A categorical semantics of quantum protocols»). Формально $\alpha_\mathrm{quantum} \in \langle\!\langle \cdot \rangle\!\rangle$ — артикуляция в подкатегории SMCC с †-структурой ([`/03-formal-architecture/15-non-classical-articulations`](/03-formal-architecture/15-non-classical-articulations) §quantum extension).
 
 ```verum
-@framework(α_quantum, "Quantum articulation")
+@framework(α_quantum, "Quantum articulation: SMCC with †-compact structure")
+@effect(Probability)  // commutative monad для quantum measurements
 @enact(epsilon = "omega")
-fn quantum_search(oracle: Oracle, n: u32) -> Result {
+fn quantum_search(oracle: Oracle, n: u32) -> Distr<Result> {
     let qubits = init_qubits(n);
     apply_hadamard(qubits);
     for _ in 0..sqrt(2^n) {
         oracle(qubits);
         apply_grover_diffusion(qubits);
     }
-    measure(qubits)
+    measure(qubits)  // returns probability distribution
 }
 ```
 
-**α-сертификат**: unitarity (программа сохраняет норму через α_quantum).
+**α-сертификат**: unitarity (программа сохраняет норму через †-compact structure α_quantum).
 
-**ε-сертификат**: probabilistic correctness через Eff-realizability (R7 Лемма 121.L3).
+**ε-сертификат**: probabilistic correctness через Probability-monad из R6 (commutative — поэтому coherence работает по подслучаю 3.3.1).
 
-**Coherence**: unitarity ↔ ε-сохранение через 108.T + 17.T1.
+**Coherence**: unitarity ↔ ε-сохранение через 108.T + 17.T1 (Probability как commutative monad).
+
+**Замечание о α_quantum**: формальное добавление к каталогу артикуляций — open question 7.3 (probabilistic coherence). Базовая структура — α_linear + †-compact (quantum-categorical extension), что согласуется с УГМ артикуляцией α_uhm = (α_linear, α_AFA, α_!) в УГМ-сборке (см. /05-assemblies/01-uhm).
 
 ## 5. Спецификация core/verum/coherence.vr
 

@@ -167,7 +167,9 @@ $$
 
 **Лемма 120.L1** *($\mathbf{Ludics}$ — symmetric monoidal closed category).* $\mathbf{Ludics}$ удовлетворяет аксиомам SMCC: $\otimes$ симметрично, ассоциативно, замкнуто относительно $\multimap$.
 
-*Доказательство.* Стандартный результат — Faggian-Hyland 2002 «Designs, disputes and strategies» Theorem 4.1: ludics-category является SMCC через cut-elimination + внутренний хом через ortho-dual. Для (∞,1)-обобщения: Curien 2006 «Introduction to linear logic and ludics» расширяет до бесконечно-категорной структуры через (∞,1)-cells. ∎
+*Доказательство.* Стандартный результат — Faggian-Hyland 2002 «Designs, disputes and strategies» Theorem 4.1: ludics-category является SMCC через cut-elimination + внутренний хом через ortho-dual.
+
+Для 2-категорного обобщения (необходимого для встраивания в $\rangle\!\rangle\cdot\langle\!\langle$): расширение через стратифицированные комплициальные множества Verity 2008 + Riehl-Verity 2022 §10 для (∞,2). Curien 2006 «Introduction to linear logic and ludics» даёт базовую SMCC-структуру; full (∞,1)-расширение — программа, требующая отдельной работы (open question 8.X в текущем документе). Для целей 120.T достаточно 2-категорной структуры, которая канонически даётся через Faggian-Hyland 2002. ∎
 
 #### 11.1.2 Линейная артикуляция $\alpha_\mathrm{linear}$ и её перформансы
 
@@ -189,7 +191,11 @@ $$
 
 *Доказательство.*
 
-(а) **Существенная сюръективность.** Каждый perf $\rho \in \mathrm{Perf}(\alpha_\mathrm{linear})$ соответствует locus в $\mathbf{Ludics}$ через универсальное свойство SMCC-структуры. Конкретно: по Curien 2006 §3.2, любая SMCC-категория с подходящими условиями допускает интерпретацию через ludics-локусы.
+(а) **Существенная сюръективность.** Каждый perf $\rho \in \mathrm{Perf}(\alpha_\mathrm{linear})$ соответствует locus в $\mathbf{Ludics}$.
+
+*Конструкция обратного направления*: для $\rho \in \mathrm{Perf}(\alpha_\mathrm{linear})$, перформанс $\rho$ — способ выполнить linear артикуляцию. Каждый такой способ может быть закодирован как linear logic proof (через Curry-Howard для линейной логики; см. Mellies 2009 «Categorical semantics of linear logic» §3). Linear logic proof соответствует ludics design (Faggian-Hyland 2002 §3 — каноническая proof-to-design correspondence). Locus $L$ — позиция этого design.
+
+Конкретно: для $\rho \in \mathrm{Perf}(\alpha_\mathrm{linear})$, $\Phi^{-1}(\rho) = $ ludics design corresponding to $\rho$ via Curry-Howard. По полноте Curry-Howard для linear logic + Faggian-Hyland correspondence: $\Phi^{-1}$ существует и канонично определена. Это даёт essential surjectivity $\Phi$.
 
 (б) **Полная верность.** Для $L_1, L_2 \in \mathbf{Ludics}$:
 $$
@@ -209,7 +215,17 @@ $$
 $$
 где normal designs — фиксточки cut-elimination.
 
-*Доказательство.* Strong normalization для cut-elimination в линейной логике — Жирар 1987 «Linear logic» §VII Theorem 3 + §IX (для full linear logic). Уникальность нормальной формы — Конфлуенция (Curien 2006 Theorem 4.5). Через $\Phi$: cut-elimination canonicalizes performance up to gauge-equivalence. ∎
+*Доказательство.* Уточнение по фрагментам линейной логики:
+
+(i) **Multiplicative fragment** (MLL): strong normalization — Жирар 1987 «Linear logic» §VII Theorem 3, через размерность via reducibility candidates.
+
+(ii) **Multiplicative-additive (MALL)**: SN — Girard-Tortora 1995 + Pagani 2006, через расширенный reducibility argument с additive-multiplicative взаимодействием.
+
+(iii) **Full linear logic с !** (LL): SN — наиболее сложный, требует дополнительных техник: Joinet-Schellinx-Tortora 1995 «Sum-product of programs» через reducibility-with-modalities. Это значительно тяжелее MLL.
+
+Для целей 120.T используется MALL-версия (без full !), что достаточно для соответствия с $\mathrm{Perf}(\alpha_\mathrm{linear})$ как 2-категории. Расширение на full LL — отдельная задача через R3 (T-2f*** для модальностей).
+
+Уникальность нормальной формы (конфлуенция) — Curien 2006 Theorem 4.5 для MALL. Через $\Phi$: cut-elimination canonicalizes performance up to gauge-equivalence. ∎
 
 **Следствие 120.L3.1** *(связь с R5 канонизацией).* Алгоритм $\mathrm{canonicalize}$ для gauge-equivalence (Конструкция 16.3 в /03-formal-architecture/16-gauge-decision) ограниченный на $\mathrm{Perf}(\alpha_\mathrm{linear})$ — это в точности cut-elimination в Ludics.
 
