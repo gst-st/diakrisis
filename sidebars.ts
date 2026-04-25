@@ -170,6 +170,7 @@ const sidebars: SidebarsConfig = {
         '12-actic/07-beyond-metastemology',
         '12-actic/08-formal-logical-dc',
         '12-actic/09-verum-stdlib-sketch',
+        '12-actic/10-implementation-status',
       ],
     },
   ],

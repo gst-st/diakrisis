@@ -1,27 +1,30 @@
 ---
 sidebar_position: 9
-title: Эскиз stdlib Verum для ядра Актика (core.action.*)
+title: Активный план интеграции Актика+Verum (core.action.*)
 ---
 
-# Эскиз stdlib Verum для core.action.*
+# Активный план интеграции Актика через Verum
 
-## 0. Мотивация
+## 0. Статус и контекст
 
-**Verum** — прувер-ассистирующий язык проекта. Его стандартная библиотека содержит:
+**Статус**: активный план интеграции. Verum — системный язык со встроенной формальной верификацией, типами уточнения и поддержкой доказательств. Архитектура верификации построена на основаниях Diakrisis: правило ядра K-Refine реализует T-2f\* (стратификацию по глубине, парадокс-иммунность); девятиступенчатая лестница верификации даёт градации строгости от runtime до certified; декларации `@framework(name, citation)` — first-class data, без модификации ядра. Сопряжение $\alpha \dashv \varepsilon$ обеспечено правилами ядра K-Adj-Unit/K-Adj-Counit, что делает Морита-двойственность из 108.T верифицируемой на уровне ядра.
 
-- `core.math.frameworks` — артикуляции (ZFC, HoTT, CIC, LinLogic, etc.)
+Стандартная библиотека Verum уже содержит:
+
+- `core.math.frameworks` — артикуляции (ZFC, HoTT, CIC, линейная логика и т. д.)
 - `core.theory_interop` — межартикуляционные редукции
 - `core.proof` — доказательственные стратегии
 - `core.verify` — верификация
+- **`core.action.*`** — *уже спроектирована* (см. ниже)
 
-По 108.T каждой артикуляции $\alpha$ соответствует акт $\varepsilon(\alpha)$. Полный интерфейс Verum должен содержать **параллельный** слой:
+По 108.T каждой артикуляции $\alpha$ соответствует акт $\varepsilon(\alpha)$. Дуальный слой `core.action.*`:
 
-- `core.action.primitives` — базовые акты ($\varepsilon_\mathrm{math}, \varepsilon_\mathrm{compute}$, etc.)
+- `core.action.primitives` — базовые акты ($\varepsilon_\mathrm{math}, \varepsilon_\mathrm{compute}$ и т. д.)
 - `core.action.enactments` — практики и их композиция
-- `core.action.gauge` — gauge-свобода координаций
+- `core.action.gauge` — калибровочная свобода координаций
 - `core.action.verify` — верификация практик (дуал `core.verify`)
 
-Этот документ — **эскиз** этого слоя.
+21 теорема Актики (107.T–127.T) + 4 дуальных закрытия (138.T–141.T) формализуемы через декларации `@framework` как first-class data. Этот документ — активный план реализации в 10 шагов.
 
 ## 1. core.action.primitives
 
@@ -250,16 +253,184 @@ fn live_by_uhm() -> Practice {
 
 ## 10. Значимость для Verum-проекта
 
-Эскиз `core.action.*` — это ключевая дифференциация Verum от Coq / Lean / Agda:
+`core.action.*` — это ключевая дифференциация Verum от Coq / Lean / Agda:
 
 1. **Нативный ДЦ-слой** — ни один другой прувер не имеет его.
-2. **Дуальность** с теоретическим слоём — верифицируемо, не просто аннотации.
+2. **Двойственность** с теоретическим слоём — верифицируемо через kernel-правила (K-Adj-Unit, K-Adj-Counit), не просто аннотации.
 3. **ε-аудит** — количественная метрика практики параллельно количественной метрике теории.
-4. **Бесшовная интеграция УГМ** через 108.T-дуализацию.
+4. **Бесшовная интеграция УГМ** через 108.T-двойственность.
 
 Это делает Verum **единственным прувером с каноническим ДЦ-ассистированием**. Ни Coq, ни Lean, ни Agda не имеют подобного слоя.
 
-## 11. Ссылки
+## 11. Активный 10-шаговый план интеграции
+
+На основе анализа архитектуры верификации Verum выработан конкретный план в 10 шагов с привязкой к существующим API стандартной библиотеки:
+
+### Шаг 1 (нед. 1-2) — Декларация Diakrisis frameworks
+
+Файл: `core/math/frameworks/diakrisis.vr`
+
+```verum
+@framework(diakrisis_con, "107.T: Con(Актика+Diakrisis) = Con(ZFC+2-inacc)")
+@framework(diakrisis_morita, "108.T: AC/OC Морита-двойственность")
+@framework(diakrisis_nogo, "109.T: дуал-AFN-T")
+@framework(diakrisis_kernel, "138.T: ядро дуальной калибровочной сюръекции")
+@framework(diakrisis_initial, "139.T: инициальность Актики в Meta_Cls^⊤,E")
+```
+
+**Приёмочный критерий**: `verum check core/math/frameworks/diakrisis.vr` без ошибок.
+
+### Шаг 2 (нед. 2-3) — Расширение enactment primitives
+
+Файл: `core/action/primitives.vr`
+
+Добавляются примитивы:
+- `ε_act: Action` — атомарный акт
+- `ε_interact: Action × Action → Action` — интеракция (Жирар-style)
+- `ε_compose_seq: Action → Action → Action` — последовательная композиция (cut-rule)
+- `ε_compose_par: Action → Action → Action` — параллельная (тензорный продукт)
+
+Тип `Action = (articulation: Articulation, epsilon: Enactment)`.
+
+**Приёмочный критерий**: тестовые случаи композиции в `tests/action/primitives_test.vr`.
+
+### Шаг 3 (нед. 3-4) — ε-индукция и ε-audit
+
+Файл: `core/action/enactments.vr` + CLI `verum audit --epsilon`.
+
+Авто-индукция $\varepsilon(\alpha)$ из 108.T:
+
+```verum
+fn epsilon(alpha: Articulation) -> Enactment =
+    Enactment::syntactic_self(alpha)
+```
+
+CLI: `verum audit --epsilon src/` — печать ε-распределения корпуса.
+
+**Приёмочный критерий**: `epsilon(Articulation::zfc) : Enactment` тип-проверяется; CLI работает на тестовом корпусе.
+
+### Шаг 4 (нед. 4-5) — Actor-model encoding
+
+Файл: `core/action/actor_model.vr` (пример, не stdlib built-in).
+
+```verum
+type Actor<M> = (
+    identity: String,
+    mailbox: Queue<M>,
+    behavior: M → Action,
+)
+
+fn send(a: Actor<M>, m: M) -> Unit
+fn receive(a: Actor<M>) -> M
+```
+
+Реализация через расширения `core.action.primitives` + `enact_par`.
+
+**Приёмочный критерий**: actor-Hello-World пример проходит `@verify(formal)`.
+
+### Шаг 5 (нед. 5-6) — Теоремы 110.T-127.T + 138.T-141.T как framework axioms
+
+Файл: `core/math/frameworks/diakrisis_actic.vr`
+
+Каждая теорема — `@framework(diakrisis_NNN, "...")` декларация с `ensures`-условием.
+
+22 теоремы (110.T-127.T = 18 + 138.T-141.T = 4).
+
+**Приёмочный критерий**: все теоремы под `@verify(formal)` или строже.
+
+### Шаг 6 (нед. 6-7) — BHK-style proof encoding
+
+Файл: `core/proof/bhk.vr`
+
+```verum
+type BHKConstruction<P: Prop> = (
+    proof: P,
+    witness: ConstructiveWitness,
+)
+```
+
+`@enact(epsilon = "ε_prove")` proof-блоки авто-извлекают `ConstructiveWitness`.
+
+**Приёмочный критерий**: BHK-коррелят для каждой инициальной алгебры в Verum runtime.
+
+### Шаг 7 (нед. 7-8) — Ludics через orthogonality
+
+Файл: `core/action/ludics.vr` (пример).
+
+```verum
+type Design<A> = (
+    interactions: Set<Interaction>,
+    orthogonal: Design<A> → Bool,
+)
+```
+
+`orthogonal` через `gauge_equivalent` из Layer 1.
+
+**Приёмочный критерий**: ludics cut-elimination проходит формальную проверку.
+
+### Шаг 8 (нед. 8-9) — π-calculus types
+
+Файл: `core/action/pi_calculus.vr`
+
+```verum
+enum Process =
+    Name(String) |
+    Send(Name, Value, Process) |
+    Receive(Name, x: String, Process) |
+    Parallel(Process, Process) |
+    Restrict(Name, Process)
+```
+
+`Parallel` — синтаксический сахар над `enact_par`.
+
+**Приёмочный критерий**: π-calculus reduction rules проходят `@verify(proof)`.
+
+### Шаг 9 (нед. 9-10) — Verification-audit pipeline
+
+`verum audit --epsilon` распределение по корпусу + `verum audit --coord` с Актика-координатами.
+
+CI-тест: все 107.T-127.T + 138.T-141.T теоремы верифицированы под `@verify(formal)` или строже.
+
+**Приёмочный критерий**: CI green; audit-отчёт в `audit-reports/actic-verum.json`.
+
+### Шаг 10 (нед. 10+) — Morita-двойственность round-trip test
+
+Файл: `core/theory_interop/bridges/oc_dc_bridge.vr`
+
+```verum
+fn translate(α: OC_Articulation) -> ε(α): DC_Enactment
+fn inverse(ε: DC_Enactment) -> α: OC_Articulation
+```
+
+Свойство round-trip: `inverse(translate(α)) ≡ α` (modulo gauge).
+
+**Приёмочный критерий**: round-trip property для всех 132 OC-теорем + 21 AC-теоремы (108.T extension).
+
+## 12. Зависимости между шагами
+
+```
+Шаг 1 (frameworks) ──┐
+                     ├─→ Шаг 2 (primitives) ──→ Шаг 3 (ε-audit)
+                     │                              │
+                     │                              ├─→ Шаг 4 (actor) ──┐
+                     │                              │                   │
+Шаг 5 (theorems) ────┴─→ Шаг 6 (BHK) ──────────────┴─→ Шаг 7 (ludics) ─┤
+                                                                       │
+                                                Шаг 8 (π-calculus) ────┤
+                                                                       │
+                                                        Шаг 9 (audit) ─┴─→ Шаг 10 (round-trip)
+```
+
+## 13. Долгосрочные расширения
+
+После Шага 10 — следующие исследовательские программы:
+
+- **(∞,∞)-categories formalization**: расширение `core.math.infinity_category` до полных $(\infty, \infty)$, что покрывает 140.T (ε-инвариант на (∞,∞)-уровне).
+- **Linear types enforcement (V2)**: переход от deklaration discipline к kernel-уровневой проверке для квантованных actions.
+- **Effect system**: native effect-handling в Verum, поддерживающий concurrent / async / IO.
+- **T-2f\*\*\* омега-modal stratification**: расширение K-Refine для трансфинитных модальных рангов (136.T).
+
+## 14. Ссылки
 
 - [`/12-actic/00-foundations`](/12-actic/00-foundations) — обзор.
 - [`/12-actic/08-formal-logical-dc`](/12-actic/08-formal-logical-dc) — формально-логическое основание.

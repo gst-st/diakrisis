@@ -253,7 +253,7 @@ title: План развития
 
 ## Phase α-ε детальный план (на основе аудитов H3-H6)
 
-После систематического engineering + competitive + industrial аудита (`internal/audit-noesis-engineering-industrial.md`) выделены явные production-gaps. Детальный план их закрытия:
+На основе систематического инженерного, конкурентного и промышленного аудита выделены явные production-gaps. Детальный план их закрытия:
 
 ### Phase α: MVP Foundational (Q3 2026 — Q1 2027)
 
