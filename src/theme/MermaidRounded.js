@@ -146,22 +146,38 @@ function showFullscreen(sourceSvg) {
   const stage = document.createElement('div');
   stage.className = 'mermaid-fullscreen-stage';
 
-  // Clone the SVG and the diagram needs viewBox + sizing to render
-  const clone = sourceSvg.cloneNode(true);
-  clone.classList.add('mermaid-fullscreen-svg');
-
-  // Mermaid may set max-width: 100% on the SVG style; keep it but ensure visibility
+  // Re-parse via outerHTML — browser recalculates layout and avoids cloneNode quirks
   const sourceRect = sourceSvg.getBoundingClientRect();
-  if (!clone.getAttribute('viewBox') && sourceRect.width > 0 && sourceRect.height > 0) {
-    clone.setAttribute('viewBox', `0 0 ${sourceRect.width} ${sourceRect.height}`);
+  const sourceWidth = sourceRect.width || sourceSvg.viewBox?.baseVal?.width || 800;
+  const sourceHeight = sourceRect.height || sourceSvg.viewBox?.baseVal?.height || 600;
+
+  // Get raw SVG markup
+  const rawSvg = sourceSvg.outerHTML;
+  // Re-namespace IDs in the raw markup string to avoid collisions with the source
+  const suffix = '_fs_' + Math.random().toString(36).slice(2, 8);
+  const idsInSvg = Array.from(sourceSvg.querySelectorAll('[id]')).map(el => el.id);
+  let processedSvg = rawSvg;
+  idsInSvg.forEach(oldId => {
+    const escaped = oldId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const newId = oldId + suffix;
+    // id="oldId" → id="newId"
+    processedSvg = processedSvg.replace(new RegExp(`id="${escaped}"`, 'g'), `id="${newId}"`);
+    // url(#oldId) → url(#newId)
+    processedSvg = processedSvg.replace(new RegExp(`url\\(#${escaped}\\)`, 'g'), `url(#${newId})`);
+    // href="#oldId" → href="#newId"
+    processedSvg = processedSvg.replace(new RegExp(`href="#${escaped}"`, 'g'), `href="#${newId}"`);
+  });
+
+  // Inject into stage via innerHTML — browser parses fresh
+  stage.innerHTML = processedSvg;
+  const clone = stage.querySelector('svg');
+  if (clone) {
+    clone.classList.add('mermaid-fullscreen-svg');
+    if (!clone.getAttribute('viewBox') && sourceWidth > 0 && sourceHeight > 0) {
+      clone.setAttribute('viewBox', `0 0 ${sourceWidth} ${sourceHeight}`);
+    }
+    clone.style.cssText = 'max-width:92vw;max-height:88vh;width:auto;height:auto;display:block;pointer-events:none;';
   }
-  // Force visible inline styles to override any inherited rules
-  clone.style.cssText = 'max-width:92vw;max-height:88vh;width:auto;height:auto;display:block;pointer-events:none;';
-
-  // Re-namespace internal IDs so url(#...) refs in defs/markers point to clone, not original
-  reidSvg(clone);
-
-  stage.appendChild(clone);
 
   const toolbar = document.createElement('div');
   toolbar.className = 'mermaid-fullscreen-toolbar';
