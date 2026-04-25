@@ -11,10 +11,10 @@ title: AFN-T — граничная лемма
 
 **Каноническое изложение** находится в препринте (*The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026):
 
-- **AFN-T (combined)** = MSFS Theorem `thm:afnt` (§5--§6).
+- **AFN-T (combined)** = MSFS Theorem `thm:afnt-alpha` (§5--§6).
 - **AFN-T (α-часть)**: Boundary Lemma: The Emptiness of уровень 6 = MSFS Theorem `thm:afnt-alpha` (§5). Синтаксис-семантический мост: $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$, $\id_X$ нарушает $(\Pi_4)$.
 - **AFN-T (β-часть)**: Boundary Lemma: No Limit-Based Escape = MSFS Theorem `thm:afnt-beta` (§6). Трансфинитные приближения остаются в $\cS_S^{\mathrm{global}}$; proper-class-башни через Proposition `prop:proper-class`.
-- **пятиосевая абсолютность AFN-T** = MSFS Theorem `thm:five-axis` (§7).
+- **пятиосевая абсолютность AFN-T** = MSFS Theorem thm:horizontal--thm:completeness (§7).
 
 Настоящий документ сохраняет Diakrisis-контекст (мотивация, канонический примитив, связь с внутренней аксиоматикой); формальные утверждения и доказательства — в препринте. Таблица соответствия номеров: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
@@ -52,7 +52,7 @@ title: AFN-T — граничная лемма
 
 ### AFN-T
 
-**Утверждение** (MSFS `thm:afnt`): для любой $S \in \mathrm{R\text{-}S}$ и любого $n \in \mathbb{N} \cup \{\infty\}$ не существует объекта $X$, удовлетворяющего $(F_S) \wedge (\Pi_{4,S,n}) \wedge (\Pi_{3\text{-max},S,n})$.
+**Утверждение** (MSFS `thm:afnt-alpha`): для любой $S \in \mathrm{R\text{-}S}$ и любого $n \in \mathbb{N} \cup \{\infty\}$ не существует объекта $X$, удовлетворяющего $(F_S) \wedge (\Pi_{4,S,n}) \wedge (\Pi_{3\text{-max},S,n})$.
 
 **Следствие**: уровень 6 иерархии ([`/00-foundations/05-level-hierarchy`](/00-foundations/05-level-hierarchy)) формально пуст: $\mathcal{L}_6 = \emptyset$ (в препринте — $\mathcal{L}_{\mathrm{Abs}} = \emptyset$, мнемоническая нотация).
 
@@ -70,7 +70,7 @@ AFN-T формулируется через объекты, но её содер
 
 ## Пять осей абсолютности — пятиосевая абсолютность AFN-T
 
-См. [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) и MSFS §7 (Theorem `thm:five-axis` + Remark `rem:axes-dependence`).
+См. [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) и MSFS §7 (Theorem thm:horizontal--thm:completeness).
 
 **Короткая форма**:
 
@@ -82,7 +82,7 @@ AFN-T формулируется через объекты, но её содер
 | Латеральная (альт.\ orderings) | 84.T | `thm:lateral` |
 | Полноты (Ловер-scope) | 87.T | `thm:completeness` |
 
-**Ключевое уточнение препринта** (`rem:axes-dependence`): пять осей логически зависимы — horizontal subsumes completeness; lateral ≡ vertical; meta-vertical = μ-closure of vertical. Минимальный логически независимый набор — **2 оси** (горизонтальная + вертикальная). Пятиосевая формулировка сохранена pedagogically для обзора обход-аргументов.
+**Ключевое уточнение препринта** ((removed in current MSFS state)): пять осей логически зависимы — horizontal subsumes completeness; lateral ≡ vertical; meta-vertical = μ-closure of vertical. Минимальный логически независимый набор — **2 оси** (горизонтальная + вертикальная). Пятиосевая формулировка сохранена pedagogically для обзора обход-аргументов.
 
 ## Три обход-paths — формальное закрытие
 
@@ -108,7 +108,7 @@ Diakrisis не воспроизводит это positioning — см. MSFS §10
 
 ## Дуал: 109.T (Dual-AFN-T) через 108.T
 
-AFN-T имеет симметричный ДЦ-дуал 109.T, устанавливаемый через 108.T (AC/OC Морита-дуальность, MSFS §11):
+AFN-T имеет симметричный ДЦ-дуал 109.T, устанавливаемый через 108.T (AC/OC Морита-дуальность, MSFS §10):
 
 $$
 \LAbs = \emptyset \quad \xleftrightarrow{\text{108.T}} \quad \LAbsE = \emptyset.

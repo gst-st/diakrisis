@@ -9,7 +9,7 @@ title: Абсолютность AFN-T (пять осей)
 
 **пятиосевая абсолютность AFN-T** — пятиосевая абсолютность AFN-T: теорема справедлива равномерно по **всем** структурным осям вариации формальной математики.
 
-**Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §7, Theorem `thm:five-axis`.
+**Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §7, Theorem thm:horizontal--thm:completeness.
 
 Настоящий документ содержит Diakrisis-специфическую интерпретацию пяти осей и их связь с каноническим примитивом $(\langle\langle \cdot \rangle\rangle, \mathsf{M}, \alpha_\mathrm{math}, \sqsubset_\bullet)$.
 
@@ -23,11 +23,11 @@ title: Абсолютность AFN-T (пять осей)
 | **Латеральная** | $\xi$ (альтернативные categorical orderings) | 84.T | Theorem `thm:lateral` |
 | **Полноты** | $\pi$ (Ловер-scope) | 87.T | Theorem `thm:completeness` |
 
-Комбинированное утверждение — MSFS Theorem `thm:five-axis`: для каждого кортежа $(S, n, \mu, \xi, \pi)$ AFN-T справедлива.
+Комбинированное утверждение — MSFS Theorem thm:horizontal--thm:completeness: для каждого кортежа $(S, n, \mu, \xi, \pi)$ AFN-T справедлива.
 
 ## Логическая независимость осей
 
-**Важное уточнение** (MSFS Remark `rem:axes-dependence`): пять осей **не полностью логически независимы**:
+**Важное уточнение** (MSFS Remark (removed in current MSFS state)): пять осей **не полностью логически независимы**:
 
 - **completeness subsumes horizontal**: каждая R-S лежит в Ловер-scope $\mathcal{L}\mathcal{S}$ по (R5).
 - **lateral ≡ vertical**: альтернативные orderings редуцируются к $(\infty, n)$-Cat (Ara–Maltsiniotis, Барвик–Schommer-Pries).
@@ -52,7 +52,7 @@ title: Абсолютность AFN-T (пять осей)
 
 Независимость AFN-T от категорного уровня $n$. Прямое доказательство на уровне $(\infty, \infty)$ (MSFS Theorem `thm:direct-infty`, соответствует Diakrisis 66.T «$(\infty,\infty)$-Ловер fixed-point») использует Ловер FP в $(\infty, \infty)$-cartesian closed category $\mathcal{C}_S := \colim_n \mathrm{Syn}^{(\infty,n)}(S)$.
 
-**Важное ограничение** (MSFS Remark `rem:direct-infty-scope`): прямое доказательство на $(\infty, \infty)$ работает только для **классических** $S$ (Boolean internal logic). Для конструктивных $S$ (HoTT, MLTT, CIC, CZF) используется основная Theorem `thm:afnt` через Ламбек–Скотт reflection.
+**Важное ограничение** (MSFS Remark `rem:direct-infty-scope`): прямое доказательство на $(\infty, \infty)$ работает только для **классических** $S$ (Boolean internal logic). Для конструктивных $S$ (HoTT, MLTT, CIC, CZF) используется основная Theorem `thm:afnt-alpha` через Ламбек–Скотт reflection.
 
 Diakrisis-аналог: для $\alpha_\mathrm{hott}, \alpha_\mathrm{cic}, \alpha_\mathrm{int}$ применяется [T-α_c](/02-canonical-primitive/02-axiomatics#t-alpha-spec) (конструктивный вариант).
 

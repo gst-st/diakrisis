@@ -7,7 +7,7 @@ title: Структурные теоремы Актика (110.T–127.T)
 
 :::tip MSFS-первоисточник
 
-Теоремы 107.T–109.T имеют формальный аналог в **MSFS §11** (Theorem~
+Теоремы 107.T–109.T имеют формальный аналог в **MSFS §10** (Theorem~
 ef{thm:ac-oc-duality}, Corollary~\ref{cor:ac-oc-conservativity}, Theorem~
 ef{thm:dual-afnt}). Теоремы 110.T–127.T — Diakrisis-специфические расширения, не дублируемые в MSFS (они используют Diakrisis-only конструкции: $\mathsf{A}$-функтор, $\sqsupset_\bullet$, ε-инвариант, ОКА-стратификация). Полная таблица соответствия — [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) §«AC/OC-дуальность».
 

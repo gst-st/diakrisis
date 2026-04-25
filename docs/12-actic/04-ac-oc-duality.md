@@ -48,7 +48,7 @@ ef{thm:ac-oc-duality})
 - **Шаг F — Соответствие стратов**: $\varepsilon$ biject on стратах (Theorem~
 ef{thm:ac-oc-duality}(c)).
 
-Шаги A–F строго следуют MSFS §11 (Theorem~
+Шаги A–F строго следуют MSFS §10 (Theorem~
 ef{thm:ac-oc-duality} proof); ниже — изложение в Diakrisis-нотации с явными ссылками на технические источники.
 
 ## 3. Шаг A: объектная конструкция $\varepsilon(\alpha)$

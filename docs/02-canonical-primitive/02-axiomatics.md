@@ -236,7 +236,24 @@ $$\mathbf{T\text{-}\alpha_c}: \mathrm{constructively}\ \exists \gamma \in \mathr
 - Работа в $\alpha_{\mathrm{zfc}}, \alpha_{\mathrm{ncg}}, \alpha_{\mathrm{uhm}}$: использует классический T-α.
 - Работа в $\alpha_{\mathrm{int}}, \alpha_{\mathrm{hott}}, \alpha_{\mathrm{cic}}$: использует конструктивный T-α_c.
 
-**Совместимость**: оба варианта — варианты одной и той же аксиомы при соответствующем выборе мета-логики. Переход между ними — gauge-преобразование в meta-logical layer (logicality gauge).
+**Совместимость**: оба варианта — варианты одной и той же аксиомы при соответствующем выборе мета-логики. Переход между ними — gauge-преобразование в мета-логическом слое.
+
+#### Формальное определение мета-логического gauge
+
+**Мета-логический gauge** $\mathfrak{g}_{\mathrm{logic}}: \alpha_{\mathrm{class}} \to \alpha_{\mathrm{int}}$ есть 1-морфизм в $\langle\!\langle \cdot \rangle\!\rangle$, реализующий каноническое вложение Гёделя–Генцена интуиционистского фрагмента в классический:
+
+$$\mathfrak{g}_{\mathrm{logic}}: \mathrm{IPL} \hookrightarrow \mathrm{CPL} \quad \text{через } A \mapsto A^{\neg\neg}.$$
+
+Здесь $A^{\neg\neg}$ — двойно-отрицательное вложение Гёделя–Генцена–Колмогорова (ГГК-вложение). Свойства:
+
+1. **Функториальность**: $\mathfrak{g}_{\mathrm{logic}}$ — 2-функтор между подкатегориями $\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{int}} \subset \langle\!\langle \cdot \rangle\!\rangle$ и $\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{class}} \subset \langle\!\langle \cdot \rangle\!\rangle$.
+2. **Сохранение производных**: $\mathfrak{g}_{\mathrm{logic}}(\mathbf{T\text{-}\alpha}_c) = \mathbf{T\text{-}\alpha}$ (конструктивный вариант через ГГК отображается на классический).
+3. **Не-обратимость**: $\mathfrak{g}_{\mathrm{logic}}$ — не эквивалентность, поскольку $A \not\equiv A^{\neg\neg}$ в IPL для не-стабильных формул.
+4. **gauge-свойство**: при переходе между интуиционистской и классической рабочими настройками $\mathfrak{g}_{\mathrm{logic}}$ обеспечивает однозначное соответствие производных в общем (стабильном) фрагменте.
+
+**Применение в Diakrisis**: при работе в $\alpha_{\mathrm{int}}, \alpha_{\mathrm{hott}}, \alpha_{\mathrm{cic}}$ доказательство ведётся в интуиционистской мета-логике с $\mathbf{T\text{-}\alpha}_c$; результат отображается через $\mathfrak{g}_{\mathrm{logic}}$ в классическую настройку с $\mathbf{T\text{-}\alpha}$ как корректное (но более слабое) утверждение.
+
+**Замечание**: $\mathfrak{g}_{\mathrm{logic}}$ — *не* gauge в смысле автоморфизма $\langle\!\langle \cdot \rangle\!\rangle$ (Axi-1), а *межклассовое* отображение между gauge-классами $\alpha_{\mathrm{int}}$ и $\alpha_{\mathrm{class}}$. Терминологическая аккуратность: в данном контексте «gauge» используется в широком смысле — как структурно-сохраняющее преобразование между равноправными точками $\mathfrak{M}_\mathrm{Fnd}$, не обязательно автоморфизм.
 
 #### Обоснование
 

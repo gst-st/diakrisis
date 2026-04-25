@@ -60,7 +60,7 @@ $$
 | **$\mathcal{L}_5$** | $\alpha$ удовлетворяет (R1)–(R5): Rich formal system | $\kappa_1 \leq \nu(\alpha) < \kappa_2$ (как объект $\mathbf{StrCat}_{S, n}$) | ZFC, HoTT, CIC, ECC, NCG, MLTT, Eff, ∞-topos theory, Markov-конструктивизм, Бишоп-конструктивизм, Феферман-предикативизм |
 | **$\mathcal{L}_{5+}$** | meta-articulation $\mathfrak{A}$, удовлетворяет (M1)–(M5) | $\nu(\mathfrak{A}) \geq \kappa_2$ | Diakrisis, $\infty$-cosmoi (Риль–Верити), Univalent Foundations, cohesive higher topos (Шрайбер), Higher Algebra (Люри) |
 | **$\mathcal{L}_{5+}^{\max}$** | $\mathfrak{A} \in \mathcal{L}_{5+}$ + (Max-1)–(Max-4) | $\nu(\mathfrak{A}) \geq \kappa_2$ + full image $\mathfrak{M}_\mathrm{Fnd}$ | **Diakrisis** (единственная, 100.T условная категоричность) |
-| **$\mathcal{L}_6$** | $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$: абсолютное основание | $\nu$ выходит за Mahlo-иерархию R-S | **Пусто** по AFN-T (препринт теорема `thm:afnt`) |
+| **$\mathcal{L}_6$** | $(F_S) \wedge (\Pi_{4, S, n}) \wedge (\Pi_{3\text{-max}, S, n})$: абсолютное основание | $\nu$ выходит за Mahlo-иерархию R-S | **Пусто** по AFN-T (препринт теорема `thm:afnt-alpha`) |
 
 ### Тотальное упорядочение
 
@@ -180,13 +180,13 @@ $$
 
 ### $\mathcal{L}_5$ — основание (Rich formal system)
 
-**Структурно**: артикуляция $\alpha \in \mathcal{L}_5$ — объект в $\mathbf{StrCat}_{S, n}$, удовлетворяющий (R1)–(R5):
+**Структурно**: артикуляция $\alpha \in \mathcal{L}_5$ — объект в $\mathbf{StrCat}_{S, n}$, удовлетворяющий (R1)–(R5) определения MSFS `def:rs`:
 
-- **(R1)** PA-кодируемость: $\alpha$ интерпретирует арифметику Пеано.
-- **(R2)** Соответствие парам Куратовского и наличие impredicative comprehension схемы (или эквивалент).
-- **(R3)** Существование внутренней метатеории достаточной силы для самореференции.
-- **(R4)** Тотальная рекурсия: типы рекурсивных функций полные.
-- **(R5)** Морита-устойчивость: класс моделей $\alpha$ стабилен под Morita-эквивалентностью.
+- **(R1)** Арифметическая полнота: $\alpha$ интерпретирует арифметику Робинсона $\mathsf{Q}$.
+- **(R2)** Рекурсивная перечислимость: множество аксиом $\alpha$ рекурсивно перечислимо.
+- **(R3)** Существование модели: $\alpha$ имеет хотя бы одну модель $\mathcal{M}$ в объемлющем мета-универсуме $\mathbf{U}_2$ (соглашение `conv:zfc-inacc`).
+- **(R4)** Гёделево кодирование: существует рекурсивная инъекция $\ulcorner \cdot \urcorner : \mathrm{Formulas}(\alpha) \to \mathbb{N}$ с $\alpha$-определимыми предикатами доказуемости и оформленности.
+- **(R5)** Категорная семантика: существует $n_\alpha \in \mathbb{N} \cup \{\infty\}$ — внутренняя категорная глубина — такое что (R5a) $\mathrm{Syn}(\alpha)$ — $\kappa_\alpha$-доступная $(\infty, n_\alpha)$-категория с $\kappa_\alpha \in \{\kappa_1, \kappa_2\}$; (R5b) пара функторов $(\mathrm{Syn}, \mathrm{Mod})$ образует сопряжение Ламбека–Скотта, чьи единицы при $\mathrm{Syn}(\alpha)$ — $(\infty, n_\alpha)$-эквивалентность на начальную $\alpha$-структурированную $(\infty, n_\alpha)$-категорию.
 
 **𝖬-картина**: $\alpha \in \mathcal{L}_5$ удовлетворяет $\nu(\alpha) \geq \kappa_1$ в кардинальной стратификации 23.T1 (большой объект). Артикуляции могут иметь счётные $\nu$-значения (ω, ω+1, ω·2, …) в теоретико-доказательственной глубине, оставаясь большими как *объекты* $\mathbf{StrCat}_{S, n}$.
 
@@ -241,7 +241,7 @@ $$
 - **$(\Pi_{4, S, n})$** — $\infty$-нередуцируемость (нет Morita-эквивалентности к Level-5);
 - **$(\Pi_{3\text{-max}, S, n})$** — максимальная генеративность (5-уровневая абсолютность).
 
-**Теорема AFN-T** (препринт `thm:afnt`, Diakrisis как граничная лемма $\mathcal{L}_6 = \emptyset$).
+**Теорема AFN-T** (препринт `thm:afnt-alpha`, Diakrisis как граничная лемма $\mathcal{L}_6 = \emptyset$).
 
 **Пятиосевая абсолютность** (препринт §6 + `/06-limits/06-absoluteness`):
 
@@ -253,7 +253,7 @@ $$
 | Латеральная | $\xi$ (альтернативные порядки) | 84.T |
 | Полнота | (нет 5-й оси) | 87.T |
 
-**$\nu$-картина**: $\mathcal{L}_6$ потребовал бы $\nu > \mathrm{sup}_{S \in R\text{-}S} \nu(\mathsf{A}_S)$, что эквивалентно точке *вне* всей $(\infty, \infty)$-структуры $\mathfrak{M}_\mathrm{Fnd}$. Такая точка разрушила бы (R5) Морита-устойчивость → противоречие.
+**$\nu$-картина**: $\mathcal{L}_6$ потребовал бы $\nu > \mathrm{sup}_{S \in R\text{-}S} \nu(\mathsf{A}_S)$, что эквивалентно точке *вне* всей $(\infty, \infty)$-структуры $\mathfrak{M}_\mathrm{Fnd}$. Такая точка разрушила бы (R5b) единицу сопряжения Ламбека–Скотта на $\mathrm{Syn}(S)$ → противоречие.
 
 ## 4. Уровни как функциональные роли
 
@@ -299,7 +299,7 @@ $$
 
 - Не создаёт новую формальную основу — работает с существующими через $\langle\langle \cdot \rangle\rangle$.
 - Каждая «новая» конструкция редуцируется к известному аналогу (moduli-stack, accessible endofunctor, internal language).
-- Подпадает под AFN-T (препринт теорема `thm:afnt`).
+- Подпадает под AFN-T (препринт теорема `thm:afnt-alpha`).
 
 **Diakrisis не на уровне 5** (не является самостоятельным generator-ом):
 
@@ -374,7 +374,7 @@ $$
 - $\mathcal{L}_5$ через (R1)–(R5) (Definition `def:R`).
 - $\mathcal{L}_{5+}$ через (M1)–(M5) (Definition `def:meta`).
 - $\mathcal{L}_{5+}^{\max}$ через (Max-1)–(Max-4) (Definition `def:maximality`).
-- $\mathcal{L}_6$ через $(F_S) \wedge (\Pi_4) \wedge (\Pi_{3\text{-max}})$ (Theorem `thm:afnt`).
+- $\mathcal{L}_6$ через $(F_S) \wedge (\Pi_4) \wedge (\Pi_{3\text{-max}})$ (Theorem `thm:afnt-alpha`).
 
 Уровни $\mathcal{L}_0$..$\mathcal{L}_4$ **не вводятся в препринте** — они являются Diakrisis-локальным уточнением для внутренней классификации мат-деятельности.
 
@@ -396,7 +396,7 @@ $$
 | $\mathcal{L}_{5+}$ условия (M1)–(M5) | $\mathcal{L}_{\mathrm{Cls}}$ через Definition `def:meta` |
 | $\mathcal{L}_{5+}^{\max}$ условия (Max-1)–(Max-4) | $\mathcal{L}_{\mathrm{Cls}}^{\top}$ через Definition `def:maximality` |
 | $\mathcal{L}_6$ условия $(F), (\Pi_4), (\Pi_{3\text{-max}})$ | $\mathcal{L}_{\mathrm{Abs}}$ через Definitions `def:F`, `def:pi4`, `def:pi3max` |
-| $\mathcal{L}_6 = \emptyset$ | $\mathcal{L}_{\mathrm{Abs}} = \emptyset$ по Theorem `thm:afnt` |
+| $\mathcal{L}_6 = \emptyset$ | $\mathcal{L}_{\mathrm{Abs}} = \emptyset$ по Theorem `thm:afnt-alpha` |
 | $\nu$-инвариант и его стратификация | *Diakrisis-only* (23.T1, `/03-formal-architecture/08-cardinal-analysis`) |
 | Уровни 0, 1, 2, 3, 4 | *Diakrisis-only* (настоящий документ) |
 

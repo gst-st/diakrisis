@@ -28,9 +28,9 @@ ef{thm:afnt-alpha} | Boundary Lemma: Emptiness of уровень 6 ((α)-Part) |
 | **AFN-T (β-часть)** (β-часть) | Theorem~
 ef{thm:afnt-beta} | Boundary Lemma: No Limit-Based Escape ((β)-Part) | Трансфинитные приближения остаются в $\cS_S^{\mathrm{global}}$; proper-class-башни через Proposition~\ref{prop:proper-class} |
 | **AFN-T** | Theorem~
-ef{thm:afnt} | Combined AFN-T | $\mathcal{L}_{\mathrm{Abs}}$ структурно пуст как следствие |
+ef{thm:afnt-alpha} | Combined AFN-T | $\mathcal{L}_{\mathrm{Abs}}$ структурно пуст как следствие |
 | **пятиосевая абсолютность AFN-T** | Theorem~
-ef{thm:five-axis} | Five-Axis Absoluteness | Пять осей абсолютности граничной леммы |
+ef{thm:horizontal--thm:completeness} | Five-Axis Absoluteness | Пять осей абсолютности граничной леммы |
 
 ### Пять осей абсолютности
 
@@ -126,9 +126,9 @@ ef{thm:meta-cat} («$\mathcal{L}_{\mathrm{Cls}}^{\top}$ non-empty?») | Свод
 
 **Граница**: MSFS документирует 107.T–109.T как формальный minimum AC/OC-дуальности. Всё сверх — Diakrisis-specific. Эти теоремы не могут быть процитированы в MSFS-контексте без перевода в MSFS-язык (который потребует добавления $\mathsf{A}$-функтора, ε-инварианта и Diakrisis-аксиоматики).
 
-### AC/OC-дуальность и дуальная граничная лемма (MSFS §11)
+### AC/OC-дуальность и дуальная граничная лемма (MSFS §10)
 
-MSFS §11 «AC/OC Duality and the Dual Boundary Lemma» — формальная версия Актика-слоя Diakrisis. Содержит восемь labelled results:
+MSFS §10 «AC/OC Duality and the Dual Boundary Lemma» — формальная версия Актика-слоя Diakrisis. Содержит восемь labelled results:
 
 | Diakrisis | MSFS | Название |
 |---|---|---|
@@ -143,7 +143,7 @@ ef{thm:ac-oc-duality} | AC/OC Морита-дуальность: $\fM \simeq_{(\
 ef{thm:dual-afnt} | Dual Boundary Lemma: $\LAbsE = \emptyset$ двумя независимыми путями |
 | (вспом.) | Theorem~
 ef{thm:dual-five-axis} | Dual five-axis absoluteness (дуал Theorem~
-ef{thm:five-axis}) |
+ef{thm:horizontal--thm:completeness}) |
 | (вспом.) | Figure~\ref{fig:ac-oc-duality} | Диаграмма AC/OC-дуальности с бijекцией стратов |
 
 ### Соответствие Актика-объектов
@@ -151,9 +151,9 @@ ef{thm:five-axis}) |
 | Diakrisis | MSFS | Комментарий |
 |---|---|---|
 | $\rangle\!\rangle \cdot \langle\!\langle$ (метакатегория актов) | $\cE$ (Definition~\ref{def:enactments}) | В MSFS объекты — квадруплы $(F, \cC, \iota, r)$ с reflector'ом $r$ как частью данных; Diakrisis-абстрактное $\varepsilon$ ∈ $\rangle\!\rangle \cdot \langle\!\langle$ инстанциируется как такой квадрупл |
-| $\mathsf{A}$ (активация) | (не используется в MSFS §11) | Diakrisis-specific. MSFS не нуждается в endo-функторе $\mathsf{A}$ — дуальность прямо через $\varepsilon \dashv \alpha$ |
+| $\mathsf{A}$ (активация) | (не используется в MSFS §10) | Diakrisis-specific. MSFS не нуждается в endo-функторе $\mathsf{A}$ — дуальность прямо через $\varepsilon \dashv \alpha$ |
 | $\varepsilon_\mathrm{math}$ | $\varepsilon(\alpha_\mathrm{math}) = (F_{\mathrm{math}}, \Syn, \id, \id)$ | Каноническая syntactic self-enactment |
-| $\sqsupset_\bullet$ (активационное предшествование) | (не используется в MSFS §11) | Diakrisis-specific; заменяется стандартным $(\infty, n)$-Morita-reducibility |
+| $\sqsupset_\bullet$ (активационное предшествование) | (не используется в MSFS §10) | Diakrisis-specific; заменяется стандартным $(\infty, n)$-Morita-reducibility |
 | A-0..A-9 + T-ε + T-2a\* + T-ε_c | (не используются в MSFS) | Diakrisis-специфическая параллельная аксиоматика |
 | $\mathfrak{E}_\mathrm{Fnd}$ | $\fM_\cE$ (Theorem~
 ef{thm:ac-oc-duality}) | Classifying $2$-stack of $\cE$ |
