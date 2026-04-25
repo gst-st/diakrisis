@@ -90,7 +90,7 @@ ef{thm:afnt-beta} | 06-limits/02-th-final | — | — | — |
 | Combined AFN-T | Theorem~
 ef{thm:afnt-alpha} | 06-limits/02-th-final | — | — | — |
 | Five-axis absoluteness | Theorem~
-ef{thm:horizontal--thm:completeness} | 55.T, 59.T.1, 69.T, 84.T, 87.T | — | — | — |
+ef{thm:horizontal–thm:completeness} | 55.T, 59.T.1, 69.T, 84.T, 87.T | — | — | — |
 | Three bypass paths | Theorems~\ref{thm:universe}, \ref{thm:reflective}, \ref{thm:slice-locality} | 57.T, 68.T, 98.T+99.T | — | — | — |
 
 ### AC/OC Morita duality (MSFS §10)

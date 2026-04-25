@@ -30,7 +30,7 @@ ef{thm:afnt-beta} | Boundary Lemma: No Limit-Based Escape ((β)-Part) | Тран
 | **AFN-T** | Theorem~
 ef{thm:afnt-alpha} | Combined AFN-T | $\mathcal{L}_{\mathrm{Abs}}$ структурно пуст как следствие |
 | **пятиосевая абсолютность AFN-T** | Theorem~
-ef{thm:horizontal--thm:completeness} | Five-Axis Absoluteness | Пять осей абсолютности граничной леммы |
+ef{thm:horizontal–thm:completeness} | Five-Axis Absoluteness | Пять осей абсолютности граничной леммы |
 
 ### Пять осей абсолютности
 
@@ -143,7 +143,7 @@ ef{thm:ac-oc-duality} | AC/OC Морита-дуальность: $\fM \simeq_{(\
 ef{thm:dual-afnt} | Dual Boundary Lemma: $\LAbsE = \emptyset$ двумя независимыми путями |
 | (вспом.) | Theorem~
 ef{thm:dual-five-axis} | Dual five-axis absoluteness (дуал Theorem~
-ef{thm:horizontal--thm:completeness}) |
+ef{thm:horizontal–thm:completeness}) |
 | (вспом.) | Figure~\ref{fig:ac-oc-duality} | Диаграмма AC/OC-дуальности с бijекцией стратов |
 
 ### Соответствие Актика-объектов

@@ -11,10 +11,10 @@ title: AFN-T — граничная лемма
 
 **Каноническое изложение** находится в препринте (*The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026):
 
-- **AFN-T (combined)** = MSFS Theorem `thm:afnt-alpha` (§5--§6).
+- **AFN-T (combined)** = MSFS Theorem `thm:afnt-alpha` (§5–§6).
 - **AFN-T (α-часть)**: Boundary Lemma: The Emptiness of уровень 6 = MSFS Theorem `thm:afnt-alpha` (§5). Синтаксис-семантический мост: $(F_S) \Rightarrow X \in \cS_S^{\mathrm{global}}$, $\id_X$ нарушает $(\Pi_4)$.
 - **AFN-T (β-часть)**: Boundary Lemma: No Limit-Based Escape = MSFS Theorem `thm:afnt-beta` (§6). Трансфинитные приближения остаются в $\cS_S^{\mathrm{global}}$; proper-class-башни через Proposition `prop:proper-class`.
-- **пятиосевая абсолютность AFN-T** = MSFS Theorem thm:horizontal--thm:completeness (§7).
+- **пятиосевая абсолютность AFN-T** = MSFS Theorem thm:horizontal–thm:completeness (§7).
 
 Настоящий документ сохраняет Diakrisis-контекст (мотивация, канонический примитив, связь с внутренней аксиоматикой); формальные утверждения и доказательства — в препринте. Таблица соответствия номеров: [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence).
 
@@ -30,7 +30,7 @@ title: AFN-T — граничная лемма
 
 ### Reasonable Rich-Metatheory (R-S)
 
-Формальное определение — MSFS Definition `def:rs` (условия (R1)--(R5)). В Diakrisis-нотации соответствие полное:
+Формальное определение — MSFS Definition `def:rs` (условия (R1)–(R5)). В Diakrisis-нотации соответствие полное:
 
 - (R1) арифметическая полнота через Robinson $\mathsf{Q}$;
 - (R2) r.e. аксиоматизация;
@@ -70,7 +70,7 @@ AFN-T формулируется через объекты, но её содер
 
 ## Пять осей абсолютности — пятиосевая абсолютность AFN-T
 
-См. [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) и MSFS §7 (Theorem thm:horizontal--thm:completeness).
+См. [`/06-limits/06-absoluteness`](/06-limits/06-absoluteness) и MSFS §7 (Theorem thm:horizontal–thm:completeness).
 
 **Короткая форма**:
 
@@ -84,7 +84,7 @@ AFN-T формулируется через объекты, но её содер
 
 **Ключевое уточнение препринта** ((removed in current MSFS state)): пять осей логически зависимы — horizontal subsumes completeness; lateral ≡ vertical; meta-vertical = μ-closure of vertical. Минимальный логически независимый набор — **2 оси** (горизонтальная + вертикальная). Пятиосевая формулировка сохранена pedagogically для обзора обход-аргументов.
 
-## Три обход-paths — формальное закрытие
+## Три обходных пути — формальное закрытие {#три-обходных-пути}
 
 См. [`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement) (путь 3) и MSFS §8.
 

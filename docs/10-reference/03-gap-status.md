@@ -72,7 +72,7 @@ title: Статус программ
 
 Все пять уровней взаимно-ортогональны и стабилизированы на уровень 5+.
 
-Карта обходных путей и конкретных защит: [/06-limits/02-th-final#три-обход-paths--формальное-закрытие](/06-limits/02-th-final#три-обход-paths--формальное-закрытие). Полные формальные доказательства — [*MSFS*](/10-reference/04-afn-t-correspondence) §8 + [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) (103.T–106.T для уровня максимальность, Diakrisis-only).
+Карта обходных путей и конкретных защит: [/06-limits/02-th-final#три-обходных-пути](/06-limits/02-th-final#три-обходных-пути). Полные формальные доказательства — [*MSFS*](/10-reference/04-afn-t-correspondence) §8 + [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) (103.T–106.T для уровня максимальность, Diakrisis-only).
 
 Методологический урок о навигационной целостности корпуса: [NL-15](/07-methodology/03-negative-lessons#nl-15).
 
