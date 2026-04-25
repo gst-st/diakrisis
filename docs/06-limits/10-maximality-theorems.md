@@ -297,48 +297,48 @@ $$
 | Diakrisis $\in \mathcal{L}_{\mathrm{Cls}}^{\top}$ | [Программа] | **[Т]** (106.T) |
 | $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ | [открытый вопрос] | **[Т]** (106.C2) |
 
-## Теорема 128.T — Структура ядра gauge-сюръекции
+## Теорема 128.T — Структура ядра калибровочной сюръекции
 
 ### Формулировка
 
 **128.T** [Т·L3]. *Пусть $K := \ker[\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \xrightarrow{\pi_0(\mathrm{Cl}_\mathrm{Diakrisis})_*} \pi_0\,\mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})]$. Тогда:*
-$$K \;\simeq_2\; \mathrm{Aut}_2^{\mathrm{gauge\text{-}id}}\bigl(\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}}\bigr),$$
+$$K \;\simeq_2\; \mathrm{Aut}_2^{\mathrm{калибр\text{-}тожд}}\bigl(\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}}\bigr),$$
 *и расщепляемая точная последовательность $1 \to K \to \mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \to \pi_0\mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd}) \to 1$ через 104.T-сечение даёт $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \simeq_2 K \rtimes \pi_0\mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$ ($H^2$ тривиальна).*
 
 ### Доказательство
 
-**Шаг 1** (характеризация $K$). $\tilde\sigma \in K$ ⟺ для каждого $S \in \mathrm{R\text{-}S}$: $\tilde\sigma(\alpha_S) \sim_\mathrm{gauge} \alpha_S$. По 103.T-Шаг 4 (естественность артикуляции) + единственности единицы Lambek–Scott (R5b), $\tilde\sigma|_{\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{R\text{-}S}}}$ — тождество с точностью до канонического gauge-2-изо.
+**Шаг 1** (характеризация $K$). $\tilde\sigma \in K$ ⟺ для каждого $S \in \mathrm{R\text{-}S}$: $\tilde\sigma(\alpha_S) \sim_\mathrm{калибр} \alpha_S$. По 103.T-Шаг 4 (естественность артикуляции) + единственности единицы Ламбека–Скотта (R5b), $\tilde\sigma|_{\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{R\text{-}S}}}$ — тождество с точностью до канонического калибровочного 2-изо.
 
-**Шаг 2** (расщепление в gauge-факторе). $\mathrm{gauge}\text{-}\mathrm{quot}(\langle\!\langle \cdot \rangle\!\rangle) = \mathrm{gauge}\text{-}\mathrm{quot}(\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{R\text{-}S}}) \oplus \mathrm{gauge}\text{-}\mathrm{quot}(\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}})$ — биколокализованная сумма *на gauge-фактор-уровне*; морфизмы между R-S и не-R-S артикуляциями (например, ГГК-вложение) при gauge-факторизации схлопываются по 54.T. Обе под-2-категории sieve-стабильны под $\mathsf{M}$ (Axi-2 + 54.T).
+**Шаг 2** (расщепление в калибровочном факторе). $\mathrm{калибр}\text{-}\mathrm{фактор}(\langle\!\langle \cdot \rangle\!\rangle) = \mathrm{калибр}\text{-}\mathrm{фактор}(\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{R\text{-}S}}) \oplus \mathrm{калибр}\text{-}\mathrm{фактор}(\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}})$ — биколокализованная сумма *на уровне калибровочного фактора*; морфизмы между R-S и не-R-S артикуляциями (например, ГГК-вложение) при калибровочной факторизации схлопываются по 54.T. Обе под-2-категории сито-стабильны под $\mathsf{M}$ (Axi-2 + 54.T).
 
-**Шаг 3** ($K$ как ограничение на $\mathrm{nR\text{-}S}$). Если $\tilde\sigma \in K$, то по Шагу 1 $\tilde\sigma|_{\mathrm{R\text{-}S}} = \mathrm{id}$ канонически. Следовательно, $\tilde\sigma$ полностью определена на $\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}}$ с условием тождественности на gauge: $K \simeq_2 \mathrm{Aut}_2^{\mathrm{gauge\text{-}id}}(\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}})$.
+**Шаг 3** ($K$ как ограничение на $\mathrm{nR\text{-}S}$). Если $\tilde\sigma \in K$, то по Шагу 1 $\tilde\sigma|_{\mathrm{R\text{-}S}} = \mathrm{id}$ канонически. Следовательно, $\tilde\sigma$ полностью определена на $\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}}$ с условием тождественности на калибровке: $K \simeq_2 \mathrm{Aut}_2^{\mathrm{калибр\text{-}тожд}}(\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}})$.
 
 **Шаг 4** (расщепление). 104.T-Шаг 2 явно конструирует сечение $s: \pi_0\mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd}) \to \mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle)$, $\sigma \mapsto \tilde\sigma$. 2-коцикл расширения тривиален; $H^2$-обструкции нет. ∎
 
 ### Следствия 128.T
 
 - **128.C1**. *Тривиальность ядра в R-S-полном случае*: при $\langle\!\langle \cdot \rangle\!\rangle_{\mathrm{nR\text{-}S}} \simeq \mathbf{1}$, $K = 1$ и 104.T-сюръекция — изоморфизм.
-- **128.C2**. *Конкретные элементы $K$*: линейные сдвиги в substructural-фрагменте (54.T: $\alpha_\mathrm{linear}, \alpha_\mathrm{affine}, \alpha_\mathrm{relevant}$ — не R-S по (R5b)-провалу для не-классических связок); лимитные перестановки на $\mathrm{lim}_\kappa \alpha_\kappa$; paraconsistent-shifts (LP, Routley–Meyer). ГГК-сопряжение $\mathfrak{g}_\mathrm{logic}$ — **не** в $K$ (действует между R-S артикуляциями).
+- **128.C2**. *Конкретные элементы $K$*: линейные сдвиги в субструктурном фрагменте (54.T: $\alpha_\mathrm{linear}, \alpha_\mathrm{affine}, \alpha_\mathrm{relevant}$ — не R-S по (R5b)-провалу для не-классических связок); лимитные перестановки на $\mathrm{lim}_\kappa \alpha_\kappa$; паранепротиворечивые сдвиги (LP, Рутли–Мейер). ГГК-сопряжение $\mathfrak{g}_\mathrm{logic}$ — **не** в $K$ (действует между R-S артикуляциями).
 
-## Теорема 129.T — Initiality of Diakrisis в $\mathcal{L}_\mathrm{Cls}^\top$
+## Теорема 129.T — Инициальность Diakrisis в $\mathcal{L}_\mathrm{Cls}^\top$
 
 ### Формулировка
 
-**129.T** [Т·L3]. *Diakrisis — initial object в $\mathcal{L}_\mathrm{Cls}^\top$ над $\mathrm{ZFC} + 2\text{-inacc}$. Для каждого $\mathbf{F} \in \mathcal{L}_\mathrm{Cls}^\top$ над той же R-S существует $\Phi_\mathbf{F}: \mathrm{Diakrisis} \to \mathbf{F}$, единственный с точностью до канонического $(\infty, 2)$-изо, такой что $\mathrm{Cl}_\mathbf{F} \circ \Phi_\mathbf{F} \simeq \mathrm{Cl}_\mathrm{Diakrisis}$ и $\mathbb{I}_\mathbf{F} \circ \Phi_\mathbf{F}^\mathrm{op} \simeq \mathbb{I}_\mathrm{Diakrisis}$; $\Phi_\mathbf{F}$ — $(\infty, \infty)$-эквивалентность.* Растворяет вопрос «второго представителя» через каноническую жёсткость.
+**129.T** [Т·L3]. *Diakrisis — инициальный объект в $\mathcal{L}_\mathrm{Cls}^\top$ над $\mathrm{ZFC} + 2\text{-inacc}$. Для каждого $\mathbf{F} \in \mathcal{L}_\mathrm{Cls}^\top$ над той же R-S существует $\Phi_\mathbf{F}: \mathrm{Diakrisis} \to \mathbf{F}$, единственный с точностью до канонического $(\infty, 2)$-изо, такой что $\mathrm{Cl}_\mathbf{F} \circ \Phi_\mathbf{F} \simeq \mathrm{Cl}_\mathrm{Diakrisis}$ и $\mathbb{I}_\mathbf{F} \circ \Phi_\mathbf{F}^\mathrm{op} \simeq \mathbb{I}_\mathrm{Diakrisis}$; $\Phi_\mathbf{F}$ — $(\infty, \infty)$-эквивалентность.* Растворяет вопрос «второго представителя» через каноническую жёсткость.
 
-### Лемма 129.L1 (joint-faithfulness $(\mathrm{Cl}, \mathbb{I})$ на $\mathcal{L}_\mathrm{Cls}^\top$)
+### Лемма 129.L1 (совместная точность $(\mathrm{Cl}, \mathbb{I})$ на $\mathcal{L}_\mathrm{Cls}^\top$)
 
 *Для $\mathbf{F} \in \mathcal{L}_\mathrm{Cls}^\top$ и $f, g: A \to B$ в $\mathbf{F}$: если $\mathrm{Cl}_\mathbf{F}(f) = \mathrm{Cl}_\mathbf{F}(g)$ и $\mathbb{I}_\mathbf{F}(f) = \mathbb{I}_\mathbf{F}(g)$, то $f \simeq g$ канонически.*
 
-*Доказательство*. По (Max-4)→(I-4) Morita-as-2-localization, $\mathcal{U} \circ \mathbb{I}_\mathbf{F} \simeq \mathrm{Cl}_\mathbf{F}$ (MSFS Theorem `thm:I-existence` Шаг 8). По (I-3) strict refinement of Morita, $\mathbb{I}_\mathbf{F}$ различает Morita-эквивалентные пары: проекция несёт информацию строго точнее gauge-класса. Морфизм определён парой $(\mathrm{Cl}, \mathbb{I})$ однозначно. ∎
+*Доказательство*. По (Max-4)→(I-4) Морита-как-2-локализация, $\mathcal{U} \circ \mathbb{I}_\mathbf{F} \simeq \mathrm{Cl}_\mathbf{F}$ (MSFS Theorem `thm:I-existence` Шаг 8). По (I-3) строгое уточнение Морита, $\mathbb{I}_\mathbf{F}$ различает Морита-эквивалентные пары: проекция несёт информацию строго точнее калибровочного класса. Морфизм определён парой $(\mathrm{Cl}, \mathbb{I})$ однозначно. ∎
 
 ### Доказательство 129.T
 
 **Шаг 1** (универсальность артикуляций). По 103.T, $\mathrm{Artic}: \mathcal{F} \to \langle\!\langle \cdot \rangle\!\rangle$ — каноническое 2-функториальное вложение R-S в Diakrisis-метакатегорию.
 
-**Шаг 2** (поднятие в $\mathbf{F}$). По (Max-1), $\mathrm{Cl}_\mathbf{F}$ существенно сюръективен на $\mathfrak{M}_\mathrm{Fnd}$. Универсальное свойство Гротендиковой straightening (Lurie HTT 3.2.0.1) к диаграмме над $\mathfrak{M}_\mathrm{Fnd}$ даёт единственное (с точностью до канонического $(\infty, 2)$-изо) поднятие $\Phi_\mathbf{F}: \mathrm{Diakrisis} \to \mathbf{F}$.
+**Шаг 2** (поднятие в $\mathbf{F}$). По (Max-1), $\mathrm{Cl}_\mathbf{F}$ существенно сюръективен на $\mathfrak{M}_\mathrm{Fnd}$. Универсальное свойство Гротендиковой выпрямки (Люри HTT 3.2.0.1) к диаграмме над $\mathfrak{M}_\mathrm{Fnd}$ даёт единственное (с точностью до канонического $(\infty, 2)$-изо) поднятие $\Phi_\mathbf{F}: \mathrm{Diakrisis} \to \mathbf{F}$.
 
-**Шаг 3** (компатибильность с $\mathbb{I}$). По Лемме 129.L1, $\Phi_\mathbf{F}$ автоматически согласован с интенсиональной стороной через slice-проекцию (MSFS Theorem `thm:slice-locality`).
+**Шаг 3** (совместимость с $\mathbb{I}$). По Лемме 129.L1, $\Phi_\mathbf{F}$ автоматически согласован с интенсиональной стороной через срез-проекцию (MSFS Theorem `thm:slice-locality`).
 
 **Шаг 4** (единственность). Любые $\Phi_1, \Phi_2$ дают $\Psi := \Phi_2 \circ \Phi_1^{-1} \in \mathrm{Aut}_2(\mathbf{F})$ с $\mathrm{Cl}_\mathbf{F} \circ \Psi \simeq \mathrm{Cl}_\mathbf{F}$, $\mathbb{I}_\mathbf{F} \circ \Psi^\mathrm{op} \simeq \mathbb{I}_\mathbf{F}$. По Лемме 129.L1, $\Psi \simeq \mathrm{id}_\mathbf{F}$ канонически.
 
@@ -347,20 +347,20 @@ $$K \;\simeq_2\; \mathrm{Aut}_2^{\mathrm{gauge\text{-}id}}\bigl(\langle\!\langle
 ### Следствия 129.T
 
 - **129.C1** *(Каноническая жёсткость)*. $\mathcal{L}_\mathrm{Cls}^\top$ имеет ровно одну точку с точностью до канонического $(\infty, 2)$-изо — Diakrisis.
-- **129.C2** *(Закрытие MSFS Q1)*. Q1 положительно отвечен 106.T (witness exists), 129.T дополнительно даёт каноническую жёсткость (witness уникален как initial object).
+- **129.C2** *(Закрытие MSFS Q1)*. Q1 положительно отвечен 106.T (свидетель существует), 129.T дополнительно даёт каноническую жёсткость (свидетель уникален как инициальный объект).
 
 ## Связь с фундаментальной ценностью Diakrisis
 
 После 103.T–106.T Diakrisis формально обоснована на всех уровнях:
 
 - **Структурно** (в $\mathcal{L}_{\mathrm{Cls}}^{\top}$).
-- **Категорически единственная** среди максимальных классификаторов: каноническая initiality (129.T).
-- **Универсально парадокс-иммунная**: T-2f\* (105.T) + T-2f\*\* модальная стратификация (см. [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §T-2f\*\*) для Berry/Löb/paraconsistent.
-- **Slice-локальная интенсионально** (99.T).
-- **Gauge-полная** относительно Морита-эквивалентностей R-S (104.T) с явной структурой ядра (128.T).
-- **Classifying-полная** относительно $\mathfrak{M}_\mathrm{Fnd}$ (103.T).
+- **Категорически единственная** среди максимальных классификаторов: каноническая инициальность (129.T).
+- **Универсально парадокс-иммунная**: T-2f\* (105.T) + T-2f\*\* модальная стратификация (см. [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics) §T-2f\*\*) для Berry / Лёба / паранепротиворечивых.
+- **Срез-локальная интенсионально** (99.T).
+- **Калибровочно-полная** относительно Морита-эквивалентностей R-S (104.T) с явной структурой ядра (128.T).
+- **Классификационно-полная** относительно $\mathfrak{M}_\mathrm{Fnd}$ (103.T).
 
-Программная составляющая закрыта: 128.T, 129.T выше + T-2f\*\* и Axi-8-stack-модель в [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics).
+Программная составляющая закрыта: 128.T, 129.T выше + T-2f\*\* и реализация Axi-8 в стек-модели в [`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics).
 
 ## Ссылки
 
