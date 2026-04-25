@@ -294,6 +294,20 @@ Object-level universe-ascent (102.T-(b) caveat): $\mathsf{M}^\mathrm{stack}|_{\m
 - **Theorem `thm:meta-cat`**: 100.T в Diakrisis-нумерации, conditional categoricity усилена до initiality.
 - **Theorem `thm:I-existence`**: 99.T, прямо используется в 131.T для slice-структуры.
 
+## Сводка по остаточным MSFS-уровневым открытым вопросам
+
+После 132.T статус всех 5 MSFS-уровневых открытых вопросов (`paper.tex` §13 «Consequences and Open Questions»):
+
+| MSFS-вопрос | Тип | Статус после 132.T |
+|---|---|---|
+| **Q1** Существование witness $\mathbf{F} \in \mathcal{L}_\mathrm{Cls}^\top$ | существенный | ✅ закрыто (106.T положительный ответ + 129.T initiality) |
+| **Q2** Полнота списка $\mathcal{L}_\mathrm{Cls}$-meta-фреймворков | survey | ⚪ inherently open (новые partial-классификаторы могут добавляться; 101.T даёт нижнюю оценку $\geq 3$, верхняя оценка не существует как теорема) |
+| **Q3** Исчерпывающесть bypass-путей | существенный | 🟡 закрыто *относительно R-S-внутренней классификации*: bypass-классы (extensional, intensional, universe, modal, paraconsistent, substructural) исчерпывают пространство атак на AFN-T с точностью до translation внутри R-S; формальный exhaustiveness theorem требует анализа всех R-S-внутренних типовых конструкций (см. 130.T для модальной части) |
+| **Q4** Минимальность $\mathrm{ZFC} + 2\text{-inacc}$ | foundational | 🟡 граница тугая: 2-inacc необходима для $\kappa_S = \kappa_2$ (R5a: HoTT/MLTT-силы), 1-inacc недостаточна для существования $\kappa_2$-доступной $\mathrm{Syn}(S)$ при $S$ с consistency strength $> \kappa_1$ |
+| **Q5** Стратум слабых R-S | classification | 🟡 закрыто через 03-gap-status N-10: $\mathcal{L}_\mathrm{Fnd}^\mathrm{weak}$ — собственный под-стратум через обратную математику (Simpson 2009); НЕ Morita-плотен в $\mathcal{L}_\mathrm{Fnd}$ из-за невыполнения $(R1)$ в полной форме |
+
+**Замечание**: Q2 — единственный *неустранимо* открытый вопрос; он по природе survey, не теорема. Q3, Q4, Q5 закрыты в смысле «известны точные scope-границы», даже если полная классификация $\mathcal{L}_\mathrm{Cls}$ остаётся exploratory.
+
 ## Ссылки
 
 - [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) — 103.T–106.T (witness).
