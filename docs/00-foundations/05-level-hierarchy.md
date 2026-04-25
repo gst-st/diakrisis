@@ -231,7 +231,7 @@ $$
 
 **условная мета-категоричность** (препринт теорема `thm:meta-cat`, Diakrisis 100.T): любые два представителя $\mathcal{L}_{5+}^{\max}$ над одной и той же R-S $(\infty, \infty)$-эквивалентны через Гротендик–Люри straightening.
 
-**Meta-classification стабилизация** (препринт теорема `thm:meta-stab`, Diakrisis 102.T): итерированная мета-классификация воспроизводит ту же $(\infty, \infty)$-теорию на каждом шаге (theory-level invariance); теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$ — **universe-ascent**.
+**Мета-классификация стабилизация** (препринт теорема `thm:meta-stab`, Diakrisis 102.T): итерированная мета-классификация воспроизводит ту же $(\infty, \infty)$-теорию на каждом шаге (на теоретическом уровне invariance); теоретико-множественная инстанциация поднимается по иерархии Гротендика $\kappa_1 < \kappa_2 < \ldots$ — **восхождение по универсумам**.
 
 ### $\mathcal{L}_6$ — формально пустой уровень
 
@@ -298,7 +298,7 @@ $$
 **Diakrisis не на уровне 6**:
 
 - Не создаёт новую формальную основу — работает с существующими через $\langle\langle \cdot \rangle\rangle$.
-- Каждая «новая» конструкция редуцируется к известному аналогу (moduli-stack, accessible endofunctor, internal language).
+- Каждая «новая» конструкция редуцируется к известному аналогу (стек модулей, accessible endofunctor, internal language).
 - Подпадает под AFN-T (препринт теорема `thm:afnt-alpha`).
 
 **Diakrisis не на уровне 5** (не является самостоятельным generator-ом):
@@ -319,7 +319,7 @@ $$
 - **(Max-1)** [Т] Full classification: $\mathrm{image}(\mathrm{Cl}_\mathrm{Diakrisis}) = \mathfrak{M}_\mathrm{Fnd}$ — Теорема **103.T** через универсальную конструкцию $S \mapsto \alpha_S = (\mathrm{Syn}(S), \mathsf{M}_S)$ (Сили 1984 + Хофман 1997 + Адамек–Росицкий 1994).
 - **(Max-2)** [Т] Gauge-fullness через автоэквивалентности ⟪⟫: $\mathrm{Aut}_2(\langle\!\langle \cdot \rangle\!\rangle) \twoheadrightarrow \pi_0 \mathrm{Aut}_2(\mathfrak{M}_\mathrm{Fnd})$ — Теорема **104.T** через поднятие Морита-эквивалентностей R-S.
 - **(Max-3)** [Т] Depth-stratification через T-2f\* ([`/02-canonical-primitive/02-axiomatics`](/02-canonical-primitive/02-axiomatics)) — блокирует *универсально* (не только 5 семейств) все Яновский-сводимые самореферентные парадоксы — Теорема **105.T** через Яновский 2003 + глубину экспоненциалов.
-- **(Max-4)** [Т] Интенсиональная полнота через 98.T / 99.T ([`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement)): slice-локальность $\mathbf{I}_\mathrm{Diakrisis}$ над $\mathfrak{M}_\mathrm{Fnd}$ через эффективный топос Хайланда.
+- **(Max-4)** [Т] Интенсиональная полнота через 98.T / 99.T ([`/06-limits/08-intensional-refinement`](/06-limits/08-intensional-refinement)): срез-локальность $\mathbf{I}_\mathrm{Diakrisis}$ над $\mathfrak{M}_\mathrm{Fnd}$ через эффективный топос Хайланда.
 
 **Сводная теорема 106.T**: $\mathrm{Diakrisis} \in \mathcal{L}_{\mathrm{Cls}}^{\top}$ — **теорема, а не программа**. Следствие 106.C2: $\mathcal{L}_{\mathrm{Cls}}^{\top} \neq \emptyset$ (утвердительный ответ на открытый вопрос MSFS после Theorem `thm:meta-cat`).
 

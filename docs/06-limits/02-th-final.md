@@ -7,7 +7,7 @@ title: AFN-T — граничная лемма
 
 ## Статус и каноническая форма
 
-**Граничная лемма** структурной архитектуры Diakrisis. Формализует внешнюю границу пространства 𝓜_Fnd: уровень 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — структурно пустой stratum. Основной математический вклад Diakrisis — не сама граница, а классификация **внутреннего устройства** 𝓜_Fnd (плюрализм уровень 5+, условная мета-категоричность, slice-локальное интенсиональное уточнение, theory-level meta-стабилизация, **maximality proofs 103.T–106.T устанавливающие Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорему**).
+**Граничная лемма** структурной архитектуры Diakrisis. Формализует внешнюю границу пространства 𝓜_Fnd: уровень 6 (одновременно формально определимое, нередуцируемое, максимально генеративное основание) — структурно пустой stratum. Основной математический вклад Diakrisis — не сама граница, а классификация **внутреннего устройства** 𝓜_Fnd (плюрализм уровень 5+, условная мета-категоричность, slice-локальное интенсиональное уточнение, на теоретическом уровне meta-стабилизация, **доказательства максимальности 103.T–106.T устанавливающие Diakrisis ∈ $\mathcal{L}_{\mathrm{Cls}}^{\top}$ как теорему**).
 
 **Каноническое изложение** находится в препринте (*The Moduli Space of Formal Systems: Classification, Stabilization, and a No-Go Theorem for Absolute Foundations*, Sereda 2026):
 
@@ -80,7 +80,7 @@ AFN-T формулируется через объекты, но её содер
 | Вертикальная ($n \in \mathbb{N} \cup \{\infty\}$) | 59.T.1 | `thm:vertical` |
 | Мета-вертикальная ($\mu$-итерации) | 69.T | `thm:meta-vertical` |
 | Латеральная (альт.\ orderings) | 84.T | `thm:lateral` |
-| Полноты (Ловер-scope) | 87.T | `thm:completeness` |
+| Полноты (условия Ловера) | 87.T | `thm:completeness` |
 
 **Ключевое уточнение препринта** ((removed in current MSFS state)): пять осей логически зависимы — horizontal subsumes completeness; lateral ≡ vertical; meta-vertical = μ-closure of vertical. Минимальный логически независимый набор — **2 оси** (горизонтальная + вертикальная). Пятиосевая формулировка сохранена pedagogically для обзора обход-аргументов.
 
@@ -94,7 +94,7 @@ AFN-T формулируется через объекты, но её содер
 |---|---|---|
 | полиморфизм универсумов | 57.T + 56.C1 + 61.T + 94.T | `thm:universe` |
 | Reflective tower | 19.T1 + 31.T3 + 68.T + 69.T + 90.T | `thm:reflective` |
-| Интенсиональное уточнение | 98.T (construction) + 99.T (slice-locality) | `thm:I-existence` + `thm:slice-locality` |
+| Интенсиональное уточнение | 98.T (construction) + 99.T (срез-локальность) | `thm:I-existence` + `thm:срез-локальность` |
 
 Все три **формально закрыты**; сводная теорема — MSFS Theorem `thm:обход-summary`.
 
@@ -116,7 +116,7 @@ $$
 
 109.T (Dual Boundary Lemma, MSFS Theorem~
 ef{thm:dual-afnt}) формулирует ту же no-go на стороне энактментов: не существует $(F, \cC, \iota, r) \in \cE$, одновременно enactment-definable, non-coordinate, maximally receptive. Дуальная пятиосевая абсолютность (MSFS Theorem~
-ef{thm:dual-five-axis}) покрывает ось performance-uniqueness через Ловер-scope LS($\cE$) = closed symmetric monoidal (включает линейную логику, ludics, квантовые enactments; универсальная диагональ Яновский).
+ef{thm:dual-five-axis}) покрывает ось performance-uniqueness через условия Ловера LS($\cE$) = closed symmetric monoidal (включает линейную логику, ludics, квантовые enactments; универсальная диагональ Яновский).
 
 **Значение**: no-go симметрично по артикуляциям и актам-практикам. Пятый уровень защиты корпуса — AC/OC-дуальность ([`/10-reference/03-gap-status`](/10-reference/03-gap-status) §5 уровней защиты). Подробнее — [`/12-actic/05-dual-afn-t`](/12-actic/05-dual-afn-t).
 

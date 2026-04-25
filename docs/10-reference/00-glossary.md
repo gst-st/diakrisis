@@ -166,7 +166,7 @@ title: Глоссарий
 ### α_linear
 
 **Тип**: Ob(⟪⟫).
-**Определение**: артикуляция Жирар-linear logic с exponential `!`.
+**Определение**: артикуляция Жирар-линейная логика с exponential `!`.
 **ν**: ω+1.
 **Classical-equivalence**: через Жирар-трансляция.
 
@@ -343,7 +343,7 @@ title: Глоссарий
 - **16.T1**: эквивалентность Z_i.
 - **29.T**: Универсальное основание.
 - **30.T**: Reconstruction.
-- **43.T1**: Classifying Space.
+- **43.T1**: Классифицирующее пространство.
 - **AFN-T**: no-go уровня 6.
 
 ## Философские концепты
@@ -412,14 +412,14 @@ title: Глоссарий
 
 **Тип**: 2-функтор $\langle\!\langle \cdot \rangle\!\rangle \to \rangle\!\rangle \cdot \langle\!\langle$.
 **Определение**: syntactic self-enactment, $F \mapsto (F, \Syn(F), \id, \id)$.
-**Свойства**: fully faithful, правый adjoint к α.
+**Свойства**: полностью точный, правый adjoint к α.
 **MSFS-соответствие**: $\varepsilon$ в Definition~\ref{def:enactments}.
 
 ### α (OC-функтор)
 
 **Тип**: 2-функтор $\rangle\!\rangle \cdot \langle\!\langle \to \langle\!\langle \cdot \rangle\!\rangle$.
 **Определение**: forgetful, $(F, \cC, \iota, r) \mapsto F$.
-**Свойства**: essentially surjective (после gauge), левый adjoint к ε.
+**Свойства**: существенно сюръективен (после gauge), левый adjoint к ε.
 **MSFS-соответствие**: $\alpha$ в Definition~\ref{def:enactments}.
 
 ### Reflector r
@@ -449,11 +449,11 @@ title: Глоссарий
 ef{thm:dual-afnt}.
 **См.**: [/12-actic/05-dual-afn-t](/12-actic/05-dual-afn-t).
 
-### Ловер-scope на $\cE$
+### условия Ловера на $\cE$
 
 **Тип**: структурное условие для ε-completeness-axis.
 **Определение**: $\{(F, \cC, \iota, r) : F \in \mathrm{LS}(\cF) \wedge \cC \text{ closed symmetric monoidal}\}$ — включает Cartesian-closed, SMC, $*$-autonomous (универсальная диагональ Яновский).
-**Покрытие**: linear logic (Жирар), ludics, квантовые enactments, resource-sensitive type theories.
+**Покрытие**: линейная логика (Жирар), ludics, квантовые enactments, resource-sensitive type theories.
 
 ### $\mathsf{A}$ (активация)
 

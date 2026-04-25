@@ -132,7 +132,7 @@ $\rangle\!\rangle \cdot \langle\!\langle$ содержит достаточно 
 
 Универсальное обобщение через Яновский-reducibility (дуал 105.T): T-2a\* блокирует **любой** Яновский-сводимый актовый парадокс.
 
-### T-ε_c — конструктивный gauge-инвариант актов
+### T-ε_c — конструктивный калибровочно-инвариант актов
 
 Дуал T-α_c. В конструктивных R-S (constructive metatheories) gauge-орбита $\varepsilon$ сохраняет constructive content: если $\varepsilon_1 \sim_\mathrm{gauge} \varepsilon_2$ и $\varepsilon_1$ конструктивен, то $\varepsilon_2$ конструктивен.
 

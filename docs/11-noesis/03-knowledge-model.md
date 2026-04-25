@@ -126,7 +126,7 @@ $$\mathrm{Obs}(F) := \frac{1}{|\mathrm{Mor}(\mathcal{K}_1)|} \sum_{f \in \mathrm
 1. $\mathrm{Obs}(F) = 0 \iff F$ — строгий функтор (без аппроксимации).
 2. $\mathrm{Obs}(F) \leq \varepsilon \Rightarrow F$ — ε-гомотопически-когерентная аппроксимация.
 3. $\mathrm{Obs}(F \circ G) \leq \mathrm{Obs}(F) + \mathrm{Obs}(G)$ (субаддитивность — неравенство треугольника в соответствующем метрическом пространстве).
-4. $\mathrm{Obs}$ gauge-инвариантно: $\mathrm{Obs}(\phi \cdot F \cdot \psi) = \mathrm{Obs}(F)$ для gauge-преобразований $\phi, \psi$.
+4. $\mathrm{Obs}$ калибровочно-инвариантно: $\mathrm{Obs}(\phi \cdot F \cdot \psi) = \mathrm{Obs}(F)$ для калибровочное преобразований $\phi, \psi$.
 
 **Разложение по наихудшей компоненте**:
 
@@ -317,11 +317,11 @@ fn check_descent(covering: Covering, global_data: Data) -> DescentResult {
 
 ```verum
 fn check_morita(α1: Articulation, α2: Articulation) -> MoritaResult {
-    // Compute gauge-classes
+    // Compute калибровочный классes
     let g1 = α1.gauge_class();
     let g2 = α2.gauge_class();
     
-    // Same gauge-class → Morita equivalent
+    // Same калибровочный класс → Morita equivalent
     if g1 == g2 {
         return MoritaResult::Equivalent(trivial_bridge());
     }

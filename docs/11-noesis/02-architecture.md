@@ -139,7 +139,7 @@ type Dependency = {
 
 ```verum
 fn morita_check(α: Articulation, β: Articulation) -> MoritaResult {
-    // Compute gauge-classes
+    // Compute калибровочный классes
     let g_α = compute_gauge_class(α);
     let g_β = compute_gauge_class(β);
     

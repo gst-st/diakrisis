@@ -7,12 +7,12 @@ title: Интенсиональное уточнение (путь 3)
 
 ## Статус
 
-**[Т]** — последний исторически-открытый обходной путь вокруг AFN-T формально закрыт: теоремы **98.T** (существование функтора $\mathbf{I}$) и **99.T** (slice-locality — AFN-T не затронута).
+**[Т]** — последний исторически-открытый обходной путь вокруг AFN-T формально закрыт: теоремы **98.T** (существование функтора $\mathbf{I}$) и **99.T** (срез-локальность — AFN-T не затронута).
 
 **Каноническое изложение** — препринт [*MSFS*](/10-reference/04-afn-t-correspondence) §8.3:
 
 - **98.T** = MSFS Theorem `thm:I-existence` (construction of $\II : \cF^\mathrm{op} \to \Sint$).
-- **99.T** = MSFS Theorem `thm:slice-locality` (projection to existing points of $\fM$).
+- **99.T** = MSFS Theorem `thm:срез-локальность` (projection to existing points of $\fM$).
 
 После закрытия этого пути три стандартных обход-пути вокруг AFN-T — ✅ формально закрыто (MSFS Theorem `thm:обход-summary`).
 
@@ -45,7 +45,7 @@ $$
 
 ### 99.T: Slice-locality
 
-MSFS Theorem `thm:slice-locality`: существует 2-функтор $\widetilde{\pi} : \mathcal{S}_\mathrm{int} \to \mathfrak{M}_\mathrm{Fnd}$ с 2-коммутирующей диаграммой:
+MSFS Theorem `thm:срез-локальность`: существует 2-функтор $\widetilde{\pi} : \mathcal{S}_\mathrm{int} \to \mathfrak{M}_\mathrm{Fnd}$ с 2-коммутирующей диаграммой:
 
 $$
 \begin{array}{ccc}
@@ -59,7 +59,7 @@ $$
 
 ## Закрытие обходного пути
 
-Путь 3 (интенсиональное уточнение) был последним open gap вокруг AFN-T. После MSFS §8 (формальное построение $\mathbf{I}$ + доказательство slice-locality через 2-Гротендик fibration):
+Путь 3 (интенсиональное уточнение) был последним open gap вокруг AFN-T. После MSFS §8 (формальное построение $\mathbf{I}$ + доказательство срез-локальность через 2-Гротендик fibration):
 
 | Путь | Статус до | Статус |
 |---|---|---|

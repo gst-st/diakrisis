@@ -117,7 +117,7 @@ Live-документ для отслеживания прогресса 10-ша
 ✅ **K-Refine kernel-правило** реализует Diakrisis T-2f\* (depth-stratification).
 ✅ **K-Adj-Unit, K-Adj-Counit** kernel-правила реализуют 108.T Морита-двойственность.
 ✅ **9-стратегийная verification-лестница** (`runtime` → `static` → `fast` → `formal` → `proof` → `thorough` → `reliable` → `certified` → `synthesize`).
-✅ **`@framework(name, citation)`** — first-class data, не модификация kernel.
+✅ **`@framework(name, citation)`** — полноправный data, не модификация kernel.
 ✅ **`@enact(epsilon = ...)`** аннотация — связь между artikulation и enactment.
 ✅ **Двойная stdlib OC/DC** — `core.math.*` + `core.action.*` спроектированы.
 

@@ -187,7 +187,7 @@ Motivic theory — ρ-проекция специфической α_motivic ∈
 
 ### В Diakrisis
 
-- **α_derived**: specific gauge-class.
+- **α_derived**: specific калибровочный класс.
 - **Связь с УГМ**: cohomological aspects of quantum systems.
 
 ## Связь с другими разделами

@@ -186,7 +186,7 @@ $$
 - **A-9** (достаточность актов для формализации).
 - **T-ε** (не-привилегированность $\varepsilon_\mathrm{math}$): автоморфизмы $\rangle\!\rangle \cdot \langle\!\langle$ могут переставлять $\varepsilon_\mathrm{math}$ с другими актами; дуал T-α.
 - **T-2a\*** (активационно-стратифицированная комплетация): дуал T-2f\*; выделение $\varepsilon_P$ по предикату P допустимо ⟺ P имеет строго меньшую активационную глубину чем $\varepsilon_P$.
-- **T-ε_c** (конструктивный gauge-инвариант актов).
+- **T-ε_c** (конструктивный калибровочно-инвариант актов).
 
 **Теорема 107.T** [Т, Актика-консистентность]. Модель метакатегории активности $\mathbf{Act}$ (категория симплициальных множеств с Kan-расширениями) удовлетворяет A-0..A-9 + T-ε + T-2a\* + T-ε_c и имеет ту же силу консистентности, что Axi-0..9 + T-α + T-2f\* в $\mathbf{Cat}$: $\mathrm{Con}(\text{Diakrisis}+\text{Актика}) = \mathrm{Con}(\mathrm{ZFC} + 2\text{-inacc})$.
 
@@ -241,7 +241,7 @@ $$
 $$
 \varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon.
 $$
-3. $\varepsilon$ сохраняет gauge-структуру: $\fM_\mathrm{Fnd}$ (gauge-quotient артикуляций) канонически эквивалентно $\mathfrak{E}_\mathrm{Fnd}$ (gauge-quotient актов).
+3. $\varepsilon$ сохраняет gauge-структуру: $\fM_\mathrm{Fnd}$ (калибровочный фактор артикуляций) канонически эквивалентно $\mathfrak{E}_\mathrm{Fnd}$ (калибровочный фактор актов).
 4. $\nu(\alpha) = \varepsilon(\varepsilon(\alpha))$ для всех $\alpha$.
 5. $\varepsilon$ сохраняет T-2f\*/T-2a\* стратификацию.
 
@@ -305,7 +305,7 @@ $$
 - **111.T** — автопоэзис как $\mathsf{A}$-фиксточка: живая/автопоэтическая система = $\varepsilon \in \mathrm{Fix}(\mathsf{A})$.
 - **112.T** — Дуал 16.T1 (Z-граница) в актах: $\mathsf{Z}^\mathrm{act}_1 \simeq \mathsf{Z}^\mathrm{act}_2 \simeq \mathsf{Z}^\mathrm{act}_3$.
 - **113.T** — 18.T-дуал: T-2a\* блокирует 5 семейств «парадоксов-в-акте» (самореферентное перформирование).
-- **114.T** — 102.T-дуал: meta-activation стабилизация с universe-ascent для ε-корней.
+- **114.T** — 102.T-дуал: meta-activation стабилизация с восхождение по универсумам для ε-корней.
 - **115.T** — Уайтхед-Coordinate: $\varepsilon_\mathrm{prehension} \in \rangle\!\rangle \cdot \langle\!\langle$ даёт базис для описания квантовых измерений как актов.
 - **116.T** — Брауэр-embedding: BHK-proofs вкладываются в $\rangle\!\rangle \cdot \langle\!\langle$ как $\varepsilon_\mathrm{construct}$-семейство.
 - **117.T** — Жирар-ludics соответствие: ludic-designs — это объекты $\rangle\!\rangle \cdot \langle\!\langle^\mathrm{interact}$, полной под-2-категории.
@@ -526,7 +526,7 @@ Noesis (§11 Diakrisis docs) была определена как платфор
 - [`/intro`](/intro) — Diakrisis-ОЦ введение.
 - [`/02-canonical-primitive/00-overview`](/02-canonical-primitive/00-overview) — ОЦ примитив (дуал этого документа).
 - [`/06-limits/02-th-final`](/06-limits/02-th-final) — AFN-T (α-часть), дуал 109.T.
-- [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) — maximality proofs 103.T–106.T.
+- [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems) — доказательства максимальности 103.T–106.T.
 - [`/11-noesis/00-introduction`](/11-noesis/00-introduction) — платформа Noesis, получает AC-расширение.
 - [`/10-reference/02-theorems-catalog`](/10-reference/02-theorems-catalog) — каталог теорем (расширяется 107.T–127.T).
 - [`/10-reference/04-afn-t-correspondence`](/10-reference/04-afn-t-correspondence) — MSFS ↔ Diakrisis, расширяется Актика-колонкой.

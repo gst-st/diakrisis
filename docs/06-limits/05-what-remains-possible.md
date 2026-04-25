@@ -253,14 +253,14 @@ flowchart TB
 
 **133.T** [Т·L3] (*Exhaustiveness of R-S-internal bypass paths to AFN-T*). *Любая R-S-внутренняя попытка построить точку $X \in \mathcal{L}_\mathrm{Abs}$ редуцируется к одному из шести стандартных классов:*
 
-1. **Экстенсиональный** (Морита-редукция через $\mathcal{S}_S$) — закрыто 99.T (slice-locality), 105.T (Yanofsky).
+1. **Экстенсиональный** (Морита-редукция через $\mathcal{S}_S$) — закрыто 99.T (срез-локальность), 105.T (Яновский).
 2. **Универс-полиморфный** (полиморфные $X$ без супремума) — закрыто 57.T + 56.C1 + 61.T + 94.T.
 3. **Рефлексивная башня** ($S_{\kappa+1} = S_\kappa + \mathrm{Con}(S_\kappa)$) — закрыто 19.T1 + 31.T3 + 68.T + 69.T + 90.T.
 4. **Интенсиональный** (HoTT/MLTT vs ETT через Eff-внутренние различия) — закрыто 98.T + 99.T.
 5. **Модальный** (Berry, Лёб, paraconsistent самореференция) — закрыто 130.T (T-2f\*\*).
 6. **Субструктурный** (linear/affine без `!`) — закрыто 97.T tradeoff (нарушение R-S при отсутствии `!`).
 
-*Доказательство*. Любая R-S-внутренняя конструкция $X$ выразима в языке $L_S$ через одну из основных дисциплин: extensional reduction, universe polymorphism, reflective tower, intensional refinement, modal stratification, или substructural variant. Это исчерпывающая классификация типовых конструктов R-S (по таблицам Hofmann 1997, Lurie HTT §6, Girard 1987 для substructural). Для каждого класса в Diakrisis-корпусе явно доказана blocking-теорема. Следовательно, всякая попытка построить $X \in \mathcal{L}_\mathrm{Abs}$ в R-S-внутренней форме блокируется одной из 6 теорем выше. ∎
+*Доказательство*. Любая R-S-внутренняя конструкция $X$ выразима в языке $L_S$ через одну из основных дисциплин: extensional reduction, universe polymorphism, reflective tower, intensional refinement, modal stratification, или substructural variant. Это исчерпывающая классификация типовых конструктов R-S (по таблицам Хофман 1997, Lurie HTT §6, Girard 1987 для substructural). Для каждого класса в Diakrisis-корпусе явно доказана blocking-теорема. Следовательно, всякая попытка построить $X \in \mathcal{L}_\mathrm{Abs}$ в R-S-внутренней форме блокируется одной из 6 теорем выше. ∎
 
 **Замечание**. Q3 MSFS остаётся открытым в более слабой форме «бывают ли *неизвестные* классы конструкций?». 133.T закрывает в смысле «известные типовые конструкции R-S исчерпаны».
 
@@ -268,7 +268,7 @@ flowchart TB
 
 **134.T** [Т·L3] (*Tightness of cardinal lower bound for full Diakrisis*). *Метатеория $\mathrm{ZFC} + 1\text{-inacc}$ недостаточна для реализации полной Diakrisis-аксиоматики (Axi-0..Axi-9 + T-α + T-2f\* + T-2f\*\*) с Axi-8-нетривиальностью.*
 
-*Доказательство*. По 131.T реализация Axi-8 в стек-модели $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ требует object-level universe-ascent $\kappa_1 \to \kappa_2$. (R5a) MSFS требует $\kappa_S = \kappa_2$ для R-S силы $\geq \kappa_1$ (например, HoTT с унивалентностью, MLTT с $\Sigma$-типами). С $\mathrm{ZFC} + 1\text{-inacc}$ существует только $\kappa_1$; нет $\kappa_2$ для $\mathrm{Syn}(\mathrm{HoTT})$-доступности. Следовательно, R-S-классы силы $> \kappa_1$ не имеют доступной семантики. Axi-9 (достаточность) не выполняется для всего R-S-стратума. ∎
+*Доказательство*. По 131.T реализация Axi-8 в стек-модели $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ требует на объектном уровне восхождение по универсумам $\kappa_1 \to \kappa_2$. (R5a) MSFS требует $\kappa_S = \kappa_2$ для R-S силы $\geq \kappa_1$ (например, HoTT с унивалентностью, MLTT с $\Sigma$-типами). С $\mathrm{ZFC} + 1\text{-inacc}$ существует только $\kappa_1$; нет $\kappa_2$ для $\mathrm{Syn}(\mathrm{HoTT})$-доступности. Следовательно, R-S-классы силы $> \kappa_1$ не имеют доступной семантики. Axi-9 (достаточность) не выполняется для всего R-S-стратума. ∎
 
 **Следствие 134.C1**. $\mathrm{ZFC} + 2\text{-inacc}$ — *тугая* нижняя граница для Diakrisis-witness $\mathcal{L}_\mathrm{Cls}^\top$.
 

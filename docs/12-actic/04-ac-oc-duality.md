@@ -24,11 +24,11 @@ $$
 
 *образующие $(\infty, \infty)$-категорную эквивалентность:*
 
-1. $\alpha \circ \varepsilon = \mathrm{id}_{\langle\!\langle \cdot \rangle\!\rangle}$ *строго*; $\varepsilon \circ \alpha$ gauge-эквивалентно $\mathrm{id}_{\rangle\!\rangle \cdot \langle\!\langle}$ через выбранный reflector $r$ в структуре объектов (MSFS Theorem~
+1. $\alpha \circ \varepsilon = \mathrm{id}_{\langle\!\langle \cdot \rangle\!\rangle}$ *строго*; $\varepsilon \circ \alpha$ калибровочно-эквивалентно $\mathrm{id}_{\rangle\!\rangle \cdot \langle\!\langle}$ через выбранный reflector $r$ в структуре объектов (MSFS Theorem~
 ef{thm:ac-oc-duality}(b)).
 2. *Функтор $\varepsilon$ коммутирует с метаизацией/активацией:*
    $$\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon.$$
-3. $\varepsilon$ *сохраняет gauge-структуру*: существует каноническая эквивалентность gauge-quotient пространств
+3. $\varepsilon$ *сохраняет gauge-структуру*: существует каноническая эквивалентность калибровочный фактор пространств
    $$\fM_\mathrm{Fnd} \simeq \mathfrak{E}_\mathrm{Fnd}.$$
 4. *Сохранение глубин*: $\nu(\alpha_0) = \varepsilon(\varepsilon(\alpha_0))$ *для всех $\alpha_0 \in \langle\!\langle \cdot \rangle\!\rangle$ (ординалы равны).*
 5. *Сохранение T-2f\* / T-2a\* стратификации*: предикат имеет допустимую глубину в OC-выделении ⟺ его дуал имеет допустимую глубину в AC-выделении.
@@ -41,7 +41,7 @@ ef{thm:ac-oc-duality}(b)).
 ef{thm:ac-oc-duality})
 
 - **Шаг A — Full faithfulness $\varepsilon$**: 2-функториальность $\Syn$ (Ламбек–Scott для $n = 1$; Капулкин–Ламсдейн для $(\infty, n)$) даёт $\Hom_\cE(\varepsilon F_1, \varepsilon F_2) \simeq \Hom_\cF(F_1, F_2)$.
-- **Шаг B — Essential surjectivity на уровне gauge**: для любого квадрупла $(F, \cC, \iota, r)$ выбранный reflector $r$ (часть данных объекта) с инвертируемым counit $r \circ \iota \Rightarrow \id$ (Рил–Верити Prop. 2.1.11) даёт gauge-эквивалентность $(F, \cC, \iota, r) \simeq \varepsilon(F)$.
+- **Шаг B — Essential surjectivity на уровне gauge**: для любого квадрупла $(F, \cC, \iota, r)$ выбранный reflector $r$ (часть данных объекта) с инвертируемым counit $r \circ \iota \Rightarrow \id$ (Рил–Верити Prop. 2.1.11) даёт калибровочно-эквивалентность $(F, \cC, \iota, r) \simeq \varepsilon(F)$.
 - **Шаг C — Когерентность с $\mathsf{M}/\mathsf{A}$**: $\varepsilon \circ \mathsf{M} \simeq \mathsf{A} \circ \varepsilon$ по наtуральности Ламбек–Scott adjunction.
 - **Шаг D — $(\infty, \infty)$-lift**: Барвик–Schommer-Pries unicity + Бергнер–Резк model comparison обеспечивают параметрическую корректность в $n \in \mathbb{N} \cup \{\infty\}$; Люри HTT §5.4 даёт accessibility filtered-colimits.
 - **Шаг E — Gauge-сохранение и сохранение глубин**: Ara–Maltsiniotis + Бергнер–Резк сохраняют gauge componentwise; Предложение 7.2 устанавливает $\nu(\alpha) = \mathsf{e}(\varepsilon(\alpha))$.
@@ -119,7 +119,7 @@ $$
 
 ## 7. Шаг E: сохранение gauge и глубин
 
-**Предложение 7.1** (gauge). $\varepsilon$ индуцирует каноническую эквивалентность $\fM_\mathrm{Fnd} \simeq \mathfrak{E}_\mathrm{Fnd}$ на уровне gauge-quotient-пространств.
+**Предложение 7.1** (gauge). $\varepsilon$ индуцирует каноническую эквивалентность $\fM_\mathrm{Fnd} \simeq \mathfrak{E}_\mathrm{Fnd}$ на уровне калибровочный фактор-пространств.
 
 *Доказательство*. Gauge-квоциент по Морита-эквивалентности на стороне $\langle\!\langle \cdot \rangle\!\rangle$ переводится $\varepsilon$ в gauge-квоциент по практической переводимости на стороне $\rangle\!\rangle \cdot \langle\!\langle$. Эти отношения совпадают по Шагу B. ∎
 
