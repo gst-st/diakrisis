@@ -15,7 +15,7 @@ title: Алгоритмическая gauge-эквивалентность
 
 - Шаг 10 интеграционного плана ([`/12-actic/09-verum-stdlib-sketch`](/12-actic/09-verum-stdlib-sketch)) требует round-trip-проверку: `inverse(translate(α)) ≡ α (mod gauge)` для 132 OC + 21 AC теорем.
 - Без алгоритма проверки gauge-эквивалентности это утверждение остаётся декларативным.
-- Operational coherence Verum-программ (R12) опирается на разрешимость gauge.
+- Operational coherence Verum-программ опирается на разрешимость gauge.
 
 Этот документ закрывает гэп: даёт алгоритмическую теорию gauge-эквивалентности с точными границами разрешимости.
 
@@ -35,7 +35,7 @@ $$\alpha_1 \sim_{\mathrm{gauge}} \alpha_2 \quad \iff \quad \alpha_1 \sim_{\mathr
 
 **Обратное включение** ($\sim_{\mathrm{Morita}} \Rightarrow \sim_{\mathrm{gauge}}$): пусть $\rho(\alpha_1) \simeq \rho(\alpha_2)$ через каноническую 2-эквивалентность $\eta: \rho(\alpha_1) \xrightarrow{\sim} \rho(\alpha_2)$. Требуется построить автоэквивалентность $\phi: \langle\!\langle \cdot \rangle\!\rangle \to \langle\!\langle \cdot \rangle\!\rangle$ с $\phi(\alpha_1) \simeq \alpha_2$.
 
-*Конструкция $\phi$ через 2-категорную теорему расширения.* По Kelly 1982 «Basic Concepts of Enriched Category Theory» §3.7 (Theorem 3.74): локальная 2-эквивалентность между объектами $\alpha_1, \alpha_2$ в локально-малой 2-категории расширяется до глобальной автоэквивалентности при выполнении условия *cofibrant resolution* — что верно в стек-модели $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ через 131.T (Шаг 1: hyperdescent-property).
+*Конструкция $\phi$ через 2-категорную теорему расширения.* Стандартный результат для 2-категорий (Kelly 1982 «Basic Concepts of Enriched Category Theory» §3, Proposition 3.4 — extension of equivalences in 2-categories): локальная 2-эквивалентность между объектами $\alpha_1, \alpha_2$ в локально-малой 2-категории расширяется до глобальной автоэквивалентности при наличии *cofibrant resolution* — выполнено в стек-модели $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ через 131.T (Шаг 1: hyperdescent-property).
 
 Конкретно: задача расширения $\eta: \rho(\alpha_1) \xrightarrow{\sim} \rho(\alpha_2)$ до глобальной $\phi$ — это lift-проблема в 2-categorical model structure. По Lurie HTT §A.3 (для (∞,1)-обобщения) и Riehl-Verity 2022 §4.3 (для (∞,2)-обобщения через комплициальные множества), lift существует благодаря:
 - (i) Локальной малости $\langle\!\langle \cdot \rangle\!\rangle$ (Axi-1).
@@ -235,11 +235,11 @@ theorem gauge_undecidable_general()
 - (b) Эффективные эвристики для practical Verum verification (probabilistic algorithms, ML-guided search).
 - (c) Параллельная реализация canonicalize для distributed verification.
 
-## 9. Применение к operational coherence (R12)
+## 9. Применение к operational coherence 
 
 Теорема 16.10 — критический компонент operational coherence Verum-программ (см. [`/12-actic/09-verum-stdlib-sketch`](/12-actic/09-verum-stdlib-sketch)). Без round-trip двойственности на уровне алгоритма Verum может *декларировать* OC↔DC соответствие, но не *проверять* его. Теорема 16.10 закрывает этот гэп для finitely-axiomatized R-S.
 
-Полная operational coherence (R12) расширит это до dynamic verification во время выполнения Verum-программ.
+Полная operational coherence  расширит это до dynamic verification во время выполнения Verum-программ.
 
 ## 10. Ссылки
 

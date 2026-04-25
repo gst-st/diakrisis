@@ -50,8 +50,8 @@ title: Финальные теоремы — полное закрытие
 - PA-equivalent система имеет полную генеративность классической математики.
 
 **(c) ⟹ (d)**:
-- Π_3-max + формализуемость ⟹ R1 (арифметика) + R2 (r.e.) + R4 (Гёдель-encoding).
-- R3 (непустая модель) + R5 (категорная интерпретация) — стандартны для Rich-систем.
+- Π_3-max + формализуемость ⟹ (арифметика) + (r.e.) + (Гёдель-encoding).
+- (непустая модель) + (категорная интерпретация) — стандартны для Rich-систем.
 
 **(d) ⟹ (a)**:
 - По **54.T** (контрапозиция): `α_affine` без `!` ⟹ ν ≤ ω ⟹ S' ∉ R-S.
@@ -588,7 +588,7 @@ $$\Pi \dashv \flat \dashv \sharp \dashv \iota : \infty\text{-Grpd} \leftrightarr
 
 **Шаг 2 (Eff — Rich-система)**:
 
-- PCA содержит Kleene's applicative structure → R1 (arithmetic).
+- PCA содержит Kleene's applicative structure → (arithmetic).
 - Axioms Eff-constructively enumerable → R2.
 - Non-trivial: существует terminal object 1 ∈ Eff → R3.
 - Гёдель-encoding через PCA → R4.
