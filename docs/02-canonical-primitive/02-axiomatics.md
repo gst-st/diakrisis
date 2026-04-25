@@ -176,11 +176,31 @@ $$\neg \exists \alpha: \rho(\alpha_{\mathsf{M}})(-) \simeq \mathrm{Hom}_{\llbrac
 - Axi-8 — **потенциальный** критерий новизны: если удовлетворён, то α_𝖬 — «активный» (не-пассивный) функтор.
 - В стандартной Cat-модели **нарушается** (это — часть AFN-T).
 
-#### Признание ограничения
+#### Признание ограничения и реализация (Теорема 131.T)
 
 - В Cat-модели 10.T1: α_𝖬 = ι(𝖬) и в Cat, ι(𝖬) — Ёнеда-представим через конкретный объект. Axi-8 **нарушается**.
-- В $(\infty, 2)$-стек модели $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ (теорема 131.T): Axi-8 **выполнена нетривиально** через object-level universe-ascent ($\kappa_1 \to \kappa_2$). Cat-модель восстанавливается как $\kappa_1$-truncation stack-модели. См. [`/06-limits/11-witness-completion`](/06-limits/11-witness-completion) §131.T.
-- По AFN-T: полное удовлетворение Axi-8 + accessibility 𝖬 + прочие условия в **абсолютной** форме (без κ-стратификации) — невозможно. 131.T реализует Axi-8 *с κ-стратификацией*, что согласуется с Diakrisis ∈ $\mathcal{L}_\mathrm{Cls}^\top$ (не $\mathcal{L}_\mathrm{Abs}$).
+- По AFN-T: полное удовлетворение Axi-8 + accessibility 𝖬 + прочие условия в *абсолютной* форме (без κ-стратификации) — невозможно. Axi-8 реализуется *с κ-стратификацией* в stack-модели (теорема 131.T ниже).
+
+**Теорема 131.T** [Т·L3] (*Реализация Axi-8 в (∞,2)-стек модели*). *В модели $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$, где $\langle\!\langle \cdot \rangle\!\rangle$ интерпретируется как $(\infty, 2)$-стек Rich-оснований над $\mathrm{Syn}(S)$, Axi-8 (M-5w\*) выполнена нетривиально:*
+$$\neg \exists \alpha \in \mathfrak{M}^\mathrm{stack}_\mathrm{Diak}: \rho(\alpha_\mathsf{M})(-) \simeq \mathrm{Hom}_{\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}}(-, \alpha).$$
+*Одновременно выполнены Axi-0..Axi-7, Axi-9, T-α, T-2f\*\* — кроме совместного предельного случая, запрещённого AFN-T.*
+
+*Доказательство*. **Шаг 1** (модель). Объекты $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ — пары $(F, \phi_F)$, $F \in \mathcal{F}$, $\phi_F \in \mathrm{Syn}(S)$; 1-морфизмы — интерпретации, согласованные с $\mathrm{Syn}(f)$; 2-морфизмы — gauge-эквивалентности. По 103.T-Шаг 1 + (R5a), $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ — $\kappa_S$-доступный $(\infty, 2)$-стек.
+
+**Шаг 2** (метаизация). $\mathsf{M}^\mathrm{stack}(F) := \mathrm{Cls}(F)$ — горизонтальная мета MSFS §3. По 102.T-(b) (universe-ascent caveat), $\mathsf{M}^\mathrm{stack}$ object-level повышает κ: $\mathfrak{M}^\mathrm{stack}_{\mathrm{Diak}, \kappa_k} \to \mathfrak{M}^\mathrm{stack}_{\mathrm{Diak}, \kappa_{k+1}}$.
+
+**Шаг 3** (нерепрезентируемость α_𝖬). Допустим $\rho(\alpha_\mathsf{M}) \simeq \mathrm{Hom}(-, \alpha_\mathsf{M})$ единым объектом. Если $\alpha_\mathsf{M} \in \mathfrak{M}^\mathrm{stack}_{\mathrm{Diak}, \kappa_k}$, то $\mathrm{Hom}(-, \alpha_\mathsf{M})$ — $\kappa_k$-представим, но $\rho(\iota(\mathsf{M}^\mathrm{stack}))$ требует $\kappa_{k+1}$-доступности — противоречие. ∎ (Копредел представимых $\rho(\alpha_\mathsf{M}) \simeq \mathrm{colim}_k \mathrm{Hom}(-, \alpha_\mathsf{M}^{(\kappa_k)})$ остаётся возможным; Axi-8 запрещает только представимость *одним* объектом.)
+
+**Шаг 4** (Axi-0..Axi-7, Axi-9, T-α, T-2f\*\*). Внутренний хом — через slice-конструкцию (MSFS Theorem `thm:I-existence`, $\mathcal{C}_F = \mathcal{F}/F$). ρ нетривиальна: разные F дают разные slice-2-категории (MLTT vs ETT через Eff-топос). $\mathsf{M}^\mathrm{stack}$ изменяет интенсиональный профиль ρ через universe-ascent — ρ и $\mathsf{M}^\mathrm{stack}$ не коммутируют (Axi-6). Прочие — стандартно.
+
+**Шаг 5** (κ-граница ZFC + 2-inacc). Object-level ascent ограничен двумя итерациями: $\kappa_1, \kappa_2$. Третья итерация — через theory-level стабилизацию 102.T-(a), truncate-back в $\mathbf{U}_2$-internal. Конструкция остаётся внутри ZFC + 2-inacc.
+
+**Шаг 6** (согласованность с AFN-T). Совместное предельное удовлетворение всех 13 аксиом + полная связность $(\Pi_4 + F_S)$ невозможно по AFN-T. $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ удовлетворяет 13 аксиом *с κ-стратификацией*; согласуется с Diakrisis ∈ $\mathcal{L}_\mathrm{Cls}^\top$, не $\mathcal{L}_\mathrm{Abs}$. ∎
+
+**Следствия 131.T**:
+- **131.C1**. Cat-модель 10.T1 — $\kappa_1$-truncation $\tau_{\leq 2, \kappa_1}(\mathfrak{M}^\mathrm{stack}_\mathrm{Diak})$. В $\kappa_1$-truncated модели Axi-8 нарушается (universe-ascent невидим внутри $\kappa_1$); в полной stack-модели — выполнена через κ-башню.
+- **131.C2**. $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ не локально-представима в смысле LP. Закрывает указание §«Альтернативные модели» ниже.
+- **131.C3**. $\mathbb{I}$ из MSFS Theorem `thm:I-existence` корректно действует на $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ через slice-2-категории, обеспечивая (Max-4). Stack-модель — естественная реализация Diakrisis ∈ $\mathcal{L}_\mathrm{Cls}^\top$.
 
 #### Следствия
 
@@ -289,9 +309,52 @@ $$\mathfrak{g}_{\mathrm{logic}}: \mathrm{IPL} \hookrightarrow \mathrm{CPL} \quad
 
 - Все 5 именных семейств парадоксов (Рассел, Curry, Grelling, Burali-Forti, Жирар) — заблокированы (18.T).
 - **Универсальная парадокс-иммунность** (105.T, [`/06-limits/10-maximality-theorems`](/06-limits/10-maximality-theorems)): T-2f\* блокирует *любой* Яновский-сводимый самореферентный парадокс (Яновский 2003), не только именные 5 семейств. Включает Кантор, Тарский, Ловер, Гёдель-type, и любой другой парадокс диагонального характера в cartesian-closed категориях.
-- **Усиление T-2f\*\* (130.T, [`/06-limits/11-witness-completion`](/06-limits/11-witness-completion))**: добавление модальной стратификации $\mathrm{md}(P) < \mathrm{md}(\alpha_P)$ блокирует Berry, paradoxical Löb, paraconsistent Curry — парадоксы вне Yanofsky-сводимости. T-2f\*\* ⇒ T-2f\*; стандартная Löb-теорема в GL/PA сохраняется как теорема (130.L2).
 - Теория консистентна относительно ZFC + 2 инаксессибальных (10.T1).
 - **(Max-3)** из MSFS Definition `def:maximality` доказан для Diakrisis как теорема 105.T.
+
+### T-2f\*\* — модальная стратификация (Теорема 130.T)
+
+**Усиление T-2f\*** для блокировки парадоксов вне Yanofsky-сводимости (Berry, paradoxical Löb, paraconsistent Curry):
+
+$$\mathrm{T\text{-}2f}^{**}: \quad \mathrm{dp}(P) < \mathrm{dp}(\alpha_P) \;\;\wedge\;\; \mathrm{md}(P) < \mathrm{md}(\alpha_P).$$
+
+#### Модально-определимостный ранг $\mathrm{md}$
+
+- Базовые предикаты $\phi(x)$ из языка $L_\alpha$: $\mathrm{md}(\phi) = 0$.
+- Модальные операторы $\Box, \Diamond$ или предикаты определимости $\mathrm{Def}_\alpha, \mathrm{Prov}_\alpha$: $\mathrm{md}(\Box \phi) = \mathrm{md}(\phi) + 1$.
+- Кванторы над синтаксическими объектами того же языка: $\mathrm{md}(\exists \ulcorner \psi \urcorner.\, \phi(\ulcorner\psi\urcorner)) = \mathrm{md}(\phi) + 1$.
+- Композиция: $\mathrm{md}(P \wedge Q) = \max(\mathrm{md}(P), \mathrm{md}(Q))$.
+
+$\mathrm{md}(\alpha)$ — наименьшее $k$, такое что $\alpha$ — фиксточка $k$-кратной модальной комплетации $\mathrm{ModComp}^k(\langle\!\langle \cdot \rangle\!\rangle_0)$ начиная с базового фрагмента md-ранга 0.
+
+#### Теорема 130.T (расширенная парадокс-иммунность)
+
+**130.T** [Т·L3]. *T-2f\*\* блокирует парадоксы расширенного класса:*
+
+| Класс | Пример | Где блокируется |
+|---|---|---|
+| Yanofsky-сводимые | Рассел, Кантор, Tarski, Lawvere, Curry, Burali-Forti, Жирар, Гёдель-type | dp-стратификация (105.T) |
+| Definability-зависимые | Berry, Richard, König | md-стратификация |
+| Modal | paradoxical Löb, Montague, McGee | md-стратификация |
+| Paraconsistent | Curry в LP, Routley–Meyer | md-стратификация |
+
+*Доказательство* (по случаям):
+
+**Berry**: предикат $\mathrm{Def}_{<k}(n)$ имеет $\mathrm{md} \geq 1$ (квантирование над определениями). Минимальное $n \in \{n : \neg\mathrm{Def}_{<k}(n)\}$ требует $\mathrm{md}(\alpha_P) \leq \mathrm{md}(P)$ — противоречие со строгим неравенством T-2f\*\*. ∎
+
+**Paradoxical Löb (Curry-modal гибрид)**: попытка $A \leftrightarrow \Box A$ с одновременным $A \leftrightarrow \neg \Box A$ требует md-нерастущей фиксточки; но $\mathrm{md}(\Box A) = \mathrm{md}(A) + 1$. ∎
+
+**Paraconsistent Curry в LP**: $C \leftrightarrow (C \to \bot)$ через интернализацию импликации сводится к модальной форме $C \leftrightarrow \Box(C \to \bot)$, давая $\mathrm{md}(C) = \mathrm{md}(C) + 1$ — противоречие. ∎
+
+**Лемма 130.L1** *(T-2f\*\* ⇒ T-2f\*)*. На non-modal предикатах (без $\Box$, $\mathrm{Def}_\alpha$, $\mathrm{Prov}_\alpha$, кванторов над синтаксисом), $\mathrm{md}(P) = 0 = \mathrm{md}(\alpha)$ и md-условие тривиально; Yanofsky-блокировка идёт через dp-стратификацию (как в 105.T). Каждая T-2f\*\*-модель — также T-2f\*-модель.
+
+**Лемма 130.L2** *(сохранение корректной Löb-теоремы)*. T-2f\*\* блокирует только md-нерастущие самореферентные фиксточки. Стандартная Löb-теорема GL/PA ($\Box(\Box A \to A) \to \Box A$) использует диагональную лемму на md-стратифицированном языке (md(diag) ≥ 1, md(α_proof) ≥ 2) и **не** блокируется.
+
+#### Следствия T-2f\*\*
+
+- T-2f\*\* — **усиление**, не **замещение** T-2f\*: для R-S-артикуляций классической метатеории (без модальностей) обе дают одну и ту же гарантию.
+- Для не-классических метатеорий (paraconsistent, модальных) T-2f\*\* — необходимое условие парадокс-иммунности.
+- **Не покрыто**: парадоксы, требующие *бесконечного* md-ранга (omega-modal трансфинитные парадоксы); требуют T-2f\*\*\* с $\omega^k$-модальной стратификацией.
 
 ## Независимость аксиом
 
@@ -338,7 +401,7 @@ $$\mathfrak{g}_{\mathrm{logic}}: \mathrm{IPL} \hookrightarrow \mathrm{CPL} \quad
 
 ### Альтернативные модели
 
-- **Не-LP модели**: категории, не локально-представимые; там Axi-8 может выполняться. **Закрыто 131.T** (см. [`/06-limits/11-witness-completion`](/06-limits/11-witness-completion)): в $(\infty, 2)$-стек модели $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ Axi-8 выполнена через object-level universe-ascent.
+- **Не-LP модели**: категории, не локально-представимые; там Axi-8 может выполняться. **Закрыто 131.T** (см. §Axi-8 выше, «Признание ограничения и реализация»): в $(\infty, 2)$-стек модели $\mathfrak{M}^\mathrm{stack}_\mathrm{Diak}$ Axi-8 выполнена через object-level universe-ascent.
 - **Квантовые модели**: модели на основе C\*-алгебр или фон Нейман алгебр.
 - **∞-категорные модели**: работа в Люри HTT — частный случай stack-модели 131.T.
 

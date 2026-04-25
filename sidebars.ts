@@ -109,7 +109,6 @@ const sidebars: SidebarsConfig = {
         '06-limits/08-intensional-refinement',
         '06-limits/09-meta-classification',
         '06-limits/10-maximality-theorems',
-        '06-limits/11-witness-completion',
       ],
     },
     {
